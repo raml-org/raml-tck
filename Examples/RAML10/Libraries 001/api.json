@@ -1,0 +1,183 @@
+{
+    "uses": [
+        {
+            "resourceTypes": [
+                {
+                    "libResourceType1": {
+                        "displayName": "libResourceType1"
+                    },
+                    "__METADATA__": {
+                        "primitiveValuesMeta": {
+                            "displayName": {
+                                "calculated": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "libResourceType2": {
+                        "displayName": "libResourceType2"
+                    },
+                    "__METADATA__": {
+                        "primitiveValuesMeta": {
+                            "displayName": {
+                                "calculated": true
+                            }
+                        }
+                    }
+                }
+            ],
+            "traits": [
+                {
+                    "libTrait1": {
+                        "displayName": "libTrait1",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "libTrait2": {
+                        "displayName": "libTrait2",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "__METADATA__": {
+                "primitiveValuesMeta": {
+                    "displayName": {
+                        "calculated": true
+                    }
+                }
+            },
+            "name": "lib"
+        }
+    ],
+    "resourceTypes": [
+        {
+            "libResourceType1": {
+                "displayName": "libResourceType1"
+            },
+            "__METADATA__": {
+                "calculated": true,
+                "primitiveValuesMeta": {
+                    "displayName": {
+                        "calculated": true
+                    }
+                }
+            }
+        },
+        {
+            "libResourceType2": {
+                "displayName": "libResourceType2"
+            },
+            "__METADATA__": {
+                "calculated": true,
+                "primitiveValuesMeta": {
+                    "displayName": {
+                        "calculated": true
+                    }
+                }
+            }
+        },
+        {
+            "ownResourceType1": {
+                "displayName": "ownResourceType1"
+            },
+            "__METADATA__": {
+                "primitiveValuesMeta": {
+                    "displayName": {
+                        "calculated": true
+                    }
+                }
+            }
+        },
+        {
+            "ownResourceType2": {
+                "displayName": "ownResourceType2"
+            },
+            "__METADATA__": {
+                "primitiveValuesMeta": {
+                    "displayName": {
+                        "calculated": true
+                    }
+                }
+            }
+        }
+    ],
+    "traits": [
+        {
+            "libTrait1": {
+                "displayName": "libTrait1",
+                "__METADATA__": {
+                    "calculated": true,
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "libTrait2": {
+                "displayName": "libTrait2",
+                "__METADATA__": {
+                    "calculated": true,
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "ownTrait1": {
+                "displayName": "ownTrait1",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "ownTrait2": {
+                "displayName": "ownTrait2",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "__METADATA__": {
+        "primitiveValuesMeta": {
+            "protocols": {
+                "calculated": true
+            }
+        }
+    },
+    "title": "TCK Sample. RAML 1.0 Libraries 001.",
+    "version": "v1",
+    "baseUri": "https://example.com/raml",
+    "protocols": [
+        "HTTPS"
+    ]
+}
