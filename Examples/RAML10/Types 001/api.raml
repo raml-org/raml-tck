@@ -19,7 +19,7 @@ types:
     example: !include examples/address.json
 
   Email:
-    pattern: /[a-zA-Z0-9\.]{1-32}@[a-zA-Z0-9]+\.com/
+    pattern: "[a-zA-Z0-9\\.]{1,32}@[a-zA-Z0-9]+\\.com"
     minLength: 15
     maxLength: 64
 
@@ -83,6 +83,7 @@ types:
             country: RUS
             city: Novosibirsk
             zip: 630090
+          managerId: 77
       
       manager2:    
         content:
@@ -94,6 +95,7 @@ types:
             country: US
             city: SF
             zip: 123456
+          managerId: 88
 
   Admin:
     type: User
@@ -103,7 +105,9 @@ types:
 
   SuperAdmin:
     type: Admin
-    role: super-admin
+    
+    #the 'role' facet has already been fixed in 'Admin' class
+    #role: super-admin
 
   Team:
     properties:
@@ -131,7 +135,7 @@ types:
     description: create new team with desired title
     body:
       #inline type declaration
-      applciation/json:
+      application/json:
         properties:
           title:
             pattern: "[A-Z][a-z]*"
@@ -140,6 +144,7 @@ types:
         body:
           application/json:
             type: User
+            role: admin
 
   /{id}:
     get:
@@ -167,3 +172,4 @@ types:
         body:
           application/json:
             type: User
+            role: admin
