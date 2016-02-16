@@ -367,10 +367,8 @@
         ],
         "resources": [
             {
-                "displayName": "/helloWorld",
                 "methods": [
                     {
-                        "displayName": "get",
                         "annotations": {
                             "simpleAnnotation": {
                                 "structuredValue": "simpleAnnotation_value_on_method",
@@ -530,24 +528,10 @@
                                 }
                             }
                         },
-                        "method": "get",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "method": "get"
                     }
                 ],
-                "relativeUri": "/helloWorld",
-                "__METADATA__": {
-                    "primitiveValuesMeta": {
-                        "displayName": {
-                            "calculated": true
-                        }
-                    }
-                }
+                "relativeUri": "/helloWorld"
             }
         ],
         "RAMLVersion": "RAML10",

@@ -1,6 +1,27 @@
 {
     "document": {
         "types": {
+            "Zip": {
+                "displayName": "Zip",
+                "name": "Zip",
+                "type": "number",
+                "example": 630128,
+                "repeat": false,
+                "required": true,
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        },
+                        "repeat": {
+                            "insertedAsDefault": true
+                        },
+                        "required": {
+                            "insertedAsDefault": true
+                        }
+                    }
+                }
+            },
             "Address": {
                 "displayName": "Address",
                 "name": "Address",
@@ -118,7 +139,7 @@
                     "zip": {
                         "displayName": "zip",
                         "name": "zip",
-                        "type": "number",
+                        "type": "Zip",
                         "repeat": false,
                         "required": true,
                         "__METADATA__": {
@@ -757,10 +778,8 @@
         ],
         "resources": [
             {
-                "displayName": "/teams",
                 "methods": [
                     {
-                        "displayName": "get",
                         "responses": {
                             "200": {
                                 "code": "200",
@@ -785,27 +804,12 @@
                                             }
                                         }
                                     }
-                                },
-                                "__METADATA__": {
-                                    "primitiveValuesMeta": {
-                                        "displayName": {
-                                            "calculated": true
-                                        }
-                                    }
                                 }
                             }
                         },
-                        "method": "get",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "method": "get"
                     },
                     {
-                        "displayName": "post",
                         "description": "create new team with desired title",
                         "responses": {
                             "204": {
@@ -832,13 +836,6 @@
                                                     "insertedAsDefault": true
                                                 }
                                             }
-                                        }
-                                    }
-                                },
-                                "__METADATA__": {
-                                    "primitiveValuesMeta": {
-                                        "displayName": {
-                                            "calculated": true
                                         }
                                     }
                                 }
@@ -895,23 +892,14 @@
                                 }
                             }
                         },
-                        "method": "post",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "method": "post"
                     }
                 ],
                 "relativeUri": "/teams",
                 "resources": [
                     {
-                        "displayName": "/{id}",
                         "methods": [
                             {
-                                "displayName": "get",
                                 "responses": {
                                     "200": {
                                         "code": "200",
@@ -934,13 +922,6 @@
                                                             "insertedAsDefault": true
                                                         }
                                                     }
-                                                }
-                                            }
-                                        },
-                                        "__METADATA__": {
-                                            "primitiveValuesMeta": {
-                                                "displayName": {
-                                                    "calculated": true
                                                 }
                                             }
                                         }
@@ -971,24 +952,10 @@
                                                     }
                                                 }
                                             }
-                                        },
-                                        "__METADATA__": {
-                                            "primitiveValuesMeta": {
-                                                "displayName": {
-                                                    "calculated": true
-                                                }
-                                            }
                                         }
                                     }
                                 },
-                                "method": "get",
-                                "__METADATA__": {
-                                    "primitiveValuesMeta": {
-                                        "displayName": {
-                                            "calculated": true
-                                        }
-                                    }
-                                }
+                                "method": "get"
                             }
                         ],
                         "uriParameters": {
@@ -1017,29 +984,13 @@
                                 }
                             }
                         },
-                        "relativeUri": "/{id}",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "relativeUri": "/{id}"
                     }
-                ],
-                "__METADATA__": {
-                    "primitiveValuesMeta": {
-                        "displayName": {
-                            "calculated": true
-                        }
-                    }
-                }
+                ]
             },
             {
-                "displayName": "/users",
                 "methods": [
                     {
-                        "displayName": "get",
                         "responses": {
                             "200": {
                                 "code": "200",
@@ -1064,40 +1015,17 @@
                                             }
                                         }
                                     }
-                                },
-                                "__METADATA__": {
-                                    "primitiveValuesMeta": {
-                                        "displayName": {
-                                            "calculated": true
-                                        }
-                                    }
                                 }
                             }
                         },
-                        "method": "get",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "method": "get"
                     }
                 ],
-                "relativeUri": "/users",
-                "__METADATA__": {
-                    "primitiveValuesMeta": {
-                        "displayName": {
-                            "calculated": true
-                        }
-                    }
-                }
+                "relativeUri": "/users"
             },
             {
-                "displayName": "/users/{id}",
                 "methods": [
                     {
-                        "displayName": "get",
                         "responses": {
                             "200": {
                                 "code": "200",
@@ -1125,24 +1053,10 @@
                                             }
                                         }
                                     }
-                                },
-                                "__METADATA__": {
-                                    "primitiveValuesMeta": {
-                                        "displayName": {
-                                            "calculated": true
-                                        }
-                                    }
                                 }
                             }
                         },
-                        "method": "get",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "method": "get"
                     }
                 ],
                 "uriParameters": {
@@ -1171,14 +1085,7 @@
                         }
                     }
                 },
-                "relativeUri": "/users/{id}",
-                "__METADATA__": {
-                    "primitiveValuesMeta": {
-                        "displayName": {
-                            "calculated": true
-                        }
-                    }
-                }
+                "relativeUri": "/users/{id}"
             }
         ],
         "RAMLVersion": "RAML10",

@@ -16,7 +16,6 @@
         },
         "uses": [
             {
-                "displayName": "AWS",
                 "types": {
                     "amazon-apigateway-method": {
                         "displayName": "amazon-apigateway-method",
@@ -712,14 +711,7 @@
                     }
                 },
                 "usage": "Data types and annotation types for AWS API Gateway",
-                "name": "AWS",
-                "__METADATA__": {
-                    "primitiveValuesMeta": {
-                        "displayName": {
-                            "calculated": true
-                        }
-                    }
-                }
+                "name": "AWS"
             }
         ],
         "title": "API Gateway Test API",
@@ -735,7 +727,6 @@
                 "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
                 "methods": [
                     {
-                        "displayName": "get",
                         "annotations": {
                             "AWS.amazon-apigateway-auth": {
                                 "structuredValue": "aws_iam",
@@ -839,14 +830,7 @@
                                 "format": "double"
                             }
                         },
-                        "method": "get",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "method": "get"
                     }
                 ],
                 "relativeUri": "/products"

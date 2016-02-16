@@ -341,10 +341,8 @@
         ],
         "resources": [
             {
-                "displayName": "/helloWorld",
                 "methods": [
                     {
-                        "displayName": "get",
                         "annotations": {
                             "childAnnotation": {
                                 "structuredValue": {
@@ -430,24 +428,10 @@
                                 }
                             }
                         },
-                        "method": "get",
-                        "__METADATA__": {
-                            "primitiveValuesMeta": {
-                                "displayName": {
-                                    "calculated": true
-                                }
-                            }
-                        }
+                        "method": "get"
                     }
                 ],
-                "relativeUri": "/helloWorld",
-                "__METADATA__": {
-                    "primitiveValuesMeta": {
-                        "displayName": {
-                            "calculated": true
-                        }
-                    }
-                }
+                "relativeUri": "/helloWorld"
             }
         ],
         "RAMLVersion": "RAML10",
