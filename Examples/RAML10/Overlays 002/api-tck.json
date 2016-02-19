@@ -3,13 +3,21 @@
         "title": "Book Library API",
         "resources": [
             {
+                "displayName": "/books",
                 "description": "La colección de libros de la biblioteca",
                 "methods": [
                     {
                         "method": "get"
                     }
                 ],
-                "relativeUri": "/books"
+                "relativeUri": "/books",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             }
         ],
         "documentation": [

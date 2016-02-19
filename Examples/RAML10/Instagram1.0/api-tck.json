@@ -7830,6 +7830,7 @@
         ],
         "resources": [
             {
+                "displayName": "/media",
                 "securedBy": {
                     "oauth_2_0": {
                         "structuredValue": null,
@@ -7886,6 +7887,7 @@
                 "relativeUri": "/media",
                 "resources": [
                     {
+                        "displayName": "/{mediaId}",
                         "methods": [
                             {
                                 "description": "Get information about a media object. The returned type key will allow you\nto differentiate between image and video media.\nNote: if you authenticate with an OAuth Token, you will receive the\nuser_has_liked key which quickly tells you whether the current user has liked\nthis media item.\n",
@@ -8445,6 +8447,7 @@
                         "relativeUri": "/{mediaId}",
                         "resources": [
                             {
+                                "displayName": "/comments",
                                 "methods": [
                                     {
                                         "description": "Get a full list of comments on a media.",
@@ -9129,6 +9132,7 @@
                                 "relativeUri": "/comments",
                                 "resources": [
                                     {
+                                        "displayName": "/{commentId}",
                                         "methods": [
                                             {
                                                 "description": "Remove a comment either on the authenticated user's media or authored by the authenticated user.\n",
@@ -9625,11 +9629,26 @@
                                                 }
                                             }
                                         },
-                                        "relativeUri": "/{commentId}"
+                                        "relativeUri": "/{commentId}",
+                                        "__METADATA__": {
+                                            "primitiveValuesMeta": {
+                                                "displayName": {
+                                                    "calculated": true
+                                                }
+                                            }
+                                        }
                                     }
-                                ]
+                                ],
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
+                                "displayName": "/likes",
                                 "methods": [
                                     {
                                         "description": "Get a list of users who have liked this media.\nRequired scope: likes.\n",
@@ -10324,11 +10343,26 @@
                                         "securityScheme": null
                                     }
                                 },
-                                "relativeUri": "/likes"
+                                "relativeUri": "/likes",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
+                        "displayName": "/search",
                         "methods": [
                             {
                                 "description": "Search for media in a given area. The default time span is set to 5 days.\nThe time span must not exceed 7 days. Defaults time stamps cover the\nlast 5 days.\n",
@@ -11349,9 +11383,17 @@
                                 }
                             }
                         },
-                        "relativeUri": "/search"
+                        "relativeUri": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
+                        "displayName": "/popular",
                         "methods": [
                             {
                                 "description": "Get a list of what media is most popular at the moment.\n",
@@ -12140,11 +12182,26 @@
                                 }
                             }
                         },
-                        "relativeUri": "/popular"
+                        "relativeUri": "/popular",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
+                "displayName": "/tags",
                 "securedBy": {
                     "oauth_2_0": {
                         "structuredValue": null,
@@ -12201,6 +12258,7 @@
                 "relativeUri": "/tags",
                 "resources": [
                     {
+                        "displayName": "/{tagName}",
                         "methods": [
                             {
                                 "description": "Get information about a tag object.",
@@ -12760,6 +12818,7 @@
                         "relativeUri": "/{tagName}",
                         "resources": [
                             {
+                                "displayName": "/media/recent",
                                 "methods": [
                                     {
                                         "description": "Get a list of recently tagged media. Note that this media is ordered by when the media was tagged\nwith this tag, rather than the order it was posted. Use the max_tag_id and min_tag_id parameters\nin the pagination response to paginate through these objects.\n",
@@ -13383,11 +13442,26 @@
                                         }
                                     }
                                 },
-                                "relativeUri": "/media/recent"
+                                "relativeUri": "/media/recent",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
+                        "displayName": "/search",
                         "methods": [
                             {
                                 "description": "Search for tags by name. Results are ordered first as an exact match, then by popularity.\nShort tags will be treated as exact matches.\n",
@@ -13940,11 +14014,26 @@
                                 }
                             }
                         },
-                        "relativeUri": "/search"
+                        "relativeUri": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
+                "displayName": "/users",
                 "securedBy": {
                     "oauth_2_0": {
                         "structuredValue": null,
@@ -14001,6 +14090,7 @@
                 "relativeUri": "/users",
                 "resources": [
                     {
+                        "displayName": "/{userId}",
                         "methods": [
                             {
                                 "description": "Get basic information about a user.",
@@ -14560,6 +14650,7 @@
                         "relativeUri": "/{userId}",
                         "resources": [
                             {
+                                "displayName": "/follows",
                                 "methods": [
                                     {
                                         "description": "Get the list of users this user follows.",
@@ -15170,9 +15261,17 @@
                                         "securityScheme": null
                                     }
                                 },
-                                "relativeUri": "/follows"
+                                "relativeUri": "/follows",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
+                                "displayName": "/followed-by",
                                 "methods": [
                                     {
                                         "description": "Get the list of users this user is followed by.",
@@ -15783,9 +15882,17 @@
                                         "securityScheme": null
                                     }
                                 },
-                                "relativeUri": "/followed-by"
+                                "relativeUri": "/followed-by",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
+                                "displayName": "/media/recent",
                                 "methods": [
                                     {
                                         "description": "See the authenticated user's feed. May return a mix of both image and\nvideo types.\n",
@@ -16890,9 +16997,17 @@
                                         }
                                     }
                                 },
-                                "relativeUri": "/media/recent"
+                                "relativeUri": "/media/recent",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
+                                "displayName": "/relationship",
                                 "methods": [
                                     {
                                         "description": "Get information about a relationship to another user.",
@@ -17582,11 +17697,26 @@
                                         "securityScheme": null
                                     }
                                 },
-                                "relativeUri": "/relationship"
+                                "relativeUri": "/relationship",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
+                        "displayName": "/search",
                         "methods": [
                             {
                                 "description": "Search for a user by name.",
@@ -18219,9 +18349,17 @@
                                 "securityScheme": null
                             }
                         },
-                        "relativeUri": "/search"
+                        "relativeUri": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
+                        "displayName": "/self",
                         "methods": [
                             {
                                 "description": "Retrieve the authenticated user",
@@ -18802,6 +18940,7 @@
                         "relativeUri": "/self",
                         "resources": [
                             {
+                                "displayName": "/feed",
                                 "methods": [
                                     {
                                         "description": "See the authenticated user's feed. May return a mix of both image and\nvideo types.\n",
@@ -19813,9 +19952,17 @@
                                         }
                                     }
                                 },
-                                "relativeUri": "/feed"
+                                "relativeUri": "/feed",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
+                                "displayName": "/requested-by",
                                 "methods": [
                                     {
                                         "description": "List the users who have requested this user's permission to follow.",
@@ -20478,9 +20625,17 @@
                                         }
                                     }
                                 },
-                                "relativeUri": "/requested-by"
+                                "relativeUri": "/requested-by",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
+                                "displayName": "/media/liked",
                                 "methods": [
                                     {
                                         "description": "See the authenticated user's list of media they've liked. May return a mix\nof both image and video types.\nNote: This list is ordered by the order in which the user liked the media.\nPrivate media is returned as long as the authenticated user has permission\nto view that media. Liked media lists are only available for the currently\nauthenticated user.\n",
@@ -21421,13 +21576,35 @@
                                         }
                                     }
                                 },
-                                "relativeUri": "/media/liked"
+                                "relativeUri": "/media/liked",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
+                "displayName": "/locations",
                 "securedBy": {
                     "oauth_2_0": {
                         "structuredValue": null,
@@ -21484,6 +21661,7 @@
                 "relativeUri": "/locations",
                 "resources": [
                     {
+                        "displayName": "/{locId}",
                         "methods": [
                             {
                                 "description": "Get information about a location.",
@@ -22039,6 +22217,7 @@
                         "relativeUri": "/{locId}",
                         "resources": [
                             {
+                                "displayName": "/media/recent",
                                 "methods": [
                                     {
                                         "description": "Get a list of recent media objects from a given location. May return a\nmix of both image and video types.\n",
@@ -23143,11 +23322,26 @@
                                         }
                                     }
                                 },
-                                "relativeUri": "/media/recent"
+                                "relativeUri": "/media/recent",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
+                        "displayName": "/search",
                         "methods": [
                             {
                                 "description": "Search for a location by geographic coordinate.",
@@ -23865,11 +24059,26 @@
                                 }
                             }
                         },
-                        "relativeUri": "/search"
+                        "relativeUri": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
+                "displayName": "/geographies/{geoId}/media/recent",
                 "methods": [
                     {
                         "description": "Get recent media from a geography subscription that you created.\nNote: You can only access Geographies that were explicitly created by your\nOAuth client. Check the Geography Subscriptions section of the real-time\nupdates page. When you create a subscription to some geography that you\ndefine, you will be returned a unique geo-id that can be used in this\nquery. To backfill photos from the location covered by this geography,\nuse the media search endpoint.\n",
@@ -24426,9 +24635,17 @@
                         }
                     }
                 },
-                "relativeUri": "/geographies/{geoId}/media/recent"
+                "relativeUri": "/geographies/{geoId}/media/recent",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
+                "displayName": "/subscriptions",
                 "methods": [
                     {
                         "description": "List subscriptions",
@@ -25462,7 +25679,14 @@
                         }
                     }
                 },
-                "relativeUri": "/subscriptions"
+                "relativeUri": "/subscriptions",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             }
         ],
         "documentation": [

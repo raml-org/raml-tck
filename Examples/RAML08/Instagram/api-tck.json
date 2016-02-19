@@ -3722,9 +3722,25 @@
                                                 },
                                                 "method": "delete"
                                             }
-                                        ]
+                                        ],
+                                        "displayName": "/{commentId}",
+                                        "__METADATA__": {
+                                            "primitiveValuesMeta": {
+                                                "displayName": {
+                                                    "calculated": true
+                                                }
+                                            }
+                                        }
                                     }
-                                ]
+                                ],
+                                "displayName": "/comments",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
                                 "relativeUri": "/likes",
@@ -4308,9 +4324,25 @@
                                         },
                                         "method": "delete"
                                     }
-                                ]
+                                ],
+                                "displayName": "/likes",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "displayName": "/{mediaId}",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
                         "relativeUri": "/search",
@@ -5137,7 +5169,15 @@
                                 ],
                                 "method": "get"
                             }
-                        ]
+                        ],
+                        "displayName": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
                         "relativeUri": "/popular",
@@ -5732,9 +5772,25 @@
                                 ],
                                 "method": "get"
                             }
-                        ]
+                        ],
+                        "displayName": "/popular",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "displayName": "/media",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
                 "relativeUri": "/tags",
@@ -6947,9 +7003,25 @@
                                         ],
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/media/recent",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "displayName": "/{tagName}",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
                         "relativeUri": "/search",
@@ -7490,9 +7562,25 @@
                                 ],
                                 "method": "get"
                             }
-                        ]
+                        ],
+                        "displayName": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "displayName": "/tags",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
                 "relativeUri": "/users",
@@ -8617,7 +8705,15 @@
                                         },
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/follows",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
                                 "relativeUri": "/followed-by",
@@ -9141,7 +9237,15 @@
                                         },
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/followed-by",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
                                 "relativeUri": "/media/recent",
@@ -9922,7 +10026,15 @@
                                         ],
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/media/recent",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
                                 "relativeUri": "/relationship",
@@ -10507,9 +10619,25 @@
                                         },
                                         "method": "post"
                                     }
-                                ]
+                                ],
+                                "displayName": "/relationship",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "displayName": "/{userId}",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
                         "relativeUri": "/search",
@@ -11055,7 +11183,15 @@
                                 },
                                 "method": "get"
                             }
-                        ]
+                        ],
+                        "displayName": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
                         "relativeUri": "/self",
@@ -12260,7 +12396,15 @@
                                         ],
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/feed",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
                                 "relativeUri": "/requested-by",
@@ -12822,7 +12966,15 @@
                                         ],
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/requested-by",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             },
                             {
                                 "relativeUri": "/media/liked",
@@ -13439,11 +13591,35 @@
                                         ],
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/media/liked",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "displayName": "/self",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "displayName": "/users",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
                 "relativeUri": "/locations",
@@ -14821,9 +14997,25 @@
                                         ],
                                         "method": "get"
                                     }
-                                ]
+                                ],
+                                "displayName": "/media/recent",
+                                "__METADATA__": {
+                                    "primitiveValuesMeta": {
+                                        "displayName": {
+                                            "calculated": true
+                                        }
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "displayName": "/{locId}",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     },
                     {
                         "relativeUri": "/search",
@@ -15529,9 +15721,25 @@
                                 ],
                                 "method": "get"
                             }
-                        ]
+                        ],
+                        "displayName": "/search",
+                        "__METADATA__": {
+                            "primitiveValuesMeta": {
+                                "displayName": {
+                                    "calculated": true
+                                }
+                            }
+                        }
                     }
-                ]
+                ],
+                "displayName": "/locations",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
                 "relativeUri": "/geographies/{geoId}/media/recent",
@@ -16090,7 +16298,15 @@
                         ],
                         "method": "get"
                     }
-                ]
+                ],
+                "displayName": "/geographies/{geoId}/media/recent",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             },
             {
                 "relativeUri": "/subscriptions",
@@ -17064,7 +17280,15 @@
                         },
                         "method": "delete"
                     }
-                ]
+                ],
+                "displayName": "/subscriptions",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             }
         ],
         "documentation": [
