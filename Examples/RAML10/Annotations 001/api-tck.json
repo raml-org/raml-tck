@@ -367,6 +367,7 @@
         ],
         "resources": [
             {
+                "displayName": "/helloWorld",
                 "methods": [
                     {
                         "annotations": {
@@ -531,7 +532,14 @@
                         "method": "get"
                     }
                 ],
-                "relativeUri": "/helloWorld"
+                "relativeUri": "/helloWorld",
+                "__METADATA__": {
+                    "primitiveValuesMeta": {
+                        "displayName": {
+                            "calculated": true
+                        }
+                    }
+                }
             }
         ],
         "RAMLVersion": "RAML10",
