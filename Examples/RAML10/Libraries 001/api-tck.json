@@ -1,63 +1,89 @@
 {
-    "document": {
-        "traits": {
-            "libTrait1": {
-                "name": "libTrait1",
-                "__METADATA__": {
-                    "calculated": true
+    "ramlVersion": "RAML10",
+    "type": "Api",
+    "specification": {
+        "traits": [
+            {
+                "libTrait1": {
+                    "name": "libTrait1",
+                    "__METADATA__": {
+                        "calculated": true
+                    }
                 }
             },
-            "libTrait2": {
-                "name": "libTrait2",
-                "__METADATA__": {
-                    "calculated": true
+            {
+                "libTrait2": {
+                    "name": "libTrait2",
+                    "__METADATA__": {
+                        "calculated": true
+                    }
                 }
             },
-            "ownTrait1": {
-                "name": "ownTrait1"
+            {
+                "ownTrait1": {
+                    "name": "ownTrait1"
+                }
             },
-            "ownTrait2": {
-                "name": "ownTrait2"
+            {
+                "ownTrait2": {
+                    "name": "ownTrait2"
+                }
             }
-        },
-        "resourceTypes": {
-            "libResourceType1": {
-                "name": "libResourceType1",
-                "__METADATA__": {
-                    "calculated": true
+        ],
+        "resourceTypes": [
+            {
+                "libResourceType1": {
+                    "name": "libResourceType1",
+                    "__METADATA__": {
+                        "calculated": true
+                    }
                 }
             },
-            "libResourceType2": {
-                "name": "libResourceType2",
-                "__METADATA__": {
-                    "calculated": true
+            {
+                "libResourceType2": {
+                    "name": "libResourceType2",
+                    "__METADATA__": {
+                        "calculated": true
+                    }
                 }
             },
-            "ownResourceType1": {
-                "name": "ownResourceType1"
+            {
+                "ownResourceType1": {
+                    "name": "ownResourceType1"
+                }
             },
-            "ownResourceType2": {
-                "name": "ownResourceType2"
+            {
+                "ownResourceType2": {
+                    "name": "ownResourceType2"
+                }
             }
-        },
+        ],
         "uses": [
             {
-                "traits": {
-                    "libTrait1": {
-                        "name": "libTrait1"
+                "traits": [
+                    {
+                        "libTrait1": {
+                            "name": "libTrait1"
+                        }
                     },
-                    "libTrait2": {
-                        "name": "libTrait2"
+                    {
+                        "libTrait2": {
+                            "name": "libTrait2"
+                        }
                     }
-                },
-                "resourceTypes": {
-                    "libResourceType1": {
-                        "name": "libResourceType1"
+                ],
+                "resourceTypes": [
+                    {
+                        "libResourceType1": {
+                            "name": "libResourceType1"
+                        }
                     },
-                    "libResourceType2": {
-                        "name": "libResourceType2"
+                    {
+                        "libResourceType2": {
+                            "name": "libResourceType2"
+                        }
                     }
-                },
+                ],
                 "name": "lib"
             }
         ],
@@ -65,9 +91,8 @@
         "version": "v1",
         "baseUri": "https://example.com/raml",
         "protocols": [
-            "https"
+            "HTTPS"
         ],
-        "RAMLVersion": "RAML10",
         "__METADATA__": {
             "primitiveValuesMeta": {
                 "protocols": {

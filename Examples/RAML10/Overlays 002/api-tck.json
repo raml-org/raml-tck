@@ -1,5 +1,7 @@
 {
-    "document": {
+    "ramlVersion": "RAML10",
+    "type": "Overlay",
+    "specification": {
         "title": "Book Library API",
         "resources": [
             {
@@ -17,7 +19,10 @@
                             "calculated": true
                         }
                     }
-                }
+                },
+                "relativeUriPathSegments": [
+                    "books"
+                ]
             }
         ],
         "documentation": [
@@ -31,8 +36,7 @@
             }
         ],
         "usage": "Spanish localization",
-        "masterRef": "librarybooks.raml",
-        "RAMLVersion": "RAML10"
+        "masterRef": "librarybooks.raml"
     },
     "errors": []
 }
