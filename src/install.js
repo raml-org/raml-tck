@@ -183,8 +183,8 @@ function setupJavaTestProject() {
     if(!fs.existsSync(jarOutputDir)) {
         fs.mkdir(jarOutputDir);
     }
-
-    spawnSync('javac', ['-cp', "" + testLibTargetDir + ':' + dependencyPath + "", '-d', jarOutputDir, mainJava], {stdio: [0, 1, 2]});
+    var delim = path.delimiter;
+    spawnSync('javac', ['-cp', "" + testLibTargetDir + delim + dependencyPath + "", '-d', jarOutputDir, mainJava], {stdio: [0, 1, 2]});
 }
 
 function runApiJava(ramlPath) {
