@@ -1,0 +1,143 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "SomeType": {
+          "name": "SomeType",
+          "displayName": "SomeType",
+          "type": [
+            "OneMoreType"
+          ],
+          "repeat": false,
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "repeat": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "AnotherType": {
+          "name": "AnotherType",
+          "displayName": "AnotherType",
+          "type": [
+            "SomeType"
+          ],
+          "repeat": false,
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "repeat": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "OneMoreType": {
+          "name": "OneMoreType",
+          "displayName": "OneMoreType",
+          "type": [
+            "AnotherType"
+          ],
+          "repeat": false,
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "repeat": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "API"
+  },
+  "errors": [
+    {
+      "code": 11,
+      "message": "recurrent type definition",
+      "path": "apiInvalid.raml",
+      "line": 4,
+      "column": 2,
+      "position": 32,
+      "range": [
+        {
+          "line": 4,
+          "column": 2,
+          "position": 32
+        },
+        {
+          "line": 4,
+          "column": 10,
+          "position": 40
+        }
+      ]
+    },
+    {
+      "code": 11,
+      "message": "recurrent type definition",
+      "path": "apiInvalid.raml",
+      "line": 7,
+      "column": 2,
+      "position": 67,
+      "range": [
+        {
+          "line": 7,
+          "column": 2,
+          "position": 67
+        },
+        {
+          "line": 7,
+          "column": 13,
+          "position": 78
+        }
+      ]
+    },
+    {
+      "code": 11,
+      "message": "recurrent type definition",
+      "path": "apiInvalid.raml",
+      "line": 10,
+      "column": 2,
+      "position": 102,
+      "range": [
+        {
+          "line": 10,
+          "column": 2,
+          "position": 102
+        },
+        {
+          "line": 10,
+          "column": 13,
+          "position": 113
+        }
+      ]
+    }
+  ]
+}
