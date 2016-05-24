@@ -7,23 +7,90 @@ var root = path.resolve(__dirname, '../generated');
 
 var isWin = /^win/.test(process.platform);
 
+var testsCount = 0;
+var jsTestsCountPassed = 0;
+
 function install() {
     copySources();
 
+    cloneJavaParser();
+
     npmInstall();
+
+    mvnInstall();
+
+    setupJavaTestProject();
+
+    console.log('running js parser tests...');
 
     runJsTests();
 
-    // cloneJavaParser();
-    //
-    // mvnInstall();
-    //
-    // setupJavaTestProject();
-    //
-    // var json = runApiJava('/Users/dreamflyer/Downloads/project/modules/raml-js-parser-2/src/raml1/test/data/TCK/RAML10/Types/test1/apiValid.raml');
-    //
-    // console.log('result:');
-    // console.log(JSON.stringify(json, null, '\t'));
+    console.log('running java parser tests...');
+
+    runJavaTests();
+}
+
+function runJavaTests() {
+    var jsJsonPath = path.resolve(root, './parsers/jsparser/result.json');
+    
+    var jsJson = JSON.parse(fs.readFileSync(jsJsonPath).toString());
+    
+    var count = 0;
+    
+    var jsCount = 0;
+    var javaCount = 0;
+    
+    jsJson.forEach(function(item) {
+        count++;
+        
+        if(item.passed) {
+            jsCount++;
+        }
+
+        var javaResult = runApiJava(item.apiPath);
+
+        javaResult.errors = javaResult.errors || [];
+        
+        if(!javaResult.exception) {
+            if(item.errors.length === javaResult.errors.length) {
+                javaCount++;
+                
+                console.log('java parser passed: ' + item.apiPath);
+            } else {
+                console.log('java parser failed: ' + item.apiPath);
+
+                console.warn("DIFFERENCE DETECTED FOR " + item.tckPath);
+
+                console.log('');
+
+                printDiff(item.errors, javaResult.errors);
+            }
+        } else {
+            console.log('java parser failed to load: ' + item.apiPath);
+        }
+    });
+    
+    //console.log('js parser TCK tests, passed ' + passedCount + '/' + count + '.');
+}
+
+function printDiff(jsErrors, javaErrors) {
+    console.log('expected:' + (jsErrors.length === 0 ? ' no errors.\n' : '\n'));
+
+    if(jsErrors.length > 0) {
+        printErrors(jsErrors);
+    }
+
+    console.log('actually:' + (javaErrors.length === 0 ? ' no errors.\n' : '\n'));
+
+    if(javaErrors.length > 0) {
+        printErrors(javaErrors);
+    }
+}
+
+function printErrors(errors) {
+    errors.forEach(function(error) {
+        console.log('\t' + error);
+    });
 }
 
 function runJsTests() {
@@ -148,15 +215,7 @@ function cloneJavaParser() {
 function mvnInstall() {
     var pomXmlPath = path.resolve(root, './parsers/javaparser/rajapa/pom.xml');
 
-    console.log('mvn install...');
-
     var res = spawnSync('mvn', ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies'], {stdio: [0, 1, 2]});
-
-    console.log('mvn install done.' + (res.error || res.errors));
-
-    if(res.error || res.errors) {
-        throw new Error(res.error || res.errors)
-    }
 }
 
 function setupJavaTestProject() {

@@ -5,9 +5,11 @@ var _ = require("underscore");
 
 var count = 0;
 
+var passedCount = 0;
+
 var skipGeneration = true;
 
-var resultJson = {};
+var resultJson = [];
 
 function iterateFolder(folderAbsPath) {
     if (!fs.lstatSync(folderAbsPath).isDirectory()) {
@@ -82,7 +84,7 @@ function processDirectory(dirContent) {
     if (dirContent.hasCleanAPIsOnly()) {
         for (var _i = 0, _a = dirContent.masterAPIs(); _i < _a.length; _i++) {
             var rf = _a[_i];
-            testAPI(rf.absolutePath());
+            handle(testAPI(rf.absolutePath()));
         }
         return;
     }
@@ -90,21 +92,21 @@ function processDirectory(dirContent) {
         for (var _b = 0, _c = dirContent.extnsionsAndOverlays(); _b < _c.length; _b++) {
             var rf = _c[_b];
             var jsonPath = defaultJSONPath(rf.extends());
-            testAPI(rf.absolutePath(), null, jsonPath);
+            handle(testAPI(rf.absolutePath(), null, jsonPath));
         }
         return;
     }
     else if (dirContent.hasLibraries() && dirContent.masterAPIs().length == 0) {
         for (var _d = 0, _e = dirContent.libraries(); _d < _e.length; _d++) {
             var rf = _e[_d];
-            testAPI(rf.absolutePath());
+            handle(testAPI(rf.absolutePath()));
         }
         return;
     }
     else if (dirContent.hasFragmentsOnly()) {
         for (var _f = 0, _g = dirContent.fragments(); _f < _g.length; _f++) {
             var rf = _g[_f];
-            testAPI(rf.absolutePath());
+            handle(testAPI(rf.absolutePath()));
         }
         return;
     }
@@ -119,6 +121,33 @@ function processDirectory(dirContent) {
     }
     console.warn("UNABLE TO DETERMINE TEST CONFIGURATION: " + dirContent.absolutePath());
 }
+
+function handle(item) {
+    count++;
+
+    var resultJsonItem = {apiPath: item.api, errors: [], tckPath: item.tckPath};
+
+    var inputErrors = item.json.errors || [];
+
+    inputErrors.forEach(function(err) {
+        resultJsonItem.errors.push(err.message + " in '" + err.path + "'.");
+    });
+
+    if(item.result) {
+        passedCount++;
+    }
+
+    resultJsonItem.passed = item.result;
+
+    resultJson.push(resultJsonItem);
+}
+
+function complete() {
+    var resultPath = path.resolve(__dirname, './result.json');
+
+    fs.writeFileSync(resultPath, JSON.stringify(resultJson, null, '\t'));
+}
+
 exports.processDirectory = processDirectory;
 (function (RamlFileKind) {
     RamlFileKind[RamlFileKind["API"] = 0] = "API";
@@ -238,12 +267,21 @@ function testAPI(apiPath, extensions, tckJsonPath) {
 
     var regExp = new RegExp('/errors\\[\\d+\\]/path');
     var diff = compare(json, tckJson).filter(function (x) { return !x.path.match(regExp); });
-    if (diff.length == 0) {
-    }
-    else {
+
+    var passed = false;
+
+    if(diff.length == 0) {
+        console.log('js parser passed: ' + apiPath);
+
+        passed = true;
+    } else {
+        console.log('js parser failed: ' + apiPath);
+
         console.warn("DIFFERENCE DETECTED FOR " + tckJsonPath);
         console.warn(diff.map(function (x) { return x.message("actual", "expected"); }).join("\n\n"));
     }
+
+    return {api: apiPath, json: tckJson, result: passed, tckPath: tckJsonPath};
 }
 function compare(arg0, arg1, path) {
     if (path === void 0) { path = ''; }
@@ -355,4 +393,7 @@ if (!path.isAbsolute(dirPath)) {
     dirPath = path.resolve(process.cwd(), dirPath);
 }
 iterateFolder(dirPath);
+
+complete();
+
 //# sourceMappingURL=tckGenerator.js.map
