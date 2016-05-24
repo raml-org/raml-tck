@@ -5,6 +5,8 @@ var spawnSync = require('child_process').spawnSync;
 
 var root = path.resolve(__dirname, '../generated');
 
+var isWin = /^win/.test(process.platform);
+
 function install() {
     copySources();
 
@@ -43,7 +45,11 @@ function runJsTests() {
 function npmInstall() {
     var destination = path.resolve(root, './parsers/jsparser');
 
-    var installResult = spawnSync('npm', ['install', '--prefix', destination], {stdio: [0, 1, 2]});
+    var command = 'npm';
+    if(isWin){
+        command += ".cmd";
+    }
+    var installResult = spawnSync(command, ['install', '--prefix', destination], {stdio: [0, 1, 2]});
 }
 
 function copySources() {
@@ -58,7 +64,7 @@ function copySources() {
     copyFolderRecursiveSync(path.resolve(__dirname, './source/TCK'), root);
     copyFolderRecursiveSync(path.resolve(__dirname, './source/parsers'), root);
 
-    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson));
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson,null,2));
 }
 
 function copyFileSync(source, target) {
@@ -191,8 +197,8 @@ function runApiJava(ramlPath) {
     var mainJava = path.resolve(root, './parsers/javaparser/rajapatest/src/rajapatest/Main.java');
 
     var jarOutputDir = path.resolve(root, './parsers/javaparser/rajapatest/output');
-    
-    var spawned = spawnSync('java', ['-cp', testLibTargetDir + ':' + dependencyPath + ':' + jarOutputDir, 'rajapatest.Main', ramlPath]);
+    var delim = path.delimiter;
+    var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'rajapatest.Main', ramlPath]);
 
     return JSON.parse(spawned.output.join(''));
 }
