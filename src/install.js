@@ -48,9 +48,12 @@ function runJavaTests() {
         }
 
         var javaResult = runApiJava(item.apiPath);
-
-        javaResult.errors = javaResult.errors || [];
+        if(javaResult==null){
+            return;
+        }
         
+        javaResult.errors = javaResult.errors || [];
+
         if(!javaResult.exception) {
             if(item.errors.length === javaResult.errors.length) {
                 javaCount++;
@@ -213,9 +216,13 @@ function cloneJavaParser() {
 }
 
 function mvnInstall() {
-    var pomXmlPath = path.resolve(root, './parsers/javaparser/rajapa/pom.xml');
+    var pomXmlPath = path.resolve(root, './parsers/javaparser/rajapa/pom.xml').replace(/\\/g,"/");
 
-    var res = spawnSync('mvn', ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies'], {stdio: [0, 1, 2]});
+    var command = 'mvn';
+    if(isWin){
+        command += ".bat";
+    }
+    var res = spawnSync(command, ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies'], {stdio: [0, 1, 2]});
 }
 
 function setupJavaTestProject() {
@@ -227,13 +234,18 @@ function setupJavaTestProject() {
 
     var mainJava = path.resolve(root, './parsers/javaparser/rajapatest/src/rajapatest/Main.java');
     
-    var targetName = ''; 
+    var targetName = null;
     
     fs.readdirSync(targetDir).forEach(function(filename) {
         if(/raml-parser(.)*SNAPSHOT.jar/.test(filename)) {
             targetName = filename;
         }
     });
+
+    if(targetName==null){
+        console.warn("Java parser build failed");
+        return;
+    }
     
     fs.writeFileSync(testLibTargetDir, fs.readFileSync(targetDir + '/' + targetName));
 
@@ -250,6 +262,9 @@ function runApiJava(ramlPath) {
     var targetDir = path.resolve(root, './parsers/javaparser/rajapa/target');
 
     var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
+    if(!fs.existsSync(testLibTargetDir)){
+        return;
+    }
 
     var dependencyPath = path.resolve(root, './parsers/javaparser/rajapatest/lib/json-simple.jar');
 
