@@ -34,46 +34,6 @@ function runJavaTests() {
     var jsJsonPath = path.resolve(root, './parsers/jsparser/result.json');
 
     runApiJava(jsJsonPath);
-    
-    // var jsJson = JSON.parse(fs.readFileSync(jsJsonPath).toString());
-    //
-    // var count = 0;
-    //
-    // var jsCount = 0;
-    // var javaCount = 0;
-    //
-    // jsJson.forEach(function(item) {
-    //     count++;
-    //
-    //     if(item.passed) {
-    //         jsCount++;
-    //     }
-    //
-    //     var javaResult = runApiJava(item.apiPath);
-    //     if(javaResult==null){
-    //         return;
-    //     }
-    //
-    //     javaResult.errors = javaResult.errors || [];
-    //
-    //     if(!javaResult.exception) {
-    //         if(item.errors.length === javaResult.errors.length) {
-    //             javaCount++;
-    //
-    //             console.log('java parser passed: ' + item.apiPath);
-    //         } else {
-    //             console.log('java parser failed: ' + item.apiPath);
-    //
-    //             console.warn("DIFFERENCE DETECTED FOR " + item.tckPath);
-    //
-    //             console.log('');
-    //
-    //             printDiff(item.errors, javaResult.errors);
-    //         }
-    //     } else {
-    //         console.log('java parser failed to load: ' + item.apiPath);
-    //     }
-    // });
 }
 
 function printDiff(jsErrors, javaErrors) {
@@ -97,13 +57,9 @@ function printErrors(errors) {
 }
 
 function runJsTests() {
-    // var istanbul = path.resolve(root, './parsers/jsparser/node_modules/.bin/istanbul');
-    // var mocha = path.resolve(root, './parsers/jsparser/node_modules/.bin/_mocha');
-    // var tests = path.resolve(root, './parsers/jsparser/tests');
-    //
-    // var istanbulResult = spawnSync(istanbul, ['cover', mocha, tests], {stdio: [0, 1, 2]});
     var tests = path.resolve(root, './parsers/jsparser/tckGenerator.js');
-    var contents = path.resolve(root, './TCK');
+    
+    var contents = path.resolve(__dirname, './source/TCK');
 
     var spawned = spawnSync('node', [tests, '-path', contents], {stdio: [0, 1, 2]});
 
@@ -116,9 +72,11 @@ function npmInstall() {
     var destination = path.resolve(root, './parsers/jsparser');
 
     var command = 'npm';
+    
     if(isWin){
         command += ".cmd";
     }
+    
     var installResult = spawnSync(command, ['install', '--prefix', destination], {stdio: [0, 1, 2]});
 }
 
@@ -131,7 +89,7 @@ function copySources() {
 
     fs.mkdirSync(root);
 
-    copyFolderRecursiveSync(path.resolve(__dirname, './source/TCK'), root);
+    //copyFolderRecursiveSync(path.resolve(__dirname, './source/TCK'), root);
     copyFolderRecursiveSync(path.resolve(__dirname, './source/parsers'), root);
 
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson,null,2));
