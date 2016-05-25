@@ -31,6 +31,8 @@ public class Main {
 			JSONArray inputJson = (JSONArray) new JSONParser().parse(new FileReader(jsonPath));
 			
 			for(Object item: inputJson) {
+				count++;
+
 				JSONObject jsonItem = (JSONObject) item;
 				
 				String apiPath = (String) jsonItem.get("apiPath");
