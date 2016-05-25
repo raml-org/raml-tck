@@ -268,6 +268,7 @@ function runApiJava(ramlPath) {
 
     var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
     if(!fs.existsSync(testLibTargetDir)){
+        console.warn("Unable to run Java parser tests because Java parser build has failed.");
         return;
     }
 

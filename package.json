@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "run": "node ./src/install.js"
+    "start": "node ./src/install.js"
   }
 }
