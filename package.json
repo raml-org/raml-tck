@@ -1,0 +1,8 @@
+{
+  "name": "raml-tck",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/install.js"
+  }
+}
