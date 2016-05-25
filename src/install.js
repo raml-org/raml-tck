@@ -32,48 +32,48 @@ function install() {
 
 function runJavaTests() {
     var jsJsonPath = path.resolve(root, './parsers/jsparser/result.json');
-    
-    var jsJson = JSON.parse(fs.readFileSync(jsJsonPath).toString());
-    
-    var count = 0;
-    
-    var jsCount = 0;
-    var javaCount = 0;
-    
-    jsJson.forEach(function(item) {
-        count++;
-        
-        if(item.passed) {
-            jsCount++;
-        }
 
-        var javaResult = runApiJava(item.apiPath);
-        if(javaResult==null){
-            return;
-        }
-        
-        javaResult.errors = javaResult.errors || [];
-
-        if(!javaResult.exception) {
-            if(item.errors.length === javaResult.errors.length) {
-                javaCount++;
-                
-                console.log('java parser passed: ' + item.apiPath);
-            } else {
-                console.log('java parser failed: ' + item.apiPath);
-
-                console.warn("DIFFERENCE DETECTED FOR " + item.tckPath);
-
-                console.log('');
-
-                printDiff(item.errors, javaResult.errors);
-            }
-        } else {
-            console.log('java parser failed to load: ' + item.apiPath);
-        }
-    });
+    runApiJava(jsJsonPath);
     
-    //console.log('js parser TCK tests, passed ' + passedCount + '/' + count + '.');
+    // var jsJson = JSON.parse(fs.readFileSync(jsJsonPath).toString());
+    //
+    // var count = 0;
+    //
+    // var jsCount = 0;
+    // var javaCount = 0;
+    //
+    // jsJson.forEach(function(item) {
+    //     count++;
+    //
+    //     if(item.passed) {
+    //         jsCount++;
+    //     }
+    //
+    //     var javaResult = runApiJava(item.apiPath);
+    //     if(javaResult==null){
+    //         return;
+    //     }
+    //
+    //     javaResult.errors = javaResult.errors || [];
+    //
+    //     if(!javaResult.exception) {
+    //         if(item.errors.length === javaResult.errors.length) {
+    //             javaCount++;
+    //
+    //             console.log('java parser passed: ' + item.apiPath);
+    //         } else {
+    //             console.log('java parser failed: ' + item.apiPath);
+    //
+    //             console.warn("DIFFERENCE DETECTED FOR " + item.tckPath);
+    //
+    //             console.log('');
+    //
+    //             printDiff(item.errors, javaResult.errors);
+    //         }
+    //     } else {
+    //         console.log('java parser failed to load: ' + item.apiPath);
+    //     }
+    // });
 }
 
 function printDiff(jsErrors, javaErrors) {
@@ -216,11 +216,14 @@ function cloneJavaParser() {
 }
 
 function mvnInstall() {
-    var pomXmlPath = path.resolve(root, './parsers/javaparser/rajapa/pom.xml').replace(/\\/g,"/");
-
+    var pomXmlPath = path.resolve(root, './parsers/javaparser/rajapa/pom.xml');
+    
     var command = 'mvn';
+    
     if(isWin){
         command += ".bat";
+
+        pomXmlPath = pomXmlPath.replace(/\\/g,"/");
     }
     var res = spawnSync(command, ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies'], {stdio: [0, 1, 2]});
 }
@@ -254,7 +257,9 @@ function setupJavaTestProject() {
     if(!fs.existsSync(jarOutputDir)) {
         fs.mkdir(jarOutputDir);
     }
+
     var delim = path.delimiter;
+
     spawnSync('javac', ['-cp', "" + testLibTargetDir + delim + dependencyPath + "", '-d', jarOutputDir, mainJava], {stdio: [0, 1, 2]});
 }
 
@@ -272,9 +277,7 @@ function runApiJava(ramlPath) {
 
     var jarOutputDir = path.resolve(root, './parsers/javaparser/rajapatest/output');
     var delim = path.delimiter;
-    var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'rajapatest.Main', ramlPath]);
-
-    return JSON.parse(spawned.output.join(''));
+    var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'rajapatest.Main', ramlPath], {stdio: [0, 1, 2]});
 }
 
 install();
