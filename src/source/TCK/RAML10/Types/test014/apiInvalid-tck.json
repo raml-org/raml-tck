@@ -35,19 +35,19 @@
       "code": 11,
       "message": "recurrent array type definition",
       "path": "apiInvalid.raml",
-      "line": 4,
-      "column": 2,
-      "position": 32,
+      "line": 5,
+      "column": 4,
+      "position": 46,
       "range": [
         {
-          "line": 4,
-          "column": 2,
-          "position": 32
+          "line": 5,
+          "column": 4,
+          "position": 46
         },
         {
-          "line": 4,
-          "column": 10,
-          "position": 40
+          "line": 5,
+          "column": 8,
+          "position": 50
         }
       ]
     }

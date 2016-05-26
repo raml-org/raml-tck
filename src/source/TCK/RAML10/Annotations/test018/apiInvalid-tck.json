@@ -61,19 +61,19 @@
       "code": 11,
       "message": "inheriting from unknown type",
       "path": "apiInvalid.raml",
-      "line": 6,
-      "column": 2,
-      "position": 154,
+      "line": 7,
+      "column": 4,
+      "position": 189,
       "range": [
         {
-          "line": 6,
-          "column": 2,
-          "position": 154
+          "line": 7,
+          "column": 4,
+          "position": 189
         },
         {
-          "line": 6,
-          "column": 31,
-          "position": 183
+          "line": 7,
+          "column": 8,
+          "position": 193
         }
       ]
     }
