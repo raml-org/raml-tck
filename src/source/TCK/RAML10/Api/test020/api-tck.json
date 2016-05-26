@@ -42,19 +42,19 @@
       "code": 11,
       "message": "inheriting from unknown type",
       "path": "api.raml",
-      "line": 4,
-      "column": 2,
-      "position": 74,
+      "line": 7,
+      "column": 4,
+      "position": 127,
       "range": [
         {
-          "line": 4,
-          "column": 2,
-          "position": 74
+          "line": 7,
+          "column": 4,
+          "position": 127
         },
         {
-          "line": 4,
-          "column": 3,
-          "position": 75
+          "line": 7,
+          "column": 8,
+          "position": 131
         }
       ]
     }
