@@ -56,5 +56,26 @@
       }
     ]
   },
-  "errors": []
+  "errors": [
+    {
+      "code": 11,
+      "message": "Unable to validate example against schema (xmllint)",
+      "path": "apiValid.raml",
+      "line": 8,
+      "column": 8,
+      "position": 125,
+      "range": [
+        {
+          "line": 8,
+          "column": 8,
+          "position": 125
+        },
+        {
+          "line": 8,
+          "column": 15,
+          "position": 132
+        }
+      ]
+    }
+  ]
 }
