@@ -1,0 +1,119 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "type": [
+            "{\n    \"$schema\":\"http://json-schema.org/draft-04/schema\",\n    \"type\":\"object\",\n    \"properties\":{\n      \"child\":{\n          \"type\": {\"$ref\": \"https://rawgit.com/dreamflyer/testjsonschemes/master/test1/scheme.json#\"},\n          \"required\": true\n      }\n    }\n  }\n"
+          ],
+          "repeat": false,
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "repeat": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "Api",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "MyType"
+                ],
+                "example": {
+                  "child": {
+                    "name": "somename"
+                  }
+                },
+                "repeat": false,
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "structuredExample": {
+                  "value": {
+                    "child": {
+                      "name": "somename"
+                    }
+                  },
+                  "strict": true,
+                  "name": null,
+                  "structuredValue": {
+                    "child": {
+                      "name": "somename"
+                    }
+                  }
+                }
+              }
+            },
+            "method": "get"
+          }
+        ],
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ]
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": 11,
+      "message": "Example does not conform to schema:Content is not valid according to schema:Keyword 'type' is expected to be of type 'string,array' type,string,array, Keyword 'required' is expected to be of type 'array' required,array",
+      "path": "apiValid.raml",
+      "line": 23,
+      "column": 8,
+      "position": 428,
+      "range": [
+        {
+          "line": 23,
+          "column": 8,
+          "position": 428
+        },
+        {
+          "line": 23,
+          "column": 15,
+          "position": 435
+        }
+      ]
+    }
+  ]
+}
