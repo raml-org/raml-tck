@@ -11,7 +11,7 @@
             "count": 16,
             "data": [  ]
         },
-        "caption": null,
+        "caption": "some caption",
         "link": "http://instagr.am/p/BXsFz/",
         "likes": {
             "count": 190,
@@ -64,7 +64,8 @@
                 "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4",
                 "width": 640,
                 "height": 640
-            },
+            }
+        },
         "comments": {
             "data": [{
                 "created_time": "1279332030",
@@ -90,7 +91,7 @@
             }],
             "count": 2
         },
-        "caption": null,
+        "caption": "some caption",
         "likes": {
             "count": 1,
             "data": [{
@@ -120,7 +121,7 @@
             }
         },
         "type": "video",
-        "users_in_photo": null,
+        "users_in_photo": [],
         "filter": "Vesper",
         "tags": [],
         "id": "363839373298",
@@ -130,6 +131,11 @@
             "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
             "id": "3"
         },
-        "location": null
-    }}]
+        "location": {
+            "id": "id",
+            "latitude": -34,
+            "longitude": -53,
+            "name": "some place"
+        }
+    }]
 }
