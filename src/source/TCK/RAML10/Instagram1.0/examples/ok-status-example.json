@@ -1,9 +1,6 @@
 {
-    "geo": {
-        "address": {
-            "city": "SEATTLE",
-            "streetAddress": "300 BOYLSTON AVE E"
-        },
-        "age": 20
-    }
+    "meta": {
+        "code": 200
+    },
+    "data": null
 }

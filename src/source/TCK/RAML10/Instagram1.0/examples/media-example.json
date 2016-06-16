@@ -30,7 +30,17 @@
             }],
             "count": 2
         },
-        "caption": "some caption",
+        "caption": {
+            "created_time": "1296710352",
+            "text": "Inside le truc #foodtruck",
+            "from": {
+                "username": "kevin",
+                "full_name": "Kevin Systrom",
+                "type": "user",
+                "id": "3"
+            },
+            "id": "26621408"
+        },
         "likes": {
             "count": 1,
             "data": [{
