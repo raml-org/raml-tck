@@ -170,7 +170,7 @@ function cloneJavaParser() {
         fs.mkdirSync(javaRepoPath);
     }
     
-    spawnSync('git', ['clone', 'https://github.com/mulesoft-labs/rajapa.git', javaRepoPath], {stdio: [0, 1, 2]});
+    spawnSync('git', ['clone', '-b', 'v2', '--depth', '1', 'https://github.com/raml-org/raml-java-parser.git', javaRepoPath], {stdio: [0, 1, 2]});
 }
 
 function mvnInstall() {
@@ -183,11 +183,11 @@ function mvnInstall() {
 
         pomXmlPath = pomXmlPath.replace(/\\/g,"/");
     }
-    var res = spawnSync(command, ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies'], {stdio: [0, 1, 2]});
+    var res = spawnSync(command, ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies', '-Dmaven.test.skip=true', '-Dlicense.skip=true', '-Dformatter.skip=true'], {stdio: [0, 1, 2]});
 }
 
 function setupJavaTestProject() {
-    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/target');
+    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/raml-parser-2/target');
     
     var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
 
@@ -222,7 +222,7 @@ function setupJavaTestProject() {
 }
 
 function runApiJava(ramlPath) {
-    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/target');
+    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/raml-parser-2/target');
 
     var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
     if(!fs.existsSync(testLibTargetDir)){
