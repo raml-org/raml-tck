@@ -1,36 +1,120 @@
+"use strict";
+/// <reference path="../../../../typings/main.d.ts" />
 var fs = require("fs");
 var path = require("path");
 var index = require('raml-1-parser');
+// var testUtil = require("../test-utils");
+// var util = require("../../../util/index");
+var mappings = require("./messageMappings");
 var _ = require("underscore");
-
-var count = 0;
-
-var passedCount = 0;
-
-var skipGeneration = true;
-
-var resultJson = [];
-
-function iterateFolder(folderAbsPath) {
+//var assert = require("assert");
+var MessageMapping = (function () {
+    function MessageMapping(patterns) {
+        this.regExps = patterns.map(function (x) { return new RegExp(x); });
+    }
+    MessageMapping.prototype.match = function (a, b) {
+        var aMatch = this.getValues(a);
+        if (aMatch == null) {
+            return null;
+        }
+        var bMatch = this.getValues(b);
+        if (bMatch == null) {
+            return null;
+        }
+        if (aMatch.length != bMatch.length) {
+            return false;
+        }
+        for (var i = 1; i < aMatch.length; i++) {
+            if (aMatch[i] != bMatch[i]) {
+                return false;
+            }
+        }
+        return true;
+    };
+    MessageMapping.prototype.getValues = function (str) {
+        for (var _i = 0, _a = this.regExps; _i < _a.length; _i++) {
+            var re = _a[_i];
+            var match = str.match(re);
+            if (match != null) {
+                return match;
+            }
+        }
+        return null;
+    };
+    return MessageMapping;
+}());
+var TestResult = (function () {
+    function TestResult(apiPath, json, success, tckJsonPath) {
+        this.apiPath = apiPath;
+        this.json = json;
+        this.success = success;
+        this.tckJsonPath = tckJsonPath;
+    }
+    return TestResult;
+}());
+var messageMappings = mappings.map(function (x) { return new MessageMapping(x.messagePatterns.map(function (x) { return x.pattern; })); });
+function launchTests(folderAbsPath, reportPath, regenerateJSON) {
+    var count = 0;
+    var passed = 0;
+    var report = [];
+    var dirs = iterateFolder(folderAbsPath);
+    for (var _i = 0, dirs_1 = dirs; _i < dirs_1.length; _i++) {
+        var dir = dirs_1[_i];
+        var tests = getTests(dir);
+        for (var _a = 0, tests_1 = tests; _a < tests_1.length; _a++) {
+            var test = tests_1[_a];
+            count++;
+            var result = testAPI(test.masterPath(), test.extensionsAndOverlays(), test.jsonPath(), regenerateJSON, false);
+            if (result.success) {
+                passed++;
+                console.log('js parser passed: ' + result.apiPath);
+            }
+            else {
+                console.warn('js parser failed: ' + result.apiPath);
+            }
+            var reportItem = {
+                apiPath: result.apiPath,
+                errors: [],
+                tckJsonPath: result.tckJsonPath,
+                passed: result.success
+            };
+            if (result.json.errors) {
+                for (var _b = 0, _c = result.json.errors; _b < _c.length; _b++) {
+                    var err = _c[_b];
+                    reportItem.errors.push(err.message + " in '" + err.path + "'.");
+                }
+            }
+            report.push(reportItem);
+        }
+    }
+    console.log("total tests count: " + count);
+    console.log("tests passed: " + passed);
+    console.log("report file: " + reportPath);
+    if (report) {
+        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    }
+}
+exports.launchTests = launchTests;
+function iterateFolder(folderAbsPath, result) {
+    if (result === void 0) { result = []; }
     if (!fs.lstatSync(folderAbsPath).isDirectory()) {
         return;
     }
     var dirContent = extractContent(folderAbsPath);
     if (dirContent != null) {
-        processDirectory(dirContent);
-        return;
+        result.push(dirContent);
+        return result;
     }
     for (var _i = 0, _a = fs.readdirSync(folderAbsPath); _i < _a.length; _i++) {
         var ch = _a[_i];
         var childAbsPath = path.resolve(folderAbsPath, ch);
         if (fs.lstatSync(childAbsPath).isDirectory()) {
-            iterateFolder(childAbsPath);
+            iterateFolder(childAbsPath, result);
         }
     }
+    return result;
 }
-
 exports.iterateFolder = iterateFolder;
-
 function extractContent(folderAbsPath) {
     if (!fs.lstatSync(folderAbsPath).isDirectory()) {
         return null;
@@ -80,75 +164,46 @@ function extractMasterRef(filePath) {
     var result = path.resolve(path.dirname(filePath), extendsStr);
     return result;
 }
-function processDirectory(dirContent) {
+function getTests(dirContent) {
+    var result = [];
     if (dirContent.hasCleanAPIsOnly()) {
-        for (var _i = 0, _a = dirContent.masterAPIs(); _i < _a.length; _i++) {
-            var rf = _a[_i];
-            handle(testAPI(rf.absolutePath()));
-        }
-        return;
+        result = dirContent.masterAPIs().map(function (x) { return new Test(x.absolutePath()); });
     }
     else if (dirContent.hasSingleExtensionOrOverlay()) {
-        for (var _b = 0, _c = dirContent.extnsionsAndOverlays(); _b < _c.length; _b++) {
-            var rf = _c[_b];
-            var jsonPath = defaultJSONPath(rf.extends());
-            handle(testAPI(rf.absolutePath(), null, jsonPath));
-        }
-        return;
+        result = dirContent.extnsionsAndOverlays().map(function (x) {
+            var jsonPath = defaultJSONPath(x.extends());
+            return new Test(x.absolutePath(), null, jsonPath);
+        });
     }
     else if (dirContent.hasLibraries() && dirContent.masterAPIs().length == 0) {
-        for (var _d = 0, _e = dirContent.libraries(); _d < _e.length; _d++) {
-            var rf = _e[_d];
-            handle(testAPI(rf.absolutePath()));
-        }
-        return;
+        result = dirContent.libraries().map(function (x) { return new Test(x.absolutePath()); });
     }
     else if (dirContent.hasFragmentsOnly()) {
-        for (var _f = 0, _g = dirContent.fragments(); _f < _g.length; _f++) {
-            var rf = _g[_f];
-            handle(testAPI(rf.absolutePath()));
-        }
-        return;
+        result = dirContent.fragments().map(function (x) { return new Test(x.absolutePath()); });
     }
     else if (dirContent.hasExtensionsOrOverlaysAppliedToSingleAPI()) {
         var ordered = orderExtensionsAndOverlays(dirContent.extnsionsAndOverlays());
         if (ordered) {
             var apiPath = ordered[0].extends();
             var extensionsAndOverlays = ordered.map(function (x) { return x.absolutePath(); });
-            testAPI(apiPath, extensionsAndOverlays);
-            return;
+            result = [new Test(apiPath, extensionsAndOverlays)];
         }
     }
-    console.warn("UNABLE TO DETERMINE TEST CONFIGURATION: " + dirContent.absolutePath());
+    return result;
 }
-
-function handle(item) {
-    count++;
-
-    var resultJsonItem = {apiPath: item.api, errors: [], tckPath: item.tckPath};
-
-    var inputErrors = item.json.errors || [];
-
-    inputErrors.forEach(function(err) {
-        resultJsonItem.errors.push(err.message + " in '" + err.path + "'.");
-    });
-
-    if(item.result) {
-        passedCount++;
+exports.getTests = getTests;
+var Test = (function () {
+    function Test(_masterPath, _extensionsAndOverlays, _jsonPath) {
+        this._masterPath = _masterPath;
+        this._extensionsAndOverlays = _extensionsAndOverlays;
+        this._jsonPath = _jsonPath;
     }
-
-    resultJsonItem.passed = item.result;
-
-    resultJson.push(resultJsonItem);
-}
-
-function complete() {
-    var resultPath = path.resolve(__dirname, './result.json');
-
-    fs.writeFileSync(resultPath, JSON.stringify(resultJson, null, '\t'));
-}
-
-exports.processDirectory = processDirectory;
+    Test.prototype.masterPath = function () { return this._masterPath; };
+    Test.prototype.extensionsAndOverlays = function () { return this._extensionsAndOverlays; };
+    Test.prototype.jsonPath = function () { return this._jsonPath; };
+    return Test;
+}());
+exports.Test = Test;
 (function (RamlFileKind) {
     RamlFileKind[RamlFileKind["API"] = 0] = "API";
     RamlFileKind[RamlFileKind["LIBRARY"] = 1] = "LIBRARY";
@@ -165,7 +220,8 @@ var RamlFile = (function () {
         this._extends = _extends;
     }
     RamlFile.prototype.absolutePath = function () {
-        return this._absPath;
+        return this._absPath.replace(/\\/g, '/');
+        ;
     };
     RamlFile.prototype.kind = function () {
         return this._kind;
@@ -185,7 +241,7 @@ var DirectoryContent = (function () {
         this.files = files;
     }
     DirectoryContent.prototype.absolutePath = function () {
-        return this.dirAbsPath;
+        return this.dirAbsPath.replace(/\\/g, '/');
     };
     DirectoryContent.prototype.allRamlFiles = function () {
         return this.files;
@@ -226,6 +282,7 @@ function defaultJSONPath(apiPath) {
     var str = path.resolve(dir, fileName);
     return str;
 }
+exports.defaultJSONPath = defaultJSONPath;
 ;
 function orderExtensionsAndOverlays(ramlFiles) {
     var indToFileMap = {};
@@ -248,7 +305,21 @@ function orderExtensionsAndOverlays(ramlFiles) {
     });
     return sorted;
 }
-function testAPI(apiPath, extensions, tckJsonPath) {
+function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, doAssert) {
+    if (regenerteJSON === void 0) { regenerteJSON = false; }
+    if (doAssert === void 0) { doAssert = false; }
+    // if (apiPath) {
+    //     apiPath = testUtil.data(apiPath);
+    // }
+    // if (extensions) {
+    //     extensions = extensions.map(function (x) { return testUtil.data(x); });
+    // }
+    if (!tckJsonPath) {
+        tckJsonPath = defaultJSONPath(apiPath);
+    }
+    // else {
+    //     tckJsonPath = testUtil.data(tckJsonPath);
+    // }
     var api = index.loadRAMLSync(apiPath, extensions);
     var expanded = api["expand"] ? api["expand"]() : api;
     expanded.setAttributeDefaults(true);
@@ -256,33 +327,135 @@ function testAPI(apiPath, extensions, tckJsonPath) {
     if (!tckJsonPath) {
         tckJsonPath = defaultJSONPath(apiPath);
     }
+    if (regenerteJSON) {
+        fs.writeFileSync(tckJsonPath, JSON.stringify(json, null, 2));
+    }
     if (!fs.existsSync(tckJsonPath)) {
+        fs.writeFileSync(tckJsonPath, JSON.stringify(json, null, 2));
         console.warn("FAILED TO FIND JSON: " + tckJsonPath);
-
-        var jsonStr =  JSON.stringify(json, null, 2);
-
-        fs.writeFileSync(tckJsonPath, jsonStr);
     }
     var tckJson = JSON.parse(fs.readFileSync(tckJsonPath).toString());
-
-    var regExp = new RegExp('/errors\\[\\d+\\]/path');
-    var diff = compare(json, tckJson).filter(function (x) { return !x.path.match(regExp); });
-
-    var passed = false;
-
-    if(diff.length == 0) {
-        console.log('js parser passed: ' + apiPath);
-
-        passed = true;
-    } else {
-        console.log('js parser failed: ' + apiPath);
-
+    var pathRegExp = new RegExp('/errors\\[\\d+\\]/path');
+    var messageRegExp = new RegExp('/errors\\[\\d+\\]/message');
+    var diff = /*testUtil.*/compare(json, tckJson).filter(function (x) {
+        if (x.path.match(pathRegExp)) {
+            return false;
+        }
+        if (x.path.match(messageRegExp)) {
+            for (var _i = 0, messageMappings_1 = messageMappings; _i < messageMappings_1.length; _i++) {
+                var mm = messageMappings_1[_i];
+                if (mm.match(x.value0, x.value1)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    });
+    var success = false;
+    if (diff.length == 0) {
+        success = true;
+    }
+    else {
         console.warn("DIFFERENCE DETECTED FOR " + tckJsonPath);
         console.warn(diff.map(function (x) { return x.message("actual", "expected"); }).join("\n\n"));
+        if (doAssert) {
+            //assert(false);
+        }
     }
-
-    return {api: apiPath, json: tckJson, result: passed, tckPath: tckJsonPath};
+    return new TestResult(apiPath, tckJson, success, tckJsonPath);
 }
+exports.testAPI = testAPI;
+function generateMochaSuite(folderAbsPath, dstPath, dataRoot) {
+    var dirs = iterateFolder(folderAbsPath);
+    var map = {};
+    for (var _i = 0, dirs_2 = dirs; _i < dirs_2.length; _i++) {
+        var dir = dirs_2[_i];
+        var tests = getTests(dir);
+        if (tests.length > 0) {
+            var suiteFolder = path.resolve(dir.absolutePath(), "../").replace(/\\/g, '/');
+            var arr = map[suiteFolder];
+            if (!arr) {
+                arr = [];
+                map[suiteFolder] = arr;
+            }
+            for (var _a = 0, tests_2 = tests; _a < tests_2.length; _a++) {
+                var t = tests_2[_a];
+                arr.push(t);
+            }
+        }
+    }
+    var suitePaths = Object.keys(map).sort();
+    var suiteStrings = [];
+    for (var _b = 0, suitePaths_1 = suitePaths; _b < suitePaths_1.length; _b++) {
+        var suitePath = suitePaths_1[_b];
+        var title = suiteTitle(suitePath);
+        if (!title) {
+            continue;
+        }
+        var suiteStr = dumpSuite(title, dataRoot, map[suitePath]);
+        suiteStrings.push(suiteStr);
+    }
+    var content = fileContent(suiteStrings, dstPath);
+    fs.writeFileSync(dstPath, content);
+}
+exports.generateMochaSuite = generateMochaSuite;
+function suiteTitle(absPath) {
+    var ind = Math.max(absPath.indexOf("RAML10"), absPath.indexOf("RAML08"));
+    if (ind < 0) {
+        return null;
+    }
+    return absPath.substring(ind);
+}
+function dumpSuite(title, dataRoot, tests) {
+    var dumpedTests = tests.map(function (x) { return dumpTest(x, dataRoot); });
+    var testsStr = dumpedTests.join("\n\n");
+    return "describe('" + title + "',function(){\n    \n" + testsStr + "\n    \n});";
+}
+function dumpTest(test, dataRoot) {
+    var relMasterPath = path.relative(dataRoot, test.masterPath()).replace(/\\/g, '/');
+    ;
+    var args = [("\"" + relMasterPath + "\"")];
+    if (test.extensionsAndOverlays()) {
+        var relArr = test.extensionsAndOverlays().map(function (x) { return path.relative(dataRoot, x).replace(/\\/g, '/'); });
+        if (relArr.length > 0) {
+            args.push("[ " + relArr.map(function (x) { return ("\"" + x + "\""); }).join(", ") + " ]");
+        }
+    }
+    var jsonPath = test.jsonPath() ? path.relative(dataRoot, test.jsonPath()).replace(/\\/g, '/') : null;
+    if (jsonPath != null) {
+        if (!test.extensionsAndOverlays()) {
+            args.push("null");
+        }
+        args.push("\"" + jsonPath + "\"");
+    }
+    return "    it(\"" + path.basename(path.dirname(test.masterPath())) + "/" + path.basename(test.masterPath()) + "\", function () {\n        this.timeout(15000);\n        tckUtil.testAPI(" + args.join(", ") + ");\n    });";
+}
+var toIncludePath = function (workingFolder, absPath) {
+    var relPath = path.relative(workingFolder, absPath).replace(/\\/g, "/");
+    if (!relPath || relPath.charAt(0)!=".") {
+        relPath = "./" + relPath;
+    }
+    return relPath;
+};
+function projectFolder() {
+    var folder = __dirname;
+    while (!fs.existsSync(path.resolve(folder, "package.json"))) {
+        folder = path.resolve(folder, "../");
+    }
+    return folder;
+}
+exports.projectFolder = projectFolder;
+;
+function fileContent(suiteStrings, filePath) {
+    var folder = projectFolder();
+    var dstFolder = path.dirname(filePath);
+    var tckUtilPath = path.resolve(folder, "./src/raml1/test/scripts/tckUtil");
+    var typingsPath = path.resolve(folder, "typings/main.d.ts");
+    var relTckUtilPath = toIncludePath(dstFolder, tckUtilPath);
+    var relTypingsPath = toIncludePath(dstFolder, typingsPath);
+    return "/**\n * ATTENTION !!! The file is generated. Manual changes will be overridden by the nearest build.\n */\n/// <reference path=\"" + relTypingsPath + "\" />\nimport tckUtil = require(\"" + relTckUtilPath + "\")\n\ndescribe('Complete TCK Test Set',function(){\n\n" + suiteStrings.join("\n\n") + "\n\n});\n\n";
+}
+;
 function compare(arg0, arg1, path) {
     if (path === void 0) { path = ''; }
     var diffs = [];
@@ -382,18 +555,3 @@ var Diff = (function () {
     return Diff;
 }());
 exports.Diff = Diff;
-var args = process.argv;
-var dirPath;
-for (var i = 0; i < args.length; i++) {
-    if (args[i] == "-path" && i < args.length - 1) {
-        dirPath = args[i + 1];
-    }
-}
-if (!path.isAbsolute(dirPath)) {
-    dirPath = path.resolve(process.cwd(), dirPath);
-}
-iterateFolder(dirPath);
-
-complete();
-
-//# sourceMappingURL=tckGenerator.js.map

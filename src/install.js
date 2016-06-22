@@ -57,11 +57,16 @@ function printErrors(errors) {
 }
 
 function runJsTests() {
-    var tests = path.resolve(root, './parsers/jsparser/tckGenerator.js');
+    var scriptPath = path.resolve(root, './parsers/jsparser/tckLauncher.js');
+    var reportPath = path.resolve(root, './parsers/jsparser/report.js');
     
-    var contents = path.resolve(__dirname, './source/TCK');
+    var tckDir = path.resolve(__dirname, './source/TCK');
 
-    var spawned = spawnSync('node', [tests, '-path', contents], {stdio: [0, 1, 2]});
+    var spawned = spawnSync(
+        'node',
+        [scriptPath, '-path', tckDir, '-report', reportPath],
+        {stdio: [0, 1, 2]}
+    );
 
     if(spawned.error) {
         throw new Error(error);
