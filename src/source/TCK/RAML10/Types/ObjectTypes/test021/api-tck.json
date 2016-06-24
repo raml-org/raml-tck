@@ -38,9 +38,9 @@
                 }
               }
             },
-            "title?": {
-              "name": "title?",
-              "displayName": "title?",
+            "title??": {
+              "name": "title??",
+              "displayName": "title??",
               "type": [
                 "string"
               ],
