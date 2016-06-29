@@ -72,9 +72,7 @@
             }
           },
           "structuredExample": {
-            "value": {
-              "name": "eleo"
-            },
+            "value": "{\n  \"name\": \"eleo\"\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
@@ -95,15 +93,15 @@
       "column": 4,
       "position": 470,
       "range": [
-        { 
-          "line": 17, 
-          "column":  4, 
+        {
+          "line": 17,
+          "column":  4,
           "position": 470
         },
-        { 
-          "line": 17, 
-          "column": 11, 
-          "position": 477 
+        {
+          "line": 17,
+          "column": 11,
+          "position": 477
         }
       ]
     }

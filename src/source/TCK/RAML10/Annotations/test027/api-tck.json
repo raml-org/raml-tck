@@ -7,7 +7,7 @@
         "MyType": {
           "annotations": {
             "simpleAnnotation": {
-              "structuredValue": "simpleAnnotation_value_on_type",
+              "structuredValue": "simpleAnnotationValueOnType",
               "name": "simpleAnnotation"
             },
             "objectAnnotation": {
@@ -253,7 +253,7 @@
           {
             "annotations": {
               "simpleAnnotation": {
-                "structuredValue": "simpleAnnotation_value_on_method",
+                "structuredValue": "simpleAnnotationValueOnMethod",
                 "name": "simpleAnnotation"
               },
               "objectAnnotation": {
