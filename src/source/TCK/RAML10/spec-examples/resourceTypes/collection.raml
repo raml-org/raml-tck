@@ -1,8 +1,14 @@
 #%RAML 1.0 ResourceType
 
-usage: This resourceType should be used for any collection of items
-description: The collection of <<resourcePathName>>
+#This file is located at resourceTypes/collection.raml
+
+description: A collection resource
+usage: Use this to describe a resource that lists items
 get:
-  description: Get all <<resourcePathName>>, optionally filtered
+  description: Retrieve all items
 post:
-  description: Create a new <<resourcePathName | !singularize>>
+  description: Add an item
+  responses:
+    201:
+      headers:
+        Location:
