@@ -52,8 +52,11 @@ var TestResult = (function () {
     }
     return TestResult;
 }());
-var messageMappings = mappings.map(function (x) { return new MessageMapping(x.messagePatterns.map(function (x) { return x.pattern; })); });
-function launchTests(folderAbsPath, reportPath, regenerateJSON) {
+exports.TestResult = TestResult;
+var messageMappings = mappings.map(function (x) {
+    return new MessageMapping(x.messagePatterns.map(function (x) { return x.pattern; }));
+});
+function launchTests(folderAbsPath, reportPath, regenerateJSON, callTests) {
     var count = 0;
     var passed = 0;
     var report = [];
@@ -64,7 +67,10 @@ function launchTests(folderAbsPath, reportPath, regenerateJSON) {
         for (var _a = 0, tests_1 = tests; _a < tests_1.length; _a++) {
             var test = tests_1[_a];
             count++;
-            var result = testAPI(test.masterPath(), test.extensionsAndOverlays(), test.jsonPath(), regenerateJSON, false);
+            var result = testAPI(test.masterPath(), test.extensionsAndOverlays(), test.jsonPath(), regenerateJSON, callTests, false);
+            if(!result){
+                continue;
+            }
             if (result.success) {
                 passed++;
                 console.log('js parser passed: ' + result.apiPath);
@@ -87,11 +93,13 @@ function launchTests(folderAbsPath, reportPath, regenerateJSON) {
             report.push(reportItem);
         }
     }
-    console.log("total tests count: " + count);
-    console.log("tests passed: " + passed);
-    console.log("report file: " + reportPath);
-    if (report) {
-        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    if(callTests) {
+        console.log("total tests count: " + count);
+        console.log("tests passed: " + passed);
+        console.log("report file: " + reportPath);
+        if (report) {
+            fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+        }
     }
 }
 exports.launchTests = launchTests;
@@ -305,9 +313,9 @@ function orderExtensionsAndOverlays(ramlFiles) {
     });
     return sorted;
 }
-function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, doAssert) {
+function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, callTests, doAssert) {
     if (regenerteJSON === void 0) { regenerteJSON = false; }
-    if (doAssert === void 0) { doAssert = false; }
+    if (callTests === void 0) { callTests = true; }
     // if (apiPath) {
     //     apiPath = testUtil.data(apiPath);
     // }
@@ -332,7 +340,14 @@ function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, doAssert) {
     }
     if (!fs.existsSync(tckJsonPath)) {
         fs.writeFileSync(tckJsonPath, JSON.stringify(json, null, 2));
-        console.warn("FAILED TO FIND JSON: " + tckJsonPath);
+        if (!callTests) {
+            console.log("TCK JSON GENERATED: " + tckJsonPath);
+            return;
+        }
+        console.warn("FAILED TO FIND TCK JSON: " + tckJsonPath);
+    }
+    if (!callTests) {
+        return;
     }
     var tckJson = JSON.parse(fs.readFileSync(tckJsonPath).toString());
     var pathRegExp = new RegExp('/errors\\[\\d+\\]/path');
