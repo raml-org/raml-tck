@@ -87,7 +87,7 @@
   "errors": [
     {
       "code": 11,
-      "message": "Missing required field \"title??\"",
+      "message": "Required property: title?? is missed",
       "path": "api.raml",
       "line": 17,
       "column": 4,
