@@ -44,11 +44,12 @@ var MessageMapping = (function () {
     return MessageMapping;
 }());
 var TestResult = (function () {
-    function TestResult(apiPath, json, success, tckJsonPath) {
+    function TestResult(apiPath, json, success, tckJsonPath, diff) {
         this.apiPath = apiPath;
         this.json = json;
         this.success = success;
         this.tckJsonPath = tckJsonPath;
+        this.diff = diff;
     }
     return TestResult;
 }());
@@ -68,7 +69,7 @@ function launchTests(folderAbsPath, reportPath, regenerateJSON, callTests) {
             var test = tests_1[_a];
             count++;
             var result = testAPI(test.masterPath(), test.extensionsAndOverlays(), test.jsonPath(), regenerateJSON, callTests, false);
-            if(!result){
+            if (!result) {
                 continue;
             }
             if (result.success) {
@@ -80,24 +81,18 @@ function launchTests(folderAbsPath, reportPath, regenerateJSON, callTests) {
             }
             var reportItem = {
                 apiPath: result.apiPath,
-                errors: [],
+                errors: result.diff,
                 tckJsonPath: result.tckJsonPath,
                 passed: result.success
             };
-            if (result.json.errors) {
-                for (var _b = 0, _c = result.json.errors; _b < _c.length; _b++) {
-                    var err = _c[_b];
-                    reportItem.errors.push(err.message + " in '" + err.path + "'.");
-                }
-            }
             report.push(reportItem);
         }
     }
-    if(callTests) {
+    if (callTests) {
         console.log("total tests count: " + count);
         console.log("tests passed: " + passed);
-        console.log("report file: " + reportPath);
-        if (report) {
+        if (reportPath) {
+            console.log("report file: " + reportPath);
             fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
         }
     }
@@ -367,6 +362,7 @@ function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, callTests, doA
         return true;
     });
     var success = false;
+    var diffArr = [];
     if (diff.length == 0) {
         success = true;
     }
@@ -376,8 +372,16 @@ function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, callTests, doA
         if (doAssert) {
             //assert(false);
         }
+        diffArr = diff.map(function (x) {
+            return {
+                "path": x.path,
+                "comment": x.comment,
+                "actual": x.value0,
+                "expected": x.value1
+            };
+        });
     }
-    return new TestResult(apiPath, tckJson, success, tckJsonPath);
+    return new TestResult(apiPath, tckJson, success, tckJsonPath, diffArr);
 }
 exports.testAPI = testAPI;
 function generateMochaSuite(folderAbsPath, dstPath, dataRoot) {
@@ -447,7 +451,7 @@ function dumpTest(test, dataRoot) {
 }
 var toIncludePath = function (workingFolder, absPath) {
     var relPath = path.relative(workingFolder, absPath).replace(/\\/g, "/");
-    if (!relPath || relPath.charAt(0)!=".") {
+    if (!relPath || relPath.charAt(0) != ".") {
         relPath = "./" + relPath;
     }
     return relPath;
