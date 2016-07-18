@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/install.js"
+    "test": "node ./src/install.js -test",
+    "generate": "node ./src/install.js -generate",
+    "all": "node ./src/install.js -all"
   }
 }

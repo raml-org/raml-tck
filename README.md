@@ -14,7 +14,7 @@ In order to run the tests execute following commands:
 
 * `cd raml-tck`
 
-* `npm run start`
+* `npm run test`
 
 # Contributing Tests
 
@@ -24,8 +24,11 @@ Suppose your RAML test project contains a single API `.raml` file in its root an
 
 Copy the RAML project folder inside the [`src/source/TCK`](https://github.com/mulesoft-labs/raml-tck/tree/master/src/source/TCK) subtree in such a way that it does not have superfolders directly containing `.raml` files.
 
-You may either create TCK JSON file manually from scratch (in this case you must name it <my API RAML file name>-tck.json), or you may use actual `toJSON()` output of the JS parser as starting point. For the second option you should just launch the test script as it saves the JS parser output as TCK JSON for those test projects wich do not have one.
-
+You may either create TCK JSON file manually from scratch (in this case you must name it <my API RAML file name>-tck.json), or you may use actual `toJSON()` output of the JS parser as starting point. For the second option you should execute
+```
+npm run generate
+```
+The script saves the JS parser output as TCK JSON for those test projects which do not have one.
 
 ## Script Working Principle
 

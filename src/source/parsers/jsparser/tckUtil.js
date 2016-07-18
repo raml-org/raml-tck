@@ -44,16 +44,20 @@ var MessageMapping = (function () {
     return MessageMapping;
 }());
 var TestResult = (function () {
-    function TestResult(apiPath, json, success, tckJsonPath) {
+    function TestResult(apiPath, json, success, tckJsonPath, diff) {
         this.apiPath = apiPath;
         this.json = json;
         this.success = success;
         this.tckJsonPath = tckJsonPath;
+        this.diff = diff;
     }
     return TestResult;
 }());
-var messageMappings = mappings.map(function (x) { return new MessageMapping(x.messagePatterns.map(function (x) { return x.pattern; })); });
-function launchTests(folderAbsPath, reportPath, regenerateJSON) {
+exports.TestResult = TestResult;
+var messageMappings = mappings.map(function (x) {
+    return new MessageMapping(x.messagePatterns.map(function (x) { return x.pattern; }));
+});
+function launchTests(folderAbsPath, reportPath, regenerateJSON, callTests) {
     var count = 0;
     var passed = 0;
     var report = [];
@@ -64,7 +68,10 @@ function launchTests(folderAbsPath, reportPath, regenerateJSON) {
         for (var _a = 0, tests_1 = tests; _a < tests_1.length; _a++) {
             var test = tests_1[_a];
             count++;
-            var result = testAPI(test.masterPath(), test.extensionsAndOverlays(), test.jsonPath(), regenerateJSON, false);
+            var result = testAPI(test.masterPath(), test.extensionsAndOverlays(), test.jsonPath(), regenerateJSON, callTests, false);
+            if (!result) {
+                continue;
+            }
             if (result.success) {
                 passed++;
                 console.log('js parser passed: ' + result.apiPath);
@@ -74,24 +81,20 @@ function launchTests(folderAbsPath, reportPath, regenerateJSON) {
             }
             var reportItem = {
                 apiPath: result.apiPath,
-                errors: [],
+                errors: result.diff,
                 tckJsonPath: result.tckJsonPath,
                 passed: result.success
             };
-            if (result.json.errors) {
-                for (var _b = 0, _c = result.json.errors; _b < _c.length; _b++) {
-                    var err = _c[_b];
-                    reportItem.errors.push(err.message + " in '" + err.path + "'.");
-                }
-            }
             report.push(reportItem);
         }
     }
-    console.log("total tests count: " + count);
-    console.log("tests passed: " + passed);
-    console.log("report file: " + reportPath);
-    if (report) {
-        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    if (callTests) {
+        console.log("total tests count: " + count);
+        console.log("tests passed: " + passed);
+        if (reportPath) {
+            console.log("report file: " + reportPath);
+            fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+        }
     }
 }
 exports.launchTests = launchTests;
@@ -305,9 +308,9 @@ function orderExtensionsAndOverlays(ramlFiles) {
     });
     return sorted;
 }
-function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, doAssert) {
+function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, callTests, doAssert) {
     if (regenerteJSON === void 0) { regenerteJSON = false; }
-    if (doAssert === void 0) { doAssert = false; }
+    if (callTests === void 0) { callTests = true; }
     // if (apiPath) {
     //     apiPath = testUtil.data(apiPath);
     // }
@@ -332,7 +335,14 @@ function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, doAssert) {
     }
     if (!fs.existsSync(tckJsonPath)) {
         fs.writeFileSync(tckJsonPath, JSON.stringify(json, null, 2));
-        console.warn("FAILED TO FIND JSON: " + tckJsonPath);
+        if (!callTests) {
+            console.log("TCK JSON GENERATED: " + tckJsonPath);
+            return;
+        }
+        console.warn("FAILED TO FIND TCK JSON: " + tckJsonPath);
+    }
+    if (!callTests) {
+        return;
     }
     var tckJson = JSON.parse(fs.readFileSync(tckJsonPath).toString());
     var pathRegExp = new RegExp('/errors\\[\\d+\\]/path');
@@ -352,6 +362,7 @@ function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, doAssert) {
         return true;
     });
     var success = false;
+    var diffArr = [];
     if (diff.length == 0) {
         success = true;
     }
@@ -361,8 +372,16 @@ function testAPI(apiPath, extensions, tckJsonPath, regenerteJSON, doAssert) {
         if (doAssert) {
             //assert(false);
         }
+        diffArr = diff.map(function (x) {
+            return {
+                "path": x.path,
+                "comment": x.comment,
+                "actual": x.value0,
+                "expected": x.value1
+            };
+        });
     }
-    return new TestResult(apiPath, tckJson, success, tckJsonPath);
+    return new TestResult(apiPath, tckJson, success, tckJsonPath, diffArr);
 }
 exports.testAPI = testAPI;
 function generateMochaSuite(folderAbsPath, dstPath, dataRoot) {
@@ -432,7 +451,7 @@ function dumpTest(test, dataRoot) {
 }
 var toIncludePath = function (workingFolder, absPath) {
     var relPath = path.relative(workingFolder, absPath).replace(/\\/g, "/");
-    if (!relPath || relPath.charAt(0)!=".") {
+    if (!relPath || relPath.charAt(0) != ".") {
         relPath = "./" + relPath;
     }
     return relPath;

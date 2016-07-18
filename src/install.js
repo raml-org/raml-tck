@@ -10,7 +10,44 @@ var isWin = /^win/.test(process.platform);
 var testsCount = 0;
 var jsTestsCountPassed = 0;
 
-function install() {
+function runAll(){
+
+    copySources();
+
+    cloneJavaParser();
+
+    npmInstall();
+
+    console.log('generating TCK JSONs...');
+
+    runJsTests(false);
+
+    mvnInstall();
+
+    setupJavaTestProject();
+
+    console.log('running js parser tests...');
+
+    runJsTests(true);
+
+    console.log('running java parser tests...');
+
+    runJavaTests();
+
+}
+
+function runGenerate(){
+    copySources();
+
+    npmInstall();
+
+    console.log('generating TCK JSONs...');
+
+    runJsTests(false);
+}
+
+function runTest() {
+
     copySources();
 
     cloneJavaParser();
@@ -23,7 +60,7 @@ function install() {
 
     console.log('running js parser tests...');
 
-    runJsTests();
+    runJsTests(true);
 
     console.log('running java parser tests...');
 
@@ -56,15 +93,19 @@ function printErrors(errors) {
     });
 }
 
-function runJsTests() {
+function runJsTests(callTests) {
     var scriptPath = path.resolve(root, './parsers/jsparser/tckLauncher.js');
     var reportPath = path.resolve(root, './parsers/jsparser/report.js');
     
     var tckDir = path.resolve(__dirname, './source/TCK');
 
+    var args = [scriptPath, '-path', tckDir, '-report', reportPath];
+    if(callTests===true){
+        args.push('-callTests');
+    }
     var spawned = spawnSync(
         'node',
-        [scriptPath, '-path', tckDir, '-report', reportPath],
+        args,
         {stdio: [0, 1, 2]}
     );
 
@@ -244,4 +285,31 @@ function runApiJava(ramlPath) {
     var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'rajapatest.Main', ramlPath], {stdio: [0, 1, 2]});
 }
 
-install();
+var args = process.argv;
+var __all = false;
+var __test = false;
+var __generate = false;
+for(var i = 0 ; i < args.length ; i++){
+
+    if(args[i]=="-all"){
+        _all = true;
+        break;
+    }
+    else if(args[i]=="-test"){
+        __test = true;
+        break;
+    }
+    else if(args[i]=="-generate"){
+        __generate = true;
+        break;
+    }
+}
+if(__all){
+    runAll();
+}
+else if(__test){
+    runTest();
+}
+else if(__generate){
+    runGenerate();
+}
