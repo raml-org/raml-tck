@@ -58,10 +58,7 @@
             }
           },
           "structuredExample": {
-            "value": {
-              "d": "a",
-              "dd": "2"
-            },
+            "value": "{\n  \"d\": \"a\",\n  \"dd\": \"2\"\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
@@ -97,9 +94,7 @@
             }
           },
           "structuredExample": {
-            "value": {
-              "x": "3"
-            },
+            "value": "{\n  \"x\": \"3\"\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
@@ -114,7 +109,7 @@
   "errors": [
     {
       "code": 11,
-      "message": "object should have not more then 1 properties",
+      "message": "'MyType1.maxProperties=1' i.e. object properties count should not be more than 1",
       "path": "api.raml",
       "line": 7,
       "column": 4,

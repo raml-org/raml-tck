@@ -121,9 +121,28 @@
                 ],
                 "repeat": false,
                 "required": true,
-                "fixedFacets": {
-                  "properties": {
-                    "extraProperty": "string"
+                "properties": {
+                  "extraProperty": {
+                    "name": "extraProperty",
+                    "displayName": "extraProperty",
+                    "type": [
+                      "string"
+                    ],
+                    "repeat": false,
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "repeat": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
                   }
                 },
                 "__METADATA__": {
@@ -302,9 +321,7 @@
                   }
                 },
                 "structuredExample": {
-                  "value": {
-                    "extraProperty": "stringValue1"
-                  },
+                  "value": "{\n  \"extraProperty\": \"stringValue1\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
@@ -397,11 +414,7 @@
                   }
                 },
                 "structuredExample": {
-                  "value": {
-                    "propertyFromResourceType1": "stringValue2",
-                    "propertyFromType2": "stringValue3",
-                    "extraProperty": "stringValue1"
-                  },
+                  "value": "{\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"propertyFromType2\": \"stringValue3\",\n  \"extraProperty\": \"stringValue1\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
@@ -470,7 +483,8 @@
           "column": 27,
           "position": 1002
         }
-      ]
+      ],
+      "isWarning": true
     }
   ]
 }

@@ -176,7 +176,7 @@
                 }
               },
               "structuredExample": {
-                "value": 1,
+                "value": "1",
                 "strict": true,
                 "name": null,
                 "structuredValue": 1
@@ -392,31 +392,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": {
-                        "data": [
-                          {
-                            "username": "jack",
-                            "first_name": "Jack",
-                            "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg",
-                            "id": "66",
-                            "last_name": "Dorsey"
-                          },
-                          {
-                            "username": "sammyjack",
-                            "first_name": "Sammy",
-                            "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg",
-                            "id": "29648",
-                            "last_name": "Jack"
-                          },
-                          {
-                            "username": "jacktiddy",
-                            "first_name": "Jack",
-                            "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg",
-                            "id": "13096",
-                            "last_name": "Tiddy"
-                          }
-                        ]
-                      },
+                      "value": "{\n    \"data\": [{\n        \"username\": \"jack\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg\",\n        \"id\": \"66\",\n        \"last_name\": \"Dorsey\"\n    },\n    {\n        \"username\": \"sammyjack\",\n        \"first_name\": \"Sammy\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg\",\n        \"id\": \"29648\",\n        \"last_name\": \"Jack\"\n    },\n    {\n        \"username\": \"jacktiddy\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg\",\n        \"id\": \"13096\",\n        \"last_name\": \"Tiddy\"\n    }]\n}",
                       "strict": true,
                       "name": null,
                       "structuredValue": {
@@ -531,7 +507,17 @@
                           ],
                           "count": 2
                         },
-                        "caption": null,
+                        "caption": {
+                          "created_time": "1296710352",
+                          "text": "Inside le truc #foodtruck",
+                          "from": {
+                            "username": "kevin",
+                            "full_name": "Kevin Systrom",
+                            "type": "user",
+                            "id": "3"
+                          },
+                          "id": "26621408"
+                        },
                         "likes": {
                           "count": 1,
                           "data": [
@@ -571,7 +557,12 @@
                           }
                         },
                         "id": "3",
-                        "location": null
+                        "location": {
+                          "id": "id",
+                          "latitude": -34,
+                          "longitude": -53,
+                          "name": "some place"
+                        }
                       }
                     },
                     "repeat": false,
@@ -590,85 +581,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": {
-                        "data": {
-                          "distance": 50,
-                          "type": "image",
-                          "users_in_photo": [
-                            {
-                              "user": {
-                                "username": "kevin",
-                                "full_name": "Kevin S",
-                                "id": "3",
-                                "profile_picture": "..."
-                              },
-                              "position": {
-                                "x": 0.315,
-                                "y": 0.9111
-                              }
-                            }
-                          ],
-                          "filter": "Walden",
-                          "tags": [],
-                          "comments": {
-                            "data": [
-                              {
-                                "created_time": "1279332030",
-                                "text": "Love the sign here",
-                                "from": {
-                                  "username": "mikeyk",
-                                  "full_name": "Mikey Krieger",
-                                  "id": "4",
-                                  "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                },
-                                "id": "8"
-                              }
-                            ],
-                            "count": 2
-                          },
-                          "caption": null,
-                          "likes": {
-                            "count": 1,
-                            "data": [
-                              {
-                                "username": "mikeyk",
-                                "full_name": "Mikeyk",
-                                "id": "4",
-                                "profile_picture": "..."
-                              }
-                            ]
-                          },
-                          "link": "http://instagr.am/p/D/",
-                          "user": {
-                            "username": "kevin",
-                            "full_name": "Kevin S",
-                            "profile_picture": "...",
-                            "bio": "...",
-                            "website": "...",
-                            "id": "3"
-                          },
-                          "created_time": "1279340983",
-                          "images": {
-                            "low_resolution": {
-                              "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_6.jpg",
-                              "width": 306,
-                              "height": 306
-                            },
-                            "thumbnail": {
-                              "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_5.jpg",
-                              "width": 150,
-                              "height": 150
-                            },
-                            "standard_resolution": {
-                              "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_7.jpg",
-                              "width": 612,
-                              "height": 612
-                            }
-                          },
-                          "id": "3",
-                          "location": null
-                        }
-                      },
+                      "value": "{\n    \"data\": {\n        \"distance\" : 50,\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Walden\",\n        \"tags\": [],\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"...\",\n            \"bio\": \"...\",\n            \"website\": \"...\",\n            \"id\": \"3\"\n        },\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"id\": \"3\",\n        \"location\": {\n            \"id\": \"id\",\n            \"latitude\": -34,\n            \"longitude\": -53,\n            \"name\": \"some place\"\n        }\n    }\n}\n",
                       "strict": true,
                       "name": null,
                       "structuredValue": {
@@ -707,7 +620,17 @@
                             ],
                             "count": 2
                           },
-                          "caption": null,
+                          "caption": {
+                            "created_time": "1296710352",
+                            "text": "Inside le truc #foodtruck",
+                            "from": {
+                              "username": "kevin",
+                              "full_name": "Kevin Systrom",
+                              "type": "user",
+                              "id": "3"
+                            },
+                            "id": "26621408"
+                          },
                           "likes": {
                             "count": 1,
                             "data": [
@@ -747,7 +670,12 @@
                             }
                           },
                           "id": "3",
-                          "location": null
+                          "location": {
+                            "id": "id",
+                            "latitude": -34,
+                            "longitude": -53,
+                            "name": "some place"
+                          }
                         }
                       }
                     }
@@ -819,12 +747,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": {
-                        "meta": {
-                          "code": 200
-                        },
-                        "data": null
-                      },
+                      "value": "{\n    \"meta\": {\n        \"code\": 200\n    },\n    \"data\": null\n}\n",
                       "strict": true,
                       "name": null,
                       "structuredValue": {
@@ -885,12 +808,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": {
-                        "meta": {
-                          "code": 200
-                        },
-                        "data": null
-                      },
+                      "value": "{\n    \"meta\": {\n        \"code\": 200\n    },\n    \"data\": null\n}\n",
                       "strict": true,
                       "name": null,
                       "structuredValue": {
@@ -1037,13 +955,24 @@
                             "id": "833",
                             "latitude": 37.77956816727314,
                             "longitude": -122.4138736724854,
+                            "street_address": "",
                             "name": "Civic Center BART"
                           },
                           "comments": {
                             "count": 16,
                             "data": []
                           },
-                          "caption": null,
+                          "caption": {
+                            "created_time": "1296710352",
+                            "text": "Inside le truc #foodtruck",
+                            "from": {
+                              "username": "kevin",
+                              "full_name": "Kevin Systrom",
+                              "type": "user",
+                              "id": "3"
+                            },
+                            "id": "26621408"
+                          },
                           "link": "http://instagr.am/p/BXsFz/",
                           "likes": {
                             "count": 190,
@@ -1076,7 +1005,20 @@
                             }
                           },
                           "type": "image",
-                          "users_in_photo": [],
+                          "users_in_photo": [
+                            {
+                              "user": {
+                                "username": "kevin",
+                                "full_name": "Kevin S",
+                                "id": "3",
+                                "profile_picture": "..."
+                              },
+                              "position": {
+                                "x": 0.315,
+                                "y": 0.9111
+                              }
+                            }
+                          ],
                           "filter": "Earlybird",
                           "tags": [],
                           "id": "22987123",
@@ -1127,7 +1069,17 @@
                               ],
                               "count": 2
                             },
-                            "caption": null,
+                            "caption": {
+                              "created_time": "1296710352",
+                              "text": "Inside le truc #foodtruck",
+                              "from": {
+                                "username": "kevin",
+                                "full_name": "Kevin Systrom",
+                                "type": "user",
+                                "id": "3"
+                              },
+                              "id": "26621408"
+                            },
                             "likes": {
                               "count": 1,
                               "data": [
@@ -1159,7 +1111,7 @@
                               }
                             },
                             "type": "video",
-                            "users_in_photo": null,
+                            "users_in_photo": [],
                             "filter": "Vesper",
                             "tags": [],
                             "id": "363839373298",
@@ -1169,7 +1121,13 @@
                               "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                               "id": "3"
                             },
-                            "location": null
+                            "location": {
+                              "id": "833",
+                              "latitude": 37.77956816727314,
+                              "longitude": -122.4138736724854,
+                              "street_address": "",
+                              "name": "Civic Center BART"
+                            }
                           }
                         }
                       ]
@@ -1190,151 +1148,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": {
-                        "data": [
-                          {
-                            "distance": 50,
-                            "location": {
-                              "id": "833",
-                              "latitude": 37.77956816727314,
-                              "longitude": -122.4138736724854,
-                              "name": "Civic Center BART"
-                            },
-                            "comments": {
-                              "count": 16,
-                              "data": []
-                            },
-                            "caption": null,
-                            "link": "http://instagr.am/p/BXsFz/",
-                            "likes": {
-                              "count": 190,
-                              "data": [
-                                {
-                                  "username": "shayne",
-                                  "full_name": "Shayne Sweeney",
-                                  "id": "20",
-                                  "profile_picture": "..."
-                                },
-                                {}
-                              ]
-                            },
-                            "created_time": "1296748524",
-                            "images": {
-                              "low_resolution": {
-                                "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg",
-                                "width": 306,
-                                "height": 306
-                              },
-                              "thumbnail": {
-                                "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg",
-                                "width": 150,
-                                "height": 150
-                              },
-                              "standard_resolution": {
-                                "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg",
-                                "width": 612,
-                                "height": 612
-                              }
-                            },
-                            "type": "image",
-                            "users_in_photo": [],
-                            "filter": "Earlybird",
-                            "tags": [],
-                            "id": "22987123",
-                            "user": {
-                              "username": "kevin",
-                              "full_name": "Kevin S",
-                              "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                              "id": "3"
-                            }
-                          },
-                          {
-                            "distance": 50,
-                            "videos": {
-                              "low_resolution": {
-                                "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4",
-                                "width": 480,
-                                "height": 480
-                              },
-                              "standard_resolution": {
-                                "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4",
-                                "width": 640,
-                                "height": 640
-                              },
-                              "comments": {
-                                "data": [
-                                  {
-                                    "created_time": "1279332030",
-                                    "text": "Love the sign here",
-                                    "from": {
-                                      "username": "mikeyk",
-                                      "full_name": "Mikey Krieger",
-                                      "id": "4",
-                                      "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                    },
-                                    "id": "8"
-                                  },
-                                  {
-                                    "created_time": "1279341004",
-                                    "text": "Chilako taco",
-                                    "from": {
-                                      "username": "kevin",
-                                      "full_name": "Kevin S",
-                                      "id": "3",
-                                      "profile_picture": "..."
-                                    },
-                                    "id": "3"
-                                  }
-                                ],
-                                "count": 2
-                              },
-                              "caption": null,
-                              "likes": {
-                                "count": 1,
-                                "data": [
-                                  {
-                                    "username": "mikeyk",
-                                    "full_name": "Mikeyk",
-                                    "id": "4",
-                                    "profile_picture": "..."
-                                  }
-                                ]
-                              },
-                              "link": "http://instagr.am/p/D/",
-                              "created_time": "1279340983",
-                              "images": {
-                                "low_resolution": {
-                                  "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg",
-                                  "width": 306,
-                                  "height": 306
-                                },
-                                "thumbnail": {
-                                  "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg",
-                                  "width": 150,
-                                  "height": 150
-                                },
-                                "standard_resolution": {
-                                  "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg",
-                                  "width": 612,
-                                  "height": 612
-                                }
-                              },
-                              "type": "video",
-                              "users_in_photo": null,
-                              "filter": "Vesper",
-                              "tags": [],
-                              "id": "363839373298",
-                              "user": {
-                                "username": "kevin",
-                                "full_name": "Kevin S",
-                                "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                "id": "3"
-                              },
-                              "location": null
-                            }
-                          }
-                        ]
-                      },
+                      "value": "{\n    \"data\": [{\n        \"distance\" : 50,\n        \"location\": {\n            \"id\": \"833\",\n            \"latitude\": 37.77956816727314,\n            \"longitude\": -122.41387367248539,\n            \"street_address\": \"\",\n            \"name\": \"Civic Center BART\"\n        },\n        \"comments\": {\n            \"count\": 16,\n            \"data\": [  ]\n        },\n        \"caption\":  {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"link\": \"http://instagr.am/p/BXsFz/\",\n        \"likes\": {\n            \"count\": 190,\n            \"data\": [{\n                \"username\": \"shayne\",\n                \"full_name\": \"Shayne Sweeney\",\n                \"id\": \"20\",\n                \"profile_picture\": \"...\"\n            }, {}]\n        },\n        \"created_time\": \"1296748524\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Earlybird\",\n        \"tags\": [],\n        \"id\": \"22987123\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        }\n    },\n    {\n        \"distance\" : 50,\n        \"videos\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4\",\n                \"width\": 480,\n                \"height\": 480\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4\",\n                \"width\": 640,\n                \"height\": 640\n            },\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            },\n            {\n                \"created_time\": \"1279341004\",\n                \"text\": \"Chilako taco\",\n                \"from\": {\n                    \"username\": \"kevin\",\n                    \"full_name\": \"Kevin S\",\n                    \"id\": \"3\",\n                    \"profile_picture\": \"...\"\n                },\n                \"id\": \"3\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"video\",\n        \"users_in_photo\": [],\n        \"filter\": \"Vesper\",\n        \"tags\": [],\n        \"id\": \"363839373298\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        },\n            \"location\": {\n                \"id\": \"833\",\n                \"latitude\": 37.77956816727314,\n                \"longitude\": -122.41387367248539,\n                \"street_address\": \"\",\n                \"name\": \"Civic Center BART\"\n            }\n    }}]\n}\n",
                       "strict": true,
                       "name": null,
                       "structuredValue": {
@@ -1345,13 +1159,24 @@
                               "id": "833",
                               "latitude": 37.77956816727314,
                               "longitude": -122.4138736724854,
+                              "street_address": "",
                               "name": "Civic Center BART"
                             },
                             "comments": {
                               "count": 16,
                               "data": []
                             },
-                            "caption": null,
+                            "caption": {
+                              "created_time": "1296710352",
+                              "text": "Inside le truc #foodtruck",
+                              "from": {
+                                "username": "kevin",
+                                "full_name": "Kevin Systrom",
+                                "type": "user",
+                                "id": "3"
+                              },
+                              "id": "26621408"
+                            },
                             "link": "http://instagr.am/p/BXsFz/",
                             "likes": {
                               "count": 190,
@@ -1384,7 +1209,20 @@
                               }
                             },
                             "type": "image",
-                            "users_in_photo": [],
+                            "users_in_photo": [
+                              {
+                                "user": {
+                                  "username": "kevin",
+                                  "full_name": "Kevin S",
+                                  "id": "3",
+                                  "profile_picture": "..."
+                                },
+                                "position": {
+                                  "x": 0.315,
+                                  "y": 0.9111
+                                }
+                              }
+                            ],
                             "filter": "Earlybird",
                             "tags": [],
                             "id": "22987123",
@@ -1435,7 +1273,17 @@
                                 ],
                                 "count": 2
                               },
-                              "caption": null,
+                              "caption": {
+                                "created_time": "1296710352",
+                                "text": "Inside le truc #foodtruck",
+                                "from": {
+                                  "username": "kevin",
+                                  "full_name": "Kevin Systrom",
+                                  "type": "user",
+                                  "id": "3"
+                                },
+                                "id": "26621408"
+                              },
                               "likes": {
                                 "count": 1,
                                 "data": [
@@ -1467,7 +1315,7 @@
                                 }
                               },
                               "type": "video",
-                              "users_in_photo": null,
+                              "users_in_photo": [],
                               "filter": "Vesper",
                               "tags": [],
                               "id": "363839373298",
@@ -1477,7 +1325,13 @@
                                 "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                 "id": "3"
                               },
-                              "location": null
+                              "location": {
+                                "id": "833",
+                                "latitude": 37.77956816727314,
+                                "longitude": -122.4138736724854,
+                                "street_address": "",
+                                "name": "Civic Center BART"
+                              }
                             }
                           }
                         ]
@@ -1681,7 +1535,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -1843,7 +1697,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -1978,12 +1832,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "meta": {
-                                  "code": 200
-                                },
-                                "data": null
-                              },
+                              "value": "{\n    \"meta\": {\n        \"code\": 200\n    },\n    \"data\": null\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -2131,12 +1980,7 @@
                                   }
                                 },
                                 "structuredExample": {
-                                  "value": {
-                                    "meta": {
-                                      "code": 200
-                                    },
-                                    "data": null
-                                  },
+                                  "value": "{\n    \"meta\": {\n        \"code\": 200\n    },\n    \"data\": null\n}\n",
                                   "strict": true,
                                   "name": null,
                                   "structuredValue": {
@@ -2270,7 +2114,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -2405,12 +2249,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "meta": {
-                                  "code": 200
-                                },
-                                "data": null
-                              },
+                              "value": "{\n    \"meta\": {\n        \"code\": 200\n    },\n    \"data\": null\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -2487,12 +2326,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "meta": {
-                                  "code": 200
-                                },
-                                "data": null
-                              },
+                              "value": "{\n    \"meta\": {\n        \"code\": 200\n    },\n    \"data\": null\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -2724,7 +2558,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -2810,7 +2644,17 @@
                               ],
                               "count": 2
                             },
-                            "caption": null,
+                            "caption": {
+                              "created_time": "1296710352",
+                              "text": "Inside le truc #foodtruck",
+                              "from": {
+                                "username": "kevin",
+                                "full_name": "Kevin Systrom",
+                                "type": "user",
+                                "id": "3"
+                              },
+                              "id": "26621408"
+                            },
                             "likes": {
                               "count": 1,
                               "data": [
@@ -2850,7 +2694,12 @@
                               }
                             },
                             "id": "3",
-                            "location": null
+                            "location": {
+                              "id": "id",
+                              "latitude": -34,
+                              "longitude": -53,
+                              "name": "some place"
+                            }
                           }
                         },
                         "repeat": false,
@@ -2869,85 +2718,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": {
-                            "data": {
-                              "distance": 50,
-                              "type": "image",
-                              "users_in_photo": [
-                                {
-                                  "user": {
-                                    "username": "kevin",
-                                    "full_name": "Kevin S",
-                                    "id": "3",
-                                    "profile_picture": "..."
-                                  },
-                                  "position": {
-                                    "x": 0.315,
-                                    "y": 0.9111
-                                  }
-                                }
-                              ],
-                              "filter": "Walden",
-                              "tags": [],
-                              "comments": {
-                                "data": [
-                                  {
-                                    "created_time": "1279332030",
-                                    "text": "Love the sign here",
-                                    "from": {
-                                      "username": "mikeyk",
-                                      "full_name": "Mikey Krieger",
-                                      "id": "4",
-                                      "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                    },
-                                    "id": "8"
-                                  }
-                                ],
-                                "count": 2
-                              },
-                              "caption": null,
-                              "likes": {
-                                "count": 1,
-                                "data": [
-                                  {
-                                    "username": "mikeyk",
-                                    "full_name": "Mikeyk",
-                                    "id": "4",
-                                    "profile_picture": "..."
-                                  }
-                                ]
-                              },
-                              "link": "http://instagr.am/p/D/",
-                              "user": {
-                                "username": "kevin",
-                                "full_name": "Kevin S",
-                                "profile_picture": "...",
-                                "bio": "...",
-                                "website": "...",
-                                "id": "3"
-                              },
-                              "created_time": "1279340983",
-                              "images": {
-                                "low_resolution": {
-                                  "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_6.jpg",
-                                  "width": 306,
-                                  "height": 306
-                                },
-                                "thumbnail": {
-                                  "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_5.jpg",
-                                  "width": 150,
-                                  "height": 150
-                                },
-                                "standard_resolution": {
-                                  "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_7.jpg",
-                                  "width": 612,
-                                  "height": 612
-                                }
-                              },
-                              "id": "3",
-                              "location": null
-                            }
-                          },
+                          "value": "{\n    \"data\": {\n        \"distance\" : 50,\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Walden\",\n        \"tags\": [],\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"...\",\n            \"bio\": \"...\",\n            \"website\": \"...\",\n            \"id\": \"3\"\n        },\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"id\": \"3\",\n        \"location\": {\n            \"id\": \"id\",\n            \"latitude\": -34,\n            \"longitude\": -53,\n            \"name\": \"some place\"\n        }\n    }\n}\n",
                           "strict": true,
                           "name": null,
                           "structuredValue": {
@@ -2986,7 +2757,17 @@
                                 ],
                                 "count": 2
                               },
-                              "caption": null,
+                              "caption": {
+                                "created_time": "1296710352",
+                                "text": "Inside le truc #foodtruck",
+                                "from": {
+                                  "username": "kevin",
+                                  "full_name": "Kevin Systrom",
+                                  "type": "user",
+                                  "id": "3"
+                                },
+                                "id": "26621408"
+                              },
                               "likes": {
                                 "count": 1,
                                 "data": [
@@ -3026,7 +2807,12 @@
                                 }
                               },
                               "id": "3",
-                              "location": null
+                              "location": {
+                                "id": "id",
+                                "latitude": -34,
+                                "longitude": -53,
+                                "name": "some place"
+                              }
                             }
                           }
                         }
@@ -3114,7 +2900,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -3200,7 +2986,17 @@
                               ],
                               "count": 2
                             },
-                            "caption": null,
+                            "caption": {
+                              "created_time": "1296710352",
+                              "text": "Inside le truc #foodtruck",
+                              "from": {
+                                "username": "kevin",
+                                "full_name": "Kevin Systrom",
+                                "type": "user",
+                                "id": "3"
+                              },
+                              "id": "26621408"
+                            },
                             "likes": {
                               "count": 1,
                               "data": [
@@ -3240,7 +3036,12 @@
                               }
                             },
                             "id": "3",
-                            "location": null
+                            "location": {
+                              "id": "id",
+                              "latitude": -34,
+                              "longitude": -53,
+                              "name": "some place"
+                            }
                           }
                         },
                         "repeat": false,
@@ -3259,85 +3060,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": {
-                            "data": {
-                              "distance": 50,
-                              "type": "image",
-                              "users_in_photo": [
-                                {
-                                  "user": {
-                                    "username": "kevin",
-                                    "full_name": "Kevin S",
-                                    "id": "3",
-                                    "profile_picture": "..."
-                                  },
-                                  "position": {
-                                    "x": 0.315,
-                                    "y": 0.9111
-                                  }
-                                }
-                              ],
-                              "filter": "Walden",
-                              "tags": [],
-                              "comments": {
-                                "data": [
-                                  {
-                                    "created_time": "1279332030",
-                                    "text": "Love the sign here",
-                                    "from": {
-                                      "username": "mikeyk",
-                                      "full_name": "Mikey Krieger",
-                                      "id": "4",
-                                      "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                    },
-                                    "id": "8"
-                                  }
-                                ],
-                                "count": 2
-                              },
-                              "caption": null,
-                              "likes": {
-                                "count": 1,
-                                "data": [
-                                  {
-                                    "username": "mikeyk",
-                                    "full_name": "Mikeyk",
-                                    "id": "4",
-                                    "profile_picture": "..."
-                                  }
-                                ]
-                              },
-                              "link": "http://instagr.am/p/D/",
-                              "user": {
-                                "username": "kevin",
-                                "full_name": "Kevin S",
-                                "profile_picture": "...",
-                                "bio": "...",
-                                "website": "...",
-                                "id": "3"
-                              },
-                              "created_time": "1279340983",
-                              "images": {
-                                "low_resolution": {
-                                  "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_6.jpg",
-                                  "width": 306,
-                                  "height": 306
-                                },
-                                "thumbnail": {
-                                  "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_5.jpg",
-                                  "width": 150,
-                                  "height": 150
-                                },
-                                "standard_resolution": {
-                                  "url": "http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_7.jpg",
-                                  "width": 612,
-                                  "height": 612
-                                }
-                              },
-                              "id": "3",
-                              "location": null
-                            }
-                          },
+                          "value": "{\n    \"data\": {\n        \"distance\" : 50,\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Walden\",\n        \"tags\": [],\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"...\",\n            \"bio\": \"...\",\n            \"website\": \"...\",\n            \"id\": \"3\"\n        },\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"id\": \"3\",\n        \"location\": {\n            \"id\": \"id\",\n            \"latitude\": -34,\n            \"longitude\": -53,\n            \"name\": \"some place\"\n        }\n    }\n}\n",
                           "strict": true,
                           "name": null,
                           "structuredValue": {
@@ -3376,7 +3099,17 @@
                                 ],
                                 "count": 2
                               },
-                              "caption": null,
+                              "caption": {
+                                "created_time": "1296710352",
+                                "text": "Inside le truc #foodtruck",
+                                "from": {
+                                  "username": "kevin",
+                                  "full_name": "Kevin Systrom",
+                                  "type": "user",
+                                  "id": "3"
+                                },
+                                "id": "26621408"
+                              },
                               "likes": {
                                 "count": 1,
                                 "data": [
@@ -3416,7 +3149,12 @@
                                 }
                               },
                               "id": "3",
-                              "location": null
+                              "location": {
+                                "id": "id",
+                                "latitude": -34,
+                                "longitude": -53,
+                                "name": "some place"
+                              }
                             }
                           }
                         }
@@ -3525,7 +3263,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -3733,7 +3471,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -3927,7 +3665,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -4097,7 +3835,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -4259,7 +3997,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -4350,31 +4088,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "data": [
-                                  {
-                                    "username": "jack",
-                                    "first_name": "Jack",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg",
-                                    "id": "66",
-                                    "last_name": "Dorsey"
-                                  },
-                                  {
-                                    "username": "sammyjack",
-                                    "first_name": "Sammy",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg",
-                                    "id": "29648",
-                                    "last_name": "Jack"
-                                  },
-                                  {
-                                    "username": "jacktiddy",
-                                    "first_name": "Jack",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg",
-                                    "id": "13096",
-                                    "last_name": "Tiddy"
-                                  }
-                                ]
-                              },
+                              "value": "{\n    \"data\": [{\n        \"username\": \"jack\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg\",\n        \"id\": \"66\",\n        \"last_name\": \"Dorsey\"\n    },\n    {\n        \"username\": \"sammyjack\",\n        \"first_name\": \"Sammy\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg\",\n        \"id\": \"29648\",\n        \"last_name\": \"Jack\"\n    },\n    {\n        \"username\": \"jacktiddy\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg\",\n        \"id\": \"13096\",\n        \"last_name\": \"Tiddy\"\n    }]\n}",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -4492,7 +4206,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -4583,31 +4297,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "data": [
-                                  {
-                                    "username": "jack",
-                                    "first_name": "Jack",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg",
-                                    "id": "66",
-                                    "last_name": "Dorsey"
-                                  },
-                                  {
-                                    "username": "sammyjack",
-                                    "first_name": "Sammy",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg",
-                                    "id": "29648",
-                                    "last_name": "Jack"
-                                  },
-                                  {
-                                    "username": "jacktiddy",
-                                    "first_name": "Jack",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg",
-                                    "id": "13096",
-                                    "last_name": "Tiddy"
-                                  }
-                                ]
-                              },
+                              "value": "{\n    \"data\": [{\n        \"username\": \"jack\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg\",\n        \"id\": \"66\",\n        \"last_name\": \"Dorsey\"\n    },\n    {\n        \"username\": \"sammyjack\",\n        \"first_name\": \"Sammy\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg\",\n        \"id\": \"29648\",\n        \"last_name\": \"Jack\"\n    },\n    {\n        \"username\": \"jacktiddy\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg\",\n        \"id\": \"13096\",\n        \"last_name\": \"Tiddy\"\n    }]\n}",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -4817,7 +4507,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -4875,13 +4565,24 @@
                                     "id": "833",
                                     "latitude": 37.77956816727314,
                                     "longitude": -122.4138736724854,
+                                    "street_address": "",
                                     "name": "Civic Center BART"
                                   },
                                   "comments": {
                                     "count": 16,
                                     "data": []
                                   },
-                                  "caption": null,
+                                  "caption": {
+                                    "created_time": "1296710352",
+                                    "text": "Inside le truc #foodtruck",
+                                    "from": {
+                                      "username": "kevin",
+                                      "full_name": "Kevin Systrom",
+                                      "type": "user",
+                                      "id": "3"
+                                    },
+                                    "id": "26621408"
+                                  },
                                   "link": "http://instagr.am/p/BXsFz/",
                                   "likes": {
                                     "count": 190,
@@ -4914,7 +4615,20 @@
                                     }
                                   },
                                   "type": "image",
-                                  "users_in_photo": [],
+                                  "users_in_photo": [
+                                    {
+                                      "user": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin S",
+                                        "id": "3",
+                                        "profile_picture": "..."
+                                      },
+                                      "position": {
+                                        "x": 0.315,
+                                        "y": 0.9111
+                                      }
+                                    }
+                                  ],
                                   "filter": "Earlybird",
                                   "tags": [],
                                   "id": "22987123",
@@ -4965,7 +4679,17 @@
                                       ],
                                       "count": 2
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "likes": {
                                       "count": 1,
                                       "data": [
@@ -4997,7 +4721,7 @@
                                       }
                                     },
                                     "type": "video",
-                                    "users_in_photo": null,
+                                    "users_in_photo": [],
                                     "filter": "Vesper",
                                     "tags": [],
                                     "id": "363839373298",
@@ -5007,7 +4731,13 @@
                                       "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                       "id": "3"
                                     },
-                                    "location": null
+                                    "location": {
+                                      "id": "833",
+                                      "latitude": 37.77956816727314,
+                                      "longitude": -122.4138736724854,
+                                      "street_address": "",
+                                      "name": "Civic Center BART"
+                                    }
                                   }
                                 }
                               ]
@@ -5028,151 +4758,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "data": [
-                                  {
-                                    "distance": 50,
-                                    "location": {
-                                      "id": "833",
-                                      "latitude": 37.77956816727314,
-                                      "longitude": -122.4138736724854,
-                                      "name": "Civic Center BART"
-                                    },
-                                    "comments": {
-                                      "count": 16,
-                                      "data": []
-                                    },
-                                    "caption": null,
-                                    "link": "http://instagr.am/p/BXsFz/",
-                                    "likes": {
-                                      "count": 190,
-                                      "data": [
-                                        {
-                                          "username": "shayne",
-                                          "full_name": "Shayne Sweeney",
-                                          "id": "20",
-                                          "profile_picture": "..."
-                                        },
-                                        {}
-                                      ]
-                                    },
-                                    "created_time": "1296748524",
-                                    "images": {
-                                      "low_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg",
-                                        "width": 306,
-                                        "height": 306
-                                      },
-                                      "thumbnail": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg",
-                                        "width": 150,
-                                        "height": 150
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg",
-                                        "width": 612,
-                                        "height": 612
-                                      }
-                                    },
-                                    "type": "image",
-                                    "users_in_photo": [],
-                                    "filter": "Earlybird",
-                                    "tags": [],
-                                    "id": "22987123",
-                                    "user": {
-                                      "username": "kevin",
-                                      "full_name": "Kevin S",
-                                      "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                      "id": "3"
-                                    }
-                                  },
-                                  {
-                                    "distance": 50,
-                                    "videos": {
-                                      "low_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4",
-                                        "width": 480,
-                                        "height": 480
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4",
-                                        "width": 640,
-                                        "height": 640
-                                      },
-                                      "comments": {
-                                        "data": [
-                                          {
-                                            "created_time": "1279332030",
-                                            "text": "Love the sign here",
-                                            "from": {
-                                              "username": "mikeyk",
-                                              "full_name": "Mikey Krieger",
-                                              "id": "4",
-                                              "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                            },
-                                            "id": "8"
-                                          },
-                                          {
-                                            "created_time": "1279341004",
-                                            "text": "Chilako taco",
-                                            "from": {
-                                              "username": "kevin",
-                                              "full_name": "Kevin S",
-                                              "id": "3",
-                                              "profile_picture": "..."
-                                            },
-                                            "id": "3"
-                                          }
-                                        ],
-                                        "count": 2
-                                      },
-                                      "caption": null,
-                                      "likes": {
-                                        "count": 1,
-                                        "data": [
-                                          {
-                                            "username": "mikeyk",
-                                            "full_name": "Mikeyk",
-                                            "id": "4",
-                                            "profile_picture": "..."
-                                          }
-                                        ]
-                                      },
-                                      "link": "http://instagr.am/p/D/",
-                                      "created_time": "1279340983",
-                                      "images": {
-                                        "low_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg",
-                                          "width": 306,
-                                          "height": 306
-                                        },
-                                        "thumbnail": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg",
-                                          "width": 150,
-                                          "height": 150
-                                        },
-                                        "standard_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg",
-                                          "width": 612,
-                                          "height": 612
-                                        }
-                                      },
-                                      "type": "video",
-                                      "users_in_photo": null,
-                                      "filter": "Vesper",
-                                      "tags": [],
-                                      "id": "363839373298",
-                                      "user": {
-                                        "username": "kevin",
-                                        "full_name": "Kevin S",
-                                        "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                        "id": "3"
-                                      },
-                                      "location": null
-                                    }
-                                  }
-                                ]
-                              },
+                              "value": "{\n    \"data\": [{\n        \"distance\" : 50,\n        \"location\": {\n            \"id\": \"833\",\n            \"latitude\": 37.77956816727314,\n            \"longitude\": -122.41387367248539,\n            \"street_address\": \"\",\n            \"name\": \"Civic Center BART\"\n        },\n        \"comments\": {\n            \"count\": 16,\n            \"data\": [  ]\n        },\n        \"caption\":  {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"link\": \"http://instagr.am/p/BXsFz/\",\n        \"likes\": {\n            \"count\": 190,\n            \"data\": [{\n                \"username\": \"shayne\",\n                \"full_name\": \"Shayne Sweeney\",\n                \"id\": \"20\",\n                \"profile_picture\": \"...\"\n            }, {}]\n        },\n        \"created_time\": \"1296748524\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Earlybird\",\n        \"tags\": [],\n        \"id\": \"22987123\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        }\n    },\n    {\n        \"distance\" : 50,\n        \"videos\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4\",\n                \"width\": 480,\n                \"height\": 480\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4\",\n                \"width\": 640,\n                \"height\": 640\n            },\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            },\n            {\n                \"created_time\": \"1279341004\",\n                \"text\": \"Chilako taco\",\n                \"from\": {\n                    \"username\": \"kevin\",\n                    \"full_name\": \"Kevin S\",\n                    \"id\": \"3\",\n                    \"profile_picture\": \"...\"\n                },\n                \"id\": \"3\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"video\",\n        \"users_in_photo\": [],\n        \"filter\": \"Vesper\",\n        \"tags\": [],\n        \"id\": \"363839373298\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        },\n            \"location\": {\n                \"id\": \"833\",\n                \"latitude\": 37.77956816727314,\n                \"longitude\": -122.41387367248539,\n                \"street_address\": \"\",\n                \"name\": \"Civic Center BART\"\n            }\n    }}]\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -5183,13 +4769,24 @@
                                       "id": "833",
                                       "latitude": 37.77956816727314,
                                       "longitude": -122.4138736724854,
+                                      "street_address": "",
                                       "name": "Civic Center BART"
                                     },
                                     "comments": {
                                       "count": 16,
                                       "data": []
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "link": "http://instagr.am/p/BXsFz/",
                                     "likes": {
                                       "count": 190,
@@ -5222,7 +4819,20 @@
                                       }
                                     },
                                     "type": "image",
-                                    "users_in_photo": [],
+                                    "users_in_photo": [
+                                      {
+                                        "user": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin S",
+                                          "id": "3",
+                                          "profile_picture": "..."
+                                        },
+                                        "position": {
+                                          "x": 0.315,
+                                          "y": 0.9111
+                                        }
+                                      }
+                                    ],
                                     "filter": "Earlybird",
                                     "tags": [],
                                     "id": "22987123",
@@ -5273,7 +4883,17 @@
                                         ],
                                         "count": 2
                                       },
-                                      "caption": null,
+                                      "caption": {
+                                        "created_time": "1296710352",
+                                        "text": "Inside le truc #foodtruck",
+                                        "from": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin Systrom",
+                                          "type": "user",
+                                          "id": "3"
+                                        },
+                                        "id": "26621408"
+                                      },
                                       "likes": {
                                         "count": 1,
                                         "data": [
@@ -5305,7 +4925,7 @@
                                         }
                                       },
                                       "type": "video",
-                                      "users_in_photo": null,
+                                      "users_in_photo": [],
                                       "filter": "Vesper",
                                       "tags": [],
                                       "id": "363839373298",
@@ -5315,7 +4935,13 @@
                                         "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                         "id": "3"
                                       },
-                                      "location": null
+                                      "location": {
+                                        "id": "833",
+                                        "latitude": 37.77956816727314,
+                                        "longitude": -122.4138736724854,
+                                        "street_address": "",
+                                        "name": "Civic Center BART"
+                                      }
                                     }
                                   }
                                 ]
@@ -5406,7 +5032,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -5541,12 +5167,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "meta": {
-                                  "code": 200
-                                },
-                                "data": null
-                              },
+                              "value": "{\n    \"meta\": {\n        \"code\": 200\n    },\n    \"data\": null\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -5750,7 +5371,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 10,
+                      "value": "10",
                       "strict": true,
                       "name": null,
                       "structuredValue": 10
@@ -5841,31 +5462,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": {
-                            "data": [
-                              {
-                                "username": "jack",
-                                "first_name": "Jack",
-                                "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg",
-                                "id": "66",
-                                "last_name": "Dorsey"
-                              },
-                              {
-                                "username": "sammyjack",
-                                "first_name": "Sammy",
-                                "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg",
-                                "id": "29648",
-                                "last_name": "Jack"
-                              },
-                              {
-                                "username": "jacktiddy",
-                                "first_name": "Jack",
-                                "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg",
-                                "id": "13096",
-                                "last_name": "Tiddy"
-                              }
-                            ]
-                          },
+                          "value": "{\n    \"data\": [{\n        \"username\": \"jack\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg\",\n        \"id\": \"66\",\n        \"last_name\": \"Dorsey\"\n    },\n    {\n        \"username\": \"sammyjack\",\n        \"first_name\": \"Sammy\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg\",\n        \"id\": \"29648\",\n        \"last_name\": \"Jack\"\n    },\n    {\n        \"username\": \"jacktiddy\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg\",\n        \"id\": \"13096\",\n        \"last_name\": \"Tiddy\"\n    }]\n}",
                           "strict": true,
                           "name": null,
                           "structuredValue": {
@@ -5983,7 +5580,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -6177,7 +5774,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -6235,13 +5832,24 @@
                                     "id": "833",
                                     "latitude": 37.77956816727314,
                                     "longitude": -122.4138736724854,
+                                    "street_address": "",
                                     "name": "Civic Center BART"
                                   },
                                   "comments": {
                                     "count": 16,
                                     "data": []
                                   },
-                                  "caption": null,
+                                  "caption": {
+                                    "created_time": "1296710352",
+                                    "text": "Inside le truc #foodtruck",
+                                    "from": {
+                                      "username": "kevin",
+                                      "full_name": "Kevin Systrom",
+                                      "type": "user",
+                                      "id": "3"
+                                    },
+                                    "id": "26621408"
+                                  },
                                   "link": "http://instagr.am/p/BXsFz/",
                                   "likes": {
                                     "count": 190,
@@ -6274,7 +5882,20 @@
                                     }
                                   },
                                   "type": "image",
-                                  "users_in_photo": [],
+                                  "users_in_photo": [
+                                    {
+                                      "user": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin S",
+                                        "id": "3",
+                                        "profile_picture": "..."
+                                      },
+                                      "position": {
+                                        "x": 0.315,
+                                        "y": 0.9111
+                                      }
+                                    }
+                                  ],
                                   "filter": "Earlybird",
                                   "tags": [],
                                   "id": "22987123",
@@ -6325,7 +5946,17 @@
                                       ],
                                       "count": 2
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "likes": {
                                       "count": 1,
                                       "data": [
@@ -6357,7 +5988,7 @@
                                       }
                                     },
                                     "type": "video",
-                                    "users_in_photo": null,
+                                    "users_in_photo": [],
                                     "filter": "Vesper",
                                     "tags": [],
                                     "id": "363839373298",
@@ -6367,7 +5998,13 @@
                                       "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                       "id": "3"
                                     },
-                                    "location": null
+                                    "location": {
+                                      "id": "833",
+                                      "latitude": 37.77956816727314,
+                                      "longitude": -122.4138736724854,
+                                      "street_address": "",
+                                      "name": "Civic Center BART"
+                                    }
                                   }
                                 }
                               ]
@@ -6388,151 +6025,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "data": [
-                                  {
-                                    "distance": 50,
-                                    "location": {
-                                      "id": "833",
-                                      "latitude": 37.77956816727314,
-                                      "longitude": -122.4138736724854,
-                                      "name": "Civic Center BART"
-                                    },
-                                    "comments": {
-                                      "count": 16,
-                                      "data": []
-                                    },
-                                    "caption": null,
-                                    "link": "http://instagr.am/p/BXsFz/",
-                                    "likes": {
-                                      "count": 190,
-                                      "data": [
-                                        {
-                                          "username": "shayne",
-                                          "full_name": "Shayne Sweeney",
-                                          "id": "20",
-                                          "profile_picture": "..."
-                                        },
-                                        {}
-                                      ]
-                                    },
-                                    "created_time": "1296748524",
-                                    "images": {
-                                      "low_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg",
-                                        "width": 306,
-                                        "height": 306
-                                      },
-                                      "thumbnail": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg",
-                                        "width": 150,
-                                        "height": 150
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg",
-                                        "width": 612,
-                                        "height": 612
-                                      }
-                                    },
-                                    "type": "image",
-                                    "users_in_photo": [],
-                                    "filter": "Earlybird",
-                                    "tags": [],
-                                    "id": "22987123",
-                                    "user": {
-                                      "username": "kevin",
-                                      "full_name": "Kevin S",
-                                      "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                      "id": "3"
-                                    }
-                                  },
-                                  {
-                                    "distance": 50,
-                                    "videos": {
-                                      "low_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4",
-                                        "width": 480,
-                                        "height": 480
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4",
-                                        "width": 640,
-                                        "height": 640
-                                      },
-                                      "comments": {
-                                        "data": [
-                                          {
-                                            "created_time": "1279332030",
-                                            "text": "Love the sign here",
-                                            "from": {
-                                              "username": "mikeyk",
-                                              "full_name": "Mikey Krieger",
-                                              "id": "4",
-                                              "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                            },
-                                            "id": "8"
-                                          },
-                                          {
-                                            "created_time": "1279341004",
-                                            "text": "Chilako taco",
-                                            "from": {
-                                              "username": "kevin",
-                                              "full_name": "Kevin S",
-                                              "id": "3",
-                                              "profile_picture": "..."
-                                            },
-                                            "id": "3"
-                                          }
-                                        ],
-                                        "count": 2
-                                      },
-                                      "caption": null,
-                                      "likes": {
-                                        "count": 1,
-                                        "data": [
-                                          {
-                                            "username": "mikeyk",
-                                            "full_name": "Mikeyk",
-                                            "id": "4",
-                                            "profile_picture": "..."
-                                          }
-                                        ]
-                                      },
-                                      "link": "http://instagr.am/p/D/",
-                                      "created_time": "1279340983",
-                                      "images": {
-                                        "low_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg",
-                                          "width": 306,
-                                          "height": 306
-                                        },
-                                        "thumbnail": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg",
-                                          "width": 150,
-                                          "height": 150
-                                        },
-                                        "standard_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg",
-                                          "width": 612,
-                                          "height": 612
-                                        }
-                                      },
-                                      "type": "video",
-                                      "users_in_photo": null,
-                                      "filter": "Vesper",
-                                      "tags": [],
-                                      "id": "363839373298",
-                                      "user": {
-                                        "username": "kevin",
-                                        "full_name": "Kevin S",
-                                        "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                        "id": "3"
-                                      },
-                                      "location": null
-                                    }
-                                  }
-                                ]
-                              },
+                              "value": "{\n    \"data\": [{\n        \"distance\" : 50,\n        \"location\": {\n            \"id\": \"833\",\n            \"latitude\": 37.77956816727314,\n            \"longitude\": -122.41387367248539,\n            \"street_address\": \"\",\n            \"name\": \"Civic Center BART\"\n        },\n        \"comments\": {\n            \"count\": 16,\n            \"data\": [  ]\n        },\n        \"caption\":  {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"link\": \"http://instagr.am/p/BXsFz/\",\n        \"likes\": {\n            \"count\": 190,\n            \"data\": [{\n                \"username\": \"shayne\",\n                \"full_name\": \"Shayne Sweeney\",\n                \"id\": \"20\",\n                \"profile_picture\": \"...\"\n            }, {}]\n        },\n        \"created_time\": \"1296748524\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Earlybird\",\n        \"tags\": [],\n        \"id\": \"22987123\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        }\n    },\n    {\n        \"distance\" : 50,\n        \"videos\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4\",\n                \"width\": 480,\n                \"height\": 480\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4\",\n                \"width\": 640,\n                \"height\": 640\n            },\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            },\n            {\n                \"created_time\": \"1279341004\",\n                \"text\": \"Chilako taco\",\n                \"from\": {\n                    \"username\": \"kevin\",\n                    \"full_name\": \"Kevin S\",\n                    \"id\": \"3\",\n                    \"profile_picture\": \"...\"\n                },\n                \"id\": \"3\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"video\",\n        \"users_in_photo\": [],\n        \"filter\": \"Vesper\",\n        \"tags\": [],\n        \"id\": \"363839373298\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        },\n            \"location\": {\n                \"id\": \"833\",\n                \"latitude\": 37.77956816727314,\n                \"longitude\": -122.41387367248539,\n                \"street_address\": \"\",\n                \"name\": \"Civic Center BART\"\n            }\n    }}]\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -6543,13 +6036,24 @@
                                       "id": "833",
                                       "latitude": 37.77956816727314,
                                       "longitude": -122.4138736724854,
+                                      "street_address": "",
                                       "name": "Civic Center BART"
                                     },
                                     "comments": {
                                       "count": 16,
                                       "data": []
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "link": "http://instagr.am/p/BXsFz/",
                                     "likes": {
                                       "count": 190,
@@ -6582,7 +6086,20 @@
                                       }
                                     },
                                     "type": "image",
-                                    "users_in_photo": [],
+                                    "users_in_photo": [
+                                      {
+                                        "user": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin S",
+                                          "id": "3",
+                                          "profile_picture": "..."
+                                        },
+                                        "position": {
+                                          "x": 0.315,
+                                          "y": 0.9111
+                                        }
+                                      }
+                                    ],
                                     "filter": "Earlybird",
                                     "tags": [],
                                     "id": "22987123",
@@ -6633,7 +6150,17 @@
                                         ],
                                         "count": 2
                                       },
-                                      "caption": null,
+                                      "caption": {
+                                        "created_time": "1296710352",
+                                        "text": "Inside le truc #foodtruck",
+                                        "from": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin Systrom",
+                                          "type": "user",
+                                          "id": "3"
+                                        },
+                                        "id": "26621408"
+                                      },
                                       "likes": {
                                         "count": 1,
                                         "data": [
@@ -6665,7 +6192,7 @@
                                         }
                                       },
                                       "type": "video",
-                                      "users_in_photo": null,
+                                      "users_in_photo": [],
                                       "filter": "Vesper",
                                       "tags": [],
                                       "id": "363839373298",
@@ -6675,7 +6202,13 @@
                                         "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                         "id": "3"
                                       },
-                                      "location": null
+                                      "location": {
+                                        "id": "833",
+                                        "latitude": 37.77956816727314,
+                                        "longitude": -122.4138736724854,
+                                        "street_address": "",
+                                        "name": "Civic Center BART"
+                                      }
                                     }
                                   }
                                 ]
@@ -6764,7 +6297,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -6855,31 +6388,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "data": [
-                                  {
-                                    "username": "jack",
-                                    "first_name": "Jack",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg",
-                                    "id": "66",
-                                    "last_name": "Dorsey"
-                                  },
-                                  {
-                                    "username": "sammyjack",
-                                    "first_name": "Sammy",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg",
-                                    "id": "29648",
-                                    "last_name": "Jack"
-                                  },
-                                  {
-                                    "username": "jacktiddy",
-                                    "first_name": "Jack",
-                                    "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg",
-                                    "id": "13096",
-                                    "last_name": "Tiddy"
-                                  }
-                                ]
-                              },
+                              "value": "{\n    \"data\": [{\n        \"username\": \"jack\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_66_75sq.jpg\",\n        \"id\": \"66\",\n        \"last_name\": \"Dorsey\"\n    },\n    {\n        \"username\": \"sammyjack\",\n        \"first_name\": \"Sammy\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_29648_75sq_1294520029.jpg\",\n        \"id\": \"29648\",\n        \"last_name\": \"Jack\"\n    },\n    {\n        \"username\": \"jacktiddy\",\n        \"first_name\": \"Jack\",\n        \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_13096_75sq_1286441317.jpg\",\n        \"id\": \"13096\",\n        \"last_name\": \"Tiddy\"\n    }]\n}",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -6997,7 +6506,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 100,
+                          "value": "100",
                           "strict": true,
                           "name": null,
                           "structuredValue": 100
@@ -7027,7 +6536,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -7085,13 +6594,24 @@
                                     "id": "833",
                                     "latitude": 37.77956816727314,
                                     "longitude": -122.4138736724854,
+                                    "street_address": "",
                                     "name": "Civic Center BART"
                                   },
                                   "comments": {
                                     "count": 16,
                                     "data": []
                                   },
-                                  "caption": null,
+                                  "caption": {
+                                    "created_time": "1296710352",
+                                    "text": "Inside le truc #foodtruck",
+                                    "from": {
+                                      "username": "kevin",
+                                      "full_name": "Kevin Systrom",
+                                      "type": "user",
+                                      "id": "3"
+                                    },
+                                    "id": "26621408"
+                                  },
                                   "link": "http://instagr.am/p/BXsFz/",
                                   "likes": {
                                     "count": 190,
@@ -7124,7 +6644,20 @@
                                     }
                                   },
                                   "type": "image",
-                                  "users_in_photo": [],
+                                  "users_in_photo": [
+                                    {
+                                      "user": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin S",
+                                        "id": "3",
+                                        "profile_picture": "..."
+                                      },
+                                      "position": {
+                                        "x": 0.315,
+                                        "y": 0.9111
+                                      }
+                                    }
+                                  ],
                                   "filter": "Earlybird",
                                   "tags": [],
                                   "id": "22987123",
@@ -7175,7 +6708,17 @@
                                       ],
                                       "count": 2
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "likes": {
                                       "count": 1,
                                       "data": [
@@ -7207,7 +6750,7 @@
                                       }
                                     },
                                     "type": "video",
-                                    "users_in_photo": null,
+                                    "users_in_photo": [],
                                     "filter": "Vesper",
                                     "tags": [],
                                     "id": "363839373298",
@@ -7217,7 +6760,13 @@
                                       "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                       "id": "3"
                                     },
-                                    "location": null
+                                    "location": {
+                                      "id": "833",
+                                      "latitude": 37.77956816727314,
+                                      "longitude": -122.4138736724854,
+                                      "street_address": "",
+                                      "name": "Civic Center BART"
+                                    }
                                   }
                                 }
                               ]
@@ -7238,151 +6787,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "data": [
-                                  {
-                                    "distance": 50,
-                                    "location": {
-                                      "id": "833",
-                                      "latitude": 37.77956816727314,
-                                      "longitude": -122.4138736724854,
-                                      "name": "Civic Center BART"
-                                    },
-                                    "comments": {
-                                      "count": 16,
-                                      "data": []
-                                    },
-                                    "caption": null,
-                                    "link": "http://instagr.am/p/BXsFz/",
-                                    "likes": {
-                                      "count": 190,
-                                      "data": [
-                                        {
-                                          "username": "shayne",
-                                          "full_name": "Shayne Sweeney",
-                                          "id": "20",
-                                          "profile_picture": "..."
-                                        },
-                                        {}
-                                      ]
-                                    },
-                                    "created_time": "1296748524",
-                                    "images": {
-                                      "low_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg",
-                                        "width": 306,
-                                        "height": 306
-                                      },
-                                      "thumbnail": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg",
-                                        "width": 150,
-                                        "height": 150
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg",
-                                        "width": 612,
-                                        "height": 612
-                                      }
-                                    },
-                                    "type": "image",
-                                    "users_in_photo": [],
-                                    "filter": "Earlybird",
-                                    "tags": [],
-                                    "id": "22987123",
-                                    "user": {
-                                      "username": "kevin",
-                                      "full_name": "Kevin S",
-                                      "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                      "id": "3"
-                                    }
-                                  },
-                                  {
-                                    "distance": 50,
-                                    "videos": {
-                                      "low_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4",
-                                        "width": 480,
-                                        "height": 480
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4",
-                                        "width": 640,
-                                        "height": 640
-                                      },
-                                      "comments": {
-                                        "data": [
-                                          {
-                                            "created_time": "1279332030",
-                                            "text": "Love the sign here",
-                                            "from": {
-                                              "username": "mikeyk",
-                                              "full_name": "Mikey Krieger",
-                                              "id": "4",
-                                              "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                            },
-                                            "id": "8"
-                                          },
-                                          {
-                                            "created_time": "1279341004",
-                                            "text": "Chilako taco",
-                                            "from": {
-                                              "username": "kevin",
-                                              "full_name": "Kevin S",
-                                              "id": "3",
-                                              "profile_picture": "..."
-                                            },
-                                            "id": "3"
-                                          }
-                                        ],
-                                        "count": 2
-                                      },
-                                      "caption": null,
-                                      "likes": {
-                                        "count": 1,
-                                        "data": [
-                                          {
-                                            "username": "mikeyk",
-                                            "full_name": "Mikeyk",
-                                            "id": "4",
-                                            "profile_picture": "..."
-                                          }
-                                        ]
-                                      },
-                                      "link": "http://instagr.am/p/D/",
-                                      "created_time": "1279340983",
-                                      "images": {
-                                        "low_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg",
-                                          "width": 306,
-                                          "height": 306
-                                        },
-                                        "thumbnail": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg",
-                                          "width": 150,
-                                          "height": 150
-                                        },
-                                        "standard_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg",
-                                          "width": 612,
-                                          "height": 612
-                                        }
-                                      },
-                                      "type": "video",
-                                      "users_in_photo": null,
-                                      "filter": "Vesper",
-                                      "tags": [],
-                                      "id": "363839373298",
-                                      "user": {
-                                        "username": "kevin",
-                                        "full_name": "Kevin S",
-                                        "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                        "id": "3"
-                                      },
-                                      "location": null
-                                    }
-                                  }
-                                ]
-                              },
+                              "value": "{\n    \"data\": [{\n        \"distance\" : 50,\n        \"location\": {\n            \"id\": \"833\",\n            \"latitude\": 37.77956816727314,\n            \"longitude\": -122.41387367248539,\n            \"street_address\": \"\",\n            \"name\": \"Civic Center BART\"\n        },\n        \"comments\": {\n            \"count\": 16,\n            \"data\": [  ]\n        },\n        \"caption\":  {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"link\": \"http://instagr.am/p/BXsFz/\",\n        \"likes\": {\n            \"count\": 190,\n            \"data\": [{\n                \"username\": \"shayne\",\n                \"full_name\": \"Shayne Sweeney\",\n                \"id\": \"20\",\n                \"profile_picture\": \"...\"\n            }, {}]\n        },\n        \"created_time\": \"1296748524\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Earlybird\",\n        \"tags\": [],\n        \"id\": \"22987123\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        }\n    },\n    {\n        \"distance\" : 50,\n        \"videos\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4\",\n                \"width\": 480,\n                \"height\": 480\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4\",\n                \"width\": 640,\n                \"height\": 640\n            },\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            },\n            {\n                \"created_time\": \"1279341004\",\n                \"text\": \"Chilako taco\",\n                \"from\": {\n                    \"username\": \"kevin\",\n                    \"full_name\": \"Kevin S\",\n                    \"id\": \"3\",\n                    \"profile_picture\": \"...\"\n                },\n                \"id\": \"3\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"video\",\n        \"users_in_photo\": [],\n        \"filter\": \"Vesper\",\n        \"tags\": [],\n        \"id\": \"363839373298\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        },\n            \"location\": {\n                \"id\": \"833\",\n                \"latitude\": 37.77956816727314,\n                \"longitude\": -122.41387367248539,\n                \"street_address\": \"\",\n                \"name\": \"Civic Center BART\"\n            }\n    }}]\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -7393,13 +6798,24 @@
                                       "id": "833",
                                       "latitude": 37.77956816727314,
                                       "longitude": -122.4138736724854,
+                                      "street_address": "",
                                       "name": "Civic Center BART"
                                     },
                                     "comments": {
                                       "count": 16,
                                       "data": []
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "link": "http://instagr.am/p/BXsFz/",
                                     "likes": {
                                       "count": 190,
@@ -7432,7 +6848,20 @@
                                       }
                                     },
                                     "type": "image",
-                                    "users_in_photo": [],
+                                    "users_in_photo": [
+                                      {
+                                        "user": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin S",
+                                          "id": "3",
+                                          "profile_picture": "..."
+                                        },
+                                        "position": {
+                                          "x": 0.315,
+                                          "y": 0.9111
+                                        }
+                                      }
+                                    ],
                                     "filter": "Earlybird",
                                     "tags": [],
                                     "id": "22987123",
@@ -7483,7 +6912,17 @@
                                         ],
                                         "count": 2
                                       },
-                                      "caption": null,
+                                      "caption": {
+                                        "created_time": "1296710352",
+                                        "text": "Inside le truc #foodtruck",
+                                        "from": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin Systrom",
+                                          "type": "user",
+                                          "id": "3"
+                                        },
+                                        "id": "26621408"
+                                      },
                                       "likes": {
                                         "count": 1,
                                         "data": [
@@ -7515,7 +6954,7 @@
                                         }
                                       },
                                       "type": "video",
-                                      "users_in_photo": null,
+                                      "users_in_photo": [],
                                       "filter": "Vesper",
                                       "tags": [],
                                       "id": "363839373298",
@@ -7525,7 +6964,13 @@
                                         "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                         "id": "3"
                                       },
-                                      "location": null
+                                      "location": {
+                                        "id": "833",
+                                        "latitude": 37.77956816727314,
+                                        "longitude": -122.4138736724854,
+                                        "street_address": "",
+                                        "name": "Civic Center BART"
+                                      }
                                     }
                                   }
                                 ]
@@ -7649,7 +7094,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -7899,7 +7344,7 @@
                           }
                         },
                         "structuredExample": {
-                          "value": 1,
+                          "value": "1",
                           "strict": true,
                           "name": null,
                           "structuredValue": 1
@@ -7957,13 +7402,24 @@
                                     "id": "833",
                                     "latitude": 37.77956816727314,
                                     "longitude": -122.4138736724854,
+                                    "street_address": "",
                                     "name": "Civic Center BART"
                                   },
                                   "comments": {
                                     "count": 16,
                                     "data": []
                                   },
-                                  "caption": null,
+                                  "caption": {
+                                    "created_time": "1296710352",
+                                    "text": "Inside le truc #foodtruck",
+                                    "from": {
+                                      "username": "kevin",
+                                      "full_name": "Kevin Systrom",
+                                      "type": "user",
+                                      "id": "3"
+                                    },
+                                    "id": "26621408"
+                                  },
                                   "link": "http://instagr.am/p/BXsFz/",
                                   "likes": {
                                     "count": 190,
@@ -7996,7 +7452,20 @@
                                     }
                                   },
                                   "type": "image",
-                                  "users_in_photo": [],
+                                  "users_in_photo": [
+                                    {
+                                      "user": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin S",
+                                        "id": "3",
+                                        "profile_picture": "..."
+                                      },
+                                      "position": {
+                                        "x": 0.315,
+                                        "y": 0.9111
+                                      }
+                                    }
+                                  ],
                                   "filter": "Earlybird",
                                   "tags": [],
                                   "id": "22987123",
@@ -8047,7 +7516,17 @@
                                       ],
                                       "count": 2
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "likes": {
                                       "count": 1,
                                       "data": [
@@ -8079,7 +7558,7 @@
                                       }
                                     },
                                     "type": "video",
-                                    "users_in_photo": null,
+                                    "users_in_photo": [],
                                     "filter": "Vesper",
                                     "tags": [],
                                     "id": "363839373298",
@@ -8089,7 +7568,13 @@
                                       "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                       "id": "3"
                                     },
-                                    "location": null
+                                    "location": {
+                                      "id": "833",
+                                      "latitude": 37.77956816727314,
+                                      "longitude": -122.4138736724854,
+                                      "street_address": "",
+                                      "name": "Civic Center BART"
+                                    }
                                   }
                                 }
                               ]
@@ -8110,151 +7595,7 @@
                               }
                             },
                             "structuredExample": {
-                              "value": {
-                                "data": [
-                                  {
-                                    "distance": 50,
-                                    "location": {
-                                      "id": "833",
-                                      "latitude": 37.77956816727314,
-                                      "longitude": -122.4138736724854,
-                                      "name": "Civic Center BART"
-                                    },
-                                    "comments": {
-                                      "count": 16,
-                                      "data": []
-                                    },
-                                    "caption": null,
-                                    "link": "http://instagr.am/p/BXsFz/",
-                                    "likes": {
-                                      "count": 190,
-                                      "data": [
-                                        {
-                                          "username": "shayne",
-                                          "full_name": "Shayne Sweeney",
-                                          "id": "20",
-                                          "profile_picture": "..."
-                                        },
-                                        {}
-                                      ]
-                                    },
-                                    "created_time": "1296748524",
-                                    "images": {
-                                      "low_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg",
-                                        "width": 306,
-                                        "height": 306
-                                      },
-                                      "thumbnail": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg",
-                                        "width": 150,
-                                        "height": 150
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg",
-                                        "width": 612,
-                                        "height": 612
-                                      }
-                                    },
-                                    "type": "image",
-                                    "users_in_photo": [],
-                                    "filter": "Earlybird",
-                                    "tags": [],
-                                    "id": "22987123",
-                                    "user": {
-                                      "username": "kevin",
-                                      "full_name": "Kevin S",
-                                      "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                      "id": "3"
-                                    }
-                                  },
-                                  {
-                                    "distance": 50,
-                                    "videos": {
-                                      "low_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4",
-                                        "width": 480,
-                                        "height": 480
-                                      },
-                                      "standard_resolution": {
-                                        "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4",
-                                        "width": 640,
-                                        "height": 640
-                                      },
-                                      "comments": {
-                                        "data": [
-                                          {
-                                            "created_time": "1279332030",
-                                            "text": "Love the sign here",
-                                            "from": {
-                                              "username": "mikeyk",
-                                              "full_name": "Mikey Krieger",
-                                              "id": "4",
-                                              "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg"
-                                            },
-                                            "id": "8"
-                                          },
-                                          {
-                                            "created_time": "1279341004",
-                                            "text": "Chilako taco",
-                                            "from": {
-                                              "username": "kevin",
-                                              "full_name": "Kevin S",
-                                              "id": "3",
-                                              "profile_picture": "..."
-                                            },
-                                            "id": "3"
-                                          }
-                                        ],
-                                        "count": 2
-                                      },
-                                      "caption": null,
-                                      "likes": {
-                                        "count": 1,
-                                        "data": [
-                                          {
-                                            "username": "mikeyk",
-                                            "full_name": "Mikeyk",
-                                            "id": "4",
-                                            "profile_picture": "..."
-                                          }
-                                        ]
-                                      },
-                                      "link": "http://instagr.am/p/D/",
-                                      "created_time": "1279340983",
-                                      "images": {
-                                        "low_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg",
-                                          "width": 306,
-                                          "height": 306
-                                        },
-                                        "thumbnail": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg",
-                                          "width": 150,
-                                          "height": 150
-                                        },
-                                        "standard_resolution": {
-                                          "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg",
-                                          "width": 612,
-                                          "height": 612
-                                        }
-                                      },
-                                      "type": "video",
-                                      "users_in_photo": null,
-                                      "filter": "Vesper",
-                                      "tags": [],
-                                      "id": "363839373298",
-                                      "user": {
-                                        "username": "kevin",
-                                        "full_name": "Kevin S",
-                                        "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
-                                        "id": "3"
-                                      },
-                                      "location": null
-                                    }
-                                  }
-                                ]
-                              },
+                              "value": "{\n    \"data\": [{\n        \"distance\" : 50,\n        \"location\": {\n            \"id\": \"833\",\n            \"latitude\": 37.77956816727314,\n            \"longitude\": -122.41387367248539,\n            \"street_address\": \"\",\n            \"name\": \"Civic Center BART\"\n        },\n        \"comments\": {\n            \"count\": 16,\n            \"data\": [  ]\n        },\n        \"caption\":  {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"link\": \"http://instagr.am/p/BXsFz/\",\n        \"likes\": {\n            \"count\": 190,\n            \"data\": [{\n                \"username\": \"shayne\",\n                \"full_name\": \"Shayne Sweeney\",\n                \"id\": \"20\",\n                \"profile_picture\": \"...\"\n            }, {}]\n        },\n        \"created_time\": \"1296748524\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distillery.s3.amazonaws.com/media/2011/02/03/efc502667a554329b52d9a6bab35b24a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"image\",\n        \"users_in_photo\": [{\n            \"user\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin S\",\n                \"id\": \"3\",\n                \"profile_picture\": \"...\"\n            },\n            \"position\": {\n                \"x\": 0.315,\n                \"y\": 0.9111\n            }\n        }],\n        \"filter\": \"Earlybird\",\n        \"tags\": [],\n        \"id\": \"22987123\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        }\n    },\n    {\n        \"distance\" : 50,\n        \"videos\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4\",\n                \"width\": 480,\n                \"height\": 480\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4\",\n                \"width\": 640,\n                \"height\": 640\n            },\n        \"comments\": {\n            \"data\": [{\n                \"created_time\": \"1279332030\",\n                \"text\": \"Love the sign here\",\n                \"from\": {\n                    \"username\": \"mikeyk\",\n                    \"full_name\": \"Mikey Krieger\",\n                    \"id\": \"4\",\n                    \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_1242695_75sq_1293915800.jpg\"\n                },\n                \"id\": \"8\"\n            },\n            {\n                \"created_time\": \"1279341004\",\n                \"text\": \"Chilako taco\",\n                \"from\": {\n                    \"username\": \"kevin\",\n                    \"full_name\": \"Kevin S\",\n                    \"id\": \"3\",\n                    \"profile_picture\": \"...\"\n                },\n                \"id\": \"3\"\n            }],\n            \"count\": 2\n        },\n        \"caption\": {\n            \"created_time\": \"1296710352\",\n            \"text\": \"Inside le truc #foodtruck\",\n            \"from\": {\n                \"username\": \"kevin\",\n                \"full_name\": \"Kevin Systrom\",\n                \"type\": \"user\",\n                \"id\": \"3\"\n            },\n            \"id\": \"26621408\"\n        },\n        \"likes\": {\n            \"count\": 1,\n            \"data\": [{\n                \"username\": \"mikeyk\",\n                \"full_name\": \"Mikeyk\",\n                \"id\": \"4\",\n                \"profile_picture\": \"...\"\n            }]\n        },\n        \"link\": \"http://instagr.am/p/D/\",\n        \"created_time\": \"1279340983\",\n        \"images\": {\n            \"low_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg\",\n                \"width\": 306,\n                \"height\": 306\n            },\n            \"thumbnail\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg\",\n                \"width\": 150,\n                \"height\": 150\n            },\n            \"standard_resolution\": {\n                \"url\": \"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg\",\n                \"width\": 612,\n                \"height\": 612\n            }\n        },\n        \"type\": \"video\",\n        \"users_in_photo\": [],\n        \"filter\": \"Vesper\",\n        \"tags\": [],\n        \"id\": \"363839373298\",\n        \"user\": {\n            \"username\": \"kevin\",\n            \"full_name\": \"Kevin S\",\n            \"profile_picture\": \"http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg\",\n            \"id\": \"3\"\n        },\n            \"location\": {\n                \"id\": \"833\",\n                \"latitude\": 37.77956816727314,\n                \"longitude\": -122.41387367248539,\n                \"street_address\": \"\",\n                \"name\": \"Civic Center BART\"\n            }\n    }}]\n}\n",
                               "strict": true,
                               "name": null,
                               "structuredValue": {
@@ -8265,13 +7606,24 @@
                                       "id": "833",
                                       "latitude": 37.77956816727314,
                                       "longitude": -122.4138736724854,
+                                      "street_address": "",
                                       "name": "Civic Center BART"
                                     },
                                     "comments": {
                                       "count": 16,
                                       "data": []
                                     },
-                                    "caption": null,
+                                    "caption": {
+                                      "created_time": "1296710352",
+                                      "text": "Inside le truc #foodtruck",
+                                      "from": {
+                                        "username": "kevin",
+                                        "full_name": "Kevin Systrom",
+                                        "type": "user",
+                                        "id": "3"
+                                      },
+                                      "id": "26621408"
+                                    },
                                     "link": "http://instagr.am/p/BXsFz/",
                                     "likes": {
                                       "count": 190,
@@ -8304,7 +7656,20 @@
                                       }
                                     },
                                     "type": "image",
-                                    "users_in_photo": [],
+                                    "users_in_photo": [
+                                      {
+                                        "user": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin S",
+                                          "id": "3",
+                                          "profile_picture": "..."
+                                        },
+                                        "position": {
+                                          "x": 0.315,
+                                          "y": 0.9111
+                                        }
+                                      }
+                                    ],
                                     "filter": "Earlybird",
                                     "tags": [],
                                     "id": "22987123",
@@ -8355,7 +7720,17 @@
                                         ],
                                         "count": 2
                                       },
-                                      "caption": null,
+                                      "caption": {
+                                        "created_time": "1296710352",
+                                        "text": "Inside le truc #foodtruck",
+                                        "from": {
+                                          "username": "kevin",
+                                          "full_name": "Kevin Systrom",
+                                          "type": "user",
+                                          "id": "3"
+                                        },
+                                        "id": "26621408"
+                                      },
                                       "likes": {
                                         "count": 1,
                                         "data": [
@@ -8387,7 +7762,7 @@
                                         }
                                       },
                                       "type": "video",
-                                      "users_in_photo": null,
+                                      "users_in_photo": [],
                                       "filter": "Vesper",
                                       "tags": [],
                                       "id": "363839373298",
@@ -8397,7 +7772,13 @@
                                         "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_3_75sq_1295574122.jpg",
                                         "id": "3"
                                       },
-                                      "location": null
+                                      "location": {
+                                        "id": "833",
+                                        "latitude": 37.77956816727314,
+                                        "longitude": -122.4138736724854,
+                                        "street_address": "",
+                                        "name": "Civic Center BART"
+                                      }
                                     }
                                   }
                                 ]
@@ -8626,7 +8007,7 @@
                       }
                     },
                     "structuredExample": {
-                      "value": 1,
+                      "value": "1",
                       "strict": true,
                       "name": null,
                       "structuredValue": 1
@@ -8771,7 +8152,7 @@
                 "type": [
                   "integer"
                 ],
-                "example": null,
+                "example": 0,
                 "repeat": false,
                 "required": true,
                 "description": "Return media before this min_id.",
@@ -8787,6 +8168,12 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "structuredExample": {
+                  "value": "0",
+                  "strict": true,
+                  "name": null,
+                  "structuredValue": 0
                 }
               },
               "count": {
@@ -8813,7 +8200,7 @@
                   }
                 },
                 "structuredExample": {
-                  "value": 1,
+                  "value": "1",
                   "strict": true,
                   "name": null,
                   "structuredValue": 1
@@ -9013,7 +8400,7 @@
                   }
                 },
                 "structuredExample": {
-                  "value": 1,
+                  "value": "1",
                   "strict": true,
                   "name": null,
                   "structuredValue": 1

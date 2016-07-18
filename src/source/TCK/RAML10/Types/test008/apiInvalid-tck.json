@@ -232,18 +232,7 @@
             }
           },
           "structuredExample": {
-            "value": {
-              "unionArray": [
-                {
-                  "property1": "val1",
-                  "property4": "val2"
-                },
-                {
-                  "property3": "val3",
-                  "property4": "val4"
-                }
-              ]
-            },
+            "value": "{\n  \"unionArray\": [\n    {\n      \"property1\": \"val1\",\n      \"property4\": \"val2\"\n    },\n    {\n      \"property3\": \"val3\",\n      \"property4\": \"val4\"\n    }\n  ]\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
@@ -267,7 +256,7 @@
   "errors": [
     {
       "code": 11,
-      "message": "Required property: property2 is missed",
+      "message": "Union type option does not pass validation (SimpleType1: Required property: property2 is missed)",
       "path": "apiInvalid.raml",
       "line": 24,
       "column": 10,
@@ -287,7 +276,27 @@
     },
     {
       "code": 11,
-      "message": "union type options does not pass validation",
+      "message": "Union type option does not pass validation (SimpleType2: Required property: property3 is missed)",
+      "path": "apiInvalid.raml",
+      "line": 24,
+      "column": 10,
+      "position": 380,
+      "range": [
+        {
+          "line": 24,
+          "column": 10,
+          "position": 380
+        },
+        {
+          "line": 25,
+          "column": 25,
+          "position": 421
+        }
+      ]
+    },
+    {
+      "code": 11,
+      "message": "Union type options do not pass validation",
       "path": "apiInvalid.raml",
       "line": 24,
       "column": 10,

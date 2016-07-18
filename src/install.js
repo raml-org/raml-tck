@@ -57,11 +57,16 @@ function printErrors(errors) {
 }
 
 function runJsTests() {
-    var tests = path.resolve(root, './parsers/jsparser/tckGenerator.js');
+    var scriptPath = path.resolve(root, './parsers/jsparser/tckLauncher.js');
+    var reportPath = path.resolve(root, './parsers/jsparser/report.js');
     
-    var contents = path.resolve(__dirname, './source/TCK');
+    var tckDir = path.resolve(__dirname, './source/TCK');
 
-    var spawned = spawnSync('node', [tests, '-path', contents], {stdio: [0, 1, 2]});
+    var spawned = spawnSync(
+        'node',
+        [scriptPath, '-path', tckDir, '-report', reportPath],
+        {stdio: [0, 1, 2]}
+    );
 
     if(spawned.error) {
         throw new Error(error);
@@ -170,7 +175,7 @@ function cloneJavaParser() {
         fs.mkdirSync(javaRepoPath);
     }
     
-    spawnSync('git', ['clone', 'https://github.com/mulesoft-labs/rajapa.git', javaRepoPath], {stdio: [0, 1, 2]});
+    spawnSync('git', ['clone', '-b', 'v2', '--depth', '1', 'https://github.com/raml-org/raml-java-parser.git', javaRepoPath], {stdio: [0, 1, 2]});
 }
 
 function mvnInstall() {
@@ -183,11 +188,11 @@ function mvnInstall() {
 
         pomXmlPath = pomXmlPath.replace(/\\/g,"/");
     }
-    var res = spawnSync(command, ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies'], {stdio: [0, 1, 2]});
+    var res = spawnSync(command, ['clean', '-f', pomXmlPath, 'package', '-P', 'jar-with-dependencies', '-Dmaven.test.skip=true', '-Dlicense.skip=true', '-Dformatter.skip=true'], {stdio: [0, 1, 2]});
 }
 
 function setupJavaTestProject() {
-    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/target');
+    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/raml-parser-2/target');
     
     var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
 
@@ -222,7 +227,7 @@ function setupJavaTestProject() {
 }
 
 function runApiJava(ramlPath) {
-    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/target');
+    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/raml-parser-2/target');
 
     var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
     if(!fs.existsSync(testLibTargetDir)){

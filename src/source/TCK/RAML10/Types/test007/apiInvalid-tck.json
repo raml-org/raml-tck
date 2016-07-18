@@ -108,18 +108,7 @@
             }
           },
           "structuredExample": {
-            "value": {
-              "unionArray1": [
-                "blah",
-                2,
-                3
-              ],
-              "unionArray2": [
-                "blah",
-                "blah",
-                "blah"
-              ]
-            },
+            "value": "{\n  \"unionArray1\": [\n    \"blah\",\n    2,\n    3\n  ],\n  \"unionArray2\": [\n    \"blah\",\n    \"blah\",\n    \"blah\"\n  ]\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
@@ -143,7 +132,7 @@
   "errors": [
     {
       "code": 11,
-      "message": "union type options does not pass validation",
+      "message": "Union type options do not pass validation",
       "path": "apiInvalid.raml",
       "line": 13,
       "column": 6,
@@ -163,7 +152,27 @@
     },
     {
       "code": 11,
-      "message": "string is expected",
+      "message": "Union type option does not pass validation (number[]: number is expected)",
+      "path": "apiInvalid.raml",
+      "line": 13,
+      "column": 20,
+      "position": 226,
+      "range": [
+        {
+          "line": 13,
+          "column": 20,
+          "position": 226
+        },
+        {
+          "line": 13,
+          "column": 24,
+          "position": 230
+        }
+      ]
+    },
+    {
+      "code": 11,
+      "message": "Union type option does not pass validation (string[]: string is expected)",
       "path": "apiInvalid.raml",
       "line": 13,
       "column": 26,
@@ -183,7 +192,7 @@
     },
     {
       "code": 11,
-      "message": "string is expected",
+      "message": "Union type option does not pass validation (string[]: string is expected)",
       "path": "apiInvalid.raml",
       "line": 13,
       "column": 29,

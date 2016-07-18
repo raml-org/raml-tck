@@ -121,9 +121,28 @@
                 ],
                 "repeat": false,
                 "required": true,
-                "fixedFacets": {
-                  "properties": {
-                    "extraProperty": "string"
+                "properties": {
+                  "extraProperty": {
+                    "name": "extraProperty",
+                    "displayName": "extraProperty",
+                    "type": [
+                      "string"
+                    ],
+                    "repeat": false,
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "repeat": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
                   }
                 },
                 "__METADATA__": {
@@ -304,11 +323,7 @@
                   }
                 },
                 "structuredExample": {
-                  "value": {
-                    "propertyFromType2": "stringValue1",
-                    "propertyFromResourceType2": "stringValue2",
-                    "extraProperty": "stringValue3"
-                  },
+                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType2\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
@@ -403,11 +418,7 @@
                   }
                 },
                 "structuredExample": {
-                  "value": {
-                    "propertyFromType2": "stringValue1",
-                    "propertyFromResourceType2": "stringValue2",
-                    "extraProperty": "stringValue3"
-                  },
+                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType2\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {

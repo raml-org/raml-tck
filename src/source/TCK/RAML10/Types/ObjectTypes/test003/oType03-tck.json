@@ -147,13 +147,7 @@
             }
           },
           "structuredExample": {
-            "value": {
-              "comment_id": 2,
-              "initial_comments": "oo",
-              "user": "Raml",
-              "time_stamp": 1422378528,
-              "created": 1422378528
-            },
+            "value": "{\n  \"comment_id\": 2,\n  \"initial_comments\": \"oo\",\n  \"user\": \"Raml\",\n  \"time_stamp\": 1422378528,\n  \"created\": 1422378528\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
@@ -172,7 +166,7 @@
   "errors": [
     {
       "code": 11,
-      "message": "object should have not more then 4 properties",
+      "message": "'Initial_comments.maxProperties=4' i.e. object properties count should not be more than 4",
       "path": "oType03.raml",
       "line": 13,
       "column": 4,
