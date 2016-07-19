@@ -140,6 +140,32 @@
         }
       }
     ],
+    "annotationTypes": [
+      {
+        "pii": {
+          "name": "pii",
+          "displayName": "pii",
+          "type": [
+            "boolean"
+          ],
+          "repeat": false,
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "repeat": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
     "title": "Single example with additional facets"
   },
   "errors": []
