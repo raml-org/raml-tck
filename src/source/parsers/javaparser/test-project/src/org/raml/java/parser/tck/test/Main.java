@@ -36,6 +36,8 @@ public class Main {
 				JSONObject jsonItem = (JSONObject) item;
 				
 				String apiPath = (String) jsonItem.get("apiPath");
+				String tckJSONPath = (String) jsonItem.get("tckJsonPath");
+				JSONObject tckJson = (JSONObject) new JSONParser().parse(new FileReader(tckJSONPath));
 				boolean passed = (boolean) jsonItem.get("passed");
 				
 				List<String> errors = testApi(apiPath);
@@ -45,7 +47,8 @@ public class Main {
 				}
 				
 				if(errors != null) {
-					JSONArray tckErrors = (JSONArray) jsonItem.get("errors");
+
+					JSONArray tckErrors = (JSONArray) tckJson.get("errors");
 					
 					if(errors.size() != tckErrors.size()) {
 						System.out.println("java parser failed: " + apiPath);
