@@ -210,7 +210,7 @@ var packageJson = {
 }
 
 function cloneJavaParser() {
-    var javaRepoPath = path.resolve(root, './parsers/javaparser/rajapa');
+    var javaRepoPath = path.resolve(root, './parsers/javaparser/raml-parser-parent');
 
     if(!fs.existsSync(javaRepoPath)) {
         fs.mkdirSync(javaRepoPath);
@@ -220,7 +220,7 @@ function cloneJavaParser() {
 }
 
 function mvnInstall() {
-    var pomXmlPath = path.resolve(root, './parsers/javaparser/rajapa/pom.xml');
+    var pomXmlPath = path.resolve(root, './parsers/javaparser/raml-parser-parent/pom.xml');
     
     var command = 'mvn';
     
@@ -233,13 +233,13 @@ function mvnInstall() {
 }
 
 function setupJavaTestProject() {
-    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/raml-parser-2/target');
+    var targetDir = path.resolve(root, './parsers/javaparser/raml-parser-parent/raml-parser-2/target');
     
-    var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
+    var testLibTargetDir = path.resolve(root, './parsers/javaparser/test-project/lib/raml-parser.jar');
 
-    var dependencyPath = path.resolve(root, './parsers/javaparser/rajapatest/lib/json-simple.jar');
+    var dependencyPath = path.resolve(root, './parsers/javaparser/test-project/lib/json-simple.jar');
 
-    var mainJava = path.resolve(root, './parsers/javaparser/rajapatest/src/rajapatest/Main.java');
+    var mainJava = path.resolve(root, './parsers/javaparser/test-project/src/org/raml/java/parser/tck/test/Main.java');
     
     var targetName = null;
     
@@ -256,7 +256,7 @@ function setupJavaTestProject() {
     
     fs.writeFileSync(testLibTargetDir, fs.readFileSync(targetDir + '/' + targetName));
 
-    var jarOutputDir = path.resolve(root, './parsers/javaparser/rajapatest/output');
+    var jarOutputDir = path.resolve(root, './parsers/javaparser/test-project/output');
 
     if(!fs.existsSync(jarOutputDir)) {
         fs.mkdir(jarOutputDir);
@@ -268,21 +268,21 @@ function setupJavaTestProject() {
 }
 
 function runApiJava(ramlPath) {
-    var targetDir = path.resolve(root, './parsers/javaparser/rajapa/raml-parser-2/target');
+    var targetDir = path.resolve(root, './parsers/javaparser/raml-parser-parent/raml-parser-2/target');
 
-    var testLibTargetDir = path.resolve(root, './parsers/javaparser/rajapatest/lib/raml-parser.jar');
+    var testLibTargetDir = path.resolve(root, './parsers/javaparser/test-project/lib/raml-parser.jar');
     if(!fs.existsSync(testLibTargetDir)){
         console.warn("Unable to run Java parser tests because Java parser build has failed.");
         return;
     }
 
-    var dependencyPath = path.resolve(root, './parsers/javaparser/rajapatest/lib/json-simple.jar');
+    var dependencyPath = path.resolve(root, './parsers/javaparser/test-project/lib/json-simple.jar');
 
-    var mainJava = path.resolve(root, './parsers/javaparser/rajapatest/src/rajapatest/Main.java');
+    var mainJava = path.resolve(root, './parsers/javaparser/test-project/src/org/raml/java/parser/tck/test/Main.java');
 
-    var jarOutputDir = path.resolve(root, './parsers/javaparser/rajapatest/output');
+    var jarOutputDir = path.resolve(root, './parsers/javaparser/test-project/output');
     var delim = path.delimiter;
-    var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'rajapatest.Main', ramlPath], {stdio: [0, 1, 2]});
+    var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'org.raml.java.parser.tck.test.Main', ramlPath], {stdio: [0, 1, 2]});
 }
 
 var args = process.argv;

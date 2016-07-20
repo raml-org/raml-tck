@@ -1,4 +1,4 @@
-package rajapatest;
+package org.raml.java.parser.tck.test;
 
 import java.io.FileReader;
 import java.io.IOException;
