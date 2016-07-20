@@ -30,6 +30,11 @@ npm run generate
 ```
 The script saves the JS parser output as TCK JSON for those test projects which do not have one.
 
+You may also execute `generate` and `test` scripts by single command:
+```
+npm run all
+```
+
 ## Script Working Principle
 
 * The test script iterates in the direct order through the [`src/source/TCK`](https://github.com/mulesoft-labs/raml-tck/tree/master/src/source/TCK) subtree and detects possible test project roots.
