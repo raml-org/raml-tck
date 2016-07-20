@@ -68,7 +68,7 @@ function runTest() {
 }
 
 function runJavaTests() {
-    var jsJsonPath = path.resolve(root, './parsers/jsparser/result.json');
+    var jsJsonPath = path.resolve(root, './parsers/jsparser/report.json');
 
     runApiJava(jsJsonPath);
 }
@@ -95,7 +95,7 @@ function printErrors(errors) {
 
 function runJsTests(callTests) {
     var scriptPath = path.resolve(root, './parsers/jsparser/tckLauncher.js');
-    var reportPath = path.resolve(root, './parsers/jsparser/report.js');
+    var reportPath = path.resolve(root, './parsers/jsparser/report.json');
     
     var tckDir = path.resolve(__dirname, './source/TCK');
 
