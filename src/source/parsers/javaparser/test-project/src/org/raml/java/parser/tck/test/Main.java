@@ -50,7 +50,7 @@ public class Main {
 
 					JSONArray tckErrors = (JSONArray) tckJson.get("errors");
 					
-					if(errors.size() != tckErrors.size()) {
+					if(errors.size() != tckErrors.size() && (errors.size() == 0 || tckErrors.size() == 0)) {
 						System.out.println("java parser failed: " + apiPath);
 						System.out.println("\texpected:" + ( tckErrors.isEmpty() ? " no errors" : ""));
 						
