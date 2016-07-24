@@ -8,5 +8,10 @@ types:
         type: string
   Resource:
     type: object
-    patternProperties:
-      "post|get|put": Method
+    properties:
+      /post|get|put/: Method
+    example:
+      put:
+        name: update method
+      post:
+        name: create method
