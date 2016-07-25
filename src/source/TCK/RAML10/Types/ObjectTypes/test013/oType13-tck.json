@@ -58,12 +58,20 @@
           "type": [
             "object"
           ],
+          "example": {
+            "put": {
+              "name": "update method"
+            },
+            "post": {
+              "name": "create method"
+            }
+          },
           "repeat": false,
           "required": true,
-          "patternProperties": [
-            {
-              "name": "post|get|put",
-              "displayName": "post|get|put",
+          "properties": {
+            "/post|get|put/": {
+              "name": "/post|get|put/",
+              "displayName": "/post|get|put/",
               "type": [
                 "Method"
               ],
@@ -83,7 +91,7 @@
                 }
               }
             }
-          ],
+          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -94,6 +102,19 @@
               },
               "required": {
                 "insertedAsDefault": true
+              }
+            }
+          },
+          "structuredExample": {
+            "value": "{\n  \"put\": {\n    \"name\": \"update method\"\n  },\n  \"post\": {\n    \"name\": \"create method\"\n  }\n}",
+            "strict": true,
+            "name": null,
+            "structuredValue": {
+              "put": {
+                "name": "update method"
+              },
+              "post": {
+                "name": "create method"
               }
             }
           }
