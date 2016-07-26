@@ -18,7 +18,6 @@
                 "type": [
                   "array"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "A list of userIds",
                 "uniqueItems": true,
@@ -28,16 +27,12 @@
                   "type": [
                     "string"
                   ],
-                  "repeat": false,
                   "required": true,
                   "minLength": 1,
                   "__METADATA__": {
                     "primitiveValuesMeta": {
                       "displayName": {
                         "calculated": true
-                      },
-                      "repeat": {
-                        "insertedAsDefault": true
                       },
                       "required": {
                         "insertedAsDefault": true
@@ -49,9 +44,6 @@
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "repeat": {
-                      "insertedAsDefault": true
                     },
                     "required": {
                       "insertedAsDefault": true

@@ -12,7 +12,6 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": true,
               "description": "A valid <<tokenName>> is required",
               "__METADATA__": {
@@ -21,9 +20,6 @@
                     "calculated": true
                   },
                   "type": {
-                    "insertedAsDefault": true
-                  },
-                  "repeat": {
                     "insertedAsDefault": true
                   },
                   "required": {
@@ -45,7 +41,6 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": true,
               "description": "The number of pages to return, not to exceed <<maxPages>>",
               "__METADATA__": {
@@ -54,9 +49,6 @@
                     "calculated": true
                   },
                   "type": {
-                    "insertedAsDefault": true
-                  },
-                  "repeat": {
                     "insertedAsDefault": true
                   },
                   "required": {
@@ -82,7 +74,6 @@
                 "type": [
                   "string"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "Return <<resourcePathName>> that have their <<queryParamName>> matching the given value",
                 "__METADATA__": {
@@ -91,9 +82,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {
@@ -108,7 +96,6 @@
                 "type": [
                   "string"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "If no values match the value given for <<queryParamName>>, use <<fallbackParamName>> instead",
                 "__METADATA__": {
@@ -117,9 +104,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {
@@ -147,7 +131,6 @@
                 "type": [
                   "string"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "Return books that have their title matching the given value",
                 "__METADATA__": {
@@ -156,9 +139,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {
@@ -173,7 +153,6 @@
                 "type": [
                   "string"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "If no values match the value given for title, use digest_all_fields instead",
                 "__METADATA__": {
@@ -182,9 +161,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {
@@ -199,7 +175,6 @@
                 "type": [
                   "string"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "A valid access_token is required",
                 "__METADATA__": {
@@ -208,9 +183,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {
@@ -225,7 +197,6 @@
                 "type": [
                   "string"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "The number of pages to return, not to exceed 10",
                 "__METADATA__": {
@@ -234,9 +205,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {

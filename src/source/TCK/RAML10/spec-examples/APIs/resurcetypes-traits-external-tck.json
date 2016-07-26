@@ -13,7 +13,6 @@
                 "string"
               ],
               "example": "5757gh76",
-              "repeat": false,
               "required": true,
               "description": "Access Token",
               "__METADATA__": {
@@ -22,9 +21,6 @@
                     "calculated": true
                   },
                   "type": {
-                    "insertedAsDefault": true
-                  },
-                  "repeat": {
                     "insertedAsDefault": true
                   }
                 }
@@ -52,16 +48,12 @@
                 "integer"
               ],
               "example": 5000,
-              "repeat": false,
               "required": true,
               "description": "The limit.",
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   }
                 }
               },
@@ -100,7 +92,6 @@
                     "type": [
                       "string"
                     ],
-                    "repeat": false,
                     "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
@@ -108,9 +99,6 @@
                           "calculated": true
                         },
                         "type": {
-                          "insertedAsDefault": true
-                        },
-                        "repeat": {
                           "insertedAsDefault": true
                         },
                         "required": {

@@ -12,7 +12,6 @@
               "type": [
                 "array"
               ],
-              "repeat": false,
               "required": true,
               "description": "A department code to be charged.\nMultiple of such headers are allowed.\n",
               "items": {
@@ -22,7 +21,6 @@
                   "string"
                 ],
                 "example": "230-OCTO",
-                "repeat": false,
                 "required": true,
                 "pattern": "^\\d+\\-\\w+$",
                 "__METADATA__": {
@@ -31,9 +29,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {
@@ -52,9 +47,6 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -76,7 +68,6 @@
                 "string"
               ],
               "example": "abcdefghijklmnop",
-              "repeat": false,
               "required": true,
               "description": "A code to track API calls end to end",
               "pattern": "^\\w{16}$",
@@ -86,9 +77,6 @@
                     "calculated": true
                   },
                   "type": {
-                    "insertedAsDefault": true
-                  },
-                  "repeat": {
                     "insertedAsDefault": true
                   },
                   "required": {
@@ -124,7 +112,6 @@
                   "18-FINANCE",
                   "200-MISC"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "A department code to be charged.\nMultiple of such headers are allowed.\n",
                 "items": {
@@ -134,7 +121,6 @@
                     "string"
                   ],
                   "example": "230-OCTO",
-                  "repeat": false,
                   "required": true,
                   "pattern": "^\\d+\\-\\w+$",
                   "__METADATA__": {
@@ -143,9 +129,6 @@
                         "calculated": true
                       },
                       "type": {
-                        "insertedAsDefault": true
-                      },
-                      "repeat": {
                         "insertedAsDefault": true
                       },
                       "required": {
@@ -164,9 +147,6 @@
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "repeat": {
-                      "insertedAsDefault": true
                     },
                     "required": {
                       "insertedAsDefault": true
@@ -190,7 +170,6 @@
                   "string"
                 ],
                 "example": "gfr456d03ygh38s2",
-                "repeat": false,
                 "required": true,
                 "description": "A code to track API calls end to end",
                 "pattern": "^\\w{16}$",
@@ -200,9 +179,6 @@
                       "calculated": true
                     },
                     "type": {
-                      "insertedAsDefault": true
-                    },
-                    "repeat": {
                       "insertedAsDefault": true
                     },
                     "required": {

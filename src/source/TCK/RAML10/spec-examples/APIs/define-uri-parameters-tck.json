@@ -38,16 +38,12 @@
                 "type": [
                   "integer"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "The id of the user",
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "repeat": {
-                      "insertedAsDefault": true
                     },
                     "required": {
                       "insertedAsDefault": true
