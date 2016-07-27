@@ -16,16 +16,12 @@
                 "type": [
                   "string"
                 ],
-                "repeat": false,
                 "required": true,
                 "description": "Used to send a custom token.\n",
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "repeat": {
-                      "insertedAsDefault": true
                     },
                     "required": {
                       "insertedAsDefault": true
@@ -57,7 +53,6 @@
         "type": [
           "string"
         ],
-        "repeat": false,
         "required": true,
         "enum": [
           "1"
@@ -69,9 +64,6 @@
               "calculated": true
             },
             "type": {
-              "insertedAsDefault": true
-            },
-            "repeat": {
               "insertedAsDefault": true
             },
             "required": {

@@ -14,7 +14,6 @@
             "title": "Attention needed",
             "body": "You have been added to group 274"
           },
-          "repeat": false,
           "required": true,
           "properties": {
             "title": {
@@ -23,15 +22,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": false,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -45,15 +40,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": false,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -67,15 +58,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": false,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -89,15 +76,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": false,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -112,9 +95,6 @@
                 "calculated": true
               },
               "type": {
-                "insertedAsDefault": true
-              },
-              "repeat": {
                 "insertedAsDefault": true
               },
               "required": {
@@ -148,15 +128,11 @@
           "type": [
             "boolean"
           ],
-          "repeat": false,
           "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "repeat": {
-                "insertedAsDefault": true
               },
               "required": {
                 "insertedAsDefault": true

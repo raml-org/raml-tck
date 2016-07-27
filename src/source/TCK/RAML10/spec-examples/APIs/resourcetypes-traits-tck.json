@@ -13,7 +13,6 @@
                 "string"
               ],
               "example": "5757gh76",
-              "repeat": false,
               "required": true,
               "description": "Access Token",
               "__METADATA__": {
@@ -22,9 +21,6 @@
                     "calculated": true
                   },
                   "type": {
-                    "insertedAsDefault": true
-                  },
-                  "repeat": {
                     "insertedAsDefault": true
                   }
                 }

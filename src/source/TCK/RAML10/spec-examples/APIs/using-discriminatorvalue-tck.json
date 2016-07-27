@@ -10,7 +10,6 @@
           "type": [
             "object"
           ],
-          "repeat": false,
           "required": true,
           "properties": {
             "name": {
@@ -19,15 +18,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -41,15 +36,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -63,9 +54,6 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "repeat": {
-                "insertedAsDefault": true
               },
               "required": {
                 "insertedAsDefault": true
@@ -81,7 +69,6 @@
           "type": [
             "Person"
           ],
-          "repeat": false,
           "required": true,
           "properties": {
             "employeeId": {
@@ -90,15 +77,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -112,9 +95,6 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "repeat": {
-                "insertedAsDefault": true
               },
               "required": {
                 "insertedAsDefault": true
@@ -130,7 +110,6 @@
           "type": [
             "Person"
           ],
-          "repeat": false,
           "required": true,
           "properties": {
             "userId": {
@@ -139,15 +118,11 @@
               "type": [
                 "string"
               ],
-              "repeat": false,
               "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "repeat": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -161,9 +136,6 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "repeat": {
-                "insertedAsDefault": true
               },
               "required": {
                 "insertedAsDefault": true

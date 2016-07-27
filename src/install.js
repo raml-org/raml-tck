@@ -96,7 +96,7 @@ function printErrors(errors) {
 function runJsTests(callTests) {
     var scriptPath = path.resolve(root, './parsers/jsparser/tckLauncher.js');
     var reportPath = path.resolve(root, './parsers/jsparser/report.json');
-    
+
     var tckDir = path.resolve(__dirname, './source/TCK');
 
     var args = [scriptPath, '-path', tckDir, '-report', reportPath];
@@ -118,17 +118,17 @@ function npmInstall() {
     var destination = path.resolve(root, './parsers/jsparser');
 
     var command = 'npm';
-    
+
     if(isWin){
         command += ".cmd";
     }
-    
+
     var installResult = spawnSync(command, ['install', '--prefix', destination], {stdio: [0, 1, 2]});
 }
 
 function copySources() {
     var packageJsonPath = path.resolve(root, './parsers/jsparser/package.json');
-    
+
     if(fs.existsSync(root)) {
         deleteFolderRecursive(root);
     }
@@ -143,31 +143,31 @@ function copySources() {
 
 function copyFileSync(source, target) {
     var targetFile = target;
-    
+
     if(fs.existsSync(target)) {
         if(fs.lstatSync(target).isDirectory()) {
             targetFile = path.join(target, path.basename(source));
         }
     }
-    
+
     fs.writeFileSync(targetFile, fs.readFileSync(source));
 }
 
 function copyFolderRecursiveSync(source, target) {
     var files = [];
-    
+
     var targetFolder = path.join(target, path.basename(source));
-    
+
     if(!fs.existsSync(targetFolder)) {
         fs.mkdirSync(targetFolder);
     }
-    
+
     if(fs.lstatSync(source).isDirectory() ) {
         files = fs.readdirSync(source);
-        
+
         files.forEach(function(file) {
             var curSource = path.join(source, file);
-            
+
             if(fs.lstatSync(curSource).isDirectory()) {
                 copyFolderRecursiveSync(curSource, targetFolder);
             } else {

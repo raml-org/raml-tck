@@ -12,7 +12,6 @@
         "type": [
           "string"
         ],
-        "repeat": false,
         "required": true,
         "enum": [
           "v3"
@@ -24,9 +23,6 @@
               "calculated": true
             },
             "type": {
-              "insertedAsDefault": true
-            },
-            "repeat": {
               "insertedAsDefault": true
             },
             "required": {
@@ -54,16 +50,12 @@
                   "integer"
                 ],
                 "example": 1,
-                "repeat": false,
                 "required": true,
                 "description": "Specify the page that you want to retrieve",
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "repeat": {
-                      "insertedAsDefault": true
                     }
                   }
                 },
@@ -82,7 +74,6 @@
                 ],
                 "default": 30,
                 "example": 50,
-                "repeat": false,
                 "required": true,
                 "description": "Specify the amount of items that will be retrieved per page",
                 "minimum": 10,
@@ -91,9 +82,6 @@
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "repeat": {
-                      "insertedAsDefault": true
                     },
                     "required": {
                       "insertedAsDefault": true
