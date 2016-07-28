@@ -49,6 +49,16 @@ public class Main {
 				if(errors != null) {
 
 					JSONArray tckErrors = (JSONArray) tckJson.get("errors");
+					for(int i = tckErrors.size() ; i > 0 ; i--) {
+						JSONObject eObj = (JSONObject)tckErrors.get(i-1);
+						if(eObj.containsKey("isWarning")){
+							Object isWarning = eObj.get("isWarning");
+							if((isWarning instanceof Boolean) && (Boolean)isWarning){
+								tckErrors.remove(i-1);
+							}
+						}
+
+					}
 					
 					if(errors.size() != tckErrors.size() && (errors.size() == 0 || tckErrors.size() == 0)) {
 						System.out.println("java parser failed: " + apiPath);
