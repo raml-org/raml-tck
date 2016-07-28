@@ -18,8 +18,8 @@ public class Main {
 	private static PrintStream systemOut = System.out;
 	
 	private static int count = 0;
-	
-	private static int jsCount = 0;
+	private static int ignored = 0;
+	private static int jsCount = 0;	
 	private static int javaCount = 0;
 	
 	public static void main(String[] args) {
@@ -31,56 +31,66 @@ public class Main {
 			JSONArray inputJson = (JSONArray) new JSONParser().parse(new FileReader(jsonPath));
 			
 			for(Object item: inputJson) {
-				count++;
+				
 
 				JSONObject jsonItem = (JSONObject) item;
 				
 				String apiPath = (String) jsonItem.get("apiPath");
+
 				String tckJSONPath = (String) jsonItem.get("tckJsonPath");
 				JSONObject tckJson = (JSONObject) new JSONParser().parse(new FileReader(tckJSONPath));
 				boolean passed = (boolean) jsonItem.get("passed");
-				
-				List<String> errors = testApi(apiPath);
-				
+
+				count++;
+
 				if(passed) {
 					jsCount++;
 				}
 				
-				if(errors != null) {
+				if(apiPath.contains("/RAML10/"))
+				{
+					List<String> errors = testApi(apiPath);
+					if(errors != null) {
 
-					JSONArray tckErrors = (JSONArray) tckJson.get("errors");
-					
-					if(errors.size() != tckErrors.size() && (errors.size() == 0 || tckErrors.size() == 0)) {
-						System.out.println("java parser failed: " + apiPath);
-						System.out.println("\texpected:" + ( tckErrors.isEmpty() ? " no errors" : ""));
+						JSONArray tckErrors = (JSONArray) tckJson.get("errors");
 						
-						for(Object error: tckErrors) {
-							String message = error.toString();
+						if(errors.size() != tckErrors.size() && (errors.size() == 0 || tckErrors.size() == 0)) {
+							System.out.println("java parser failed: " + apiPath);
+							System.out.println("\texpected:" + ( tckErrors.isEmpty() ? " no errors" : ""));
 							
-							System.out.println("\t\t" + message);
-						}
-						
-						System.out.println("\tactually:" + (errors.isEmpty() ? " no errors" : ""));
-						
-						for(String error: errors) {
-							String message = error.toString();
+							for(Object error: tckErrors) {
+								String message = error.toString();
+								
+								System.out.println("\t\t" + message);
+							}
 							
-							System.out.println("\t\t" + message);
-						}
+							System.out.println("\tactually:" + (errors.isEmpty() ? " no errors" : ""));
+							
+							for(String error: errors) {
+								String message = error.toString();
+								
+								System.out.println("\t\t" + message);
+							}
 
-						System.out.println();
+							System.out.println();
+						} else {
+							javaCount++;
+							
+							System.out.println("java parser passed: " + apiPath);
+						}
 					} else {
-						javaCount++;
-						
-						System.out.println("java parser passed: " + apiPath);
+						System.out.println("java parser failed to load: " + apiPath);
 					}
-				} else {
-					System.out.println("java parser failed to load: " + apiPath);
 				}
+				else
+				{
+					ignored++;
+				}
+				
 			}
 			
 			System.out.println("js parser TCK tests, passed " + jsCount + '/' + count + '.');
-			System.out.println("java parser TCK tests, passed " + javaCount + '/' + count + '.');
+			System.out.println("java parser TCK tests, passed " + javaCount + '/' + (count - ignored) + '.');
 			
 		} catch (Throwable t) {
 			
