@@ -1,29 +1,38 @@
 {
   "ramlVersion": "RAML10",
-  "type": "Api",
+  "type": "Library",
   "specification": {
     "types": [
       {
-        "SomeType": {
-          "name": "SomeType",
-          "displayName": "SomeType",
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
           "type": [
             "object"
           ],
-          "example": {
-            "someProperty": {
-              "someProperty": {
-                "someProperty": null
+          "examples": [
+            {
+              "value": "{\n  \"p1\": 5\n}",
+              "strict": true,
+              "structuredValue": {
+                "p1": 5
+              }
+            },
+            {
+              "value": "{\n  \"p1\": 8\n}",
+              "strict": true,
+              "structuredValue": {
+                "p1": 8
               }
             }
-          },
+          ],
           "required": true,
           "properties": {
-            "someProperty": {
-              "name": "someProperty",
-              "displayName": "someProperty",
+            "p1": {
+              "name": "p1",
+              "displayName": "p1",
               "type": [
-                "SomeType?"
+                "number"
               ],
               "required": true,
               "__METADATA__": {
@@ -50,23 +59,31 @@
                 "insertedAsDefault": true
               }
             }
-          },
-          "structuredExample": {
-            "value": "{\n  \"someProperty\": {\n    \"someProperty\": {\n      \"someProperty\": null\n    }\n  }\n}",
-            "strict": true,
-            "name": null,
-            "structuredValue": {
-              "someProperty": {
-                "someProperty": {
-                  "someProperty": null
-                }
-              }
-            }
           }
         }
       }
-    ],
-    "title": "API"
+    ]
   },
-  "errors": []
+  "errors": [
+    {
+      "code": 11,
+      "message": "map is expected here.",
+      "path": "api.raml",
+      "line": 8,
+      "column": 4,
+      "position": 114,
+      "range": [
+        {
+          "line": 8,
+          "column": 4,
+          "position": 114
+        },
+        {
+          "line": 8,
+          "column": 12,
+          "position": 122
+        }
+      ]
+    }
+  ]
 }

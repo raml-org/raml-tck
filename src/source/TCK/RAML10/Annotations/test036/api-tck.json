@@ -4,11 +4,11 @@
   "specification": {
     "annotationTypes": [
       {
-        "deprecated": {
-          "name": "deprecated",
-          "displayName": "deprecated",
+        "Label": {
+          "name": "Label",
+          "displayName": "Label",
           "type": [
-            "nil"
+            "object"
           ],
           "required": true,
           "__METADATA__": {
@@ -24,22 +24,26 @@
         }
       }
     ],
-    "title": "Illustrating annotations",
+    "title": "New API",
+    "version": "v1",
     "resources": [
       {
-        "methods": [
-          {
-            "annotations": {
-              "deprecated": {
-                "structuredValue": null,
-                "name": "deprecated"
+        "annotations": {
+          "Label": {
+            "structuredValue": {
+              "field1": 7,
+              "field2": true,
+              "field3": "stringValue",
+              "field5": {
+                "p1": 2,
+                "p2": "str"
               }
             },
-            "method": "get"
+            "name": "Label"
           }
-        ],
-        "relativeUri": "/users",
-        "displayName": "/users",
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
         "__METADATA__": {
           "primitiveValuesMeta": {
             "displayName": {
@@ -48,7 +52,7 @@
           }
         },
         "relativeUriPathSegments": [
-          "users"
+          "resource"
         ]
       }
     ]

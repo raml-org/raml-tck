@@ -1,26 +1,22 @@
 {
   "ramlVersion": "RAML10",
-  "type": "Library",
+  "type": "Api",
   "specification": {
     "types": [
       {
-        "MyType": {
-          "name": "MyType",
-          "displayName": "MyType",
+        "Point": {
+          "name": "Point",
+          "displayName": "Point",
           "type": [
             "object"
           ],
-          "example": {
-            "name": null,
-            "data": null
-          },
           "required": true,
           "properties": {
-            "name": {
-              "name": "name",
-              "displayName": "name",
+            "x": {
+              "name": "x",
+              "displayName": "x",
               "type": [
-                "nil | string"
+                "number"
               ],
               "required": true,
               "__METADATA__": {
@@ -34,11 +30,11 @@
                 }
               }
             },
-            "data": {
-              "name": "data",
-              "displayName": "data",
+            "y": {
+              "name": "y",
+              "displayName": "y",
               "type": [
-                "nil | Data"
+                "number"
               ],
               "required": true,
               "__METADATA__": {
@@ -58,69 +54,35 @@
               "displayName": {
                 "calculated": true
               },
-              "type": {
-                "insertedAsDefault": true
-              },
               "required": {
                 "insertedAsDefault": true
               }
             }
-          },
-          "structuredExample": {
-            "value": "{\n  \"name\": null,\n  \"data\": null\n}",
-            "strict": true,
-            "name": null,
-            "structuredValue": {
-              "name": null,
-              "data": null
-            }
           }
         }
-      },
+      }
+    ],
+    "annotationTypes": [
       {
-        "Data": {
-          "name": "Data",
-          "displayName": "Data",
+        "Label": {
+          "name": "Label",
+          "displayName": "Label",
           "type": [
             "object"
           ],
           "required": true,
           "properties": {
-            "p1": {
-              "name": "p1",
-              "displayName": "p1",
+            "point": {
+              "name": "point",
+              "displayName": "point",
               "type": [
-                "string"
+                "Point[]"
               ],
               "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
-                }
-              }
-            },
-            "p2": {
-              "name": "p2",
-              "displayName": "p2",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -144,7 +106,54 @@
           }
         }
       }
-    ]
+    ],
+    "title": "New API",
+    "version": "v1",
+    "baseUri": "http://api.samplehost.com",
+    "protocols": [
+      "HTTP"
+    ],
+    "resources": [
+      {
+        "annotations": {
+          "Label": {
+            "structuredValue": {
+              "point": [
+                {
+                  "x": 4,
+                  "y": 3
+                },
+                {
+                  "x": 3,
+                  "y": 1,
+                  "z": 3
+                }
+              ]
+            },
+            "name": "Label"
+          }
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ]
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    }
   },
   "errors": []
 }
