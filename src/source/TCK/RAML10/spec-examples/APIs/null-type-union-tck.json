@@ -11,7 +11,8 @@
             "object"
           ],
           "example": {
-            "name": "Fred"
+            "name": "Fred",
+            "comment": null
           },
           "required": true,
           "properties": {
@@ -40,7 +41,7 @@
               "name": "comment",
               "displayName": "comment",
               "type": [
-                "null | string"
+                "nil | string"
               ],
               "required": true,
               "__METADATA__": {
@@ -66,11 +67,12 @@
             }
           },
           "structuredExample": {
-            "value": "{\n  \"name\": \"Fred\"\n}",
+            "value": "{\n  \"name\": \"Fred\",\n  \"comment\": null\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
-              "name": "Fred"
+              "name": "Fred",
+              "comment": null
             }
           }
         }
@@ -78,26 +80,5 @@
     ],
     "title": "Using null type and union"
   },
-  "errors": [
-    {
-      "code": 11,
-      "message": "Required property: comment is missed",
-      "path": "null-type-union.raml",
-      "line": 10,
-      "column": 4,
-      "position": 210,
-      "range": [
-        {
-          "line": 10,
-          "column": 4,
-          "position": 210
-        },
-        {
-          "line": 10,
-          "column": 11,
-          "position": 217
-        }
-      ]
-    }
-  ]
+  "errors": []
 }
