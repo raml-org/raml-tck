@@ -11,7 +11,8 @@
             "object"
           ],
           "example": {
-            "name": "Fred"
+            "name": "Fred",
+            "comment": null
           },
           "required": true,
           "properties": {
@@ -40,7 +41,7 @@
               "name": "comment",
               "displayName": "comment",
               "type": [
-                "null"
+                "nil"
               ],
               "required": true,
               "__METADATA__": {
@@ -66,11 +67,12 @@
             }
           },
           "structuredExample": {
-            "value": "{\n  \"name\": \"Fred\"\n}",
+            "value": "{\n  \"name\": \"Fred\",\n  \"comment\": null\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
-              "name": "Fred"
+              "name": "Fred",
+              "comment": null
             }
           }
         }
@@ -78,26 +80,5 @@
     ],
     "title": "Null Type"
   },
-  "errors": [
-    {
-      "code": 11,
-      "message": "Required property: comment is missed",
-      "path": "null-type.raml",
-      "line": 9,
-      "column": 4,
-      "position": 118,
-      "range": [
-        {
-          "line": 9,
-          "column": 4,
-          "position": 118
-        },
-        {
-          "line": 9,
-          "column": 11,
-          "position": 125
-        }
-      ]
-    }
-  ]
+  "errors": []
 }
