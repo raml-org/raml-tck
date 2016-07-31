@@ -187,9 +187,8 @@ function getTests(dirContent) {
     else if (dirContent.hasExtensionsOrOverlaysAppliedToSingleAPI()) {
         var ordered = orderExtensionsAndOverlays(dirContent.extnsionsAndOverlays());
         if (ordered) {
-            var apiPath = ordered[0].extends();
-            var extensionsAndOverlays = ordered.map(function (x) { return x.absolutePath(); });
-            result = [new Test(apiPath, extensionsAndOverlays)];
+            var lastOverlayOrExtension = ordered[ordered.length - 1];
+            result = [new Test(lastOverlayOrExtension.absolutePath(), null, defaultJSONPath(ordered[0].extends()))];
         }
     }
     return result;
