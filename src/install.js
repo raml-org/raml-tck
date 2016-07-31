@@ -282,13 +282,14 @@ function runApiJava(ramlPath) {
 
     var jarOutputDir = path.resolve(root, './parsers/javaparser/test-project/output');
     var delim = path.delimiter;
-    var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'org.raml.java.parser.tck.test.Main', ramlPath], {stdio: [0, 1, 2]});
+    var spawned = spawnSync('java', ['-cp', testLibTargetDir + delim + dependencyPath + delim + jarOutputDir, 'org.raml.java.parser.tck.test.Main', ramlPath, __run08], {stdio: [0, 1, 2]});
 }
 
 var args = process.argv;
 var __all = false;
 var __test = false;
 var __generate = false;
+var __run08 = false;
 for(var i = 0 ; i < args.length ; i++){
 
     if(args[i]=="-all"){
@@ -302,6 +303,9 @@ for(var i = 0 ; i < args.length ; i++){
     else if(args[i]=="-generate"){
         __generate = true;
         break;
+    }
+    else if(args[i]=="-run08"){
+        __run08 = true;
     }
 }
 if(__all){
