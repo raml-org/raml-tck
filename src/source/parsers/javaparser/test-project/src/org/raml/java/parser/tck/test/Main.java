@@ -18,15 +18,20 @@ public class Main {
 	private static PrintStream systemOut = System.out;
 	
 	private static int count = 0;
-	
+	private static int ignored = 0;
+
 	private static int jsCount = 0;
 	private static int javaCount = 0;
+
+	private static final String RAML_08_REGEX = "/RAML08/";
 	
 	public static void main(String[] args) {
-		testApis(args[0]);
+
+		boolean run08version = args.length == 2? Boolean.valueOf(args[1]) : true;
+		testApis(args[0], run08version);
 	}
 	
-	private static void testApis(String jsonPath) {
+	private static void testApis(String jsonPath, boolean run08version) {
 		try {
 			JSONArray inputJson = (JSONArray) new JSONParser().parse(new FileReader(jsonPath));
 			
@@ -39,13 +44,20 @@ public class Main {
 				String tckJSONPath = (String) jsonItem.get("tckJsonPath");
 				JSONObject tckJson = (JSONObject) new JSONParser().parse(new FileReader(tckJSONPath));
 				boolean passed = (boolean) jsonItem.get("passed");
-				
-				List<String> errors = testApi(apiPath);
-				
+
 				if(passed) {
 					jsCount++;
 				}
+
+				if(!run08version && apiPath.contains(RAML_08_REGEX)) {
+					ignored++;
+					System.out.println("java parser skipped: " + apiPath);
+					continue;
+				}
+
+				List<String> errors = testApi(apiPath);
 				
+
 				if(errors != null) {
 
 					JSONArray tckErrors = (JSONArray) tckJson.get("errors");
@@ -90,7 +102,7 @@ public class Main {
 			}
 			
 			System.out.println("js parser TCK tests, passed " + jsCount + '/' + count + '.');
-			System.out.println("java parser TCK tests, passed " + javaCount + '/' + count + '.');
+			System.out.println("java parser TCK tests, passed " + javaCount + '/' + ( count - ignored ) + '.');
 			
 		} catch (Throwable t) {
 			
@@ -129,4 +141,4 @@ public class Main {
 	private static void turnSystemOutOn() {
 		System.setOut(systemOut);
 	}
-}
+}	
