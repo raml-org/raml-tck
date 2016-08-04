@@ -196,13 +196,13 @@
                   }
                 },
                 {
-                  "value": "{\n  \"start\": 2,\n  \"page-size\": 20,\n  \"location\": 1\n}",
+                  "value": "{\n  \"start\": 2,\n  \"page-size\": 20,\n  \"location\": \"1,2\"\n}",
                   "strict": true,
                   "name": "second",
                   "structuredValue": {
                     "start": 2,
                     "page-size": 20,
-                    "location": 1
+                    "location": "1,2"
                   }
                 },
                 {
