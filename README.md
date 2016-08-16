@@ -5,7 +5,7 @@ The TCK approach will provide a way to separate the test resources from any pars
 Enriching the TCK should be a collaborative task between the engineering team, OnPositive and the contributors of the spec. The first step is to agree on an output schema. Following are some examples of inputs and the expected outputs.
 
 # Run tests
-The project provides npm script which allows to run tests for latest npm version of JS parser and latest version of Java parser from `https://github.com/mulesoft-labs/rajapa.git`.
+The project provides npm script which allows to run tests for latest npm version of JS parser and latest version of Java parser from `https://github.com/raml-org/raml-java-parser`.
 
 Before running the tests you should install npm, node, java and maven.
 
@@ -24,7 +24,7 @@ Suppose your RAML test project contains a single API `.raml` file in its root an
 
 Copy the RAML project folder inside the [`src/source/TCK`](https://github.com/mulesoft-labs/raml-tck/tree/master/src/source/TCK) subtree in such a way that it does not have superfolders directly containing `.raml` files.
 
-You may either create TCK JSON file manually from scratch (in this case you must name it <my API RAML file name>-tck.json), or you may use actual `toJSON()` output of the JS parser as starting point. For the second option you should execute
+You may either create TCK JSON file manually from scratch (in this case you must name it \<my API RAML file name\>-tck.json), or you may use actual `toJSON()` output of the JS parser as starting point. For the second option you should execute
 ```
 npm run generate
 ```
