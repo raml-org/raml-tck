@@ -123,7 +123,7 @@ function npmInstall() {
         command += ".cmd";
     }
 
-    var installResult = spawnSync(command, ['install', '--prefix', destination], {stdio: [0, 1, 2]});
+    var installResult = spawnSync(command, ['install', '--prefix', destination], {cwd:destination,stdio: [0, 1, 2]});
 }
 
 function copySources() {
@@ -216,7 +216,7 @@ function cloneJavaParser() {
         fs.mkdirSync(javaRepoPath);
     }
     
-    spawnSync('git', ['clone', '-b', 'v2', '--depth', '1', 'https://github.com/raml-org/raml-java-parser.git', javaRepoPath], {stdio: [0, 1, 2]});
+    spawnSync('git', ['clone', '-b', 'master', '--depth', '1', 'https://github.com/raml-org/raml-java-parser.git', javaRepoPath], {stdio: [0, 1, 2]});
 }
 
 function mvnInstall() {
