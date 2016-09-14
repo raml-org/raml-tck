@@ -204,7 +204,8 @@ var packageJson = {
     "dependencies": {
         // "istanbul": "^0.4.2",
         // "mocha": "^2.2.1",
-        "raml-1-parser": "^0.2.12",
+        "raml-1-parser": "^1.1.2",
+        "raml-xml-validation": "*",
         "underscore": "^1.8.3"
     }
 }
