@@ -206,6 +206,7 @@ var packageJson = {
         // "mocha": "^2.2.1",
         "raml-1-parser": "^1.1.2",
         "raml-xml-validation": "*",
+        "raml-json-validation": "*",
         "underscore": "^1.8.3"
     }
 }
