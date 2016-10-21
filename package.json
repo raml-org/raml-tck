@@ -1,10 +1,5 @@
 {
   "name": "raml-tck",
   "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "test": "node ./src/install.js -test",
-    "generate": "node ./src/install.js -generate",
-    "all": "node ./src/install.js -all"
-  }
+  "private": true
 }
