@@ -2,9 +2,14 @@
 
 The TCK approach will provide a way to separate the test resources from any parser implementation by having a RAML input and comparing it against an expected JSON output representation of that RAML. Each parser needs to provide a way to generate the JSON output from the RAML definition, including valid and invalid outcome.
 
-Enriching the TCK should be a collaborative task between the engineering team, OnPositive and the contributors of the spec. The first step is to agree on an output schema. Following are some examples of inputs and the expected outputs.
+Enriching the TCK should be a collaborative task between the engineering team, OnPositive and the contributors of the spec. The first step is to agree on an output schema. The current output schema is located [here](https://github.com/mulesoft-labs/raml-tck/blob/master/src/source/TCK/tckJsonSchema.json). Following are some examples of inputs and the expected outputs.
 
 # Run tests
+
+## JS Parser
+See the parser [readme file](https://github.com/raml-org/raml-js-parser-2/blob/develop/README.md#launching-tck-tests) for details.
+
+<!---
 The project provides npm script which allows to run tests for latest npm version of JS parser and latest version of Java parser from `https://github.com/raml-org/raml-java-parser`.
 
 Before running the tests you should install npm, node, java and maven.
@@ -15,7 +20,7 @@ In order to run the tests execute following commands:
 * `cd raml-tck`
 
 * `npm run test`
-
+--->
 # Contributing Tests
 
 ## Contributing a Simple Test
@@ -24,7 +29,9 @@ Suppose your RAML test project contains a single API `.raml` file in its root an
 
 Copy the RAML project folder inside the [`src/source/TCK`](https://github.com/mulesoft-labs/raml-tck/tree/master/src/source/TCK) subtree in such a way that it does not have superfolders directly containing `.raml` files.
 
-You may either create TCK JSON file manually from scratch (in this case you must name it \<my API RAML file name\>-tck.json), or you may use actual `toJSON()` output of the JS parser as starting point. For the second option you should execute
+You may either create TCK JSON file manually from scratch (in this case you must name it \<my API RAML file name\>-tck.json), or you may use actual `toJSON()` output of the JS parser as starting point (don't forget to pass `rootNodeDetails: true` in the options object).
+
+<!--- For the second option you should execute
 ```
 npm run generate
 ```
@@ -46,7 +53,7 @@ npm run all
 * The script attempts to load one ore more of `.raml` files located in test project root (see Supported Test Project Cases below) and test them agains TCK JSON files located nearby.
 
 * If the script does not find corresponding JSON files it creates them using actual `toJSON()` output of the JS parser.
-
+--->
 
 
 ## Supported Test Project Cases
@@ -73,17 +80,9 @@ The test project cases are distinguished by `.raml` file sets located in project
 * Example: [`src/source/TCK/RAML10/Fragments/test001`](https://github.com/mulesoft-labs/raml-tck/tree/master/src/source/TCK/RAML10/Fragments/test001)
 
 #### Multiple Extensions and Overlays project
-* RAML files in the root: single API file, one or more Extension and Overlay files, any number of other files.
+* RAML files in the root:
+  * Master API file
+  * One or more Extension and Overlay files which form a chain orderd by extension relation (with one end in the master API)
+  * Any number of other files
 * TCK JSON filename: `<Master API file name>-tck.json`
-* Note:  The script looks at the digit indexes located in the ends of Extension and Overlay file names in order to detrmine order of application (abscence of index is interpreted as zero). If the script fails to determine the order, an error message is emited, and the test is not executed.
 * Example: [`src/source/TCK/RAML10/Overlays/test023`](https://github.com/mulesoft-labs/raml-tck/tree/master/src/source/TCK/RAML10/Overlays/test023)
-
-
-
-
-
-
- 
-
-
-
