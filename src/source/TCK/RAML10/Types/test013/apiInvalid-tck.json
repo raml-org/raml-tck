@@ -70,8 +70,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "'someProperty' has cyclic dependency",
+      "code": 3,
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -87,8 +86,7 @@
       }
     },
     {
-      "code": 11,
-      "message": "Null or undefined value is not allowed",
+      "code": 21,
       "path": "apiInvalid.raml",
       "range": {
         "start": {

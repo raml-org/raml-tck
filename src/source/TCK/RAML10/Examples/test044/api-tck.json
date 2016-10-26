@@ -80,8 +80,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "boolean is expected",
+      "code": 27,
       "path": "api.raml",
       "range": {
         "start": {

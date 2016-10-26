@@ -115,8 +115,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "Example does not conform to schema: Content is not valid according to schema: Keyword 'required' is expected to be of type 'array' required,array, Keyword 'required' is expected to be of type 'array' required,array",
+      "code": 64,
       "path": "api.raml",
       "range": {
         "start": {

@@ -103,8 +103,7 @@
   },
   "errors": [
     {
-      "code": 4,
-      "message": "Resource property already used: '(meta)'",
+      "code": 1083,
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -120,8 +119,7 @@
       }
     },
     {
-      "code": 4,
-      "message": "Resource property already used: '(meta)'",
+      "code": 1083,
       "path": "apiInvalid.raml",
       "range": {
         "start": {

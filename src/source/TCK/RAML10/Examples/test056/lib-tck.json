@@ -151,8 +151,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "Null or undefined value is not allowed",
+      "code": 21,
       "path": "lib.raml",
       "range": {
         "start": {

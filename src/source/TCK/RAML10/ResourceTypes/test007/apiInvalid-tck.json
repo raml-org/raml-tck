@@ -393,8 +393,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "Required property 'extraProperty' is missing",
+      "code": 66,
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -410,8 +409,7 @@
       }
     },
     {
-      "code": 11,
-      "message": "Unknown property: 'extraProperty1'",
+      "code": 65,
       "path": "apiInvalid.raml",
       "range": {
         "start": {

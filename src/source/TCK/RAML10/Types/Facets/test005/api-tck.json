@@ -204,8 +204,7 @@
   },
   "errors": [
     {
-      "code": 7,
-      "message": "invalid media type",
+      "code": 19,
       "path": "api.raml",
       "range": {
         "start": {
@@ -221,8 +220,7 @@
       }
     },
     {
-      "code": 11,
-      "message": "Missing required facets: 'format'",
+      "code": 1044,
       "path": "api.raml",
       "range": {
         "start": {
@@ -238,8 +236,7 @@
       }
     },
     {
-      "code": 7,
-      "message": "invalid media type",
+      "code": 6,
       "path": "api.raml",
       "range": {
         "start": {
@@ -255,8 +252,7 @@
       }
     },
     {
-      "code": 11,
-      "message": "Inheriting from unknown type",
+      "code": 1044,
       "path": "api.raml",
       "range": {
         "start": {
@@ -272,8 +268,7 @@
       }
     },
     {
-      "code": 7,
-      "message": "invalid media type",
+      "code": 6,
       "path": "api.raml",
       "range": {
         "start": {
@@ -289,8 +284,7 @@
       }
     },
     {
-      "code": 11,
-      "message": "Inheriting from unknown type",
+      "code": 1044,
       "path": "api.raml",
       "range": {
         "start": {
@@ -306,8 +300,7 @@
       }
     },
     {
-      "code": 7,
-      "message": "invalid media type",
+      "code": 6,
       "path": "api.raml",
       "range": {
         "start": {
@@ -323,8 +316,7 @@
       }
     },
     {
-      "code": 11,
-      "message": "Inheriting from unknown type",
+      "code": 1044,
       "path": "api.raml",
       "range": {
         "start": {

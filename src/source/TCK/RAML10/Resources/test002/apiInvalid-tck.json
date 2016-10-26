@@ -121,8 +121,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "Uri parameter unused",
+      "code": 1091,
       "path": "apiInvalid.raml",
       "range": {
         "start": {

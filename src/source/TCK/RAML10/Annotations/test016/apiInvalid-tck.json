@@ -183,8 +183,7 @@
   },
   "errors": [
     {
-      "code": 7,
-      "message": "Annotation 'meta-data' can not be placed at this location, allowed targets are: 'TypeDeclaration'",
+      "code": 1029,
       "path": "apiInvalid.raml",
       "range": {
         "start": {

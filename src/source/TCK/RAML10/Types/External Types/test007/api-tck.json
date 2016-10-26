@@ -82,8 +82,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "It is not allowed to use external types in property definitions",
+      "code": 58,
       "path": "api.raml",
       "range": {
         "start": {
@@ -99,8 +98,7 @@
       }
     },
     {
-      "code": 11,
-      "message": "Example does not conform to schema: Content is not valid according to schema: Expected type object but found type integer object,integer",
+      "code": 64,
       "path": "api.raml",
       "range": {
         "start": {

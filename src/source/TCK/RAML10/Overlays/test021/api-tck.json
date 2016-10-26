@@ -73,8 +73,7 @@
   },
   "errors": [
     {
-      "code": 10,
-      "message": "The './resource.post' node does not match any node of the master api.",
+      "code": 1077,
       "path": "NewOverlay.raml",
       "range": {
         "start": {

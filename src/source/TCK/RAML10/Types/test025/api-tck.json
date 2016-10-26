@@ -63,7 +63,6 @@
   "errors": [
     {
       "code": 11,
-      "message": "types and schemas are mutually exclusive",
       "path": "api.raml",
       "range": {
         "start": {

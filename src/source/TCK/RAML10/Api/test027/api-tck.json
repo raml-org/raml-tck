@@ -17,8 +17,7 @@
   },
   "errors": [
     {
-      "code": 7,
-      "message": "Invalid resource name: unmatched '{'",
+      "code": 1042,
       "path": "api.raml",
       "range": {
         "start": {

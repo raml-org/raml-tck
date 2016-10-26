@@ -60,8 +60,7 @@
   },
   "errors": [
     {
-      "code": 3,
-      "message": "Missing required property 'accessTokenUri'",
+      "code": 1060,
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -77,8 +76,7 @@
       }
     },
     {
-      "code": 3,
-      "message": "Missing required property 'authorizationUri'",
+      "code": 1060,
       "path": "apiInvalid.raml",
       "range": {
         "start": {

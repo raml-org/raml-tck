@@ -151,7 +151,6 @@
   "errors": [
     {
       "code": 5,
-      "message": "Resources share same URI",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -168,7 +167,6 @@
     },
     {
       "code": 5,
-      "message": "Resources share same URI",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

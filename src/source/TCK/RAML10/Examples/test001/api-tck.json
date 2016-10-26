@@ -138,8 +138,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "Can not parse JSON example: Unexpected token d",
+      "code": 41,
       "path": "api.raml",
       "range": {
         "start": {

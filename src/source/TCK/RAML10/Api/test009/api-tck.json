@@ -18,7 +18,6 @@
   "errors": [
     {
       "code": 2,
-      "message": "property 'title' must be a string",
       "path": "api.raml",
       "range": {
         "start": {

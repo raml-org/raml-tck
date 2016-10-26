@@ -35,8 +35,7 @@
   },
   "errors": [
     {
-      "code": 3,
-      "message": "Missing required property 'title'",
+      "code": 1060,
       "path": "api.raml",
       "range": {
         "start": {

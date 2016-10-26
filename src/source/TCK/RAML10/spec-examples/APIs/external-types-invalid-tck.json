@@ -28,8 +28,7 @@
   },
   "errors": [
     {
-      "code": 11,
-      "message": "'properties' facet is prohibited for external types",
+      "code": 17,
       "path": "external-types-invalid.raml",
       "range": {
         "start": {

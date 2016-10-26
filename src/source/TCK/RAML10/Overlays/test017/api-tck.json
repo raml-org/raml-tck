@@ -8,8 +8,7 @@
   },
   "errors": [
     {
-      "code": 10,
-      "message": "Property 'version' is not allowed to be overriden or added in overlays",
+      "code": 1078,
       "path": "NewOverlay.raml",
       "range": {
         "start": {
