@@ -93,7 +93,8 @@
   },
   "errors": [
     {
-      "code": 27,
+      "code": "TYPE_EXPECTED",
+      "message": "number is expected",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

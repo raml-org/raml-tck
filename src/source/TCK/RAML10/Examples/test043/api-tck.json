@@ -214,7 +214,8 @@
   },
   "errors": [
     {
-      "code": 27,
+      "code": "TYPE_EXPECTED",
+      "message": "string is expected",
       "path": "api.raml",
       "range": {
         "start": {
@@ -230,7 +231,8 @@
       }
     },
     {
-      "code": 27,
+      "code": "TYPE_EXPECTED",
+      "message": "string is expected",
       "path": "api.raml",
       "range": {
         "start": {
@@ -246,7 +248,8 @@
       }
     },
     {
-      "code": 66,
+      "code": "REQUIRED_PROPERTY_MISSING",
+      "message": "Required property 'c' is missing",
       "path": "api.raml",
       "range": {
         "start": {

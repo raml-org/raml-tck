@@ -153,7 +153,8 @@
   },
   "errors": [
     {
-      "code": 27,
+      "code": "TYPE_EXPECTED",
+      "message": "number is expected",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -170,7 +171,8 @@
       "isWarning": true
     },
     {
-      "code": 27,
+      "code": "TYPE_EXPECTED",
+      "message": "boolean is expected",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

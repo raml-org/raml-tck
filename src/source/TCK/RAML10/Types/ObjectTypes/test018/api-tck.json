@@ -74,7 +74,8 @@
   },
   "errors": [
     {
-      "code": 66,
+      "code": "REQUIRED_PROPERTY_MISSING",
+      "message": "Required property 'title??' is missing",
       "path": "api.raml",
       "range": {
         "start": {

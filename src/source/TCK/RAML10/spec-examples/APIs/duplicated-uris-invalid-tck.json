@@ -56,7 +56,8 @@
   },
   "errors": [
     {
-      "code": 5,
+      "code": "RESOURCES_SHARE_SAME_URI",
+      "message": "Resources share same URI",
       "path": "duplicated-uris-invalid.raml",
       "range": {
         "start": {
@@ -72,7 +73,8 @@
       }
     },
     {
-      "code": 5,
+      "code": "RESOURCES_SHARE_SAME_URI",
+      "message": "Resources share same URI",
       "path": "duplicated-uris-invalid.raml",
       "range": {
         "start": {

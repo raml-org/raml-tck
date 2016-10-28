@@ -17,7 +17,8 @@
   },
   "errors": [
     {
-      "code": 2,
+      "code": "INVALID_PROPERTY_RANGE",
+      "message": "Property 'title' must be a string",
       "path": "api.raml",
       "range": {
         "start": {

@@ -103,7 +103,8 @@
   },
   "errors": [
     {
-      "code": 1083,
+      "code": "PARENT_PROPERTY_USED",
+      "message": "Resource property already used: '(meta)'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -119,7 +120,8 @@
       }
     },
     {
-      "code": 1083,
+      "code": "PARENT_PROPERTY_USED",
+      "message": "Resource property already used: '(meta)'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
