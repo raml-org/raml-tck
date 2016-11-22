@@ -10,31 +10,31 @@ var isWin = /^win/.test(process.platform);
 var testsCount = 0;
 var jsTestsCountPassed = 0;
 
-function runAll(){
-
-    copySources();
-
-    cloneJavaParser();
-
-    npmInstall();
-
-    console.log('generating TCK JSONs...');
-
-    runJsTests(false);
-
-    mvnInstall();
-
-    setupJavaTestProject();
-
-    console.log('running js parser tests...');
-
-    runJsTests(true);
-
-    console.log('running java parser tests...');
-
-    runJavaTests();
-
-}
+//function runAll(){
+//
+//    copySources();
+//
+//    cloneJavaParser();
+//
+//    npmInstall();
+//
+//    console.log('generating TCK JSONs...');
+//
+//    runJsTests(false);
+//
+//    mvnInstall();
+//
+//    setupJavaTestProject();
+//
+//    console.log('running js parser tests...');
+//
+//    runJsTests(true);
+//
+//    console.log('running java parser tests...');
+//
+//    runJavaTests();
+//
+//}
 
 function runGenerate(){
     copySources();
@@ -46,26 +46,26 @@ function runGenerate(){
     runJsTests(false);
 }
 
-function runTest() {
-
-    copySources();
-
-    cloneJavaParser();
-
-    npmInstall();
-
-    mvnInstall();
-
-    setupJavaTestProject();
-
-    console.log('running js parser tests...');
-
-    runJsTests(true);
-
-    console.log('running java parser tests...');
-
-    runJavaTests();
-}
+//function runTest() {
+//
+//    copySources();
+//
+//    cloneJavaParser();
+//
+//    npmInstall();
+//
+//    mvnInstall();
+//
+//    setupJavaTestProject();
+//
+//    console.log('running js parser tests...');
+//
+//    runJsTests(true);
+//
+//    console.log('running java parser tests...');
+//
+//    runJavaTests();
+//}
 
 function runJavaTests() {
     var jsJsonPath = path.resolve(root, './parsers/jsparser/report.json');
