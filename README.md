@@ -2,7 +2,7 @@
 
 The Test Compatibility Kit (TCK) for the RAML Parser provides a way to separate the test resources from any parser implementation. TCK compares a RAML input against an expected JSON output representation of that RAML.  Each parser needs to provide a way to generate the JSON output from the RAML definition, including valid and invalid outcomes.
 
-See the [current output schema](schema/tckJsonSchema.json).
+The expected output representation is defined by the following [schema](schema/tckJsonSchema.json).
 
 # Run tests
 
@@ -19,9 +19,13 @@ Test cases must be put under the `tests` directory by either putting your tests 
 
 Each test needs to have a TCK specific file that will be actually used as a comparison for the output of your parsing. You can create a TCK JSON file manually from scratch, and  name it `<my API RAML file name>-tck.json`), or use the generate script provided inside the `src` directory. For example, you create a  folder inside the `tests/raml-1.0/Traits` directory called `myTests` where you put all your tests files. Now, you only need to go to your terminal and execute the following:
 
+Install dependencies
+
 ```
 npm install
 ```
+
+Run
 
 ```
 node src/index.js tests/raml-1.0/Traits/myTests
