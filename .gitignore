@@ -1,4 +1,3 @@
 .project
 *.iml
 /.settings
-node_modules
