@@ -1,0 +1,158 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MM": {
+          "name": "MM",
+          "displayName": "MM",
+          "type": [
+            "object"
+          ],
+          "example": {
+            "a": 5
+          },
+          "required": true,
+          "properties": {
+            "a": {
+              "name": "a",
+              "displayName": "a",
+              "type": [
+                "number"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "structuredExample": {
+            "value": "{\n  \"a\": 5\n}",
+            "strict": true,
+            "name": null,
+            "structuredValue": {
+              "a": 5
+            }
+          }
+        }
+      }
+    ],
+    "title": "WebOfMe",
+    "mediaType": "application/json",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "properties": {
+                      "x": {
+                        "name": "x",
+                        "displayName": "x",
+                        "type": [
+                          "number"
+                        ],
+                        "required": true,
+                        "__METADATA__": {
+                          "primitiveValuesMeta": {
+                            "displayName": {
+                              "calculated": true
+                            },
+                            "required": {
+                              "insertedAsDefault": true
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "structuredExample": {
+                      "value": "{ d\":5 ,\"r\":2 }\n",
+                      "strict": true,
+                      "name": null
+                    }
+                  }
+                }
+              }
+            },
+            "method": "get"
+          }
+        ],
+        "relativeUri": "/hello",
+        "displayName": "/hello",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "hello"
+        ],
+        "absoluteUri": "/hello"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "CAN_NOT_PARSE_JSON",
+      "message": "Can not parse JSON example: Unexpected token d",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 12,
+          "position": 240
+        },
+        "end": {
+          "line": 16,
+          "column": 19,
+          "position": 247
+        }
+      }
+    }
+  ]
+}

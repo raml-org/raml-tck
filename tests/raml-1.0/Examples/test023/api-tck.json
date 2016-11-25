@@ -1,0 +1,146 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MM": {
+          "name": "MM",
+          "displayName": "MM",
+          "type": [
+            "object"
+          ],
+          "example": {
+            "a": 5
+          },
+          "required": true,
+          "properties": {
+            "a": {
+              "name": "a",
+              "displayName": "a",
+              "type": [
+                "number"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "structuredExample": {
+            "value": "{\n  \"a\": 5\n}",
+            "strict": true,
+            "name": null,
+            "structuredValue": {
+              "a": 5
+            }
+          }
+        }
+      }
+    ],
+    "title": "WebOfMe",
+    "mediaType": "application/json",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "schema": [
+                      "{\n  \"required\": [\"message\"],\n  \"$schema\": \"http://json-schema.org/draft-04/schema\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"message\": {\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false\n}\n"
+                    ],
+                    "example": {
+                      "message": 4,
+                      "vlue": 3
+                    },
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"message\": 4,\n  \"vlue\": 3\n}",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "message": 4,
+                        "vlue": 3
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "method": "get"
+          }
+        ],
+        "relativeUri": "/hello",
+        "displayName": "/hello",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "hello"
+        ],
+        "absoluteUri": "/hello"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "EXAMPLE_SCHEMA_FAILURE",
+      "message": "Example does not conform to schema: Content is not valid according to schema: Additional properties not allowed: vlue vlue",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 12,
+          "position": 573
+        },
+        "end": {
+          "line": 26,
+          "column": 19,
+          "position": 580
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "annotations": {
+      "x": {
+        "structuredValue": {
+          "v": [
+            "true1",
+            false
+          ]
+        },
+        "name": "x"
+      }
+    },
+    "annotationTypes": [
+      {
+        "x": {
+          "name": "x",
+          "displayName": "x",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "v": {
+              "name": "v",
+              "displayName": "v",
+              "type": [
+                "array"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "items": "boolean"
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "WebOfMe",
+    "mediaType": "application/json"
+  },
+  "errors": [
+    {
+      "code": "TYPE_EXPECTED",
+      "message": "boolean is expected",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 7,
+          "position": 131
+        },
+        "end": {
+          "line": 10,
+          "column": 12,
+          "position": 136
+        }
+      }
+    }
+  ]
+}

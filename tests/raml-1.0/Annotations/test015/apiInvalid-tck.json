@@ -1,0 +1,118 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "p1": {
+              "name": "p1",
+              "displayName": "p1",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "meta": {
+          "name": "meta",
+          "displayName": "Resource metadata",
+          "type": [
+            "string"
+          ],
+          "required": true,
+          "description": "Metadata for this resource",
+          "allowedTargets": [
+            "Resource"
+          ],
+          "minLength": 10,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "Annotations 14",
+    "resources": [
+      {
+        "annotations": {
+          "meta": {
+            "structuredValue": "users.gif",
+            "name": "meta"
+          }
+        },
+        "relativeUri": "/users",
+        "displayName": "/users",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "users"
+        ],
+        "absoluteUri": "/users"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "MINMAX_RESTRICTION_VIOLATION",
+      "message": "'meta.minLength=10' i.e. string length should not be less than 10",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 2,
+          "position": 345
+        },
+        "end": {
+          "line": 16,
+          "column": 8,
+          "position": 351
+        }
+      }
+    }
+  ]
+}

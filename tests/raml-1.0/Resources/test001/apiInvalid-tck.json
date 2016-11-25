@@ -1,0 +1,187 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "title": "API",
+    "baseUri": "/some/base/uri",
+    "protocols": [
+      "HTTP"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/xml": {
+                    "name": "application/xml",
+                    "displayName": "application/xml",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "description": "some very useful resource",
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            }
+          }
+        ],
+        "relativeUri": "/someChildUri",
+        "displayName": "/someChildUri",
+        "resources": [
+          {
+            "methods": [
+              {
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "description": "another very useful resource",
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  }
+                },
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "put",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                }
+              }
+            ],
+            "relativeUri": "/anotherChild",
+            "displayName": "/anotherChild",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "relativeUriPathSegments": [
+              "anotherChild"
+            ],
+            "absoluteUri": "/some/base/uri/someChildUri/anotherChild"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "someChildUri"
+        ],
+        "absoluteUri": "/some/base/uri/someChildUri"
+      },
+      {
+        "relativeUri": "/someChildUri/anotherChild",
+        "displayName": "/someChildUri/anotherChild",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "someChildUri",
+          "anotherChild"
+        ],
+        "absoluteUri": "/some/base/uri/someChildUri/anotherChild"
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    }
+  },
+  "errors": [
+    {
+      "code": "RESOURCES_SHARE_SAME_URI",
+      "message": "Resources share same URI",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 2,
+          "position": 190
+        },
+        "end": {
+          "line": 12,
+          "column": 15,
+          "position": 203
+        }
+      }
+    },
+    {
+      "code": "RESOURCES_SHARE_SAME_URI",
+      "message": "Resources share same URI",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 0,
+          "position": 305
+        },
+        "end": {
+          "line": 18,
+          "column": 26,
+          "position": 331
+        }
+      }
+    }
+  ]
+}

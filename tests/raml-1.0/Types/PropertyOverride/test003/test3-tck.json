@@ -1,0 +1,237 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "PropertyType1": {
+          "name": "PropertyType1",
+          "displayName": "PropertyType1",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "name": {
+              "name": "name",
+              "displayName": "name",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "PropertyType2": {
+          "name": "PropertyType2",
+          "displayName": "PropertyType2",
+          "type": [
+            "PropertyType1"
+          ],
+          "required": true,
+          "properties": {
+            "name2": {
+              "name": "name2",
+              "displayName": "name2",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "PropertyType3": {
+          "name": "PropertyType3",
+          "displayName": "PropertyType3",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "name": {
+              "name": "name",
+              "displayName": "name",
+              "type": [
+                "boolean"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Type1": {
+          "name": "Type1",
+          "displayName": "Type1",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "testProperty": {
+              "name": "testProperty",
+              "displayName": "testProperty",
+              "type": [
+                "PropertyType1"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Type2": {
+          "name": "Type2",
+          "displayName": "Type2",
+          "type": [
+            "Type1"
+          ],
+          "required": true,
+          "properties": {
+            "testProperty": {
+              "name": "testProperty",
+              "displayName": "testProperty",
+              "type": [
+                "PropertyType3"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "test"
+  },
+  "errors": [
+    {
+      "code": "RESTRICTIONS_CONFLICT",
+      "message": "Restrictions conflict between types 'Type2' and 'Type1': should be of type string and should be of type boolean",
+      "path": "test3.raml",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 6,
+          "position": 320
+        },
+        "end": {
+          "line": 21,
+          "column": 18,
+          "position": 332
+        }
+      }
+    }
+  ]
+}

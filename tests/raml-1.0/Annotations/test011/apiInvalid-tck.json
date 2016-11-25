@@ -1,0 +1,251 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "annotations": {
+      "hello": {
+        "structuredValue": {
+          "persons": {
+            "156798654": {
+              "Alice": {
+                "name1": "stringValue"
+              }
+            }
+          }
+        },
+        "name": "hello"
+      }
+    },
+    "types": [
+      {
+        "Pet": {
+          "name": "Pet",
+          "displayName": "Pet",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "name": {
+              "name": "name",
+              "displayName": "name",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "additionalProperties": false,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Person": {
+          "name": "Person",
+          "displayName": "Person",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "/.*/": {
+              "name": "/.*/",
+              "displayName": "/.*/",
+              "type": [
+                "Pet"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "MapOfPerson": {
+          "name": "MapOfPerson",
+          "displayName": "MapOfPerson",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "/.*/": {
+              "name": "/.*/",
+              "displayName": "/.*/",
+              "type": [
+                "Person"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "hello": {
+          "name": "hello",
+          "displayName": "hello",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "persons": {
+              "name": "persons",
+              "displayName": "persons",
+              "type": [
+                "MapOfPerson"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "22",
+    "resources": [
+      {
+        "relativeUri": "/d",
+        "displayName": "/d",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "d"
+        ],
+        "absoluteUri": "/d"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "REQUIRED_PROPERTY_MISSING",
+      "message": "Required property 'name' is missing",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 3,
+          "position": 276
+        },
+        "end": {
+          "line": 19,
+          "column": 10,
+          "position": 283
+        }
+      }
+    },
+    {
+      "code": "UNKNOWN_PROPERTY",
+      "message": "Unknown property: 'name1'",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 3,
+          "position": 276
+        },
+        "end": {
+          "line": 19,
+          "column": 10,
+          "position": 283
+        }
+      }
+    }
+  ]
+}

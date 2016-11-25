@@ -1,0 +1,105 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType1": {
+          "name": "MyType1",
+          "displayName": "MyType1",
+          "type": [
+            "object"
+          ],
+          "example": {
+            "x": 1,
+            "y": 3,
+            "z": "5 2"
+          },
+          "required": true,
+          "properties": {
+            "x": {
+              "name": "x",
+              "displayName": "x",
+              "type": [
+                "number"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "y": {
+              "name": "y",
+              "displayName": "y",
+              "type": [
+                "number"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "structuredExample": {
+            "value": "{\n  \"x\": 1,\n  \"y\": 3,\n  \"z\": \"5 2\"\n}",
+            "strict": true,
+            "name": null,
+            "structuredValue": {
+              "x": 1,
+              "y": 3,
+              "z": "5 2"
+            }
+          }
+        }
+      }
+    ],
+    "title": "Test API"
+  },
+  "errors": [
+    {
+      "code": "UNKNOWN_PROPERTY",
+      "message": "Unknown property: 'z'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 6,
+          "position": 134
+        },
+        "end": {
+          "line": 10,
+          "column": 7,
+          "position": 135
+        }
+      },
+      "isWarning": true
+    }
+  ]
+}

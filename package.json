@@ -1,5 +1,19 @@
 {
   "name": "raml-tck",
-  "version": "0.0.0",
-  "private": true
+  "description": "Generate files a TCK test file for given RAML(s).",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:raml-org/raml-parser-tck.git"
+  },
+  "keywords": [
+    "raml",
+    "test framework"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "raml-1-parser": "^1.1.8"
+  }
 }
