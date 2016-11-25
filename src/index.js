@@ -3,15 +3,11 @@ var fs = require("fs");
 var path = require("path");
 
 var processFolder;
-if(args.length > 2 ){
+
+if(args.length > 2 ) {
   processFolder = args[2];
-}
-else{
-  var rootDir = process.cwd();
-  while(!fs.existsSync(path.resolve(rootDir,"package.json"))){
-    rootDir = path.resolve(rootDir,"../");
-  }
-  processFolder = path.resolve(rootDir,"src/source");
+} else {
+  processFolder = "tests";
 }
 
 if(!fs.existsSync(processFolder)) {
