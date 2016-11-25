@@ -1,0 +1,93 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "annotationTypes": [
+      {
+        "a1": {
+          "name": "a1",
+          "displayName": "a1",
+          "type": [
+            "number"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "a2": {
+          "name": "a2",
+          "displayName": "a2",
+          "type": [
+            "boolean"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "API",
+    "resources": [
+      {
+        "description": "descriptionValue",
+        "relativeUri": "/resource",
+        "displayName": "myResource",
+        "scalarsAnnotations": {
+          "description": [
+            {
+              "structuredValue": 5,
+              "name": "a1"
+            }
+          ],
+          "displayName": [
+            {
+              "structuredValue": "value1",
+              "name": "a2"
+            }
+          ]
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "TYPE_EXPECTED",
+      "message": "boolean is expected",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 4,
+          "position": 175
+        },
+        "end": {
+          "line": 13,
+          "column": 8,
+          "position": 179
+        }
+      }
+    }
+  ]
+}

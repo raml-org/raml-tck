@@ -1,0 +1,188 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "User": {
+          "name": "User",
+          "displayName": "User",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "name": {
+              "name": "name",
+              "displayName": "name",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "age": {
+              "name": "age",
+              "displayName": "age",
+              "type": [
+                "number"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "API",
+    "baseUri": "/some/base/uri",
+    "protocols": [
+      "HTTP"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/xml": {
+                    "name": "application/xml",
+                    "displayName": "application/xml",
+                    "type": [
+                      "User"
+                    ],
+                    "example": {
+                      "name": "john",
+                      "age": "34s"
+                    },
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"name\": \"john\",\n  \"age\": \"34s\"\n}",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "name": "john",
+                        "age": "34s"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            }
+          }
+        ],
+        "uriParameters": {
+          "blah": {
+            "name": "blah",
+            "displayName": "blah",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            }
+          }
+        },
+        "relativeUri": "/someChildUri/{blah}",
+        "displayName": "/someChildUri/{blah}",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "someChildUri",
+          "{blah}"
+        ],
+        "absoluteUri": "/some/base/uri/someChildUri/{blah}"
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    }
+  },
+  "errors": [
+    {
+      "code": "TYPE_EXPECTED",
+      "message": "number is expected",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 24,
+          "column": 14,
+          "position": 359
+        },
+        "end": {
+          "line": 24,
+          "column": 17,
+          "position": 362
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Library",
+  "specification": {
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "type": [
+            "object"
+          ],
+          "example": {
+            "name": null,
+            "data": null
+          },
+          "required": true,
+          "properties": {
+            "name": {
+              "name": "name",
+              "displayName": "name",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "data",
+              "displayName": "data",
+              "type": [
+                "Data"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "structuredExample": {
+            "value": "{\n  \"name\": null,\n  \"data\": null\n}",
+            "strict": true,
+            "name": null,
+            "structuredValue": {
+              "name": null,
+              "data": null
+            }
+          }
+        }
+      },
+      {
+        "Data": {
+          "name": "Data",
+          "displayName": "Data",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "p1": {
+              "name": "p1",
+              "displayName": "p1",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "p2": {
+              "name": "p2",
+              "displayName": "p2",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "NULL_NOT_ALLOWED",
+      "message": "Null or undefined value is not allowed",
+      "path": "lib.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 4,
+          "position": 87
+        },
+        "end": {
+          "line": 8,
+          "column": 11,
+          "position": 94
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "title": "test",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "2xx": {
+                "code": "2xx",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "application/vnd.xara": {
+                    "name": "application/vnd.xara",
+                    "displayName": "application/vnd.xara",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "audio/EVRCB": {
+                    "name": "audio/EVRCB",
+                    "displayName": "audio/EVRCB",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "audio/vnd.dts": {
+                    "name": "audio/vnd.dts",
+                    "displayName": "audio/vnd.dts",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "image/tiff": {
+                    "name": "image/tiff",
+                    "displayName": "image/tiff",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "message/global": {
+                    "name": "message/global",
+                    "displayName": "message/global",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "model/vnd.moml+xml": {
+                    "name": "model/vnd.moml+xml",
+                    "displayName": "model/vnd.moml+xml",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "multipart/voice-message": {
+                    "name": "multipart/voice-message",
+                    "displayName": "multipart/voice-message",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "text/turtle": {
+                    "name": "text/turtle",
+                    "displayName": "text/turtle",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "video/JPEG": {
+                    "name": "video/JPEG",
+                    "displayName": "video/JPEG",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  },
+                  "mime/type": {
+                    "name": "mime/type",
+                    "displayName": "mime/type",
+                    "type": [
+                      "object"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "method": "post"
+          }
+        ],
+        "relativeUri": "/test",
+        "displayName": "/test",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "test"
+        ],
+        "absoluteUri": "/test"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "STATUS_MUST_BE_3NUMBER",
+      "message": "Status code should be 3 digits number.",
+      "path": "methResp03.raml",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 6,
+          "position": 59
+        },
+        "end": {
+          "line": 5,
+          "column": 9,
+          "position": 62
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "annotations": {
+      "MyAnnotationType1": {
+        "structuredValue": {
+          "pp": {
+            "x1x": "2",
+            "xx2": "3"
+          }
+        },
+        "name": "MyAnnotationType1"
+      }
+    },
+    "types": [
+      {
+        "MyType1": {
+          "name": "MyType1",
+          "displayName": "MyType1",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "/.*/": {
+              "name": "/.*/",
+              "displayName": "/.*/",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "minProperties": 3,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "MyAnnotationType1": {
+          "name": "MyAnnotationType1",
+          "displayName": "MyAnnotationType1",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "pp": {
+              "name": "pp",
+              "displayName": "pp",
+              "type": [
+                "MyType1"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "Test API"
+  },
+  "errors": [
+    {
+      "code": "MINMAX_RESTRICTION_VIOLATION",
+      "message": "'MyType1.minProperties=3' i.e. object properties count should not be less than 3",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 6,
+          "position": 200
+        },
+        "end": {
+          "line": 12,
+          "column": 8,
+          "position": 202
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "annotations": {
+      "MyAnnotationType1": {
+        "structuredValue": {
+          "cc": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "name": "MyAnnotationType1"
+      },
+      "MyAnnotationType2": {
+        "structuredValue": "a",
+        "name": "MyAnnotationType2"
+      }
+    },
+    "types": [
+      {
+        "SmallArray": {
+          "name": "SmallArray",
+          "displayName": "SmallArray",
+          "type": [
+            "array"
+          ],
+          "required": true,
+          "minItems": 5,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "items": "number"
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "MyAnnotationType1": {
+          "name": "MyAnnotationType1",
+          "displayName": "MyAnnotationType1",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "cc": {
+              "name": "cc",
+              "displayName": "cc",
+              "type": [
+                "SmallArray"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "MyAnnotationType2": {
+          "name": "MyAnnotationType2",
+          "displayName": "MyAnnotationType2",
+          "type": [
+            "string"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "Test API"
+  },
+  "errors": [
+    {
+      "code": "MINMAX_RESTRICTION_VIOLATION",
+      "message": "'SmallArray.minItems=5' i.e. array items count should not be less than 5",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 10,
+          "position": 210
+        },
+        "end": {
+          "line": 12,
+          "column": 11,
+          "position": 211
+        }
+      }
+    }
+  ]
+}

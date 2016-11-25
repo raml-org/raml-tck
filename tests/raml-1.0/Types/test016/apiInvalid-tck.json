@@ -1,0 +1,122 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "SomeType": {
+          "name": "SomeType",
+          "displayName": "SomeType",
+          "type": [
+            "OneMoreType"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "AnotherType": {
+          "name": "AnotherType",
+          "displayName": "AnotherType",
+          "type": [
+            "SomeType"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "OneMoreType": {
+          "name": "OneMoreType",
+          "displayName": "OneMoreType",
+          "type": [
+            "AnotherType"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "API"
+  },
+  "errors": [
+    {
+      "code": "RECURRENT_DEFINITION",
+      "message": "Recurrent type definition",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "position": 46
+        },
+        "end": {
+          "line": 5,
+          "column": 8,
+          "position": 50
+        }
+      }
+    },
+    {
+      "code": "RECURRENT_DEFINITION",
+      "message": "Recurrent type definition",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 4,
+          "position": 84
+        },
+        "end": {
+          "line": 8,
+          "column": 8,
+          "position": 88
+        }
+      }
+    },
+    {
+      "code": "RECURRENT_DEFINITION",
+      "message": "Recurrent type definition",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 4,
+          "position": 119
+        },
+        "end": {
+          "line": 11,
+          "column": 8,
+          "position": 123
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType1": {
+          "name": "MyType1",
+          "displayName": "MyType1",
+          "type": [
+            "string"
+          ],
+          "example": "d",
+          "required": true,
+          "minLength": 5,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "structuredExample": {
+            "value": "d",
+            "strict": true,
+            "name": null,
+            "structuredValue": "d"
+          }
+        }
+      },
+      {
+        "MyType2": {
+          "name": "MyType2",
+          "displayName": "MyType2",
+          "type": [
+            "string"
+          ],
+          "example": "d1111",
+          "required": true,
+          "maxLength": 3,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "structuredExample": {
+            "value": "d1111",
+            "strict": true,
+            "name": null,
+            "structuredValue": "d1111"
+          }
+        }
+      }
+    ],
+    "title": "Test API"
+  },
+  "errors": [
+    {
+      "code": "MINMAX_RESTRICTION_VIOLATION",
+      "message": "'MyType1.minLength=5' i.e. string length should not be less than 5",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "position": 66
+        },
+        "end": {
+          "line": 5,
+          "column": 11,
+          "position": 73
+        }
+      }
+    },
+    {
+      "code": "MINMAX_RESTRICTION_VIOLATION",
+      "message": "'MyType2.maxLength=3' i.e. string length should not be more than 3",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 4,
+          "position": 109
+        },
+        "end": {
+          "line": 8,
+          "column": 11,
+          "position": 116
+        }
+      }
+    }
+  ]
+}
