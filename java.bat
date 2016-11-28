@@ -1,0 +1,1 @@
+java -cp "c:/GIT-repos/RAML-parsers-TCK/generated/parsers/javaparser/rajapatest/lib/raml-parser.jsar;c:/GIT-repos/RAML-parsers-TCK/generated/parsers/javaparser/rajapatest/lib/json-simple.jar;c:/GIT-repos/RAML-parsers-TCK/generated/parsers/javaparser/rajapatest/output/rajapatest/2Main.class" rajapatest.Main
