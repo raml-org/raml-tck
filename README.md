@@ -15,7 +15,19 @@ We welcome any contributions from the community! You can contribute by sending u
 * A single API `.raml` file in its root
 * Optionally, any number of Library and Fragment `.raml` files as well as `.json`, `.xml`, `.md`, and other files in either the root folder or its subtree
 
-Test cases must be put under the `tests` directory by either putting your tests into an existing folder or creating a new one. Hereby, it is important that the folder name does reflect the main purpose and each file name should also be meaningful. For example, if you want to contribute a new test case that covers traits in RAML 1.0, you only need to create a new folder for your test case under `tests/raml-1.0/Traits` and copy your RAML files into that.
+Test cases must be put under the `tests` directory by either putting your tests into an existing folder or creating a new one. Hereby, it is important that the folder name does reflect the main purpose and each file name should also be meaningful. For example, if you want to contribute a new test case that covers traits in RAML 1.0, you only need to create a new folder for your test case under `tests/raml-1.0/Traits` and copy your RAML files into that. Please also make sure that you place additional metadata as comments into your RAML file to give more context about your test case. The following is a template:
+
+```
+<RAML_VERSION> <RAML_FRAGMENT>
+<NEWLINE>
+# Objective: <COMMENT>
+# Expected result: <COMMENT>
+
+# <COMMENT>
+<NEWLINE>
+# tags: <tag_1>, <tag_2>, ...,<tag_n>
+<RAML_CONTENT>
+```
 
 Each test needs to have a TCK specific file that will be actually used as a comparison for the output of your parsing. You can create a TCK JSON file manually from scratch, and  name it `<my API RAML file name>-tck.json`), or use the generate script provided inside the `src` directory. For example, you create a  folder inside the `tests/raml-1.0/Traits` directory called `myTests` where you put all your tests files. Now, you only need to go to your terminal and execute the following:
 
