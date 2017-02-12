@@ -31,6 +31,8 @@ Test cases must be put under the `tests` directory by either putting your tests 
 
 For more information, please have a look at [this example](tests/raml-1.0/spec-examples/APIs/additional-facets-single-example.raml).
 
+For more information what tags to use, please see a list of commonly used inside [common-tags.md](common-tags.md). You can suggest new by raising an issue within this repository.
+
 Each test needs to have a TCK specific file that will be actually used as a comparison for the output of your parsing. You can create a TCK JSON file manually from scratch, and  name it `<my API RAML file name>-tck.json`), or use the generate script provided inside the `src` directory. For example, you create a  folder inside the `tests/raml-1.0/Traits` directory called `myTests` where you put all your tests files. Now, you only need to go to your terminal and execute the following:
 
 Install dependencies
