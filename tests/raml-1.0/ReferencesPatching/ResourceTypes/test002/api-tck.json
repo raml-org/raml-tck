@@ -1,0 +1,268 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "traits": [
+      {
+        "myTrait": {
+          "queryParameters": {
+            "<<param>>": {
+              "name": "<<param>>",
+              "displayName": "<<param>>",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "body": {
+            "application/json": {
+              "name": "application/json",
+              "displayName": "application/json",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "object"
+              ],
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "name": "myTrait"
+        }
+      },
+      {
+        "simpleTrait": {
+          "queryParameters": {
+            "stringParam": {
+              "name": "stringParam",
+              "displayName": "stringParam",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "name": "simpleTrait"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "rt1": {
+          "type": {
+            "rt2": {
+              "param": "<<param>>"
+            }
+          },
+          "name": "rt1"
+        }
+      },
+      {
+        "rt2": {
+          "is": [
+            {
+              "myTrait": {
+                "param": "<<param>>"
+              }
+            },
+            "simpleTrait"
+          ],
+          "name": "rt2",
+          "post": {
+            "method": "post"
+          }
+        }
+      }
+    ],
+    "title": "test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "queryParameters": {
+              "qParam": {
+                "name": "qParam",
+                "displayName": "qParam",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                }
+              },
+              "stringParam": {
+                "name": "stringParam",
+                "displayName": "stringParam",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                }
+              }
+            },
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "object"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                }
+              }
+            },
+            "method": "get"
+          },
+          {
+            "queryParameters": {
+              "qParam": {
+                "name": "qParam",
+                "displayName": "qParam",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                }
+              },
+              "stringParam": {
+                "name": "stringParam",
+                "displayName": "stringParam",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                }
+              }
+            },
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "object"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                }
+              }
+            },
+            "method": "post"
+          }
+        ],
+        "is": [
+          {
+            "myTrait": {
+              "param": "qParam"
+            }
+          },
+          "simpleTrait"
+        ],
+        "type": {
+          "rt1": {
+            "param": "qParam"
+          }
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ]
+  },
+  "errors": []
+}

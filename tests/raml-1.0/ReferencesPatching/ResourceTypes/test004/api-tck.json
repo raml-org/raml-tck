@@ -1,0 +1,173 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "uses": [
+      {
+        "key": "lib1",
+        "value": "lib1.raml"
+      },
+      {
+        "key": "lib1.lib2",
+        "value": "lib2.raml"
+      }
+    ],
+    "traits": [
+      {
+        "lib1.lib2.myTrait": {
+          "queryParameters": {
+            "q": {
+              "name": "q",
+              "displayName": "<<paramName>>",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "type": {
+                    "insertedAsDefault": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "body": {
+            "application/json": {
+              "name": "application/json",
+              "displayName": "application/json",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "lib1.lib2.MyLibType"
+              ],
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  }
+                }
+              }
+            }
+          },
+          "name": "lib1.lib2.myTrait",
+          "__METADATA__": {
+            "calculated": true
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "lib1.rt": {
+          "is": [
+            {
+              "lib1.lib2.myTrait": {
+                "paramName": "QParam"
+              }
+            }
+          ],
+          "name": "lib1.rt",
+          "__METADATA__": {
+            "calculated": true
+          }
+        }
+      }
+    ],
+    "title": "test API",
+    "version": "v1",
+    "baseUri": "https://example.com/raml",
+    "protocols": [
+      "HTTPS"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "queryParameters": {
+              "q": {
+                "name": "q",
+                "displayName": "QParam",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                }
+              }
+            },
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "lib1.lib2.MyLibType"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                }
+              }
+            },
+            "protocols": [
+              "HTTPS"
+            ],
+            "method": "post",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            }
+          }
+        ],
+        "is": [
+          {
+            "lib1.lib2.myTrait": {
+              "paramName": "QParam"
+            }
+          }
+        ],
+        "type": "lib1.rt",
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "https://example.com/raml/resource"
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    }
+  },
+  "errors": []
+}
