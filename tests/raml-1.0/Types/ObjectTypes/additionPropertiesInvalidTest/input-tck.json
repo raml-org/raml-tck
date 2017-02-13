@@ -7,18 +7,15 @@
         "Employee": {
           "name": "Employee",
           "displayName": "Employee",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "additionalProperties": false,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
           }
@@ -27,5 +24,23 @@
     ],
     "title": "TestRAML"
   },
-  "errors": []
+  "errors": [
+    {
+      "code": "REQUIRED_BOOLEAN",
+      "message": "Value of 'additionalProperties' facet should be boolean",
+      "path": "input.raml",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 4,
+          "position": 523
+        },
+        "end": {
+          "line": 16,
+          "column": 24,
+          "position": 543
+        }
+      }
+    }
+  ]
 }
