@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Report</title>
+    <style>
+      table td, th {
+        padding: 5px;
+        word-wrap:break-word;
+      }
+
+      table {
+        border-collapse:collapse;
+        width: 900px; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test Report - JS Parser v1.1.15</h1>
+    <span>total # of tests: 134</span><br>
+    <span style="color: green">no tests failed</span>
+    <p>
+    <a href="#semantic-data-types-scalar-number">semantic/data-types/scalar/number</a><br>
+    <a href="#semantic-data-types-scalar-string">semantic/data-types/scalar/string</a><br>
+    <a href="#semantic-patterns-resource-types">semantic/patterns/resource-types</a><br>
+    <a href="#semantic-root-section">semantic/root-section</a><br>
+    <a href="#spec-examples">spec-examples</a><br>
+    <a href="#syntax-basic">syntax/basic</a><br>
+    <a href="#syntax-data-types-object">syntax/data-types/object</a><br>
+    <a href="#syntax-data-types-scalar-array">syntax/data-types/scalar/array</a><br>
+    <a href="#syntax-root">syntax/root</a><br>
+    <p>
+    <h2><a name="semantic-data-types-scalar-number"></a>semantic/data-types/scalar/number</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">the value for 'multipleOf' must be greater than zero</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">example of '6.002' is not a multiple of 3.</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">example of '6' should be valid multiple of 3</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">a number should be between the minimum and maximum range</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">number that is outside the minimum and maximum range</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="semantic-data-types-scalar-string"></a>semantic/data-types/scalar/string</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">'minLength' must be equal or greater than zero</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">'maxLength' must be equal or greater than zero</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="semantic-patterns-resource-types"></a>semantic/patterns/resource-types</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">include another file as a resource type parameter</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">https://github.com/raml-org/raml-java-parser/issues/340</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">https://github.com/raml-org/raml-java-parser/issues/333</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="semantic-root-section"></a>semantic/root-section</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">'schemas' and 'types' are mutual exclusive</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="spec-examples"></a>spec-examples</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">Github v3 example inside the 'The Root of the Document' section</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">RAML that illustrates how to use 'value' in 'example'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">restricting all additional properties to be string.</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">annotating scalar node</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">applying some restrictions on the allowed targets of annotations</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">annotation type declarations and the application of the annotations</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">declaration and use of a 'testHarness' annotation that should be a string value</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">implicit, default declaration of the value type when there is no explicit type declaration</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">example on how default media types get automatically applied or in the /send resources overriden</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">application of resource types and traits</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">how to use 'null' to indicate that a method can be called without applying any security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">how to apply a security scheme to a method</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">how to use a parameter inside a security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">use of an invalid scope 'GUEST' which is not defined inside the security scheme</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">how to define an array without type expression</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">type using array type expression and example</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">uri parameter as an array</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">how to define a base URI parameter</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">'version' as base URI template does not need any base URI parameter</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">various combinations of both default and non-default media types, and both data type declarations and references</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">simple boolean type definition</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">complex example on using single or multiple example(s)</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">headers inheriting from a trait, allowing multiple instances of a header, specifying examples, and overriding the headers when applied to a method and a resource</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">all date types with examples</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">an array of default media type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">single default media type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">apply global default security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">use 'any' default type in combination with default media type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">use 'any' default type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">no need to define 'type: object' when 'properties' facet is being used</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">no need to define 'type: string'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">object type definition</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define URI parameter</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'documentation' node</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">duplicated URIs which is invalid in RAML</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">'Extension' fragment that adds an additional post method with description to '/books'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">invalid example on extending a JSON schema defined type</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">invalid example on adding facets to a JSON schema defined type</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using a JSON schema defined type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">chaining library namespaces is not allowed</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">simply including another fragment</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">include a simple YAML map from another file</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">inline type declaration</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">simple integer type with all available facets</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">complex type definition using various types and facets</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">simple object type definition used in a body</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">discriminator is not allowed in any inline type declaration and for union types</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">use library inside resource type fragment</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">simple library definition</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">simple book library example</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">multiple example definition</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">multiple inheritance on two objects</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">multiple inheritance on two 'number' types both with not conflicting facets</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">multiple inheritance on two 'number' types both with conflicting facets</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">nested resources</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">an instance cannot have an empty / no valued node</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using 'nil' with a string union</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using 'nil' as a type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using 'number' as a type and apply all available facets</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using full expression to define optional properties</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using syntactical sugar to define optional properties</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using overlays to add additional information to an existing RAML</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using overlays to change nodes from an existing RAML</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using 'HTTP' and 'HTTPS' protocols</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">'get' method using HTTP query parameters</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">union types and extended multiple types are used to constrain the query string to specific alternatives</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">resource type and a file that includes this fragment file</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">resource type with an optional HTTP method that defines a required header and a custom parameter called</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">passing parameter values to resource types and traits</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using functions and reserved parameters inside resource types and traits</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">declaring resource types and traits</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define responses</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">resource types and traits are defined in external files that are included</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">Basic Authentication security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">Digest Authentication security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">OAuth 1.0 security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">OAuth 2.0 security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">Pass Through security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">Custom security scheme</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define authentication using OAuth 2.0 and OAuth 1.0 security schemes</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define simple headers</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define a simple example</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define a 'string' type with all allowed facets</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">usage of template URIs</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">multiple trailing slashes shouldn't raise issues</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define enum values of a query parameter in both trait and resource</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">extending using a type expression combined with unions and arrays</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">optional properties using '?'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">'schemas' and 'types' as well as 'schema' and 'type' are mutual exclusive</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">pattern properties restricting the property names of any additional properties inside a type instance</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">type definition with union and multiple inheritance</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">type definition using simple union between two types</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">resources and nested resources with URI parameters</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using predefined 'ext' for defining media types in the URL</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">allowed duplicated URI templates</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define user-defined facets</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'discriminator' in object type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'discriminatorValue' in object type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using 'xml' facet</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="syntax-basic"></a>syntax/basic</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">a simple RAML definition with HTTP methods and resources declared</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="syntax-data-types-object"></a>syntax/data-types/object</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">value of 'additionProperties' must be a boolean but is object</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">enum should be allowed on objects</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="syntax-data-types-scalar-array"></a>syntax/data-types/scalar/array</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">invalid array value of 'items'</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="syntax-root"></a>syntax/root</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">invalid usage of arrays as a value for 'resourceTypes'</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'baseUri' with a simple string</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'baseUri' using an object with 'value' facet that defines the base URI</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">'name' should be an invalid facet inside the 'baseUri' scalar node</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'protocols' with uppercase 'HTTP' and 'HTTPS'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'protocols' with lowercase 'http' and 'https'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'protocols' with empty value</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'protocols' with an invalid value</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'protocols' with an invalid string value</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'title' as an array is not allowed</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">'baseUri' contains incomplete URI template</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">required 'title' is missing</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">valid RAML document with at least 'title'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define a single 'baseUriParameters'</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">baseUriParameter must never reference to a non existing type</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">baseUriParameter must follow any restrictions defined for data types</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">a base URI parameter should not define a sequence</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">value for 'title' included from markdown file</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">facets at the root of a document that are not defined in the spec must not be allowed</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">define 'title' as a map is not allowed</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+  </body>
+</html>

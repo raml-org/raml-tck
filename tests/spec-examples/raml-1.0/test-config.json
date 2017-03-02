@@ -1,0 +1,798 @@
+{
+  "section": "spec-examples",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "Github v3 example inside the 'The Root of the Document' section",
+      "input": "root.raml",
+      "valid": true,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "description": "RAML that illustrates how to use 'value' in 'example'",
+      "input": "additional-facets-single-example.raml",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "restricting all additional properties to be string.",
+      "input": "additional-properties.raml",
+      "valid": true,
+      "tags": [
+        "type", "additional property", "object"
+      ]
+    },
+    {
+      "description": "annotating scalar node",
+      "input": "annotating-scalar-nodes.raml",
+      "valid": true,
+      "tags": [
+        "annotation", "scalar node"
+      ]
+    },
+    {
+      "description": "applying some restrictions on the allowed targets of annotations",
+      "input": "annotations-targets.raml",
+      "valid": true,
+      "tags": [
+        "annotation", "allowed target"
+      ]
+    },
+    {
+      "description": "annotation type declarations and the application of the annotations",
+      "input": "annotations.raml",
+      "valid": true,
+      "tags": [
+        "annotation"
+      ]
+    },
+    {
+      "description": "declaration and use of a 'testHarness' annotation that should be a string value",
+      "input": "apply-annotations-1.raml",
+      "valid": true,
+      "tags": [
+        "annotation"
+      ]
+    },
+    {
+      "description": "implicit, default declaration of the value type when there is no explicit type declaration",
+      "input": "apply-annotations-2.raml",
+      "valid": true,
+      "tags": [
+        "annotation"
+      ]
+    },
+    {
+      "description": "example on how default media types get automatically applied or in the /send resources overriden",
+      "input": "apply-default-media-type.raml",
+      "valid": true,
+      "tags": [
+        "media type"
+      ]
+    },
+    {
+      "description": "application of resource types and traits",
+      "input": "apply-resourcetypes-traits.raml",
+      "valid": true,
+      "tags": [
+        "trait", "resource type"
+      ]
+    },
+    {
+      "description": "how to use 'null' to indicate that a method can be called without applying any security scheme",
+      "input": "apply-security-scheme-null.raml",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "how to apply a security scheme to a method",
+      "input": "apply-security-schemes.raml",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "how to use a parameter inside a security scheme",
+      "input": "apply-security-scheme-parameter.raml",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "use of an invalid scope 'GUEST' which is not defined inside the security scheme",
+      "input": "apply-security-scheme-invalid-scope.raml",
+      "valid": false,
+      "tags": [
+        "security scheme", "scopes"
+      ]
+    },
+    {
+      "description": "how to define an array without type expression",
+      "input": "array-type-expanded.raml",
+      "valid": true,
+      "tags": [
+        "type", "array"
+      ]
+    },
+    {
+      "description": "type using array type expression and example",
+      "input": "array-type.raml",
+      "valid": true,
+      "tags": [
+        "type", "array", "example"
+      ]
+    },
+    {
+      "description": "uri parameter as an array",
+      "input": "array-uri-parameter.raml",
+      "valid": true,
+      "tags": [
+        "array", "uri parameter"
+      ]
+    },
+    {
+      "description": "how to define a base URI parameter",
+      "input": "base-uri-parameter.raml",
+      "valid": true,
+      "tags": [
+        "base uri parameter"
+      ]
+    },
+    {
+      "description": "'version' as base URI template does not need any base URI parameter",
+      "input": "base-uri-template.raml",
+      "valid": true,
+      "tags": [
+        "base uri parameter"
+      ]
+    },
+    {
+      "description": "various combinations of both default and non-default media types, and both data type declarations and references",
+      "input": "bodies.raml",
+      "valid": true,
+      "tags": [
+        "body", "default media type", "external schema"
+      ]
+    },
+    {
+      "description": "simple boolean type definition",
+      "input": "boolean-type.raml",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "boolean"
+      ]
+    },
+    {
+      "description": "complex example on using single or multiple example(s)",
+      "input": "complex-examples.raml",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "headers inheriting from a trait, allowing multiple instances of a header, specifying examples, and overriding the headers when applied to a method and a resource",
+      "input": "complex-headers.raml",
+      "valid": true,
+      "tags": [
+        "header", "trait", "example"
+      ]
+    },
+    {
+      "description": "all date types with examples",
+      "input": "date-types.raml",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "date", "example"
+      ]
+    },
+    {
+      "description": "an array of default media type",
+      "input": "default-media-types-multiple.raml",
+      "valid": true,
+      "tags": [
+        "default media type"
+      ]
+    },
+    {
+      "description": "single default media type",
+      "input": "default-media-types-single.raml",
+      "valid": true,
+      "tags": [
+        "default media type"
+      ]
+    },
+    {
+      "description": "apply global default security scheme",
+      "input": "default-security.raml",
+      "valid": true,
+      "tags": [
+        "security", "default security", "security scheme"
+      ]
+    },
+    {
+      "description": "use 'any' default type in combination with default media type",
+      "input": "default-type-any-2.raml",
+      "valid": true,
+      "tags": [
+        "type", "default type", "default media type", "body"
+      ]
+    },
+    {
+      "description": "use 'any' default type",
+      "input": "default-type-any.raml",
+      "valid": true,
+      "tags": [
+        "type", "default type", "body"
+      ]
+    },
+    {
+      "description": "no need to define 'type: object' when 'properties' facet is being used",
+      "input": "default-type-object.raml",
+      "valid": true,
+      "tags": [
+        "type", "default type", "object"
+      ]
+    },
+    {
+      "description": "no need to define 'type: string'",
+      "input": "default-type-string.raml",
+      "valid": true,
+      "tags": [
+        "type", "default type", "scalar", "string"
+      ]
+    },
+    {
+      "description": "object type definition",
+      "input": "default-types-1.raml",
+      "valid": true,
+      "tags": [
+        "type", "object"
+      ]
+    },
+    {
+      "description": "define URI parameter",
+      "input": "define-uri-parameters.raml",
+      "valid": true,
+      "tags": [
+        "type", "uri paramater"
+      ]
+    },
+    {
+      "description": "define 'documentation' node",
+      "input": "documentation.raml",
+      "valid": true,
+      "tags": [
+        "documentation"
+      ]
+    },
+    {
+      "description": "duplicated URIs which is invalid in RAML",
+      "input": "duplicated-uris-invalid.raml",
+      "valid": false,
+      "tags": [
+        "uri"
+      ]
+    },
+    {
+      "description": "'Extension' fragment that adds an additional post method with description to '/books'",
+      "input": "extension-post.raml",
+      "valid": true,
+      "tags": [
+        "extension", "fragment"
+      ]
+    },
+    {
+      "description": "invalid example on extending a JSON schema defined type",
+      "input": "external-type-extend-invalid.raml",
+      "valid": false,
+      "tags": [
+        "schema", "type", "type expression"
+      ]
+    },
+    {
+      "description": "invalid example on adding facets to a JSON schema defined type",
+      "input": "external-types-invalid.raml",
+      "valid": false,
+      "tags": [
+        "schema", "type", "facet"
+      ]
+    },
+    {
+      "description": "using a JSON schema defined type",
+      "input": "external-types.raml",
+      "valid": true,
+      "tags": [
+        "schema", "type"
+      ]
+    },
+    {
+      "description": "chaining library namespaces is not allowed",
+      "input": "libraries-invalid-chaining.raml",
+      "valid": false,
+      "tags": [
+        "library", "trait", "resource type", "type"
+      ]
+    },
+    {
+      "description": "simply including another fragment",
+      "input": "fragments-simple.raml",
+      "valid": true,
+      "tags": [
+        "fragment", "include"
+      ]
+    },
+    {
+      "description": "include a simple YAML map from another file",
+      "input": "includes.raml",
+      "valid": true,
+      "tags": [
+        "fragment", "include"
+      ]
+    },
+    {
+      "description": "inline type declaration",
+      "input": "inline-type-declaration.raml",
+      "valid": true,
+      "tags": [
+        "type", "body"
+      ]
+    },
+    {
+      "description": "simple integer type with all available facets",
+      "input": "integer-type.raml",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "integer"
+      ]
+    },
+    {
+      "description": "complex type definition using various types and facets",
+      "input": "introduction-types-complex.raml",
+      "valid": true,
+      "tags": [
+        "type"
+      ]
+    },
+    {
+      "description": "simple object type definition used in a body",
+      "input": "introduction-types.raml",
+      "valid": true,
+      "tags": [
+        "type", "body", "object"
+      ]
+    },
+    {
+      "description": "discriminator is not allowed in any inline type declaration and for union types",
+      "input": "invalid-discriminator-usage.raml",
+      "valid": false,
+      "tags": [
+        "type", "discriminator", "object", "union"
+      ]
+    },
+    {
+      "description": "use library inside resource type fragment",
+      "input": "libraries-resourcetype.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "fragment", "library"
+      ]
+    },
+    {
+      "description": "simple library definition",
+      "input": "libraries.raml",
+      "valid": true,
+      "tags": [
+        "fragment", "library"
+      ]
+    },
+    {
+      "description": "simple book library example",
+      "input": "librarybooks.raml",
+      "valid": true,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "description": "multiple example definition",
+      "input": "multiple-examples.raml",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "multiple inheritance on two objects",
+      "input": "multiple-inheritance-1.raml",
+      "valid": true,
+      "tags": [
+        "type", "object", "multiple inheritance", "type expression"
+      ]
+    },
+    {
+      "description": "multiple inheritance on two 'number' types both with not conflicting facets",
+      "input": "multiple-inheritance-2.raml",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "number", "facet", "multiple inheritance", "type expression"
+      ]
+    },
+    {
+      "description": "multiple inheritance on two 'number' types both with conflicting facets",
+      "input": "multiple-inheritance-3-invalid.raml",
+      "valid": false,
+      "tags": [
+        "type", "scalar", "number", "facet", "multiple inheritance", "type expression"
+      ]
+    },
+    {
+      "description": "nested resources",
+      "input": "nested-resources.raml",
+      "valid": true,
+      "tags": [
+        "resource"
+      ]
+    },
+    {
+      "description": "an instance cannot have an empty / no valued node",
+      "input": "null-type-invalid.raml",
+      "valid": false,
+      "tags": [
+        "nil", "type"
+      ]
+    },
+    {
+      "description": "using 'nil' with a string union",
+      "input": "null-type-union.raml",
+      "valid": true,
+      "tags": [
+        "nil", "type"
+      ]
+    },
+    {
+      "description": "using 'nil' as a type",
+      "input": "null-type.raml",
+      "valid": true,
+      "tags": [
+        "nil", "type"
+      ]
+    },
+    {
+      "description": "using 'number' as a type and apply all available facets",
+      "input": "number-type.raml",
+      "valid": true,
+      "tags": [
+        "number", "scalar", "type"
+      ]
+    },
+    {
+      "description": "using full expression to define optional properties",
+      "input": "object-type-long.raml",
+      "valid": true,
+      "tags": [
+        "object", "type"
+      ]
+    },
+    {
+      "description": "using syntactical sugar to define optional properties",
+      "input": "object-type-short.raml",
+      "valid": true,
+      "tags": [
+        "object", "type"
+      ]
+    },
+    {
+      "description": "using overlays to add additional information to an existing RAML",
+      "input": "overlay-monitoring.raml",
+      "valid": true,
+      "tags": [
+        "overlay", "fragment"
+      ]
+    },
+    {
+      "description": "using overlays to change nodes from an existing RAML",
+      "input": "overlay-spanish.raml",
+      "valid": true,
+      "tags": [
+        "overlay", "fragment"
+      ]
+    },
+    {
+      "description": "using 'HTTP' and 'HTTPS' protocols",
+      "input": "protocols.raml",
+      "valid": true,
+      "tags": [
+        "protocol"
+      ]
+    },
+    {
+      "description": "'get' method using HTTP query parameters",
+      "input": "query-parameter.raml",
+      "valid": true,
+      "tags": [
+        "query parameter"
+      ]
+    },
+    {
+      "description": "union types and extended multiple types are used to constrain the query string to specific alternatives",
+      "input": "query-string.raml",
+      "valid": true,
+      "tags": [
+        "query string", "type", "union"
+      ]
+    },
+    {
+      "description": "resource type and a file that includes this fragment file",
+      "input": "resolve-includes.raml",
+      "valid": true,
+      "tags": [
+        "include"
+      ]
+    },
+    {
+      "description": "resource type with an optional HTTP method that defines a required header and a custom parameter called",
+      "input": "resourcetypes-optionalmethods.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "http method", "custom parameter"
+      ]
+    },
+    {
+      "description": "passing parameter values to resource types and traits",
+      "input": "resourcetypes-traits-parameter.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "traits", "custom parameter"
+      ]
+    },
+    {
+      "description": "using functions and reserved parameters inside resource types and traits",
+      "input": "resourcetypes-traits-parameterfunctions.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "traits", "custom parameter", "function"
+      ]
+    },
+    {
+      "description": "declaring resource types and traits",
+      "input": "resourcetypes-traits.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "traits"
+      ]
+    },
+    {
+      "description": "define responses",
+      "input": "responses.raml",
+      "valid": true,
+      "tags": [
+        "responses"
+      ]
+    },
+    {
+      "description": "resource types and traits are defined in external files that are included",
+      "input": "resourcetypes-traits-external.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "trait"
+      ]
+    },
+    {
+      "description": "Basic Authentication security scheme",
+      "input": "security-schemes-basic.raml",
+      "valid": true,
+      "tags": [
+        "security scheme", "basic authentication"
+      ]
+    },
+    {
+      "description": "Digest Authentication security scheme",
+      "input": "security-schemes-digest.raml",
+      "valid": true,
+      "tags": [
+        "security scheme", "digest authentication"
+      ]
+    },
+    {
+      "description": "OAuth 1.0 security scheme",
+      "input": "security-schemes-oauth1.raml",
+      "valid": true,
+      "tags": [
+        "security scheme", "oauth 1.0"
+      ]
+    },
+    {
+      "description": "OAuth 2.0 security scheme",
+      "input": "security-schemes-oauth2.raml",
+      "valid": true,
+      "tags": [
+        "security scheme", "oauth 2.0"
+      ]
+    },
+    {
+      "description": "Pass Through security scheme",
+      "input": "security-schemes-pass.raml",
+      "valid": true,
+      "tags": [
+        "security scheme", "pass through"
+      ]
+    },
+    {
+      "description": "Custom security scheme",
+      "input": "security-schemes-xother.raml",
+      "valid": true,
+      "tags": [
+        "security scheme", "custom security scheme"
+      ]
+    },
+    {
+      "description": "define authentication using OAuth 2.0 and OAuth 1.0 security schemes",
+      "input": "security-schemes.raml",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "define simple headers",
+      "input": "simple-header.raml",
+      "valid": true,
+      "tags": [
+        "headers"
+      ]
+    },
+    {
+      "description": "define a simple example",
+      "input": "single-example.raml",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "define a 'string' type with all allowed facets",
+      "input": "string-type.raml",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "string"
+      ]
+    },
+    {
+      "description": "usage of template URIs",
+      "input": "template-uri-1.raml",
+      "valid": true,
+      "tags": [
+        "template uri"
+      ]
+    },
+    {
+      "description": "multiple trailing slashes shouldn't raise issues",
+      "input": "trailing-slashes.raml",
+      "valid": true,
+      "tags": [
+        "template uri"
+      ]
+    },
+    {
+      "description": "define enum values of a query parameter in both trait and resource",
+      "input": "traits-merge-enumlist.raml",
+      "valid": true,
+      "tags": [
+        "trait", "enum", "resource"
+      ]
+    },
+    {
+      "description": "extending using a type expression combined with unions and arrays",
+      "input": "type-expression.raml",
+      "valid": true,
+      "tags": [
+        "type expression", "type", "union", "array"
+      ]
+    },
+    {
+      "description": "optional properties using '?'",
+      "input": "type-names-question-mark.raml",
+      "valid": true,
+      "tags": [
+        "type", "optional properties", "object"
+      ]
+    },
+    {
+      "description": "'schemas' and 'types' as well as 'schema' and 'type' are mutual exclusive",
+      "input": "type-schema-invalid.raml",
+      "valid": false,
+      "tags": [
+        "type", "schema"
+      ]
+    },
+    {
+      "description": "pattern properties restricting the property names of any additional properties inside a type instance",
+      "input": "types-pattern-properties.raml",
+      "valid": true,
+      "tags": [
+        "type", "pattern property", "object"
+      ]
+    },
+    {
+      "description": "type definition with union and multiple inheritance",
+      "input": "union-type-multiple-inheritance.raml",
+      "valid": true,
+      "tags": [
+        "type", "union", "multiple inheritance"
+      ]
+    },
+    {
+      "description": "type definition using simple union between two types",
+      "input": "union-type.raml",
+      "valid": true,
+      "tags": [
+        "type", "union"
+      ]
+    },
+    {
+      "description": "resources and nested resources with URI parameters",
+      "input": "uri-parameters-1.raml",
+      "valid": true,
+      "tags": [
+        "resource", "uri paramater"
+      ]
+    },
+    {
+      "description": "using predefined 'ext' for defining media types in the URL",
+      "input": "uri-parameters-ext.raml",
+      "valid": true,
+      "tags": [
+        "resource", "uri paramater"
+      ]
+    },
+    {
+      "description": "allowed duplicated URI templates",
+      "input": "uri-templates-allowed.raml",
+      "valid": true,
+      "tags": [
+        "resource", "uri template"
+      ]
+    },
+    {
+      "description": "define user-defined facets",
+      "input": "user-defined-facets.raml",
+      "valid": true,
+      "tags": [
+        "type", "custom facet"
+      ]
+    },
+    {
+      "description": "define 'discriminator' in object type",
+      "input": "using-discriminator.raml",
+      "valid": true,
+      "tags": [
+        "type", "object", "discriminator"
+      ]
+    },
+    {
+      "description": "define 'discriminatorValue' in object type",
+      "input": "using-discriminatorvalue.raml",
+      "valid": true,
+      "tags": [
+        "type", "object", "discriminator value"
+      ]
+    },
+    {
+      "description": "using 'xml' facet",
+      "input": "xml-facet.raml",
+      "valid": true,
+      "tags": [
+        "type", "xml facet"
+      ]
+    }
+  ]
+}

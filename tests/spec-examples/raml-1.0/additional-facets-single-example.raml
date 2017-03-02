@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: Single example with additional facets
+
+annotationTypes:
+  pii: boolean
+
+types:
+  Message:
+    properties:
+      title?: string
+      body?: string
+      name?: string
+      comment?: string
+    example:
+      (pii): true
+      strict: false
+      value:
+        title: Attention needed
+        body: You have been added to group 274

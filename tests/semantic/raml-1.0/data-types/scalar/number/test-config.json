@@ -1,0 +1,46 @@
+{
+  "section": "semantic/data-types/scalar/number",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "the value for 'multipleOf' must be greater than zero",
+      "input": "number-invalid-zero.raml",
+      "valid": false,
+      "tags": [
+        "type", "scalar", "number", "facet"
+      ]
+    },
+    {
+      "description": "example of '6.002' is not a multiple of 3.",
+      "input": "number-multipleof-invalid-example.raml",
+      "valid": false,
+      "tags": [
+        "type", "scalar", "number", "facet"
+      ]
+    },
+    {
+      "description": "example of '6' should be valid multiple of 3",
+      "input": "number-multipleof.raml",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "number", "facet"
+      ]
+    },
+    {
+      "description": "a number should be between the minimum and maximum range",
+      "input": "number-min-max.raml",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "number", "facet"
+      ]
+    },
+    {
+      "description": "number that is outside the minimum and maximum range",
+      "input": "number-min-max-invalid.raml",
+      "valid": false,
+      "tags": [
+        "type", "scalar", "number", "facet"
+      ]
+    }
+  ]
+}

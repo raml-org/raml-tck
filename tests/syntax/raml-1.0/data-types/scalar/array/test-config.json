@@ -1,0 +1,14 @@
+{
+  "section": "syntax/data-types/scalar/array",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "invalid array value of 'items'",
+      "input": "items-invalid-value.raml",
+      "valid": false,
+      "tags": [
+        "type", "scalar", "array", "facet"
+      ]
+    }
+  ]
+}

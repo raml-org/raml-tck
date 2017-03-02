@@ -1,0 +1,30 @@
+{
+  "section": "semantic/patterns/resource-types",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "include another file as a resource type parameter",
+      "input": "resourceTypes-parameter-include.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "include"
+      ]
+    },
+    {
+      "description": "https://github.com/raml-org/raml-java-parser/issues/340",
+      "input": "resourcetypes-ref.raml",
+      "valid": true,
+      "tags": [
+        "resource type"
+      ]
+    },
+    {
+      "description": "https://github.com/raml-org/raml-java-parser/issues/333",
+      "input": "chaining-functions-ref.raml",
+      "valid": true,
+      "tags": [
+        "resource type", "function"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+#%RAML 1.0
+title: My API With Types
+
+types:
+  profile:
+    properties:
+      preference?: # not optional, ? as part of the property name
+        required: true
+      foto?: # optional, ? as part of the property name
+        required: false
+      description??: # optional, ? as part of the property name
+      link?: #optional, , ? not part of the property name

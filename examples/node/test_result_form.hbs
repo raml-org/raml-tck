@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Report</title>
+    <style>
+      table td, th {
+        padding: 5px;
+        word-wrap:break-word;
+      }
+
+      table {
+        border-collapse:collapse;
+        width: 900px; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test Report - JS Parser v1.1.15</h1>
+    <span>total # of tests: {{totalNumberOfTests}}</span><br>
+    {{#if_eq numberOfTestsFailed 0}}
+    <span style="color: green">no tests failed</span>
+    {{else}}
+    <span style="color: red">number of test failed: {{numberOfTestsFailed}}</span>
+    {{/if_eq}}
+    <p>
+    {{#each testReports}}
+    <a href="#{{{replace section '/' '-'}}}">{{{section}}}</a><br>
+    {{/each}}
+    {{#each testReports}}
+    <p>
+    <h2><a name="{{{replace section '/' '-'}}}"></a>{{{section}}}</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+      {{#each results}}
+        <tr>
+          <td style="width: 100%">{{{this.description}}}</td>
+          <td>{{{this.expected}}}</td>
+          <td>{{{this.actual}}}</td>
+          <td style="text-align: center">
+            {{#if this.testFailed}}
+              <img src="fail.jpg" style="width: 32px; height: 32px" />
+            {{else}}
+              <img src="success.png" style="width: 32px; height: 32px" />
+            {{/if}}
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+    {{/each}}
+  </body>
+</html>
