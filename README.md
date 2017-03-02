@@ -54,7 +54,7 @@ Inside each `test-config.json` file is a single object containing information ab
 ```
 
 | Property | Description |
-|:--------:|:-----------:|
+|:--------|:-----------|
 | section | Contains a unique id for this section, usually the directory structure |
 | ramlVersion | The RAML version being covered by the test cases |
 | tests | Contains a single array containing objects. See table below. |
@@ -62,7 +62,7 @@ Inside each `test-config.json` file is a single object containing information ab
 `tests`
 
 | Property | Description |
-|:--------:|:-----------:|
+|:---------|:------------|
 | description | A simple description of a single test. |
 | input | Relative path to the file that's being tested. |
 | valid | Indicates what is expected. If it's `true`, a parser implementation shouldn't report any errors; and with `false` a parser should report errors. |
@@ -71,6 +71,19 @@ Inside each `test-config.json` file is a single object containing information ab
 ## Coverage
 
 RAML 0.8 and 1.0 should have full coverage. If you see anything missing or think there is a useful test missing, please send a pull request or open an issue.
+
+## How do I use this suite?
+
+If you don't know how to run this suite against your parser, you only need to look at the `examples` directory that contains an implementation using the [JS parser](https://github.com/raml-org/raml-js-parser-2).
+
+Please execute following commands from the `node` subdirectory:
+
+```
+npm install
+node index.js
+```
+
+After running `node index.js` you should have a `report.html` that you can open in your browser. Hopefully without any errors reported ;) 
 
 ## Contribution 
 
