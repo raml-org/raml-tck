@@ -116,6 +116,29 @@ function executeTests(file, testDir) {
 }
 
 function isValidRAML(ramlPath) {
-  var api = raml1Parser.loadApiSync(path.resolve(__dirname, ramlPath), {rejectOnErrors: false, attributeDefaults: true})
-  return api.errors().length == 0
+  //initial loading
+  var syncParseResult = raml1Parser.loadApiSync(path.resolve(__dirname, ramlPath), {
+      rejectOnErrors: false
+  });
+
+  //expansion when possible (with fragments no expansion is necessary)
+  var expandedResult = syncParseResult.expand ? syncParseResult.expand(true) : syncParseResult;
+
+  //conversion to JSON
+  var resultingJSON = expandedResult.toJSON({rootNodeDetails: true});
+
+  //checking if there are errors
+  var hasIssues = resultingJSON.errors.length != 0
+
+  var isValid = true;
+
+  if (hasIssues) {
+    resultingJSON.errors.forEach(function(error) { 
+      if(!error.isWarning) {
+        isValid = false
+      } 
+    })
+  }
+
+  return isValid
 }

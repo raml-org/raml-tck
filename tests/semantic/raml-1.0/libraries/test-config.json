@@ -1,0 +1,14 @@
+{
+  "section": "semantic/libraries",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "a root RAML document must not be valid if a referenced library is invalid",
+      "input": "api-with-invalid-lib.raml",
+      "valid": false,
+      "tags": [
+        "type", "library"
+      ]
+    }
+  ]
+}

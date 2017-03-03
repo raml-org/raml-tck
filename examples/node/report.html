@@ -16,18 +16,19 @@
   </head>
   <body>
     <h1>Test Report - JS Parser v1.1.15</h1>
-    <span>total # of tests: 134</span><br>
-    <span style="color: green">no tests failed</span>
+    <span>total # of tests: 135</span><br>
+    <span style="color: red">number of test failed: 1</span>
     <p>
     <a href="#semantic-data-types-scalar-number">semantic/data-types/scalar/number</a><br>
     <a href="#semantic-data-types-scalar-string">semantic/data-types/scalar/string</a><br>
+    <a href="#semantic-libraries">semantic/libraries</a><br>
     <a href="#semantic-patterns-resource-types">semantic/patterns/resource-types</a><br>
     <a href="#semantic-root-section">semantic/root-section</a><br>
     <a href="#spec-examples">spec-examples</a><br>
     <a href="#syntax-basic">syntax/basic</a><br>
     <a href="#syntax-data-types-object">syntax/data-types/object</a><br>
     <a href="#syntax-data-types-scalar-array">syntax/data-types/scalar/array</a><br>
-    <a href="#syntax-root">syntax/root</a><br>
+    <a href="#syntax-root-section">syntax/root-section</a><br>
     <p>
     <h2><a name="semantic-data-types-scalar-number"></a>semantic/data-types/scalar/number</h2>
     <table border="1">
@@ -101,6 +102,24 @@
           <td>false</td>
           <td style="text-align: center">
               <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="semantic-libraries"></a>semantic/libraries</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">a root RAML document must not be valid if a referenced library is invalid</td>
+          <td>false</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="fail.jpg" style="width: 32px; height: 32px" />
           </td>
         </tr>
     </table>
@@ -1021,7 +1040,7 @@
         </tr>
     </table>
     <p>
-    <h2><a name="syntax-root"></a>syntax/root</h2>
+    <h2><a name="syntax-root-section"></a>syntax/root-section</h2>
     <table border="1">
       <tr>
         <th>Description</th>

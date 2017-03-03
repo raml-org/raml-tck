@@ -1,5 +1,5 @@
 {
-  "section": "syntax/root",
+  "section": "syntax/root-section",
   "ramlversion": "1.0",
   "tests": [
     {
