@@ -16,8 +16,8 @@
   </head>
   <body>
     <h1>Test Report - JS Parser v1.1.15</h1>
-    <span>total # of tests: 135</span><br>
-    <span style="color: red">number of test failed: 1</span>
+    <span>total # of tests: 136</span><br>
+    <span style="color: green">no tests failed</span>
     <p>
     <a href="#semantic-data-types-scalar-number">semantic/data-types/scalar/number</a><br>
     <a href="#semantic-data-types-scalar-string">semantic/data-types/scalar/string</a><br>
@@ -115,11 +115,19 @@
         <th></th>
       </tr>
         <tr>
-          <td style="width: 100%">a root RAML document must not be valid if a referenced library is invalid</td>
+          <td style="width: 100%">a root RAML document must not be valid when it references an invalid type from a library</td>
           <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">a root RAML document must be valid when it references a valid type from a library even when the library contains validation errors</td>
+          <td>true</td>
           <td>true</td>
           <td style="text-align: center">
-              <img src="fail.jpg" style="width: 32px; height: 32px" />
+              <img src="success.png" style="width: 32px; height: 32px" />
           </td>
         </tr>
     </table>
