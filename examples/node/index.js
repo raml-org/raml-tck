@@ -116,6 +116,7 @@ function executeTests(file, testDir) {
 }
 
 function isValidRAML(ramlPath) {
+  console.log(ramlPath);
   //initial loading
   var syncParseResult = raml1Parser.loadApiSync(path.resolve(__dirname, ramlPath), {
       rejectOnErrors: false

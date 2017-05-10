@@ -1,0 +1,14 @@
+{
+  "section": "syntax/annotations",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "annotating individual examples using 'value' facet must be possible",
+      "input": "annotate-individual-examples.raml",
+      "valid": true,
+      "tags": [
+        "annotation", "example"
+      ]
+    }
+  ]
+}
