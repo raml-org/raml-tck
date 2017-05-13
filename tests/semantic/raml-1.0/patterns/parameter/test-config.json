@@ -1,0 +1,14 @@
+{
+  "section": "semantic/patterns/parameter",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "using a parameter as a key should be valid inside traits",
+      "input": "parameter-as-key-traits.raml",
+      "valid": true,
+      "tags": [
+        "trait", "parameter"
+      ]
+    }
+  ]
+}
