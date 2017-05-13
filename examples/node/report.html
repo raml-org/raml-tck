@@ -16,13 +16,14 @@
   </head>
   <body>
     <h1>Test Report - JS Parser v1.1.21</h1>
-    <span>total # of tests: 139</span><br>
-    <span style="color: green">no tests failed</span>
+    <span>total # of tests: 140</span><br>
+    <span style="color: red">number of test failed: 1</span>
     <p>
     <a href="#semantic-data-types-scalar-number">semantic/data-types/scalar/number</a><br>
     <a href="#semantic-data-types-scalar-string">semantic/data-types/scalar/string</a><br>
     <a href="#semantic-libraries">semantic/libraries</a><br>
     <a href="#semantic-methods">semantic/methods</a><br>
+    <a href="#semantic-patterns-parameter">semantic/patterns/parameter</a><br>
     <a href="#semantic-patterns-resource-types">semantic/patterns/resource-types</a><br>
     <a href="#semantic-root-section">semantic/root-section</a><br>
     <a href="#spec-examples">spec-examples</a><br>
@@ -149,6 +150,24 @@
           <td>false</td>
           <td style="text-align: center">
               <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="semantic-patterns-parameter"></a>semantic/patterns/parameter</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">using a parameter as a key should be valid inside traits</td>
+          <td>true</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="fail.jpg" style="width: 32px; height: 32px" />
           </td>
         </tr>
     </table>
