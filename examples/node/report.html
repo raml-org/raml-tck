@@ -16,11 +16,13 @@
   </head>
   <body>
     <h1>Test Report - JS Parser v1.1.21</h1>
-    <span>total # of tests: 142</span><br>
-    <span style="color: red">number of test failed: 1</span>
+    <span>total # of tests: 149</span><br>
+    <span style="color: red">number of test failed: 2</span>
     <p>
+    <a href="#semantic-annotations">semantic/annotations</a><br>
     <a href="#semantic-data-types-scalar-number">semantic/data-types/scalar/number</a><br>
     <a href="#semantic-data-types-scalar-string">semantic/data-types/scalar/string</a><br>
+    <a href="#semantic-default-media-type">semantic/default-media-type</a><br>
     <a href="#semantic-libraries">semantic/libraries</a><br>
     <a href="#semantic-methods">semantic/methods</a><br>
     <a href="#semantic-patterns-parameter">semantic/patterns/parameter</a><br>
@@ -32,8 +34,27 @@
     <a href="#syntax-data-types-object">syntax/data-types/object</a><br>
     <a href="#syntax-data-types-scalar-array">syntax/data-types/scalar/array</a><br>
     <a href="#syntax-data-types-schemas-json">syntax/data-types/schemas/json</a><br>
+    <a href="#syntax-data-types">syntax/data-types</a><br>
     <a href="#syntax-responses">syntax/responses</a><br>
     <a href="#syntax-root-section">syntax/root-section</a><br>
+    <p>
+    <h2><a name="semantic-annotations"></a>semantic/annotations</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">annotation should be flagged wrong if you use a wrong enum value inside an instance of this annotation</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
     <p>
     <h2><a name="semantic-data-types-scalar-number"></a>semantic/data-types/scalar/number</h2>
     <table border="1">
@@ -111,6 +132,40 @@
         </tr>
     </table>
     <p>
+    <h2><a name="semantic-default-media-type"></a>semantic/default-media-type</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">it should not be allowed to define a node under body AND override the default media type at the same time</td>
+          <td>false</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using default media type, you should be allowed to leave the explicit definition of the media type out and start to define the payload shape</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using default media type, you are still allowed to override that media type with an explicit media type</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
     <h2><a name="semantic-libraries"></a>semantic/libraries</h2>
     <table border="1">
       <tr>
@@ -164,7 +219,15 @@
         <th></th>
       </tr>
         <tr>
-          <td style="width: 100%">using a parameter as a key should be valid inside traits</td>
+          <td style="width: 100%">using a parameter as a key must be valid inside traits</td>
+          <td>true</td>
+          <td>false</td>
+          <td style="text-align: center">
+              <img src="fail.jpg" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">using parameterizing media type in resource types must be valid</td>
           <td>true</td>
           <td>false</td>
           <td style="text-align: center">
@@ -1125,6 +1188,32 @@
         </tr>
         <tr>
           <td style="width: 100%">type definitions need to allow JSON schemas using the shortcut syntax</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+    </table>
+    <p>
+    <h2><a name="syntax-data-types"></a>syntax/data-types</h2>
+    <table border="1">
+      <tr>
+        <th>Description</th>
+        <th>Expected</th>
+        <th>Actual</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td style="width: 100%">explicitly define the type using the `type:` node</td>
+          <td>true</td>
+          <td>true</td>
+          <td style="text-align: center">
+              <img src="success.png" style="width: 32px; height: 32px" />
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 100%">implicitly define the type without using the `type:` node which should be equivalent to the explicit form</td>
           <td>true</td>
           <td>true</td>
           <td style="text-align: center">

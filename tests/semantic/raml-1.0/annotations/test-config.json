@@ -1,0 +1,14 @@
+{
+  "section": "semantic/annotations",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "annotation should be flagged wrong if you use a wrong enum value inside an instance of this annotation",
+      "input": "invalid-annotation-instance-enum.raml",
+      "valid": false,
+      "tags": [
+        "annotation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+#%RAML 1.0
+title: Invalid annotation instance using a wrong enum value
+
+annotationTypes:
+  test:
+     properties:
+      items:
+        type: string
+        enum: [W,A]
+(test):
+  items: E

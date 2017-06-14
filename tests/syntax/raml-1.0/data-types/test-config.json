@@ -1,0 +1,22 @@
+{
+  "section": "syntax/data-types",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "explicitly define the type using the `type:` node",
+      "input": "explicitly-define-type.raml",
+      "valid": true,
+      "tags": [
+        "type"
+      ]
+    },
+    {
+      "description": "implicitly define the type without using the `type:` node which should be equivalent to the explicit form",
+      "input": "implicitly-define-type.raml",
+      "valid": true,
+      "tags": [
+        "type"
+      ]
+    }
+  ]
+}

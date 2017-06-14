@@ -1,0 +1,30 @@
+{
+  "section": "semantic/default-media-type",
+  "ramlversion": "1.0",
+  "tests": [
+    {
+      "description": "it should not be allowed to define a node under body AND override the default media type at the same time",
+      "input": "basic-bad.raml",
+      "valid": false,
+      "tags": [
+        "default media type"
+      ]
+    },
+    {
+      "description": "using default media type, you should be allowed to leave the explicit definition of the media type out and start to define the payload shape",
+      "input": "basic-ok-1.raml",
+      "valid": true,
+      "tags": [
+        "default media type"
+      ]
+    },
+    {
+      "description": "using default media type, you are still allowed to override that media type with an explicit media type",
+      "input": "basic-ok-2.raml",
+      "valid": true,
+      "tags": [
+        "default media type"
+      ]
+    }
+  ]
+}
