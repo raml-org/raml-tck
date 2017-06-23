@@ -17,6 +17,14 @@
       "tags": [
         "type"
       ]
+    },
+    {
+      "description": "'usage' must not be a valid node inside a type declaration",
+      "input": "invalid-usage-node.raml",
+      "valid": false,
+      "tags": [
+        "type"
+      ]
     }
   ]
 }
