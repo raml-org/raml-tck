@@ -1,0 +1,4 @@
+This "amf/2.0.0" will be used to start adding test for AMF in "TCK" format.
+
+Some work should be done afterwards to include this in a more 'native' way for TCK.
+
