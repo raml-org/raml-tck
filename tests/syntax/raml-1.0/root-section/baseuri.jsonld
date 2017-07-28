@@ -1,0 +1,31 @@
+[
+  {
+    "@id": "http://raml.org/test",
+    "@type": [
+      "http://raml.org/vocabularies/document#Document",
+      "http://raml.org/vocabularies/document#Fragment",
+      "http://raml.org/vocabularies/document#Module",
+      "http://raml.org/vocabularies/document#Unit"
+    ],
+    "http://raml.org/vocabularies/document#encodes": [
+      {
+        "@id": "http://raml.org/test#/api-documentation",
+        "@type": [
+          "http://schema.org/WebAPI",
+          "http://raml.org/vocabularies/document#DomainElement",
+          "http://raml.org/vocabularies/document#RootDomainElement"
+        ],
+        "http://raml.org/vocabularies/http#host": [
+          {
+            "@value": "api.example.com"
+          }
+        ],
+        "http://schema.org/name": [
+          {
+            "@value": "test"
+          }
+        ]
+      }
+    ]
+  }
+]
