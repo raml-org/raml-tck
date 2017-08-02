@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "Github v3 example inside the 'The Root of the Document' section",
-      "input": "root.raml",
+      "input": "root",
       "valid": true,
       "tags": [
         "general"
@@ -12,7 +12,7 @@
     },
     {
       "description": "RAML that illustrates how to use 'value' in 'example'",
-      "input": "additional-facets-single-example.raml",
+      "input": "additional-facets-single-example",
       "valid": true,
       "tags": [
         "type", "example"
@@ -20,7 +20,7 @@
     },
     {
       "description": "restricting all additional properties to be string.",
-      "input": "additional-properties.raml",
+      "input": "additional-properties",
       "valid": true,
       "tags": [
         "type", "additional property", "object"
@@ -28,7 +28,7 @@
     },
     {
       "description": "annotating scalar node",
-      "input": "annotating-scalar-nodes.raml",
+      "input": "annotating-scalar-nodes",
       "valid": true,
       "tags": [
         "annotation", "scalar node"
@@ -36,7 +36,7 @@
     },
     {
       "description": "applying some restrictions on the allowed targets of annotations",
-      "input": "annotations-targets.raml",
+      "input": "annotations-targets",
       "valid": true,
       "tags": [
         "annotation", "allowed target"
@@ -44,7 +44,7 @@
     },
     {
       "description": "annotation type declarations and the application of the annotations",
-      "input": "annotations.raml",
+      "input": "annotations",
       "valid": true,
       "tags": [
         "annotation"
@@ -52,7 +52,7 @@
     },
     {
       "description": "declaration and use of a 'testHarness' annotation that should be a string value",
-      "input": "apply-annotations-1.raml",
+      "input": "apply-annotations-1",
       "valid": true,
       "tags": [
         "annotation"
@@ -60,7 +60,7 @@
     },
     {
       "description": "implicit, default declaration of the value type when there is no explicit type declaration",
-      "input": "apply-annotations-2.raml",
+      "input": "apply-annotations-2",
       "valid": true,
       "tags": [
         "annotation"
@@ -68,7 +68,7 @@
     },
     {
       "description": "example on how default media types get automatically applied or in the /send resources overriden",
-      "input": "apply-default-media-type.raml",
+      "input": "apply-default-media-type",
       "valid": true,
       "tags": [
         "media type"
@@ -76,7 +76,7 @@
     },
     {
       "description": "application of resource types and traits",
-      "input": "apply-resourcetypes-traits.raml",
+      "input": "apply-resourcetypes-traits",
       "valid": true,
       "tags": [
         "trait", "resource type"
@@ -84,7 +84,7 @@
     },
     {
       "description": "how to use 'null' to indicate that a method can be called without applying any security scheme",
-      "input": "apply-security-scheme-null.raml",
+      "input": "apply-security-scheme-null",
       "valid": true,
       "tags": [
         "security scheme"
@@ -92,7 +92,7 @@
     },
     {
       "description": "how to apply a security scheme to a method",
-      "input": "apply-security-schemes.raml",
+      "input": "apply-security-schemes",
       "valid": true,
       "tags": [
         "security scheme"
@@ -100,7 +100,7 @@
     },
     {
       "description": "how to use a parameter inside a security scheme",
-      "input": "apply-security-scheme-parameter.raml",
+      "input": "apply-security-scheme-parameter",
       "valid": true,
       "tags": [
         "security scheme"
@@ -108,7 +108,7 @@
     },
     {
       "description": "use of an invalid scope 'GUEST' which is not defined inside the security scheme",
-      "input": "apply-security-scheme-invalid-scope.raml",
+      "input": "apply-security-scheme-invalid-scope",
       "valid": false,
       "tags": [
         "security scheme", "scopes"
@@ -116,7 +116,7 @@
     },
     {
       "description": "how to define an array without type expression",
-      "input": "array-type-expanded.raml",
+      "input": "array-type-expanded",
       "valid": true,
       "tags": [
         "type", "array"
@@ -124,7 +124,7 @@
     },
     {
       "description": "type using array type expression and example",
-      "input": "array-type.raml",
+      "input": "array-type",
       "valid": true,
       "tags": [
         "type", "array", "example"
@@ -132,7 +132,7 @@
     },
     {
       "description": "uri parameter as an array",
-      "input": "array-uri-parameter.raml",
+      "input": "array-uri-parameter",
       "valid": true,
       "tags": [
         "array", "uri parameter"
@@ -140,7 +140,7 @@
     },
     {
       "description": "how to define a base URI parameter",
-      "input": "base-uri-parameter.raml",
+      "input": "base-uri-parameter",
       "valid": true,
       "tags": [
         "base uri parameter"
@@ -148,7 +148,7 @@
     },
     {
       "description": "'version' as base URI template does not need any base URI parameter",
-      "input": "base-uri-template.raml",
+      "input": "base-uri-template",
       "valid": true,
       "tags": [
         "base uri parameter"
@@ -156,7 +156,7 @@
     },
     {
       "description": "various combinations of both default and non-default media types, and both data type declarations and references",
-      "input": "bodies.raml",
+      "input": "bodies",
       "valid": true,
       "tags": [
         "body", "default media type", "external schema"
@@ -164,7 +164,7 @@
     },
     {
       "description": "simple boolean type definition",
-      "input": "boolean-type.raml",
+      "input": "boolean-type",
       "valid": true,
       "tags": [
         "type", "scalar", "boolean"
@@ -172,7 +172,7 @@
     },
     {
       "description": "complex example on using single or multiple example(s)",
-      "input": "complex-examples.raml",
+      "input": "complex-examples",
       "valid": true,
       "tags": [
         "type", "example"
@@ -180,7 +180,7 @@
     },
     {
       "description": "headers inheriting from a trait, allowing multiple instances of a header, specifying examples, and overriding the headers when applied to a method and a resource",
-      "input": "complex-headers.raml",
+      "input": "complex-headers",
       "valid": true,
       "tags": [
         "header", "trait", "example"
@@ -188,7 +188,7 @@
     },
     {
       "description": "all date types with examples",
-      "input": "date-types.raml",
+      "input": "date-types",
       "valid": true,
       "tags": [
         "type", "scalar", "date", "example"
@@ -196,7 +196,7 @@
     },
     {
       "description": "an array of default media type",
-      "input": "default-media-types-multiple.raml",
+      "input": "default-media-types-multiple",
       "valid": true,
       "tags": [
         "default media type"
@@ -204,7 +204,7 @@
     },
     {
       "description": "single default media type",
-      "input": "default-media-types-single.raml",
+      "input": "default-media-types-single",
       "valid": true,
       "tags": [
         "default media type"
@@ -212,7 +212,7 @@
     },
     {
       "description": "apply global default security scheme",
-      "input": "default-security.raml",
+      "input": "default-security",
       "valid": true,
       "tags": [
         "security", "default security", "security scheme"
@@ -220,7 +220,7 @@
     },
     {
       "description": "use 'any' default type in combination with default media type",
-      "input": "default-type-any-2.raml",
+      "input": "default-type-any-2",
       "valid": true,
       "tags": [
         "type", "default type", "default media type", "body"
@@ -228,7 +228,7 @@
     },
     {
       "description": "use 'any' default type",
-      "input": "default-type-any.raml",
+      "input": "default-type-any",
       "valid": true,
       "tags": [
         "type", "default type", "body"
@@ -236,7 +236,7 @@
     },
     {
       "description": "no need to define 'type: object' when 'properties' facet is being used",
-      "input": "default-type-object.raml",
+      "input": "default-type-object",
       "valid": true,
       "tags": [
         "type", "default type", "object"
@@ -244,7 +244,7 @@
     },
     {
       "description": "no need to define 'type: string'",
-      "input": "default-type-string.raml",
+      "input": "default-type-string",
       "valid": true,
       "tags": [
         "type", "default type", "scalar", "string"
@@ -252,7 +252,7 @@
     },
     {
       "description": "object type definition",
-      "input": "default-types-1.raml",
+      "input": "default-types-1",
       "valid": true,
       "tags": [
         "type", "object"
@@ -260,7 +260,7 @@
     },
     {
       "description": "define URI parameter",
-      "input": "define-uri-parameters.raml",
+      "input": "define-uri-parameters",
       "valid": true,
       "tags": [
         "type", "uri paramater"
@@ -268,7 +268,7 @@
     },
     {
       "description": "define 'documentation' node",
-      "input": "documentation.raml",
+      "input": "documentation",
       "valid": true,
       "tags": [
         "documentation"
@@ -276,7 +276,7 @@
     },
     {
       "description": "duplicated URIs which is invalid in RAML",
-      "input": "duplicated-uris-invalid.raml",
+      "input": "duplicated-uris-invalid",
       "valid": false,
       "tags": [
         "uri"
@@ -284,7 +284,7 @@
     },
     {
       "description": "'Extension' fragment that adds an additional post method with description to '/books'",
-      "input": "extension-post.raml",
+      "input": "extension-post",
       "valid": true,
       "tags": [
         "extension", "fragment"
@@ -292,7 +292,7 @@
     },
     {
       "description": "invalid example on extending a JSON schema defined type",
-      "input": "external-type-extend-invalid.raml",
+      "input": "external-type-extend-invalid",
       "valid": false,
       "tags": [
         "schema", "type", "type expression"
@@ -300,7 +300,7 @@
     },
     {
       "description": "invalid example on adding facets to a JSON schema defined type",
-      "input": "external-types-invalid.raml",
+      "input": "external-types-invalid",
       "valid": false,
       "tags": [
         "schema", "type", "facet"
@@ -308,7 +308,7 @@
     },
     {
       "description": "using a JSON schema defined type",
-      "input": "external-types.raml",
+      "input": "external-types",
       "valid": true,
       "tags": [
         "schema", "type"
@@ -316,7 +316,7 @@
     },
     {
       "description": "chaining library namespaces is not allowed",
-      "input": "libraries-invalid-chaining.raml",
+      "input": "libraries-invalid-chaining",
       "valid": false,
       "tags": [
         "library", "trait", "resource type", "type"
@@ -324,7 +324,7 @@
     },
     {
       "description": "simply including another fragment",
-      "input": "fragments-simple.raml",
+      "input": "fragments-simple",
       "valid": true,
       "tags": [
         "fragment", "include"
@@ -332,7 +332,7 @@
     },
     {
       "description": "include a simple YAML map from another file",
-      "input": "includes.raml",
+      "input": "includes",
       "valid": true,
       "tags": [
         "fragment", "include"
@@ -340,7 +340,7 @@
     },
     {
       "description": "inline type declaration",
-      "input": "inline-type-declaration.raml",
+      "input": "inline-type-declaration",
       "valid": true,
       "tags": [
         "type", "body"
@@ -348,7 +348,7 @@
     },
     {
       "description": "simple integer type with all available facets",
-      "input": "integer-type.raml",
+      "input": "integer-type",
       "valid": true,
       "tags": [
         "type", "scalar", "integer"
@@ -356,7 +356,7 @@
     },
     {
       "description": "complex type definition using various types and facets",
-      "input": "introduction-types-complex.raml",
+      "input": "introduction-types-complex",
       "valid": true,
       "tags": [
         "type"
@@ -364,7 +364,7 @@
     },
     {
       "description": "simple object type definition used in a body",
-      "input": "introduction-types.raml",
+      "input": "introduction-types",
       "valid": true,
       "tags": [
         "type", "body", "object"
@@ -372,7 +372,7 @@
     },
     {
       "description": "discriminator is not allowed in any inline type declaration and for union types",
-      "input": "invalid-discriminator-usage.raml",
+      "input": "invalid-discriminator-usage",
       "valid": false,
       "tags": [
         "type", "discriminator", "object", "union"
@@ -380,7 +380,7 @@
     },
     {
       "description": "use library inside resource type fragment",
-      "input": "libraries-resourcetype.raml",
+      "input": "libraries-resourcetype",
       "valid": true,
       "tags": [
         "resource type", "fragment", "library"
@@ -388,7 +388,7 @@
     },
     {
       "description": "simple library definition",
-      "input": "libraries.raml",
+      "input": "libraries",
       "valid": true,
       "tags": [
         "fragment", "library"
@@ -396,7 +396,7 @@
     },
     {
       "description": "simple book library example",
-      "input": "librarybooks.raml",
+      "input": "librarybooks",
       "valid": true,
       "tags": [
         "general"
@@ -404,7 +404,7 @@
     },
     {
       "description": "multiple example definition",
-      "input": "multiple-examples.raml",
+      "input": "multiple-examples",
       "valid": true,
       "tags": [
         "type", "example"
@@ -412,7 +412,7 @@
     },
     {
       "description": "multiple inheritance on two objects",
-      "input": "multiple-inheritance-1.raml",
+      "input": "multiple-inheritance-1",
       "valid": true,
       "tags": [
         "type", "object", "multiple inheritance", "type expression"
@@ -420,7 +420,7 @@
     },
     {
       "description": "multiple inheritance on two 'number' types both with not conflicting facets",
-      "input": "multiple-inheritance-2.raml",
+      "input": "multiple-inheritance-2",
       "valid": true,
       "tags": [
         "type", "scalar", "number", "facet", "multiple inheritance", "type expression"
@@ -428,7 +428,7 @@
     },
     {
       "description": "multiple inheritance on two 'number' types both with conflicting facets",
-      "input": "multiple-inheritance-3-invalid.raml",
+      "input": "multiple-inheritance-3-invalid",
       "valid": false,
       "tags": [
         "type", "scalar", "number", "facet", "multiple inheritance", "type expression"
@@ -436,7 +436,7 @@
     },
     {
       "description": "nested resources",
-      "input": "nested-resources.raml",
+      "input": "nested-resources",
       "valid": true,
       "tags": [
         "resource"
@@ -444,7 +444,7 @@
     },
     {
       "description": "an instance cannot have an empty / no valued node",
-      "input": "null-type-invalid.raml",
+      "input": "null-type-invalid",
       "valid": false,
       "tags": [
         "nil", "type"
@@ -452,7 +452,7 @@
     },
     {
       "description": "using 'nil' with a string union",
-      "input": "null-type-union.raml",
+      "input": "null-type-union",
       "valid": true,
       "tags": [
         "nil", "type"
@@ -460,7 +460,7 @@
     },
     {
       "description": "using 'nil' as a type",
-      "input": "null-type.raml",
+      "input": "null-type",
       "valid": true,
       "tags": [
         "nil", "type"
@@ -468,7 +468,7 @@
     },
     {
       "description": "using 'number' as a type and apply all available facets",
-      "input": "number-type.raml",
+      "input": "number-type",
       "valid": true,
       "tags": [
         "number", "scalar", "type"
@@ -476,7 +476,7 @@
     },
     {
       "description": "using full expression to define optional properties",
-      "input": "object-type-long.raml",
+      "input": "object-type-long",
       "valid": true,
       "tags": [
         "object", "type"
@@ -484,7 +484,7 @@
     },
     {
       "description": "using syntactical sugar to define optional properties",
-      "input": "object-type-short.raml",
+      "input": "object-type-short",
       "valid": true,
       "tags": [
         "object", "type"
@@ -492,7 +492,7 @@
     },
     {
       "description": "using overlays to add additional information to an existing RAML",
-      "input": "overlay-monitoring.raml",
+      "input": "overlay-monitoring",
       "valid": true,
       "tags": [
         "overlay", "fragment"
@@ -500,7 +500,7 @@
     },
     {
       "description": "using overlays to change nodes from an existing RAML",
-      "input": "overlay-spanish.raml",
+      "input": "overlay-spanish",
       "valid": true,
       "tags": [
         "overlay", "fragment"
@@ -508,7 +508,7 @@
     },
     {
       "description": "using 'HTTP' and 'HTTPS' protocols",
-      "input": "protocols.raml",
+      "input": "protocols",
       "valid": true,
       "tags": [
         "protocol"
@@ -516,7 +516,7 @@
     },
     {
       "description": "'get' method using HTTP query parameters",
-      "input": "query-parameter.raml",
+      "input": "query-parameter",
       "valid": true,
       "tags": [
         "query parameter"
@@ -524,7 +524,7 @@
     },
     {
       "description": "union types and extended multiple types are used to constrain the query string to specific alternatives",
-      "input": "query-string.raml",
+      "input": "query-string",
       "valid": true,
       "tags": [
         "query string", "type", "union"
@@ -532,7 +532,7 @@
     },
     {
       "description": "resource type and a file that includes this fragment file",
-      "input": "resolve-includes.raml",
+      "input": "resolve-includes",
       "valid": true,
       "tags": [
         "include"
@@ -540,7 +540,7 @@
     },
     {
       "description": "resource type with an optional HTTP method that defines a required header and a custom parameter called",
-      "input": "resourcetypes-optionalmethods.raml",
+      "input": "resourcetypes-optionalmethods",
       "valid": true,
       "tags": [
         "resource type", "http method", "custom parameter"
@@ -548,7 +548,7 @@
     },
     {
       "description": "passing parameter values to resource types and traits",
-      "input": "resourcetypes-traits-parameter.raml",
+      "input": "resourcetypes-traits-parameter",
       "valid": true,
       "tags": [
         "resource type", "traits", "custom parameter"
@@ -556,7 +556,7 @@
     },
     {
       "description": "using functions and reserved parameters inside resource types and traits",
-      "input": "resourcetypes-traits-parameterfunctions.raml",
+      "input": "resourcetypes-traits-parameterfunctions",
       "valid": true,
       "tags": [
         "resource type", "traits", "custom parameter", "function"
@@ -564,7 +564,7 @@
     },
     {
       "description": "declaring resource types and traits",
-      "input": "resourcetypes-traits.raml",
+      "input": "resourcetypes-traits",
       "valid": true,
       "tags": [
         "resource type", "traits"
@@ -572,7 +572,7 @@
     },
     {
       "description": "define responses",
-      "input": "responses.raml",
+      "input": "responses",
       "valid": true,
       "tags": [
         "responses"
@@ -580,7 +580,7 @@
     },
     {
       "description": "resource types and traits are defined in external files that are included",
-      "input": "resourcetypes-traits-external.raml",
+      "input": "resourcetypes-traits-external",
       "valid": true,
       "tags": [
         "resource type", "trait"
@@ -588,7 +588,7 @@
     },
     {
       "description": "Basic Authentication security scheme",
-      "input": "security-schemes-basic.raml",
+      "input": "security-schemes-basic",
       "valid": true,
       "tags": [
         "security scheme", "basic authentication"
@@ -596,7 +596,7 @@
     },
     {
       "description": "Digest Authentication security scheme",
-      "input": "security-schemes-digest.raml",
+      "input": "security-schemes-digest",
       "valid": true,
       "tags": [
         "security scheme", "digest authentication"
@@ -604,7 +604,7 @@
     },
     {
       "description": "OAuth 1.0 security scheme",
-      "input": "security-schemes-oauth1.raml",
+      "input": "security-schemes-oauth1",
       "valid": true,
       "tags": [
         "security scheme", "oauth 1.0"
@@ -612,7 +612,7 @@
     },
     {
       "description": "OAuth 2.0 security scheme",
-      "input": "security-schemes-oauth2.raml",
+      "input": "security-schemes-oauth2",
       "valid": true,
       "tags": [
         "security scheme", "oauth 2.0"
@@ -620,7 +620,7 @@
     },
     {
       "description": "Pass Through security scheme",
-      "input": "security-schemes-pass.raml",
+      "input": "security-schemes-pass",
       "valid": true,
       "tags": [
         "security scheme", "pass through"
@@ -628,7 +628,7 @@
     },
     {
       "description": "Custom security scheme",
-      "input": "security-schemes-xother.raml",
+      "input": "security-schemes-xother",
       "valid": true,
       "tags": [
         "security scheme", "custom security scheme"
@@ -636,7 +636,7 @@
     },
     {
       "description": "define authentication using OAuth 2.0 and OAuth 1.0 security schemes",
-      "input": "security-schemes.raml",
+      "input": "security-schemes",
       "valid": true,
       "tags": [
         "security scheme"
@@ -644,7 +644,7 @@
     },
     {
       "description": "define simple headers",
-      "input": "simple-header.raml",
+      "input": "simple-header",
       "valid": true,
       "tags": [
         "headers"
@@ -652,7 +652,7 @@
     },
     {
       "description": "define a simple example",
-      "input": "single-example.raml",
+      "input": "single-example",
       "valid": true,
       "tags": [
         "type", "example"
@@ -660,7 +660,7 @@
     },
     {
       "description": "define a 'string' type with all allowed facets",
-      "input": "string-type.raml",
+      "input": "string-type",
       "valid": true,
       "tags": [
         "type", "scalar", "string"
@@ -668,7 +668,7 @@
     },
     {
       "description": "usage of template URIs",
-      "input": "template-uri-1.raml",
+      "input": "template-uri-1",
       "valid": true,
       "tags": [
         "template uri"
@@ -676,7 +676,7 @@
     },
     {
       "description": "multiple trailing slashes shouldn't raise issues",
-      "input": "trailing-slashes.raml",
+      "input": "trailing-slashes",
       "valid": true,
       "tags": [
         "template uri"
@@ -684,7 +684,7 @@
     },
     {
       "description": "define enum values of a query parameter in both trait and resource",
-      "input": "traits-merge-enumlist.raml",
+      "input": "traits-merge-enumlist",
       "valid": true,
       "tags": [
         "trait", "enum", "resource"
@@ -692,7 +692,7 @@
     },
     {
       "description": "extending using a type expression combined with unions and arrays",
-      "input": "type-expression.raml",
+      "input": "type-expression",
       "valid": true,
       "tags": [
         "type expression", "type", "union", "array"
@@ -700,7 +700,7 @@
     },
     {
       "description": "optional properties using '?'",
-      "input": "type-names-question-mark.raml",
+      "input": "type-names-question-mark",
       "valid": true,
       "tags": [
         "type", "optional properties", "object"
@@ -708,7 +708,7 @@
     },
     {
       "description": "'schemas' and 'types' as well as 'schema' and 'type' are mutual exclusive",
-      "input": "type-schema-invalid.raml",
+      "input": "type-schema-invalid",
       "valid": false,
       "tags": [
         "type", "schema"
@@ -716,7 +716,7 @@
     },
     {
       "description": "pattern properties restricting the property names of any additional properties inside a type instance",
-      "input": "types-pattern-properties.raml",
+      "input": "types-pattern-properties",
       "valid": true,
       "tags": [
         "type", "pattern property", "object"
@@ -724,7 +724,7 @@
     },
     {
       "description": "type definition with union and multiple inheritance",
-      "input": "union-type-multiple-inheritance.raml",
+      "input": "union-type-multiple-inheritance",
       "valid": true,
       "tags": [
         "type", "union", "multiple inheritance"
@@ -732,7 +732,7 @@
     },
     {
       "description": "type definition using simple union between two types",
-      "input": "union-type.raml",
+      "input": "union-type",
       "valid": true,
       "tags": [
         "type", "union"
@@ -740,7 +740,7 @@
     },
     {
       "description": "resources and nested resources with URI parameters",
-      "input": "uri-parameters-1.raml",
+      "input": "uri-parameters-1",
       "valid": true,
       "tags": [
         "resource", "uri paramater"
@@ -748,7 +748,7 @@
     },
     {
       "description": "using predefined 'ext' for defining media types in the URL",
-      "input": "uri-parameters-ext.raml",
+      "input": "uri-parameters-ext",
       "valid": true,
       "tags": [
         "resource", "uri paramater"
@@ -756,7 +756,7 @@
     },
     {
       "description": "allowed duplicated URI templates",
-      "input": "uri-templates-allowed.raml",
+      "input": "uri-templates-allowed",
       "valid": true,
       "tags": [
         "resource", "uri template"
@@ -764,7 +764,7 @@
     },
     {
       "description": "define user-defined facets",
-      "input": "user-defined-facets.raml",
+      "input": "user-defined-facets",
       "valid": true,
       "tags": [
         "type", "custom facet"
@@ -772,7 +772,7 @@
     },
     {
       "description": "define 'discriminator' in object type",
-      "input": "using-discriminator.raml",
+      "input": "using-discriminator",
       "valid": true,
       "tags": [
         "type", "object", "discriminator"
@@ -780,7 +780,7 @@
     },
     {
       "description": "define 'discriminatorValue' in object type",
-      "input": "using-discriminatorvalue.raml",
+      "input": "using-discriminatorvalue",
       "valid": true,
       "tags": [
         "type", "object", "discriminator value"
@@ -788,7 +788,7 @@
     },
     {
       "description": "using 'xml' facet",
-      "input": "xml-facet.raml",
+      "input": "xml-facet",
       "valid": true,
       "tags": [
         "type", "xml facet"

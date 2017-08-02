@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "'schemas' and 'types' are mutual exclusive",
-      "input": "schemas-types-exclusive-invalid.raml",
+      "input": "schemas-types-exclusive-invalid",
       "valid": false,
       "tags": [
         "type"

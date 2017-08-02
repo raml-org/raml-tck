@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "'minLength' must be equal or greater than zero",
-      "input": "minlength-with-negative-value.raml",
+      "input": "minlength-with-negative-value",
       "valid": false,
       "tags": [
         "type", "string", "scalar"
@@ -12,7 +12,7 @@
     },
     {
       "description": "'maxLength' must be equal or greater than zero",
-      "input": "maxlength-with-negative-value.raml",
+      "input": "maxlength-with-negative-value",
       "valid": false,
       "tags": [
         "type", "string", "scalar"

@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "queryString and queryParameters nodes are mutually exclusive: processors MUST NOT allow both to be specified, explicitly or implicitly, on the same method of the same resource",
-      "input": "queryString-queryParameter-mutual-exclusive.raml",
+      "input": "queryString-queryParameter-mutual-exclusive",
       "valid": false,
       "tags": [
         "method", "query string", "query parameter"

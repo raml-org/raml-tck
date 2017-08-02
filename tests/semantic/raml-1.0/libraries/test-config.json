@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "a root RAML document must not be valid when it references an invalid type from a library",
-      "input": "api-with-invalid-lib.raml",
+      "input": "api-with-invalid-lib",
       "valid": false,
       "tags": [
         "type", "library"
@@ -12,7 +12,7 @@
     },
     {
       "description": "a root RAML document must be valid when it references a valid type from a library even when the library contains validation errors",
-      "input": "api-with-valid-type-ref.raml",
+      "input": "api-with-valid-type-ref",
       "valid": true,
       "tags": [
         "type", "library"
