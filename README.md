@@ -56,7 +56,7 @@ Inside each `test-config.json` file is a single object containing information ab
 | Property | Description |
 |:--------|:-----------|
 | section | Contains a unique id for this section, usually the directory structure |
-| ramlVersion | The RAML version being covered by the test cases |
+| ramlversion | The RAML version being covered by the test cases (**Deprecated**) |
 | tests | Contains a single array containing objects. See table below. |
 
 `tests`
