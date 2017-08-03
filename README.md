@@ -35,7 +35,7 @@ Inside each `test-config.json` file is a single object containing information ab
   "tests": [
     {
       "description": "value of 'additionProperties' must be a boolean but is object",
-      "input": "additionalProperties-wrong-value.raml",
+      "input": "additionalProperties-wrong-value",
       "valid": false,
       "tags": [
         "type", "object", "additional property"
@@ -64,7 +64,7 @@ Inside each `test-config.json` file is a single object containing information ab
 | Property | Description |
 |:---------|:------------|
 | description | A simple description of a single test. |
-| input | Relative path to the file that's being tested. |
+| input | An ID that is used to identify the file(s) that's being tested. |
 | valid | Indicates what is expected. If it's `true`, a parser implementation shouldn't report any errors; and with `false` a parser should report errors. |
 | tags | A list of tags correspondent to a single test. Please see [common-tags.md](common-tags.md) for common used tags. |
 
