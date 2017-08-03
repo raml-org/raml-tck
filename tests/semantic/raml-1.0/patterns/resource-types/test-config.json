@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "include another file as a resource type parameter",
-      "input": "resourceTypes-parameter-include.raml",
+      "input": "resourceTypes-parameter-include",
       "valid": true,
       "tags": [
         "resource type", "include"
@@ -12,7 +12,7 @@
     },
     {
       "description": "https://github.com/raml-org/raml-java-parser/issues/340",
-      "input": "resourcetypes-ref.raml",
+      "input": "resourcetypes-ref",
       "valid": true,
       "tags": [
         "resource type"
@@ -20,7 +20,7 @@
     },
     {
       "description": "https://github.com/raml-org/raml-java-parser/issues/333",
-      "input": "chaining-functions-ref.raml",
+      "input": "chaining-functions-ref",
       "valid": true,
       "tags": [
         "resource type", "function"

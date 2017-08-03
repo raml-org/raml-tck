@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "type definitions need to allow JSON schemas using the `type:` node",
-      "input": "type-definition-using-json-schema.raml",
+      "input": "type-definition-using-json-schema",
       "valid": true,
       "tags": [
         "type", "json schema"
@@ -12,7 +12,7 @@
     },
     {
       "description": "type definitions need to allow JSON schemas using the shortcut syntax",
-      "input": "type-definition-using-json-schema-short.raml",
+      "input": "type-definition-using-json-schema-short",
       "valid": true,
       "tags": [
         "type", "json schema"

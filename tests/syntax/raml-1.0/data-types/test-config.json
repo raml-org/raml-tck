@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "explicitly define the type using the `type:` node",
-      "input": "explicitly-define-type.raml",
+      "input": "explicitly-define-type",
       "valid": true,
       "tags": [
         "type"
@@ -12,7 +12,7 @@
     },
     {
       "description": "implicitly define the type without using the `type:` node which should be equivalent to the explicit form",
-      "input": "implicitly-define-type.raml",
+      "input": "implicitly-define-type",
       "valid": true,
       "tags": [
         "type"
@@ -20,7 +20,7 @@
     },
     {
       "description": "'usage' must not be a valid node inside a type declaration",
-      "input": "invalid-usage-node.raml",
+      "input": "invalid-usage-node",
       "valid": false,
       "tags": [
         "type"

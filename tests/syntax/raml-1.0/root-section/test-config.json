@@ -4,7 +4,7 @@
   "tests": [
     {
       "description": "invalid usage of arrays as a value for 'resourceTypes'",
-      "input": "resourcetypes-invalid-array-value.raml",
+      "input": "resourcetypes-invalid-array-value",
       "valid": false,
       "tags": [
         "resource type"
@@ -12,7 +12,7 @@
     },
     {
       "description": "define 'baseUri' with a simple string",
-      "input": "baseuri.raml",
+      "input": "baseuri",
       "valid": true,
       "tags": [
         "base uri"
@@ -20,7 +20,7 @@
     },
     {
       "description": "define 'baseUri' using an object with 'value' facet that defines the base URI",
-      "input": "baseuri-with-value.raml",
+      "input": "baseuri-with-value",
       "valid": true,
       "tags": [
         "base uri"
@@ -28,7 +28,7 @@
     },
     {
       "description": "'name' should be an invalid facet inside the 'baseUri' scalar node",
-      "input": "baseuri-with-invalid-value.raml",
+      "input": "baseuri-with-invalid-value",
       "valid": false,
       "tags": [
         "base uri"
@@ -36,7 +36,7 @@
     },
     {
       "description": "define 'protocols' with uppercase 'HTTP' and 'HTTPS'",
-      "input": "protocols-with-valid-uppercase-values.raml",
+      "input": "protocols-with-valid-uppercase-values",
       "valid": true,
       "tags": [
         "protocol"
@@ -44,7 +44,7 @@
     },
     {
       "description": "define 'protocols' with lowercase 'http' and 'https'",
-      "input": "protocols-with-valid-lowercase-values.raml",
+      "input": "protocols-with-valid-lowercase-values",
       "valid": true,
       "tags": [
         "protocol"
@@ -52,7 +52,7 @@
     },
     {
       "description": "define 'protocols' with empty value",
-      "input": "protocols-with-empty-value.raml",
+      "input": "protocols-with-empty-value",
       "valid": true,
       "tags": [
         "protocol"
@@ -60,7 +60,7 @@
     },
     {
       "description": "define 'protocols' with an invalid value",
-      "input": "protocols-with-invalid-value.raml",
+      "input": "protocols-with-invalid-value",
       "valid": false,
       "tags": [
         "protocol"
@@ -68,7 +68,7 @@
     },
     {
       "description": "define 'protocols' with an invalid string value",
-      "input": "protocols-with-invalid-string-value.raml",
+      "input": "protocols-with-invalid-string-value",
       "valid": false,
       "tags": [
         "protocol"
@@ -76,7 +76,7 @@
     },
     {
       "description": "define 'title' as an array is not allowed",
-      "input": "title-with-invalid-array-value.raml",
+      "input": "title-with-invalid-array-value",
       "valid": false,
       "tags": [
         "title"
@@ -84,7 +84,7 @@
     },
     {
       "description": "'baseUri' contains incomplete URI template",
-      "input": "baseuri-invalid-uri.raml",
+      "input": "baseuri-invalid-uri",
       "valid": false,
       "tags": [
         "base uri"
@@ -92,7 +92,7 @@
     },
     {
       "description": "required 'title' is missing",
-      "input": "required-title-invalid.raml",
+      "input": "required-title-invalid",
       "valid": false,
       "tags": [
         "general"
@@ -100,7 +100,7 @@
     },
     {
       "description": "valid RAML document with at least 'title'",
-      "input": "required-title-valid.raml",
+      "input": "required-title-valid",
       "valid": true,
       "tags": [
         "general"
@@ -108,7 +108,7 @@
     },
     {
       "description": "define a single 'baseUriParameters'",
-      "input": "baseuriparameter.raml",
+      "input": "baseuriparameter",
       "valid": true,
       "tags": [
         "base uri parameter"
@@ -116,7 +116,7 @@
     },
     {
       "description": "baseUriParameter must never reference to a non existing type",
-      "input": "baseuriparameter-with-invalid-type.raml",
+      "input": "baseuriparameter-with-invalid-type",
       "valid": false,
       "tags": [
         "base uri parameter"
@@ -124,7 +124,7 @@
     },
     {
       "description": "baseUriParameter must follow any restrictions defined for data types",
-      "input": "baseuriparameter-with-invalid-property.raml",
+      "input": "baseuriparameter-with-invalid-property",
       "valid": false,
       "tags": [
         "base uri parameter", "type"
@@ -132,7 +132,7 @@
     },
     {
       "description": "a base URI parameter should not define a sequence",
-      "input": "baseuriparameter-with-invalid-sequence.raml",
+      "input": "baseuriparameter-with-invalid-sequence",
       "valid": false,
       "tags": [
         "base uri parameter", "type"
@@ -140,7 +140,7 @@
     },
     {
       "description": "value for 'title' included from markdown file" ,
-      "input": "title-included-from-md.raml",
+      "input": "title-included-from-md",
       "valid": true,
       "tags": [
         "general"
@@ -148,7 +148,7 @@
     },
     {
       "description": "facets at the root of a document that are not defined in the spec must not be allowed" ,
-      "input": "general-invalid-facets.raml",
+      "input": "general-invalid-facets",
       "valid": false,
       "tags": [
         "general"
@@ -156,7 +156,7 @@
     },
     {
       "description": "define 'title' as a map is not allowed",
-      "input": "title-with-invalid-map-value.raml",
+      "input": "title-with-invalid-map-value",
       "valid": false,
       "tags": [
         "title"
