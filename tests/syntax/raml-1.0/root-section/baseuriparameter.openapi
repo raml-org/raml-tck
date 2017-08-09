@@ -1,0 +1,20 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Test",
+    "version": ""
+  },
+  "host": "%7Ba%7D.myapi.org",
+  "schemes": [
+    "http"
+  ],
+  "x-baseUriParameters": [
+    {
+      "required": true,
+      "name": "a",
+      "description": "This is A",
+      "schema": "boolean"
+    }
+  ],
+  "paths": {}
+}
