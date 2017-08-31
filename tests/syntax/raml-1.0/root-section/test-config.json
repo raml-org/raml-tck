@@ -40,7 +40,8 @@
       "valid": true,
       "tags": [
         "protocol"
-      ]
+      ],
+      "comment": "Uppercase values for the protocols are not valid in OAS, ws and wss are valid in OAS and not in RAML, all are valid in AMF"
     },
     {
       "description": "define 'protocols' with lowercase 'http' and 'https'",
