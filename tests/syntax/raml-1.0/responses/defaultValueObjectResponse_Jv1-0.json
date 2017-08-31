@@ -1,0 +1,105 @@
+{
+    "@id": "http://raml.org/test",
+    "@type": [
+        "http://raml.org/vocabularies/document#Document",
+        "http://raml.org/vocabularies/document#Fragment",
+        "http://raml.org/vocabularies/document#Module",
+        "http://raml.org/vocabularies/document#Unit"
+    ],
+    "http://raml.org/vocabularies/document#encodes": [
+        {
+            "@id": "http://raml.org/test#/web-api",
+            "@type": [
+                "http://schema.org/WebAPI",
+                "http://raml.org/vocabularies/document#DomainElement"
+            ],
+            "http://schema.org/name": [
+                {
+                    "@value": "Test"
+                }
+            ],
+            "http://raml.org/vocabularies/http#endpoint": [
+                {
+                    "@id": "http://raml.org/test#/web-api/end-points/%2Fplanets",
+                    "@type": [
+                        "http://raml.org/vocabularies/http#EndPoint",
+                        "http://raml.org/vocabularies/document#DomainElement"
+                    ],
+                    "http://raml.org/vocabularies/http#path": [
+                        {
+                            "@value": "/planets"
+                        }
+                    ],
+                    "http://www.w3.org/ns/hydra/core#supportedOperation": [
+                        {
+                            "@id": "http://raml.org/test#/web-api/end-points/%2Fplanets/get",
+                            "@type": [
+                                "http://www.w3.org/ns/hydra/core#Operation",
+                                "http://raml.org/vocabularies/document#DomainElement"
+                            ],
+                            "http://www.w3.org/ns/hydra/core#method": [
+                                {
+                                    "@value": "get"
+                                }
+                            ],
+                            "http://www.w3.org/ns/hydra/core#returns": [
+                                {
+                                    "@id": "http://raml.org/test#/web-api/end-points/%2Fplanets/get/200",
+                                    "@type": [
+                                        "http://raml.org/vocabularies/http#Response",
+                                        "http://raml.org/vocabularies/document#DomainElement"
+                                    ],
+                                    "http://schema.org/name": [
+                                        {
+                                            "@value": "200"
+                                        }
+                                    ],
+                                    "http://www.w3.org/ns/hydra/core#statusCode": [
+                                        {
+                                            "@value": "200"
+                                        }
+                                    ],
+                                    "http://raml.org/vocabularies/http#payload": [
+                                        {
+                                            "@id": "http://raml.org/test#/web-api/end-points/%2Fplanets/get/200/application%2Fjson",
+                                            "@type": [
+                                                "http://raml.org/vocabularies/http#Payload",
+                                                "http://raml.org/vocabularies/document#DomainElement"
+                                            ],
+                                            "http://raml.org/vocabularies/http#mediaType": [
+                                                {
+                                                    "@value": "application/json"
+                                                }
+                                            ],
+                                            "http://raml.org/vocabularies/http#schema": [
+                                                {
+                                                    "@id": "http://raml.org/test#/web-api/end-points/%2Fplanets/get/200/application%2Fjson/shape",
+                                                    "@type": [
+                                                        "http://www.w3.org/ns/shacl#NodeShape",
+                                                        "http://www.w3.org/ns/shacl#Shape",
+                                                        "http://raml.org/vocabularies/shapes#Shape",
+                                                        "http://raml.org/vocabularies/shapes#ObjectShape"
+                                                    ],
+                                                    "http://www.w3.org/ns/shacl#defaultValue": [
+                                                        {
+                                                            "@type": "http://raml.org/vocabularies/payload#Object",
+                                                            "http://raml.org/vocabularies/payload#name": [
+                                                                {
+                                                                    "@value": "Christian"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

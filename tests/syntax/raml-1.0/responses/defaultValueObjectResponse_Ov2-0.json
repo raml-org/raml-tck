@@ -1,0 +1,25 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Test",
+    "version": ""
+  },
+  "paths": {
+    "/planets": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "default": {
+                "name": "Christian"
+              }
+            },
+            "x-media-type": "application/json"
+          }
+        }
+      }
+    }
+  }
+}
