@@ -1,0 +1,13 @@
+{
+  "swagger": "2.0",
+  "definitions": {
+    "Foo": {
+      "type": "object"
+    }
+  },
+  "info": {
+    "title": "Explicitly define the type using the `type` node",
+    "version": ""
+  },
+  "paths": {}
+}
