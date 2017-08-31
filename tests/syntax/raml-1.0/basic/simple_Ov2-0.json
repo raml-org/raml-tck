@@ -1,0 +1,29 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "hola",
+    "version": ""
+  },
+  "paths": {
+    "/top": {
+      "get": {
+        "description": "get something",
+        "responses": {
+          "default": {
+            "description": "",
+            "x-generated": true
+          }
+        }
+      },
+      "post": {
+        "responses": {
+          "default": {
+            "description": "",
+            "x-generated": true
+          }
+        }
+      }
+    },
+    "/top/child": {}
+  }
+}
