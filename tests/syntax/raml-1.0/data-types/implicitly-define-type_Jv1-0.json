@@ -1,0 +1,39 @@
+{
+    "@id": "http://raml.org/test",
+    "@type": [
+        "http://raml.org/vocabularies/document#Document",
+        "http://raml.org/vocabularies/document#Fragment",
+        "http://raml.org/vocabularies/document#Module",
+        "http://raml.org/vocabularies/document#Unit"
+    ],
+    "http://raml.org/vocabularies/document#declares": [
+        {
+            "@id": "http://raml.org/test#/definitions/Foo",
+            "@type": [
+                "http://www.w3.org/ns/shacl#NodeShape",
+                "http://www.w3.org/ns/shacl#Shape",
+                "http://raml.org/vocabularies/shapes#Shape",
+                "http://raml.org/vocabularies/shapes#ObjectShape"
+            ],
+            "http://schema.org/name": [
+                {
+                    "@value": "Foo"
+                }
+            ]
+        }
+    ],
+    "http://raml.org/vocabularies/document#encodes": [
+        {
+            "@id": "http://raml.org/test#/web-api",
+            "@type": [
+                "http://schema.org/WebAPI",
+                "http://raml.org/vocabularies/document#DomainElement"
+            ],
+            "http://schema.org/name": [
+                {
+                    "@value": "Implicitly define the type not using the `type` node"
+                }
+            ]
+        }
+    ]
+}
