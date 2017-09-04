@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "description": "invalid usage of arrays as a value for 'resourceTypes'",
+      "input": "resourcetypes-invalid-array-value",
+      "valid": false,
+      "tags": [
+        "resource type"
+      ]
+    },
+    {
+      "description": "facets at the root of a document that are not defined in the spec must not be allowed" ,
+      "input": "general-invalid-facets",
+      "valid": false,
+      "tags": [
+        "general"
+      ]
+    }
+  ]
+}

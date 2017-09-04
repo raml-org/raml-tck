@@ -1,0 +1,68 @@
+{
+  "tests": [
+    {
+      "description": "define 'baseUri' with a simple string",
+      "input": "baseuri",
+      "valid": true,
+      "tags": [
+        "base uri"
+      ]
+    },
+    {
+      "description": "define 'baseUri' using an object with 'value' facet that defines the base URI",
+      "input": "baseuri-with-value",
+      "valid": true,
+      "tags": [
+        "base uri"
+      ]
+    },
+    {
+      "description": "'name' should be an invalid facet inside the 'baseUri' scalar node",
+      "input": "baseuri-with-invalid-value",
+      "valid": false,
+      "tags": [
+        "base uri"
+      ]
+    },
+    {
+      "description": "'baseUri' contains incomplete URI template",
+      "input": "baseuri-invalid-uri",
+      "valid": false,
+      "tags": [
+        "base uri"
+      ]
+    },
+    {
+      "description": "define a single 'baseUriParameters'",
+      "input": "baseuriparameter",
+      "valid": true,
+      "tags": [
+        "base uri parameter"
+      ]
+    },
+    {
+      "description": "baseUriParameter must never reference to a non existing type",
+      "input": "baseuriparameter-with-invalid-type",
+      "valid": false,
+      "tags": [
+        "base uri parameter"
+      ]
+    },
+    {
+      "description": "baseUriParameter must follow any restrictions defined for data types",
+      "input": "baseuriparameter-with-invalid-property",
+      "valid": false,
+      "tags": [
+        "base uri parameter", "type"
+      ]
+    },
+    {
+      "description": "a base URI parameter should not define a sequence",
+      "input": "baseuriparameter-with-invalid-sequence",
+      "valid": false,
+      "tags": [
+        "base uri parameter", "type"
+      ]
+    },
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "tests": [
+    {
+      "description": "define 'protocols' with uppercase 'HTTP' and 'HTTPS'",
+      "input": "protocols-with-valid-uppercase-values",
+      "valid": true,
+      "tags": [
+        "protocol"
+      ],
+      "comment": "Uppercase values for the protocols are not valid in OAS, ws and wss are valid in OAS and not in RAML, all are valid in AMF"
+    },
+    {
+      "description": "define 'protocols' with lowercase 'http' and 'https'",
+      "input": "protocols-with-valid-lowercase-values",
+      "valid": true,
+      "tags": [
+        "protocol"
+      ]
+    },
+    {
+      "description": "define 'protocols' with empty value",
+      "input": "protocols-with-empty-value",
+      "valid": true,
+      "tags": [
+        "protocol"
+      ]
+    },
+    {
+      "description": "define 'protocols' with an invalid value",
+      "input": "protocols-with-invalid-value",
+      "valid": false,
+      "tags": [
+        "protocol"
+      ]
+    },
+    {
+      "description": "define 'protocols' with an invalid string value",
+      "input": "protocols-with-invalid-string-value",
+      "valid": false,
+      "tags": [
+        "protocol"
+      ]
+    }
+  ]
+}
