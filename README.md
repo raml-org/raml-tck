@@ -1,82 +1,119 @@
-# TCK - Test Compatibility Kit for RAML Parser Implementations
+# TCK - Test Compatibility Kit for API Specs Implementations
 
-This repository contains a set of RAML documents that implementors of a RAML parser can use to test their implementations.
-
-It is meant to be language agnostic and should require only a RAML parser.
+This repository contains a set of documents that API tools can use to test their implementations.
+Typically an API application is:
+ * API parser
+ * API converters
 
 Implementors can download or automatically fetch this suite and run their implementation against it. An example on running the suite against the JS parser can be found inside the `examples` folder at the root of this repository.
 
-Running more complex unit tests for the parser implementations within the test framework of choice is still the job of the parser implementor. 
+Running more complex unit tests for the tool implementations within the test framework of choice is still the job of the tool implementor. 
 
 ## Structure of a Test
 
 If you're going to use this suite, you need to know how tests are laid out. The tests are contained in the `tests` directory at the root of this repository.
 
-Currently, this suite  only supports if a specific parser implementation correctly validates a given RAML document.
+#### Directory
 
-Tests are divided into three areas:
+The directory indicates the abstract feature to test, regardless spec and version.
 
-* Semantic Tests
-* Syntactical Tests
-* Specifications Examples
+    /tests/<abstract_feature>/...
+    
+##### Work in progress
+We are working in a refactor of the directory from an older definition to this one, please dont add anything below a "raml-1.0". Any doubt let us know.
+    
+#### File nomenclature
 
-Those provide a logical separation and is reflected as a subdirectory inside the `tests` directory. 
+Apart from what it tests, the names of the files determines what spec/version is.
 
-Inside those directories there is a subdirectory for each version of RAML. We'll use RAML 1.0 as an example. 
+    /root-title_Ov2-0.json      --> Openapi 2.0 file
+    /root-title_Rv0-8.raml      --> Raml 0.8 file
+    
+* AF: Abstract API Design Feature
+* SPEC: Letter to identify the spec (R=Raml, O=OpenApi, J=JsonLD)
+* OSV: Original Spec & Version (format: \<SPEC>v\<Major>-\<Minor>, example: "Rv0-8")
+* DSV: Destination Spec & Version (only for conversion) (format: same as OSV)
+* Extension: Test file extension should be appropriate for specification and version that will be tested. Only exception will be “.errors” for invalid tests that wants to check errors.
 
-If you look inside the RAML 1.0 directory, there are a number of subdirectories each with `test-config.json` files, which logically group a set of test cases together.
+\<AF>\_\<OSV>_\<DSV>Extension
 
-Inside each `test-config.json` file is a single object containing information about the test cases covered. It's easiest to illustrate the structure of these with an example:
+Example:
+
+We want to test the title feature in the root section across multiple specs and versions:
+
+* Title in a 1.0 Raml file: **root-title_Rv1-0.raml**
+* Title in a 2.0 OpenApi file: **root-title_Ov2-0.json**
+* Title in a 2.0 OpenApi file that is the result of the conversion from a 0.8 Raml file: **root-title_Rv0-8_Ov2-0.json**
+* An invalid 0.8 Raml file with errors:
+    * **test-config.json** (metadata file, where it is configured that a particular test is invalid) 
+    * **root-title-invalid_Rv0-8.raml** 
+    * **root-title-invalid_Rv0-8.errors** (file with info about the errors)
+
+
+    
+#### Metadata
+    
+And with the help of a config file you can define if a test its valid or not, among other things:
+
+    /test-config.json
+
+Inside each `test-config.json` file is a single object containing information about the test cases covered. 
+
+| Property | Description |
+|:--------|:-----------|
+| tests | Contains a single array containing objects. See table below. |
+
+| Property | Description |
+|:---------|:------------|
+| description | A simple description of a single test. |
+| input | Name of the file that's being tested. (name of the file without spec/version & extension) |
+| valid | Indicates if the file is a valid file for his respective spec and version, true by default |
+
+Example:
 
 ```json
 {
-  "section": "syntax/data-types/object",
-  "ramlversion": "1.0",
   "tests": [
     {
-      "description": "value of 'additionProperties' must be a boolean but is object",
-      "input": "additionalProperties-wrong-value",
-      "valid": false,
-      "tags": [
-        "type", "object", "additional property"
-      ]
+      "description": "Useful description of what is the purpose of this file test",
+      "input": "filename",  // name of the file without spec/version & extension
+      "valid": false        // true by default
     },
     {
-      "description": "enum should be allowed on objects",
-      "input": "enum.raml",
-      "valid": true,
-      "tags": [
-        "type", "object"
-      ]
+      "description": "desc",
+      "input": "filename2"
     }
   ]
 }
 ```
 
-| Property | Description |
-|:--------|:-----------|
-| section | Contains a unique id for this section, usually the directory structure |
-| ramlversion | The RAML version being covered by the test cases (**Deprecated**) |
-| tests | Contains a single array containing objects. See table below. |
+#### Errors definition (coming soon)
 
-`tests`
+In the future for invalid tests, you can create a file with the expected errors inside of it:
 
-| Property | Description |
-|:---------|:------------|
-| description | A simple description of a single test. |
-| input | An ID that is used to identify the file(s) that's being tested. |
-| valid | Indicates what is expected. If it's `true`, a parser implementation shouldn't report any errors; and with `false` a parser should report errors. |
-| tags | A list of tags correspondent to a single test. Please see [common-tags.md](common-tags.md) for common used tags. |
+    /root-title_Rv0-8.raml
+    /root-title_Rv0-8.errors  <--
+    
+#### Example
+            
+So a fully implemented structure would look like this:
 
-## Coverage
-
-RAML 0.8 and 1.0 should have full coverage. If you see anything missing or think there is a useful test missing, please send a pull request or open an issue.
+    /tests
+        /root-section
+            /title
+                /root-title-invalid_Rv0-8.errors
+                /root-title-invalid_Rv0-8.raml
+                /root-title_Ov2-0.json
+                /root-title_Rv0-8.raml
+                /root-title_Rv0-8_Ov2-0.json
+                /test-config.json
+		
 
 ## How do I use this suite?
 
-If you don't know how to run this suite against your parser, you only need to look at the `examples` directory that contains an implementation using the [JS parser](https://github.com/raml-org/raml-js-parser-2).
+If you don't know how to run this suite against your tool, you only need to look at the `examples` directory that executes the suite against [JS parser](https://github.com/raml-org/raml-js-parser-2).
 
-Please execute following commands from the `node` subdirectory:
+Please execute the following commands from the `node` subdirectory:
 
 ```
 npm install

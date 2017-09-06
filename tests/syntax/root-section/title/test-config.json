@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "description": "define 'title' as an array is not allowed",
+      "input": "title-with-invalid-array-value",
+      "valid": false,
+      "tags": [
+        "title"
+      ]
+    },
+    {
+      "description": "required 'title' is missing",
+      "input": "required-title-invalid",
+      "valid": false,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "description": "valid RAML document with at least 'title'",
+      "input": "required-title-valid",
+      "valid": true,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "description": "value for 'title' included from markdown file" ,
+      "input": "title-included-from-md",
+      "valid": true,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "description": "define 'title' as a map is not allowed",
+      "input": "title-with-invalid-map-value",
+      "valid": false,
+      "tags": [
+        "title"
+      ]
+    }
+  ]
+}
