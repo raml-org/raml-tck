@@ -52,6 +52,8 @@
             "http://schema.org/WebAPI",
             "http://raml.org/vocabularies/document#DomainElement"
         ],
-        "http://schema.org/name": "Boolean Type"
+        "http://schema.org/name": [
+            {"@value": "Boolean Type"}
+        ]
     }
 }
