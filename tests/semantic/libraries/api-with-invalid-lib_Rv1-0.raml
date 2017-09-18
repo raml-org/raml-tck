@@ -1,0 +1,14 @@
+#%RAML 1.0
+title: Test
+
+uses:
+  bar: libs/bar-lib-unknown-type_Rv1-0.raml
+  
+/foo:
+  get:
+    description: Returns a list of Jira Issues
+    responses:
+      200:
+        body:
+          application/json:
+            type: bar.B

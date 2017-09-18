@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "description": "a simple RAML definition with HTTP methods and resources declared",
+      "input": "simple",
+      "valid": true,
+      "tags": [
+        "general"
+      ]
+    }
+  ]
+}

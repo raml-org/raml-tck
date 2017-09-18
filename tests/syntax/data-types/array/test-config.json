@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "description": "invalid array value of 'items'",
+      "input": "items-invalid-value",
+      "valid": false,
+      "tags": [
+        "type", "scalar", "array", "facet"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "description": "annotating individual examples using 'value' facet must be possible",
+      "input": "annotate-individual-examples",
+      "valid": true,
+      "tags": [
+        "annotation", "example"
+      ]
+    }
+  ]
+}

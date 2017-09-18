@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "description": "default value declaration inside a response payload definition should work for type objects",
+      "input": "defaultValueObjectResponse",
+      "valid": true,
+      "tags": [
+        "response", "type", "object", "default", "facet"
+      ]
+    }
+  ]
+}
