@@ -37,6 +37,8 @@ Apart from what it tests, the names of the files determines what spec/version is
 
 \<AF>\_\<OSV>_\<DSV>Extension
 
+* This doesnt apply for the files under "spec-examples" folder.
+
 Example:
 
 We want to test the title feature in the root section across multiple specs and versions:
