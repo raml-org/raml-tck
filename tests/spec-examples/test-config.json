@@ -1,0 +1,172 @@
+{
+  "tests": [
+    {
+      "description": "various combinations of both default and non-default media types, and both data type declarations and references",
+      "input": "bodies",
+      "valid": true,
+      "tags": [
+        "body", "default media type", "external schema"
+      ]
+    },
+    {
+      "description": "complex example on using single or multiple example(s)",
+      "input": "complex-examples",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "multiple example definition",
+      "input": "multiple-examples",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "define a simple example",
+      "input": "single-example",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "headers inheriting from a trait, allowing multiple instances of a header, specifying examples, and overriding the headers when applied to a method and a resource",
+      "input": "complex-headers",
+      "valid": true,
+      "tags": [
+        "header", "trait", "example"
+      ]
+    },
+    {
+      "description": "define 'documentation' node",
+      "input": "documentation",
+      "valid": true,
+      "tags": [
+        "documentation"
+      ]
+    },
+    {
+      "description": "'Extension' fragment that adds an additional post method with description to '/books'",
+      "input": "extension-post",
+      "valid": true,
+      "tags": [
+        "extension", "fragment"
+      ]
+    },
+    {
+      "description": "simply including another fragment",
+      "input": "fragments-simple",
+      "valid": true,
+      "tags": [
+        "fragment", "include"
+      ]
+    },
+    {
+      "description": "inline type declaration",
+      "input": "inline-type-declaration",
+      "valid": true,
+      "tags": [
+        "type", "body"
+      ]
+    },
+    {
+      "description": "simple book library example",
+      "input": "librarybooks",
+      "valid": true,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "description": "nested resources",
+      "input": "nested-resources",
+      "valid": true,
+      "tags": [
+        "resource"
+      ]
+    },
+    {
+      "description": "using overlays to add additional information to an existing RAML",
+      "input": "overlay-monitoring",
+      "valid": true,
+      "tags": [
+        "overlay", "fragment"
+      ]
+    },
+    {
+      "description": "using overlays to change nodes from an existing RAML",
+      "input": "overlay-spanish",
+      "valid": true,
+      "tags": [
+        "overlay", "fragment"
+      ]
+    },
+    {
+      "description": "using 'HTTP' and 'HTTPS' protocols",
+      "input": "protocols",
+      "valid": true,
+      "tags": [
+        "protocol"
+      ]
+    },
+    {
+      "description": "'get' method using HTTP query parameters",
+      "input": "query-parameter",
+      "valid": true,
+      "tags": [
+        "query parameter"
+      ]
+    },
+    {
+      "description": "resource type and a file that includes this fragment file",
+      "input": "resolve-includes",
+      "valid": true,
+      "tags": [
+        "include"
+      ]
+    },
+    {
+      "description": "define responses",
+      "input": "responses",
+      "valid": true,
+      "tags": [
+        "responses"
+      ]
+    },
+    {
+      "description": "Github v3 example inside the 'The Root of the Document' section",
+      "input": "root",
+      "valid": true,
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "description": "define simple headers",
+      "input": "simple-header",
+      "valid": true,
+      "tags": [
+        "headers"
+      ]
+    },
+    {
+      "description": "multiple trailing slashes shouldn't raise issues",
+      "input": "trailing-slashes",
+      "valid": true,
+      "tags": [
+        "template uri"
+      ]
+    },
+    {
+      "description": "define enum values of a query parameter in both trait and resource",
+      "input": "traits-merge-enumlist",
+      "valid": true,
+      "tags": [
+        "trait", "enum", "resource"
+      ]
+    }
+  ]
+}

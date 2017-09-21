@@ -1,0 +1,68 @@
+{
+  "tests": [
+    {
+      "description": "declaration and use of a 'testHarness' annotation that should be a string value",
+      "input": "apply-annotations-1",
+      "valid": true,
+      "tags": [
+        "annotation"
+      ]
+    },
+    {
+      "description": "implicit, default declaration of the value type when there is no explicit type declaration",
+      "input": "apply-annotations-2",
+      "valid": true,
+      "tags": [
+        "annotation"
+      ]
+    },
+    {
+      "description": "example on how default media types get automatically applied or in the /send resources overriden",
+      "input": "apply-default-media-type",
+      "valid": true,
+      "tags": [
+        "media type"
+      ]
+    },
+    {
+      "description": "application of resource types and traits",
+      "input": "apply-resourcetypes-traits",
+      "valid": true,
+      "tags": [
+        "trait", "resource type"
+      ]
+    },
+    {
+      "description": "how to use 'null' to indicate that a method can be called without applying any security scheme",
+      "input": "apply-security-scheme-null",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "how to apply a security scheme to a method",
+      "input": "apply-security-schemes",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "how to use a parameter inside a security scheme",
+      "input": "apply-security-scheme-parameter",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "use of an invalid scope 'GUEST' which is not defined inside the security scheme",
+      "input": "apply-security-scheme-invalid-scope",
+      "valid": false,
+      "tags": [
+        "security scheme", "scopes"
+      ]
+    }
+  ]
+}

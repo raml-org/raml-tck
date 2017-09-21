@@ -1,0 +1,77 @@
+{
+  "tests": [
+    {
+      "description": "uri parameter as an array",
+      "input": "array-uri-parameter",
+      "valid": true,
+      "tags": [
+        "array", "uri parameter"
+      ]
+    },
+    {
+      "description": "how to define a base URI parameter",
+      "input": "base-uri-parameter",
+      "valid": true,
+      "tags": [
+        "base uri parameter"
+      ]
+    },
+    {
+      "description": "'version' as base URI template does not need any base URI parameter",
+      "input": "base-uri-template",
+      "valid": true,
+      "tags": [
+        "base uri parameter"
+      ]
+    },
+    {
+      "description": "define URI parameter",
+      "input": "define-uri-parameters",
+      "valid": true,
+      "tags": [
+        "type",
+        "uri parameter"
+      ]
+    },
+    {
+      "description": "duplicated URIs which is invalid in RAML",
+      "input": "duplicated-uris-invalid",
+      "valid": false,
+      "tags": [
+        "uri"
+      ]
+    },
+    {
+      "description": "usage of template URIs",
+      "input": "template-uri-1",
+      "valid": true,
+      "tags": [
+        "template uri"
+      ]
+    },
+    {
+      "description": "resources and nested resources with URI parameters",
+      "input": "uri-parameters-1",
+      "valid": true,
+      "tags": [
+        "resource",  "uri parameter"
+      ]
+    },
+    {
+      "description": "using predefined 'ext' for defining media types in the URL",
+      "input": "uri-parameters-ext",
+      "valid": true,
+      "tags": [
+        "resource", "uri parameter"
+      ]
+    },
+    {
+      "description": "allowed duplicated URI templates",
+      "input": "uri-templates-allowed",
+      "valid": true,
+      "tags": [
+        "resource", "uri template"
+      ]
+    }
+  ]
+}

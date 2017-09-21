@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "description": "applying some restrictions on the allowed targets of annotations",
+      "input": "annotations-targets",
+      "valid": true,
+      "tags": [
+        "annotation", "allowed target"
+      ]
+    },
+    {
+      "description": "annotation type declarations and the application of the annotations",
+      "input": "annotations",
+      "valid": true,
+      "tags": [
+        "annotation"
+      ]
+    },
+    {
+      "description": "annotating scalar node",
+      "input": "annotating-scalar-nodes",
+      "valid": true,
+      "tags": [
+        "annotation", "scalar node"
+      ]
+    }
+  ]
+}

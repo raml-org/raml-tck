@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "description": "multiple inheritance on two objects",
+      "input": "multiple-inheritance-1",
+      "valid": true,
+      "tags": [
+        "type", "object", "multiple inheritance", "type expression"
+      ]
+    },
+    {
+      "description": "multiple inheritance on two 'number' types both with not conflicting facets",
+      "input": "multiple-inheritance-2",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "number", "facet", "multiple inheritance", "type expression"
+      ]
+    },
+    {
+      "description": "multiple inheritance on two 'number' types both with conflicting facets",
+      "input": "multiple-inheritance-3-invalid",
+      "valid": false,
+      "tags": [
+        "type", "scalar", "number", "facet", "multiple inheritance", "type expression"
+      ]
+    }
+  ]
+}
