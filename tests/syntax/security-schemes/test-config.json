@@ -1,0 +1,60 @@
+{
+  "tests": [
+    {
+      "description": "Basic Authentication security scheme",
+      "input": "security-schemes-basic",
+      "valid": true,
+      "tags": [
+        "security scheme", "basic authentication"
+      ]
+    },
+    {
+      "description": "Digest Authentication security scheme",
+      "input": "security-schemes-digest",
+      "valid": true,
+      "tags": [
+        "security scheme", "digest authentication"
+      ]
+    },
+    {
+      "description": "OAuth 1.0 security scheme",
+      "input": "security-schemes-oauth1",
+      "valid": true,
+      "tags": [
+        "security scheme", "oauth 1.0"
+      ]
+    },
+    {
+      "description": "OAuth 2.0 security scheme",
+      "input": "security-schemes-oauth2",
+      "valid": true,
+      "tags": [
+        "security scheme", "oauth 2.0"
+      ]
+    },
+    {
+      "description": "Pass Through security scheme",
+      "input": "security-schemes-pass",
+      "valid": true,
+      "tags": [
+        "security scheme", "pass through"
+      ]
+    },
+    {
+      "description": "Custom security scheme",
+      "input": "security-schemes-xother",
+      "valid": true,
+      "tags": [
+        "security scheme", "custom security scheme"
+      ]
+    },
+    {
+      "description": "define authentication using OAuth 2.0 and OAuth 1.0 security schemes",
+      "input": "security-schemes",
+      "valid": true,
+      "tags": [
+        "security scheme"
+      ]
+    }
+  ]
+}

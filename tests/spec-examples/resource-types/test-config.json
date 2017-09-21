@@ -1,0 +1,52 @@
+{
+  "tests": [
+    {
+      "description": "resource type with an optional HTTP method that defines a required header and a custom parameter called",
+      "input": "resourcetypes-optionalmethods",
+      "valid": true,
+      "tags": [
+        "resource type", "http method", "custom parameter"
+      ]
+    },
+    {
+      "description": "passing parameter values to resource types and traits",
+      "input": "resourcetypes-traits-parameter",
+      "valid": true,
+      "tags": [
+        "resource type", "traits", "custom parameter"
+      ]
+    },
+    {
+      "description": "using functions and reserved parameters inside resource types and traits",
+      "input": "resourcetypes-traits-parameterfunctions",
+      "valid": true,
+      "tags": [
+        "resource type", "traits", "custom parameter", "function"
+      ]
+    },
+    {
+      "description": "declaring resource types and traits",
+      "input": "resourcetypes-traits",
+      "valid": true,
+      "tags": [
+        "resource type", "traits"
+      ]
+    },
+    {
+      "description": "resource types and traits are defined in external files that are included",
+      "input": "resourcetypes-traits-external",
+      "valid": true,
+      "tags": [
+        "resource type", "trait"
+      ]
+    },
+    {
+      "description": "sub resource is not allowed to be used on a resource type",
+      "input": "resourcetypes-traits-no-subresources",
+      "valid": false,
+      "tags": [
+        "resource type", "trait"
+      ]
+    }
+  ]
+}

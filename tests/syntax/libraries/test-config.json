@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "description": "chaining library namespaces is not allowed",
+      "input": "libraries-invalid-chaining",
+      "valid": false,
+      "tags": [
+        "library", "trait", "resource type", "type"
+      ]
+    },
+    {
+      "description": "use library inside resource type fragment",
+      "input": "libraries-resourcetype",
+      "valid": true,
+      "tags": [
+        "resource type", "fragment", "library"
+      ]
+    },
+    {
+      "description": "simple library definition",
+      "input": "libraries",
+      "valid": true,
+      "tags": [
+        "fragment", "library"
+      ]
+    }
+  ]
+}

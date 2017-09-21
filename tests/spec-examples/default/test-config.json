@@ -1,0 +1,68 @@
+{
+  "tests": [
+    {
+      "description": "an array of default media type",
+      "input": "default-media-types-multiple",
+      "valid": true,
+      "tags": [
+        "default media type"
+      ]
+    },
+    {
+      "description": "single default media type",
+      "input": "default-media-types-single",
+      "valid": true,
+      "tags": [
+        "default media type"
+      ]
+    },
+    {
+      "description": "apply global default security scheme",
+      "input": "default-security",
+      "valid": true,
+      "tags": [
+        "security", "default security", "security scheme"
+      ]
+    },
+    {
+      "description": "use 'any' default type in combination with default media type",
+      "input": "default-type-any-2",
+      "valid": true,
+      "tags": [
+        "type", "default type", "default media type", "body"
+      ]
+    },
+    {
+      "description": "use 'any' default type",
+      "input": "default-type-any",
+      "valid": true,
+      "tags": [
+        "type", "default type", "body"
+      ]
+    },
+    {
+      "description": "no need to define 'type: object' when 'properties' facet is being used",
+      "input": "default-type-object",
+      "valid": true,
+      "tags": [
+        "type", "default type", "object"
+      ]
+    },
+    {
+      "description": "no need to define 'type: string'",
+      "input": "default-type-string",
+      "valid": true,
+      "tags": [
+        "type", "default type", "scalar", "string"
+      ]
+    },
+    {
+      "description": "object type definition",
+      "input": "default-types-1",
+      "valid": true,
+      "tags": [
+        "type", "object"
+      ]
+    }
+  ]
+}

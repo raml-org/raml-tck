@@ -1,0 +1,260 @@
+{
+  "tests": [
+    {
+      "description": "RAML that illustrates how to use 'value' in 'example'",
+      "input": "additional-facets-single-example",
+      "valid": true,
+      "tags": [
+        "type", "example"
+      ]
+    },
+    {
+      "description": "restricting all additional properties to be string.",
+      "input": "additional-properties",
+      "valid": true,
+      "tags": [
+        "type", "additional property", "object"
+      ]
+    },
+    {
+      "description": "how to define an array without type expression",
+      "input": "array-type-expanded",
+      "valid": true,
+      "tags": [
+        "type", "array"
+      ]
+    },
+    {
+      "description": "type using array type expression and example",
+      "input": "array-type",
+      "valid": true,
+      "tags": [
+        "type", "array", "example"
+      ]
+    },
+    {
+      "description": "simple boolean type definition",
+      "input": "boolean-type",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "boolean"
+      ]
+    },
+    {
+      "description": "all date types with examples",
+      "input": "date-types",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "date", "example"
+      ]
+    },
+    {
+      "description": "invalid example on extending a JSON schema defined type",
+      "input": "external-type-extend-invalid",
+      "valid": false,
+      "tags": [
+        "schema", "type", "type expression"
+      ]
+    },
+    {
+      "description": "invalid example on adding facets to a JSON schema defined type",
+      "input": "external-types-invalid",
+      "valid": false,
+      "tags": [
+        "schema", "type", "facet"
+      ]
+    },
+    {
+      "description": "using a JSON schema defined type",
+      "input": "external-types",
+      "valid": true,
+      "tags": [
+        "schema", "type"
+      ]
+    },
+    {
+      "description": "include a simple YAML map from another file",
+      "input": "includes",
+      "valid": true,
+      "tags": [
+        "fragment", "include"
+      ]
+    },
+    {
+      "description": "simple integer type with all available facets",
+      "input": "integer-type",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "integer"
+      ]
+    },
+    {
+      "description": "complex type definition using various types and facets",
+      "input": "introduction-types-complex",
+      "valid": true,
+      "tags": [
+        "type"
+      ]
+    },
+    {
+      "description": "simple object type definition used in a body",
+      "input": "introduction-types",
+      "valid": true,
+      "tags": [
+        "type", "body", "object"
+      ]
+    },
+    {
+      "description": "discriminator is not allowed in any inline type declaration and for union types",
+      "input": "invalid-discriminator-usage",
+      "valid": false,
+      "tags": [
+        "type", "discriminator", "object", "union"
+      ]
+    },
+    {
+      "description": "an instance cannot have an empty / no valued node",
+      "input": "null-type-invalid",
+      "valid": false,
+      "tags": [
+        "nil", "type"
+      ]
+    },
+    {
+      "description": "using 'nil' with a string union",
+      "input": "null-type-union",
+      "valid": true,
+      "tags": [
+        "nil", "type"
+      ]
+    },
+    {
+      "description": "using 'nil' as a type",
+      "input": "null-type",
+      "valid": true,
+      "tags": [
+        "nil", "type"
+      ]
+    },
+    {
+      "description": "using 'number' as a type and apply all available facets",
+      "input": "number-type",
+      "valid": true,
+      "tags": [
+        "number", "scalar", "type"
+      ]
+    },
+    {
+      "description": "using full expression to define optional properties",
+      "input": "object-type-long",
+      "valid": true,
+      "tags": [
+        "object", "type"
+      ]
+    },
+    {
+      "description": "using syntactical sugar to define optional properties",
+      "input": "object-type-short",
+      "valid": true,
+      "tags": [
+        "object", "type"
+      ]
+    },
+    {
+      "description": "union types and extended multiple types are used to constrain the query string to specific alternatives",
+      "input": "query-string",
+      "valid": true,
+      "tags": [
+        "query string", "type", "union"
+      ]
+    },
+    {
+      "description": "define a 'string' type with all allowed facets",
+      "input": "string-type",
+      "valid": true,
+      "tags": [
+        "type", "scalar", "string"
+      ]
+    },
+    {
+      "description": "extending using a type expression combined with unions and arrays",
+      "input": "type-expression",
+      "valid": true,
+      "tags": [
+        "type expression", "type", "union", "array"
+      ]
+    },
+    {
+      "description": "optional properties using '?'",
+      "input": "type-names-question-mark",
+      "valid": true,
+      "tags": [
+        "type", "optional properties", "object"
+      ]
+    },
+    {
+      "description": "'schemas' and 'types' as well as 'schema' and 'type' are mutual exclusive",
+      "input": "type-schema-invalid",
+      "valid": false,
+      "tags": [
+        "type", "schema"
+      ]
+    },
+    {
+      "description": "pattern properties restricting the property names of any additional properties inside a type instance",
+      "input": "types-pattern-properties",
+      "valid": true,
+      "tags": [
+        "type", "pattern property", "object"
+      ]
+    },
+    {
+      "description": "type definition with union and multiple inheritance",
+      "input": "union-type-multiple-inheritance",
+      "valid": true,
+      "tags": [
+        "type", "union", "multiple inheritance"
+      ]
+    },
+    {
+      "description": "type definition using simple union between two types",
+      "input": "union-type",
+      "valid": true,
+      "tags": [
+        "type", "union"
+      ]
+    },
+    {
+      "description": "define user-defined facets",
+      "input": "user-defined-facets",
+      "valid": true,
+      "tags": [
+        "type", "custom facet"
+      ]
+    },
+    {
+      "description": "define 'discriminator' in object type",
+      "input": "using-discriminator",
+      "valid": true,
+      "tags": [
+        "type", "object", "discriminator"
+      ]
+    },
+    {
+      "description": "define 'discriminatorValue' in object type",
+      "input": "using-discriminatorvalue",
+      "valid": true,
+      "tags": [
+        "type", "object", "discriminator value"
+      ]
+    },
+    {
+      "description": "using 'xml' facet",
+      "input": "xml-facet",
+      "valid": true,
+      "tags": [
+        "type", "xml facet"
+      ]
+    }
+  ]
+}
