@@ -1,0 +1,138 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "traits": [
+      {
+        "box": {
+          "queryParameters": {
+            "param": {
+              "name": "param",
+              "displayName": "param",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "name": "box"
+        }
+      },
+      {
+        "container": {
+          "headers": {
+            "auth": {
+              "name": "auth",
+              "displayName": "auth",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "queryString": {
+            "name": "queryString",
+            "displayName": "queryString",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "type": [
+              "object"
+            ],
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                }
+              }
+            }
+          },
+          "body": {
+            "application/json": {
+              "name": "application/json",
+              "displayName": "application/json",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "object"
+              ],
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "is": [
+            "box"
+          ],
+          "name": "container"
+        }
+      }
+    ],
+    "title": "Traits"
+  },
+  "errors": [
+    {
+      "code": "QUERY_STRING_AND_QUERY_PARAMETERS_ARE_MUTUALLY_EXCLUSIVE",
+      "message": "'queryString' and 'queryParameters' properties are mutually exclusive. 'queryString' is already specified.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 9,
+          "position": 104
+        },
+        "end": {
+          "line": 8,
+          "column": 12,
+          "position": 107
+        }
+      }
+    },
+    {
+      "code": "QUERY_STRING_AND_QUERY_PARAMETERS_ARE_MUTUALLY_EXCLUSIVE",
+      "message": "'queryString' and 'queryParameters' properties are mutually exclusive. 'queryParameters' is already specified.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 4,
+          "position": 179
+        },
+        "end": {
+          "line": 13,
+          "column": 15,
+          "position": 190
+        }
+      }
+    }
+  ]
+}

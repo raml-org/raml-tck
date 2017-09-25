@@ -1,0 +1,95 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "traits": [
+      {
+        "bar": {
+          "name": "bar",
+          "usage": "bar usage"
+        }
+      }
+    ],
+    "title": "Foo API",
+    "version": "0.1.0",
+    "baseUri": "https://example.com",
+    "protocols": [
+      "HTTPS"
+    ],
+    "mediaType": "application/json",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "object"
+                ],
+                "properties": {
+                  "quz": {
+                    "name": "quz",
+                    "displayName": "quz",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "array"
+                    ],
+                    "required": true,
+                    "items": [
+                      "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"version\": 1,\n  \"title\": \"message\",\n  \"additionalProperties\": false,\n  \"type\": \"object\",\n  \"required\": [\n    \"datetime\"\n  ],\n  \"properties\": {\n    \"datetime\": {\n      \"type\": \"string\",\n      \"format\": \"date-time\",\n      \"description\": \"message generated time\"\n    }\n  }\n}\n"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    }
+                  }
+                },
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                }
+              }
+            },
+            "protocols": [
+              "HTTPS"
+            ],
+            "method": "post",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            }
+          }
+        ],
+        "relativeUri": "/baz",
+        "displayName": "/baz",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "baz"
+        ],
+        "absoluteUri": "https://example.com/baz"
+      }
+    ]
+  },
+  "errors": []
+}

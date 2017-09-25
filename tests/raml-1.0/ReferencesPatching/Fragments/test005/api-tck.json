@@ -1,0 +1,126 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "uses": [
+      {
+        "key": "lib",
+        "value": "libs/lib.raml"
+      }
+    ],
+    "title": "Test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "INPLACE",
+                "example": {
+                  "objectProperty": {
+                    "prop": "string"
+                  },
+                  "stringProperty": "stringValue"
+                },
+                "type": {
+                  "name": "type",
+                  "displayName": "type",
+                  "typePropertyKind": "TYPE_EXPRESSION",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "objectProperty": {
+                      "name": "objectProperty",
+                      "displayName": "objectProperty",
+                      "typePropertyKind": "TYPE_EXPRESSION",
+                      "type": [
+                        "lib.MyType"
+                      ],
+                      "required": true,
+                      "__METADATA__": {
+                        "primitiveValuesMeta": {
+                          "displayName": {
+                            "calculated": true
+                          },
+                          "required": {
+                            "insertedAsDefault": true
+                          }
+                        }
+                      }
+                    },
+                    "stringProperty": {
+                      "name": "stringProperty",
+                      "displayName": "stringProperty",
+                      "typePropertyKind": "TYPE_EXPRESSION",
+                      "type": [
+                        "lib.MyStringType"
+                      ],
+                      "required": true,
+                      "__METADATA__": {
+                        "primitiveValuesMeta": {
+                          "displayName": {
+                            "calculated": true
+                          },
+                          "required": {
+                            "insertedAsDefault": true
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "additionalProperties": false,
+                  "__METADATA__": {
+                    "primitiveValuesMeta": {
+                      "displayName": {
+                        "calculated": true
+                      },
+                      "type": {
+                        "insertedAsDefault": true
+                      }
+                    }
+                  }
+                },
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "structuredExample": {
+                  "value": "{\n  \"objectProperty\": {\n    \"prop\": \"string\"\n  },\n  \"stringProperty\": \"stringValue\"\n}",
+                  "strict": true,
+                  "name": null,
+                  "structuredValue": {
+                    "objectProperty": {
+                      "prop": "string"
+                    },
+                    "stringProperty": "stringValue"
+                  }
+                }
+              }
+            },
+            "method": "put"
+          }
+        ],
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ]
+  },
+  "errors": []
+}

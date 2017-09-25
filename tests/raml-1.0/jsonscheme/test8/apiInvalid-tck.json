@@ -1,0 +1,102 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "typePropertyKind": "JSON",
+          "schemaPath": "subdir/scheme.json",
+          "type": [
+            "{\n    \"$schema\":\"http://json-schema.org/draft-04/schema\",\n    \"type\": \"object\",\n    \"required\":[\"parentName\"],\n    \"properties\":{\n        \"parentName\": {\"type\": \"string\"},\n        \"child\": {\"$ref\": \"subdir/scheme.json#\"}\n    }\n}\n"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "Api",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "INPLACE",
+                "type": [
+                  "MyType"
+                ],
+                "example": {
+                  "parentName": "somename",
+                  "child": {
+                    "childName1": "anothername"
+                  }
+                },
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "structuredExample": {
+                  "value": "{\n  \"parentName\": \"somename\",\n  \"child\": {\n    \"childName1\": \"anothername\"\n  }\n}",
+                  "strict": true,
+                  "name": null,
+                  "structuredValue": {
+                    "parentName": "somename",
+                    "child": {
+                      "childName1": "anothername"
+                    }
+                  }
+                }
+              }
+            },
+            "method": "get"
+          }
+        ],
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "CONTENT_DOES_NOT_MATCH_THE_SCHEMA",
+      "message": "Content is not valid according to schema: Missing required property: childName",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 10,
+          "position": 201
+        },
+        "end": {
+          "line": 14,
+          "column": 15,
+          "position": 206
+        }
+      }
+    }
+  ]
+}

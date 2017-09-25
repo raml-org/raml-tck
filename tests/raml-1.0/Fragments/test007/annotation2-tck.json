@@ -1,0 +1,66 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "ObjectTypeDeclaration",
+  "specification": {
+    "displayName": "MyAnnotation",
+    "typePropertyKind": "TYPE_EXPRESSION",
+    "type": [
+      "object"
+    ],
+    "required": true,
+    "allowedTargets": [
+      "Method"
+    ],
+    "properties": {
+      "p1": {
+        "name": "p1",
+        "displayName": "p1",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "type": [
+          "string"
+        ],
+        "required": true,
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "required": {
+              "insertedAsDefault": true
+            }
+          }
+        }
+      },
+      "p2": {
+        "name": "p2",
+        "displayName": "p2",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "type": [
+          "number"
+        ],
+        "required": true,
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "required": {
+              "insertedAsDefault": true
+            }
+          }
+        }
+      }
+    },
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "type": {
+          "insertedAsDefault": true
+        },
+        "required": {
+          "insertedAsDefault": true
+        }
+      }
+    }
+  },
+  "errors": []
+}

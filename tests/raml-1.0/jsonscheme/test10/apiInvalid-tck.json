@@ -1,0 +1,102 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "typePropertyKind": "JSON",
+          "schemaPath": "scheme.json",
+          "type": [
+            "{\n    \"$schema\":\"http://json-schema.org/draft-04/schema\",\n    \"type\":\"object\",\n    \"required\":[\"name\"],\n    \"properties\":{\n        \"name\":{\n            \"type\":\"string\"\n        },\n        \"child\": {\n          \"$ref\": \"#/definitions/InnerType\"\n        }\n    },\n    \"definitions\":{\n        \"InnerType\":{\n            \"type\":\"object\",\n            \"required\":[\"innerTypeName\"],\n            \"properties\":{\n                \"innerTypeName\":{\n                    \"type\":\"string\"\n                }\n            }\n        }\n    }\n}\n"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "Api",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "INPLACE",
+                "type": [
+                  "MyType"
+                ],
+                "example": {
+                  "name": "somename",
+                  "child": {
+                    "innerTypeName1": "anothername"
+                  }
+                },
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "structuredExample": {
+                  "value": "{\n  \"name\": \"somename\",\n  \"child\": {\n    \"innerTypeName1\": \"anothername\"\n  }\n}",
+                  "strict": true,
+                  "name": null,
+                  "structuredValue": {
+                    "name": "somename",
+                    "child": {
+                      "innerTypeName1": "anothername"
+                    }
+                  }
+                }
+              }
+            },
+            "method": "get"
+          }
+        ],
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "CONTENT_DOES_NOT_MATCH_THE_SCHEMA",
+      "message": "Content is not valid according to schema: Missing required property: innerTypeName",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 10,
+          "position": 188
+        },
+        "end": {
+          "line": 14,
+          "column": 15,
+          "position": 193
+        }
+      }
+    }
+  ]
+}

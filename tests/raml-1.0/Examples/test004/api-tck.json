@@ -224,18 +224,18 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "api.raml",
       "range": {
         "start": {
-          "line": 16,
-          "column": 4,
-          "position": 274
+          "line": 24,
+          "column": 6,
+          "position": 478
         },
         "end": {
-          "line": 16,
-          "column": 11,
-          "position": 281
+          "line": 24,
+          "column": 9,
+          "position": 481
         }
       }
     }
