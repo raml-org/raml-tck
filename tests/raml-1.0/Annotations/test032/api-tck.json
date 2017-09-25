@@ -1,23 +1,19 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "annotationTypes": [
-      {
-        "bindingDefinition": {
-          "name": "bindingDefinition",
-          "displayName": "BindingDefinition",
-          "type": [
-            "array"
-          ],
-          "required": true,
-          "items": {
+    "annotationTypes": {
+      "bindingDefinition": {
+        "name": "bindingDefinition",
+        "displayName": "BindingDefinition",
+        "type": [
+          "array"
+        ],
+        "items": [
+          {
             "name": "items",
             "displayName": "items",
             "type": [
               "object"
             ],
-            "required": true,
             "properties": {
               "method": {
                 "name": "method",
@@ -40,7 +36,9 @@
                       "calculated": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "input": {
                 "name": "input",
@@ -61,7 +59,9 @@
                       "calculated": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "output": {
                 "name": "output",
@@ -82,7 +82,9 @@
                       "calculated": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "__METADATA__": {
@@ -92,31 +94,36 @@
                 },
                 "type": {
                   "insertedAsDefault": true
-                },
-                "required": {
-                  "insertedAsDefault": true
                 }
               }
-            }
-          },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "required": {
-                "insertedAsDefault": true
-              }
-            }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
           }
-        }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {}
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "Test API",
     "baseUri": "https://example.com",
     "protocols": [
       "HTTPS"
     ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
     "scalarsAnnotations": {
       "baseUri": [
         {
+          "name": "bindingDefinition",
           "structuredValue": [
             {
               "method": "GET",
@@ -128,18 +135,12 @@
               "input": "NONE",
               "output": "REQUIRED"
             }
-          ],
-          "name": "bindingDefinition"
+          ]
         }
       ]
-    },
-    "__METADATA__": {
-      "primitiveValuesMeta": {
-        "protocols": {
-          "calculated": true
-        }
-      }
     }
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

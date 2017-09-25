@@ -1,133 +1,123 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "types": [
-      {
-        "User": {
-          "annotations": {
-            "meta-data": {
-              "structuredValue": "on an object; on a data type declaration",
-              "name": "meta-data"
-            }
-          },
-          "name": "User",
-          "displayName": "User",
-          "type": [
-            "object"
-          ],
-          "required": true,
-          "properties": {
-            "name": {
-              "annotations": {
-                "meta-data": {
-                  "structuredValue": "on a string property",
-                  "name": "meta-data"
-                }
-              },
-              "name": "name",
-              "displayName": "name",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+    "types": {
+      "User": {
+        "annotations": {
+          "meta-data": {
+            "name": "meta-data",
+            "structuredValue": "on an object; on a data type declaration"
+          }
+        },
+        "name": "User",
+        "displayName": "User",
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "name": {
+            "annotations": {
+              "meta-data": {
+                "name": "meta-data",
+                "structuredValue": "on a string property"
+              }
+            },
+            "name": "name",
+            "displayName": "name",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
-            }
-          },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
-    "annotationTypes": [
-      {
-        "meta-resource-method": {
-          "name": "meta-resource-method",
-          "displayName": "meta-resource-method",
-          "type": [
-            "string"
-          ],
-          "required": true,
-          "allowedTargets": [
-            "Resource",
-            "Method"
-          ],
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "type": {
-                "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+    },
+    "annotationTypes": {
+      "meta-resource-method": {
+        "name": "meta-resource-method",
+        "displayName": "meta-resource-method",
+        "type": [
+          "string"
+        ],
+        "allowedTargets": [
+          "Resource",
+          "Method"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       },
-      {
-        "meta-data": {
-          "name": "meta-data",
-          "displayName": "meta-data",
-          "type": [
-            "string"
-          ],
-          "required": true,
-          "allowedTargets": [
-            "TypeDeclaration"
-          ],
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+      "meta-data": {
+        "name": "meta-data",
+        "displayName": "meta-data",
+        "type": [
+          "string"
+        ],
+        "allowedTargets": [
+          "TypeDeclaration"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "Testing TypeDeclaration targets",
-    "mediaType": "application/json",
+    "mediaType": [
+      "application/json"
+    ],
     "resources": [
       {
         "annotations": {
           "meta-resource-method": {
-            "structuredValue": "on a resource",
-            "name": "meta-resource-method"
+            "name": "meta-resource-method",
+            "structuredValue": "on a resource"
           }
         },
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "annotations": {
               "meta-resource-method": {
-                "structuredValue": "on a method",
-                "name": "meta-resource-method"
+                "name": "meta-resource-method",
+                "structuredValue": "on a method"
               },
               "meta-data": {
-                "structuredValue": "stringValue1",
-                "name": "meta-data"
+                "name": "meta-data",
+                "structuredValue": "stringValue1"
               }
             },
             "responses": {
@@ -137,8 +127,8 @@
                   "application/json": {
                     "annotations": {
                       "meta-data": {
-                        "structuredValue": "on a body",
-                        "name": "meta-data"
+                        "name": "meta-data",
+                        "structuredValue": "on a body"
                       }
                     },
                     "name": "application/json",
@@ -146,17 +136,15 @@
                     "type": [
                       "array"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
                     },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "items": "User"
                   }
                 }
@@ -164,7 +152,7 @@
             },
             "method": "get"
           }
-        ],
+        },
         "relativeUri": "/users",
         "displayName": "/users",
         "__METADATA__": {
@@ -177,10 +165,14 @@
         "relativeUriPathSegments": [
           "users"
         ],
-        "absoluteUri": "/users"
+        "absoluteUri": "/users",
+        "completeRelativeUri": "/users",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "INVALID_ANNOTATION_LOCATION",

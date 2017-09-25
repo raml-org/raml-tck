@@ -1,6 +1,4 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
     "title": "API",
     "baseUri": "/some/base/uri",
@@ -9,8 +7,8 @@
     ],
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "responses": {
               "200": {
                 "code": "200",
@@ -21,7 +19,6 @@
                     "type": [
                       "object"
                     ],
-                    "required": true,
                     "description": "some very useful resource",
                     "__METADATA__": {
                       "primitiveValuesMeta": {
@@ -30,12 +27,11 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
@@ -52,7 +48,7 @@
               }
             }
           }
-        ],
+        },
         "uriParameters": {
           "blah": {
             "name": "blah",
@@ -70,7 +66,9 @@
                   "insertedAsDefault": true
                 }
               }
-            }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
           }
         },
         "relativeUri": "/someChildUri/{blah}",
@@ -86,7 +84,9 @@
           "someChildUri",
           "{blah}"
         ],
-        "absoluteUri": "/some/base/uri/someChildUri/{blah}"
+        "absoluteUri": "/some/base/uri/someChildUri/{blah}",
+        "completeRelativeUri": "/someChildUri/{blah}",
+        "parentUri": ""
       }
     ],
     "__METADATA__": {
@@ -97,5 +97,7 @@
       }
     }
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

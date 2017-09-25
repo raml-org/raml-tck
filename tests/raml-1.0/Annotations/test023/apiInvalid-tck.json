@@ -1,43 +1,39 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "annotationTypes": [
-      {
-        "z": {
-          "name": "z",
-          "displayName": "z",
-          "type": [
-            "number"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+    "annotationTypes": {
+      "z": {
+        "name": "z",
+        "displayName": "z",
+        "type": [
+          "number"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "Hello",
     "scalarsAnnotations": {
       "title": [
         {
-          "structuredValue": "3s",
-          "name": "z"
+          "name": "z",
+          "structuredValue": "3s"
         }
       ]
     }
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

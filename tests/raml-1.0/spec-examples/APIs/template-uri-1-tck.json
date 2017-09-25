@@ -1,6 +1,4 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
     "title": "ZEncoder API",
     "version": "v2",
@@ -32,7 +30,9 @@
               "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
     },
     "protocols": [
@@ -67,7 +67,9 @@
                       "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "relativeUri": "/{jobId}",
@@ -82,7 +84,9 @@
             "relativeUriPathSegments": [
               "{jobId}"
             ],
-            "absoluteUri": "https://app.zencoder.com/api/{version}/jobs/{jobId}"
+            "absoluteUri": "https://app.zencoder.com/api/{version}/jobs/{jobId}",
+            "completeRelativeUri": "/jobs/{jobId}",
+            "parentUri": "/jobs"
           }
         ],
         "__METADATA__": {
@@ -95,7 +99,9 @@
         "relativeUriPathSegments": [
           "jobs"
         ],
-        "absoluteUri": "https://app.zencoder.com/api/{version}/jobs"
+        "absoluteUri": "https://app.zencoder.com/api/{version}/jobs",
+        "completeRelativeUri": "/jobs",
+        "parentUri": ""
       }
     ],
     "__METADATA__": {
@@ -106,5 +112,7 @@
       }
     }
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

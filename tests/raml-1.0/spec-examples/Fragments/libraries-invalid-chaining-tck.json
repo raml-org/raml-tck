@@ -1,14 +1,6 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "ResourceType",
   "specification": {
-    "undefined": {
-      "uses": [
-        {
-          "key": "files",
-          "value": "libraries/files.raml"
-        }
-      ],
+    "methods": {
       "get": {
         "responses": {
           "200": {
@@ -20,17 +12,15 @@
                 "type": [
                   "files.file-type.File"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             }
           }
@@ -40,12 +30,20 @@
         ],
         "method": "get"
       }
-    }
+    },
+    "uses": [
+      {
+        "key": "files",
+        "value": "libraries/files.raml"
+      }
+    ]
   },
+  "ramlVersion": "RAML10",
+  "type": "ResourceType",
   "errors": [
     {
-      "code": "INHERITING_UNKNOWN_TYPE",
-      "message": "Inheriting from unknown type",
+      "code": "INHERITING_TYPE_IMPORTED_THROUGH_LIBRARY_CHAIN",
+      "message": "Inheriting the 'files.file-type.File' type imported through a library chain. Library chaining is not allowed.",
       "path": "libraries-invalid-chaining.raml",
       "range": {
         "start": {

@@ -1,27 +1,23 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "traits": [
-      {
-        "chargeable": {
-          "headers": {
-            "X-Dept": {
-              "name": "X-Dept",
-              "displayName": "X-Dept",
-              "type": [
-                "array"
-              ],
-              "required": true,
-              "description": "A department code to be charged.\nMultiple of such headers are allowed.\n",
-              "items": {
+    "traits": {
+      "chargeable": {
+        "headers": {
+          "X-Dept": {
+            "name": "X-Dept",
+            "displayName": "X-Dept",
+            "type": [
+              "array"
+            ],
+            "required": true,
+            "description": "A department code to be charged.\nMultiple of such headers are allowed.\n",
+            "items": [
+              {
                 "name": "items",
                 "displayName": "items",
                 "type": [
                   "string"
                 ],
-                "example": "230-OCTO",
-                "required": true,
                 "pattern": "^\\d+\\-\\w+$",
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -30,77 +26,79 @@
                     },
                     "type": {
                       "insertedAsDefault": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
                 },
-                "structuredExample": {
-                  "value": "230-OCTO",
-                  "strict": true,
-                  "name": null,
-                  "structuredValue": "230-OCTO"
-                }
-              },
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
+                "examples": [
+                  {
+                    "value": "230-OCTO",
+                    "strict": true,
+                    "name": null
                   }
+                ],
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
+              }
+            ],
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
-            }
-          },
-          "name": "chargeable"
-        }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "name": "chargeable"
       },
-      {
-        "traceable": {
-          "headers": {
-            "X-Tracker": {
-              "name": "X-Tracker",
-              "displayName": "X-Tracker",
-              "type": [
-                "string"
-              ],
-              "example": "abcdefghijklmnop",
-              "required": true,
-              "description": "A code to track API calls end to end",
-              "pattern": "^\\w{16}$",
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+      "traceable": {
+        "headers": {
+          "X-Tracker": {
+            "name": "X-Tracker",
+            "displayName": "X-Tracker",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "description": "A code to track API calls end to end",
+            "pattern": "^\\w{16}$",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
-              },
-              "structuredExample": {
+              }
+            },
+            "examples": [
+              {
                 "value": "abcdefghijklmnop",
                 "strict": true,
-                "name": null,
-                "structuredValue": "abcdefghijklmnop"
+                "name": null
               }
-            }
-          },
-          "name": "traceable"
-        }
+            ],
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "name": "traceable"
       }
-    ],
+    },
     "title": "Example with headers",
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "headers": {
               "X-Dept": {
                 "name": "X-Dept",
@@ -108,41 +106,37 @@
                 "type": [
                   "array"
                 ],
-                "example": [
-                  "18-FINANCE",
-                  "200-MISC"
-                ],
                 "required": true,
                 "description": "A department code to be charged.\nMultiple of such headers are allowed.\n",
-                "items": {
-                  "name": "items",
-                  "displayName": "items",
-                  "type": [
-                    "string"
-                  ],
-                  "example": "230-OCTO",
-                  "required": true,
-                  "pattern": "^\\d+\\-\\w+$",
-                  "__METADATA__": {
-                    "primitiveValuesMeta": {
-                      "displayName": {
-                        "calculated": true
-                      },
-                      "type": {
-                        "insertedAsDefault": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
+                "items": [
+                  {
+                    "name": "items",
+                    "displayName": "items",
+                    "type": [
+                      "string"
+                    ],
+                    "pattern": "^\\d+\\-\\w+$",
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
                       }
-                    }
-                  },
-                  "structuredExample": {
-                    "value": "230-OCTO",
-                    "strict": true,
-                    "name": null,
-                    "structuredValue": "230-OCTO"
+                    },
+                    "examples": [
+                      {
+                        "value": "230-OCTO",
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
-                },
+                ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
@@ -153,15 +147,18 @@
                     }
                   }
                 },
-                "structuredExample": {
-                  "value": "[\n  \"18-FINANCE\",\n  \"200-MISC\"\n]",
-                  "strict": true,
-                  "name": null,
-                  "structuredValue": [
-                    "18-FINANCE",
-                    "200-MISC"
-                  ]
-                }
+                "examples": [
+                  {
+                    "value": [
+                      "18-FINANCE",
+                      "200-MISC"
+                    ],
+                    "strict": true,
+                    "name": null
+                  }
+                ],
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "X-Tracker": {
                 "name": "X-Tracker",
@@ -169,7 +166,6 @@
                 "type": [
                   "string"
                 ],
-                "example": "gfr456d03ygh38s2",
                 "required": true,
                 "description": "A code to track API calls end to end",
                 "pattern": "^\\w{16}$",
@@ -186,12 +182,15 @@
                     }
                   }
                 },
-                "structuredExample": {
-                  "value": "gfr456d03ygh38s2",
-                  "strict": true,
-                  "name": null,
-                  "structuredValue": "gfr456d03ygh38s2"
-                }
+                "examples": [
+                  {
+                    "value": "gfr456d03ygh38s2",
+                    "strict": true,
+                    "name": null
+                  }
+                ],
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "is": [
@@ -201,7 +200,7 @@
             "description": "The HTTP interaction will look like\n\nGET /users HTTP/1.1\nX-Dept: 18-FINANCE\nX-Dept: 200-MISC\nX-Tracker: gfr456d03ygh38s2\n",
             "method": "get"
           }
-        ],
+        },
         "relativeUri": "/users",
         "displayName": "/users",
         "__METADATA__": {
@@ -214,9 +213,13 @@
         "relativeUriPathSegments": [
           "users"
         ],
-        "absoluteUri": "/users"
+        "absoluteUri": "/users",
+        "completeRelativeUri": "/users",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

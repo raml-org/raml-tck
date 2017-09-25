@@ -1,0 +1,78 @@
+{
+  "specification": {
+    "title": "test api",
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "methods": {
+          "post": {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "schema": "{\n  \"$schema\": \"http:\\/\\/json-schema.org\\/draft-04\\/schema#\",\n  \"type\": \"object\",\n  \"properties\": null\n}\n",
+                "schemaContent": "{\n  \"$schema\": \"http:\\/\\/json-schema.org\\/draft-04\\/schema#\",\n  \"type\": \"object\",\n  \"properties\": null\n}\n"
+              }
+            },
+            "method": "post"
+          }
+        },
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": ""
+      }
+    ]
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "INVALID_JSON_SCHEMA_DETAILS",
+      "message": "Invalid JSON schema: Keyword 'properties' is expected to be of type 'object'",
+      "path": "schema.json",
+      "range": {
+        "start": {
+          "line": 0,
+          "column": 0,
+          "position": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 1,
+          "position": 104
+        }
+      },
+      "isWarning": true,
+      "trace": [
+        {
+          "code": "INVALID_JSON_SCHEMA_DETAILS",
+          "message": "Invalid JSON schema: Keyword 'properties' is expected to be of type 'object'",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 8,
+              "column": 8,
+              "position": 90
+            },
+            "end": {
+              "line": 8,
+              "column": 14,
+              "position": 96
+            }
+          },
+          "isWarning": true
+        }
+      ]
+    }
+  ]
+}

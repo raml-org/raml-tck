@@ -1,27 +1,27 @@
 {
-  "ramlVersion": "RAML08",
-  "type": "Api",
   "specification": {
     "title": "Test",
     "resources": [
       {
         "relativeUri": "/",
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "responses": {
               "200": {
                 "code": "200",
                 "body": {
                   "application/json": {
                     "name": "application/json",
-                    "example": 10
+                    "example": {
+                      "value": 10
+                    }
                   }
                 }
               }
             },
             "method": "get"
           }
-        ],
+        },
         "displayName": "/",
         "__METADATA__": {
           "primitiveValuesMeta": {
@@ -31,14 +31,18 @@
           }
         },
         "relativeUriPathSegments": [],
-        "absoluteUri": "/"
+        "absoluteUri": "/",
+        "completeRelativeUri": "/",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML08",
+  "type": "Api",
   "errors": [
     {
-      "code": "STRING_EXPECTED_2",
-      "message": "'example' value should be a string",
+      "code": "SCALAR_EXPECTED",
+      "message": "Scalar is expected here",
       "path": "api.raml",
       "range": {
         "start": {

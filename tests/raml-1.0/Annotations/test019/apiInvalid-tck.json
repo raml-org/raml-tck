@@ -1,63 +1,55 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Library",
   "specification": {
     "annotations": {
       "amazon-apigateway-integration": {
-        "structuredValue": "1s",
-        "name": "amazon-apigateway-integration"
+        "name": "amazon-apigateway-integration",
+        "structuredValue": "1s"
       }
     },
-    "types": [
-      {
-        "amazon-apigateway-integration": {
-          "name": "amazon-apigateway-integration",
-          "displayName": "amazon-apigateway-integration",
-          "type": [
-            "number"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+    "types": {
+      "amazon-apigateway-integration": {
+        "name": "amazon-apigateway-integration",
+        "displayName": "amazon-apigateway-integration",
+        "type": [
+          "number"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
-    "annotationTypes": [
-      {
-        "amazon-apigateway-integration": {
-          "name": "amazon-apigateway-integration",
-          "displayName": "amazon-apigateway-integration",
-          "type": [
-            "amazon-apigateway-integration"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+    },
+    "annotationTypes": {
+      "amazon-apigateway-integration": {
+        "name": "amazon-apigateway-integration",
+        "displayName": "amazon-apigateway-integration",
+        "type": [
+          "amazon-apigateway-integration"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "usage": "Data types and annotation types for AWS API Gateway"
   },
+  "ramlVersion": "RAML10",
+  "type": "Library",
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

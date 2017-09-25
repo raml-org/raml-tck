@@ -1,6 +1,4 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
     "title": "API",
     "baseUri": "/some/base/uri",
@@ -9,8 +7,8 @@
     ],
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "body": {
               "application/xml": {
                 "name": "application/xml",
@@ -18,11 +16,6 @@
                 "type": [
                   "object"
                 ],
-                "example": {
-                  "name": "john",
-                  "age": "342w"
-                },
-                "required": true,
                 "properties": {
                   "name": {
                     "name": "name",
@@ -40,7 +33,9 @@
                           "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   },
                   "age": {
                     "name": "age",
@@ -58,28 +53,30 @@
                           "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 },
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
                 },
-                "structuredExample": {
-                  "value": "{\n  \"name\": \"john\",\n  \"age\": \"342w\"\n}",
-                  "strict": true,
-                  "name": null,
-                  "structuredValue": {
-                    "name": "john",
-                    "age": "342w"
+                "examples": [
+                  {
+                    "value": {
+                      "name": "john",
+                      "age": "342w"
+                    },
+                    "strict": true,
+                    "name": null
                   }
-                }
+                ],
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "protocols": [
@@ -94,7 +91,7 @@
               }
             }
           }
-        ],
+        },
         "uriParameters": {
           "blah": {
             "name": "blah",
@@ -112,7 +109,9 @@
                   "insertedAsDefault": true
                 }
               }
-            }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
           }
         },
         "relativeUri": "/someChildUri/{blah}",
@@ -128,7 +127,9 @@
           "someChildUri",
           "{blah}"
         ],
-        "absoluteUri": "/some/base/uri/someChildUri/{blah}"
+        "absoluteUri": "/some/base/uri/someChildUri/{blah}",
+        "completeRelativeUri": "/someChildUri/{blah}",
+        "parentUri": ""
       }
     ],
     "__METADATA__": {
@@ -139,10 +140,12 @@
       }
     }
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

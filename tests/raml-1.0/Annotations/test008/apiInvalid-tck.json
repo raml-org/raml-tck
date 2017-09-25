@@ -1,72 +1,71 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "annotationTypes": [
-      {
-        "suborg": {
-          "name": "suborg",
-          "displayName": "suborg",
-          "type": [
-            "object"
-          ],
-          "required": true,
-          "properties": {
-            "prop1": {
-              "name": "prop1",
-              "displayName": "prop1",
-              "type": [
-                "number"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+    "annotationTypes": {
+      "suborg": {
+        "name": "suborg",
+        "displayName": "suborg",
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "prop1": {
+            "name": "prop1",
+            "displayName": "prop1",
+            "type": [
+              "number"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
             },
-            "/.*/": {
-              "name": "/.*/",
-              "displayName": "/.*/",
-              "type": [
-                "object"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          },
+          "/.*/": {
+            "name": "/.*/",
+            "displayName": "/.*/",
+            "type": [
+              "object"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
-            }
-          },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "Annotation with arbitrary properties",
     "resources": [
       {
         "annotations": {
           "suborg": {
+            "name": "suborg",
             "structuredValue": {
               "prop1": 4,
               "manager": {
@@ -76,8 +75,7 @@
                 "name": "Bob"
               },
               "role": "admin"
-            },
-            "name": "suborg"
+            }
           }
         },
         "relativeUri": "/assets",
@@ -92,25 +90,29 @@
         "relativeUriPathSegments": [
           "assets"
         ],
-        "absoluteUri": "/assets"
+        "absoluteUri": "/assets",
+        "completeRelativeUri": "/assets",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "object is expected",
+      "message": "Expected type 'object' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
-          "line": 9,
-          "column": 2,
-          "position": 165
+          "line": 15,
+          "column": 8,
+          "position": 281
         },
         "end": {
-          "line": 9,
-          "column": 10,
-          "position": 173
+          "line": 15,
+          "column": 12,
+          "position": 285
         }
       }
     }

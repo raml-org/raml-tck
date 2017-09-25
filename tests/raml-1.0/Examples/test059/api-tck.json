@@ -1,151 +1,147 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "types": [
-      {
-        "CatOrDog": {
-          "name": "CatOrDog",
-          "displayName": "CatOrDog",
-          "type": [
-            "Cat | Dog"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+    "types": {
+      "CatOrDog": {
+        "name": "CatOrDog",
+        "displayName": "CatOrDog",
+        "type": [
+          "Cat | Dog"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       },
-      {
-        "Cat": {
-          "name": "Cat",
-          "displayName": "Cat",
-          "type": [
-            "object"
-          ],
-          "required": true,
-          "properties": {
-            "name": {
-              "name": "name",
-              "displayName": "name",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+      "Cat": {
+        "name": "Cat",
+        "displayName": "Cat",
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "name": {
+            "name": "name",
+            "displayName": "name",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
             },
-            "color": {
-              "name": "color",
-              "displayName": "color",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
-                }
-              }
-            }
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
           },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
-            }
-          }
-        }
-      },
-      {
-        "Dog": {
-          "name": "Dog",
-          "displayName": "Dog",
-          "type": [
-            "object"
-          ],
-          "required": true,
-          "properties": {
-            "name": {
-              "name": "name",
-              "displayName": "name",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+          "color": {
+            "name": "color",
+            "displayName": "color",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
             },
-            "fangs": {
-              "name": "fangs",
-              "displayName": "fangs",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
-                }
-              }
-            }
-          },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      },
+      "Dog": {
+        "name": "Dog",
+        "displayName": "Dog",
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "name": {
+            "name": "name",
+            "displayName": "name",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          },
+          "fangs": {
+            "name": "fangs",
+            "displayName": "fangs",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "Animals test",
-    "mediaType": "application/json",
+    "mediaType": [
+      "application/json"
+    ],
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "responses": {
               "200": {
                 "code": "200",
@@ -156,37 +152,32 @@
                     "type": [
                       "CatOrDog"
                     ],
-                    "example": {
-                      "name": "Rex",
-                      "fangs-INCORRECT": "big ones"
-                    },
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
                     },
-                    "structuredExample": {
-                      "value": "{\n  \"name\": \"Rex\",\n  \"fangs-INCORRECT\": \"big ones\"\n}\n",
-                      "strict": true,
-                      "name": null,
-                      "structuredValue": {
-                        "name": "Rex",
-                        "fangs-INCORRECT": "big ones"
+                    "examples": [
+                      {
+                        "value": {
+                          "name": "Rex",
+                          "fangs-INCORRECT": "big ones"
+                        },
+                        "strict": true,
+                        "name": null
                       }
-                    }
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
             },
             "method": "get"
           }
-        ],
+        },
         "uriParameters": {
           "animalId": {
             "name": "animalId",
@@ -208,7 +199,9 @@
                   "insertedAsDefault": true
                 }
               }
-            }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
           }
         },
         "relativeUri": "/animals/{animalId}",
@@ -224,10 +217,14 @@
           "animals",
           "{animalId}"
         ],
-        "absoluteUri": "/animals/{animalId}"
+        "absoluteUri": "/animals/{animalId}",
+        "completeRelativeUri": "/animals/{animalId}",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "UNION_TYPE_FAILURE_DETAILS",
@@ -279,6 +276,24 @@
           "position": 392
         }
       }
+    },
+    {
+      "code": "UNKNOWN_PROPERTY",
+      "message": "Unknown property: 'fangs-INCORRECT'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 10,
+          "position": 385
+        },
+        "end": {
+          "line": 25,
+          "column": 17,
+          "position": 392
+        }
+      },
+      "isWarning": true
     }
   ]
 }

@@ -1,120 +1,107 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "types": [
-      {
-        "Users": {
-          "name": "Users",
-          "displayName": "Users",
-          "type": [
-            "string"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "type": {
-                "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+    "types": {
+      "Users": {
+        "name": "Users",
+        "displayName": "Users",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       },
-      {
-        "User": {
-          "name": "User",
-          "displayName": "User",
-          "type": [
-            "string"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "type": {
-                "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+      "User": {
+        "name": "User",
+        "displayName": "User",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
-    "traits": [
-      {
-        "secured": {
-          "queryParameters": {
-            "<<methodName>>": {
-              "name": "<<methodName>>",
-              "displayName": "<<methodName>>",
-              "type": [
-                "string"
-              ],
-              "example": "<<methodName>>=h8duh3uhhu38",
-              "required": true,
-              "description": "A <<methodName>>-token pair is required",
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+    },
+    "traits": {
+      "secured": {
+        "queryParameters": {
+          "<<methodName>>": {
+            "name": "<<methodName>>",
+            "displayName": "<<methodName>>",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "description": "A <<methodName>>-token pair is required",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
-              },
-              "structuredExample": {
+              }
+            },
+            "examples": [
+              {
                 "value": "<<methodName>>=h8duh3uhhu38",
                 "strict": true,
-                "name": null,
-                "structuredValue": "<<methodName>>=h8duh3uhhu38"
+                "name": null
               }
-            }
-          },
-          "description": "Some requests require authentication",
-          "name": "secured"
-        }
+            ],
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "description": "Some requests require authentication",
+        "name": "secured"
       }
-    ],
-    "resourceTypes": [
-      {
-        "collection": {
-          "name": "collection",
+    },
+    "resourceTypes": {
+      "collection": {
+        "methods": {
           "get": {
             "responses": {
               "200": {
                 "code": "200",
                 "body": {
-                  "body": {
-                    "name": "body",
-                    "displayName": "body",
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
                     "type": [
                       "<<resourcePathName>>"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
@@ -126,68 +113,69 @@
               "200": {
                 "code": "200",
                 "body": {
-                  "body": {
-                    "name": "body",
-                    "displayName": "body",
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
                     "type": [
                       "<<resourcePathName | !singularize>>"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
             },
             "method": "post"
           }
-        }
+        },
+        "name": "collection"
       },
-      {
-        "member": {
-          "name": "member",
+      "member": {
+        "methods": {
           "get": {
             "responses": {
               "200": {
                 "code": "200",
                 "body": {
-                  "body": {
-                    "name": "body",
-                    "displayName": "body",
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
                     "type": [
                       "<<resourcePathName>>"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
             },
             "method": "get"
           }
-        }
+        },
+        "name": "member"
       }
-    ],
+    },
     "title": "Example API",
     "version": "v1",
-    "mediaType": "application/json"
+    "mediaType": [
+      "application/json"
+    ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

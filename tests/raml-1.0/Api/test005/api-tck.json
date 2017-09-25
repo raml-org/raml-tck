@@ -1,6 +1,4 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
     "title": "test",
     "baseUri": "api.{domain}/{mediaType}",
@@ -12,7 +10,6 @@
           "string"
         ],
         "default": "test.com",
-        "example": "example.com",
         "required": true,
         "description": "Api base uri parameter domain",
         "enum": [
@@ -33,12 +30,15 @@
             }
           }
         },
-        "structuredExample": {
-          "value": "example.com",
-          "strict": true,
-          "name": null,
-          "structuredValue": "example.com"
-        }
+        "examples": [
+          {
+            "value": "example.com",
+            "strict": true,
+            "name": null
+          }
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       },
       "mediaType": {
         "name": "mediaType",
@@ -60,7 +60,9 @@
               "insertedAsDefault": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
     },
     "protocols": [
@@ -68,5 +70,7 @@
       "HTTPS"
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

@@ -1,12 +1,10 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
     "title": "Test API",
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "queryParameters": {
               "param1": {
                 "name": "param1",
@@ -14,7 +12,6 @@
                 "type": [
                   "number"
                 ],
-                "example": 2,
                 "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -26,17 +23,20 @@
                     }
                   }
                 },
-                "structuredExample": {
-                  "value": "2",
-                  "strict": true,
-                  "name": null,
-                  "structuredValue": 2
-                }
+                "examples": [
+                  {
+                    "value": 2,
+                    "strict": true,
+                    "name": null
+                  }
+                ],
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "method": "get"
           }
-        ],
+        },
         "relativeUri": "/resource",
         "displayName": "/resource",
         "__METADATA__": {
@@ -49,9 +49,13 @@
         "relativeUriPathSegments": [
           "resource"
         ],
-        "absoluteUri": "/resource"
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

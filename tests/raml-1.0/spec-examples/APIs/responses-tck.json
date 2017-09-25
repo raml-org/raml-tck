@@ -1,80 +1,80 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "types": [
-      {
-        "Invoice": {
-          "name": "Invoice",
-          "displayName": "Invoice",
-          "type": [
-            "object"
-          ],
-          "required": true,
-          "properties": {
-            "amount": {
-              "name": "amount",
-              "displayName": "amount",
-              "type": [
-                "number"
-              ],
-              "required": true,
-              "minimum": 0,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+    "types": {
+      "Invoice": {
+        "name": "Invoice",
+        "displayName": "Invoice",
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "amount": {
+            "name": "amount",
+            "displayName": "amount",
+            "type": [
+              "number"
+            ],
+            "required": true,
+            "minimum": 0,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
             },
-            "vendorName": {
-              "name": "vendorName",
-              "displayName": "vendorName",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          },
+          "vendorName": {
+            "name": "vendorName",
+            "displayName": "vendorName",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
-            }
-          },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "type": {
-                "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "Example with responses",
-    "mediaType": "application/json",
+    "mediaType": [
+      "application/json"
+    ],
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "responses": {
               "200": {
                 "code": "200",
@@ -85,7 +85,6 @@
                     "type": [
                       "Invoice"
                     ],
-                    "required": true,
                     "properties": {
                       "id": {
                         "name": "id",
@@ -103,26 +102,27 @@
                               "insertedAsDefault": true
                             }
                           }
-                        }
+                        },
+                        "mediaType": "application/raml+yaml",
+                        "typePropertyKind": "TYPE_EXPRESSION"
                       }
                     },
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
             },
             "method": "get"
           },
-          {
+          "post": {
             "responses": {
               "201": {
                 "code": "201",
@@ -133,7 +133,6 @@
                     "type": [
                       "string"
                     ],
-                    "example": "/invoices/45612",
                     "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
@@ -148,50 +147,51 @@
                         }
                       }
                     },
-                    "structuredExample": {
-                      "value": "/invoices/45612",
-                      "strict": true,
-                      "name": null,
-                      "structuredValue": "/invoices/45612"
-                    }
+                    "examples": [
+                      {
+                        "value": "/invoices/45612",
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 ],
                 "body": {
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "schemaPath": "schemas/invoice.json",
                     "type": [
                       "{\n\t\"title\": \"Example Schema\",\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"accountID\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"amount\": {\n\t\t\t\"type\": \"string\"\n\t\t}\n\t},\n\t\"required\": [\"accountID\", \"amount\"]\n}\n"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/json",
+                    "typePropertyKind": "JSON"
                   },
                   "text/xml": {
                     "name": "text/xml",
                     "displayName": "text/xml",
+                    "schemaPath": "schemas/invoice.xsd",
                     "type": [
                       "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:element name=\"invoice\">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name=\"accountID\" type=\"xs:string\"/>\n        <xs:element name=\"amount\" type=\"xs:string\"/>\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>\n"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/xml",
+                    "typePropertyKind": "XML"
                   }
                 }
               },
@@ -204,10 +204,6 @@
                     "type": [
                       "object"
                     ],
-                    "example": {
-                      "error": "Amount cannot be negative"
-                    },
-                    "required": true,
                     "properties": {
                       "error": {
                         "name": "error",
@@ -228,7 +224,9 @@
                               "insertedAsDefault": true
                             }
                           }
-                        }
+                        },
+                        "mediaType": "application/raml+yaml",
+                        "typePropertyKind": "TYPE_EXPRESSION"
                       }
                     },
                     "__METADATA__": {
@@ -238,20 +236,20 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
                     },
-                    "structuredExample": {
-                      "value": "{\n  \"error\": \"Amount cannot be negative\"\n}",
-                      "strict": true,
-                      "name": null,
-                      "structuredValue": {
-                        "error": "Amount cannot be negative"
+                    "examples": [
+                      {
+                        "value": {
+                          "error": "Amount cannot be negative"
+                        },
+                        "strict": true,
+                        "name": null
                       }
-                    }
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
@@ -263,22 +261,20 @@
                 "type": [
                   "Invoice"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "method": "post"
           }
-        ],
+        },
         "relativeUri": "/invoices",
         "displayName": "/invoices",
         "__METADATA__": {
@@ -291,9 +287,13 @@
         "relativeUriPathSegments": [
           "invoices"
         ],
-        "absoluteUri": "/invoices"
+        "absoluteUri": "/invoices",
+        "completeRelativeUri": "/invoices",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

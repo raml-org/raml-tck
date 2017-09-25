@@ -1,6 +1,4 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
     "title": "API",
     "baseUri": "/some/base/uri",
@@ -9,8 +7,8 @@
     ],
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "responses": {
               "200": {
                 "code": "200",
@@ -21,7 +19,6 @@
                     "type": [
                       "object"
                     ],
-                    "required": true,
                     "description": "some very useful resource",
                     "__METADATA__": {
                       "primitiveValuesMeta": {
@@ -30,12 +27,11 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
-                    }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION"
                   }
                 }
               }
@@ -52,7 +48,7 @@
               }
             }
           }
-        ],
+        },
         "uriParameters": {
           "blah1": {
             "name": "blah1",
@@ -74,7 +70,9 @@
                   "insertedAsDefault": true
                 }
               }
-            }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
           },
           "blah": {
             "name": "blah",
@@ -92,7 +90,9 @@
                   "insertedAsDefault": true
                 }
               }
-            }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
           }
         },
         "relativeUri": "/someChildUri/{blah1}",
@@ -108,7 +108,9 @@
           "someChildUri",
           "{blah1}"
         ],
-        "absoluteUri": "/some/base/uri/someChildUri/{blah1}"
+        "absoluteUri": "/some/base/uri/someChildUri/{blah1}",
+        "completeRelativeUri": "/someChildUri/{blah1}",
+        "parentUri": ""
       }
     ],
     "__METADATA__": {
@@ -119,6 +121,8 @@
       }
     }
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "PROPERTY_UNUSED",

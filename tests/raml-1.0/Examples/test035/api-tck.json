@@ -1,86 +1,79 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "types": [
-      {
-        "ItsComplicated": {
-          "name": "ItsComplicated",
-          "displayName": "ItsComplicated",
-          "type": [
-            "object"
-          ],
-          "example": {
-            "prop1": "stringValue1",
-            "prop2": {
-              "someProperty": "stringValue2"
-            }
-          },
-          "required": true,
-          "properties": {
-            "/.*/": {
-              "name": "/.*/",
-              "displayName": "/.*/",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+    "types": {
+      "ItsComplicated": {
+        "name": "ItsComplicated",
+        "displayName": "ItsComplicated",
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "/.*/": {
+            "name": "/.*/",
+            "displayName": "/.*/",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
             }
-          },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "type": {
-                "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
-            }
-          },
-          "structuredExample": {
-            "value": "{\n  \"prop1\": \"stringValue1\",\n  \"prop2\": {\n    \"someProperty\": \"stringValue2\"\n  }\n}",
-            "strict": true,
-            "name": null,
-            "structuredValue": {
+          }
+        },
+        "examples": [
+          {
+            "value": {
               "prop1": "stringValue1",
               "prop2": {
                 "someProperty": "stringValue2"
               }
-            }
+            },
+            "strict": true,
+            "name": null
           }
-        }
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "Api"
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "string is expected",
+      "message": "Expected type 'string' but got 'object'",
       "path": "api.raml",
       "range": {
         "start": {
-          "line": 7,
-          "column": 4,
-          "position": 87
+          "line": 9,
+          "column": 6,
+          "position": 128
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 11,
-          "position": 94
+          "position": 133
         }
       }
     }

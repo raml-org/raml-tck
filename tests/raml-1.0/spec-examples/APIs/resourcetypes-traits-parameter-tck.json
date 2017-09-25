@@ -1,71 +1,68 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "traits": [
-      {
-        "secured": {
-          "queryParameters": {
-            "<<tokenName>>": {
-              "name": "<<tokenName>>",
-              "displayName": "<<tokenName>>",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "description": "A valid <<tokenName>> is required",
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+    "traits": {
+      "secured": {
+        "queryParameters": {
+          "<<tokenName>>": {
+            "name": "<<tokenName>>",
+            "displayName": "<<tokenName>>",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "description": "A valid <<tokenName>> is required",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
-            }
-          },
-          "name": "secured"
-        }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "name": "secured"
       },
-      {
-        "paged": {
-          "queryParameters": {
-            "numPages": {
-              "name": "numPages",
-              "displayName": "numPages",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "description": "The number of pages to return, not to exceed <<maxPages>>",
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+      "paged": {
+        "queryParameters": {
+          "numPages": {
+            "name": "numPages",
+            "displayName": "numPages",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "description": "The number of pages to return, not to exceed <<maxPages>>",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
                 }
               }
-            }
-          },
-          "name": "paged"
-        }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "name": "paged"
       }
-    ],
-    "resourceTypes": [
-      {
-        "searchableCollection": {
-          "name": "searchableCollection",
+    },
+    "resourceTypes": {
+      "searchableCollection": {
+        "methods": {
           "get": {
             "queryParameters": {
               "<<queryParamName>>": {
@@ -88,7 +85,9 @@
                       "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "<<fallbackParamName>>": {
                 "name": "<<fallbackParamName>>",
@@ -110,20 +109,23 @@
                       "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "method": "get"
           }
-        }
+        },
+        "name": "searchableCollection"
       }
-    ],
+    },
     "title": "Example API",
     "version": "v1",
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "get": {
             "queryParameters": {
               "title": {
                 "name": "title",
@@ -145,7 +147,9 @@
                       "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "digest_all_fields": {
                 "name": "digest_all_fields",
@@ -167,7 +171,9 @@
                       "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "access_token": {
                 "name": "access_token",
@@ -189,7 +195,9 @@
                       "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "numPages": {
                 "name": "numPages",
@@ -211,7 +219,9 @@
                       "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "is": [
@@ -228,7 +238,7 @@
             ],
             "method": "get"
           }
-        ],
+        },
         "type": {
           "searchableCollection": {
             "queryParamName": "title",
@@ -247,9 +257,13 @@
         "relativeUriPathSegments": [
           "books"
         ],
-        "absoluteUri": "/books"
+        "absoluteUri": "/books",
+        "completeRelativeUri": "/books",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": []
 }

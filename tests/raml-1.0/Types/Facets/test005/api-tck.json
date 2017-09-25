@@ -1,106 +1,90 @@
 {
-  "ramlVersion": "RAML10",
-  "type": "Api",
   "specification": {
-    "types": [
-      {
-        "myDate": {
-          "annotations": {
-            "reader": {
-              "structuredValue": "myReaader.ts",
-              "name": "reader"
-            },
-            "writer": {
-              "structuredValue": "myWiter.ts",
-              "name": "writer"
-            }
+    "types": {
+      "myDate": {
+        "annotations": {
+          "reader": {
+            "name": "reader",
+            "structuredValue": "myReaader.ts"
           },
-          "name": "myDate",
-          "displayName": "myDate",
-          "facets": {
-            "format": {
-              "name": "format",
-              "displayName": "format",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
+          "writer": {
+            "name": "writer",
+            "structuredValue": "myWiter.ts"
+          }
+        },
+        "name": "myDate",
+        "displayName": "myDate",
+        "facets": {
+          "format": {
+            "name": "format",
+            "displayName": "format",
+            "type": [
+              "string"
+            ],
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
                 }
               }
-            }
-          },
-          "type": [
-            "string"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        },
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
-    "annotationTypes": [
-      {
-        "reader": {
-          "name": "reader",
-          "displayName": "reader",
-          "type": [
-            "string"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+    },
+    "annotationTypes": {
+      "reader": {
+        "name": "reader",
+        "displayName": "reader",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       },
-      {
-        "writer": {
-          "name": "writer",
-          "displayName": "writer",
-          "type": [
-            "string"
-          ],
-          "required": true,
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
+      "writer": {
+        "name": "writer",
+        "displayName": "writer",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
             }
           }
-        }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
       }
-    ],
+    },
     "title": "A",
     "resources": [
       {
-        "methods": [
-          {
+        "methods": {
+          "post": {
             "body": {
               "type": {
                 "name": "type",
@@ -108,17 +92,15 @@
                 "type": [
                   "myDate"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "format": {
                 "name": "format",
@@ -126,22 +108,20 @@
                 "type": [
                   "YYYY"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "method": "post"
           },
-          {
+          "put": {
             "body": {
               "type": {
                 "name": "type",
@@ -149,17 +129,15 @@
                 "type": [
                   "year"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               },
               "format": {
                 "name": "format",
@@ -167,7 +145,6 @@
                 "type": [
                   "object"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
@@ -175,17 +152,16 @@
                     },
                     "type": {
                       "insertedAsDefault": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION"
               }
             },
             "method": "put"
           }
-        ],
+        },
         "relativeUri": "/q",
         "displayName": "/q",
         "__METADATA__": {
@@ -198,10 +174,14 @@
         "relativeUriPathSegments": [
           "q"
         ],
-        "absoluteUri": "/q"
+        "absoluteUri": "/q",
+        "completeRelativeUri": "/q",
+        "parentUri": ""
       }
     ]
   },
+  "ramlVersion": "RAML10",
+  "type": "Api",
   "errors": [
     {
       "code": "MEDIATYPE_EXCEPTION",
