@@ -16,14 +16,15 @@
         "test": {
           "name": "test",
           "displayName": "test",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "q": {
               "name": "q",
               "displayName": "q",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "boolean"
               ],
@@ -42,6 +43,7 @@
             "items": {
               "name": "items",
               "displayName": "items",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -69,9 +71,6 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
           }
@@ -83,7 +82,7 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "boolean is expected",
+      "message": "Expected type 'boolean' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

@@ -7,17 +7,14 @@
         "z": {
           "name": "z",
           "displayName": "z",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "number"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
           }
@@ -37,7 +34,7 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

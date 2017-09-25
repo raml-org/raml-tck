@@ -13,6 +13,7 @@
               "access_token": {
                 "name": "access_token",
                 "displayName": "access_token",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -34,6 +35,7 @@
               "Authorization": {
                 "name": "Authorization",
                 "displayName": "Authorization",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -66,8 +68,8 @@
   },
   "errors": [
     {
-      "code": "UNKNOWN_NODE",
-      "message": "Unknown node: 'get'",
+      "code": "INVALID_METHOD_USAGE",
+      "message": "Declaring methods is not allowed in security scheme parts",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
