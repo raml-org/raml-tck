@@ -9,6 +9,7 @@
             "access_token": {
               "name": "access_token",
               "displayName": "access_token",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -44,6 +45,7 @@
             "limit": {
               "name": "limit",
               "displayName": "limit",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "integer"
               ],
@@ -85,10 +87,11 @@
             "responses": {
               "201": {
                 "code": "201",
-                "headers": [
-                  {
+                "headers": {
+                  "Location": {
                     "name": "Location",
                     "displayName": "Location",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "string"
                     ],
@@ -107,7 +110,7 @@
                       }
                     }
                   }
-                ]
+                }
               }
             },
             "description": "Add an item",

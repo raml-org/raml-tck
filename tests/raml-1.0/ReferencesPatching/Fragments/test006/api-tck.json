@@ -1,0 +1,144 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "uses": [
+      {
+        "key": "lib",
+        "value": "libs/lib.raml"
+      }
+    ],
+    "title": "Test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "INPLACE",
+                "example": {
+                  "objectProperty": {
+                    "prop": "string"
+                  },
+                  "stringProperty": "abcdefghijklmnopqrstuvwxyz0123456789"
+                },
+                "type": {
+                  "name": "type",
+                  "displayName": "type",
+                  "typePropertyKind": "TYPE_EXPRESSION",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "objectProperty": {
+                      "name": "objectProperty",
+                      "displayName": "objectProperty",
+                      "typePropertyKind": "TYPE_EXPRESSION",
+                      "type": [
+                        "lib.MyType"
+                      ],
+                      "required": true,
+                      "__METADATA__": {
+                        "primitiveValuesMeta": {
+                          "displayName": {
+                            "calculated": true
+                          },
+                          "required": {
+                            "insertedAsDefault": true
+                          }
+                        }
+                      }
+                    },
+                    "stringProperty": {
+                      "name": "stringProperty",
+                      "displayName": "stringProperty",
+                      "typePropertyKind": "TYPE_EXPRESSION",
+                      "type": [
+                        "lib.MyStringType"
+                      ],
+                      "required": true,
+                      "__METADATA__": {
+                        "primitiveValuesMeta": {
+                          "displayName": {
+                            "calculated": true
+                          },
+                          "required": {
+                            "insertedAsDefault": true
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "additionalProperties": false,
+                  "__METADATA__": {
+                    "primitiveValuesMeta": {
+                      "displayName": {
+                        "calculated": true
+                      },
+                      "type": {
+                        "insertedAsDefault": true
+                      }
+                    }
+                  }
+                },
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "structuredExample": {
+                  "value": "{\n  \"objectProperty\": {\n    \"prop\": \"string\"\n  },\n  \"stringProperty\": \"abcdefghijklmnopqrstuvwxyz0123456789\"\n}",
+                  "strict": true,
+                  "name": null,
+                  "structuredValue": {
+                    "objectProperty": {
+                      "prop": "string"
+                    },
+                    "stringProperty": "abcdefghijklmnopqrstuvwxyz0123456789"
+                  }
+                }
+              }
+            },
+            "method": "put"
+          }
+        ],
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "MINMAX_RESTRICTION_VIOLATION",
+      "message": "'MyStringType.maxLength=32' i.e. string length should not be more than 32",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 10,
+          "position": 201
+        },
+        "end": {
+          "line": 11,
+          "column": 24,
+          "position": 215
+        }
+      }
+    }
+  ]
+}

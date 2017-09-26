@@ -7,6 +7,7 @@
         "ItsComplicated": {
           "name": "ItsComplicated",
           "displayName": "ItsComplicated",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -16,11 +17,11 @@
               "someProperty": "stringValue2"
             }
           },
-          "required": true,
           "properties": {
             "/.*/": {
               "name": "/.*/",
               "displayName": "/.*/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -44,9 +45,6 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
           },
@@ -69,18 +67,18 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "string is expected",
+      "message": "Expected type 'string' but got 'object'",
       "path": "api.raml",
       "range": {
         "start": {
-          "line": 7,
-          "column": 4,
-          "position": 87
+          "line": 9,
+          "column": 6,
+          "position": 128
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 11,
-          "position": 94
+          "position": 133
         }
       }
     }

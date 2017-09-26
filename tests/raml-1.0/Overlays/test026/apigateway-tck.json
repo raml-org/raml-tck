@@ -18,6 +18,7 @@
               "x-api-key": {
                 "name": "x-api-key",
                 "displayName": "x-api-key",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -103,15 +104,13 @@
               "latitude": {
                 "name": "latitude",
                 "displayName": "latitude",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "number"
                 ],
                 "required": true,
                 "description": "Latitude component of location",
                 "format": "double",
-                "fixedFacets": {
-                  "format": "double"
-                },
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
@@ -123,15 +122,13 @@
               "longitude": {
                 "name": "longitude",
                 "displayName": "longitude",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "number"
                 ],
                 "required": true,
                 "description": "Longitude component of location",
                 "format": "double",
-                "fixedFacets": {
-                  "format": "double"
-                },
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {

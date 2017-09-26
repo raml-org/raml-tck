@@ -1,0 +1,142 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "NilType_1": {
+          "name": "NilType_1",
+          "displayName": "NilType_1",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "nil"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "NilType_2": {
+          "name": "NilType_2",
+          "displayName": "NilType_2",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "nil"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "TypeWithNilProperties": {
+          "name": "TypeWithNilProperties",
+          "displayName": "TypeWithNilProperties",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "object"
+          ],
+          "examples": [
+            {
+              "value": "{\n  \"nilProp_1\": null,\n  \"nilProp_2\": null\n}",
+              "strict": true,
+              "name": "exampleWithEmptyValues",
+              "structuredValue": {
+                "nilProp_1": null,
+                "nilProp_2": null
+              }
+            },
+            {
+              "value": "{\n  \"nilProp_1\": null,\n  \"nilProp_2\": null\n}",
+              "strict": true,
+              "name": "exampleWithImplicitNull",
+              "structuredValue": {
+                "nilProp_1": null,
+                "nilProp_2": null
+              }
+            },
+            {
+              "value": "{\n  \"nilProp_1\": null,\n  \"nilProp_2\": null\n}",
+              "strict": true,
+              "name": "exampleWithTilde",
+              "structuredValue": {
+                "nilProp_1": null,
+                "nilProp_2": null
+              }
+            },
+            {
+              "value": "{\n  \"nilProp_1\": null,\n  \"nilProp_2\": null\n}",
+              "strict": true,
+              "name": "exampleWithNullTag",
+              "structuredValue": {
+                "nilProp_1": null,
+                "nilProp_2": null
+              }
+            }
+          ],
+          "properties": {
+            "nilProp_1": {
+              "name": "nilProp_1",
+              "displayName": "nilProp_1",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "NilType_1"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "nilProp_2": {
+              "name": "nilProp_2",
+              "displayName": "nilProp_2",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "NilType_2"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "API"
+  },
+  "errors": []
+}

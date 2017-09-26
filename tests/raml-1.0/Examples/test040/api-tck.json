@@ -11,6 +11,7 @@
               "param1": {
                 "name": "param1",
                 "displayName": "param1",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "number"
                 ],
@@ -60,7 +61,7 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'array'",
       "path": "api.raml",
       "range": {
         "start": {

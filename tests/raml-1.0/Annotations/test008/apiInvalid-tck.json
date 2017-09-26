@@ -7,14 +7,15 @@
         "suborg": {
           "name": "suborg",
           "displayName": "suborg",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "prop1": {
               "name": "prop1",
               "displayName": "prop1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -33,6 +34,7 @@
             "/.*/": {
               "name": "/.*/",
               "displayName": "/.*/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -53,9 +55,6 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
           }
@@ -99,18 +98,18 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "object is expected",
+      "message": "Expected type 'object' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
-          "line": 9,
-          "column": 2,
-          "position": 165
+          "line": 15,
+          "column": 8,
+          "position": 281
         },
         "end": {
-          "line": 9,
-          "column": 10,
-          "position": 173
+          "line": 15,
+          "column": 12,
+          "position": 285
         }
       }
     }

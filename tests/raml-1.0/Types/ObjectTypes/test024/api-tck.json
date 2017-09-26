@@ -1,0 +1,514 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "Org": {
+          "name": "Org",
+          "displayName": "Org",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "object"
+          ],
+          "properties": {
+            "onCall": {
+              "name": "onCall",
+              "displayName": "onCall",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "Alertable"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "Head": {
+              "name": "Head",
+              "displayName": "Head",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "Manager"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Person": {
+          "name": "Person",
+          "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "object"
+          ],
+          "properties": {
+            "firstname": {
+              "name": "firstname",
+              "displayName": "firstname",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "lastname": {
+              "name": "lastname",
+              "displayName": "lastname",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "title": {
+              "name": "title",
+              "displayName": "title",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": false,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            },
+            "kind": {
+              "name": "kind",
+              "displayName": "kind",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "discriminator": "kind",
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Phone": {
+          "name": "Phone",
+          "displayName": "Phone",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "string"
+          ],
+          "pattern": "^[0-9|-]+$",
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Manager": {
+          "name": "Manager",
+          "displayName": "Manager",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "Person"
+          ],
+          "properties": {
+            "reports": {
+              "name": "reports",
+              "displayName": "reports",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "array"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "items": "Person"
+            },
+            "phone": {
+              "name": "phone",
+              "displayName": "phone",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "Phone"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Admin": {
+          "name": "Admin",
+          "displayName": "Admin",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "Person"
+          ],
+          "properties": {
+            "clearanceLevel": {
+              "name": "clearanceLevel",
+              "displayName": "clearanceLevel",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "enum": [
+                "low",
+                "high"
+              ],
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "AlertableAdmin": {
+          "name": "AlertableAdmin",
+          "displayName": "AlertableAdmin",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "Admin"
+          ],
+          "properties": {
+            "phone": {
+              "name": "phone",
+              "displayName": "phone",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "Phone"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Alertable": {
+          "name": "Alertable",
+          "displayName": "Alertable",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "Manager | AlertableAdmin"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "My API with Types",
+    "mediaType": "application/json",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "Org"
+                    ],
+                    "example": {
+                      "onCall": {
+                        "firstname": "nico",
+                        "lastname": "ark",
+                        "kind": "admin",
+                        "clearanceLevel": "low",
+                        "phone": "12321"
+                      },
+                      "Head": {
+                        "firstname": "nico",
+                        "lastname": "ark",
+                        "kind": "Manager",
+                        "reports": [
+                          {
+                            "firstname": "nico",
+                            "lastname": "ark",
+                            "kind": "Person"
+                          }
+                        ],
+                        "phone": "123-23"
+                      }
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"onCall\": {\n    \"firstname\": \"nico\",\n    \"lastname\": \"ark\",\n    \"kind\": \"admin\",\n    \"clearanceLevel\": \"low\",\n    \"phone\": \"12321\"\n  },\n  \"Head\": {\n    \"firstname\": \"nico\",\n    \"lastname\": \"ark\",\n    \"kind\": \"Manager\",\n    \"reports\": [\n      {\n        \"firstname\": \"nico\",\n        \"lastname\": \"ark\",\n        \"kind\": \"Person\"\n      }\n    ],\n    \"phone\": \"123-23\"\n  }\n}",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "onCall": {
+                          "firstname": "nico",
+                          "lastname": "ark",
+                          "kind": "admin",
+                          "clearanceLevel": "low",
+                          "phone": "12321"
+                        },
+                        "Head": {
+                          "firstname": "nico",
+                          "lastname": "ark",
+                          "kind": "Manager",
+                          "reports": [
+                            {
+                              "firstname": "nico",
+                              "lastname": "ark",
+                              "kind": "Person"
+                            }
+                          ],
+                          "phone": "123-23"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "method": "get"
+          }
+        ],
+        "uriParameters": {
+          "orgId": {
+            "name": "orgId",
+            "displayName": "orgId",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "calculated": true,
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            }
+          }
+        },
+        "relativeUri": "/orgs/{orgId}",
+        "displayName": "/orgs/{orgId}",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "orgs",
+          "{orgId}"
+        ],
+        "absoluteUri": "/orgs/{orgId}"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "code": "UNION_TYPE_FAILURE",
+      "message": "Union type options do not pass validation",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 43,
+          "column": 14,
+          "position": 1432
+        },
+        "end": {
+          "line": 43,
+          "column": 20,
+          "position": 1438
+        }
+      },
+      "isWarning": true
+    },
+    {
+      "code": "UNION_TYPE_FAILURE_DETAILS",
+      "message": "Union type option does not pass validation (Manager: None of the 'Manager' type known subtypes declare 'admin' as value of discriminating property 'kind'.)",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 46,
+          "column": 16,
+          "position": 1518
+        },
+        "end": {
+          "line": 46,
+          "column": 20,
+          "position": 1522
+        }
+      },
+      "isWarning": true
+    },
+    {
+      "code": "UNION_TYPE_FAILURE_DETAILS",
+      "message": "Union type option does not pass validation (AlertableAdmin: None of the 'AlertableAdmin' type known subtypes declare 'admin' as value of discriminating property 'kind'.)",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 46,
+          "column": 16,
+          "position": 1518
+        },
+        "end": {
+          "line": 46,
+          "column": 20,
+          "position": 1522
+        }
+      },
+      "isWarning": true
+    }
+  ]
+}

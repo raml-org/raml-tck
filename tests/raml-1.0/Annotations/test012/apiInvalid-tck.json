@@ -17,14 +17,15 @@
         "Type": {
           "name": "Type",
           "displayName": "Type",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "prop1": {
               "name": "prop1",
               "displayName": "prop1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -33,6 +34,7 @@
                 "/.*/": {
                   "name": "/.*/",
                   "displayName": "/.*/",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "number"
                   ],
@@ -71,9 +73,6 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
           }
@@ -85,18 +84,18 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
-          "line": 9,
-          "column": 2,
-          "position": 129
+          "line": 10,
+          "column": 4,
+          "position": 140
         },
         "end": {
-          "line": 9,
-          "column": 7,
-          "position": 134
+          "line": 10,
+          "column": 9,
+          "position": 145
         }
       }
     }

@@ -1,0 +1,61 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "t1": {
+          "name": "t1",
+          "displayName": "t1",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "array"
+          ],
+          "maxItems": 2,
+          "scalarsAnnotations": {
+            "maxItems": [
+              {
+                "structuredValue": "abcdefghijkl",
+                "name": "a"
+              }
+            ]
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "a": {
+          "name": "a",
+          "displayName": "a",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "string"
+          ],
+          "minLength": 8,
+          "maxLength": 64,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "testAPI",
+    "version": "v1"
+  },
+  "errors": []
+}
