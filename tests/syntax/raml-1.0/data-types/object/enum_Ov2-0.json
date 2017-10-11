@@ -1,0 +1,42 @@
+{
+    "swagger": "2.0",
+    "definitions": {
+        "Foo": {
+            "enum": [
+                {
+                    "age": "23",
+                    "id": "12345fr",
+                    "name": "Foo"
+                },
+                {
+                    "age": "12",
+                    "id": "12345gr",
+                    "name": "Bar"
+                }
+            ],
+            "properties": {
+                "age": {
+                    "type": "number",
+                    "x-rdf-type": "xsd:integer"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "age"
+            ],
+            "type": "object"
+        }
+    },
+    "info": {
+        "title": "myApi",
+        "version": ""
+    },
+    "paths": {}
+}

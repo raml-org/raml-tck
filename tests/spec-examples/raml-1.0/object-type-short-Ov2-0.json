@@ -1,0 +1,25 @@
+{
+  "swagger": "2.0",
+  "definitions": {
+    "Person": {
+      "properties": {
+        "age": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    }
+  },
+  "info": {
+    "description": "This RAML illustrates a type declaration that uses shortcuts to restrict its object properties.",
+    "title": "My API With Types",
+    "version": ""
+  },
+  "paths": {}
+}
