@@ -1,0 +1,140 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "definitions": {
+        "ResourceTypeRef10": {
+            "oneOf": [
+                {
+                    "type": "string"
+                }, {
+                    "type": "object",
+                    "patternProperties": {
+                        "^[a-zA-Z0-9]+": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^[a-zA-Z0-9]+": {
+                                    "type": [
+                                        "number",
+                                        "string",
+                                        "boolean",
+                                        "object",
+                                        "array"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "Resource10": {
+            "allOf":[
+                {"$ref": "#/definitions/ResourceBase10"},
+                {
+                    "properties": {
+                        "displayName": {
+                            "type": "string",
+                            "description": "Resource name"
+                        },
+                        "resources": {
+                            "type": "array",
+                            "description": "A nested resource is identified as any property whose name begins with a slash (\"/\") and is therefore treated as a relative URI.",
+                            "items": {"$ref": "#/definitions/Resource10"}
+                        },
+                        "relativeUri": {
+                            "type": "string",
+                            "description": "Relative URL of this resource from the parent resource"
+                        },
+                        "relativeUriPathSegments": {
+                            "type": "array",
+                            "description": "URI Segments",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "absoluteUri": {"type": "string"}
+                    }
+                }
+            ],
+            "description":"Web resource"
+        },
+        "ResourceTypeFragment": {
+            "type": "object",
+            "properties": {
+                "undefined": {
+                    "allOf":[
+                        {"$ref": "common.json#/definitions/FragmentDeclaration"},
+                        {"$ref": "#/definitions/ResourceType10"}
+                    ],
+                    "patternProperties": {
+                        "^(get|post|delete|put|patch|options)?$": {"$ref": "methods.json#/definitions/Method10"}
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "ResourceType10": {
+            "allOf":[
+                {"$ref": "#/definitions/ResourceBase10"},
+                {"$ref": "common.json#/definitions/ParametrizedProperties"},
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Resource name"
+                        },
+                        "usage": {
+                            "type": "string",
+                            "description": "Instructions on how and when the resource type should be used."
+                        },
+                        "displayName": {
+                            "type": "string",
+                            "description": "Resource name"
+                        }
+                    },
+                    "patternProperties": {
+                        "^(get|post|delete|put|patch|options)?$": {"$ref": "methods.json#/definitions/Method10"}
+                    }
+                }
+            ],
+            "description": "Resource pattern which can be defined and then applied to multiple resources"
+        },
+        "ResourceBase10": {
+            "allOf":[
+                {"$ref": "common.json#/definitions/Annotable"},
+                {
+                    "properties": {
+                        "description": {
+                            "type": [ "string", "null" ],
+                            "description": "Resource description"
+                        },
+                        "is": {
+                            "type": "array",
+                            "description": "A list of the traits to apply to all methods declared (implicitly or explicitly) for this resource. Individual methods may override this declaration",
+                            "items":{"$ref": "methods.json#/definitions/TraitRef10"}
+                        },
+                        "type": {"$ref": "#/definitions/ResourceTypeRef10"},
+                        "securedBy": {
+                            "type": "array",
+                            "description": "The security schemes that apply to all methods declared (implicitly or explicitly) for this resource.",
+                            "items": {"$ref": "security.json#/definitions/SecuritySchemeRef10"}
+                        },
+                        "methods": {
+                            "type": "array",
+                            "description": "Methods that are part of this resource type definition",
+                            "items": {"$ref": "methods.json#/definitions/Method10"}
+                        },
+                        "uriParameters": {
+                            "type": "object",
+                            "description": "Detailed information about any URI parameters of this resource",
+                            "patternProperties": {
+                                "^[a-zA-Z0-9]+": {"$ref": "datamodel.json#/definitions/TypeReference10"}
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

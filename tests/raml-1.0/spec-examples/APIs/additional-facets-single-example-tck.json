@@ -28,11 +28,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "additional-facets-single-example.raml"
               }
             },
             "body": {
@@ -47,11 +47,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "additional-facets-single-example.raml"
               }
             },
             "name": {
@@ -66,11 +66,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "additional-facets-single-example.raml"
               }
             },
             "comment": {
@@ -85,11 +85,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "additional-facets-single-example.raml"
               }
             }
           },
@@ -102,6 +102,9 @@
                 "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "additional-facets-single-example.raml"
           },
           "structuredExample": {
             "annotations": {
@@ -116,6 +119,9 @@
             "structuredValue": {
               "title": "Attention needed",
               "body": "You have been added to group 274"
+            },
+            "sourceMap": {
+              "path": "additional-facets-single-example.raml"
             }
           }
         }
@@ -136,11 +142,17 @@
                 "calculated": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "additional-facets-single-example.raml"
           }
         }
       }
     ],
-    "title": "Single example with additional facets"
+    "title": "Single example with additional facets",
+    "sourceMap": {
+      "path": "additional-facets-single-example.raml"
+    }
   },
   "errors": []
 }

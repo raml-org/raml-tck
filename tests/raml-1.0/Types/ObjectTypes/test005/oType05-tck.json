@@ -24,11 +24,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "oType05.raml"
               }
             },
             "initial_comments": {
@@ -43,11 +43,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "oType05.raml"
               }
             }
           },
@@ -59,11 +59,17 @@
                 "calculated": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "oType05.raml"
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "oType05.raml"
+    }
   },
   "errors": []
 }

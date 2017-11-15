@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "ParametrizedProperties": {
+      "description": "Template property.",
+      "type": "object",
+      "patternProperties":{
+        "^([a-zA-Z0-9]*<<[a-zA-Z0-9]+>>[a-zA-Z0-9]*)+": {
+          "type": ["string","number","boolean","object","array","null"]
+        }
+      }
+    }
+  }
+}

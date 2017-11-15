@@ -33,6 +33,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             },
             "lastname": {
@@ -52,6 +55,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             }
           },
@@ -62,6 +68,9 @@
               }
             }
           },
+          "sourceMap": {
+            "path": "complex-examples.raml"
+          },
           "structuredExample": {
             "value": "{\n  \"name\": \"Bob\",\n  \"lastname\": \"Marley\"\n}",
             "strict": true,
@@ -69,6 +78,9 @@
             "structuredValue": {
               "name": "Bob",
               "lastname": "Marley"
+            },
+            "sourceMap": {
+              "path": "complex-examples.raml"
             }
           }
         }
@@ -99,6 +111,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             },
             "address": {
@@ -113,11 +128,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             },
             "value": {
@@ -132,11 +147,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             }
           },
@@ -146,6 +161,9 @@
                 "calculated": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "complex-examples.raml"
           }
         }
       }
@@ -176,11 +194,17 @@
                     }
                   }
                 },
+                "sourceMap": {
+                  "path": "complex-examples.raml"
+                },
                 "structuredExample": {
                   "value": "SWED-123",
                   "strict": true,
                   "name": null,
-                  "structuredValue": "SWED-123"
+                  "structuredValue": "SWED-123",
+                  "sourceMap": {
+                    "path": "complex-examples.raml"
+                  }
                 }
               }
             },
@@ -203,6 +227,9 @@
                     }
                   }
                 },
+                "sourceMap": {
+                  "path": "complex-examples.raml"
+                },
                 "structuredExample": {
                   "value": "{\n  \"name\": \"Doe Enterprise\",\n  \"value\": \"Silver\"\n}",
                   "strict": true,
@@ -210,11 +237,17 @@
                   "structuredValue": {
                     "name": "Doe Enterprise",
                     "value": "Silver"
+                  },
+                  "sourceMap": {
+                    "path": "complex-examples.raml"
                   }
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "complex-examples.raml"
+            }
           },
           {
             "responses": {
@@ -235,6 +268,9 @@
                         "name": "acme",
                         "structuredValue": {
                           "name": "Acme"
+                        },
+                        "sourceMap": {
+                          "path": "complex-examples.raml"
                         }
                       },
                       {
@@ -245,6 +281,9 @@
                           "name": "Software Corp",
                           "address": "35 Central Street",
                           "value": "Gold"
+                        },
+                        "sourceMap": {
+                          "path": "complex-examples.raml"
                         }
                       }
                     ],
@@ -254,13 +293,22 @@
                           "calculated": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "complex-examples.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "complex-examples.raml"
                 }
               }
             },
             "description": "Returns an organization entity.",
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "complex-examples.raml"
+            }
           }
         ],
         "relativeUri": "/organization",
@@ -272,12 +320,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "complex-examples.raml"
+        },
         "relativeUriPathSegments": [
           "organization"
         ],
         "absoluteUri": "/organization"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "complex-examples.raml"
+    }
   },
   "errors": []
 }

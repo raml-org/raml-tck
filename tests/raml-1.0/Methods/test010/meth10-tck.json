@@ -13,7 +13,7 @@
                 "displayName": "application/json",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -24,6 +24,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "application/vnd.xara": {
@@ -31,7 +34,7 @@
                 "displayName": "application/vnd.xara",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -42,6 +45,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "audio/EVRCB": {
@@ -49,7 +55,7 @@
                 "displayName": "audio/EVRCB",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -60,6 +66,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "audio/vnd.dts": {
@@ -67,7 +76,7 @@
                 "displayName": "audio/vnd.dts",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -78,6 +87,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "image/tiff": {
@@ -85,7 +97,7 @@
                 "displayName": "image/tiff",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -96,6 +108,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "message/global": {
@@ -103,7 +118,7 @@
                 "displayName": "message/global",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -114,6 +129,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "model/vnd.moml+xml": {
@@ -121,7 +139,7 @@
                 "displayName": "model/vnd.moml+xml",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -132,6 +150,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "multipart/voice-message": {
@@ -139,7 +160,7 @@
                 "displayName": "multipart/voice-message",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -150,6 +171,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "text/turtle": {
@@ -157,7 +181,7 @@
                 "displayName": "text/turtle",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -168,6 +192,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "video/JPEG": {
@@ -175,7 +202,7 @@
                 "displayName": "video/JPEG",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -186,6 +213,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               },
               "mime/type": {
@@ -193,7 +223,7 @@
                 "displayName": "mime/type",
                 "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -204,10 +234,16 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth10.raml"
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "meth10.raml"
+            }
           }
         ],
         "relativeUri": "/test",
@@ -219,12 +255,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "meth10.raml"
+        },
         "relativeUriPathSegments": [
           "test"
         ],
         "absoluteUri": "/test"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "meth10.raml"
+    }
   },
   "errors": []
 }

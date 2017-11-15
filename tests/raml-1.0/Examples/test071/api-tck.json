@@ -1,0 +1,159 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "Hello": {
+          "name": "Hello",
+          "displayName": "Hello",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "object"
+          ],
+          "examples": [
+            {
+              "value": "{\n  \"first\": \"Karl\",\n  \"last\": \"Popper\"\n}",
+              "strict": true,
+              "name": "full",
+              "structuredValue": {
+                "first": "Karl",
+                "last": "Popper"
+              },
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            },
+            {
+              "value": "{\n  \"last\": \"Popper\"\n}",
+              "strict": true,
+              "name": "",
+              "structuredValue": {
+                "last": "Popper"
+              },
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            },
+            {
+              "value": "null",
+              "strict": true,
+              "name": "minimal",
+              "structuredValue": null,
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            }
+          ],
+          "properties": {
+            "first": {
+              "name": "first",
+              "displayName": "first",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": false,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            },
+            "last": {
+              "name": "last",
+              "displayName": "last",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": false,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "title": "Test",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": [
+    {
+      "code": "YAML_ERROR",
+      "message": "JS-YAML: bad indentation of a mapping entry at line 15, column 27",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 26,
+          "position": 248
+        },
+        "end": {
+          "line": 14,
+          "column": 27,
+          "position": 249
+        }
+      }
+    },
+    {
+      "code": "YAML_ERROR",
+      "message": "JS-YAML: bad indentation of a mapping entry at line 17, column 27",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 26,
+          "position": 326
+        },
+        "end": {
+          "line": 16,
+          "column": 27,
+          "position": 327
+        }
+      }
+    },
+    {
+      "code": "NULL_NOT_ALLOWED",
+      "message": "Null or undefined value is not allowed",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 6,
+          "position": 384
+        },
+        "end": {
+          "line": 18,
+          "column": 13,
+          "position": 391
+        }
+      }
+    }
+  ]
+}

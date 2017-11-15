@@ -18,6 +18,9 @@
                 "calculated": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test7.raml"
           }
         }
       },
@@ -36,6 +39,9 @@
                 "calculated": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test7.raml"
           }
         }
       },
@@ -65,6 +71,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test7.raml"
               }
             }
           },
@@ -77,6 +86,9 @@
                 "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test7.raml"
           }
         }
       },
@@ -101,11 +113,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test7.raml"
               }
             }
           },
@@ -115,11 +127,17 @@
                 "calculated": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test7.raml"
           }
         }
       }
     ],
-    "title": "test"
+    "title": "test",
+    "sourceMap": {
+      "path": "test7.raml"
+    }
   },
   "errors": [
     {

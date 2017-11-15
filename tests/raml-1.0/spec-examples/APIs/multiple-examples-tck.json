@@ -19,6 +19,9 @@
               "structuredValue": {
                 "title": "Attention needed",
                 "body": "You have been added to group 274"
+              },
+              "sourceMap": {
+                "path": "multiple-examples.raml"
               }
             },
             {
@@ -28,6 +31,9 @@
               "structuredValue": {
                 "name": "log item",
                 "comment": "permission check"
+              },
+              "sourceMap": {
+                "path": "multiple-examples.raml"
               }
             }
           ],
@@ -44,11 +50,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "multiple-examples.raml"
               }
             },
             "body": {
@@ -63,11 +69,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "multiple-examples.raml"
               }
             },
             "name": {
@@ -82,11 +88,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "multiple-examples.raml"
               }
             },
             "comment": {
@@ -101,11 +107,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "multiple-examples.raml"
               }
             }
           },
@@ -118,11 +124,17 @@
                 "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "multiple-examples.raml"
           }
         }
       }
     ],
-    "title": "Multiple examples"
+    "title": "Multiple examples",
+    "sourceMap": {
+      "path": "multiple-examples.raml"
+    }
   },
   "errors": []
 }
