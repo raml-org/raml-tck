@@ -1,0 +1,127 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "Hello",
+        "displayName": "Hello",
+        "type": [
+          "object"
+        ],
+        "examples": [
+          {
+            "value": {
+              "first": "Karl",
+              "last": "Popper"
+            },
+            "strict": true,
+            "name": "full"
+          },
+          {
+            "value": {
+              "first": "Karl"
+            },
+            "strict": true,
+            "name": "only-first"
+          },
+          {
+            "value": {
+              "last": "Popper"
+            },
+            "strict": true,
+            "name": "only-last"
+          },
+          {
+            "value": null,
+            "strict": true,
+            "name": "minimal"
+          }
+        ],
+        "properties": [
+          {
+            "name": "first",
+            "displayName": "first",
+            "type": [
+              "string"
+            ],
+            "required": false,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "name": "last",
+            "displayName": "last",
+            "type": [
+              "string"
+            ],
+            "required": false,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "simplifiedExamples": [
+          "{\"first\":\"Karl\",\"last\":\"Popper\"}",
+          "{\"first\":\"Karl\"}",
+          "{\"last\":\"Popper\"}",
+          null
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "Test",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "NULL_NOT_ALLOWED",
+      "message": "Null or undefined value is not allowed",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 6,
+          "position": 264
+        },
+        "end": {
+          "line": 18,
+          "column": 13,
+          "position": 271
+        }
+      }
+    }
+  ]
+}

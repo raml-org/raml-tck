@@ -1,11 +1,11 @@
 {
   "specification": {
-    "types": {
-      "SomeType": {
+    "types": [
+      {
         "name": "SomeType",
         "displayName": "SomeType",
         "type": [
-          "object | SomeUnion"
+          "union"
         ],
         "__METADATA__": {
           "primitiveValuesMeta": {
@@ -14,27 +14,90 @@
             }
           }
         },
-        "mediaType": "application/raml+yaml",
-        "typePropertyKind": "TYPE_EXPRESSION"
-      },
-      "SomeUnion": {
-        "name": "SomeUnion",
-        "displayName": "SomeUnion",
-        "type": [
-          "array"
-        ],
-        "__METADATA__": {
-          "primitiveValuesMeta": {
-            "displayName": {
-              "calculated": true
-            }
-          }
+        "sourceMap": {
+          "path": "apiInvalid.raml"
         },
         "mediaType": "application/raml+yaml",
         "typePropertyKind": "TYPE_EXPRESSION",
-        "items": "AnotherType[] | OneMoreType"
+        "anyOf": [
+          "object",
+          "SomeUnion"
+        ]
       },
-      "AnotherType": {
+      {
+        "name": "SomeUnion",
+        "displayName": "SomeUnion",
+        "type": [
+          "union"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "anyOf": [
+          {
+            "type": [
+              "array"
+            ],
+            "items": [
+              {
+                "type": [
+                  "AnotherType"
+                ],
+                "name": "items",
+                "displayName": "items",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiInvalid.raml"
+                }
+              }
+            ],
+            "typePropertyKind": "TYPE_EXPRESSION"
+          },
+          {
+            "type": [
+              "array"
+            ],
+            "items": [
+              {
+                "type": [
+                  "OneMoreType"
+                ],
+                "name": "items",
+                "displayName": "items",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiInvalid.raml"
+                }
+              }
+            ],
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        ]
+      },
+      {
         "name": "AnotherType",
         "displayName": "AnotherType",
         "type": [
@@ -47,10 +110,13 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
         "mediaType": "application/raml+yaml",
         "typePropertyKind": "TYPE_EXPRESSION"
       },
-      "OneMoreType": {
+      {
         "name": "OneMoreType",
         "displayName": "OneMoreType",
         "type": [
@@ -63,11 +129,17 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
         "mediaType": "application/raml+yaml",
         "typePropertyKind": "TYPE_EXPRESSION"
       }
-    },
-    "title": "API"
+    ],
+    "title": "API",
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
   },
   "ramlVersion": "RAML10",
   "type": "Api",

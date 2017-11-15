@@ -1,14 +1,14 @@
 {
   "specification": {
-    "types": {
-      "SomeType": {
+    "types": [
+      {
         "name": "SomeType",
         "displayName": "SomeType",
         "type": [
           "object"
         ],
-        "properties": {
-          "selfReference": {
+        "properties": [
+          {
             "name": "selfReference",
             "displayName": "selfReference",
             "type": [
@@ -25,11 +25,33 @@
                 }
               }
             },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            },
             "mediaType": "application/raml+yaml",
             "typePropertyKind": "TYPE_EXPRESSION",
-            "items": "SomeType"
+            "items": [
+              {
+                "type": [
+                  "SomeType"
+                ],
+                "name": "items",
+                "displayName": "items",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiInvalid.raml"
+                }
+              }
+            ]
           },
-          "someProperty": {
+          {
             "name": "someProperty",
             "displayName": "someProperty",
             "type": [
@@ -46,10 +68,13 @@
                 }
               }
             },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            },
             "mediaType": "application/raml+yaml",
             "typePropertyKind": "TYPE_EXPRESSION"
           }
-        },
+        ],
         "additionalProperties": false,
         "__METADATA__": {
           "primitiveValuesMeta": {
@@ -57,6 +82,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
         },
         "examples": [
           {
@@ -78,11 +106,17 @@
             "name": null
           }
         ],
+        "simplifiedExamples": [
+          "{\"selfReference\":[{\"selfReference\":[{\"selfReference\":[],\"someProperty1\":\"val1\"}],\"someProperty\":\"val2\"}],\"someProperty\":\"val3\"}"
+        ],
         "mediaType": "application/raml+yaml",
         "typePropertyKind": "TYPE_EXPRESSION"
       }
-    },
-    "title": "API"
+    ],
+    "title": "API",
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
   },
   "ramlVersion": "RAML10",
   "type": "Api",

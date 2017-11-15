@@ -1,18 +1,18 @@
 {
   "specification": {
-    "resourceTypes": {
-      "rt": {
-        "methods": {
-          "get": {
-            "responses": {
-              "200": {
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
                 "code": "200",
-                "body": {
-                  "application/json": {
+                "body": [
+                  {
                     "name": "application/json",
                     "displayName": "application/json",
                     "type": [
-                      "object"
+                      "any"
                     ],
                     "__METADATA__": {
                       "primitiveValuesMeta": {
@@ -31,32 +31,47 @@
                         "name": null
                       }
                     ],
+                    "simplifiedExamples": [
+                      "<<param1>><<param2>>\n"
+                    ],
                     "mediaType": "application/raml+yaml",
-                    "typePropertyKind": "TYPE_EXPRESSION"
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
                   }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
-            },
-            "method": "get"
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
-        },
-        "name": "rt"
+        ],
+        "name": "rt",
+        "sourceMap": {
+          "path": "api.raml"
+        }
       }
-    },
+    ],
     "title": "My API",
     "resources": [
       {
-        "methods": {
-          "get": {
-            "responses": {
-              "200": {
+        "methods": [
+          {
+            "responses": [
+              {
                 "code": "200",
-                "body": {
-                  "application/json": {
+                "body": [
+                  {
                     "name": "application/json",
                     "displayName": "application/json",
                     "type": [
-                      "object"
+                      "any"
                     ],
                     "__METADATA__": {
                       "primitiveValuesMeta": {
@@ -75,20 +90,41 @@
                         "name": null
                       }
                     ],
+                    "simplifiedExamples": [
+                      "Can not resolve unexisting-file.txt{\n  \"songId\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"songTitle\": \"Get Lucky\",\n  \"albumId\": \"183100e3-0e2b-4404-a716-66104d440550\"\n}\n\n"
+                    ],
                     "mediaType": "application/raml+yaml",
-                    "typePropertyKind": "TYPE_EXPRESSION"
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
                   }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
-            },
-            "method": "get"
+            ],
+            "method": "get",
+            "parentUri": "/songs",
+            "absoluteParentUri": "/songs",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
-        },
+        ],
         "type": {
-          "rt": {
-            "param1": "Can not resolve unexisting-file.txt",
-            "param2": "{\n  \"songId\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"songTitle\": \"Get Lucky\",\n  \"albumId\": \"183100e3-0e2b-4404-a716-66104d440550\"\n}\n"
-          }
+          "name": "rt",
+          "parameters": [
+            {
+              "name": "param1",
+              "value": "Can not resolve unexisting-file.txt"
+            },
+            {
+              "name": "param2",
+              "value": "{\n  \"songId\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"songTitle\": \"Get Lucky\",\n  \"albumId\": \"183100e3-0e2b-4404-a716-66104d440550\"\n}\n"
+            }
+          ]
         },
         "relativeUri": "/songs",
         "displayName": "/songs",
@@ -104,9 +140,16 @@
         ],
         "absoluteUri": "/songs",
         "completeRelativeUri": "/songs",
-        "parentUri": ""
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "ramlVersion": "RAML10",
   "type": "Api",

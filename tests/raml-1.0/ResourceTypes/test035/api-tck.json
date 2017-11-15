@@ -1,0 +1,81 @@
+{
+  "specification": {
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "rt",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "Test",
+    "resources": [
+      {
+        "methods": [
+          {
+            "method": "get",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt"
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "VALUE_NOT_PROVIDED",
+      "message": "Value is not provided for parameter: 'params'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 4,
+          "position": 96
+        },
+        "end": {
+          "line": 10,
+          "column": 6,
+          "position": 98
+        }
+      }
+    }
+  ]
+}

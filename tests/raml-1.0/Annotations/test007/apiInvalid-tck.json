@@ -1,25 +1,25 @@
 {
   "specification": {
-    "annotations": {
-      "x": {
+    "annotations": [
+      {
         "name": "x",
-        "structuredValue": {
+        "value": {
           "v": [
             "true1",
             false
           ]
         }
       }
-    },
-    "annotationTypes": {
-      "x": {
+    ],
+    "annotationTypes": [
+      {
         "name": "x",
         "displayName": "x",
         "type": [
           "object"
         ],
-        "properties": {
-          "v": {
+        "properties": [
+          {
             "name": "v",
             "displayName": "v",
             "type": [
@@ -36,11 +36,33 @@
                 }
               }
             },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            },
             "mediaType": "application/raml+yaml",
             "typePropertyKind": "TYPE_EXPRESSION",
-            "items": "boolean"
+            "items": [
+              {
+                "type": [
+                  "boolean"
+                ],
+                "name": "items",
+                "displayName": "items",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiInvalid.raml"
+                }
+              }
+            ]
           }
-        },
+        ],
         "__METADATA__": {
           "primitiveValuesMeta": {
             "displayName": {
@@ -51,14 +73,20 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
         "mediaType": "application/raml+yaml",
         "typePropertyKind": "TYPE_EXPRESSION"
       }
-    },
+    ],
     "title": "WebOfMe",
     "mediaType": [
       "application/json"
-    ]
+    ],
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
   },
   "ramlVersion": "RAML10",
   "type": "Api",

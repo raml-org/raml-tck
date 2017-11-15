@@ -4,8 +4,8 @@
       "object"
     ],
     "required": true,
-    "properties": {
-      "prop1": {
+    "properties": [
+      {
         "name": "prop1",
         "displayName": "prop1",
         "type": [
@@ -23,9 +23,12 @@
           }
         },
         "mediaType": "application/raml+yaml",
-        "typePropertyKind": "TYPE_EXPRESSION"
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "fragment.raml"
+        }
       },
-      "prop2": {
+      {
         "name": "prop2",
         "displayName": "prop2",
         "type": [
@@ -43,13 +46,19 @@
           }
         },
         "mediaType": "application/raml+yaml",
-        "typePropertyKind": "TYPE_EXPRESSION"
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "fragment.raml"
+        }
       }
-    },
+    ],
     "uses": [
       {
         "key": "lib",
-        "value": "lib/lib.raml"
+        "value": "lib/lib.raml",
+        "sourceMap": {
+          "path": "fragment.raml"
+        }
       }
     ],
     "__METADATA__": {
@@ -63,7 +72,10 @@
       }
     },
     "mediaType": "application/raml+yaml",
-    "typePropertyKind": "TYPE_EXPRESSION"
+    "typePropertyKind": "TYPE_EXPRESSION",
+    "sourceMap": {
+      "path": "fragment.raml"
+    }
   },
   "ramlVersion": "RAML10",
   "type": "ObjectTypeDeclaration",

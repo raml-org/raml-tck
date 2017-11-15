@@ -1,9 +1,9 @@
 {
   "specification": {
-    "traits": {
-      "pagination": {
-        "queryParameters": {
-          "<<queryParamName>>": {
+    "traits": [
+      {
+        "queryParameters": [
+          {
             "name": "<<queryParamName>>",
             "displayName": "<<queryParamName>>",
             "type": [
@@ -25,26 +25,56 @@
               }
             },
             "mediaType": "application/raml+yaml",
-            "typePropertyKind": "TYPE_EXPRESSION"
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "pagination.raml"
+            }
+          },
+          {
+            "name": "offset",
+            "displayName": "offset",
+            "type": [
+              "integer"
+            ],
+            "required": true,
+            "description": "Skip over a number of elements by specifying an offset value for the query",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "pagination.raml"
+            }
           }
-        },
-        "name": "pagination"
+        ],
+        "name": "pagination",
+        "sourceMap": {
+          "path": "pagination.raml"
+        }
       }
-    },
+    ],
     "title": "API Animals & People!",
     "resources": [
       {
-        "methods": {
-          "get": {
-            "queryParameters": {
-              "<<queryParamName>>": {
-                "name": "<<queryParamName>>",
-                "displayName": "<<queryParamName>>",
+        "methods": [
+          {
+            "queryParameters": [
+              {
+                "name": "param",
+                "displayName": "param",
                 "type": [
                   "string"
                 ],
                 "required": true,
-                "description": "This is a <<queryParamName>> value parameter.",
+                "description": "This is a param value parameter.",
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
@@ -59,15 +89,55 @@
                   }
                 },
                 "mediaType": "application/raml+yaml",
-                "typePropertyKind": "TYPE_EXPRESSION"
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "pagination.raml"
+                }
+              },
+              {
+                "name": "offset",
+                "displayName": "offset",
+                "type": [
+                  "integer"
+                ],
+                "required": true,
+                "description": "Skip over a number of elements by specifying an offset value for the query",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "pagination.raml"
+                }
               }
-            },
-            "is": [
-              "pagination"
             ],
-            "method": "get"
+            "is": [
+              {
+                "name": "pagination",
+                "parameters": [
+                  {
+                    "name": "queryParamName",
+                    "value": "param"
+                  }
+                ]
+              }
+            ],
+            "method": "get",
+            "parentUri": "/some",
+            "absoluteParentUri": "/some",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
-        },
+        ],
         "relativeUri": "/some",
         "displayName": "/some",
         "__METADATA__": {
@@ -82,65 +152,18 @@
         ],
         "absoluteUri": "/some",
         "completeRelativeUri": "/some",
-        "parentUri": ""
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "ramlVersion": "RAML10",
   "type": "Api",
-  "errors": [
-    {
-      "code": "VALUE_NOT_PROVIDED",
-      "message": "Value is not provided for parameter: 'queryParamName'",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 8,
-          "column": 9,
-          "position": 112
-        },
-        "end": {
-          "line": 8,
-          "column": 19,
-          "position": 122
-        }
-      }
-    },
-    {
-      "code": "UNKNOWN_FACET",
-      "message": "Specifying unknown facet: 'offset'",
-      "path": "pagination.raml",
-      "range": {
-        "start": {
-          "line": 4,
-          "column": 4,
-          "position": 123
-        },
-        "end": {
-          "line": 4,
-          "column": 10,
-          "position": 129
-        }
-      },
-      "trace": [
-        {
-          "code": "UNKNOWN_FACET",
-          "message": "Specifying unknown facet: 'offset' pagination.raml",
-          "path": "api.raml",
-          "range": {
-            "start": {
-              "line": 7,
-              "column": 2,
-              "position": 98
-            },
-            "end": {
-              "line": 7,
-              "column": 5,
-              "position": 101
-            }
-          }
-        }
-      ]
-    }
-  ]
+  "errors": []
 }
