@@ -788,7 +788,7 @@
                   }
                 },
                 "type": [
-                  "number"
+                  "string"
                 ],
                 "mediaType": "application/raml+yaml",
                 "typePropertyKind": "TYPE_EXPRESSION",
