@@ -1,0 +1,125 @@
+{
+  "specification": {
+    "title": "test API",
+    "traits": [
+      {
+        "name": "tr1",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "rt1",
+        "methods": [
+          {
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "type": {
+          "name": "rt1",
+          "parameters": [
+            {
+              "name": "param",
+              "value": "stringValue"
+            }
+          ]
+        },
+        "methods": [
+          {
+            "method": "get",
+            "is": [
+              {
+                "name": "tr1",
+                "parameters": [
+                  {
+                    "name": "param",
+                    "value": "stringValue"
+                  }
+                ]
+              }
+            ],
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "UNUSED_PARAMETER",
+      "message": "Unused parameter: 'param'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 15,
+          "column": 6,
+          "position": 118
+        },
+        "end": {
+          "line": 15,
+          "column": 11,
+          "position": 123
+        }
+      },
+      "isWarning": true
+    },
+    {
+      "code": "UNUSED_PARAMETER",
+      "message": "Unused parameter: 'param'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 10,
+          "position": 175
+        },
+        "end": {
+          "line": 19,
+          "column": 15,
+          "position": 180
+        }
+      },
+      "isWarning": true
+    }
+  ]
+}

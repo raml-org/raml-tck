@@ -1,0 +1,94 @@
+{
+  "specification": {
+    "title": "test",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "201",
+                "sourceMap": {
+                  "path": "meth02.raml"
+                }
+              }
+            ],
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "type": [
+                  "TestSchema"
+                ],
+                "mediaType": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "meth02.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "parentUri": "/test",
+            "absoluteParentUri": "/test",
+            "sourceMap": {
+              "path": "meth02.raml"
+            }
+          }
+        ],
+        "relativeUri": "/test",
+        "displayName": "/test",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "test"
+        ],
+        "absoluteUri": "/test",
+        "completeRelativeUri": "/test",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "meth02.raml"
+        }
+      }
+    ],
+    "types": [
+      {
+        "name": "TestSchema",
+        "displayName": "TestSchema",
+        "type": [
+          "{\n  \"$schema\": \"http://json-schema.org/draft-03/schema\",\n  \"type\": \"object\" ,\n  \"properties\": {\n    \"type\": {\n      \"type\": \"string\"\n    }\n  }\n}"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/json",
+        "typePropertyKind": "JSON",
+        "sourceMap": {
+          "path": "meth02.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "meth02.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

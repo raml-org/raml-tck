@@ -1,0 +1,227 @@
+{
+  "specification": {
+    "types": [
+      {
+        "annotations": [
+          {
+            "name": "meta-data",
+            "value": "on an object; on a data type declaration"
+          }
+        ],
+        "name": "User",
+        "displayName": "User",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "annotations": [
+              {
+                "name": "meta-data",
+                "value": "on a string property"
+              }
+            ],
+            "name": "name",
+            "displayName": "name",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      }
+    ],
+    "annotationTypes": [
+      {
+        "name": "meta-resource-method",
+        "displayName": "meta-resource-method",
+        "type": [
+          "string"
+        ],
+        "allowedTargets": [
+          "Resource",
+          "Method"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      },
+      {
+        "name": "meta-data",
+        "displayName": "meta-data",
+        "type": [
+          "string"
+        ],
+        "allowedTargets": [
+          "TypeDeclaration"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      }
+    ],
+    "title": "Testing TypeDeclaration targets",
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "annotations": [
+          {
+            "name": "meta-resource-method",
+            "value": "on a resource"
+          }
+        ],
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "meta-resource-method",
+                "value": "on a method"
+              },
+              {
+                "name": "meta-data",
+                "value": "stringValue1"
+              }
+            ],
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "annotations": [
+                      {
+                        "name": "meta-data",
+                        "value": "on a body"
+                      }
+                    ],
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "array"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "apiInvalid.raml"
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "items": [
+                      "User"
+                    ]
+                  }
+                ],
+                "sourceMap": {
+                  "path": "apiInvalid.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/users",
+            "absoluteParentUri": "/users",
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            }
+          }
+        ],
+        "relativeUri": "/users",
+        "displayName": "/users",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "users"
+        ],
+        "absoluteUri": "/users",
+        "completeRelativeUri": "/users",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "INVALID_ANNOTATION_LOCATION",
+      "message": "Annotation 'meta-data' can not be placed at this location, allowed targets are: 'TypeDeclaration'",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 4,
+          "position": 506
+        },
+        "end": {
+          "line": 21,
+          "column": 15,
+          "position": 517
+        }
+      }
+    }
+  ]
+}

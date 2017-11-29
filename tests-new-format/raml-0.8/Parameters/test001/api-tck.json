@@ -1,0 +1,88 @@
+{
+  "specification": {
+    "title": "test",
+    "resources": [
+      {
+        "relativeUri": "/test",
+        "methods": [
+          {
+            "queryParameters": [
+              {
+                "name": "limit",
+                "displayName": "limit",
+                "type": "integer",
+                "required": false,
+                "default": "someValue",
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "parentUri": "/test",
+            "absoluteParentUri": "/test",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/test",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "test"
+        ],
+        "absoluteUri": "/test",
+        "completeRelativeUri": "/test",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "INTEGER_EXPECTED",
+      "message": "integer is expected",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 8,
+          "position": 102
+        },
+        "end": {
+          "line": 7,
+          "column": 15,
+          "position": 109
+        }
+      }
+    }
+  ]
+}

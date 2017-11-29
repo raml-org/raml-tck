@@ -1,0 +1,209 @@
+{
+  "specification": {
+    "annotationTypes": [
+      {
+        "name": "monitor",
+        "displayName": "monitor",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "frequency",
+            "displayName": "frequency",
+            "type": [
+              "object"
+            ],
+            "required": true,
+            "properties": [
+              {
+                "name": "interval",
+                "displayName": "interval",
+                "type": [
+                  "integer"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "overlay-monitoring.raml"
+                }
+              },
+              {
+                "name": "unitOfMeasure",
+                "displayName": "unitOfMeasure",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "enum": [
+                  "seconds",
+                  "minutes",
+                  "hours"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "overlay-monitoring.raml"
+                }
+              }
+            ],
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "overlay-monitoring.raml"
+            }
+          },
+          {
+            "name": "script",
+            "displayName": "script",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "overlay-monitoring.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "overlay-monitoring.raml"
+        }
+      }
+    ],
+    "title": "Book Library API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "monitor",
+                "value": {
+                  "frequency": {
+                    "interval": 5,
+                    "unitOfMeasure": "minutes"
+                  },
+                  "script": "randomBooksFetch"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/books",
+            "absoluteParentUri": "/books",
+            "sourceMap": {
+              "path": "overlay-monitoring.raml"
+            }
+          }
+        ],
+        "description": "The collection of library books",
+        "relativeUri": "/books",
+        "displayName": "/books",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "books"
+        ],
+        "absoluteUri": "/books",
+        "completeRelativeUri": "/books",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "overlay-monitoring.raml"
+        }
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Introduction",
+        "content": "Automated access to books",
+        "sourceMap": {
+          "path": "librarybooks.raml"
+        }
+      },
+      {
+        "title": "Licensing",
+        "content": "Please respect copyrights on our books.",
+        "sourceMap": {
+          "path": "librarybooks.raml"
+        }
+      }
+    ],
+    "usage": "Hints for monitoring the library books API",
+    "extends": "librarybooks.raml",
+    "sourceMap": {
+      "path": "overlay-monitoring.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Overlay",
+  "errors": []
+}

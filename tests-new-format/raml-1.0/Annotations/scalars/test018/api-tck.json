@@ -1,0 +1,91 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "t1",
+        "displayName": "t1",
+        "type": [
+          "string"
+        ],
+        "pattern": "[a-z]+",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "scalarsAnnotations": {
+          "pattern": [
+            [
+              {
+                "name": "a",
+                "value": "abcdefg"
+              }
+            ]
+          ]
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "name": "a",
+        "displayName": "a",
+        "type": [
+          "string"
+        ],
+        "minLength": 8,
+        "maxLength": 64,
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "testAPI",
+    "version": "v1",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "MINMAX_RESTRICTION_VIOLATION",
+      "message": "'a.minLength=8' i.e. string length should not be less than 8",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 6,
+          "position": 179
+        },
+        "end": {
+          "line": 14,
+          "column": 9,
+          "position": 182
+        }
+      }
+    }
+  ]
+}

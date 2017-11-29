@@ -1,0 +1,151 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "Types",
+        "value": "types.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "Mulesoft Info",
+    "version": "1",
+    "baseUri": "https://mocksvc.mulesoft.com/mocks/042017e5-4a4e-45ec-ba49-738ad7f2ffcf",
+    "protocols": [
+      "HTTPS"
+    ],
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "array"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
+                    },
+                    "examples": [
+                      {
+                        "value": [
+                          {
+                            "id": 1,
+                            "title": "feature1",
+                            "description": "description of feature 1",
+                            "pic": "http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png"
+                          },
+                          {
+                            "id": 2,
+                            "title": "feature2",
+                            "description": "description of feature 2",
+                            "pic": "http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png"
+                          },
+                          {
+                            "id": 3,
+                            "title": "feature3",
+                            "description": "description of feature 3",
+                            "pic": "http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png"
+                          },
+                          {
+                            "id": 4,
+                            "title": "feature4",
+                            "description": "description of feature 4",
+                            "pic": "http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png"
+                          },
+                          {
+                            "id": 5,
+                            "title": "feature5",
+                            "description": "description of feature 4",
+                            "pic": "http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png"
+                          }
+                        ],
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "simplifiedExamples": [
+                      "[{\"id\":1,\"title\":\"feature1\",\"description\":\"description of feature 1\",\"pic\":\"http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png\"},{\"id\":2,\"title\":\"feature2\",\"description\":\"description of feature 2\",\"pic\":\"http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png\"},{\"id\":3,\"title\":\"feature3\",\"description\":\"description of feature 3\",\"pic\":\"http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png\"},{\"id\":4,\"title\":\"feature4\",\"description\":\"description of feature 4\",\"pic\":\"http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png\"},{\"id\":5,\"title\":\"feature5\",\"description\":\"description of feature 4\",\"pic\":\"http://naw.netatwork.netdna-cdn.com/uploads/2015/06/icon-security-monitoring.png\"}]"
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "items": [
+                      "Types.Feature"
+                    ]
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "protocols": [
+              "HTTPS"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "parentUri": "/features",
+            "absoluteParentUri": "https://mocksvc.mulesoft.com/mocks/042017e5-4a4e-45ec-ba49-738ad7f2ffcf/features",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "relativeUri": "/features",
+        "displayName": "/features",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "features"
+        ],
+        "absoluteUri": "https://mocksvc.mulesoft.com/mocks/042017e5-4a4e-45ec-ba49-738ad7f2ffcf/features",
+        "completeRelativeUri": "/features",
+        "parentUri": "",
+        "absoluteParentUri": "https://mocksvc.mulesoft.com/mocks/042017e5-4a4e-45ec-ba49-738ad7f2ffcf",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

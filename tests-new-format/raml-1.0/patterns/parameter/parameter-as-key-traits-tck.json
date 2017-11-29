@@ -1,0 +1,87 @@
+{
+  "specification": {
+    "traits": [
+      {
+        "responses": [
+          {
+            "code": "<<status>>",
+            "description": "<<description>>",
+            "sourceMap": {
+              "path": "parameter-as-key-traits.raml"
+            }
+          }
+        ],
+        "name": "respCode",
+        "sourceMap": {
+          "path": "parameter-as-key-traits.raml"
+        }
+      }
+    ],
+    "title": "Example API",
+    "version": "v1",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "201",
+                "description": "Post created, returns the created post.",
+                "sourceMap": {
+                  "path": "parameter-as-key-traits.raml"
+                }
+              }
+            ],
+            "is": [
+              {
+                "name": "respCode",
+                "parameters": [
+                  {
+                    "name": "status",
+                    "value": 201
+                  },
+                  {
+                    "name": "description",
+                    "value": "Post created, returns the created post."
+                  }
+                ]
+              }
+            ],
+            "description": "test",
+            "method": "get",
+            "parentUri": "/servers",
+            "absoluteParentUri": "/servers",
+            "sourceMap": {
+              "path": "parameter-as-key-traits.raml"
+            }
+          }
+        ],
+        "relativeUri": "/servers",
+        "displayName": "/servers",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "servers"
+        ],
+        "absoluteUri": "/servers",
+        "completeRelativeUri": "/servers",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "parameter-as-key-traits.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "parameter-as-key-traits.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

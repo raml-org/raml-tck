@@ -1,0 +1,101 @@
+{
+  "specification": {
+    "annotations": [
+      {
+        "name": "library.highLevelApiDescription",
+        "value": null
+      },
+      {
+        "name": "library.apiLogo",
+        "value": null
+      },
+      {
+        "name": "library.specAuthor",
+        "value": "mulesoft.com"
+      },
+      {
+        "name": "library.devPortal",
+        "value": null
+      },
+      {
+        "name": "library.extraResources",
+        "value": [
+          {
+            "title": "API Notebook",
+            "type": "notebook",
+            "uri": "blah"
+          }
+        ]
+      }
+    ],
+    "uses": [
+      {
+        "key": "library",
+        "value": "https://raw.githubusercontent.com/raml-org/raml-js-parser-2/develop/src/parser/test/data/LibraryExpansion/Overlays/test029/libs/specOverlayTypesLibrary.raml",
+        "sourceMap": {
+          "path": "overlay.raml"
+        }
+      }
+    ],
+    "title": "Api",
+    "extends": "api.raml",
+    "sourceMap": {
+      "path": "overlay.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Overlay",
+  "errors": [
+    {
+      "code": "NULL_NOT_ALLOWED",
+      "message": "Null or undefined value is not allowed",
+      "path": "overlay.raml",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 0,
+          "position": 211
+        },
+        "end": {
+          "line": 4,
+          "column": 33,
+          "position": 244
+        }
+      }
+    },
+    {
+      "code": "NULL_NOT_ALLOWED",
+      "message": "Null or undefined value is not allowed",
+      "path": "overlay.raml",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 0,
+          "position": 246
+        },
+        "end": {
+          "line": 5,
+          "column": 17,
+          "position": 263
+        }
+      }
+    },
+    {
+      "code": "NULL_NOT_ALLOWED",
+      "message": "Null or undefined value is not allowed",
+      "path": "overlay.raml",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 0,
+          "position": 300
+        },
+        "end": {
+          "line": 7,
+          "column": 19,
+          "position": 319
+        }
+      }
+    }
+  ]
+}

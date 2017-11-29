@@ -1,0 +1,267 @@
+{
+  "specification": {
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "examples": [
+                      {
+                        "value": "<<param1>>",
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "simplifiedExamples": [
+                      "<<param1>>"
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "member",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "type": {
+          "name": "member",
+          "parameters": [
+            {
+              "name": "param1",
+              "value": "<<param2>>"
+            }
+          ]
+        },
+        "name": "rt",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "test API",
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "examples": [
+                      {
+                        "value": {
+                          "id": "987",
+                          "at": "Sun, 20 Jul 2014 21:20:00 GMT",
+                          "toAddressId": "273hh79",
+                          "orderItemId": "9877292",
+                          "status": "scheduled",
+                          "droneId": "f"
+                        },
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "simplifiedExamples": [
+                      "{\"id\":\"987\",\"at\":\"Sun, 20 Jul 2014 21:20:00 GMT\",\"toAddressId\":\"273hh79\",\"orderItemId\":\"9877292\",\"status\":\"scheduled\",\"droneId\":\"f\"}"
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/resource1",
+            "absoluteParentUri": "/resource1",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "member",
+          "parameters": [
+            {
+              "name": "param1",
+              "value": "{\n  \"id\": \"987\",\n  \"at\": \"Sun, 20 Jul 2014 21:20:00 GMT\",\n  \"toAddressId\": \"273hh79\",\n  \"orderItemId\": \"9877292\",\n  \"status\": \"scheduled\",\n  \"droneId\": \"f\"\n}\n"
+            }
+          ]
+        },
+        "relativeUri": "/resource1",
+        "displayName": "/resource1",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource1"
+        ],
+        "absoluteUri": "/resource1",
+        "completeRelativeUri": "/resource1",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "examples": [
+                      {
+                        "value": {
+                          "id": "987",
+                          "at": "Sun, 20 Jul 2014 21:20:00 GMT",
+                          "toAddressId": "273hh79",
+                          "orderItemId": "9877292",
+                          "status": "scheduled",
+                          "droneId": "f"
+                        },
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "simplifiedExamples": [
+                      "{\"id\":\"987\",\"at\":\"Sun, 20 Jul 2014 21:20:00 GMT\",\"toAddressId\":\"273hh79\",\"orderItemId\":\"9877292\",\"status\":\"scheduled\",\"droneId\":\"f\"}"
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/resource2",
+            "absoluteParentUri": "/resource2",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt",
+          "parameters": [
+            {
+              "name": "param2",
+              "value": "{\n  \"id\": \"987\",\n  \"at\": \"Sun, 20 Jul 2014 21:20:00 GMT\",\n  \"toAddressId\": \"273hh79\",\n  \"orderItemId\": \"9877292\",\n  \"status\": \"scheduled\",\n  \"droneId\": \"f\"\n}\n"
+            }
+          ]
+        },
+        "relativeUri": "/resource2",
+        "displayName": "/resource2",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource2"
+        ],
+        "absoluteUri": "/resource2",
+        "completeRelativeUri": "/resource2",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

@@ -1,0 +1,193 @@
+{
+  "specification": {
+    "annotations": [
+      {
+        "name": "MyAnnotation",
+        "value": {
+          "numberProp": 11
+        }
+      }
+    ],
+    "types": [
+      {
+        "name": "MyType",
+        "displayName": "MyType",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "numberProp",
+            "displayName": "numberProp",
+            "type": [
+              "number"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        }
+      },
+      {
+        "name": "TargetType",
+        "displayName": "TargetType",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "stringParam",
+            "displayName": "stringParam",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        }
+      }
+    ],
+    "traits": [
+      {
+        "headers": [
+          {
+            "name": "header1",
+            "displayName": "header1",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            }
+          }
+        ],
+        "name": "trait1",
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "name": "MyAnnotation",
+        "displayName": "MyAnnotation",
+        "type": [
+          "MyType"
+        ],
+        "allowedTargets": [
+          "TypeDeclaration"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        }
+      }
+    ],
+    "title": "MyApi",
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "INVALID_ANNOTATION_LOCATION",
+      "message": "Annotation 'MyAnnotation' can not be placed at this location, allowed targets are: 'TypeDeclaration'",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 0,
+          "position": 280
+        },
+        "end": {
+          "line": 19,
+          "column": 14,
+          "position": 294
+        }
+      }
+    }
+  ]
+}

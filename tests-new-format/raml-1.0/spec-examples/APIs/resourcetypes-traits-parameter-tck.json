@@ -1,0 +1,332 @@
+{
+  "specification": {
+    "traits": [
+      {
+        "queryParameters": [
+          {
+            "name": "<<tokenName>>",
+            "displayName": "<<tokenName>>",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "description": "A valid <<tokenName>> is required",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "resourcetypes-traits-parameter.raml"
+            }
+          }
+        ],
+        "name": "secured",
+        "sourceMap": {
+          "path": "resourcetypes-traits-parameter.raml"
+        }
+      },
+      {
+        "queryParameters": [
+          {
+            "name": "numPages",
+            "displayName": "numPages",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "description": "The number of pages to return, not to exceed <<maxPages>>",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "resourcetypes-traits-parameter.raml"
+            }
+          }
+        ],
+        "name": "paged",
+        "sourceMap": {
+          "path": "resourcetypes-traits-parameter.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "queryParameters": [
+              {
+                "name": "<<queryParamName>>",
+                "displayName": "<<queryParamName>>",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "description": "Return <<resourcePathName>> that have their <<queryParamName>> matching the given value",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
+                }
+              },
+              {
+                "name": "<<fallbackParamName>>",
+                "displayName": "<<fallbackParamName>>",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "description": "If no values match the value given for <<queryParamName>>, use <<fallbackParamName>> instead",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "resourcetypes-traits-parameter.raml"
+            }
+          }
+        ],
+        "name": "searchableCollection",
+        "sourceMap": {
+          "path": "resourcetypes-traits-parameter.raml"
+        }
+      }
+    ],
+    "title": "Example API",
+    "version": "v1",
+    "resources": [
+      {
+        "methods": [
+          {
+            "queryParameters": [
+              {
+                "name": "title",
+                "displayName": "title",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "description": "Return books that have their title matching the given value",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
+                }
+              },
+              {
+                "name": "digest_all_fields",
+                "displayName": "digest_all_fields",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "description": "If no values match the value given for title, use digest_all_fields instead",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
+                }
+              },
+              {
+                "name": "access_token",
+                "displayName": "access_token",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "description": "A valid access_token is required",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
+                }
+              },
+              {
+                "name": "numPages",
+                "displayName": "numPages",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "description": "The number of pages to return, not to exceed 10",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
+                }
+              }
+            ],
+            "is": [
+              {
+                "name": "secured",
+                "parameters": [
+                  {
+                    "name": "tokenName",
+                    "value": "access_token"
+                  }
+                ]
+              },
+              {
+                "name": "paged",
+                "parameters": [
+                  {
+                    "name": "maxPages",
+                    "value": 10
+                  }
+                ]
+              }
+            ],
+            "method": "get",
+            "parentUri": "/books",
+            "absoluteParentUri": "/books",
+            "sourceMap": {
+              "path": "resourcetypes-traits-parameter.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "searchableCollection",
+          "parameters": [
+            {
+              "name": "queryParamName",
+              "value": "title"
+            },
+            {
+              "name": "fallbackParamName",
+              "value": "digest_all_fields"
+            }
+          ]
+        },
+        "relativeUri": "/books",
+        "displayName": "/books",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "books"
+        ],
+        "absoluteUri": "/books",
+        "completeRelativeUri": "/books",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "resourcetypes-traits-parameter.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "resourcetypes-traits-parameter.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

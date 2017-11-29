@@ -1,0 +1,27 @@
+{
+  "specification": {
+    "title": "test API",
+    "schemas": [
+      {
+        "value": "{\n  \"type\": \"object\"\n\n\n}\n",
+        "name": "sch1",
+        "sourceMap": {
+          "path": "schema1.json"
+        }
+      },
+      {
+        "value": "{\n  \"type\": \"object\"\n\n\n}\n",
+        "name": "sch2",
+        "sourceMap": {
+          "path": "schema2.json"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": []
+}

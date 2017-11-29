@@ -1,0 +1,55 @@
+{
+  "specification": {
+    "title": "GitHub API",
+    "version": "v3",
+    "baseUri": "https://api.github.com",
+    "protocols": [
+      "HTTPS"
+    ],
+    "resources": [
+      {
+        "relativeUri": "/gists",
+        "displayName": "Gists",
+        "resources": [
+          {
+            "relativeUri": "/public",
+            "displayName": "Public Gists",
+            "relativeUriPathSegments": [
+              "public"
+            ],
+            "absoluteUri": "https://api.github.com/gists/public",
+            "completeRelativeUri": "/gists/public",
+            "parentUri": "/gists",
+            "absoluteParentUri": "https://api.github.com/gists",
+            "sourceMap": {
+              "path": "nested-resources.raml"
+            }
+          }
+        ],
+        "relativeUriPathSegments": [
+          "gists"
+        ],
+        "absoluteUri": "https://api.github.com/gists",
+        "completeRelativeUri": "/gists",
+        "parentUri": "",
+        "absoluteParentUri": "https://api.github.com",
+        "sourceMap": {
+          "path": "nested-resources.raml"
+        }
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "nested-resources.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

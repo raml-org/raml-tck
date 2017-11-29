@@ -1,0 +1,120 @@
+{
+  "specification": {
+    "traits": [
+      {
+        "name": "bar",
+        "usage": "bar usage",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "Foo API",
+    "version": "0.1.0",
+    "baseUri": "https://example.com",
+    "protocols": [
+      "HTTPS"
+    ],
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "object"
+                ],
+                "properties": [
+                  {
+                    "name": "quz",
+                    "displayName": "quz",
+                    "type": [
+                      "array"
+                    ],
+                    "required": true,
+                    "items": [
+                      "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"version\": 1,\n  \"title\": \"message\",\n  \"additionalProperties\": false,\n  \"type\": \"object\",\n  \"required\": [\n    \"datetime\"\n  ],\n  \"properties\": {\n    \"datetime\": {\n      \"type\": \"string\",\n      \"format\": \"date-time\",\n      \"description\": \"message generated time\"\n    }\n  }\n}\n"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "protocols": [
+              "HTTPS"
+            ],
+            "method": "post",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "parentUri": "/baz",
+            "absoluteParentUri": "https://example.com/baz",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "relativeUri": "/baz",
+        "displayName": "/baz",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "baz"
+        ],
+        "absoluteUri": "https://example.com/baz",
+        "completeRelativeUri": "/baz",
+        "parentUri": "",
+        "absoluteParentUri": "https://example.com",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

@@ -1,0 +1,268 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "ParentType",
+        "displayName": "ParentType",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "stringProperty",
+            "displayName": "stringProperty",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          },
+          {
+            "name": "kind",
+            "displayName": "kind",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        ],
+        "discriminator": "kind",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      },
+      {
+        "name": "ChildType1",
+        "displayName": "ChildType1",
+        "type": [
+          "ParentType"
+        ],
+        "discriminatorValue": "k1",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      },
+      {
+        "name": "ChildType2",
+        "displayName": "ChildType2",
+        "type": [
+          "ParentType"
+        ],
+        "properties": [
+          {
+            "name": "stringProperty",
+            "displayName": "stringProperty",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "minLength": 3,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        ],
+        "discriminatorValue": "k2",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      },
+      {
+        "name": "ArrayType1",
+        "displayName": "ArrayType1",
+        "type": [
+          "array"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "items": [
+          "ChildType1"
+        ]
+      },
+      {
+        "name": "ArrayType2",
+        "displayName": "ArrayType2",
+        "type": [
+          "array"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "items": [
+          "ChildType2"
+        ]
+      },
+      {
+        "name": "ArrayType",
+        "displayName": "ArrayType",
+        "type": [
+          {
+            "type": [
+              "union"
+            ],
+            "anyOf": [
+              "ArrayType1",
+              "ArrayType2"
+            ],
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "name": "type",
+            "displayName": "type",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            }
+          }
+        ],
+        "examples": [
+          {
+            "value": [
+              {
+                "stringProperty": "ab",
+                "kind": "k1"
+              },
+              {
+                "stringProperty": "ab",
+                "kind": "k1"
+              }
+            ],
+            "strict": true,
+            "name": "ex1"
+          },
+          {
+            "value": [
+              {
+                "stringProperty": "abс",
+                "kind": "k2"
+              },
+              {
+                "stringProperty": "abс",
+                "kind": "k2"
+              }
+            ],
+            "strict": true,
+            "name": "ex2"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "simplifiedExamples": [
+          "[{\"stringProperty\":\"ab\",\"kind\":\"k1\"},{\"stringProperty\":\"ab\",\"kind\":\"k1\"}]",
+          "[{\"stringProperty\":\"abс\",\"kind\":\"k2\"},{\"stringProperty\":\"abс\",\"kind\":\"k2\"}]"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      }
+    ],
+    "title": "test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

@@ -1,0 +1,16 @@
+{
+  "specification": {
+    "title": "Demo",
+    "version": "v1",
+    "protocols": [
+      "HTTP",
+      "https"
+    ],
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

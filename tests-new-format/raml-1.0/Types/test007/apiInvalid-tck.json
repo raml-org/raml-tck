@@ -1,0 +1,215 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "SimpleUnion",
+        "displayName": "SimpleUnion",
+        "type": [
+          "union"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "anyOf": [
+          {
+            "type": [
+              "array"
+            ],
+            "items": [
+              "string"
+            ],
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            }
+          },
+          {
+            "type": [
+              "array"
+            ],
+            "items": [
+              "number"
+            ],
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TypeWithUnionProps",
+        "displayName": "TypeWithUnionProps",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "unionArray1",
+            "displayName": "unionArray1",
+            "type": [
+              "SimpleUnion"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          },
+          {
+            "name": "unionArray2",
+            "displayName": "unionArray2",
+            "type": [
+              "SimpleUnion"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
+        "examples": [
+          {
+            "value": {
+              "unionArray1": [
+                "blah",
+                2,
+                3
+              ],
+              "unionArray2": [
+                "blah",
+                "blah",
+                "blah"
+              ]
+            },
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "{\"unionArray1\":[\"blah\",2,3],\"unionArray2\":[\"blah\",\"blah\",\"blah\"]}"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      }
+    ],
+    "title": "API",
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "UNION_TYPE_FAILURE",
+      "message": "Union type options do not pass validation",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 6,
+          "position": 212
+        },
+        "end": {
+          "line": 13,
+          "column": 17,
+          "position": 223
+        }
+      }
+    },
+    {
+      "code": "UNION_TYPE_FAILURE_DETAILS",
+      "message": "Union type option does not pass validation (number[]: Expected type 'number' but got 'string')",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 20,
+          "position": 226
+        },
+        "end": {
+          "line": 13,
+          "column": 24,
+          "position": 230
+        }
+      }
+    },
+    {
+      "code": "UNION_TYPE_FAILURE_DETAILS",
+      "message": "Union type option does not pass validation (string[]: Expected type 'string' but got 'number')",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 26,
+          "position": 232
+        },
+        "end": {
+          "line": 13,
+          "column": 27,
+          "position": 233
+        }
+      }
+    },
+    {
+      "code": "UNION_TYPE_FAILURE_DETAILS",
+      "message": "Union type option does not pass validation (string[]: Expected type 'string' but got 'number')",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 29,
+          "position": 235
+        },
+        "end": {
+          "line": 13,
+          "column": 30,
+          "position": 236
+        }
+      }
+    }
+  ]
+}

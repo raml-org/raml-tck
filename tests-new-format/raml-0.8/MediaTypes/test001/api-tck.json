@@ -1,0 +1,78 @@
+{
+  "specification": {
+    "title": "Test APi",
+    "resources": [
+      {
+        "relativeUri": "/g",
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "applicationjson",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/g",
+            "absoluteParentUri": "/g",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/g",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "g"
+        ],
+        "absoluteUri": "/g",
+        "completeRelativeUri": "/g",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "MEDIATYPE_EXCEPTION",
+      "message": "invalid media type",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 10,
+          "position": 88
+        },
+        "end": {
+          "line": 7,
+          "column": 25,
+          "position": 103
+        }
+      }
+    }
+  ]
+}

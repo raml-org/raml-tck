@@ -1,0 +1,84 @@
+{
+  "specification": {
+    "traits": [
+      {
+        "headers": [
+          {
+            "name": "access_token",
+            "displayName": "access_token",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "description": "Access Token",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "examples": [
+              {
+                "value": "5757gh76",
+                "strict": true,
+                "name": null
+              }
+            ],
+            "simplifiedExamples": [
+              "5757gh76"
+            ],
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "resourcetypes-traits.raml"
+            }
+          }
+        ],
+        "description": "Some requests require authentication.",
+        "name": "secured",
+        "usage": "Apply this to any method that needs to be secured",
+        "sourceMap": {
+          "path": "resourcetypes-traits.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "description": "Get all <<resourcePathName>>, optionally filtered",
+            "method": "get",
+            "sourceMap": {
+              "path": "resourcetypes-traits.raml"
+            }
+          },
+          {
+            "description": "Create a new <<resourcePathName | !singularize>>",
+            "method": "post",
+            "sourceMap": {
+              "path": "resourcetypes-traits.raml"
+            }
+          }
+        ],
+        "description": "The collection of <<resourcePathName>>",
+        "name": "collection",
+        "usage": "This resourceType should be used for any collection of items",
+        "sourceMap": {
+          "path": "resourcetypes-traits.raml"
+        }
+      }
+    ],
+    "title": "Example API",
+    "version": "v1",
+    "sourceMap": {
+      "path": "resourcetypes-traits.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

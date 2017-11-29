@@ -1,0 +1,116 @@
+{
+  "specification": {
+    "title": "test API",
+    "resourceTypes": [
+      {
+        "name": "myResourceType",
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "<<param4>>",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              },
+              {
+                "code": "200",
+                "<<param5>>": "<<param5value>>",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "body": [
+              {
+                "name": "application/json",
+                "<<param3>>": "<<param3value>>",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "queryParameters": [
+              {
+                "name": "<<qParam>>",
+                "displayName": "<<qParam>>",
+                "type": "string",
+                "required": false,
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              },
+              {
+                "name": "param1",
+                "displayName": "param1",
+                "type": "string",
+                "required": false,
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "<<prop1>>": "<<prop1Value>>",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "<<param2>>": "<<param2value>>",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "<<param1>>": "<<param1value>>",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": []
+}

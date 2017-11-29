@@ -1,0 +1,301 @@
+{
+  "specification": {
+    "annotationTypes": [
+      {
+        "name": "deprecated",
+        "displayName": "deprecated",
+        "type": [
+          "nil"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      },
+      {
+        "name": "experimental",
+        "displayName": "experimental",
+        "type": [
+          "union"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "anyOf": [
+          "nil",
+          "string"
+        ],
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      },
+      {
+        "name": "feedbackRequested",
+        "displayName": "feedbackRequested",
+        "type": [
+          "union"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "anyOf": [
+          "string",
+          "nil"
+        ],
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      },
+      {
+        "name": "testHarness",
+        "displayName": "testHarness",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      },
+      {
+        "name": "badge",
+        "displayName": "badge",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      },
+      {
+        "name": "clearanceLevel",
+        "displayName": "clearanceLevel",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "level",
+            "displayName": "level",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "annotations.raml"
+            }
+          },
+          {
+            "name": "signature",
+            "displayName": "signature",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "pattern": "\\d{3}-\\w{12}",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "annotations.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      }
+    ],
+    "title": "Illustrating annotations",
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "annotations": [
+          {
+            "name": "experimental",
+            "value": null
+          },
+          {
+            "name": "feedbackRequested",
+            "value": null
+          }
+        ],
+        "relativeUri": "/groups",
+        "displayName": "/groups",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "groups"
+        ],
+        "absoluteUri": "/groups",
+        "completeRelativeUri": "/groups",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      },
+      {
+        "annotations": [
+          {
+            "name": "testHarness",
+            "value": "usersTest"
+          },
+          {
+            "name": "badge",
+            "value": "tested.gif"
+          },
+          {
+            "name": "clearanceLevel",
+            "value": {
+              "level": "high",
+              "signature": "230-ghtwvfrs1itr"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "deprecated",
+                "value": null
+              },
+              {
+                "name": "experimental",
+                "value": null
+              },
+              {
+                "name": "feedbackRequested",
+                "value": "Feedback committed!"
+              }
+            ],
+            "responses": [
+              {
+                "code": "200",
+                "sourceMap": {
+                  "path": "annotations.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/users",
+            "absoluteParentUri": "/users",
+            "sourceMap": {
+              "path": "annotations.raml"
+            }
+          }
+        ],
+        "relativeUri": "/users",
+        "displayName": "/users",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "users"
+        ],
+        "absoluteUri": "/users",
+        "completeRelativeUri": "/users",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "annotations.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "annotations.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

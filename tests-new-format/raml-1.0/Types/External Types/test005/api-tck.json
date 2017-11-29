@@ -1,0 +1,112 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "mySchema",
+        "displayName": "mySchema",
+        "type": [
+          "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Product\",\n  \"description\": \"A product from Acme's catalog\",\n  \"type\": \"object\",\n  \"properties\": {\n      \"id\": {\n          \"description\": \"The unique identifier for a product\",\n          \"type\": \"string\"\n      }\n  },\n  \"required\": [\"id\"]\n}"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/json",
+        "typePropertyKind": "JSON",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "name": "z",
+        "displayName": "z",
+        "type": [
+          "mySchema"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": {
+              "message": 2
+            },
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "{\"message\":2}"
+        ],
+        "mediaType": "application/json",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "name": "z2",
+        "displayName": "z2",
+        "type": [
+          "mySchema"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": {
+              "id": "4"
+            },
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "{\"id\":\"4\"}"
+        ],
+        "mediaType": "application/json",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "A",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "CONTENT_DOES_NOT_MATCH_THE_SCHEMA",
+      "message": "Content is not valid according to schema: Missing required property: id",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 4,
+          "position": 430
+        },
+        "end": {
+          "line": 19,
+          "column": 11,
+          "position": 437
+        }
+      }
+    }
+  ]
+}

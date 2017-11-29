@@ -1,0 +1,286 @@
+{
+  "specification": {
+    "title": "A",
+    "traits": [
+      {
+        "queryParameters": [
+          {
+            "name": "<<queryParamName>>",
+            "displayName": "<<queryParamName>>",
+            "type": "number",
+            "required": false,
+            "repeat": false,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                },
+                "repeat": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "headers": [
+          {
+            "name": "<<headerName>>",
+            "displayName": "<<headerName>>",
+            "type": "string",
+            "required": false,
+            "repeat": false,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                },
+                "repeat": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "name": "SomeTrait",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "Resource",
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "formParameters": [
+                  {
+                    "name": "param",
+                    "displayName": "param",
+                    "type": "number",
+                    "required": false,
+                    "repeat": false,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        },
+                        "repeat": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "apiValid.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "is": [
+          {
+            "name": "SomeTrait",
+            "parameters": [
+              {
+                "name": "queryParamName",
+                "value": "a"
+              },
+              {
+                "name": "headerName",
+                "value": "c"
+              }
+            ]
+          }
+        ],
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "type": {
+          "name": "Resource"
+        },
+        "is": [
+          {
+            "name": "SomeTrait",
+            "parameters": [
+              {
+                "name": "queryParamName",
+                "value": "a"
+              },
+              {
+                "name": "headerName",
+                "value": "c"
+              }
+            ]
+          }
+        ],
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "sourceMap": {
+                      "path": "apiValid.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "body": [
+              {
+                "name": "application/json",
+                "formParameters": [
+                  {
+                    "name": "param",
+                    "displayName": "param",
+                    "type": "number",
+                    "required": false,
+                    "example": 11,
+                    "repeat": false,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        },
+                        "repeat": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "apiValid.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "queryParameters": [
+              {
+                "name": "a",
+                "displayName": "a",
+                "type": "number",
+                "required": false,
+                "example": 11,
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "headers": [
+              {
+                "name": "c",
+                "displayName": "c",
+                "type": "string",
+                "required": false,
+                "example": "string",
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": []
+}

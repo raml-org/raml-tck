@@ -1,0 +1,86 @@
+{
+  "specification": {
+    "annotationTypes": [
+      {
+        "name": "a1",
+        "displayName": "a1",
+        "type": [
+          "number"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      },
+      {
+        "name": "a2",
+        "displayName": "a2",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "title": "API",
+    "resources": [
+      {
+        "description": "descriptionValue",
+        "relativeUri": "/resource",
+        "displayName": "myResource",
+        "scalarsAnnotations": {
+          "description": [
+            [
+              {
+                "name": "a1",
+                "value": 5
+              }
+            ]
+          ],
+          "displayName": [
+            [
+              {
+                "name": "a2",
+                "value": "value1"
+              }
+            ]
+          ]
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

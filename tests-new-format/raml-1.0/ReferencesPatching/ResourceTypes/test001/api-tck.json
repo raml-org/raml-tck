@@ -1,0 +1,297 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "lib",
+        "value": "libA.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "lib.lib",
+        "value": "libB.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "types": [
+      {
+        "name": "Monkey",
+        "displayName": "Monkey",
+        "type": [
+          "object"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "<<param1>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              {
+                "name": "application/xml",
+                "displayName": "application/xml",
+                "type": [
+                  "<<param2>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              {
+                "name": "text/plain",
+                "displayName": "text/plain",
+                "type": [
+                  "lib.lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              {
+                "name": "atom/xml",
+                "displayName": "atom/xml",
+                "type": [
+                  "union"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "anyOf": [
+                  "<<param1>>",
+                  "<<param2>>",
+                  "lib.lib.Monkey"
+                ],
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "sourceMap": {
+              "path": "libB.raml"
+            }
+          }
+        ],
+        "name": "lib.lib.rt",
+        "__METADATA__": {
+          "calculated": true
+        },
+        "sourceMap": {
+          "path": "libB.raml"
+        }
+      },
+      {
+        "type": {
+          "name": "lib.lib.rt",
+          "parameters": [
+            {
+              "name": "param1",
+              "value": "<<param1>>"
+            },
+            {
+              "name": "param2",
+              "value": "Monkey"
+            }
+          ]
+        },
+        "name": "lib.rt",
+        "__METADATA__": {
+          "calculated": true
+        },
+        "sourceMap": {
+          "path": "libA.raml"
+        }
+      }
+    ],
+    "title": "Test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              {
+                "name": "application/xml",
+                "displayName": "application/xml",
+                "type": [
+                  "lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              {
+                "name": "text/plain",
+                "displayName": "text/plain",
+                "type": [
+                  "lib.lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              {
+                "name": "atom/xml",
+                "displayName": "atom/xml",
+                "type": [
+                  "union"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "anyOf": [
+                  "Monkey",
+                  "lib.Monkey",
+                  "lib.lib.Monkey"
+                ],
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "libB.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "lib.rt",
+          "parameters": [
+            {
+              "name": "param1",
+              "value": "Monkey"
+            }
+          ]
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

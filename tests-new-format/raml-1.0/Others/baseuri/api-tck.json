@@ -1,0 +1,11 @@
+{
+  "specification": {
+    "title": "A",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

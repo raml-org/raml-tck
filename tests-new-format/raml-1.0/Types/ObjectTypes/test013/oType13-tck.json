@@ -1,0 +1,118 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "Method",
+        "displayName": "Method",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "name",
+            "displayName": "name",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "oType13.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "oType13.raml"
+        }
+      },
+      {
+        "name": "Resource",
+        "displayName": "Resource",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "/post|get|put/",
+            "displayName": "/post|get|put/",
+            "type": [
+              "Method"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "oType13.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": {
+              "put": {
+                "name": "update method"
+              },
+              "post": {
+                "name": "create method"
+              }
+            },
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "{\"put\":{\"name\":\"update method\"},\"post\":{\"name\":\"create method\"}}"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "oType13.raml"
+        }
+      }
+    ],
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "oType13.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

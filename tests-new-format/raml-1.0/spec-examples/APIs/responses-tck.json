@@ -1,0 +1,364 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "Invoice",
+        "displayName": "Invoice",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "amount",
+            "displayName": "amount",
+            "type": [
+              "number"
+            ],
+            "required": true,
+            "minimum": 0,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "responses.raml"
+            }
+          },
+          {
+            "name": "vendorName",
+            "displayName": "vendorName",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "responses.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "responses.raml"
+        }
+      }
+    ],
+    "title": "Example with responses",
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "Invoice"
+                    ],
+                    "properties": [
+                      {
+                        "name": "id",
+                        "displayName": "id",
+                        "type": [
+                          "number"
+                        ],
+                        "required": true,
+                        "__METADATA__": {
+                          "primitiveValuesMeta": {
+                            "displayName": {
+                              "calculated": true
+                            },
+                            "required": {
+                              "insertedAsDefault": true
+                            }
+                          }
+                        },
+                        "mediaType": "application/raml+yaml",
+                        "typePropertyKind": "TYPE_EXPRESSION",
+                        "sourceMap": {
+                          "path": "responses.raml"
+                        }
+                      }
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "responses.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "responses.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/invoices",
+            "absoluteParentUri": "/invoices",
+            "sourceMap": {
+              "path": "responses.raml"
+            }
+          },
+          {
+            "responses": [
+              {
+                "code": "201",
+                "headers": [
+                  {
+                    "name": "Location",
+                    "displayName": "Location",
+                    "type": [
+                      "string"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "examples": [
+                      {
+                        "value": "/invoices/45612",
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "simplifiedExamples": [
+                      "/invoices/45612"
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "responses.raml"
+                    }
+                  }
+                ],
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "schemaPath": "schemas/invoice.json",
+                    "sourceMap": {
+                      "path": "schemas/invoice.json"
+                    },
+                    "type": [
+                      "{\n\t\"title\": \"Example Schema\",\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"accountID\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"amount\": {\n\t\t\t\"type\": \"string\"\n\t\t}\n\t},\n\t\"required\": [\"accountID\", \"amount\"]\n}"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/json",
+                    "typePropertyKind": "JSON"
+                  },
+                  {
+                    "name": "text/xml",
+                    "displayName": "text/xml",
+                    "schemaPath": "schemas/invoice.xsd",
+                    "sourceMap": {
+                      "path": "schemas/invoice.xsd"
+                    },
+                    "type": [
+                      "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:element name=\"invoice\">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name=\"accountID\" type=\"xs:string\"/>\n        <xs:element name=\"amount\" type=\"xs:string\"/>\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/xml",
+                    "typePropertyKind": "XML"
+                  }
+                ],
+                "sourceMap": {
+                  "path": "responses.raml"
+                }
+              },
+              {
+                "code": "422",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": [
+                      {
+                        "name": "error",
+                        "displayName": "error",
+                        "type": [
+                          "string"
+                        ],
+                        "required": true,
+                        "__METADATA__": {
+                          "primitiveValuesMeta": {
+                            "displayName": {
+                              "calculated": true
+                            },
+                            "type": {
+                              "insertedAsDefault": true
+                            },
+                            "required": {
+                              "insertedAsDefault": true
+                            }
+                          }
+                        },
+                        "mediaType": "application/raml+yaml",
+                        "typePropertyKind": "TYPE_EXPRESSION",
+                        "sourceMap": {
+                          "path": "responses.raml"
+                        }
+                      }
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "examples": [
+                      {
+                        "value": {
+                          "error": "Amount cannot be negative"
+                        },
+                        "strict": true,
+                        "name": null
+                      }
+                    ],
+                    "simplifiedExamples": [
+                      "{\"error\":\"Amount cannot be negative\"}"
+                    ],
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "responses.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "responses.raml"
+                }
+              }
+            ],
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "Invoice"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "responses.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "parentUri": "/invoices",
+            "absoluteParentUri": "/invoices",
+            "sourceMap": {
+              "path": "responses.raml"
+            }
+          }
+        ],
+        "relativeUri": "/invoices",
+        "displayName": "/invoices",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "invoices"
+        ],
+        "absoluteUri": "/invoices",
+        "completeRelativeUri": "/invoices",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "responses.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "responses.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

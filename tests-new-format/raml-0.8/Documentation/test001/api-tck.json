@@ -1,0 +1,27 @@
+{
+  "specification": {
+    "title": "test API",
+    "documentation": [
+      {
+        "title": "Section 1",
+        "content": "Some string value\n",
+        "sourceMap": {
+          "path": "docs.raml"
+        }
+      },
+      {
+        "title": "Section 2",
+        "content": "Some string value\n",
+        "sourceMap": {
+          "path": "docs.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": []
+}

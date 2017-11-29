@@ -1,0 +1,149 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "t1",
+        "displayName": "t1",
+        "type": [
+          "object"
+        ],
+        "examples": [
+          {
+            "value": {
+              "p": "stringValue1"
+            },
+            "strict": true,
+            "name": "ex1"
+          },
+          {
+            "value": {
+              "p": "stringValue2"
+            },
+            "strict": true,
+            "name": "ex2"
+          }
+        ],
+        "properties": [
+          {
+            "name": "p",
+            "displayName": "p",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "simplifiedExamples": [
+          "{\"p\":\"stringValue1\"}",
+          "{\"p\":\"stringValue2\"}"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "name": "t2",
+        "displayName": "t2",
+        "type": [
+          "object"
+        ],
+        "examples": [
+          {
+            "value": {
+              "p": "stringValue1"
+            },
+            "strict": true,
+            "name": "ex3",
+            "displayName": "T2 Example",
+            "description": "Example for the 'T2' type"
+          }
+        ],
+        "properties": [
+          {
+            "name": "p",
+            "displayName": "p",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "simplifiedExamples": [
+          "{\"p\":\"stringValue1\"}"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "traits": [
+      {
+        "name": "tr",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

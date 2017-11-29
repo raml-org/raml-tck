@@ -1,0 +1,114 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "externalType",
+        "displayName": "externalType",
+        "schemaPath": "schemas/A.json",
+        "sourceMap": {
+          "path": "schemas/A.json"
+        },
+        "type": [
+          "{\n   \"type\" : \"object\",\n   \"properties\": {\n      \"p1\": {\n         \"$ref\": \"#/definitions/type1\"\n      },\n      \"P2\": {\n         \"$ref\": \"./B.json#/definitions/type2\"\n      }\n   },\n   \"definitions\":{\n      \"type1\" : {\n         \"type\" : \"boolean\"\n      }\n   }\n}"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": {
+              "p1": false,
+              "p2": 15
+            },
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "{\"p1\":false,\"p2\":15}"
+        ],
+        "mediaType": "application/json",
+        "typePropertyKind": "JSON"
+      }
+    ],
+    "title": "test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "schemaPath": "schemas/A.json",
+                "sourceMap": {
+                  "path": "schemas/A.json"
+                },
+                "type": [
+                  "{\n   \"type\" : \"object\",\n   \"properties\": {\n      \"p1\": {\n         \"$ref\": \"#/definitions/type1\"\n      },\n      \"P2\": {\n         \"$ref\": \"./B.json#/definitions/type2\"\n      }\n   },\n   \"definitions\":{\n      \"type1\" : {\n         \"type\" : \"boolean\"\n      }\n   }\n}"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "examples": [
+                  {
+                    "value": {
+                      "p1": false,
+                      "p2": 15
+                    },
+                    "strict": true,
+                    "name": null
+                  }
+                ],
+                "simplifiedExamples": [
+                  "{\"p1\":false,\"p2\":15}"
+                ],
+                "mediaType": "application/json",
+                "typePropertyKind": "JSON"
+              }
+            ],
+            "method": "post",
+            "parentUri": "/res",
+            "absoluteParentUri": "/res",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "relativeUri": "/res",
+        "displayName": "/res",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "res"
+        ],
+        "absoluteUri": "/res",
+        "completeRelativeUri": "/res",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

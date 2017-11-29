@@ -1,0 +1,66 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "SomeType",
+        "displayName": "SomeType",
+        "type": [
+          "array"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
+        "examples": [
+          {
+            "value": [
+              100500,
+              "not number"
+            ],
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "[100500,\"not number\"]"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "items": [
+          "number"
+        ]
+      }
+    ],
+    "title": "API",
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "TYPE_EXPECTED",
+      "message": "Expected type 'number' but got 'string'",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 8,
+          "position": 97
+        },
+        "end": {
+          "line": 8,
+          "column": 18,
+          "position": 107
+        }
+      }
+    }
+  ]
+}

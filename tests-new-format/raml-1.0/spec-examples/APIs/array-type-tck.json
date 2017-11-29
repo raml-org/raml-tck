@@ -1,0 +1,123 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "Email",
+        "displayName": "Email",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "subject",
+            "displayName": "subject",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "array-type.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          },
+          {
+            "name": "body",
+            "displayName": "body",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "array-type.raml"
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "array-type.raml"
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION"
+      },
+      {
+        "name": "Emails",
+        "displayName": "Emails",
+        "type": [
+          "array"
+        ],
+        "uniqueItems": true,
+        "minItems": 1,
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "array-type.raml"
+        },
+        "examples": [
+          {
+            "value": [
+              {
+                "subject": "My Email 1",
+                "body": "This is the text for email 1."
+              },
+              {
+                "subject": "My Email 2",
+                "body": "This is the text for email 2."
+              }
+            ],
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "[{\"subject\":\"My Email 1\",\"body\":\"This is the text for email 1.\"},{\"subject\":\"My Email 2\",\"body\":\"This is the text for email 2.\"}]"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "items": [
+          "Email"
+        ]
+      }
+    ],
+    "title": "Simple Array Type with Example",
+    "sourceMap": {
+      "path": "array-type.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

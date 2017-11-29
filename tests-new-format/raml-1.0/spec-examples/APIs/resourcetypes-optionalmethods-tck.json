@@ -1,0 +1,166 @@
+{
+  "specification": {
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "headers": [
+              {
+                "name": "X-Chargeback",
+                "displayName": "X-Chargeback",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-optionalmethods.raml"
+                }
+              }
+            ],
+            "description": "Some info about <<TextAboutPost>>.",
+            "method": "post",
+            "__METADATA__": {
+              "optional": true
+            },
+            "sourceMap": {
+              "path": "resourcetypes-optionalmethods.raml"
+            }
+          }
+        ],
+        "name": "corpResource",
+        "sourceMap": {
+          "path": "resourcetypes-optionalmethods.raml"
+        }
+      }
+    ],
+    "title": "Example of Optional Properties",
+    "resources": [
+      {
+        "methods": [
+          {
+            "method": "get",
+            "parentUri": "/servers",
+            "absoluteParentUri": "/servers",
+            "sourceMap": {
+              "path": "resourcetypes-optionalmethods.raml"
+            }
+          },
+          {
+            "headers": [
+              {
+                "name": "X-Chargeback",
+                "displayName": "X-Chargeback",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "resourcetypes-optionalmethods.raml"
+                }
+              }
+            ],
+            "description": "Some info about post method.",
+            "method": "post",
+            "parentUri": "/servers",
+            "absoluteParentUri": "/servers",
+            "sourceMap": {
+              "path": "resourcetypes-optionalmethods.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "corpResource",
+          "parameters": [
+            {
+              "name": "TextAboutPost",
+              "value": "post method"
+            }
+          ]
+        },
+        "relativeUri": "/servers",
+        "displayName": "/servers",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "servers"
+        ],
+        "absoluteUri": "/servers",
+        "completeRelativeUri": "/servers",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "resourcetypes-optionalmethods.raml"
+        }
+      },
+      {
+        "methods": [
+          {
+            "method": "get",
+            "parentUri": "/queues",
+            "absoluteParentUri": "/queues",
+            "sourceMap": {
+              "path": "resourcetypes-optionalmethods.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "corpResource"
+        },
+        "relativeUri": "/queues",
+        "displayName": "/queues",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "queues"
+        ],
+        "absoluteUri": "/queues",
+        "completeRelativeUri": "/queues",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "resourcetypes-optionalmethods.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "resourcetypes-optionalmethods.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

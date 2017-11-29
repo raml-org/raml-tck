@@ -1,0 +1,93 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "ItsComplicated",
+        "displayName": "ItsComplicated",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "/.*/",
+            "displayName": "/.*/",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": {
+              "prop1": "stringValue1",
+              "prop2": {
+                "someProperty": "stringValue2"
+              }
+            },
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "{\"prop1\":\"stringValue1\",\"prop2\":{\"someProperty\":\"stringValue2\"}}"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "Api",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "TYPE_EXPECTED",
+      "message": "Expected type 'string' but got 'object'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 6,
+          "position": 128
+        },
+        "end": {
+          "line": 9,
+          "column": 11,
+          "position": 133
+        }
+      }
+    }
+  ]
+}

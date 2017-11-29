@@ -1,0 +1,208 @@
+{
+  "specification": {
+    "title": "Example",
+    "resources": [
+      {
+        "type": {
+          "name": 4
+        },
+        "relativeUri": "/users",
+        "displayName": "/users",
+        "resources": [
+          {
+            "methods": [
+              {
+                "is": [
+                  {
+                    "name": 5
+                  },
+                  {
+                    "name": false
+                  }
+                ],
+                "method": "get",
+                "parentUri": "/users/{id}",
+                "absoluteParentUri": "/users/{id}",
+                "sourceMap": {
+                  "path": "api.raml"
+                },
+                "uriParameters": [
+                  {
+                    "name": "id",
+                    "displayName": "id",
+                    "type": [
+                      "string"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "calculated": true,
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ]
+              }
+            ],
+            "type": {
+              "name": true
+            },
+            "uriParameters": [
+              {
+                "name": "id",
+                "displayName": "id",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "calculated": true,
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "relativeUri": "/{id}",
+            "displayName": "/{id}",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "relativeUriPathSegments": [
+              "{id}"
+            ],
+            "absoluteUri": "/users/{id}",
+            "completeRelativeUri": "/users/{id}",
+            "parentUri": "/users",
+            "absoluteParentUri": "/users",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "users"
+        ],
+        "absoluteUri": "/users",
+        "completeRelativeUri": "/users",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "UNRECOGNIZED_ELEMENT",
+      "message": "Unrecognized resource type: '4'.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 2,
+          "position": 36
+        },
+        "end": {
+          "line": 3,
+          "column": 6,
+          "position": 40
+        }
+      }
+    },
+    {
+      "code": "UNRECOGNIZED_ELEMENT",
+      "message": "Unrecognized resource type: 'true'.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "position": 57
+        },
+        "end": {
+          "line": 5,
+          "column": 8,
+          "position": 61
+        }
+      }
+    },
+    {
+      "code": "UNRECOGNIZED_ELEMENT",
+      "message": "Unrecognized trait: '5'.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 11,
+          "position": 88
+        },
+        "end": {
+          "line": 7,
+          "column": 12,
+          "position": 89
+        }
+      }
+    },
+    {
+      "code": "UNRECOGNIZED_ELEMENT",
+      "message": "Unrecognized trait: 'false'.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 14,
+          "position": 91
+        },
+        "end": {
+          "line": 7,
+          "column": 19,
+          "position": 96
+        }
+      }
+    }
+  ]
+}

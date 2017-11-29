@@ -1,0 +1,121 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "decls",
+        "value": "lib/decls.raml",
+        "sourceMap": {
+          "path": "extension.raml"
+        }
+      }
+    ],
+    "title": "ApiExtension",
+    "baseUri": "http://myItems.com",
+    "protocols": [
+      "HTTP"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "decls.important",
+                "value": null
+              }
+            ],
+            "protocols": [
+              "HTTP"
+            ],
+            "description": "describing your method here\n",
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "parentUri": "/items",
+            "absoluteParentUri": "http://myItems.com/items",
+            "sourceMap": {
+              "path": "extension.raml"
+            }
+          }
+        ],
+        "relativeUri": "/items",
+        "displayName": "/items",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "items"
+        ],
+        "absoluteUri": "http://myItems.com/items",
+        "completeRelativeUri": "/items",
+        "parentUri": "",
+        "absoluteParentUri": "http://myItems.com",
+        "sourceMap": {
+          "path": "extension.raml"
+        }
+      },
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "sourceMap": {
+                  "path": "master.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/elements",
+            "absoluteParentUri": "http://myItems.com/elements",
+            "sourceMap": {
+              "path": "master.raml"
+            }
+          }
+        ],
+        "relativeUri": "/elements",
+        "displayName": "/elements",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "elements"
+        ],
+        "absoluteUri": "http://myItems.com/elements",
+        "completeRelativeUri": "/elements",
+        "parentUri": "",
+        "absoluteParentUri": "http://myItems.com",
+        "sourceMap": {
+          "path": "master.raml"
+        }
+      }
+    ],
+    "extends": "master.raml",
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "extension.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Extension",
+  "errors": []
+}

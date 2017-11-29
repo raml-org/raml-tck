@@ -1,0 +1,166 @@
+{
+  "specification": {
+    "title": "API",
+    "baseUri": "/some/base/uri",
+    "protocols": [
+      "HTTP"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/xml",
+                    "displayName": "application/xml",
+                    "type": [
+                      "any"
+                    ],
+                    "description": "some very useful resource",
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "apiValid.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "protocols": [
+              "HTTP"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "parentUri": "/someChildUri",
+            "absoluteParentUri": "/some/base/uri/someChildUri",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "relativeUri": "/someChildUri",
+        "displayName": "/someChildUri",
+        "resources": [
+          {
+            "methods": [
+              {
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "any"
+                    ],
+                    "description": "another very useful resource",
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "apiValid.raml"
+                    }
+                  }
+                ],
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "put",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "parentUri": "/someChildUri/anotherChild",
+                "absoluteParentUri": "/some/base/uri/someChildUri/anotherChild",
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "relativeUri": "/anotherChild",
+            "displayName": "/anotherChild",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "relativeUriPathSegments": [
+              "anotherChild"
+            ],
+            "absoluteUri": "/some/base/uri/someChildUri/anotherChild",
+            "completeRelativeUri": "/someChildUri/anotherChild",
+            "parentUri": "/someChildUri",
+            "absoluteParentUri": "/some/base/uri/someChildUri",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "someChildUri"
+        ],
+        "absoluteUri": "/some/base/uri/someChildUri",
+        "completeRelativeUri": "/someChildUri",
+        "parentUri": "",
+        "absoluteParentUri": "/some/base/uri",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

@@ -1,0 +1,454 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "lib1",
+        "value": "./lib1.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "lib1.lib2",
+        "value": "lib2.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "object"
+                ],
+                "properties": [
+                  {
+                    "name": "p1",
+                    "displayName": "p1",
+                    "type": [
+                      "union"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "anyOf": [
+                      "string",
+                      "<<type1>>"
+                    ],
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "rt1",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "object"
+                ],
+                "properties": [
+                  {
+                    "name": "p2",
+                    "displayName": "p2",
+                    "type": [
+                      "union"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "anyOf": [
+                      "string",
+                      "<<type2>>"
+                    ],
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "delete",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt1",
+          "parameters": [
+            {
+              "name": "type1",
+              "value": "<<type2>>"
+            }
+          ]
+        },
+        "name": "rt2",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "test",
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "union"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "anyOf": [
+                  "lib1.lib2.T2",
+                  "string"
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "object"
+                ],
+                "properties": [
+                  {
+                    "name": "p2",
+                    "displayName": "p2",
+                    "type": [
+                      "union"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "anyOf": [
+                      "string",
+                      "lib1.lib2.T2"
+                    ],
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "delete",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "object"
+                ],
+                "properties": [
+                  {
+                    "name": "p1",
+                    "displayName": "p1",
+                    "type": [
+                      "union"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "anyOf": [
+                      "string",
+                      "lib1.lib2.T2"
+                    ],
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "put",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt2",
+          "parameters": [
+            {
+              "name": "type2",
+              "value": "lib1.lib2.T2"
+            }
+          ]
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "UNION_OPTION_TYPE_OPTION_DEPENDS_ON_TYPE_IMPORTED_THROUGH_LIBRARY_CHAIN",
+      "message": "Union type depends on 'lib1.lib2.T2' type imported through a library chain. Library chaining is not allowed.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 10,
+          "position": 153
+        },
+        "end": {
+          "line": 13,
+          "column": 12,
+          "position": 155
+        }
+      },
+      "trace": [
+        {
+          "code": "UNION_OPTION_TYPE_OPTION_DEPENDS_ON_TYPE_IMPORTED_THROUGH_LIBRARY_CHAIN",
+          "message": "Union type depends on 'lib1.lib2.T2' type imported through a library chain. Library chaining is not allowed.",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 23,
+              "column": 0,
+              "position": 303
+            },
+            "end": {
+              "line": 23,
+              "column": 9,
+              "position": 312
+            }
+          }
+        }
+      ]
+    },
+    {
+      "code": "UNION_OPTION_TYPE_OPTION_DEPENDS_ON_TYPE_IMPORTED_THROUGH_LIBRARY_CHAIN",
+      "message": "Union type depends on 'lib1.lib2.T2' type imported through a library chain. Library chaining is not allowed.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 10,
+          "position": 281
+        },
+        "end": {
+          "line": 21,
+          "column": 12,
+          "position": 283
+        }
+      },
+      "trace": [
+        {
+          "code": "UNION_OPTION_TYPE_OPTION_DEPENDS_ON_TYPE_IMPORTED_THROUGH_LIBRARY_CHAIN",
+          "message": "Union type depends on 'lib1.lib2.T2' type imported through a library chain. Library chaining is not allowed.",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 23,
+              "column": 0,
+              "position": 303
+            },
+            "end": {
+              "line": 23,
+              "column": 9,
+              "position": 312
+            }
+          }
+        }
+      ]
+    },
+    {
+      "code": "UNION_OPTION_TYPE_OPTION_DEPENDS_ON_TYPE_IMPORTED_THROUGH_LIBRARY_CHAIN",
+      "message": "Union type depends on 'lib1.lib2.T2' type imported through a library chain. Library chaining is not allowed.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "position": 366
+        },
+        "end": {
+          "line": 26,
+          "column": 8,
+          "position": 370
+        }
+      }
+    }
+  ]
+}

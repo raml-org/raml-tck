@@ -1,0 +1,285 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "defaultResponses",
+        "value": "libraries/responseBase.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "error-types",
+        "value": "types/error-types.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "traits": [
+      {
+        "responses": [
+          {
+            "code": "422",
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "error-types.<<parentType>>-<<resourcePathName>>-errors"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "traits/generic-responses.raml"
+                }
+              }
+            ],
+            "sourceMap": {
+              "path": "traits/generic-responses.raml"
+            }
+          },
+          {
+            "code": "423",
+            "body": [
+              {
+                "name": "application/json",
+                "displayName": "application/json",
+                "type": [
+                  "union"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "anyOf": [
+                  "error-types.<<parentType>>-<<resourcePathName>>-errors",
+                  "string"
+                ],
+                "sourceMap": {
+                  "path": "traits/generic-responses.raml"
+                }
+              }
+            ],
+            "sourceMap": {
+              "path": "traits/generic-responses.raml"
+            }
+          }
+        ],
+        "name": "defaultResponses.general",
+        "__METADATA__": {
+          "calculated": true
+        },
+        "sourceMap": {
+          "path": "traits/generic-responses.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "is": [
+              {
+                "name": "defaultResponses.general",
+                "parameters": [
+                  {
+                    "name": "parentType",
+                    "value": "<<parentType>>"
+                  }
+                ]
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "resourceTypes/collection.raml"
+            }
+          }
+        ],
+        "name": "collection",
+        "sourceMap": {
+          "path": "resourceTypes/collection.raml"
+        }
+      }
+    ],
+    "title": "test API",
+    "baseUri": "https://example.com",
+    "protocols": [
+      "HTTPS"
+    ],
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "relativeUri": "/alpha",
+        "displayName": "/alpha",
+        "resources": [
+          {
+            "methods": [
+              {
+                "responses": [
+                  {
+                    "code": "422",
+                    "body": [
+                      {
+                        "name": "application/json",
+                        "displayName": "application/json",
+                        "type": [
+                          "error-types.alpha-letters-errors"
+                        ],
+                        "__METADATA__": {
+                          "primitiveValuesMeta": {
+                            "displayName": {
+                              "calculated": true
+                            }
+                          }
+                        },
+                        "mediaType": "application/raml+yaml",
+                        "typePropertyKind": "TYPE_EXPRESSION",
+                        "sourceMap": {
+                          "path": "traits/generic-responses.raml"
+                        }
+                      }
+                    ],
+                    "sourceMap": {
+                      "path": "traits/generic-responses.raml"
+                    }
+                  },
+                  {
+                    "code": "423",
+                    "body": [
+                      {
+                        "name": "application/json",
+                        "displayName": "application/json",
+                        "type": [
+                          "union"
+                        ],
+                        "__METADATA__": {
+                          "primitiveValuesMeta": {
+                            "displayName": {
+                              "calculated": true
+                            }
+                          }
+                        },
+                        "mediaType": "application/raml+yaml",
+                        "typePropertyKind": "TYPE_EXPRESSION",
+                        "anyOf": [
+                          "error-types.alpha-letters-errors",
+                          "string"
+                        ],
+                        "sourceMap": {
+                          "path": "traits/generic-responses.raml"
+                        }
+                      }
+                    ],
+                    "sourceMap": {
+                      "path": "traits/generic-responses.raml"
+                    }
+                  }
+                ],
+                "protocols": [
+                  "HTTPS"
+                ],
+                "is": [
+                  {
+                    "name": "defaultResponses.general",
+                    "parameters": [
+                      {
+                        "name": "parentType",
+                        "value": "alpha"
+                      }
+                    ]
+                  }
+                ],
+                "method": "get",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "parentUri": "/alpha/letters",
+                "absoluteParentUri": "https://example.com/alpha/letters",
+                "sourceMap": {
+                  "path": "resourceTypes/collection.raml"
+                }
+              }
+            ],
+            "type": {
+              "name": "collection",
+              "parameters": [
+                {
+                  "name": "parentType",
+                  "value": "alpha"
+                }
+              ]
+            },
+            "relativeUri": "/letters",
+            "displayName": "/letters",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "relativeUriPathSegments": [
+              "letters"
+            ],
+            "absoluteUri": "https://example.com/alpha/letters",
+            "completeRelativeUri": "/alpha/letters",
+            "parentUri": "/alpha",
+            "absoluteParentUri": "https://example.com/alpha",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "alpha"
+        ],
+        "absoluteUri": "https://example.com/alpha",
+        "completeRelativeUri": "/alpha",
+        "parentUri": "",
+        "absoluteParentUri": "https://example.com",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

@@ -1,0 +1,165 @@
+{
+  "specification": {
+    "traits": [
+      {
+        "securedBy": [
+          {
+            "name": "x-ttt",
+            "type": "Basic Authentication",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "env-org-pair2",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "securedBy": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "NewOverlay.raml"
+        }
+      },
+      {
+        "securedBy": [
+          {
+            "name": "x-ttt",
+            "type": "Basic Authentication",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "env-org-pair",
+        "__METADATA__": {
+          "calculated": true,
+          "primitiveValuesMeta": {
+            "securedBy": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "securedBy": [
+          {
+            "name": "x-ttt",
+            "type": "Basic Authentication",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "servers-collection",
+        "__METADATA__": {
+          "calculated": true,
+          "primitiveValuesMeta": {
+            "securedBy": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "x-ttt",
+        "type": "Basic Authentication",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "Extension",
+    "version": "0.4",
+    "baseUri": "https://anypoint.mulesoft.com/hybrid/api/v1",
+    "protocols": [
+      "HTTP"
+    ],
+    "mediaType": [
+      "application/json"
+    ],
+    "securedBy": [
+      {
+        "name": "x-ttt",
+        "type": "Basic Authentication",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resources": [
+      {
+        "is": [
+          {
+            "name": "env-org-pair"
+          }
+        ],
+        "securedBy": [
+          {
+            "name": "x-ttt",
+            "type": "Basic Authentication",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "relativeUri": "/servers",
+        "displayName": "/servers",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "servers"
+        ],
+        "absoluteUri": "https://anypoint.mulesoft.com/hybrid/api/v1/servers",
+        "completeRelativeUri": "/servers",
+        "parentUri": "",
+        "absoluteParentUri": "https://anypoint.mulesoft.com/hybrid/api/v1",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "extends": "api.raml",
+    "sourceMap": {
+      "path": "NewOverlay.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Overlay",
+  "errors": [
+    {
+      "code": "INVALID_OVERLAY_NODE",
+      "message": "The '.env-org-pair2' node does not match any node of the master api.",
+      "path": "NewOverlay.raml",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 2,
+          "position": 64
+        },
+        "end": {
+          "line": 4,
+          "column": 15,
+          "position": 77
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "specification": {
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "<<annotationType2>>",
+                "value": "val1"
+              }
+            ],
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "rt1",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "<<annotationType1>>",
+                "value": "val2"
+              }
+            ],
+            "method": "delete",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt1",
+          "parameters": [
+            {
+              "name": "annotationType2",
+              "value": "<<annotationType1>>"
+            }
+          ]
+        },
+        "name": "rt2",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "annotationTypes": [
+      {
+        "name": "a1",
+        "displayName": "a1",
+        "type": [
+          "string"
+        ],
+        "allowedTargets": [
+          "Resource"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "test",
+    "resources": [
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "a1",
+                "value": "val2"
+              }
+            ],
+            "method": "delete",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "annotations": [
+              {
+                "name": "a1",
+                "value": "val1"
+              }
+            ],
+            "method": "put",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt2",
+          "parameters": [
+            {
+              "name": "annotationType1",
+              "value": "a1"
+            }
+          ]
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "INVALID_ANNOTATION_LOCATION",
+      "message": "Annotation 'a1' can not be placed at this location, allowed targets are: 'Resource'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 6,
+          "position": 115
+        },
+        "end": {
+          "line": 11,
+          "column": 27,
+          "position": 136
+        }
+      },
+      "trace": [
+        {
+          "code": "INVALID_ANNOTATION_LOCATION",
+          "message": "Annotation 'a1' can not be placed at this location, allowed targets are: 'Resource'",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 15,
+              "column": 25,
+              "position": 196
+            },
+            "end": {
+              "line": 15,
+              "column": 44,
+              "position": 215
+            }
+          },
+          "trace": [
+            {
+              "code": "INVALID_ANNOTATION_LOCATION",
+              "message": "Annotation 'a1' can not be placed at this location, allowed targets are: 'Resource'",
+              "path": "api.raml",
+              "range": {
+                "start": {
+                  "line": 20,
+                  "column": 34,
+                  "position": 308
+                },
+                "end": {
+                  "line": 20,
+                  "column": 38,
+                  "position": 312
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "INVALID_ANNOTATION_LOCATION",
+      "message": "Annotation 'a1' can not be placed at this location, allowed targets are: 'Resource'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 17,
+          "column": 6,
+          "position": 234
+        },
+        "end": {
+          "line": 17,
+          "column": 27,
+          "position": 255
+        }
+      },
+      "trace": [
+        {
+          "code": "INVALID_ANNOTATION_LOCATION",
+          "message": "Annotation 'a1' can not be placed at this location, allowed targets are: 'Resource'",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 20,
+              "column": 34,
+              "position": 308
+            },
+            "end": {
+              "line": 20,
+              "column": 38,
+              "position": 312
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "AWS",
+        "value": "aws-lib.raml",
+        "sourceMap": {
+          "path": "apigateway-aws-overlay.raml"
+        }
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "key",
+        "type": "Pass Through",
+        "describedBy": {
+          "headers": [
+            {
+              "name": "x-api-key",
+              "displayName": "x-api-key",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "mediaType": "application/raml+yaml",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "sourceMap": {
+                "path": "apigateway.raml"
+              }
+            }
+          ],
+          "sourceMap": {
+            "path": "apigateway.raml"
+          }
+        },
+        "sourceMap": {
+          "path": "apigateway.raml"
+        }
+      }
+    ],
+    "title": "API Gateway Test API",
+    "version": "1.0.0",
+    "baseUri": "https://api.uber.com",
+    "protocols": [
+      "HTTPS"
+    ],
+    "mediaType": [
+      "application/json"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "AWS.amazon-apigateway-auth",
+                "value": "aws_iam"
+              },
+              {
+                "name": "AWS.amazon-apigateway-integration",
+                "value": {
+                  "type": "aws",
+                  "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:ACCOUNT_ID:function:myFunction/invocations",
+                  "httpMethod": "POST",
+                  "credentials": "arn:aws:iam::ACCOUNT_ID:role/lambda_exec_role",
+                  "requestTemplates": {
+                    "application/json": "json request template 2",
+                    "application/xml": "xml request template 2"
+                  },
+                  "requestParameters": {
+                    "integration.request.path.integrationPathParam": "method.request.querystring.latitude",
+                    "integration.request.querystring.integrationQueryParam": "method.request.querystring.longitude"
+                  },
+                  "cacheNamespace": "cache namespace",
+                  "cacheKeyParameters": [],
+                  "responses": {
+                    "2\\d{2}": {
+                      "statusCode": "200",
+                      "responseParameters": {
+                        "method.response.header.test-method-response-header": "integration.response.header.integrationResponseHeaderParam1"
+                      },
+                      "responseTemplates": {
+                        "application/json": "json 200 response template",
+                        "application/xml": "xml 200 response template"
+                      }
+                    },
+                    "default": {
+                      "statusCode": "400",
+                      "responseParameters": {
+                        "method.response.header.test-method-response-header": "'static value'"
+                      },
+                      "responseTemplates": {
+                        "application/json": "json 400 response template",
+                        "application/xml": "xml 400 response template"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "queryParameters": [
+              {
+                "name": "latitude",
+                "displayName": "latitude",
+                "type": [
+                  "number"
+                ],
+                "required": true,
+                "description": "Latitude component of location",
+                "format": "double",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "apigateway.raml"
+                }
+              },
+              {
+                "name": "longitude",
+                "displayName": "longitude",
+                "type": [
+                  "number"
+                ],
+                "required": true,
+                "description": "Longitude component of location",
+                "format": "double",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "apigateway.raml"
+                }
+              }
+            ],
+            "protocols": [
+              "HTTPS"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "parentUri": "/products",
+            "absoluteParentUri": "https://api.uber.com/products",
+            "sourceMap": {
+              "path": "apigateway-aws-overlay.raml"
+            }
+          }
+        ],
+        "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
+        "relativeUri": "/products",
+        "displayName": "Product Types",
+        "relativeUriPathSegments": [
+          "products"
+        ],
+        "absoluteUri": "https://api.uber.com/products",
+        "completeRelativeUri": "/products",
+        "parentUri": "",
+        "absoluteParentUri": "https://api.uber.com",
+        "sourceMap": {
+          "path": "apigateway-aws-overlay.raml"
+        }
+      }
+    ],
+    "extends": "apigateway.raml",
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "apigateway-aws-overlay.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Overlay",
+  "errors": []
+}

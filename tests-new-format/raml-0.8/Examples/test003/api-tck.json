@@ -1,0 +1,93 @@
+{
+  "specification": {
+    "title": "My API",
+    "resources": [
+      {
+        "relativeUri": "/single-query-record/{code}",
+        "uriParameters": [
+          {
+            "name": "code",
+            "displayName": "code",
+            "type": "string",
+            "required": false,
+            "repeat": false,
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "queryParameters": [
+              {
+                "name": "query...",
+                "displayName": "query...",
+                "type": "string",
+                "required": true,
+                "example": "{\n  \"bankNo\": \"666666666666666666\"\n}\n",
+                "repeat": false,
+                "description": "Hello",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "parentUri": "/single-query-record/{code}",
+            "absoluteParentUri": "/single-query-record/{code}",
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "uriParameters": [
+              {
+                "name": "code",
+                "displayName": "code",
+                "type": "string",
+                "required": false,
+                "repeat": false,
+                "sourceMap": {
+                  "path": "api.raml"
+                },
+                "__METADATA__": {
+                  "calculated": true
+                }
+              }
+            ]
+          }
+        ],
+        "displayName": "/single-query-record/{code}",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "single-query-record",
+          "{code}"
+        ],
+        "absoluteUri": "/single-query-record/{code}",
+        "completeRelativeUri": "/single-query-record/{code}",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": []
+}

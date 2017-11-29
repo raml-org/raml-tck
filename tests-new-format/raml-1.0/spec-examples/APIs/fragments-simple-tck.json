@@ -1,0 +1,156 @@
+{
+  "specification": {
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "description": "Retrieve all items",
+            "method": "get",
+            "sourceMap": {
+              "path": "resourceTypes/collection.raml"
+            }
+          },
+          {
+            "responses": [
+              {
+                "code": "201",
+                "headers": [
+                  {
+                    "name": "Location",
+                    "displayName": "Location",
+                    "type": [
+                      "string"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "resourceTypes/collection.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "resourceTypes/collection.raml"
+                }
+              }
+            ],
+            "description": "Add an item",
+            "method": "post",
+            "sourceMap": {
+              "path": "resourceTypes/collection.raml"
+            }
+          }
+        ],
+        "description": "A collection resource",
+        "name": "collection",
+        "usage": "Use this to describe a resource that lists items",
+        "sourceMap": {
+          "path": "resourceTypes/collection.raml"
+        }
+      }
+    ],
+    "title": "Products API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "description": "Retrieve all items",
+            "method": "get",
+            "parentUri": "/products",
+            "absoluteParentUri": "/products",
+            "sourceMap": {
+              "path": "resourceTypes/collection.raml"
+            }
+          },
+          {
+            "responses": [
+              {
+                "code": "201",
+                "headers": [
+                  {
+                    "name": "Location",
+                    "displayName": "Location",
+                    "type": [
+                      "string"
+                    ],
+                    "required": true,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        },
+                        "required": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "resourceTypes/collection.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "resourceTypes/collection.raml"
+                }
+              }
+            ],
+            "description": "Add an item",
+            "method": "post",
+            "parentUri": "/products",
+            "absoluteParentUri": "/products",
+            "sourceMap": {
+              "path": "resourceTypes/collection.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "collection"
+        },
+        "description": "All products",
+        "relativeUri": "/products",
+        "displayName": "/products",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "products"
+        ],
+        "absoluteUri": "/products",
+        "completeRelativeUri": "/products",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "fragments-simple.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "fragments-simple.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

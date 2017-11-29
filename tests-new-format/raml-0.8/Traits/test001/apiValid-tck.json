@@ -1,0 +1,124 @@
+{
+  "specification": {
+    "title": "A",
+    "traits": [
+      {
+        "queryParameters": [
+          {
+            "name": "numericParam",
+            "displayName": "numericParam",
+            "type": "number",
+            "required": false,
+            "repeat": false,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                },
+                "repeat": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "name": "SomeTrait",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "sourceMap": {
+                      "path": "apiValid.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "queryParameters": [
+              {
+                "name": "numericParam",
+                "displayName": "numericParam",
+                "type": "number",
+                "required": false,
+                "example": 111,
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "is": [
+              {
+                "name": "SomeTrait"
+              }
+            ],
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": []
+}

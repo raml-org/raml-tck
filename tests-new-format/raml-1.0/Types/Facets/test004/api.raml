@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: A
+mediaType: application/json
+annotationTypes:
+  reader: string
+  writer: string
+types:
+  myDate:
+    (reader): "myReaader.ts"
+    (writer): "myWiter.ts" 
+    type: string
+    facets:
+      format: string
+/q:
+  post:
+    body:
+      type: myDate
+      format: YYYY

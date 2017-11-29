@@ -1,0 +1,263 @@
+{
+  "specification": {
+    "title": "test API",
+    "schemas": [
+      {
+        "value": "{ \"type\": \"integer\" }",
+        "name": "SongId",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "value": "{ \"type\": \"number\" }",
+        "name": "SongDuration",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "value": "{\n  \"type\": \"string\",\n  \"enum\": [ \"jazz\", \"pop\" ]\n}\n",
+        "name": "SongType",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "value": "{\n  \"type\": \"string\"\n}\n",
+        "name": "SongName",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"p1\": {\"type\": \"string\"},\n    \"p2\": {\"type\": \"number\"}\n  }\n}",
+        "name": "Included1",
+        "sourceMap": {
+          "path": "schema1.json"
+        }
+      },
+      {
+        "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"q1\": {\"type\": \"string\"},\n    \"q2\": {\"type\": \"number\"}\n  }\n}",
+        "name": "Included2",
+        "sourceMap": {
+          "path": "schema2.json"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "rt",
+        "methods": [
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "schema": "Included1",
+                "schemaContent": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"p1\": {\"type\": \"string\"},\n    \"p2\": {\"type\": \"number\"}\n  }\n}",
+                "sourceMap": {
+                  "scalarsSources": {
+                    "schemaContent": [
+                      {
+                        "path": "schema1.json"
+                      }
+                    ]
+                  },
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "schema": "Included2",
+                "schemaContent": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"q1\": {\"type\": \"string\"},\n    \"q2\": {\"type\": \"number\"}\n  }\n}",
+                "sourceMap": {
+                  "scalarsSources": {
+                    "schemaContent": [
+                      {
+                        "path": "schema2.json"
+                      }
+                    ]
+                  },
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "type": {
+          "name": "rt"
+        },
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "schema": "SongId",
+                    "schemaContent": "{ \"type\": \"integer\" }",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              },
+              {
+                "code": "201",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "schema": "SongDuration",
+                    "schemaContent": "{ \"type\": \"number\" }",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              },
+              {
+                "code": "202",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "schema": "SongType",
+                    "schemaContent": "{\n  \"type\": \"string\",\n  \"enum\": [ \"jazz\", \"pop\" ]\n}\n",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              },
+              {
+                "code": "203",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "schema": "SongName",
+                    "schemaContent": "{\n  \"type\": \"string\"\n}\n",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "schema": "Included1",
+                "schemaContent": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"p1\": {\"type\": \"string\"},\n    \"p2\": {\"type\": \"number\"}\n  }\n}",
+                "sourceMap": {
+                  "scalarsSources": {
+                    "schemaContent": [
+                      {
+                        "path": "schema1.json"
+                      }
+                    ]
+                  },
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": [
+              {
+                "name": "application/json",
+                "schema": "Included2",
+                "schemaContent": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"q1\": {\"type\": \"string\"},\n    \"q2\": {\"type\": \"number\"}\n  }\n}",
+                "sourceMap": {
+                  "scalarsSources": {
+                    "schemaContent": [
+                      {
+                        "path": "schema2.json"
+                      }
+                    ]
+                  },
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "put",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": []
+}

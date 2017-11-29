@@ -1,0 +1,161 @@
+{
+  "specification": {
+    "traits": [
+      {
+        "queryParameters": [
+          {
+            "name": "param",
+            "displayName": "param",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "box",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "headers": [
+          {
+            "name": "auth",
+            "displayName": "auth",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "queryString": {
+          "name": "queryString",
+          "displayName": "queryString",
+          "type": [
+            "object"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "mediaType": "application/raml+yaml",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        },
+        "body": [
+          {
+            "name": "application/json",
+            "displayName": "application/json",
+            "type": [
+              "any"
+            ],
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "is": [
+          {
+            "name": "box"
+          }
+        ],
+        "name": "container",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "Traits",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "QUERY_STRING_AND_QUERY_PARAMETERS_ARE_MUTUALLY_EXCLUSIVE",
+      "message": "'queryString' and 'queryParameters' properties are mutually exclusive. 'queryString' is already specified.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 9,
+          "position": 104
+        },
+        "end": {
+          "line": 8,
+          "column": 12,
+          "position": 107
+        }
+      }
+    },
+    {
+      "code": "QUERY_STRING_AND_QUERY_PARAMETERS_ARE_MUTUALLY_EXCLUSIVE",
+      "message": "'queryString' and 'queryParameters' properties are mutually exclusive. 'queryParameters' is already specified.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 4,
+          "position": 179
+        },
+        "end": {
+          "line": 13,
+          "column": 15,
+          "position": 190
+        }
+      }
+    }
+  ]
+}

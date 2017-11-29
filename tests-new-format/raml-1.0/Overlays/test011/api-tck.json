@@ -1,0 +1,70 @@
+{
+  "specification": {
+    "title": "Extension",
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "displayName": "Test4",
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "NewExtension3.raml"
+        }
+      },
+      {
+        "relativeUri": "/anotherResource",
+        "displayName": "/anotherResource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "anotherResource"
+        ],
+        "absoluteUri": "/anotherResource",
+        "completeRelativeUri": "/anotherResource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "NewExtension3.raml"
+        }
+      },
+      {
+        "relativeUri": "/anotherResource2",
+        "displayName": "/anotherResource2",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "anotherResource2"
+        ],
+        "absoluteUri": "/anotherResource2",
+        "completeRelativeUri": "/anotherResource2",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "NewExtension3.raml"
+        }
+      }
+    ],
+    "extends": "NewExtension2.raml",
+    "sourceMap": {
+      "path": "NewExtension3.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Extension",
+  "errors": []
+}

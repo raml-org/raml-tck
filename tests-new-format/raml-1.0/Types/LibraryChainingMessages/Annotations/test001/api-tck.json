@@ -1,0 +1,44 @@
+{
+  "specification": {
+    "annotations": [
+      {
+        "name": "lib1.lib2.A2",
+        "value": "stringValue"
+      }
+    ],
+    "uses": [
+      {
+        "key": "lib1",
+        "value": "./lib1.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "LIBRARY_CHAINIG_IN_ANNOTATION_TYPE",
+      "message": "Annotation type 'lib1.lib2.A2' imported through a library chain. Library chainig is not allowed.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 0,
+          "position": 56
+        },
+        "end": {
+          "line": 7,
+          "column": 14,
+          "position": 70
+        }
+      }
+    }
+  ]
+}

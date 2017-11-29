@@ -1,0 +1,137 @@
+{
+  "specification": {
+    "title": "URI Templates",
+    "resources": [
+      {
+        "uriParameters": [
+          {
+            "name": "userId",
+            "displayName": "userId",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "calculated": true,
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "uri-templates-allowed.raml"
+            }
+          }
+        ],
+        "relativeUri": "/users/{userId}",
+        "displayName": "/users/{userId}",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "users",
+          "{userId}"
+        ],
+        "absoluteUri": "/users/{userId}",
+        "completeRelativeUri": "/users/{userId}",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "uri-templates-allowed.raml"
+        }
+      },
+      {
+        "uriParameters": [
+          {
+            "name": "username",
+            "displayName": "username",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "calculated": true,
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "uri-templates-allowed.raml"
+            }
+          }
+        ],
+        "relativeUri": "/users/{username}",
+        "displayName": "/users/{username}",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "users",
+          "{username}"
+        ],
+        "absoluteUri": "/users/{username}",
+        "completeRelativeUri": "/users/{username}",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "uri-templates-allowed.raml"
+        }
+      },
+      {
+        "relativeUri": "/users/me",
+        "displayName": "/users/me",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "users",
+          "me"
+        ],
+        "absoluteUri": "/users/me",
+        "completeRelativeUri": "/users/me",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "uri-templates-allowed.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "uri-templates-allowed.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

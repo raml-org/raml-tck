@@ -1,0 +1,232 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "lib1",
+        "value": "./lib1.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "lib1.lib2",
+        "value": "lib2.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "<<annotationType2>>",
+                "value": "val1"
+              }
+            ],
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "name": "rt1",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "<<annotationType1>>",
+                "value": "val2"
+              }
+            ],
+            "method": "delete",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt1",
+          "parameters": [
+            {
+              "name": "annotationType2",
+              "value": "<<annotationType1>>"
+            }
+          ]
+        },
+        "name": "rt2",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "title": "test",
+    "resources": [
+      {
+        "methods": [
+          {
+            "annotations": [
+              {
+                "name": "lib1.lib2.A2",
+                "value": "val2"
+              }
+            ],
+            "method": "delete",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "annotations": [
+              {
+                "name": "lib1.lib2.A2",
+                "value": "val1"
+              }
+            ],
+            "method": "put",
+            "parentUri": "/resource",
+            "absoluteParentUri": "/resource",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "name": "rt2",
+          "parameters": [
+            {
+              "name": "annotationType1",
+              "value": "lib1.lib2.A2"
+            }
+          ]
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "LIBRARY_CHAINIG_IN_ANNOTATION_TYPE",
+      "message": "Annotation type 'lib1.lib2.A2' imported through a library chain. Library chainig is not allowed.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 6,
+          "position": 88
+        },
+        "end": {
+          "line": 9,
+          "column": 27,
+          "position": 109
+        }
+      },
+      "trace": [
+        {
+          "code": "LIBRARY_CHAINIG_IN_ANNOTATION_TYPE",
+          "message": "Annotation type 'lib1.lib2.A2' imported through a library chain. Library chainig is not allowed.",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 13,
+              "column": 25,
+              "position": 169
+            },
+            "end": {
+              "line": 13,
+              "column": 44,
+              "position": 188
+            }
+          },
+          "trace": [
+            {
+              "code": "LIBRARY_CHAINIG_IN_ANNOTATION_TYPE",
+              "message": "Annotation type 'lib1.lib2.A2' imported through a library chain. Library chainig is not allowed.",
+              "path": "api.raml",
+              "range": {
+                "start": {
+                  "line": 19,
+                  "column": 34,
+                  "position": 282
+                },
+                "end": {
+                  "line": 19,
+                  "column": 46,
+                  "position": 294
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LIBRARY_CHAINIG_IN_ANNOTATION_TYPE",
+      "message": "Annotation type 'lib1.lib2.A2' imported through a library chain. Library chainig is not allowed.",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 15,
+          "column": 6,
+          "position": 207
+        },
+        "end": {
+          "line": 15,
+          "column": 27,
+          "position": 228
+        }
+      },
+      "trace": [
+        {
+          "code": "LIBRARY_CHAINIG_IN_ANNOTATION_TYPE",
+          "message": "Annotation type 'lib1.lib2.A2' imported through a library chain. Library chainig is not allowed.",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 19,
+              "column": 34,
+              "position": 282
+            },
+            "end": {
+              "line": 19,
+              "column": 46,
+              "position": 294
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

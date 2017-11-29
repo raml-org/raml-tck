@@ -1,0 +1,16 @@
+{
+  "specification": {
+    "title": "New API",
+    "description": "This RAML illustrates an array of default media types.",
+    "mediaType": [
+      "application/json",
+      "application/xml"
+    ],
+    "sourceMap": {
+      "path": "default-media-types-multiple.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

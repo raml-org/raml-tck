@@ -1,0 +1,314 @@
+{
+  "specification": {
+    "title": "test",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "2xx",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "application/vnd.xara",
+                    "displayName": "application/vnd.xara",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "audio/EVRCB",
+                    "displayName": "audio/EVRCB",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "audio/vnd.dts",
+                    "displayName": "audio/vnd.dts",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "image/tiff",
+                    "displayName": "image/tiff",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "message/global",
+                    "displayName": "message/global",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "model/vnd.moml+xml",
+                    "displayName": "model/vnd.moml+xml",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "multipart/voice-message",
+                    "displayName": "multipart/voice-message",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "text/turtle",
+                    "displayName": "text/turtle",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "video/JPEG",
+                    "displayName": "video/JPEG",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  },
+                  {
+                    "name": "mime/type",
+                    "displayName": "mime/type",
+                    "type": [
+                      "any"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "mediaType": "application/raml+yaml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "sourceMap": {
+                      "path": "methResp03.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "methResp03.raml"
+                }
+              }
+            ],
+            "method": "post",
+            "parentUri": "/test",
+            "absoluteParentUri": "/test",
+            "sourceMap": {
+              "path": "methResp03.raml"
+            }
+          }
+        ],
+        "relativeUri": "/test",
+        "displayName": "/test",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "test"
+        ],
+        "absoluteUri": "/test",
+        "completeRelativeUri": "/test",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "methResp03.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "methResp03.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "STATUS_MUST_BE_3NUMBER",
+      "message": "Status code should be 3 digits number.",
+      "path": "methResp03.raml",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 6,
+          "position": 59
+        },
+        "end": {
+          "line": 5,
+          "column": 9,
+          "position": 62
+        }
+      }
+    }
+  ]
+}

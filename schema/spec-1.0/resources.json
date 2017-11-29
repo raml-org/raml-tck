@@ -1,0 +1,134 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "definitions": {
+        "Resource10": {
+            "allOf":[
+                {"$ref": "#/definitions/ResourceBase10"},
+                {
+                    "properties": {
+                        "resources": {
+                            "type": "array",
+                            "description": "A nested resource is identified as any property whose name begins with a slash (\"/\") and is therefore treated as a relative URI.",
+                            "items": {"$ref": "#/definitions/Resource10"}
+                        },
+                        "relativeUri": {
+                            "type": "string",
+                            "description": "Relative URL of this resource from the parent resource"
+                        },
+                        "relativeUriPathSegments": {
+                            "type": "array",
+                            "description": "URI Segments",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "absoluteUri": {
+                            "description": "Absolute URI of the resource",
+                            "type": "string"
+                        },
+                        "completeRelativeUri": {
+                            "description": "URI relative to base URI of the Api",
+                            "type": "string"
+                        },
+                        "parentUri": {
+                            "description": "For nested resources, URI of the parent resource relative to base URI of the Api. For top level resources it is empty string",
+                            "type": "string"
+                        },
+                        "absoluteParentUri": {
+                            "description": "For nested resources, absolute URI of the parent resource. For top level resources it is base URI of the Api or empty string if base Uri is undefined.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "description":"Web resource"
+        },
+        "ResourceTypeFragment": {
+            "type": "object",
+            "allOf":[
+                {"$ref": "common.json#/definitions/FragmentDeclaration"},
+                {"$ref": "#/definitions/ResourceType10"}
+            ]
+        },
+        "ResourceType10": {
+            "allOf":[
+                {"$ref": "#/definitions/ResourceBase10"},
+                {"$ref": "common.json#/definitions/ParametrizedProperties"},
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Resource name"
+                        },
+                        "usage": {
+                            "type": "string",
+                            "description": "Instructions on how and when the resource type should be used."
+                        },
+                        "displayName": {
+                            "type": "string",
+                            "description": "Resource name"
+                        }
+                    }
+                }
+            ],
+            "description": "Resource pattern which can be defined and then applied to multiple resources"
+        },
+        "ResourceBase10": {
+            "allOf":[
+                {"$ref": "common.json#/definitions/Annotable"},
+                {
+                    "properties": {
+                        "description": {
+                            "type": [ "string", "null" ],
+                            "description": "Resource description"
+                        },
+                        "is": {
+                            "type": "array",
+                            "description": "A list of the traits to apply to all methods declared (implicitly or explicitly) for this resource. Individual methods may override this declaration",
+                            "items":{
+                                "$ref": "methods.json#/definitions/TemplateReference"
+                            }
+                        },
+                        "type": {
+                            "$ref": "methods.json#/definitions/TemplateReference"
+                        },
+                        "displayName": {
+                          "type": [ "string", "null" ],
+                          "description": "User readable name of the component"
+                        },
+                        "securedBy": {
+                            "type": "array",
+                            "description": "The security schemes that apply to all methods declared (implicitly or explicitly) for this resource.",
+                            "items": {
+                                "oneOf": [
+                                    {
+                                        "type": "null"
+                                    },
+                                    {
+                                        "$ref": "security.json#/definitions/SecuritySchemeBase10"
+                                    }
+                                ]
+                            }
+                        },
+                        "methods": {
+                            "type": "array",
+                            "description": "Methods that are part of this resource definition",
+                            "items": {
+                                "$ref": "methods.json#/definitions/Method10"
+                            }
+                        },
+                        "uriParameters": {
+                            "type": "array",
+                            "description": "Detailed information about any URI parameters of this resource",
+                            "items": {
+                                "$ref": "datamodel.json#/definitions/Type"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

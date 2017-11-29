@@ -1,0 +1,110 @@
+{
+  "specification": {
+    "title": "test",
+    "resources": [
+      {
+        "methods": [
+          {
+            "method": "post",
+            "parentUri": "/methods",
+            "absoluteParentUri": "/methods",
+            "sourceMap": {
+              "path": "meth03.raml"
+            }
+          },
+          {
+            "method": "get",
+            "parentUri": "/methods",
+            "absoluteParentUri": "/methods",
+            "sourceMap": {
+              "path": "meth03.raml"
+            }
+          },
+          {
+            "method": "put",
+            "parentUri": "/methods",
+            "absoluteParentUri": "/methods",
+            "sourceMap": {
+              "path": "meth03.raml"
+            }
+          },
+          {
+            "method": "options",
+            "parentUri": "/methods",
+            "absoluteParentUri": "/methods",
+            "sourceMap": {
+              "path": "meth03.raml"
+            }
+          },
+          {
+            "method": "head",
+            "parentUri": "/methods",
+            "absoluteParentUri": "/methods",
+            "sourceMap": {
+              "path": "meth03.raml"
+            }
+          },
+          {
+            "method": "patch",
+            "parentUri": "/methods",
+            "absoluteParentUri": "/methods",
+            "sourceMap": {
+              "path": "meth03.raml"
+            }
+          },
+          {
+            "method": "delete",
+            "parentUri": "/methods",
+            "absoluteParentUri": "/methods",
+            "sourceMap": {
+              "path": "meth03.raml"
+            }
+          }
+        ],
+        "relativeUri": "/methods",
+        "displayName": "/methods",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "methods"
+        ],
+        "absoluteUri": "/methods",
+        "completeRelativeUri": "/methods",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "meth03.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "meth03.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "UNKNOWN_NODE",
+      "message": "Unknown node: 'set'",
+      "path": "meth03.raml",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 2,
+          "position": 95
+        },
+        "end": {
+          "line": 10,
+          "column": 5,
+          "position": 98
+        }
+      }
+    }
+  ]
+}

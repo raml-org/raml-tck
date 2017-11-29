@@ -1,0 +1,79 @@
+{
+  "specification": {
+    "title": "Test",
+    "resources": [
+      {
+        "relativeUri": "/",
+        "methods": [
+          {
+            "responses": [
+              {
+                "code": "200",
+                "body": [
+                  {
+                    "name": "application/json",
+                    "example": {
+                      "value": 10
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                ],
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            ],
+            "method": "get",
+            "parentUri": "/",
+            "absoluteParentUri": "/",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [],
+        "absoluteUri": "/",
+        "completeRelativeUri": "/",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "SCALAR_EXPECTED",
+      "message": "Scalar is expected here",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 12,
+          "position": 113
+        },
+        "end": {
+          "line": 8,
+          "column": 19,
+          "position": 120
+        }
+      }
+    }
+  ]
+}

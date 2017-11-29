@@ -1,0 +1,123 @@
+{
+  "specification": {
+    "title": "New API",
+    "version": "v1",
+    "securitySchemes": [
+      {
+        "name": "oauth_2_0",
+        "type": "OAuth 2.0",
+        "description": "Dropbox supports OAuth 2.0 for authenticating all API requests.\n",
+        "describedBy": {
+          "responses": [
+            {
+              "code": "401",
+              "description": "Bad or expired token. This can happen if the user or Dropbox\nrevoked or expired an access token. To fix, re-authenticate\nthe user.\n",
+              "sourceMap": {
+                "path": "apiInvalid.raml"
+              }
+            }
+          ],
+          "queryParameters": [
+            {
+              "name": "access_token",
+              "displayName": "access_token",
+              "type": "string",
+              "required": false,
+              "repeat": false,
+              "description": "Used to send a valid OAuth 2 access token. Do not use with\nthe \"Authorization\" header.\n",
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  },
+                  "repeat": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
+              }
+            }
+          ],
+          "headers": [
+            {
+              "name": "Authorization",
+              "displayName": "Authorization",
+              "type": "string",
+              "required": false,
+              "repeat": false,
+              "description": "Used to send a valid OAuth 2 access token. Do not use\nwith the \"access_token\" query string parameter.\n",
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  },
+                  "repeat": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
+              }
+            }
+          ],
+          "sourceMap": {
+            "path": "apiInvalid.raml"
+          }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
+  },
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "errors": [
+    {
+      "code": "INVALID_METHOD_USAGE",
+      "message": "Declaring methods is not allowed in security scheme parts",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 8,
+          "position": 212
+        },
+        "end": {
+          "line": 9,
+          "column": 11,
+          "position": 215
+        }
+      }
+    },
+    {
+      "code": "INVALID_PROPERTY_USAGE",
+      "message": "RAML 0.8 does not allow using 'queryString' property within security scheme parts",
+      "path": "apiInvalid.raml",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 8,
+          "position": 225
+        },
+        "end": {
+          "line": 10,
+          "column": 19,
+          "position": 236
+        }
+      }
+    }
+  ]
+}

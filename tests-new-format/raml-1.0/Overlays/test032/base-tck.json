@@ -1,0 +1,151 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "mytype",
+        "displayName": "mytype",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "name": "mystring",
+        "displayName": "mystring",
+        "type": [
+          "string"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "base.raml"
+        }
+      }
+    ],
+    "traits": [
+      {
+        "queryParameters": [
+          {
+            "name": "foo",
+            "displayName": "foo",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "trait.raml"
+            }
+          }
+        ],
+        "name": "foo",
+        "__METADATA__": {
+          "calculated": true
+        },
+        "sourceMap": {
+          "path": "trait.raml"
+        }
+      }
+    ],
+    "title": "foo",
+    "resources": [
+      {
+        "methods": [
+          {
+            "queryParameters": [
+              {
+                "name": "foo",
+                "displayName": "foo",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "mediaType": "application/raml+yaml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "sourceMap": {
+                  "path": "trait.raml"
+                }
+              }
+            ],
+            "is": [
+              {
+                "name": "foo"
+              }
+            ],
+            "method": "get",
+            "parentUri": "/foobar",
+            "absoluteParentUri": "/foobar",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "relativeUri": "/foobar",
+        "displayName": "/foobar",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "foobar"
+        ],
+        "absoluteUri": "/foobar",
+        "completeRelativeUri": "/foobar",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "extends": "./base.raml",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Extension",
+  "errors": []
+}

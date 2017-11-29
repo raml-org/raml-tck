@@ -1,0 +1,99 @@
+{
+  "specification": {
+    "uses": [
+      {
+        "key": "lib",
+        "value": "lib.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "traits": [
+      {
+        "name": "lib.boolean",
+        "__METADATA__": {
+          "calculated": true
+        },
+        "sourceMap": {
+          "path": "lib.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "is": [
+          {
+            "name": "lib.boolean"
+          }
+        ],
+        "securedBy": [
+          {
+            "name": "lib.oauth"
+          },
+          {
+            "name": "lib.number"
+          }
+        ],
+        "name": "lib.number",
+        "__METADATA__": {
+          "calculated": true
+        },
+        "sourceMap": {
+          "path": "lib.raml"
+        }
+      }
+    ],
+    "title": "test API",
+    "securedBy": [
+      {
+        "name": "lib.number"
+      }
+    ],
+    "resources": [
+      {
+        "is": [
+          {
+            "name": "lib.boolean"
+          }
+        ],
+        "type": {
+          "name": "lib.number"
+        },
+        "securedBy": [
+          {
+            "name": "lib.oauth"
+          },
+          {
+            "name": "lib.number"
+          }
+        ],
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource",
+        "completeRelativeUri": "/resource",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

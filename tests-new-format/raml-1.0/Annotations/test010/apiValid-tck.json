@@ -1,0 +1,105 @@
+{
+  "specification": {
+    "annotationTypes": [
+      {
+        "name": "suborg",
+        "displayName": "suborg",
+        "type": [
+          "object"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "type": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "title": "Annotation with arbitrary properties",
+    "resources": [
+      {
+        "annotations": [
+          {
+            "name": "suborg",
+            "value": {
+              "manager": {
+                "name": "Tom"
+              },
+              "superintendent": {
+                "name": "Bob"
+              }
+            }
+          }
+        ],
+        "relativeUri": "/assets",
+        "displayName": "/assets",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "assets"
+        ],
+        "absoluteUri": "/assets",
+        "completeRelativeUri": "/assets",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      },
+      {
+        "annotations": [
+          {
+            "name": "suborg",
+            "value": {
+              "manager": {
+                "name": "Tom"
+              },
+              "superintendent": {
+                "name": "Bob"
+              }
+            }
+          }
+        ],
+        "relativeUri": "/foods",
+        "displayName": "/foods",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "foods"
+        ],
+        "absoluteUri": "/foods",
+        "completeRelativeUri": "/foods",
+        "parentUri": "",
+        "absoluteParentUri": "",
+        "sourceMap": {
+          "path": "apiValid.raml"
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

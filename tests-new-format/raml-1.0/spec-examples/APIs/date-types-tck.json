@@ -1,0 +1,160 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "birthday",
+        "displayName": "birthday",
+        "type": [
+          "date-only"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": "2015-05-23",
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "2015-05-23"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "date-types.raml"
+        }
+      },
+      {
+        "name": "lunchtime",
+        "displayName": "lunchtime",
+        "type": [
+          "time-only"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": "12:30:00",
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "12:30:00"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "date-types.raml"
+        }
+      },
+      {
+        "name": "fireworks",
+        "displayName": "fireworks",
+        "type": [
+          "datetime-only"
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": "2015-07-04T21:00:00",
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "2015-07-04T21:00:00"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "date-types.raml"
+        }
+      },
+      {
+        "name": "created",
+        "displayName": "created",
+        "type": [
+          "datetime"
+        ],
+        "format": "rfc3339",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": "2016-02-28T16:41:41.090Z",
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "2016-02-28T16:41:41.090Z"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "date-types.raml"
+        }
+      },
+      {
+        "name": "If-Modified-Since",
+        "displayName": "If-Modified-Since",
+        "type": [
+          "datetime"
+        ],
+        "format": "rfc2616",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "examples": [
+          {
+            "value": "Sun, 28 Feb 2016 16:41:41 GMT",
+            "strict": true,
+            "name": null
+          }
+        ],
+        "simplifiedExamples": [
+          "Sun, 28 Feb 2016 16:41:41 GMT"
+        ],
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "date-types.raml"
+        }
+      }
+    ],
+    "title": "Date Types",
+    "sourceMap": {
+      "path": "date-types.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}

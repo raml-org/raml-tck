@@ -1,0 +1,81 @@
+{
+  "specification": {
+    "types": [
+      {
+        "name": "Email",
+        "displayName": "Email",
+        "type": [
+          "object"
+        ],
+        "properties": [
+          {
+            "name": "name",
+            "displayName": "name",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "mediaType": "application/raml+yaml",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "sourceMap": {
+              "path": "array-type-expanded.raml"
+            }
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "array-type-expanded.raml"
+        }
+      },
+      {
+        "name": "Emails",
+        "displayName": "Emails",
+        "type": [
+          "array"
+        ],
+        "uniqueItems": true,
+        "items": [
+          "Email"
+        ],
+        "minItems": 1,
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "mediaType": "application/raml+yaml",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "sourceMap": {
+          "path": "array-type-expanded.raml"
+        }
+      }
+    ],
+    "title": "Expanded Array Type with Example",
+    "sourceMap": {
+      "path": "array-type-expanded.raml"
+    }
+  },
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "errors": []
+}
