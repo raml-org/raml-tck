@@ -7,14 +7,15 @@
         "HasHome": {
           "name": "HasHome",
           "displayName": "HasHome",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "homeAddress": {
               "name": "homeAddress",
               "displayName": "homeAddress",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,6 +29,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type-multiple-inheritance.raml"
               }
             }
           },
@@ -35,11 +39,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "union-type-multiple-inheritance.raml"
           }
         }
       },
@@ -47,14 +51,15 @@
         "Cat": {
           "name": "Cat",
           "displayName": "Cat",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -68,11 +73,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type-multiple-inheritance.raml"
               }
             },
             "color": {
               "name": "color",
               "displayName": "color",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -86,6 +95,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type-multiple-inheritance.raml"
               }
             }
           },
@@ -93,11 +105,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "union-type-multiple-inheritance.raml"
           }
         }
       },
@@ -105,14 +117,15 @@
         "Dog": {
           "name": "Dog",
           "displayName": "Dog",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -126,11 +139,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type-multiple-inheritance.raml"
               }
             },
             "fangs": {
               "name": "fangs",
               "displayName": "fangs",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -144,6 +161,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type-multiple-inheritance.raml"
               }
             }
           },
@@ -151,11 +171,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "union-type-multiple-inheritance.raml"
           }
         }
       },
@@ -163,27 +183,28 @@
         "HomeAnimal": {
           "name": "HomeAnimal",
           "displayName": "HomeAnimal",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
-            "string"
+            "HasHome",
+            "Dog | Cat"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "type": {
-                "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "union-type-multiple-inheritance.raml"
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "union-type-multiple-inheritance.raml"
+    }
   },
   "errors": []
 }

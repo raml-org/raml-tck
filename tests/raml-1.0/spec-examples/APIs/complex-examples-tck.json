@@ -7,6 +7,7 @@
         "User": {
           "name": "User",
           "displayName": "User",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -14,11 +15,11 @@
             "name": "Bob",
             "lastname": "Marley"
           },
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -32,11 +33,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             },
             "lastname": {
               "name": "lastname",
               "displayName": "lastname",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -50,6 +55,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             }
           },
@@ -57,11 +65,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "complex-examples.raml"
           },
           "structuredExample": {
             "value": "{\n  \"name\": \"Bob\",\n  \"lastname\": \"Marley\"\n}",
@@ -70,6 +78,9 @@
             "structuredValue": {
               "name": "Bob",
               "lastname": "Marley"
+            },
+            "sourceMap": {
+              "path": "complex-examples.raml"
             }
           }
         }
@@ -78,14 +89,15 @@
         "Org": {
           "name": "Org",
           "displayName": "Org",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -99,11 +111,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             },
             "address": {
               "name": "address",
               "displayName": "address",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -112,16 +128,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             },
             "value": {
               "name": "value",
               "displayName": "value",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -130,11 +147,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "complex-examples.raml"
               }
             }
           },
@@ -142,11 +159,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "complex-examples.raml"
           }
         }
       }
@@ -160,6 +177,7 @@
               "UserID": {
                 "name": "UserID",
                 "displayName": "UserID",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -176,11 +194,17 @@
                     }
                   }
                 },
+                "sourceMap": {
+                  "path": "complex-examples.raml"
+                },
                 "structuredExample": {
                   "value": "SWED-123",
                   "strict": true,
                   "name": null,
-                  "structuredValue": "SWED-123"
+                  "structuredValue": "SWED-123",
+                  "sourceMap": {
+                    "path": "complex-examples.raml"
+                  }
                 }
               }
             },
@@ -188,6 +212,7 @@
               "application/json": {
                 "name": "application/json",
                 "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "Org"
                 ],
@@ -195,16 +220,15 @@
                   "name": "Doe Enterprise",
                   "value": "Silver"
                 },
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "complex-examples.raml"
                 },
                 "structuredExample": {
                   "value": "{\n  \"name\": \"Doe Enterprise\",\n  \"value\": \"Silver\"\n}",
@@ -213,11 +237,17 @@
                   "structuredValue": {
                     "name": "Doe Enterprise",
                     "value": "Silver"
+                  },
+                  "sourceMap": {
+                    "path": "complex-examples.raml"
                   }
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "complex-examples.raml"
+            }
           },
           {
             "responses": {
@@ -227,6 +257,7 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "Org"
                     ],
@@ -237,6 +268,9 @@
                         "name": "acme",
                         "structuredValue": {
                           "name": "Acme"
+                        },
+                        "sourceMap": {
+                          "path": "complex-examples.raml"
                         }
                       },
                       {
@@ -247,26 +281,34 @@
                           "name": "Software Corp",
                           "address": "35 Central Street",
                           "value": "Gold"
+                        },
+                        "sourceMap": {
+                          "path": "complex-examples.raml"
                         }
                       }
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "complex-examples.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "complex-examples.raml"
                 }
               }
             },
             "description": "Returns an organization entity.",
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "complex-examples.raml"
+            }
           }
         ],
         "relativeUri": "/organization",
@@ -278,12 +320,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "complex-examples.raml"
+        },
         "relativeUriPathSegments": [
           "organization"
         ],
         "absoluteUri": "/organization"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "complex-examples.raml"
+    }
   },
   "errors": []
 }

@@ -13,10 +13,10 @@
           },
           "name": "User",
           "displayName": "User",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "annotations": {
@@ -27,6 +27,7 @@
               },
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -40,6 +41,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "annotations-targets.raml"
               }
             }
           },
@@ -47,11 +51,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations-targets.raml"
           }
         }
       }
@@ -61,10 +65,10 @@
         "meta-resource-method": {
           "name": "meta-resource-method",
           "displayName": "meta-resource-method",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "allowedTargets": [
             "Resource",
             "Method"
@@ -76,11 +80,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations-targets.raml"
           }
         }
       },
@@ -88,10 +92,10 @@
         "meta-data": {
           "name": "meta-data",
           "displayName": "meta-data",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "allowedTargets": [
             "TypeDeclaration"
           ],
@@ -102,11 +106,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations-targets.raml"
           }
         }
       }
@@ -142,26 +146,32 @@
                     },
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "array"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
                     },
+                    "sourceMap": {
+                      "path": "annotations-targets.raml"
+                    },
                     "items": "User"
                   }
+                },
+                "sourceMap": {
+                  "path": "annotations-targets.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "annotations-targets.raml"
+            }
           }
         ],
         "relativeUri": "/users",
@@ -173,12 +183,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "annotations-targets.raml"
+        },
         "relativeUriPathSegments": [
           "users"
         ],
         "absoluteUri": "/users"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "annotations-targets.raml"
+    }
   },
   "errors": []
 }

@@ -7,31 +7,24 @@
         "userPicture": {
           "name": "userPicture",
           "displayName": "userPicture",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "file"
           ],
-          "required": true,
           "fileTypes": [
-            {},
-            {}
+            "image/jpeg",
+            "image/png"
           ],
           "maxLength": 307200,
-          "fixedFacets": {
-            "fileTypes": [
-              "image/jpeg",
-              "image/png"
-            ],
-            "maxLength": 307200
-          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "file-type.raml"
           }
         }
       },
@@ -39,34 +32,31 @@
         "customFile": {
           "name": "customFile",
           "displayName": "customFile",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "file"
           ],
-          "required": true,
           "fileTypes": [
-            {}
+            "*/*"
           ],
           "maxLength": 1048576,
-          "fixedFacets": {
-            "fileTypes": [
-              "*/*"
-            ],
-            "maxLength": 1048576
-          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "file-type.raml"
           }
         }
       }
     ],
-    "title": "File Type"
+    "title": "File Type",
+    "sourceMap": {
+      "path": "file-type.raml"
+    }
   },
   "errors": []
 }

@@ -1,0 +1,85 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "typePropertyKind": "JSON",
+          "type": [
+            "{\"$schema\":\"http://json-schema.org/draft-04/\",\"type\":\"object\",\"properties\":{\"arrayProp\":{\"items\": {\"type\": \"object\",\"properties\": {\"prop1\": { \"type\": \"number\"},\"prop2\":{\"type\":\"boolean\"}},\"additionalProperties\":false}}}}"
+          ],
+          "examples": [
+            {
+              "value": "{\"arrayProp\":[{\"prop1\":13,\"prop2\": true},{\"prop1\": 13,\"prop2\":false}]}",
+              "strict": true,
+              "name": "ex1",
+              "structuredValue": {
+                "arrayProp": [
+                  {
+                    "prop1": 13,
+                    "prop2": true
+                  },
+                  {
+                    "prop1": 13,
+                    "prop2": false
+                  }
+                ]
+              },
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            },
+            {
+              "value": "{\"arrayProp\":[{\"prop1\": 13,\"prop2\": false},{\"prop1\": 13,\"prop2\": false}]}",
+              "strict": true,
+              "name": "ex2",
+              "structuredValue": {
+                "arrayProp": [
+                  {
+                    "prop1": 13,
+                    "prop2": false
+                  },
+                  {
+                    "prop1": 13,
+                    "prop2": false
+                  }
+                ]
+              },
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            }
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "traits": [
+      {
+        "tr": {
+          "name": "tr",
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "title": "test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

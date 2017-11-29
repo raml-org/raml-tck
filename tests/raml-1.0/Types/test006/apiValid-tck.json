@@ -7,14 +7,15 @@
         "SimpleType1": {
           "name": "SimpleType1",
           "displayName": "SimpleType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "property1": {
               "name": "property1",
               "displayName": "property1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             },
             "property2": {
               "name": "property2",
               "displayName": "property2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -56,11 +64,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       },
@@ -68,14 +76,15 @@
         "SimpleType2": {
           "name": "SimpleType2",
           "displayName": "SimpleType2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "property3": {
               "name": "property3",
               "displayName": "property3",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -89,11 +98,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             },
             "property4": {
               "name": "property4",
               "displayName": "property4",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -107,6 +120,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -117,11 +133,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       },
@@ -129,19 +145,19 @@
         "SimpleUnion": {
           "name": "SimpleUnion",
           "displayName": "SimpleUnion",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "SimpleType1 | SimpleType2"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       },
@@ -149,6 +165,7 @@
         "TypeWithUnionProps": {
           "name": "TypeWithUnionProps",
           "displayName": "TypeWithUnionProps",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -162,11 +179,11 @@
               "property4": "blahblah"
             }
           },
-          "required": true,
           "properties": {
             "union1": {
               "name": "union1",
               "displayName": "union1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "SimpleUnion"
               ],
@@ -180,11 +197,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             },
             "union2": {
               "name": "union2",
               "displayName": "union2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "SimpleUnion"
               ],
@@ -198,6 +219,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -205,11 +229,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           },
           "structuredExample": {
             "value": "{\n  \"union1\": {\n    \"property1\": \"blahblah\",\n    \"property2\": \"blahblah\"\n  },\n  \"union2\": {\n    \"property3\": \"blahblah\",\n    \"property4\": \"blahblah\"\n  }\n}",
@@ -224,12 +248,18 @@
                 "property3": "blahblah",
                 "property4": "blahblah"
               }
+            },
+            "sourceMap": {
+              "path": "apiValid.raml"
             }
           }
         }
       }
     ],
-    "title": "API"
+    "title": "API",
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
   },
   "errors": []
 }

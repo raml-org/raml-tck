@@ -7,11 +7,11 @@
         "MyType1": {
           "name": "MyType1",
           "displayName": "MyType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
           "example": "d",
-          "required": true,
           "minLength": 5,
           "__METADATA__": {
             "primitiveValuesMeta": {
@@ -20,17 +20,20 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "d",
             "strict": true,
             "name": null,
-            "structuredValue": "d"
+            "structuredValue": "d",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         }
       },
@@ -38,11 +41,11 @@
         "MyType2": {
           "name": "MyType2",
           "displayName": "MyType2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
           "example": "d1111",
-          "required": true,
           "maxLength": 3,
           "__METADATA__": {
             "primitiveValuesMeta": {
@@ -51,22 +54,28 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "d1111",
             "strict": true,
             "name": null,
-            "structuredValue": "d1111"
+            "structuredValue": "d1111",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         }
       }
     ],
-    "title": "Test API"
+    "title": "Test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {

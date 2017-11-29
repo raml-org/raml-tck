@@ -11,6 +11,7 @@
               "param1": {
                 "name": "param1",
                 "displayName": "param1",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "boolean"
                 ],
@@ -26,16 +27,23 @@
                     }
                   }
                 },
+                "sourceMap": {
+                  "path": "api.raml"
+                },
                 "structuredExample": {
                   "value": "true",
                   "strict": true,
                   "name": null,
-                  "structuredValue": true
+                  "structuredValue": true,
+                  "sourceMap": {
+                    "path": "api.raml"
+                  }
                 }
               },
               "param2": {
                 "name": "param2",
                 "displayName": "param2",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "boolean"
                 ],
@@ -51,15 +59,24 @@
                     }
                   }
                 },
+                "sourceMap": {
+                  "path": "api.raml"
+                },
                 "structuredExample": {
                   "value": "stringValue",
                   "strict": true,
                   "name": null,
-                  "structuredValue": "stringValue"
+                  "structuredValue": "stringValue",
+                  "sourceMap": {
+                    "path": "api.raml"
+                  }
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         ],
         "relativeUri": "/resource",
@@ -71,17 +88,23 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "api.raml"
+        },
         "relativeUriPathSegments": [
           "resource"
         ],
         "absoluteUri": "/resource"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "boolean is expected",
+      "message": "Expected type 'boolean' but got 'string'",
       "path": "api.raml",
       "range": {
         "start": {

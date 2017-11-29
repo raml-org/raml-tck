@@ -1,0 +1,143 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "Category": {
+          "name": "Category",
+          "displayName": "Category",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "string"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "parentResourceType": {
+          "name": "parentResourceType",
+          "sourceMap": {
+            "path": "api.raml"
+          },
+          "get": {
+            "queryParameters": {
+              "foo": {
+                "name": "foo",
+                "displayName": "foo",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<typeName | !singularize>>"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        }
+      },
+      {
+        "childResourceType": {
+          "type": {
+            "parentResourceType": {
+              "typeName": "<<typeName>>"
+            }
+          },
+          "name": "childResourceType",
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "title": "Minimal bug case",
+    "resources": [
+      {
+        "methods": [
+          {
+            "queryParameters": {
+              "foo": {
+                "name": "foo",
+                "displayName": "foo",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "Category"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "childResourceType": {
+            "typeName": "Category"
+          }
+        },
+        "relativeUri": "/cats",
+        "displayName": "/cats",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "cats"
+        ],
+        "absoluteUri": "/cats"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

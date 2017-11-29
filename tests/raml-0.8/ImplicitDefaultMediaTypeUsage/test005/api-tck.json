@@ -1,0 +1,122 @@
+{
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "specification": {
+    "title": "test API",
+    "mediaType": "application/json",
+    "schemas": [
+      {
+        "t1": "{}",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "t2": "{}",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "collection": {
+          "name": "collection",
+          "sourceMap": {
+            "path": "api.raml"
+          },
+          "get": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "schema": "t1",
+                    "schemaContent": "{}",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        }
+      }
+    ],
+    "resources": [
+      {
+        "relativeUri": "/schemes",
+        "type": "collection",
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/xml": {
+                    "name": "application/xml",
+                    "schema": "t2",
+                    "schemaContent": "{}",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  },
+                  "application/json": {
+                    "name": "application/json",
+                    "schema": "t1",
+                    "schemaContent": "{}",
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "name": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/schemes",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "schemes"
+        ],
+        "absoluteUri": "/schemes"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

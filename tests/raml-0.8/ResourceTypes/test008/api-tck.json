@@ -1,0 +1,114 @@
+{
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "specification": {
+    "title": "test API",
+    "traits": [
+      {
+        "tr1": {
+          "name": "tr1",
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "rt1": {
+          "name": "rt1",
+          "sourceMap": {
+            "path": "api.raml"
+          },
+          "get": {
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        }
+      }
+    ],
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "type": {
+          "rt1": {
+            "param": "stringValue"
+          }
+        },
+        "methods": [
+          {
+            "method": "get",
+            "is": [
+              {
+                "tr1": {
+                  "param": "stringValue"
+                }
+              }
+            ],
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": [
+    {
+      "code": "UNUSED_PARAMETER",
+      "message": "Unused parameter: 'param'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 15,
+          "column": 6,
+          "position": 118
+        },
+        "end": {
+          "line": 15,
+          "column": 11,
+          "position": 123
+        }
+      },
+      "isWarning": true
+    },
+    {
+      "code": "UNUSED_PARAMETER",
+      "message": "Unused parameter: 'param'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 10,
+          "position": 175
+        },
+        "end": {
+          "line": 19,
+          "column": 15,
+          "position": 180
+        }
+      },
+      "isWarning": true
+    }
+  ]
+}

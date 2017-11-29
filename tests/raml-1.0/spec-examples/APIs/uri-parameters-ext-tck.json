@@ -10,6 +10,7 @@
           "ext": {
             "name": "ext",
             "displayName": "ext",
+            "typePropertyKind": "TYPE_EXPRESSION",
             "type": [
               "string"
             ],
@@ -31,6 +32,9 @@
                   "insertedAsDefault": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "uri-parameters-ext.raml"
             }
           }
         },
@@ -43,12 +47,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "uri-parameters-ext.raml"
+        },
         "relativeUriPathSegments": [
           "users{ext}"
         ],
         "absoluteUri": "/users{ext}"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "uri-parameters-ext.raml"
+    }
   },
   "errors": []
 }

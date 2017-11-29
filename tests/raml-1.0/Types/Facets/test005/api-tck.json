@@ -21,35 +21,35 @@
             "format": {
               "name": "format",
               "displayName": "format",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
-              "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
@@ -59,19 +59,19 @@
         "reader": {
           "name": "reader",
           "displayName": "reader",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -79,111 +79,82 @@
         "writer": {
           "name": "writer",
           "displayName": "writer",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
     ],
     "title": "A",
+    "mediaType": "application/json",
     "resources": [
       {
         "methods": [
           {
             "body": {
-              "type": {
-                "name": "type",
-                "displayName": "type",
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "myDate"
                 ],
-                "required": true,
+                "fixedFacets": {
+                  "format": "YYYY"
+                },
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
-              },
-              "format": {
-                "name": "format",
-                "displayName": "format",
-                "type": [
-                  "YYYY"
-                ],
-                "required": true,
-                "__METADATA__": {
-                  "primitiveValuesMeta": {
-                    "displayName": {
-                      "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
-                    }
-                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           },
           {
             "body": {
-              "type": {
-                "name": "type",
-                "displayName": "type",
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "year"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
-                }
-              },
-              "format": {
-                "name": "format",
-                "displayName": "format",
-                "type": [
-                  "object"
-                ],
-                "required": true,
-                "__METADATA__": {
-                  "primitiveValuesMeta": {
-                    "displayName": {
-                      "calculated": true
-                    },
-                    "type": {
-                      "insertedAsDefault": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
-                    }
-                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
-            "method": "put"
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         ],
         "relativeUri": "/q",
@@ -195,134 +166,21 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "api.raml"
+        },
         "relativeUriPathSegments": [
           "q"
         ],
         "absoluteUri": "/q"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {
-      "code": "MEDIATYPE_EXCEPTION",
-      "message": "invalid media type",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 16,
-          "column": 6,
-          "position": 225
-        },
-        "end": {
-          "line": 16,
-          "column": 10,
-          "position": 229
-        }
-      }
-    },
-    {
-      "code": "MISSING_REQUIRED_FACETS",
-      "message": "Missing required facets: 'format'",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 16,
-          "column": 6,
-          "position": 225
-        },
-        "end": {
-          "line": 16,
-          "column": 10,
-          "position": 229
-        }
-      }
-    },
-    {
-      "code": "MEDIATYPE_EXCEPTION",
-      "message": "invalid media type",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 17,
-          "column": 6,
-          "position": 244
-        },
-        "end": {
-          "line": 17,
-          "column": 12,
-          "position": 250
-        }
-      }
-    },
-    {
-      "code": "INHERITING_UNKNOWN_TYPE",
-      "message": "Inheriting from unknown type",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 17,
-          "column": 6,
-          "position": 244
-        },
-        "end": {
-          "line": 17,
-          "column": 12,
-          "position": 250
-        }
-      }
-    },
-    {
-      "code": "MEDIATYPE_EXCEPTION",
-      "message": "invalid media type",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 20,
-          "column": 6,
-          "position": 280
-        },
-        "end": {
-          "line": 20,
-          "column": 10,
-          "position": 284
-        }
-      }
-    },
-    {
-      "code": "INHERITING_UNKNOWN_TYPE",
-      "message": "Inheriting from unknown type",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 20,
-          "column": 6,
-          "position": 280
-        },
-        "end": {
-          "line": 20,
-          "column": 10,
-          "position": 284
-        }
-      }
-    },
-    {
-      "code": "MEDIATYPE_EXCEPTION",
-      "message": "invalid media type",
-      "path": "api.raml",
-      "range": {
-        "start": {
-          "line": 21,
-          "column": 6,
-          "position": 297
-        },
-        "end": {
-          "line": 21,
-          "column": 12,
-          "position": 303
-        }
-      }
-    },
-    {
       "code": "INHERITING_UNKNOWN_TYPE",
       "message": "Inheriting from unknown type",
       "path": "api.raml",
@@ -330,12 +188,12 @@
         "start": {
           "line": 21,
           "column": 6,
-          "position": 297
+          "position": 308
         },
         "end": {
           "line": 21,
-          "column": 12,
-          "position": 303
+          "column": 10,
+          "position": 312
         }
       }
     }

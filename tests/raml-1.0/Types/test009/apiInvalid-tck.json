@@ -7,14 +7,15 @@
         "SimpleType1": {
           "name": "SimpleType1",
           "displayName": "SimpleType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "property1": {
               "name": "property1",
               "displayName": "property1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             },
             "property2": {
               "name": "property2",
               "displayName": "property2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             }
           },
@@ -56,11 +64,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       },
@@ -68,14 +76,15 @@
         "SimpleType2": {
           "name": "SimpleType2",
           "displayName": "SimpleType2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "property1": {
               "name": "property1",
               "displayName": "property1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -89,11 +98,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             },
             "property2": {
               "name": "property2",
               "displayName": "property2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -107,6 +120,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             }
           },
@@ -117,11 +133,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       },
@@ -129,19 +145,19 @@
         "SimpleUnion": {
           "name": "SimpleUnion",
           "displayName": "SimpleUnion",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "SimpleType1 | SimpleType2"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       },
@@ -149,6 +165,7 @@
         "TypeWithUnionProps": {
           "name": "TypeWithUnionProps",
           "displayName": "TypeWithUnionProps",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -164,11 +181,11 @@
               }
             ]
           },
-          "required": true,
           "properties": {
             "unionArray": {
               "name": "unionArray",
               "displayName": "unionArray",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -183,6 +200,9 @@
                   }
                 }
               },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
+              },
               "items": "SimpleUnion"
             }
           },
@@ -190,11 +210,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           },
           "structuredExample": {
             "value": "{\n  \"unionArray\": [\n    {\n      \"property1\": \"val1\",\n      \"property2\": \"val2\"\n    },\n    {\n      \"property1\": \"val1\",\n      \"property2\": 2\n    }\n  ]\n}",
@@ -211,17 +231,23 @@
                   "property2": 2
                 }
               ]
+            },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
             }
           }
         }
       }
     ],
-    "title": "API"
+    "title": "API",
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
   },
   "errors": [
     {
       "code": "UNION_TYPE_FAILURE_DETAILS",
-      "message": "Union type option does not pass validation (SimpleType2: number is expected)",
+      "message": "Union type option does not pass validation (SimpleType2: Expected type 'number' but got 'string')",
       "path": "apiInvalid.raml",
       "range": {
         "start": {
@@ -255,7 +281,7 @@
     },
     {
       "code": "UNION_TYPE_FAILURE_DETAILS",
-      "message": "Union type option does not pass validation (SimpleType1: string is expected)",
+      "message": "Union type option does not pass validation (SimpleType1: Expected type 'string' but got 'number')",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

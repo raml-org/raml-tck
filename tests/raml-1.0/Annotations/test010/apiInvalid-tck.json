@@ -7,10 +7,10 @@
         "suborg": {
           "name": "suborg",
           "displayName": "suborg",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -18,11 +18,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       }
@@ -52,6 +52,9 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
         "relativeUriPathSegments": [
           "assets"
         ],
@@ -80,17 +83,23 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
         "relativeUriPathSegments": [
           "foods"
         ],
         "absoluteUri": "/foods"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
   },
   "errors": [
     {
-      "code": "UNRESOLVED_REFERENCE",
-      "message": "Reference: 'suborg1' can not be resolved",
+      "code": "UNKNOWN_ANNOTATION_TYPE",
+      "message": "Using unknown annotation type: 'suborg1'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

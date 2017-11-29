@@ -9,6 +9,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -32,6 +33,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "simple-header.raml"
         }
       }
     },
@@ -46,6 +50,7 @@
               "Zencoder-Api-Key": {
                 "name": "Zencoder-Api-Key",
                 "displayName": "Zencoder-Api-Key",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -63,6 +68,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "simple-header.raml"
                 }
               }
             },
@@ -77,6 +85,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "simple-header.raml"
             }
           }
         ],
@@ -88,6 +99,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "simple-header.raml"
         },
         "relativeUriPathSegments": [
           "jobs"
@@ -101,6 +115,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "simple-header.raml"
     }
   },
   "errors": []

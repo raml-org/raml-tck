@@ -7,10 +7,10 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "schema": [
-            null
+            "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -18,11 +18,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "type-schema-invalid.raml"
           }
         }
       }
@@ -40,10 +40,10 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "schema": [
-                      null
+                      "any"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
@@ -51,17 +51,23 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "type-schema-invalid.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "type-schema-invalid.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "type-schema-invalid.raml"
+            }
           }
         ],
         "relativeUri": "/resource",
@@ -73,12 +79,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "type-schema-invalid.raml"
+        },
         "relativeUriPathSegments": [
           "resource"
         ],
         "absoluteUri": "/resource"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "type-schema-invalid.raml"
+    }
   },
   "errors": [
     {

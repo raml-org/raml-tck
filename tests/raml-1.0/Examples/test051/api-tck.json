@@ -7,6 +7,7 @@
         "ObjectType1": {
           "name": "ObjectType1",
           "displayName": "ObjectType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -31,6 +32,9 @@
               "description": "example 1 of ObjectType3",
               "structuredValue": {
                 "prop1": "value1"
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             {
@@ -53,14 +57,17 @@
               "description": "example 2 of ObjectType3",
               "structuredValue": {
                 "prop1": "value2"
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           ],
-          "required": true,
           "properties": {
             "prop1": {
               "name": "prop1",
               "displayName": "prop1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -77,6 +84,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -87,11 +97,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
@@ -101,19 +111,19 @@
         "NumberAnnotation": {
           "name": "NumberAnnotation",
           "displayName": "NumberAnnotation",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "number"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -121,24 +131,27 @@
         "ObjectAnnotation": {
           "name": "ObjectAnnotation",
           "displayName": "ObjectAnnotation",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "ObjectType1"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
     ],
-    "title": "Example API test 06"
+    "title": "Example API test 06",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": []
 }

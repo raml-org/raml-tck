@@ -7,26 +7,29 @@
         "Zip": {
           "name": "Zip",
           "displayName": "Zip",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "number"
           ],
           "example": 630128,
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "630128",
             "strict": true,
             "name": null,
-            "structuredValue": 630128
+            "structuredValue": 630128,
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         }
       },
@@ -34,6 +37,7 @@
         "Address": {
           "name": "Address",
           "displayName": "Address",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -44,11 +48,11 @@
             "house": "77, Suite 400",
             "zip": 94108
           },
-          "required": true,
           "properties": {
             "country": {
               "name": "country",
               "displayName": "country",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -71,11 +75,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "city": {
               "name": "city",
               "displayName": "city",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -92,11 +100,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "street": {
               "name": "street",
               "displayName": "street",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -108,16 +120,17 @@
                   },
                   "type": {
                     "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "house": {
               "name": "house",
               "displayName": "house",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -129,16 +142,17 @@
                   },
                   "type": {
                     "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "zip": {
               "name": "zip",
               "displayName": "zip",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Zip"
               ],
@@ -152,6 +166,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -162,11 +179,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"country\": \"US\",\n  \"city\": \"SF\",\n  \"street\": \"Geary Street\",\n  \"house\": \"77, Suite 400\",\n  \"zip\": 94108\n}\n",
@@ -178,6 +195,9 @@
               "street": "Geary Street",
               "house": "77, Suite 400",
               "zip": 94108
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
@@ -186,11 +206,11 @@
         "Email": {
           "name": "Email",
           "displayName": "Email",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
           "example": "press@mulesoft.com",
-          "required": true,
           "pattern": "[a-zA-Z0-9\\.]{1,32}@[a-zA-Z0-9]+\\.com",
           "minLength": 15,
           "maxLength": 64,
@@ -201,17 +221,20 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "press@mulesoft.com",
             "strict": true,
             "name": null,
-            "structuredValue": "press@mulesoft.com"
+            "structuredValue": "press@mulesoft.com",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         }
       },
@@ -223,11 +246,11 @@
             "role": {
               "name": "role",
               "displayName": "role",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
               "default": "user",
-              "required": true,
               "enum": [
                 "user",
                 "manager",
@@ -241,14 +264,15 @@
                   },
                   "type": {
                     "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -267,6 +291,9 @@
                   "city": "Novosibirsk",
                   "zip": 630090
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             {
@@ -283,14 +310,17 @@
                   "city": "SF",
                   "zip": 123456
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           ],
-          "required": true,
           "properties": {
             "id": {
               "name": "id",
               "displayName": "id",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -304,11 +334,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -325,11 +359,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "email": {
               "name": "email",
               "displayName": "email",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Email"
               ],
@@ -343,11 +381,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "phone": {
               "name": "phone",
               "displayName": "phone",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -362,16 +404,17 @@
                   },
                   "type": {
                     "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "address": {
               "name": "address",
               "displayName": "address",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Address"
               ],
@@ -380,11 +423,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -395,11 +438,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -407,6 +450,7 @@
         "Manager": {
           "name": "Manager",
           "displayName": "Manager",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "User"
           ],
@@ -426,6 +470,9 @@
                   "zip": 630090
                 },
                 "managerId": 77
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             {
@@ -443,14 +490,17 @@
                   "zip": 123456
                 },
                 "managerId": 88
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           ],
-          "required": true,
           "properties": {
             "managerId": {
               "name": "managerId",
               "displayName": "managerId",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -464,6 +514,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -474,11 +527,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -486,14 +539,15 @@
         "Admin": {
           "name": "Admin",
           "displayName": "Admin",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "User"
           ],
-          "required": true,
           "properties": {
             "adminId": {
               "name": "adminId",
               "displayName": "adminId",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -507,6 +561,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -517,11 +574,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -529,19 +586,19 @@
         "SuperAdmin": {
           "name": "SuperAdmin",
           "displayName": "SuperAdmin",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Admin"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -549,14 +606,15 @@
         "Team": {
           "name": "Team",
           "displayName": "Team",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "id": {
               "name": "id",
               "displayName": "id",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -570,11 +628,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "title": {
               "name": "title",
               "displayName": "title",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -592,11 +654,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "manager": {
               "name": "manager",
               "displayName": "manager",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Manager"
               ],
@@ -610,11 +676,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "admin": {
               "name": "admin",
               "displayName": "admin",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Admin|SuperAdmin"
               ],
@@ -628,11 +698,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "members": {
               "name": "members",
               "displayName": "members",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -647,11 +721,15 @@
                   }
                 }
               },
+              "sourceMap": {
+                "path": "api.raml"
+              },
               "items": "(User|Team)"
             },
             "info": {
               "name": "info",
               "displayName": "info",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -660,6 +738,7 @@
                 "address": {
                   "name": "address",
                   "displayName": "address",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "Address"
                   ],
@@ -673,11 +752,15 @@
                         "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 },
                 "email": {
                   "name": "email",
                   "displayName": "email",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "Email"
                   ],
@@ -691,11 +774,15 @@
                         "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 },
                 "size": {
                   "name": "size",
                   "displayName": "size",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "number"
                   ],
@@ -709,6 +796,9 @@
                         "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 }
               },
@@ -724,6 +814,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -734,11 +827,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
@@ -750,6 +843,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -773,6 +867,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "api.raml"
         }
       }
     },
@@ -790,22 +887,25 @@
                   "application/xml": {
                     "name": "application/xml",
                     "displayName": "application/xml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "array"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
                     },
+                    "sourceMap": {
+                      "path": "api.raml"
+                    },
                     "items": "Team"
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -819,6 +919,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           },
           {
@@ -829,10 +932,10 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "User"
                     ],
-                    "required": true,
                     "fixedFacets": {
                       "role": "admin"
                     },
@@ -840,13 +943,16 @@
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -854,14 +960,15 @@
               "application/json": {
                 "name": "application/json",
                 "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "object"
                 ],
-                "required": true,
                 "properties": {
                   "title": {
                     "name": "title",
                     "displayName": "title",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "string"
                     ],
@@ -879,6 +986,9 @@
                           "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   }
                 },
@@ -889,11 +999,11 @@
                     },
                     "type": {
                       "insertedAsDefault": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -908,6 +1018,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         ],
@@ -924,21 +1037,24 @@
                       "application/json": {
                         "name": "application/json",
                         "displayName": "application/json",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "Team"
                         ],
-                        "required": true,
                         "__METADATA__": {
                           "primitiveValuesMeta": {
                             "displayName": {
                               "calculated": true
-                            },
-                            "required": {
-                              "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "api.raml"
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   },
                   "404": {
@@ -947,10 +1063,10 @@
                       "text/plain": {
                         "name": "text/plain",
                         "displayName": "text/plain",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
-                          "object"
+                          "any"
                         ],
-                        "required": true,
                         "__METADATA__": {
                           "primitiveValuesMeta": {
                             "displayName": {
@@ -958,13 +1074,16 @@
                             },
                             "type": {
                               "insertedAsDefault": true
-                            },
-                            "required": {
-                              "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "api.raml"
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   }
                 },
@@ -978,6 +1097,9 @@
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             ],
@@ -985,6 +1107,7 @@
               "id": {
                 "name": "id",
                 "displayName": "id",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -1002,6 +1125,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -1013,6 +1139,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             },
             "relativeUriPathSegments": [
               "{id}"
@@ -1026,6 +1155,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "api.raml"
         },
         "relativeUriPathSegments": [
           "teams"
@@ -1042,22 +1174,25 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "array"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
                     },
+                    "sourceMap": {
+                      "path": "api.raml"
+                    },
                     "items": "User"
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -1071,6 +1206,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         ],
@@ -1082,6 +1220,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "api.raml"
         },
         "relativeUriPathSegments": [
           "users"
@@ -1098,10 +1239,10 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "User"
                     ],
-                    "required": true,
                     "fixedFacets": {
                       "role": "admin"
                     },
@@ -1109,13 +1250,16 @@
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -1129,6 +1273,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         ],
@@ -1136,6 +1283,7 @@
           "id": {
             "name": "id",
             "displayName": "id",
+            "typePropertyKind": "TYPE_EXPRESSION",
             "type": [
               "string"
             ],
@@ -1153,6 +1301,9 @@
                   "insertedAsDefault": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         },
@@ -1164,6 +1315,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "api.raml"
         },
         "relativeUriPathSegments": [
           "users",
@@ -1178,6 +1332,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "api.raml"
     }
   },
   "errors": []

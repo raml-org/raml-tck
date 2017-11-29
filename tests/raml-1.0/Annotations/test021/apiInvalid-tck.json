@@ -7,10 +7,10 @@
         "TestAnnotation": {
           "name": "TestAnnotation",
           "displayName": "TestAnnotation",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "allowedTargets": [
             "SecuritySchemeSettings"
           ],
@@ -18,11 +18,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       }
@@ -47,7 +47,13 @@
             },
             "requestTokenUri": "https://example.com/requesttoken",
             "authorizationUri": "https://example.com/authorize",
-            "tokenCredentialsUri": "https://example.com/credentials"
+            "tokenCredentialsUri": "https://example.com/credentials",
+            "sourceMap": {
+              "path": "apiInvalid.raml"
+            }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       }
@@ -64,6 +70,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "apiInvalid.raml"
     }
   },
   "errors": [

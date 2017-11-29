@@ -7,21 +7,25 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
               "required": true,
               "xml": {
                 "attribute": true,
-                "name": "fullname"
+                "name": "fullname",
+                "sourceMap": {
+                  "path": "xml-facet.raml"
+                }
               },
               "__METADATA__": {
                 "primitiveValuesMeta": {
@@ -32,17 +36,24 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "xml-facet.raml"
               }
             },
             "addresses": {
               "name": "addresses",
               "displayName": "addresses",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
               "required": true,
               "xml": {
-                "wrapped": true
+                "wrapped": true,
+                "sourceMap": {
+                  "path": "xml-facet.raml"
+                }
               },
               "__METADATA__": {
                 "primitiveValuesMeta": {
@@ -53,6 +64,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "xml-facet.raml"
               },
               "items": "Address"
             }
@@ -64,11 +78,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "xml-facet.raml"
           }
         }
       },
@@ -76,14 +90,15 @@
         "Address": {
           "name": "Address",
           "displayName": "Address",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "street": {
               "name": "street",
               "displayName": "street",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -97,11 +112,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "xml-facet.raml"
               }
             },
             "city": {
               "name": "city",
               "displayName": "city",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -115,6 +134,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "xml-facet.raml"
               }
             }
           },
@@ -125,16 +147,19 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "xml-facet.raml"
           }
         }
       }
     ],
-    "title": "XML facet"
+    "title": "XML facet",
+    "sourceMap": {
+      "path": "xml-facet.raml"
+    }
   },
   "errors": []
 }

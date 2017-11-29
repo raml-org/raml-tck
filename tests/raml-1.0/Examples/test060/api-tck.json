@@ -7,6 +7,7 @@
         "MyArrayType": {
           "name": "MyArrayType",
           "displayName": "MyArrayType",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "array"
           ],
@@ -15,16 +16,15 @@
             1,
             2
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "[ 0.0, 1.0, 2.0 ]\n",
@@ -34,7 +34,10 @@
               0,
               1,
               2
-            ]
+            ],
+            "sourceMap": {
+              "path": "api.raml"
+            }
           },
           "items": "number"
         }
@@ -43,6 +46,7 @@
         "MyType": {
           "name": "MyType",
           "displayName": "MyType",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -53,11 +57,11 @@
               0
             ]
           },
-          "required": true,
           "properties": {
             "p": {
               "name": "p",
               "displayName": "p",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "MyArrayType"
               ],
@@ -71,6 +75,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -81,11 +88,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"p\": [ 1.0, 0.0, 0.0 ]\n}\n",
@@ -97,6 +104,9 @@
                 0,
                 0
               ]
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
@@ -106,6 +116,9 @@
       {
         "rt1": {
           "name": "rt1",
+          "sourceMap": {
+            "path": "api.raml"
+          },
           "get": {
             "responses": {
               "200": {
@@ -114,25 +127,31 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "MyType"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         }
       }
@@ -149,25 +168,31 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "MyType"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         ],
         "type": "rt1",
@@ -180,12 +205,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "api.raml"
+        },
         "relativeUriPathSegments": [
           "resource"
         ],
         "absoluteUri": "/resource"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": []
 }

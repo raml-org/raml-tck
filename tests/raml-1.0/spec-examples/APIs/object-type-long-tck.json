@@ -7,14 +7,15 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -25,11 +26,15 @@
                     "calculated": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "object-type-long.raml"
               }
             },
             "age": {
               "name": "age",
               "displayName": "age",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -40,6 +45,9 @@
                     "calculated": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "object-type-long.raml"
               }
             }
           },
@@ -50,17 +58,20 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "object-type-long.raml"
           }
         }
       }
     ],
     "title": "My API With Types",
-    "description": "This RAML illustrates a type declaration that uses facets to restrict its object properties."
+    "description": "This RAML illustrates a type declaration that uses facets to restrict its object properties.",
+    "sourceMap": {
+      "path": "object-type-long.raml"
+    }
   },
   "errors": []
 }

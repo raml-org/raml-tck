@@ -7,6 +7,7 @@
         "SomeType": {
           "name": "SomeType",
           "displayName": "SomeType",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -24,11 +25,11 @@
             ],
             "someProperty": "stringValue"
           },
-          "required": true,
           "properties": {
             "selfReference": {
               "name": "selfReference",
               "displayName": "selfReference",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -43,11 +44,15 @@
                   }
                 }
               },
+              "sourceMap": {
+                "path": "apiValid.raml"
+              },
               "items": "SomeType"
             },
             "someProperty": {
               "name": "someProperty",
               "displayName": "someProperty",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -61,6 +66,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -69,11 +77,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           },
           "structuredExample": {
             "value": "{\n  \"selfReference\": [\n    {\n      \"selfReference\": [\n        {\n          \"selfReference\": [],\n          \"someProperty\": \"stringValue\"\n        }\n      ],\n      \"someProperty\": \"stringValue\"\n    }\n  ],\n  \"someProperty\": \"stringValue\"\n}",
@@ -92,12 +100,18 @@
                 }
               ],
               "someProperty": "stringValue"
+            },
+            "sourceMap": {
+              "path": "apiValid.raml"
             }
           }
         }
       }
     ],
-    "title": "API"
+    "title": "API",
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
   },
   "errors": []
 }

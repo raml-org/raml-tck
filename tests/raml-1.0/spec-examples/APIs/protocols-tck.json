@@ -9,6 +9,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -32,13 +33,19 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "protocols.raml"
         }
       }
     },
     "protocols": [
       "HTTP",
       "HTTPS"
-    ]
+    ],
+    "sourceMap": {
+      "path": "protocols.raml"
+    }
   },
   "errors": []
 }

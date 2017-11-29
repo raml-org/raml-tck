@@ -7,17 +7,18 @@
         "TestType": {
           "name": "TestType",
           "displayName": "TestType",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
           "example": {
             "field": "value"
           },
-          "required": true,
           "properties": {
             "field": {
               "name": "field",
               "displayName": "field",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -31,6 +32,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "meth09.raml"
               }
             }
           },
@@ -38,11 +42,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "meth09.raml"
           },
           "structuredExample": {
             "value": "{\n  \"field\": \"value\"\n}",
@@ -50,6 +54,9 @@
             "name": null,
             "structuredValue": {
               "field": "value"
+            },
+            "sourceMap": {
+              "path": "meth09.raml"
             }
           }
         }
@@ -67,21 +74,24 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "TestType"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "meth09.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth09.raml"
                 }
               }
             },
@@ -89,23 +99,26 @@
               "application/json": {
                 "name": "application/json",
                 "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "TestType"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth09.raml"
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "meth09.raml"
+            }
           }
         ],
         "relativeUri": "/test",
@@ -117,12 +130,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "meth09.raml"
+        },
         "relativeUriPathSegments": [
           "test"
         ],
         "absoluteUri": "/test"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "meth09.raml"
+    }
   },
   "errors": []
 }

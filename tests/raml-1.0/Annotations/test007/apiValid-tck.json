@@ -18,14 +18,15 @@
         "x": {
           "name": "x",
           "displayName": "x",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "v": {
               "name": "v",
               "displayName": "v",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -40,6 +41,9 @@
                   }
                 }
               },
+              "sourceMap": {
+                "path": "apiValid.raml"
+              },
               "items": "boolean"
             }
           },
@@ -50,17 +54,20 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       }
     ],
     "title": "WebOfMe",
-    "mediaType": "application/json"
+    "mediaType": "application/json",
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
   },
   "errors": []
 }

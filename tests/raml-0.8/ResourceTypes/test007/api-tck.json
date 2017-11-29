@@ -1,0 +1,116 @@
+{
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "specification": {
+    "title": "test API",
+    "resourceTypes": [
+      {
+        "myResourceType": {
+          "name": "myResourceType",
+          "sourceMap": {
+            "path": "api.raml"
+          },
+          "<<param1>>": "<<param1value>>",
+          "post": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "sourceMap": {
+                  "path": "api.raml"
+                },
+                "<<param5>>": "<<param5value>>"
+              },
+              "<<param4>>": {
+                "code": "<<param4>>",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "sourceMap": {
+                  "path": "api.raml"
+                },
+                "<<param3>>": "<<param3value>>"
+              }
+            },
+            "queryParameters": {
+              "<<qParam>>": {
+                "name": "<<qParam>>",
+                "displayName": "<<qParam>>",
+                "type": "string",
+                "required": false,
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              },
+              "param1": {
+                "name": "param1",
+                "displayName": "param1",
+                "type": "string",
+                "required": false,
+                "repeat": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    },
+                    "repeat": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                },
+                "<<prop1>>": "<<prop1Value>>"
+              }
+            },
+            "method": "post",
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "<<param2>>": "<<param2value>>"
+          }
+        }
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

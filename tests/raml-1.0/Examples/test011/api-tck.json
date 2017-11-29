@@ -24,20 +24,20 @@
         "SmallArray": {
           "name": "SmallArray",
           "displayName": "SmallArray",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "array"
           ],
-          "required": true,
           "minItems": 5,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "items": "number"
         }
@@ -48,14 +48,15 @@
         "MyAnnotationType1": {
           "name": "MyAnnotationType1",
           "displayName": "MyAnnotationType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "cc": {
               "name": "cc",
               "displayName": "cc",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "SmallArray"
               ],
@@ -69,6 +70,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -79,11 +83,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -91,10 +95,10 @@
         "MyAnnotationType2": {
           "name": "MyAnnotationType2",
           "displayName": "MyAnnotationType2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -102,16 +106,19 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
     ],
-    "title": "Test API"
+    "title": "Test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {

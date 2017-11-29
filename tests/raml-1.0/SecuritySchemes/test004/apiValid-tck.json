@@ -13,7 +13,13 @@
             "authorizationUri": "https://www.dropbox.com/1/oauth2/authorize",
             "authorizationGrants": [
               "client_credentials"
-            ]
+            ],
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       }
@@ -25,6 +31,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -48,6 +55,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "apiValid.raml"
         }
       }
     },
@@ -60,6 +70,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "apiValid.raml"
     }
   },
   "errors": []

@@ -21,35 +21,35 @@
             "format": {
               "name": "format",
               "displayName": "format",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
-              "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -57,10 +57,10 @@
         "year": {
           "name": "year",
           "displayName": "year",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "myDate"
           ],
-          "required": true,
           "fixedFacets": {
             "format": "YYYY"
           },
@@ -68,11 +68,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -80,10 +80,10 @@
         "yee": {
           "name": "yee",
           "displayName": "yee",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "year"
           ],
-          "required": true,
           "fixedFacets": {
             "format": 1332
           },
@@ -91,11 +91,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
@@ -105,19 +105,19 @@
         "reader": {
           "name": "reader",
           "displayName": "reader",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -125,19 +125,19 @@
         "writer": {
           "name": "writer",
           "displayName": "writer",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
@@ -151,6 +151,7 @@
               "y": {
                 "name": "y",
                 "displayName": "y",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "year"
                 ],
@@ -164,10 +165,16 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         ],
         "relativeUri": "/q",
@@ -179,28 +186,34 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "api.raml"
+        },
         "relativeUriPathSegments": [
           "q"
         ],
         "absoluteUri": "/q"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "string is expected",
+      "message": "Expected type 'string' but got 'number'",
       "path": "api.raml",
       "range": {
         "start": {
-          "line": 16,
-          "column": 2,
-          "position": 241
+          "line": 18,
+          "column": 4,
+          "position": 265
         },
         "end": {
-          "line": 16,
-          "column": 5,
-          "position": 244
+          "line": 18,
+          "column": 10,
+          "position": 271
         }
       }
     }

@@ -7,14 +7,15 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -31,6 +32,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "default-type-string.raml"
               }
             }
           },
@@ -41,16 +45,19 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "default-type-string.raml"
           }
         }
       }
     ],
-    "title": "Default type string"
+    "title": "Default type string",
+    "sourceMap": {
+      "path": "default-type-string.raml"
+    }
   },
   "errors": []
 }

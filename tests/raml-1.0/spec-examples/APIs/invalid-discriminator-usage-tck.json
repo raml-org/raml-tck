@@ -7,10 +7,10 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -18,11 +18,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "invalid-discriminator-usage.raml"
           }
         }
       },
@@ -30,10 +30,10 @@
         "Dog": {
           "name": "Dog",
           "displayName": "Dog",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -41,11 +41,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "invalid-discriminator-usage.raml"
           }
         }
       },
@@ -53,19 +53,19 @@
         "PersonOrDog": {
           "name": "PersonOrDog",
           "displayName": "PersonOrDog",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Person | Dog"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "invalid-discriminator-usage.raml"
           }
         }
       }
@@ -83,14 +83,15 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "object"
                     ],
-                    "required": true,
                     "properties": {
                       "kind": {
                         "name": "kind",
                         "displayName": "kind",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "string"
                         ],
@@ -104,6 +105,9 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "invalid-discriminator-usage.raml"
                         }
                       }
                     },
@@ -115,17 +119,23 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "invalid-discriminator-usage.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "invalid-discriminator-usage.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "invalid-discriminator-usage.raml"
+            }
           }
         ],
         "relativeUri": "/inline",
@@ -137,12 +147,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "invalid-discriminator-usage.raml"
+        },
         "relativeUriPathSegments": [
           "inline"
         ],
         "absoluteUri": "/inline"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "invalid-discriminator-usage.raml"
+    }
   },
   "errors": [
     {

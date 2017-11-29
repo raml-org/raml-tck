@@ -7,14 +7,15 @@
         "PropertyType1": {
           "name": "PropertyType1",
           "displayName": "PropertyType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,6 +29,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test2.raml"
               }
             }
           },
@@ -38,11 +42,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test2.raml"
           }
         }
       },
@@ -50,14 +54,15 @@
         "PropertyType2": {
           "name": "PropertyType2",
           "displayName": "PropertyType2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "PropertyType1"
           ],
-          "required": true,
           "properties": {
             "name2": {
               "name": "name2",
               "displayName": "name2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -71,6 +76,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test2.raml"
               }
             }
           },
@@ -78,11 +86,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test2.raml"
           }
         }
       },
@@ -90,14 +98,15 @@
         "PropertyType3": {
           "name": "PropertyType3",
           "displayName": "PropertyType3",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name3": {
               "name": "name3",
               "displayName": "name3",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -111,6 +120,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test2.raml"
               }
             }
           },
@@ -121,11 +133,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test2.raml"
           }
         }
       },
@@ -133,14 +145,15 @@
         "Type1": {
           "name": "Type1",
           "displayName": "Type1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "testProperty": {
               "name": "testProperty",
               "displayName": "testProperty",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "PropertyType1"
               ],
@@ -154,6 +167,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test2.raml"
               }
             }
           },
@@ -164,11 +180,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test2.raml"
           }
         }
       },
@@ -176,14 +192,15 @@
         "Type2": {
           "name": "Type2",
           "displayName": "Type2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Type1"
           ],
-          "required": true,
           "properties": {
             "testProperty": {
               "name": "testProperty",
               "displayName": "testProperty",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "PropertyType2"
               ],
@@ -197,6 +214,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test2.raml"
               }
             }
           },
@@ -204,16 +224,19 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test2.raml"
           }
         }
       }
     ],
-    "title": "test"
+    "title": "test",
+    "sourceMap": {
+      "path": "test2.raml"
+    }
   },
   "errors": []
 }

@@ -18,6 +18,7 @@
                   "application/xml": {
                     "name": "application/xml",
                     "displayName": "application/xml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "object"
                     ],
@@ -25,11 +26,11 @@
                       "name": "john",
                       "age": "34s"
                     },
-                    "required": true,
                     "properties": {
                       "name": {
                         "name": "name",
                         "displayName": "name",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "string"
                         ],
@@ -43,11 +44,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiInvalid.raml"
                         }
                       },
                       "age": {
                         "name": "age",
                         "displayName": "age",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "number"
                         ],
@@ -61,6 +66,9 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiInvalid.raml"
                         }
                       }
                     },
@@ -68,11 +76,11 @@
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "apiInvalid.raml"
                     },
                     "structuredExample": {
                       "value": "{\n  \"name\": \"john\",\n  \"age\": \"34s\"\n}",
@@ -81,9 +89,15 @@
                       "structuredValue": {
                         "name": "john",
                         "age": "34s"
+                      },
+                      "sourceMap": {
+                        "path": "apiInvalid.raml"
                       }
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "apiInvalid.raml"
                 }
               }
             },
@@ -97,6 +111,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
             }
           }
         ],
@@ -104,6 +121,7 @@
           "blah": {
             "name": "blah",
             "displayName": "blah",
+            "typePropertyKind": "TYPE_EXPRESSION",
             "type": [
               "string"
             ],
@@ -117,6 +135,9 @@
                   "insertedAsDefault": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "apiInvalid.raml"
             }
           }
         },
@@ -128,6 +149,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
         },
         "relativeUriPathSegments": [
           "someChildUri",
@@ -142,12 +166,15 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "apiInvalid.raml"
     }
   },
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

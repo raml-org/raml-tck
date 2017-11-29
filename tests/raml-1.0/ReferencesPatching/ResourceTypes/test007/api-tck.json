@@ -1,0 +1,282 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "uses": [
+      {
+        "key": "rt",
+        "value": "lib/resource-types.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "rt.ty",
+        "value": "lib/types.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "rt.tr",
+        "value": "lib/traits.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "traits": [
+      {
+        "rt.tr.ResponseCommonErrors": {
+          "responses": {
+            "400": {
+              "code": "400",
+              "body": {
+                "application/json": {
+                  "name": "application/json",
+                  "displayName": "application/json",
+                  "typePropertyKind": "TYPE_EXPRESSION",
+                  "type": [
+                    "<<errorResponseType>>"
+                  ],
+                  "example": {
+                    "code": "abc123",
+                    "message": "Bad request"
+                  },
+                  "__METADATA__": {
+                    "primitiveValuesMeta": {
+                      "displayName": {
+                        "calculated": true
+                      }
+                    }
+                  },
+                  "sourceMap": {
+                    "path": "lib/traits.raml"
+                  },
+                  "structuredExample": {
+                    "value": "{\n  \"code\": \"abc123\",\n  \"message\": \"Bad request\"\n}\n",
+                    "strict": true,
+                    "name": null,
+                    "structuredValue": {
+                      "code": "abc123",
+                      "message": "Bad request"
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    }
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "lib/traits.raml"
+              }
+            },
+            "500": {
+              "code": "500",
+              "body": {
+                "application/json": {
+                  "name": "application/json",
+                  "displayName": "application/json",
+                  "typePropertyKind": "TYPE_EXPRESSION",
+                  "type": [
+                    "<<errorResponseType>>"
+                  ],
+                  "example": {
+                    "code": "xyz123",
+                    "message": "Server error"
+                  },
+                  "__METADATA__": {
+                    "primitiveValuesMeta": {
+                      "displayName": {
+                        "calculated": true
+                      }
+                    }
+                  },
+                  "sourceMap": {
+                    "path": "lib/traits.raml"
+                  },
+                  "structuredExample": {
+                    "value": "{\n  \"code\": \"xyz123\",\n  \"message\": \"Server error\"\n}\n",
+                    "strict": true,
+                    "name": null,
+                    "structuredValue": {
+                      "code": "xyz123",
+                      "message": "Server error"
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    }
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "lib/traits.raml"
+              }
+            }
+          },
+          "name": "rt.tr.ResponseCommonErrors",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "lib/traits.raml"
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "rt.Collection": {
+          "name": "rt.Collection",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "lib/resource-types.raml"
+          },
+          "get": {
+            "is": [
+              {
+                "rt.tr.ResponseCommonErrors": {
+                  "errorResponseType": "ty.ErrorResponseType"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "lib/resource-types.raml"
+            }
+          }
+        }
+      }
+    ],
+    "title": "Test API",
+    "version": "v1z",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "400": {
+                "code": "400",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.ty.ErrorResponseType"
+                    ],
+                    "example": {
+                      "code": "abc123",
+                      "message": "Bad request"
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"code\": \"abc123\",\n  \"message\": \"Bad request\"\n}\n",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "code": "abc123",
+                        "message": "Bad request"
+                      },
+                      "sourceMap": {
+                        "path": "lib/traits.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/traits.raml"
+                }
+              },
+              "500": {
+                "code": "500",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.ty.ErrorResponseType"
+                    ],
+                    "example": {
+                      "code": "xyz123",
+                      "message": "Server error"
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"code\": \"xyz123\",\n  \"message\": \"Server error\"\n}\n",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "code": "xyz123",
+                        "message": "Server error"
+                      },
+                      "sourceMap": {
+                        "path": "lib/traits.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/traits.raml"
+                }
+              }
+            },
+            "is": [
+              {
+                "rt.tr.ResponseCommonErrors": {
+                  "errorResponseType": "rt.ty.ErrorResponseType"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "lib/resource-types.raml"
+            }
+          }
+        ],
+        "type": "rt.Collection",
+        "relativeUri": "/products",
+        "displayName": "/products",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "products"
+        ],
+        "absoluteUri": "/products"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

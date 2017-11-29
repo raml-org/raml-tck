@@ -7,14 +7,15 @@
         "lat-long": {
           "name": "lat-long",
           "displayName": "lat-long",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "lat": {
               "name": "lat",
               "displayName": "lat",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "query-string.raml"
               }
             },
             "long": {
               "name": "long",
               "displayName": "long",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "query-string.raml"
               }
             }
           },
@@ -56,11 +64,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "query-string.raml"
           }
         }
       },
@@ -68,14 +76,15 @@
         "loc": {
           "name": "loc",
           "displayName": "loc",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "location": {
               "name": "location",
               "displayName": "location",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -92,6 +101,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "query-string.raml"
               }
             }
           },
@@ -102,11 +114,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "query-string.raml"
           }
         }
       },
@@ -114,14 +126,15 @@
         "paging": {
           "name": "paging",
           "displayName": "paging",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "start": {
               "name": "start",
               "displayName": "start",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -130,16 +143,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "query-string.raml"
               }
             },
             "page-size": {
               "name": "page-size",
               "displayName": "page-size",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -148,11 +162,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "query-string.raml"
               }
             }
           },
@@ -163,11 +177,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "query-string.raml"
           }
         }
       }
@@ -180,6 +194,7 @@
             "queryString": {
               "name": "queryString",
               "displayName": "queryString",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "paging",
                 "lat-long | loc"
@@ -193,6 +208,9 @@
                     "start": 2,
                     "lat": 12,
                     "long": 13
+                  },
+                  "sourceMap": {
+                    "path": "query-string.raml"
                   }
                 },
                 {
@@ -203,6 +221,9 @@
                     "start": 2,
                     "page-size": 20,
                     "location": "1,2"
+                  },
+                  "sourceMap": {
+                    "path": "query-string.raml"
                   }
                 },
                 {
@@ -212,22 +233,27 @@
                   "structuredValue": {
                     "lat": 12,
                     "location": 2
+                  },
+                  "sourceMap": {
+                    "path": "query-string.raml"
                   }
                 }
               ],
-              "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "query-string.raml"
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "query-string.raml"
+            }
           }
         ],
         "relativeUri": "/locations",
@@ -239,12 +265,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "query-string.raml"
+        },
         "relativeUriPathSegments": [
           "locations"
         ],
         "absoluteUri": "/locations"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "query-string.raml"
+    }
   },
   "errors": []
 }

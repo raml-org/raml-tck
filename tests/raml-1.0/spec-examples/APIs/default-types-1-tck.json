@@ -7,24 +7,27 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "default-types-1.raml"
           }
         }
       }
     ],
-    "title": "Default Types 1"
+    "title": "Default Types 1",
+    "sourceMap": {
+      "path": "default-types-1.raml"
+    }
   },
   "errors": []
 }

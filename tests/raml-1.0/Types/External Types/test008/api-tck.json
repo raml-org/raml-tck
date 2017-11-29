@@ -7,19 +7,19 @@
         "mySchema": {
           "name": "mySchema",
           "displayName": "mySchema",
+          "typePropertyKind": "JSON",
           "type": [
             "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Product\",\n  \"description\": \"A product from Acme's catalog\",\n  \"type\": \"object\",\n  \"properties\": {\n      \"id\": {\n          \"description\": \"The unique identifier for a product\",\n          \"type\": \"string\"\n      }\n  },\n  \"required\": [\"id\"]\n}\n"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -27,6 +27,7 @@
         "z2": {
           "name": "z2",
           "displayName": "z2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -35,11 +36,11 @@
               "i": 2
             }
           },
-          "required": true,
           "properties": {
             "c": {
               "name": "c",
               "displayName": "c",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "mySchema"
               ],
@@ -53,6 +54,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -63,11 +67,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"c\": {\n    \"i\": 2\n  }\n}",
@@ -77,12 +81,18 @@
               "c": {
                 "i": 2
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
       }
     ],
-    "title": "A"
+    "title": "A",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {
@@ -103,8 +113,8 @@
       }
     },
     {
-      "code": "EXAMPLE_SCHEMA_FAILURE",
-      "message": "Example does not conform to schema: Content is not valid according to schema: Missing required property: id id",
+      "code": "CONTENT_DOES_NOT_MATCH_THE_SCHEMA",
+      "message": "Content is not valid according to schema: Missing required property: id",
       "path": "api.raml",
       "range": {
         "start": {

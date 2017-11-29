@@ -1,0 +1,102 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "typePropertyKind": "JSON",
+          "schemaPath": "subdir/scheme.json",
+          "sourceMap": {
+            "path": "subdir/scheme.json"
+          },
+          "type": [
+            "{\n    \"$schema\":\"http://json-schema.org/draft-04/schema\",\n    \"type\": \"object\",\n    \"required\":[\"parentName\"],\n    \"properties\":{\n        \"parentName\": {\"type\": \"string\"},\n        \"child\": {\"$ref\": \"subdir/scheme.json#\"}\n    }\n}\n"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          }
+        }
+      }
+    ],
+    "title": "Api",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "MyType"
+                ],
+                "example": {
+                  "parentName": "somename",
+                  "child": {
+                    "childName": "anothernames"
+                  }
+                },
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "apiValid.raml"
+                },
+                "structuredExample": {
+                  "value": "{\n  \"parentName\": \"somename\",\n  \"child\": {\n    \"childName\": \"anothernames\"\n  }\n}",
+                  "strict": true,
+                  "name": null,
+                  "structuredValue": {
+                    "parentName": "somename",
+                    "child": {
+                      "childName": "anothernames"
+                    }
+                  },
+                  "sourceMap": {
+                    "path": "apiValid.raml"
+                  }
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          }
+        ],
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "apiValid.raml"
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ],
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
+  },
+  "errors": []
+}

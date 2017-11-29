@@ -15,6 +15,7 @@
               "userIds": {
                 "name": "userIds",
                 "displayName": "userIds",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "array"
                 ],
@@ -24,20 +25,20 @@
                 "items": {
                   "name": "items",
                   "displayName": "items",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "string"
                   ],
-                  "required": true,
                   "minLength": 1,
                   "__METADATA__": {
                     "primitiveValuesMeta": {
                       "displayName": {
                         "calculated": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "array-uri-parameter.raml"
                   }
                 },
                 "__METADATA__": {
@@ -49,6 +50,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "array-uri-parameter.raml"
                 }
               }
             },
@@ -60,6 +64,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "array-uri-parameter.raml"
             },
             "relativeUriPathSegments": [
               "{userIds}"
@@ -74,12 +81,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "array-uri-parameter.raml"
+        },
         "relativeUriPathSegments": [
           "users"
         ],
         "absoluteUri": "/users"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "array-uri-parameter.raml"
+    }
   },
   "errors": []
 }

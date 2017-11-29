@@ -7,19 +7,19 @@
         "redirectable": {
           "name": "redirectable",
           "displayName": "redirectable",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "boolean"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotating-scalar-nodes.raml"
           }
         }
       }
@@ -43,6 +43,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "annotating-scalar-nodes.raml"
     }
   },
   "errors": []

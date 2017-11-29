@@ -9,6 +9,7 @@
         {
           "name": "a",
           "displayName": "second",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
@@ -20,11 +21,15 @@
                 "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         },
         {
           "name": "a",
           "displayName": "2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "integer"
           ],
@@ -36,6 +41,9 @@
                 "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       ]
@@ -49,6 +57,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "api.raml"
     }
   },
   "errors": [

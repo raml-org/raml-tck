@@ -21,14 +21,15 @@
         "Pet": {
           "name": "Pet",
           "displayName": "Pet",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -42,6 +43,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             }
           },
@@ -53,11 +57,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       },
@@ -65,14 +69,15 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "/.*/": {
               "name": "/.*/",
               "displayName": "/.*/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Pet"
               ],
@@ -86,6 +91,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             }
           },
@@ -96,11 +104,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       },
@@ -108,14 +116,15 @@
         "MapOfPerson": {
           "name": "MapOfPerson",
           "displayName": "MapOfPerson",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "/.*/": {
               "name": "/.*/",
               "displayName": "/.*/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Person"
               ],
@@ -129,6 +138,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             }
           },
@@ -139,11 +151,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       }
@@ -153,14 +165,15 @@
         "hello": {
           "name": "hello",
           "displayName": "hello",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "persons": {
               "name": "persons",
               "displayName": "persons",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "MapOfPerson"
               ],
@@ -174,6 +187,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiInvalid.raml"
               }
             }
           },
@@ -184,11 +200,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       }
@@ -205,12 +221,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apiInvalid.raml"
+        },
         "relativeUriPathSegments": [
           "d"
         ],
         "absoluteUri": "/d"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
   },
   "errors": [
     {
@@ -219,14 +241,14 @@
       "path": "apiInvalid.raml",
       "range": {
         "start": {
-          "line": 19,
-          "column": 3,
-          "position": 276
+          "line": 21,
+          "column": 7,
+          "position": 308
         },
         "end": {
-          "line": 19,
-          "column": 10,
-          "position": 283
+          "line": 21,
+          "column": 12,
+          "position": 313
         }
       }
     },
@@ -236,14 +258,14 @@
       "path": "apiInvalid.raml",
       "range": {
         "start": {
-          "line": 19,
-          "column": 3,
-          "position": 276
+          "line": 22,
+          "column": 9,
+          "position": 324
         },
         "end": {
-          "line": 19,
-          "column": 10,
-          "position": 283
+          "line": 22,
+          "column": 14,
+          "position": 329
         }
       }
     }

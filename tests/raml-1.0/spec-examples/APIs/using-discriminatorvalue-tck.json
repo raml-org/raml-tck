@@ -7,14 +7,15 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "using-discriminatorvalue.raml"
               }
             },
             "kind": {
               "name": "kind",
               "displayName": "kind",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "using-discriminatorvalue.raml"
               }
             }
           },
@@ -54,11 +62,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "using-discriminatorvalue.raml"
           }
         }
       },
@@ -66,14 +74,15 @@
         "Employee": {
           "name": "Employee",
           "displayName": "Employee",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Person"
           ],
-          "required": true,
           "properties": {
             "employeeId": {
               "name": "employeeId",
               "displayName": "employeeId",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -87,6 +96,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "using-discriminatorvalue.raml"
               }
             }
           },
@@ -95,11 +107,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "using-discriminatorvalue.raml"
           }
         }
       },
@@ -107,14 +119,15 @@
         "User": {
           "name": "User",
           "displayName": "User",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Person"
           ],
-          "required": true,
           "properties": {
             "userId": {
               "name": "userId",
               "displayName": "userId",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -128,6 +141,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "using-discriminatorvalue.raml"
               }
             }
           },
@@ -136,16 +152,19 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "using-discriminatorvalue.raml"
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "using-discriminatorvalue.raml"
+    }
   },
   "errors": []
 }

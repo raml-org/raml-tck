@@ -7,6 +7,7 @@
         "Message": {
           "name": "Message",
           "displayName": "Message",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -14,11 +15,11 @@
             "title": "Attention needed",
             "body": "You have been added to group 274"
           },
-          "required": true,
           "properties": {
             "title": {
               "name": "title",
               "displayName": "title",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -27,16 +28,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "single-example.raml"
               }
             },
             "body": {
               "name": "body",
               "displayName": "body",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -45,16 +47,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "single-example.raml"
               }
             },
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -63,16 +66,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "single-example.raml"
               }
             },
             "comment": {
               "name": "comment",
               "displayName": "comment",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -81,11 +85,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "single-example.raml"
               }
             }
           },
@@ -96,11 +100,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "single-example.raml"
           },
           "structuredExample": {
             "value": "{\n  \"title\": \"Attention needed\",\n  \"body\": \"You have been added to group 274\"\n}",
@@ -109,12 +113,18 @@
             "structuredValue": {
               "title": "Attention needed",
               "body": "You have been added to group 274"
+            },
+            "sourceMap": {
+              "path": "single-example.raml"
             }
           }
         }
       }
     ],
-    "title": "Single example"
+    "title": "Single example",
+    "sourceMap": {
+      "path": "single-example.raml"
+    }
   },
   "errors": []
 }

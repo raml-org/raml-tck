@@ -13,19 +13,19 @@
         "amazon-apigateway-integration": {
           "name": "amazon-apigateway-integration",
           "displayName": "amazon-apigateway-integration",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "number"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       }
@@ -35,29 +35,32 @@
         "amazon-apigateway-integration": {
           "name": "amazon-apigateway-integration",
           "displayName": "amazon-apigateway-integration",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "amazon-apigateway-integration"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiInvalid.raml"
           }
         }
       }
     ],
-    "usage": "Data types and annotation types for AWS API Gateway"
+    "usage": "Data types and annotation types for AWS API Gateway",
+    "sourceMap": {
+      "path": "apiInvalid.raml"
+    }
   },
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "number is expected",
+      "message": "Expected type 'number' but got 'string'",
       "path": "apiInvalid.raml",
       "range": {
         "start": {

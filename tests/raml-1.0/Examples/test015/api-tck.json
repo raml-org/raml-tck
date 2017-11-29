@@ -7,6 +7,7 @@
         "MyType1": {
           "name": "MyType1",
           "displayName": "MyType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -14,11 +15,11 @@
             "d": "a",
             "dd": "2"
           },
-          "required": true,
           "properties": {
             "/.*/": {
               "name": "/.*/",
               "displayName": "/.*/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -32,6 +33,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -43,11 +47,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"d\": \"a\",\n  \"dd\": \"2\"\n}",
@@ -56,6 +60,9 @@
             "structuredValue": {
               "d": "a",
               "dd": "2"
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
@@ -64,22 +71,22 @@
         "MyType2": {
           "name": "MyType2",
           "displayName": "MyType2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "MyType1"
           ],
           "example": {
             "x": "3"
           },
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"x\": \"3\"\n}",
@@ -87,12 +94,18 @@
             "name": null,
             "structuredValue": {
               "x": "3"
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
       }
     ],
-    "title": "Test API"
+    "title": "Test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {

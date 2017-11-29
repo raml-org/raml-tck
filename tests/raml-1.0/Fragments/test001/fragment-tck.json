@@ -2,6 +2,7 @@
   "ramlVersion": "RAML10",
   "type": "ObjectTypeDeclaration",
   "specification": {
+    "typePropertyKind": "TYPE_EXPRESSION",
     "type": [
       "object"
     ],
@@ -10,6 +11,7 @@
       "prop1": {
         "name": "prop1",
         "displayName": "prop1",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "number"
         ],
@@ -23,11 +25,15 @@
               "insertedAsDefault": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "fragment.raml"
         }
       },
       "prop2": {
         "name": "prop2",
         "displayName": "prop2",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "lib.ObjectType"
         ],
@@ -41,13 +47,19 @@
               "insertedAsDefault": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "fragment.raml"
         }
       }
     },
     "uses": [
       {
         "key": "lib",
-        "value": "lib/lib.raml"
+        "value": "lib/lib.raml",
+        "sourceMap": {
+          "path": "fragment.raml"
+        }
       }
     ],
     "__METADATA__": {
@@ -59,6 +71,9 @@
           "insertedAsDefault": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "fragment.raml"
     }
   },
   "errors": []

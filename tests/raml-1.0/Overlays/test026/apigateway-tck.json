@@ -5,7 +5,10 @@
     "uses": [
       {
         "key": "AWS",
-        "value": "aws-lib.raml"
+        "value": "aws-lib.raml",
+        "sourceMap": {
+          "path": "apigateway-aws-overlay.raml"
+        }
       }
     ],
     "securitySchemes": [
@@ -18,6 +21,7 @@
               "x-api-key": {
                 "name": "x-api-key",
                 "displayName": "x-api-key",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -34,9 +38,18 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "apigateway.raml"
                 }
               }
+            },
+            "sourceMap": {
+              "path": "apigateway.raml"
             }
+          },
+          "sourceMap": {
+            "path": "apigateway.raml"
           }
         }
       }
@@ -103,41 +116,43 @@
               "latitude": {
                 "name": "latitude",
                 "displayName": "latitude",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "number"
                 ],
                 "required": true,
                 "description": "Latitude component of location",
                 "format": "double",
-                "fixedFacets": {
-                  "format": "double"
-                },
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "apigateway.raml"
                 }
               },
               "longitude": {
                 "name": "longitude",
                 "displayName": "longitude",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "number"
                 ],
                 "required": true,
                 "description": "Longitude component of location",
                 "format": "double",
-                "fixedFacets": {
-                  "format": "double"
-                },
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "apigateway.raml"
                 }
               }
             },
@@ -151,12 +166,18 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "apigateway-aws-overlay.raml"
             }
           }
         ],
         "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
         "relativeUri": "/products",
         "displayName": "Product Types",
+        "sourceMap": {
+          "path": "apigateway-aws-overlay.raml"
+        },
         "relativeUriPathSegments": [
           "products"
         ],
@@ -170,6 +191,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "apigateway-aws-overlay.raml"
     }
   },
   "errors": []

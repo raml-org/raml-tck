@@ -7,14 +7,15 @@
         "Phone": {
           "name": "Phone",
           "displayName": "Phone",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "manufacturer": {
               "name": "manufacturer",
               "displayName": "manufacturer",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type.raml"
               }
             },
             "numberOfSIMCards": {
               "name": "numberOfSIMCards",
               "displayName": "numberOfSIMCards",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -46,11 +51,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type.raml"
               }
             },
             "kind": {
               "name": "kind",
               "displayName": "kind",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -64,6 +73,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type.raml"
               }
             }
           },
@@ -71,11 +83,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "union-type.raml"
           }
         }
       },
@@ -83,14 +95,15 @@
         "Notebook": {
           "name": "Notebook",
           "displayName": "Notebook",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "manufacturer": {
               "name": "manufacturer",
               "displayName": "manufacturer",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -104,11 +117,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type.raml"
               }
             },
             "numberOfUSBPorts": {
               "name": "numberOfUSBPorts",
               "displayName": "numberOfUSBPorts",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -122,11 +139,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type.raml"
               }
             },
             "kind": {
               "name": "kind",
               "displayName": "kind",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -140,6 +161,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "union-type.raml"
               }
             }
           },
@@ -147,11 +171,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "union-type.raml"
           }
         }
       },
@@ -159,24 +183,27 @@
         "Device": {
           "name": "Device",
           "displayName": "Device",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Phone | Notebook"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "union-type.raml"
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "union-type.raml"
+    }
   },
   "errors": []
 }

@@ -1,0 +1,266 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "uses": [
+      {
+        "key": "lib",
+        "value": "libA.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "lib.lib",
+        "value": "libB.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "types": [
+      {
+        "Monkey": {
+          "name": "Monkey",
+          "displayName": "Monkey",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "object"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "lib.lib.rt": {
+          "name": "lib.lib.rt",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "libB.raml"
+          },
+          "post": {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<param1>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              "application/xml": {
+                "name": "application/xml",
+                "displayName": "application/xml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<param2>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              "text/plain": {
+                "name": "text/plain",
+                "displayName": "text/plain",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "lib.lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              "atom/xml": {
+                "name": "atom/xml",
+                "displayName": "atom/xml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<param1>> | <<param2>> | lib.lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              }
+            },
+            "method": "post",
+            "sourceMap": {
+              "path": "libB.raml"
+            }
+          }
+        }
+      },
+      {
+        "lib.rt": {
+          "type": {
+            "lib.lib.rt": {
+              "param1": "<<param1>>",
+              "param2": "Monkey"
+            }
+          },
+          "name": "lib.rt",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "libA.raml"
+          }
+        }
+      }
+    ],
+    "title": "Test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              "application/xml": {
+                "name": "application/xml",
+                "displayName": "application/xml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              "text/plain": {
+                "name": "text/plain",
+                "displayName": "text/plain",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "lib.lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              },
+              "atom/xml": {
+                "name": "atom/xml",
+                "displayName": "atom/xml",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "Monkey | lib.Monkey | lib.lib.Monkey"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "libB.raml"
+                }
+              }
+            },
+            "method": "post",
+            "sourceMap": {
+              "path": "libB.raml"
+            }
+          }
+        ],
+        "type": {
+          "lib.rt": {
+            "param1": "Monkey"
+          }
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

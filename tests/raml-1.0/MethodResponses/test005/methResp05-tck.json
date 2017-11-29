@@ -7,19 +7,19 @@
         "account": {
           "name": "account",
           "displayName": "account",
+          "typePropertyKind": "JSON",
           "type": [
             "{\n  \"$schema\": \"http://json-schema.org/draft-03/schema\",\n  \"type\": \"object\" ,\n  \"properties\": {\n    \"username\": {\n      \"type\": \"string\"\n    },\n    \"id\": {\n      \"type\": \"string\"\n    }\n  }\n}\n"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "methResp05.raml"
           }
         }
       },
@@ -27,17 +27,18 @@
         "TypeBase": {
           "name": "TypeBase",
           "displayName": "TypeBase",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
           "example": {
             "id": "userId"
           },
-          "required": true,
           "properties": {
             "id": {
               "name": "id",
               "displayName": "id",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -51,6 +52,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "methResp05.raml"
               }
             }
           },
@@ -58,11 +62,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "methResp05.raml"
           },
           "structuredExample": {
             "value": "{\n  \"id\": \"userId\"\n}",
@@ -70,6 +74,9 @@
             "name": null,
             "structuredValue": {
               "id": "userId"
+            },
+            "sourceMap": {
+              "path": "methResp05.raml"
             }
           }
         }
@@ -78,6 +85,7 @@
         "TestType": {
           "name": "TestType",
           "displayName": "TestType",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "TypeBase"
           ],
@@ -85,11 +93,11 @@
             "id": "userId",
             "username": "name"
           },
-          "required": true,
           "properties": {
             "username": {
               "name": "username",
               "displayName": "username",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -103,6 +111,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "methResp05.raml"
               }
             }
           },
@@ -110,11 +121,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "methResp05.raml"
           },
           "structuredExample": {
             "value": "{\n  \"id\": \"userId\",\n  \"username\": \"name\"\n}",
@@ -123,6 +134,9 @@
             "structuredValue": {
               "id": "userId",
               "username": "name"
+            },
+            "sourceMap": {
+              "path": "methResp05.raml"
             }
           }
         }
@@ -140,6 +154,7 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "TestType"
                     ],
@@ -147,11 +162,11 @@
                       "username": "base",
                       "id": "any text"
                     },
-                    "required": true,
                     "properties": {
                       "additionalField": {
                         "name": "additionalField",
                         "displayName": "additionalField",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "string"
                         ],
@@ -160,11 +175,11 @@
                           "primitiveValuesMeta": {
                             "displayName": {
                               "calculated": true
-                            },
-                            "required": {
-                              "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "methResp05.raml"
                         }
                       }
                     },
@@ -172,11 +187,11 @@
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "methResp05.raml"
                     },
                     "structuredExample": {
                       "value": "{\n  \"username\": \"base\",\n  \"id\": \"any text\"\n}",
@@ -185,13 +200,22 @@
                       "structuredValue": {
                         "username": "base",
                         "id": "any text"
+                      },
+                      "sourceMap": {
+                        "path": "methResp05.raml"
                       }
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "methResp05.raml"
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "methResp05.raml"
+            }
           }
         ],
         "relativeUri": "/test",
@@ -203,12 +227,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "methResp05.raml"
+        },
         "relativeUriPathSegments": [
           "test"
         ],
         "absoluteUri": "/test"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "methResp05.raml"
+    }
   },
   "errors": []
 }

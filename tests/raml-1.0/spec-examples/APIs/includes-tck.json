@@ -7,10 +7,10 @@
         "Users": {
           "name": "Users",
           "displayName": "Users",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -18,11 +18,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "myTypes.raml"
           }
         }
       },
@@ -30,10 +30,10 @@
         "User": {
           "name": "User",
           "displayName": "User",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -41,16 +41,19 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "myTypes.raml"
           }
         }
       }
     ],
-    "title": "My API with Types"
+    "title": "My API with Types",
+    "sourceMap": {
+      "path": "includes.raml"
+    }
   },
   "errors": []
 }

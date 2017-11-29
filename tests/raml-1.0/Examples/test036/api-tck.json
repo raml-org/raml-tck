@@ -7,17 +7,18 @@
         "ItsComplicated": {
           "name": "ItsComplicated",
           "displayName": "ItsComplicated",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
           "example": {
             "prop1": "stringValue"
           },
-          "required": true,
           "properties": {
             "/.*/": {
               "name": "/.*/",
               "displayName": "/.*/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string[] | string"
               ],
@@ -31,6 +32,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -41,11 +45,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"prop1\": \"stringValue\"\n}",
@@ -53,12 +57,18 @@
             "name": null,
             "structuredValue": {
               "prop1": "stringValue"
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
       }
     ],
-    "title": "Api"
+    "title": "Api",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": []
 }

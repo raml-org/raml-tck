@@ -14,8 +14,9 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
-                      "object"
+                      "any"
                     ],
                     "examples": [
                       {
@@ -26,10 +27,12 @@
                           "content": {
                             "name": 7
                           }
+                        },
+                        "sourceMap": {
+                          "path": "NewOverlay.raml"
                         }
                       }
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
@@ -37,17 +40,23 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "NewOverlay.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "NewOverlay.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "NewOverlay.raml"
+            }
           }
         ],
         "relativeUri": "/resource",
@@ -59,13 +68,19 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "NewOverlay.raml"
+        },
         "relativeUriPathSegments": [
           "resource"
         ],
         "absoluteUri": "/resource"
       }
     ],
-    "extends": "api.raml"
+    "extends": "api.raml",
+    "sourceMap": {
+      "path": "NewOverlay.raml"
+    }
   },
   "errors": []
 }

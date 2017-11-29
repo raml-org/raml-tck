@@ -7,14 +7,15 @@
         "Email": {
           "name": "Email",
           "displayName": "Email",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,6 +29,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "array-type-expanded.raml"
               }
             }
           },
@@ -35,11 +39,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "array-type-expanded.raml"
           }
         }
       },
@@ -47,44 +51,32 @@
         "Emails": {
           "name": "Emails",
           "displayName": "Emails",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "array"
           ],
-          "required": true,
           "uniqueItems": true,
-          "items": {
-            "name": "items",
-            "displayName": "items",
-            "type": [
-              "Email"
-            ],
-            "required": true,
-            "__METADATA__": {
-              "primitiveValuesMeta": {
-                "displayName": {
-                  "calculated": true
-                },
-                "required": {
-                  "insertedAsDefault": true
-                }
-              }
-            }
-          },
+          "items": [
+            "Email"
+          ],
           "minItems": 1,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "array-type-expanded.raml"
           }
         }
       }
     ],
-    "title": "Expanded Array Type with Example"
+    "title": "Expanded Array Type with Example",
+    "sourceMap": {
+      "path": "array-type-expanded.raml"
+    }
   },
   "errors": []
 }

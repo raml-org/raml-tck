@@ -7,14 +7,15 @@
         "MyType": {
           "name": "MyType",
           "displayName": "MyType",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "x": {
               "name": "x",
               "displayName": "x",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,6 +29,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -38,11 +42,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
@@ -53,7 +57,10 @@
       {
         "methods": [
           {
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           },
           {
             "responses": {
@@ -63,14 +70,15 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "object"
                     ],
-                    "required": true,
                     "properties": {
                       "hello": {
                         "name": "hello",
                         "displayName": "hello",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "number"
                         ],
@@ -78,9 +86,6 @@
                         "minimum": 0,
                         "maximum": 10,
                         "format": "int",
-                        "fixedFacets": {
-                          "format": "int"
-                        },
                         "__METADATA__": {
                           "primitiveValuesMeta": {
                             "displayName": {
@@ -90,11 +95,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "api.raml"
                         }
                       },
                       "key": {
                         "name": "key",
                         "displayName": "key",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "object"
                         ],
@@ -106,6 +115,7 @@
                           "x": {
                             "name": "x",
                             "displayName": "x",
+                            "typePropertyKind": "TYPE_EXPRESSION",
                             "type": [
                               "string"
                             ],
@@ -119,6 +129,9 @@
                                   "insertedAsDefault": true
                                 }
                               }
+                            },
+                            "sourceMap": {
+                              "path": "api.raml"
                             }
                           }
                         },
@@ -132,12 +145,18 @@
                             }
                           }
                         },
+                        "sourceMap": {
+                          "path": "api.raml"
+                        },
                         "structuredExample": {
                           "value": "{\n  \"x2\": 123\n}",
                           "strict": true,
                           "name": null,
                           "structuredValue": {
                             "x2": 123
+                          },
+                          "sourceMap": {
+                            "path": "api.raml"
                           }
                         }
                       }
@@ -146,35 +165,41 @@
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   },
                   "application/xml": {
                     "name": "application/xml",
                     "displayName": "application/xml",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "string"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         ],
         "relativeUri": "/hello",
@@ -185,6 +210,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "api.raml"
         },
         "relativeUriPathSegments": [
           "hello"
@@ -201,12 +229,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "api.raml"
+        },
         "relativeUriPathSegments": [
           "world"
         ],
         "absoluteUri": "/world"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {

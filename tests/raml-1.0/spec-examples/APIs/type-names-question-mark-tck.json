@@ -7,14 +7,15 @@
         "profile": {
           "name": "profile",
           "displayName": "profile",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "preference?": {
               "name": "preference?",
               "displayName": "preference?",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-names-question-mark.raml"
               }
             },
             "foto?": {
               "name": "foto?",
               "displayName": "foto?",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -46,11 +51,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-names-question-mark.raml"
               }
             },
             "description?": {
               "name": "description?",
               "displayName": "description?",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -62,16 +71,17 @@
                   },
                   "type": {
                     "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-names-question-mark.raml"
               }
             },
             "link": {
               "name": "link",
               "displayName": "link",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -83,11 +93,11 @@
                   },
                   "type": {
                     "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-names-question-mark.raml"
               }
             }
           },
@@ -98,17 +108,20 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "type-names-question-mark.raml"
           }
         }
       }
     ],
     "title": "My API With Types",
-    "description": "This RAML illustrates a type properties that includes a question mark in its\nname. The expections here is that the question mark is part of the\nproperty name if either required is explicitly applied to the\nproperty or someone uses ??. Otherwise, the question mark indicates an optional\nproperty.\n"
+    "description": "This RAML illustrates a type properties that includes a question mark in its\nname. The expections here is that the question mark is part of the\nproperty name if either required is explicitly applied to the\nproperty or someone uses ??. Otherwise, the question mark indicates an optional\nproperty.\n",
+    "sourceMap": {
+      "path": "type-names-question-mark.raml"
+    }
   },
   "errors": []
 }

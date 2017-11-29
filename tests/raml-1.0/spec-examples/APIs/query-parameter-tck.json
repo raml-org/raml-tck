@@ -9,6 +9,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -32,6 +33,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "query-parameter.raml"
         }
       }
     },
@@ -46,6 +50,7 @@
               "page": {
                 "name": "page",
                 "displayName": "page",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "integer"
                 ],
@@ -59,16 +64,23 @@
                     }
                   }
                 },
+                "sourceMap": {
+                  "path": "query-parameter.raml"
+                },
                 "structuredExample": {
                   "value": "1",
                   "strict": true,
                   "name": null,
-                  "structuredValue": 1
+                  "structuredValue": 1,
+                  "sourceMap": {
+                    "path": "query-parameter.raml"
+                  }
                 }
               },
               "per_page": {
                 "name": "per_page",
                 "displayName": "per_page",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "integer"
                 ],
@@ -88,11 +100,17 @@
                     }
                   }
                 },
+                "sourceMap": {
+                  "path": "query-parameter.raml"
+                },
                 "structuredExample": {
                   "value": "50",
                   "strict": true,
                   "name": null,
-                  "structuredValue": 50
+                  "structuredValue": 50,
+                  "sourceMap": {
+                    "path": "query-parameter.raml"
+                  }
                 }
               }
             },
@@ -107,6 +125,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "query-parameter.raml"
             }
           }
         ],
@@ -118,6 +139,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "query-parameter.raml"
         },
         "relativeUriPathSegments": [
           "users"
@@ -131,6 +155,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "query-parameter.raml"
     }
   },
   "errors": []

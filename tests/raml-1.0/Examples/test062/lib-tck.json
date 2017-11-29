@@ -7,30 +7,36 @@
         "MyBooleanType": {
           "name": "MyBooleanType",
           "displayName": "MyBooleanType",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "boolean"
           ],
           "example": false,
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "lib.raml"
           },
           "structuredExample": {
             "value": "false",
             "strict": true,
             "name": null,
-            "structuredValue": false
+            "structuredValue": false,
+            "sourceMap": {
+              "path": "lib.raml"
+            }
           }
         }
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "lib.raml"
+    }
   },
   "errors": []
 }

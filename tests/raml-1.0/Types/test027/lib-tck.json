@@ -7,19 +7,19 @@
         "Foo": {
           "name": "Foo",
           "displayName": "Foo",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "integer|number"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "lib.raml"
           }
         }
       },
@@ -27,10 +27,10 @@
         "Bar": {
           "name": "Bar",
           "displayName": "Bar",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Foo"
           ],
-          "required": true,
           "fixedFacets": {
             "maximum": 2,
             "minimum": 1
@@ -39,15 +39,18 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "lib.raml"
           }
         }
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "lib.raml"
+    }
   },
   "errors": []
 }

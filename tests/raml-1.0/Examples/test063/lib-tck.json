@@ -7,14 +7,15 @@
         "T1": {
           "name": "T1",
           "displayName": "T1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "p1": {
               "name": "p1",
               "displayName": "p1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "lib.raml"
               }
             },
             "p2": {
               "name": "p2",
               "displayName": "p2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "lib.raml"
               }
             }
           },
@@ -56,11 +64,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "lib.raml"
           }
         }
       }
@@ -76,6 +84,7 @@
               "application/json": {
                 "name": "application/json",
                 "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "T1"
                 ],
@@ -83,16 +92,15 @@
                   "p1": "stringValue",
                   "p2": 10
                 },
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "lib.raml"
                 },
                 "structuredExample": {
                   "value": "{\n  \"p1\": \"stringValue\",\n  \"p2\": 10\n}",
@@ -101,11 +109,17 @@
                   "structuredValue": {
                     "p1": "stringValue",
                     "p2": 10
+                  },
+                  "sourceMap": {
+                    "path": "lib.raml"
                   }
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "lib.raml"
+            }
           }
         ],
         "relativeUri": "/customer",
@@ -117,12 +131,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "lib.raml"
+        },
         "relativeUriPathSegments": [
           "customer"
         ],
         "absoluteUri": "/customer"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "lib.raml"
+    }
   },
   "errors": []
 }

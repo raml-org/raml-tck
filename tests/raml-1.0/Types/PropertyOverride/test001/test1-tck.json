@@ -7,14 +7,15 @@
         "Feature": {
           "name": "Feature",
           "displayName": "Feature",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "type": {
               "name": "type",
               "displayName": "type",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -31,11 +32,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             },
             "geometry": {
               "name": "geometry",
               "displayName": "geometry",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -49,11 +54,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             },
             "properties": {
               "name": "properties",
               "displayName": "properties",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -67,6 +76,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             }
           },
@@ -74,11 +86,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test1.raml"
           }
         }
       },
@@ -86,14 +98,15 @@
         "ZoomEmbed": {
           "name": "ZoomEmbed",
           "displayName": "ZoomEmbed",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "_embeds": {
               "name": "_embeds",
               "displayName": "_embeds",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -103,17 +116,18 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               },
               "items": "object"
             },
             "_links": {
               "name": "_links",
               "displayName": "_links",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -125,6 +139,9 @@
                     "calculated": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             }
           },
@@ -135,11 +152,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test1.raml"
           }
         }
       },
@@ -147,15 +164,16 @@
         "Scene": {
           "name": "Scene",
           "displayName": "Scene",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "ZoomEmbed",
             "Feature"
           ],
-          "required": true,
           "properties": {
             "id": {
               "name": "id",
               "displayName": "id",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -169,6 +187,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             }
           },
@@ -176,11 +197,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test1.raml"
           }
         }
       },
@@ -188,14 +209,15 @@
         "PlanetScene": {
           "name": "PlanetScene",
           "displayName": "PlanetScene",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Scene"
           ],
-          "required": true,
           "properties": {
             "properties": {
               "name": "properties",
               "displayName": "properties",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "PlanetProperties"
               ],
@@ -209,11 +231,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             },
             "_links": {
               "name": "_links",
               "displayName": "_links",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -223,6 +249,7 @@
                 "licenses": {
                   "name": "licenses",
                   "displayName": "licenses",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "ResourceURL"
                   ],
@@ -236,6 +263,9 @@
                         "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "test1.raml"
                   }
                 }
               },
@@ -248,6 +278,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             }
           },
@@ -255,11 +288,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test1.raml"
           }
         }
       },
@@ -267,14 +300,15 @@
         "BaseProperties": {
           "name": "BaseProperties",
           "displayName": "BaseProperties",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "acquired": {
               "name": "acquired",
               "displayName": "acquired",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "datetime"
               ],
@@ -288,6 +322,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             }
           },
@@ -298,11 +335,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test1.raml"
           }
         }
       },
@@ -310,14 +347,15 @@
         "PlanetProperties": {
           "name": "PlanetProperties",
           "displayName": "PlanetProperties",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "BaseProperties"
           ],
-          "required": true,
           "properties": {
             "vnd_camera_gain": {
               "name": "vnd_camera_gain",
               "displayName": "vnd_camera_gain",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -332,6 +370,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "test1.raml"
               }
             }
           },
@@ -339,11 +380,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test1.raml"
           }
         }
       },
@@ -351,20 +392,20 @@
         "ResourceURL": {
           "name": "ResourceURL",
           "displayName": "ResourceURL",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "description": "A URL to a related resource.",
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "test1.raml"
           }
         }
       }
@@ -391,6 +432,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "test1.raml"
             }
           }
         ],
@@ -411,6 +455,9 @@
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "test1.raml"
                 }
               }
             ],
@@ -427,6 +474,7 @@
                           "application/json": {
                             "name": "application/json",
                             "displayName": "application/json",
+                            "typePropertyKind": "TYPE_EXPRESSION",
                             "type": [
                               "array"
                             ],
@@ -445,16 +493,15 @@
                                 }
                               }
                             ],
-                            "required": true,
                             "__METADATA__": {
                               "primitiveValuesMeta": {
                                 "displayName": {
                                   "calculated": true
-                                },
-                                "required": {
-                                  "insertedAsDefault": true
                                 }
                               }
+                            },
+                            "sourceMap": {
+                              "path": "test1.raml"
                             },
                             "structuredExample": {
                               "value": "[\n  {\n    \"id\": \"foo\",\n    \"type\": \"Feature\",\n    \"geometry\": {},\n    \"properties\": {\n      \"acquired\": \"2016-02-28T16:41:41.090Z\",\n      \"vnd_camera_gain\": 5\n    },\n    \"_embeds\": [],\n    \"_links\": {\n      \"licenses\": \"https://api.planet.com/v1/scenes/foo/licenses\"\n    }\n  }\n]",
@@ -474,10 +521,16 @@
                                     "licenses": "https://api.planet.com/v1/scenes/foo/licenses"
                                   }
                                 }
-                              ]
+                              ],
+                              "sourceMap": {
+                                "path": "test1.raml"
+                              }
                             },
                             "items": "PlanetScene"
                           }
+                        },
+                        "sourceMap": {
+                          "path": "test1.raml"
                         }
                       }
                     },
@@ -492,6 +545,9 @@
                           "calculated": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "test1.raml"
                     }
                   }
                 ],
@@ -503,6 +559,9 @@
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "test1.raml"
                 },
                 "relativeUriPathSegments": [
                   "planetscope"
@@ -517,6 +576,9 @@
                 }
               }
             },
+            "sourceMap": {
+              "path": "test1.raml"
+            },
             "relativeUriPathSegments": [
               "scenes"
             ],
@@ -530,12 +592,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "test1.raml"
+        },
         "relativeUriPathSegments": [
           "v1"
         ],
         "absoluteUri": "http://api.planet.com/v1"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "test1.raml"
+    }
   },
   "errors": [
     {

@@ -1,0 +1,258 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "resourceTypes": [
+      {
+        "rt1": {
+          "name": "rt1",
+          "sourceMap": {
+            "path": "api.raml"
+          },
+          "put": {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<type2>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        }
+      },
+      {
+        "rt2": {
+          "type": {
+            "rt1": {
+              "type2": "<<type1>>"
+            }
+          },
+          "name": "rt2",
+          "sourceMap": {
+            "path": "api.raml"
+          },
+          "delete": {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<type1>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "delete",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        }
+      }
+    ],
+    "title": "test",
+    "mediaType": "application/json",
+    "resources": [
+      {
+        "methods": [
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "invalidType"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "delete",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "invalidType"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "rt2": {
+            "type1": "invalidType"
+          }
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": [
+    {
+      "code": "INHERITING_UNKNOWN_TYPE",
+      "message": "Inheriting from unknown type",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 6,
+          "position": 90
+        },
+        "end": {
+          "line": 8,
+          "column": 10,
+          "position": 94
+        }
+      },
+      "trace": [
+        {
+          "code": "INHERITING_UNKNOWN_TYPE",
+          "message": "Inheriting from unknown type",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 12,
+              "column": 15,
+              "position": 149
+            },
+            "end": {
+              "line": 12,
+              "column": 24,
+              "position": 158
+            }
+          },
+          "trace": [
+            {
+              "code": "INHERITING_UNKNOWN_TYPE",
+              "message": "Inheriting from unknown type",
+              "path": "api.raml",
+              "range": {
+                "start": {
+                  "line": 17,
+                  "column": 24,
+                  "position": 229
+                },
+                "end": {
+                  "line": 17,
+                  "column": 37,
+                  "position": 242
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "INHERITING_UNKNOWN_TYPE",
+      "message": "Inheriting from unknown type",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 6,
+          "position": 177
+        },
+        "end": {
+          "line": 14,
+          "column": 10,
+          "position": 181
+        }
+      },
+      "trace": [
+        {
+          "code": "INHERITING_UNKNOWN_TYPE",
+          "message": "Inheriting from unknown type",
+          "path": "api.raml",
+          "range": {
+            "start": {
+              "line": 17,
+              "column": 24,
+              "position": 229
+            },
+            "end": {
+              "line": 17,
+              "column": 37,
+              "position": 242
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

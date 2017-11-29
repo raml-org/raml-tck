@@ -2,6 +2,7 @@
   "ramlVersion": "RAML10",
   "type": "ObjectTypeDeclaration",
   "specification": {
+    "typePropertyKind": "TYPE_EXPRESSION",
     "type": [
       "object"
     ],
@@ -10,6 +11,7 @@
       "first": {
         "name": "first",
         "displayName": "first",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -23,11 +25,15 @@
               "insertedAsDefault": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "DataType.raml"
         }
       },
       "second": {
         "name": "second",
         "displayName": "second",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -41,6 +47,9 @@
               "insertedAsDefault": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "DataType.raml"
         }
       }
     },
@@ -53,6 +62,9 @@
           "insertedAsDefault": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "DataType.raml"
     }
   },
   "errors": []

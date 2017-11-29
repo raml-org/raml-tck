@@ -1,0 +1,55 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "annotationTypes": [
+      {
+        "a1": {
+          "name": "a1",
+          "displayName": "a1",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "string"
+          ],
+          "allowedTargets": [
+            "API",
+            "DocumentationItem",
+            "Resource",
+            "Method",
+            "Response",
+            "RequestBody",
+            "ResponseBody",
+            "TypeDeclaration",
+            "Example",
+            "ResourceType",
+            "Trait",
+            "SecurityScheme",
+            "SecuritySchemeSettings",
+            "AnnotationType",
+            "Library",
+            "Overlay",
+            "Extension"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "title": "test API",
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

@@ -7,11 +7,11 @@
         "amazon-apigateway-method": {
           "name": "amazon-apigateway-method",
           "displayName": "amazon-apigateway-method",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
           "example": "POST",
-          "required": true,
           "enum": [
             "GET",
             "PATCH",
@@ -24,17 +24,20 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "POST",
             "strict": true,
             "name": null,
-            "structuredValue": "POST"
+            "structuredValue": "POST",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         }
       },
@@ -42,10 +45,10 @@
         "amazon-apigateway-status": {
           "name": "amazon-apigateway-status",
           "displayName": "amazon-apigateway-status",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "pattern": "^[12345]\\d\\d$",
           "__METADATA__": {
             "primitiveValuesMeta": {
@@ -54,11 +57,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -66,14 +69,15 @@
         "amazon-apigateway-templates": {
           "name": "amazon-apigateway-templates",
           "displayName": "amazon-apigateway-templates",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "/\\w+/\\w+/": {
               "name": "/\\w+/\\w+/",
               "displayName": "/\\w+/\\w+/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -90,6 +94,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -100,11 +107,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -112,10 +119,10 @@
         "amazon-apigateway-auth-type": {
           "name": "amazon-apigateway-auth-type",
           "displayName": "amazon-apigateway-auth-type",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "enum": [
             "aws_iam"
           ],
@@ -126,11 +133,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -138,14 +145,15 @@
         "amazon-apigateway-integration-lambda": {
           "name": "amazon-apigateway-integration-lambda",
           "displayName": "amazon-apigateway-integration-lambda",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "type": {
               "name": "type",
               "displayName": "type",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -165,6 +173,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -175,11 +186,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -187,14 +198,15 @@
         "amazon-apigateway-integration-HTTP": {
           "name": "amazon-apigateway-integration-HTTP",
           "displayName": "amazon-apigateway-integration-HTTP",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "type": {
               "name": "type",
               "displayName": "type",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -214,6 +226,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -224,11 +239,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -236,14 +251,15 @@
         "amazon-apigateway-integration-mock": {
           "name": "amazon-apigateway-integration-mock",
           "displayName": "amazon-apigateway-integration-mock",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "type": {
               "name": "type",
               "displayName": "type",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -263,6 +279,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -273,11 +292,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -285,6 +304,7 @@
         "amazon-apigateway-integration-aws": {
           "name": "amazon-apigateway-integration-aws",
           "displayName": "amazon-apigateway-integration-aws",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -326,11 +346,11 @@
               }
             }
           },
-          "required": true,
           "properties": {
             "type": {
               "name": "type",
               "displayName": "type",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -350,11 +370,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "uri": {
               "name": "uri",
               "displayName": "uri",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -371,11 +395,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "httpMethod": {
               "name": "httpMethod",
               "displayName": "httpMethod",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "amazon-apigateway-method"
               ],
@@ -389,11 +417,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "credentials": {
               "name": "credentials",
               "displayName": "credentials",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -410,11 +442,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "requestTemplates": {
               "name": "requestTemplates",
               "displayName": "requestTemplates",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "amazon-apigateway-templates"
               ],
@@ -428,11 +464,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "requestParameters": {
               "name": "requestParameters",
               "displayName": "requestParameters",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -446,11 +486,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "cacheNamespace": {
               "name": "cacheNamespace",
               "displayName": "cacheNamespace",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -467,11 +511,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "cacheKeyParameters": {
               "name": "cacheKeyParameters",
               "displayName": "cacheKeyParameters",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -486,11 +534,15 @@
                   }
                 }
               },
+              "sourceMap": {
+                "path": "api.raml"
+              },
               "items": "string"
             },
             "responses": {
               "name": "responses",
               "displayName": "responses",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -499,6 +551,7 @@
                 "/.*/": {
                   "name": "/.*/",
                   "displayName": "/.*/",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "object"
                   ],
@@ -507,6 +560,7 @@
                     "statusCode": {
                       "name": "statusCode",
                       "displayName": "statusCode",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "amazon-apigateway-status"
                       ],
@@ -520,11 +574,15 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "api.raml"
                       }
                     },
                     "responseParameters": {
                       "name": "responseParameters",
                       "displayName": "responseParameters",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "object"
                       ],
@@ -538,11 +596,15 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "api.raml"
                       }
                     },
                     "responseTemplates": {
                       "name": "responseTemplates",
                       "displayName": "responseTemplates",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "amazon-apigateway-templates"
                       ],
@@ -556,6 +618,9 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "api.raml"
                       }
                     }
                   },
@@ -571,6 +636,9 @@
                         "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 }
               },
@@ -586,6 +654,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -596,11 +667,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"type\": \"aws\",\n  \"uri\": \"arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:ACCOUNT_ID:function:myFunction/invocations\",\n  \"httpMethod\": \"POST\",\n  \"credentials\": \"arn:aws:iam::ACCOUNT_ID:role/lambda_exec_role\",\n  \"requestTemplates\": {\n    \"application/json\": \"json request template 2\",\n    \"application/xml\": \"xml request template 2\"\n  },\n  \"requestParameters\": {\n    \"integration.request.path.integrationPathParam\": \"method.request.querystring.latitude\",\n    \"integration.request.querystring.integrationQueryParam\": \"method.request.querystring.longitude\"\n  },\n  \"cacheNamespace\": \"cache namespace\",\n  \"cacheKeyParameters\": [],\n  \"responses\": {\n    \"2\\\\d{2}\": {\n      \"statusCode\": \"200\",\n      \"responseParameters\": {\n        \"method.response.header.test-method-response-header\": \"integration.response.header.integrationResponseHeaderParam1\"\n      },\n      \"responseTemplates\": {\n        \"application/json\": \"json 200 response template\",\n        \"application/xml\": \"xml 200 response template\"\n      }\n    },\n    \"default\": {\n      \"statusCode\": \"400\",\n      \"responseParameters\": {\n        \"method.response.header.test-method-response-header\": \"'static value'\"\n      },\n      \"responseTemplates\": {\n        \"application/json\": \"json 400 response template\",\n        \"application/xml\": \"xml 400 response template\"\n      }\n    }\n  }\n}",
@@ -643,6 +714,9 @@
                   }
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
@@ -661,6 +735,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "api.raml"
     }
   },
   "errors": []

@@ -7,19 +7,19 @@
         "z": {
           "name": "z",
           "displayName": "z",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "number"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       }
@@ -32,6 +32,9 @@
           "name": "z"
         }
       ]
+    },
+    "sourceMap": {
+      "path": "apiValid.raml"
     }
   },
   "errors": []

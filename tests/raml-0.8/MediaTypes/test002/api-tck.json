@@ -1,0 +1,82 @@
+{
+  "ramlVersion": "RAML08",
+  "type": "Api",
+  "specification": {
+    "title": "Test Api",
+    "resources": [
+      {
+        "relativeUri": "/rere",
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/x-www-form-urlencoded": {
+                    "name": "application/x-www-form-urlencoded",
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "body": {
+              "application/x-www-form-urlencoded": {
+                "name": "application/x-www-form-urlencoded",
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "put",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "displayName": "/rere",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "rere"
+        ],
+        "absoluteUri": "/rere"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": [
+    {
+      "code": "FORM_IN_RESPONSE",
+      "message": "Form related media types can not be used in responses",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 10,
+          "position": 143
+        },
+        "end": {
+          "line": 10,
+          "column": 43,
+          "position": 176
+        }
+      },
+      "isWarning": true
+    }
+  ]
+}

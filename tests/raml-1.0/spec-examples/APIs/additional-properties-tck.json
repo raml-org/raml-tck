@@ -7,14 +7,15 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -25,11 +26,15 @@
                     "calculated": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "additional-properties.raml"
               }
             },
             "age": {
               "name": "age",
               "displayName": "age",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -40,11 +45,15 @@
                     "calculated": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "additional-properties.raml"
               }
             },
             "//": {
               "name": "//",
               "displayName": "//",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -58,6 +67,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "additional-properties.raml"
               }
             }
           },
@@ -68,17 +80,20 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "additional-properties.raml"
           }
         }
       }
     ],
     "title": "My API With Types",
-    "description": "This RAML illustrates an example to restrict all additional properties to be string.\n"
+    "description": "This RAML illustrates an example to restrict all additional properties to be string.\n",
+    "sourceMap": {
+      "path": "additional-properties.raml"
+    }
   },
   "errors": []
 }

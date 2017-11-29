@@ -7,14 +7,15 @@
         "Method": {
           "name": "Method",
           "displayName": "Method",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,6 +29,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "oType13.raml"
               }
             }
           },
@@ -35,11 +39,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "oType13.raml"
           }
         }
       },
@@ -47,6 +51,7 @@
         "Resource": {
           "name": "Resource",
           "displayName": "Resource",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -58,11 +63,11 @@
               "name": "create method"
             }
           },
-          "required": true,
           "properties": {
             "/post|get|put/": {
               "name": "/post|get|put/",
               "displayName": "/post|get|put/",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Method"
               ],
@@ -76,6 +81,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "oType13.raml"
               }
             }
           },
@@ -83,11 +91,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "oType13.raml"
           },
           "structuredExample": {
             "value": "{\n  \"put\": {\n    \"name\": \"update method\"\n  },\n  \"post\": {\n    \"name\": \"create method\"\n  }\n}",
@@ -100,12 +108,18 @@
               "post": {
                 "name": "create method"
               }
+            },
+            "sourceMap": {
+              "path": "oType13.raml"
             }
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "oType13.raml"
+    }
   },
   "errors": []
 }

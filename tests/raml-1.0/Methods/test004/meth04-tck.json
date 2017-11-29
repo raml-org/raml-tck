@@ -7,19 +7,19 @@
         "TestSchema": {
           "name": "TestSchema",
           "displayName": "TestSchema",
+          "typePropertyKind": "JSON",
           "type": [
             "{\n  \"$schema\": \"http://json-schema.org/draft-03/schema\",\n  \"type\": \"object\" ,\n  \"properties\": {\n    \"type\": {\n      \"type\": \"string\"\n    }\n  }\n}\n"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "meth04.raml"
           }
         }
       }
@@ -32,10 +32,11 @@
             "responses": {
               "203": {
                 "code": "203",
-                "headers": [
-                  {
+                "headers": {
+                  "Retry-After": {
                     "name": "Retry-After",
                     "displayName": "Retry-After",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "integer"
                     ],
@@ -49,40 +50,49 @@
                         }
                       }
                     },
+                    "sourceMap": {
+                      "path": "meth04.raml"
+                    },
                     "structuredExample": {
                       "value": "10",
                       "strict": true,
                       "name": null,
-                      "structuredValue": 10
+                      "structuredValue": 10,
+                      "sourceMap": {
+                        "path": "meth04.raml"
+                      }
                     }
                   }
-                ]
+                },
+                "sourceMap": {
+                  "path": "meth04.raml"
+                }
               }
             },
             "body": {
               "application/json": {
                 "name": "application/json",
                 "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "schema": [
                   "TestSchema"
                 ],
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "type": {
-                      "insertedAsDefault": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "meth04.raml"
                 }
               }
             },
-            "method": "post"
+            "method": "post",
+            "sourceMap": {
+              "path": "meth04.raml"
+            }
           }
         ],
         "relativeUri": "/test",
@@ -94,12 +104,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "meth04.raml"
+        },
         "relativeUriPathSegments": [
           "test"
         ],
         "absoluteUri": "/test"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "meth04.raml"
+    }
   },
   "errors": []
 }

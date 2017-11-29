@@ -8,6 +8,7 @@
       "mediaType": {
         "name": "mediaType",
         "displayName": "mediaType",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -25,6 +26,9 @@
               "insertedAsDefault": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "api.raml"
         }
       }
     },
@@ -32,7 +36,10 @@
       "HTTP",
       "HTTPS"
     ],
-    "mediaType": "application/json"
+    "mediaType": "application/json",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": []
 }

@@ -1,0 +1,261 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "ObjectTypeDeclaration",
+  "specification": {
+    "displayName": "Test Type",
+    "typePropertyKind": "INPLACE",
+    "required": true,
+    "properties": {
+      "ownProp1": {
+        "name": "ownProp1",
+        "displayName": "Test Property Type",
+        "typePropertyKind": "TYPE_EXPRESSION",
+        "type": [
+          "object"
+        ],
+        "required": true,
+        "properties": {
+          "p3": {
+            "name": "p3",
+            "displayName": "p3",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "dependencies/ownPropertyType.raml"
+            }
+          },
+          "p4": {
+            "name": "p4",
+            "displayName": "p4",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "type": [
+              "number"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "dependencies/ownPropertyType.raml"
+            }
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "type": {
+              "insertedAsDefault": true
+            },
+            "required": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "dependencies/ownPropertyType.raml"
+        }
+      },
+      "ownProp2": {
+        "name": "ownProp2",
+        "displayName": "ownProp2",
+        "typePropertyKind": "INPLACE",
+        "required": true,
+        "properties": {
+          "p5": {
+            "name": "p5",
+            "displayName": "p5",
+            "typePropertyKind": "TYPE_EXPRESSION",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "type.raml"
+            }
+          }
+        },
+        "type": {
+          "name": "type",
+          "displayName": "Test Property Type",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "object"
+          ],
+          "properties": {
+            "p3": {
+              "name": "p3",
+              "displayName": "p3",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "dependencies/ownPropertyType.raml"
+              }
+            },
+            "p4": {
+              "name": "p4",
+              "displayName": "p4",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "number"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "dependencies/ownPropertyType.raml"
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "type": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "dependencies/ownPropertyType.raml"
+          }
+        },
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            },
+            "required": {
+              "insertedAsDefault": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "type.raml"
+        }
+      }
+    },
+    "type": {
+      "name": "type",
+      "displayName": "Test Supertype",
+      "typePropertyKind": "TYPE_EXPRESSION",
+      "type": [
+        "object"
+      ],
+      "properties": {
+        "p1": {
+          "name": "p1",
+          "displayName": "p1",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "string"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "dependencies/supertype.raml"
+          }
+        },
+        "p2": {
+          "name": "p2",
+          "displayName": "p2",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "number"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "dependencies/supertype.raml"
+          }
+        }
+      },
+      "__METADATA__": {
+        "primitiveValuesMeta": {
+          "type": {
+            "insertedAsDefault": true
+          }
+        }
+      },
+      "sourceMap": {
+        "path": "dependencies/supertype.raml"
+      }
+    },
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "required": {
+          "insertedAsDefault": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "type.raml"
+    }
+  },
+  "errors": []
+}

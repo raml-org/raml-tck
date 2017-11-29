@@ -7,26 +7,29 @@
         "birthday": {
           "name": "birthday",
           "displayName": "birthday",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "date-only"
           ],
           "example": "2015-05-23",
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "date-types.raml"
           },
           "structuredExample": {
             "value": "2015-05-23",
             "strict": true,
             "name": null,
-            "structuredValue": "2015-05-23"
+            "structuredValue": "2015-05-23",
+            "sourceMap": {
+              "path": "date-types.raml"
+            }
           }
         }
       },
@@ -34,26 +37,29 @@
         "lunchtime": {
           "name": "lunchtime",
           "displayName": "lunchtime",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "time-only"
           ],
           "example": "12:30:00",
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "date-types.raml"
           },
           "structuredExample": {
             "value": "12:30:00",
             "strict": true,
             "name": null,
-            "structuredValue": "12:30:00"
+            "structuredValue": "12:30:00",
+            "sourceMap": {
+              "path": "date-types.raml"
+            }
           }
         }
       },
@@ -61,26 +67,29 @@
         "fireworks": {
           "name": "fireworks",
           "displayName": "fireworks",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "datetime-only"
           ],
           "example": "2015-07-04T21:00:00",
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "date-types.raml"
           },
           "structuredExample": {
             "value": "2015-07-04T21:00:00",
             "strict": true,
             "name": null,
-            "structuredValue": "2015-07-04T21:00:00"
+            "structuredValue": "2015-07-04T21:00:00",
+            "sourceMap": {
+              "path": "date-types.raml"
+            }
           }
         }
       },
@@ -88,30 +97,30 @@
         "created": {
           "name": "created",
           "displayName": "created",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "datetime"
           ],
           "example": "2016-02-28T16:41:41.090Z",
-          "required": true,
           "format": "rfc3339",
-          "fixedFacets": {
-            "format": "rfc3339"
-          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "date-types.raml"
           },
           "structuredExample": {
             "value": "2016-02-28T16:41:41.090Z",
             "strict": true,
             "name": null,
-            "structuredValue": "2016-02-28T16:41:41.090Z"
+            "structuredValue": "2016-02-28T16:41:41.090Z",
+            "sourceMap": {
+              "path": "date-types.raml"
+            }
           }
         }
       },
@@ -119,35 +128,38 @@
         "If-Modified-Since": {
           "name": "If-Modified-Since",
           "displayName": "If-Modified-Since",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "datetime"
           ],
           "example": "Sun, 28 Feb 2016 16:41:41 GMT",
-          "required": true,
           "format": "rfc2616",
-          "fixedFacets": {
-            "format": "rfc2616"
-          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "date-types.raml"
           },
           "structuredExample": {
             "value": "Sun, 28 Feb 2016 16:41:41 GMT",
             "strict": true,
             "name": null,
-            "structuredValue": "Sun, 28 Feb 2016 16:41:41 GMT"
+            "structuredValue": "Sun, 28 Feb 2016 16:41:41 GMT",
+            "sourceMap": {
+              "path": "date-types.raml"
+            }
           }
         }
       }
     ],
-    "title": "Date Types"
+    "title": "Date Types",
+    "sourceMap": {
+      "path": "date-types.raml"
+    }
   },
   "errors": []
 }

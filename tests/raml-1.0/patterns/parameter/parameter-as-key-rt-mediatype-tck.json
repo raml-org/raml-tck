@@ -1,0 +1,116 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "resourceTypes": [
+      {
+        "thingy": {
+          "name": "thingy",
+          "sourceMap": {
+            "path": "parameter-as-key-rt-mediatype.raml"
+          },
+          "get": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "<<mediaType>>": {
+                    "name": "<<mediaType>>",
+                    "displayName": "<<mediaType>>",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "file"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "parameter-as-key-rt-mediatype.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "parameter-as-key-rt-mediatype.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "parameter-as-key-rt-mediatype.raml"
+            }
+          }
+        }
+      }
+    ],
+    "title": "Parameterizing media type must be valid",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "file"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "parameter-as-key-rt-mediatype.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "parameter-as-key-rt-mediatype.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "parameter-as-key-rt-mediatype.raml"
+            }
+          }
+        ],
+        "type": {
+          "thingy": {
+            "mediaType": "application/json"
+          }
+        },
+        "relativeUri": "/books",
+        "displayName": "/books",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "parameter-as-key-rt-mediatype.raml"
+        },
+        "relativeUriPathSegments": [
+          "books"
+        ],
+        "absoluteUri": "/books"
+      }
+    ],
+    "sourceMap": {
+      "path": "parameter-as-key-rt-mediatype.raml"
+    }
+  },
+  "errors": []
+}

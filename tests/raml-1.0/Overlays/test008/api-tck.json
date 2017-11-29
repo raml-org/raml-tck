@@ -17,6 +17,7 @@
             "priceLessThen": {
               "name": "priceLessThen",
               "displayName": "priceLessThen",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -25,16 +26,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "priceMoreThen": {
               "name": "priceMoreThen",
               "displayName": "priceMoreThen",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -43,15 +45,18 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
-          "name": "FilterableByPrice"
+          "name": "FilterableByPrice",
+          "sourceMap": {
+            "path": "NewOverlay.raml"
+          }
         }
       }
     ],
@@ -60,14 +65,15 @@
         "Test3": {
           "name": "Test3",
           "displayName": "Test3",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -81,6 +87,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "NewOverlay.raml"
               }
             }
           },
@@ -91,17 +100,20 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "NewOverlay.raml"
           }
         }
       }
     ],
     "title": "Pet Shop Overlay",
-    "extends": "api.raml"
+    "extends": "api.raml",
+    "sourceMap": {
+      "path": "NewOverlay.raml"
+    }
   },
   "errors": []
 }

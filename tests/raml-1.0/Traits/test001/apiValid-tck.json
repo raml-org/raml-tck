@@ -7,14 +7,15 @@
         "RTType1": {
           "name": "RTType1",
           "displayName": "RTType1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "rtTypeProperty1": {
               "name": "rtTypeProperty1",
               "displayName": "rtTypeProperty1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,6 +29,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -38,11 +42,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       },
@@ -50,14 +54,15 @@
         "RTType2": {
           "name": "RTType2",
           "displayName": "RTType2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "rtTypeProperty2": {
               "name": "rtTypeProperty2",
               "displayName": "rtTypeProperty2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -71,6 +76,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -81,11 +89,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       },
@@ -93,14 +101,15 @@
         "Type1": {
           "name": "Type1",
           "displayName": "Type1",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "typeProperty1": {
               "name": "typeProperty1",
               "displayName": "typeProperty1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -114,6 +123,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -124,11 +136,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       },
@@ -136,14 +148,15 @@
         "Type2": {
           "name": "Type2",
           "displayName": "Type2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "typeProperty2": {
               "name": "typeProperty2",
               "displayName": "typeProperty2",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -157,6 +170,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
@@ -167,11 +183,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       }
@@ -183,23 +199,26 @@
             "application/json": {
               "name": "application/json",
               "displayName": "application/json",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "<<RTType>>"
               ],
-              "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
-          "name": "RTTrait"
+          "name": "RTTrait",
+          "sourceMap": {
+            "path": "apiValid.raml"
+          }
         }
       },
       {
@@ -211,14 +230,15 @@
                 "application/json": {
                   "name": "application/json",
                   "displayName": "application/json",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "object"
                   ],
-                  "required": true,
                   "properties": {
                     "traitProperty1": {
                       "name": "traitProperty1",
                       "displayName": "traitProperty1",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "boolean"
                       ],
@@ -232,11 +252,15 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "apiValid.raml"
                       }
                     },
                     "traitProperty2": {
                       "name": "traitProperty2",
                       "displayName": "traitProperty2",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "number"
                       ],
@@ -250,11 +274,15 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "apiValid.raml"
                       }
                     },
                     "traitProperty1_3": {
                       "name": "traitProperty1_3",
                       "displayName": "traitProperty1_3",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "string"
                       ],
@@ -268,6 +296,9 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "apiValid.raml"
                       }
                     }
                   },
@@ -278,17 +309,23 @@
                       },
                       "type": {
                         "insertedAsDefault": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "apiValid.raml"
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
-          "name": "Trait1"
+          "name": "Trait1",
+          "sourceMap": {
+            "path": "apiValid.raml"
+          }
         }
       },
       {
@@ -300,14 +337,15 @@
                 "application/json": {
                   "name": "application/json",
                   "displayName": "application/json",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "object"
                   ],
-                  "required": true,
                   "properties": {
                     "traitProperty1": {
                       "name": "traitProperty1",
                       "displayName": "traitProperty1",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "number"
                       ],
@@ -321,11 +359,15 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "apiValid.raml"
                       }
                     },
                     "traitProperty2": {
                       "name": "traitProperty2",
                       "displayName": "traitProperty2",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "boolean"
                       ],
@@ -339,11 +381,15 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "apiValid.raml"
                       }
                     },
                     "traitProperty2_3": {
                       "name": "traitProperty2_3",
                       "displayName": "traitProperty2_3",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "string"
                       ],
@@ -357,6 +403,9 @@
                             "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "apiValid.raml"
                       }
                     }
                   },
@@ -367,17 +416,23 @@
                       },
                       "type": {
                         "insertedAsDefault": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "apiValid.raml"
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "apiValid.raml"
               }
             }
           },
-          "name": "Trait2"
+          "name": "Trait2",
+          "sourceMap": {
+            "path": "apiValid.raml"
+          }
         }
       }
     ],
@@ -385,6 +440,9 @@
       {
         "ResourceType1": {
           "name": "ResourceType1",
+          "sourceMap": {
+            "path": "apiValid.raml"
+          },
           "put": {
             "is": [
               {
@@ -393,13 +451,19 @@
                 }
               }
             ],
-            "method": "put"
+            "method": "put",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
           }
         }
       },
       {
         "ResourceType2": {
           "name": "ResourceType2",
+          "sourceMap": {
+            "path": "apiValid.raml"
+          },
           "put": {
             "is": [
               {
@@ -408,7 +472,10 @@
                 }
               }
             ],
-            "method": "put"
+            "method": "put",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
           }
         }
       }
@@ -425,14 +492,15 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "object"
                     ],
-                    "required": true,
                     "properties": {
                       "traitProperty1": {
                         "name": "traitProperty1",
                         "displayName": "traitProperty1",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "boolean"
                         ],
@@ -446,11 +514,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       },
                       "traitProperty2": {
                         "name": "traitProperty2",
                         "displayName": "traitProperty2",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "number"
                         ],
@@ -464,11 +536,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       },
                       "traitProperty1_3": {
                         "name": "traitProperty1_3",
                         "displayName": "traitProperty1_3",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "string"
                         ],
@@ -482,11 +558,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       },
                       "traitProperty2_3": {
                         "name": "traitProperty2_3",
                         "displayName": "traitProperty2_3",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "string"
                         ],
@@ -500,6 +580,9 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       }
                     },
@@ -510,13 +593,16 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "apiValid.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "apiValid.raml"
                 }
               }
             },
@@ -524,22 +610,22 @@
               "application/json": {
                 "name": "application/json",
                 "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "RTType1"
                 ],
                 "example": {
                   "rtTypeProperty1": "stringValue"
                 },
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
                       "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "apiValid.raml"
                 },
                 "structuredExample": {
                   "value": "{\n  \"rtTypeProperty1\": \"stringValue\"\n}",
@@ -547,6 +633,9 @@
                   "name": null,
                   "structuredValue": {
                     "rtTypeProperty1": "stringValue"
+                  },
+                  "sourceMap": {
+                    "path": "apiValid.raml"
                   }
                 }
               }
@@ -558,7 +647,10 @@
                 }
               }
             ],
-            "method": "put"
+            "method": "put",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
           },
           {
             "responses": {
@@ -568,6 +660,7 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "object"
                     ],
@@ -577,11 +670,11 @@
                       "traitProperty1_3": "stringValue1",
                       "traitProperty2_3": "stringValue2"
                     },
-                    "required": true,
                     "properties": {
                       "traitProperty1": {
                         "name": "traitProperty1",
                         "displayName": "traitProperty1",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "boolean"
                         ],
@@ -595,11 +688,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       },
                       "traitProperty2": {
                         "name": "traitProperty2",
                         "displayName": "traitProperty2",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "number"
                         ],
@@ -613,11 +710,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       },
                       "traitProperty1_3": {
                         "name": "traitProperty1_3",
                         "displayName": "traitProperty1_3",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "string"
                         ],
@@ -631,11 +732,15 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       },
                       "traitProperty2_3": {
                         "name": "traitProperty2_3",
                         "displayName": "traitProperty2_3",
+                        "typePropertyKind": "TYPE_EXPRESSION",
                         "type": [
                           "string"
                         ],
@@ -649,6 +754,9 @@
                               "insertedAsDefault": true
                             }
                           }
+                        },
+                        "sourceMap": {
+                          "path": "apiValid.raml"
                         }
                       }
                     },
@@ -659,11 +767,11 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "apiValid.raml"
                     },
                     "structuredExample": {
                       "value": "{\n  \"traitProperty1\": true,\n  \"traitProperty2\": 1,\n  \"traitProperty1_3\": \"stringValue1\",\n  \"traitProperty2_3\": \"stringValue2\"\n}",
@@ -674,13 +782,22 @@
                         "traitProperty2": 1,
                         "traitProperty1_3": "stringValue1",
                         "traitProperty2_3": "stringValue2"
+                      },
+                      "sourceMap": {
+                        "path": "apiValid.raml"
                       }
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "apiValid.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
           }
         ],
         "is": [
@@ -697,12 +814,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apiValid.raml"
+        },
         "relativeUriPathSegments": [
           "resource"
         ],
         "absoluteUri": "/resource"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "apiValid.raml"
+    }
   },
   "errors": []
 }

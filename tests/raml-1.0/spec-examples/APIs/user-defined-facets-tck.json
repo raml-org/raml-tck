@@ -11,53 +11,53 @@
             "onlyFutureDates": {
               "name": "onlyFutureDates",
               "displayName": "onlyFutureDates",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "boolean"
               ],
-              "required": false,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "user-defined-facets.raml"
               }
             },
             "noHolidays": {
               "name": "noHolidays",
               "displayName": "noHolidays",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "boolean"
               ],
-              "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "user-defined-facets.raml"
               }
             }
           },
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "date-only"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "user-defined-facets.raml"
           }
         }
       },
@@ -65,10 +65,10 @@
         "PossibleMeetingDate": {
           "name": "PossibleMeetingDate",
           "displayName": "PossibleMeetingDate",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "CustomDate"
           ],
-          "required": true,
           "fixedFacets": {
             "noHolidays": true
           },
@@ -76,16 +76,19 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "user-defined-facets.raml"
           }
         }
       }
     ],
-    "title": "API with Types"
+    "title": "API with Types",
+    "sourceMap": {
+      "path": "user-defined-facets.raml"
+    }
   },
   "errors": []
 }

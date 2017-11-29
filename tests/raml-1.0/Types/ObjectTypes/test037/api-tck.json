@@ -1,0 +1,1098 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "uses": [
+      {
+        "key": "NewLibrary",
+        "value": "NewLibrary.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "types": [
+      {
+        "Mammal": {
+          "name": "Mammal",
+          "displayName": "Mammal",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "NewLibrary.Pet"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      },
+      {
+        "Bird": {
+          "name": "Bird",
+          "displayName": "Bird",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "NewLibrary.Pet"
+          ],
+          "properties": {
+            "wingLength": {
+              "name": "wingLength",
+              "displayName": "wingLength",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "number"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "api.raml"
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "traits": [
+      {
+        "NewLibrary.FilterableByPrice": {
+          "queryParameters": {
+            "priceLessThen": {
+              "name": "priceLessThen",
+              "displayName": "priceLessThen",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "number"
+              ],
+              "required": false,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "NewLibrary.raml"
+              }
+            },
+            "priceMoreThen": {
+              "name": "priceMoreThen",
+              "displayName": "priceMoreThen",
+              "typePropertyKind": "TYPE_EXPRESSION",
+              "type": [
+                "number"
+              ],
+              "required": false,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "NewLibrary.raml"
+              }
+            }
+          },
+          "name": "NewLibrary.FilterableByPrice",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "NewLibrary.raml"
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "NewLibrary.Collection": {
+          "name": "NewLibrary.Collection",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "NewLibrary.raml"
+          },
+          "get": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "<<item>>[]"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "NewLibrary.raml"
+            }
+          },
+          "post": {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<item>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "method": "post",
+            "sourceMap": {
+              "path": "NewLibrary.raml"
+            }
+          }
+        }
+      },
+      {
+        "NewLibrary.Member": {
+          "name": "NewLibrary.Member",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "NewLibrary.raml"
+          },
+          "delete": {
+            "responses": {
+              "204": {
+                "code": "204",
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "method": "delete",
+            "sourceMap": {
+              "path": "NewLibrary.raml"
+            }
+          },
+          "put": {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "<<item>>"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "method": "put",
+            "sourceMap": {
+              "path": "NewLibrary.raml"
+            }
+          }
+        }
+      }
+    ],
+    "title": "Pet Shop",
+    "version": "v1",
+    "baseUri": "/shop",
+    "protocols": [
+      "HTTP"
+    ],
+    "resources": [
+      {
+        "methods": [
+          {
+            "queryParameters": {
+              "petKind": {
+                "name": "petKind",
+                "displayName": "petKind",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "enum": [
+                  "bird",
+                  "mammal"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              },
+              "priceLessThen": {
+                "name": "priceLessThen",
+                "displayName": "priceLessThen",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "number"
+                ],
+                "required": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              },
+              "priceMoreThen": {
+                "name": "priceMoreThen",
+                "displayName": "priceMoreThen",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "number"
+                ],
+                "required": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "array"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    },
+                    "items": "NewLibrary.Pet"
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "is": [
+              "NewLibrary.FilterableByPrice"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "NewLibrary.Pet"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "method": "post",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "NewLibrary.raml"
+            }
+          }
+        ],
+        "type": {
+          "NewLibrary.Collection": {
+            "item": "NewLibrary.Pet"
+          }
+        },
+        "relativeUri": "/pets",
+        "displayName": "/pets",
+        "resources": [
+          {
+            "methods": [
+              {
+                "responses": {
+                  "204": {
+                    "code": "204",
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    }
+                  }
+                },
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "delete",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              },
+              {
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "NewLibrary.Pet"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    }
+                  }
+                },
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "put",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            ],
+            "type": {
+              "NewLibrary.Member": {
+                "item": "NewLibrary.Pet"
+              }
+            },
+            "uriParameters": {
+              "id": {
+                "name": "id",
+                "displayName": "id",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "calculated": true,
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "relativeUri": "/{id}",
+            "displayName": "/{id}",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "relativeUriPathSegments": [
+              "{id}"
+            ],
+            "absoluteUri": "/shop/pets/{id}"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "pets"
+        ],
+        "absoluteUri": "/shop/pets"
+      },
+      {
+        "methods": [
+          {
+            "queryParameters": {
+              "priceLessThen": {
+                "name": "priceLessThen",
+                "displayName": "priceLessThen",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "number"
+                ],
+                "required": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              },
+              "priceMoreThen": {
+                "name": "priceMoreThen",
+                "displayName": "priceMoreThen",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "number"
+                ],
+                "required": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "array"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    },
+                    "items": "Bird"
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "is": [
+              "NewLibrary.FilterableByPrice"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "Bird"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "method": "post",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "NewLibrary.raml"
+            }
+          }
+        ],
+        "type": {
+          "NewLibrary.Collection": {
+            "item": "Bird"
+          }
+        },
+        "relativeUri": "/birds",
+        "displayName": "/birds",
+        "resources": [
+          {
+            "methods": [
+              {
+                "responses": {
+                  "204": {
+                    "code": "204",
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    }
+                  }
+                },
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "delete",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              },
+              {
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "Bird"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    }
+                  }
+                },
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "put",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            ],
+            "type": {
+              "NewLibrary.Member": {
+                "item": "Bird"
+              }
+            },
+            "uriParameters": {
+              "id": {
+                "name": "id",
+                "displayName": "id",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "calculated": true,
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "relativeUri": "/{id}",
+            "displayName": "/{id}",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "relativeUriPathSegments": [
+              "{id}"
+            ],
+            "absoluteUri": "/shop/birds/{id}"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "birds"
+        ],
+        "absoluteUri": "/shop/birds"
+      },
+      {
+        "methods": [
+          {
+            "queryParameters": {
+              "priceLessThen": {
+                "name": "priceLessThen",
+                "displayName": "priceLessThen",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "number"
+                ],
+                "required": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              },
+              "priceMoreThen": {
+                "name": "priceMoreThen",
+                "displayName": "priceMoreThen",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "number"
+                ],
+                "required": false,
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "array"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    },
+                    "items": "Mammal"
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "is": [
+              "NewLibrary.FilterableByPrice"
+            ],
+            "method": "get",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          },
+          {
+            "body": {
+              "application/json": {
+                "name": "application/json",
+                "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "Mammal"
+                ],
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            },
+            "protocols": [
+              "HTTP"
+            ],
+            "method": "post",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "protocols": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "NewLibrary.raml"
+            }
+          }
+        ],
+        "type": {
+          "NewLibrary.Collection": {
+            "item": "Mammal"
+          }
+        },
+        "relativeUri": "/mammals",
+        "displayName": "/mammals",
+        "resources": [
+          {
+            "methods": [
+              {
+                "responses": {
+                  "204": {
+                    "code": "204",
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    }
+                  }
+                },
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "delete",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              },
+              {
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "Mammal"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "NewLibrary.raml"
+                    }
+                  }
+                },
+                "protocols": [
+                  "HTTP"
+                ],
+                "method": "put",
+                "__METADATA__": {
+                  "primitiveValuesMeta": {
+                    "protocols": {
+                      "calculated": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "NewLibrary.raml"
+                }
+              }
+            ],
+            "type": {
+              "NewLibrary.Member": {
+                "item": "Mammal"
+              }
+            },
+            "uriParameters": {
+              "id": {
+                "name": "id",
+                "displayName": "id",
+                "typePropertyKind": "TYPE_EXPRESSION",
+                "type": [
+                  "string"
+                ],
+                "required": true,
+                "__METADATA__": {
+                  "calculated": true,
+                  "primitiveValuesMeta": {
+                    "displayName": {
+                      "calculated": true
+                    },
+                    "type": {
+                      "insertedAsDefault": true
+                    },
+                    "required": {
+                      "insertedAsDefault": true
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "relativeUri": "/{id}",
+            "displayName": "/{id}",
+            "__METADATA__": {
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                }
+              }
+            },
+            "sourceMap": {
+              "path": "api.raml"
+            },
+            "relativeUriPathSegments": [
+              "{id}"
+            ],
+            "absoluteUri": "/shop/mammals/{id}"
+          }
+        ],
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "mammals"
+        ],
+        "absoluteUri": "/shop/mammals"
+      }
+    ],
+    "__METADATA__": {
+      "primitiveValuesMeta": {
+        "protocols": {
+          "calculated": true
+        }
+      }
+    },
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

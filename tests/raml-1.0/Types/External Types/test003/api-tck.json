@@ -7,24 +7,27 @@
         "Account": {
           "name": "Account",
           "displayName": "Account",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Raw text."
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {

@@ -7,10 +7,10 @@
         "testHarness": {
           "name": "testHarness",
           "displayName": "testHarness",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -18,11 +18,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "apply-annotations-2.raml"
           }
         }
       }
@@ -46,12 +46,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "apply-annotations-2.raml"
+        },
         "relativeUriPathSegments": [
           "users"
         ],
         "absoluteUri": "/users"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "apply-annotations-2.raml"
+    }
   },
   "errors": []
 }

@@ -1,0 +1,108 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "traits": [
+      {
+        "tr1": {
+          "name": "tr1",
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "rt1": {
+          "name": "rt1",
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "title": "test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "is": [
+              {
+                "tr1": {
+                  "param": "stringValue"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "type": {
+          "rt1": {
+            "param": "stringValue"
+          }
+        },
+        "relativeUri": "/resource",
+        "displayName": "/resource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": [
+    {
+      "code": "UNUSED_PARAMETER",
+      "message": "Unused parameter: 'param'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 6,
+          "position": 103
+        },
+        "end": {
+          "line": 14,
+          "column": 11,
+          "position": 108
+        }
+      },
+      "isWarning": true
+    },
+    {
+      "code": "UNUSED_PARAMETER",
+      "message": "Unused parameter: 'param'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 10,
+          "position": 160
+        },
+        "end": {
+          "line": 18,
+          "column": 15,
+          "position": 165
+        }
+      },
+      "isWarning": true
+    }
+  ]
+}

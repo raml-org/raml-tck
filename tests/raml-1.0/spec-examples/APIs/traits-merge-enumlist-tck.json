@@ -9,6 +9,7 @@
             "platform": {
               "name": "platform",
               "displayName": "platform",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -29,10 +30,16 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "traits-merge-enumlist.raml"
               }
             }
           },
-          "name": "withQueryParameters"
+          "name": "withQueryParameters",
+          "sourceMap": {
+            "path": "traits-merge-enumlist.raml"
+          }
         }
       }
     ],
@@ -46,6 +53,7 @@
               "platform": {
                 "name": "platform",
                 "displayName": "platform",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -67,13 +75,19 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "traits-merge-enumlist.raml"
                 }
               }
             },
             "is": [
               "withQueryParameters"
             ],
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "traits-merge-enumlist.raml"
+            }
           }
         ],
         "relativeUri": "/installer",
@@ -85,12 +99,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "traits-merge-enumlist.raml"
+        },
         "relativeUriPathSegments": [
           "installer"
         ],
         "absoluteUri": "/installer"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "traits-merge-enumlist.raml"
+    }
   },
   "errors": []
 }

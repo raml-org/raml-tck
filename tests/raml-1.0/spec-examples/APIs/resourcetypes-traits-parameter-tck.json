@@ -9,6 +9,7 @@
             "<<tokenName>>": {
               "name": "<<tokenName>>",
               "displayName": "<<tokenName>>",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -26,10 +27,16 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "resourcetypes-traits-parameter.raml"
               }
             }
           },
-          "name": "secured"
+          "name": "secured",
+          "sourceMap": {
+            "path": "resourcetypes-traits-parameter.raml"
+          }
         }
       },
       {
@@ -38,6 +45,7 @@
             "numPages": {
               "name": "numPages",
               "displayName": "numPages",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -55,10 +63,16 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "resourcetypes-traits-parameter.raml"
               }
             }
           },
-          "name": "paged"
+          "name": "paged",
+          "sourceMap": {
+            "path": "resourcetypes-traits-parameter.raml"
+          }
         }
       }
     ],
@@ -66,11 +80,15 @@
       {
         "searchableCollection": {
           "name": "searchableCollection",
+          "sourceMap": {
+            "path": "resourcetypes-traits-parameter.raml"
+          },
           "get": {
             "queryParameters": {
               "<<queryParamName>>": {
                 "name": "<<queryParamName>>",
                 "displayName": "<<queryParamName>>",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -88,11 +106,15 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
                 }
               },
               "<<fallbackParamName>>": {
                 "name": "<<fallbackParamName>>",
                 "displayName": "<<fallbackParamName>>",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -110,10 +132,16 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "resourcetypes-traits-parameter.raml"
+            }
           }
         }
       }
@@ -128,6 +156,7 @@
               "title": {
                 "name": "title",
                 "displayName": "title",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -145,11 +174,15 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
                 }
               },
               "digest_all_fields": {
                 "name": "digest_all_fields",
                 "displayName": "digest_all_fields",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -167,11 +200,15 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
                 }
               },
               "access_token": {
                 "name": "access_token",
                 "displayName": "access_token",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -189,11 +226,15 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
                 }
               },
               "numPages": {
                 "name": "numPages",
                 "displayName": "numPages",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -211,6 +252,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "resourcetypes-traits-parameter.raml"
                 }
               }
             },
@@ -226,7 +270,10 @@
                 }
               }
             ],
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "resourcetypes-traits-parameter.raml"
+            }
           }
         ],
         "type": {
@@ -244,12 +291,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "resourcetypes-traits-parameter.raml"
+        },
         "relativeUriPathSegments": [
           "books"
         ],
         "absoluteUri": "/books"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "resourcetypes-traits-parameter.raml"
+    }
   },
   "errors": []
 }

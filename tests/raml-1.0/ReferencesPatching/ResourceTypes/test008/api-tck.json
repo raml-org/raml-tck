@@ -1,0 +1,670 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "uses": [
+      {
+        "key": "rt",
+        "value": "lib/resource-types.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "rt.ty",
+        "value": "lib/types.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "rt.tr",
+        "value": "lib/traits.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "rt.lib",
+        "value": "lib/libA.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      },
+      {
+        "key": "rt.lib.lib",
+        "value": "lib/libB.raml",
+        "sourceMap": {
+          "path": "api.raml"
+        }
+      }
+    ],
+    "types": [
+      {
+        "MyType": {
+          "name": "MyType",
+          "displayName": "MyType",
+          "typePropertyKind": "TYPE_EXPRESSION",
+          "type": [
+            "string"
+          ],
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              }
+            }
+          },
+          "sourceMap": {
+            "path": "api.raml"
+          }
+        }
+      }
+    ],
+    "traits": [
+      {
+        "rt.tr.ResponseCommonErrors": {
+          "responses": {
+            "400": {
+              "code": "400",
+              "body": {
+                "application/json": {
+                  "name": "application/json",
+                  "displayName": "application/json",
+                  "typePropertyKind": "TYPE_EXPRESSION",
+                  "type": [
+                    "<<errorResponseType>>"
+                  ],
+                  "example": {
+                    "code": "abc123",
+                    "message": "Bad request"
+                  },
+                  "__METADATA__": {
+                    "primitiveValuesMeta": {
+                      "displayName": {
+                        "calculated": true
+                      }
+                    }
+                  },
+                  "sourceMap": {
+                    "path": "lib/traits.raml"
+                  },
+                  "structuredExample": {
+                    "value": "{\n  \"code\": \"abc123\",\n  \"message\": \"Bad request\"\n}\n",
+                    "strict": true,
+                    "name": null,
+                    "structuredValue": {
+                      "code": "abc123",
+                      "message": "Bad request"
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    }
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "lib/traits.raml"
+              }
+            },
+            "500": {
+              "code": "500",
+              "body": {
+                "application/json": {
+                  "name": "application/json",
+                  "displayName": "application/json",
+                  "typePropertyKind": "TYPE_EXPRESSION",
+                  "type": [
+                    "<<errorResponseType>>"
+                  ],
+                  "example": {
+                    "code": "xyz123",
+                    "message": "Server error"
+                  },
+                  "__METADATA__": {
+                    "primitiveValuesMeta": {
+                      "displayName": {
+                        "calculated": true
+                      }
+                    }
+                  },
+                  "sourceMap": {
+                    "path": "lib/traits.raml"
+                  },
+                  "structuredExample": {
+                    "value": "{\n  \"code\": \"xyz123\",\n  \"message\": \"Server error\"\n}\n",
+                    "strict": true,
+                    "name": null,
+                    "structuredValue": {
+                      "code": "xyz123",
+                      "message": "Server error"
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    }
+                  }
+                }
+              },
+              "sourceMap": {
+                "path": "lib/traits.raml"
+              }
+            }
+          },
+          "name": "rt.tr.ResponseCommonErrors",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "lib/traits.raml"
+          }
+        }
+      }
+    ],
+    "resourceTypes": [
+      {
+        "rt.lib.lib.rt": {
+          "name": "rt.lib.lib.rt",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "lib/libB.raml"
+          },
+          "get": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "<<param1>>"
+                    ],
+                    "example": 8,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/libB.raml"
+                    },
+                    "structuredExample": {
+                      "value": "8",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": 8,
+                      "sourceMap": {
+                        "path": "lib/libB.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/libB.raml"
+                }
+              }
+            },
+            "method": "get",
+            "sourceMap": {
+              "path": "lib/libB.raml"
+            }
+          },
+          "post": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "<<param2>>"
+                    ],
+                    "example": {
+                      "p1": "stringValue"
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/libB.raml"
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"p1\": \"stringValue\"\n}",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "p1": "stringValue"
+                      },
+                      "sourceMap": {
+                        "path": "lib/libB.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/libB.raml"
+                }
+              }
+            },
+            "method": "post",
+            "sourceMap": {
+              "path": "lib/libB.raml"
+            }
+          },
+          "put": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.lib.lib.MyType"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/libB.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/libB.raml"
+                }
+              }
+            },
+            "method": "put",
+            "sourceMap": {
+              "path": "lib/libB.raml"
+            }
+          }
+        }
+      },
+      {
+        "rt.lib.rt": {
+          "type": {
+            "rt.lib.lib.rt": {
+              "param1": "<<param1>>",
+              "param2": "MyType"
+            }
+          },
+          "name": "rt.lib.rt",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "lib/libA.raml"
+          }
+        }
+      },
+      {
+        "rt.Collection": {
+          "type": {
+            "rt.lib.rt": {
+              "param1": "MyType"
+            }
+          },
+          "description": "<<desc>>",
+          "name": "rt.Collection",
+          "__METADATA__": {
+            "calculated": true
+          },
+          "sourceMap": {
+            "path": "lib/resource-types.raml"
+          },
+          "get": {
+            "is": [
+              {
+                "rt.tr.ResponseCommonErrors": {
+                  "errorResponseType": "ty.ErrorResponseType"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "lib/resource-types.raml"
+            }
+          },
+          "delete": {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "<<param1>>"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/resource-types.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/resource-types.raml"
+                }
+              }
+            },
+            "method": "delete",
+            "sourceMap": {
+              "path": "lib/resource-types.raml"
+            }
+          }
+        }
+      }
+    ],
+    "title": "Test API",
+    "version": "v1z",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.MyType"
+                    ],
+                    "example": 8,
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/libB.raml"
+                    },
+                    "structuredExample": {
+                      "value": "8",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": 8,
+                      "sourceMap": {
+                        "path": "lib/libB.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/libB.raml"
+                }
+              },
+              "400": {
+                "code": "400",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.ty.ErrorResponseType"
+                    ],
+                    "example": {
+                      "code": "abc123",
+                      "message": "Bad request"
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"code\": \"abc123\",\n  \"message\": \"Bad request\"\n}\n",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "code": "abc123",
+                        "message": "Bad request"
+                      },
+                      "sourceMap": {
+                        "path": "lib/traits.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/traits.raml"
+                }
+              },
+              "500": {
+                "code": "500",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.ty.ErrorResponseType"
+                    ],
+                    "example": {
+                      "code": "xyz123",
+                      "message": "Server error"
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/traits.raml"
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"code\": \"xyz123\",\n  \"message\": \"Server error\"\n}\n",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "code": "xyz123",
+                        "message": "Server error"
+                      },
+                      "sourceMap": {
+                        "path": "lib/traits.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/traits.raml"
+                }
+              }
+            },
+            "is": [
+              {
+                "rt.tr.ResponseCommonErrors": {
+                  "errorResponseType": "rt.ty.ErrorResponseType"
+                }
+              }
+            ],
+            "method": "get",
+            "sourceMap": {
+              "path": "lib/resource-types.raml"
+            }
+          },
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "MyType"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/resource-types.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/resource-types.raml"
+                }
+              }
+            },
+            "method": "delete",
+            "sourceMap": {
+              "path": "lib/resource-types.raml"
+            }
+          },
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.lib.MyType"
+                    ],
+                    "example": {
+                      "p1": "stringValue"
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/libB.raml"
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"p1\": \"stringValue\"\n}",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "p1": "stringValue"
+                      },
+                      "sourceMap": {
+                        "path": "lib/libB.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/libB.raml"
+                }
+              }
+            },
+            "method": "post",
+            "sourceMap": {
+              "path": "lib/libB.raml"
+            }
+          },
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "rt.lib.lib.MyType"
+                    ],
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "lib/libB.raml"
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "lib/libB.raml"
+                }
+              }
+            },
+            "method": "put",
+            "sourceMap": {
+              "path": "lib/libB.raml"
+            }
+          }
+        ],
+        "type": {
+          "rt.Collection": {
+            "desc": "stringValue",
+            "param1": "MyType"
+          }
+        },
+        "description": "stringValue",
+        "relativeUri": "/products",
+        "displayName": "/products",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "products"
+        ],
+        "absoluteUri": "/products"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": []
+}

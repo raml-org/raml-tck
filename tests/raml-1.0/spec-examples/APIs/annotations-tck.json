@@ -7,19 +7,19 @@
         "deprecated": {
           "name": "deprecated",
           "displayName": "deprecated",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "nil"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations.raml"
           }
         }
       },
@@ -27,19 +27,19 @@
         "experimental": {
           "name": "experimental",
           "displayName": "experimental",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "nil | string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations.raml"
           }
         }
       },
@@ -47,19 +47,19 @@
         "feedbackRequested": {
           "name": "feedbackRequested",
           "displayName": "feedbackRequested",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string?"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations.raml"
           }
         }
       },
@@ -67,19 +67,19 @@
         "testHarness": {
           "name": "testHarness",
           "displayName": "testHarness",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations.raml"
           }
         }
       },
@@ -87,10 +87,10 @@
         "badge": {
           "name": "badge",
           "displayName": "badge",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -98,11 +98,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations.raml"
           }
         }
       },
@@ -110,14 +110,15 @@
         "clearanceLevel": {
           "name": "clearanceLevel",
           "displayName": "clearanceLevel",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "level": {
               "name": "level",
               "displayName": "level",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -136,11 +137,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "annotations.raml"
               }
             },
             "signature": {
               "name": "signature",
               "displayName": "signature",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -155,6 +160,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "annotations.raml"
               }
             }
           },
@@ -165,11 +173,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "annotations.raml"
           }
         }
       }
@@ -196,6 +204,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "annotations.raml"
         },
         "relativeUriPathSegments": [
           "groups"
@@ -232,16 +243,22 @@
                 "name": "experimental"
               },
               "feedbackRequested": {
-                "structuredValue": null,
+                "structuredValue": "Feedback committed!",
                 "name": "feedbackRequested"
               }
             },
             "responses": {
               "200": {
-                "code": "200"
+                "code": "200",
+                "sourceMap": {
+                  "path": "annotations.raml"
+                }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "annotations.raml"
+            }
           }
         ],
         "relativeUri": "/users",
@@ -253,12 +270,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "annotations.raml"
+        },
         "relativeUriPathSegments": [
           "users"
         ],
         "absoluteUri": "/users"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "annotations.raml"
+    }
   },
   "errors": []
 }

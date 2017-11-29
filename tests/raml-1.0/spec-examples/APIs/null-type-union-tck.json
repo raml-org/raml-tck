@@ -7,6 +7,7 @@
         "NullValue": {
           "name": "NullValue",
           "displayName": "NullValue",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -14,11 +15,11 @@
             "name": "Fred",
             "comment": null
           },
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -35,11 +36,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "null-type-union.raml"
               }
             },
             "comment": {
               "name": "comment",
               "displayName": "comment",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "nil | string"
               ],
@@ -53,6 +58,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "null-type-union.raml"
               }
             }
           },
@@ -60,11 +68,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "null-type-union.raml"
           },
           "structuredExample": {
             "value": "{\n  \"name\": \"Fred\",\n  \"comment\": null\n}",
@@ -73,12 +81,18 @@
             "structuredValue": {
               "name": "Fred",
               "comment": null
+            },
+            "sourceMap": {
+              "path": "null-type-union.raml"
             }
           }
         }
       }
     ],
-    "title": "Using null type and union"
+    "title": "Using null type and union",
+    "sourceMap": {
+      "path": "null-type-union.raml"
+    }
   },
   "errors": []
 }

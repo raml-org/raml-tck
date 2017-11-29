@@ -7,14 +7,15 @@
         "Header": {
           "name": "Header",
           "displayName": "Header",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "name": {
               "name": "name",
               "displayName": "name",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "value": {
               "name": "value",
               "displayName": "value",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -53,11 +61,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -65,14 +73,15 @@
         "Message": {
           "name": "Message",
           "displayName": "Message",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "id": {
               "name": "id",
               "displayName": "id",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -81,16 +90,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "payload": {
               "name": "payload",
               "displayName": "payload",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "object"
               ],
@@ -99,6 +109,7 @@
                 "mimeType": {
                   "name": "mimeType",
                   "displayName": "mimeType",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "string"
                   ],
@@ -107,16 +118,17 @@
                     "primitiveValuesMeta": {
                       "displayName": {
                         "calculated": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 },
                 "filename": {
                   "name": "filename",
                   "displayName": "filename",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "string"
                   ],
@@ -125,16 +137,17 @@
                     "primitiveValuesMeta": {
                       "displayName": {
                         "calculated": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 },
                 "headers": {
                   "name": "headers",
                   "displayName": "headers",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "array"
                   ],
@@ -149,11 +162,15 @@
                       }
                     }
                   },
+                  "sourceMap": {
+                    "path": "api.raml"
+                  },
                   "items": "Header"
                 },
                 "body": {
                   "name": "body",
                   "displayName": "body",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "object"
                   ],
@@ -162,6 +179,7 @@
                     "size": {
                       "name": "size",
                       "displayName": "size",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "number"
                       ],
@@ -170,16 +188,17 @@
                         "primitiveValuesMeta": {
                           "displayName": {
                             "calculated": true
-                          },
-                          "required": {
-                            "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "api.raml"
                       }
                     },
                     "data": {
                       "name": "data",
                       "displayName": "data",
+                      "typePropertyKind": "TYPE_EXPRESSION",
                       "type": [
                         "string"
                       ],
@@ -188,11 +207,11 @@
                         "primitiveValuesMeta": {
                           "displayName": {
                             "calculated": true
-                          },
-                          "required": {
-                            "insertedAsDefault": true
                           }
                         }
+                      },
+                      "sourceMap": {
+                        "path": "api.raml"
                       }
                     }
                   },
@@ -200,16 +219,17 @@
                     "primitiveValuesMeta": {
                       "displayName": {
                         "calculated": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 },
                 "parts": {
                   "name": "parts",
                   "displayName": "parts",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "array"
                   ],
@@ -218,11 +238,11 @@
                     "primitiveValuesMeta": {
                       "displayName": {
                         "calculated": true
-                      },
-                      "required": {
-                        "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   },
                   "items": "Message"
                 }
@@ -231,16 +251,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "sizeEstimate": {
               "name": "sizeEstimate",
               "displayName": "sizeEstimate",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -249,11 +270,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -261,11 +282,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -273,6 +294,7 @@
         "Thread": {
           "name": "Thread",
           "displayName": "Thread",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
@@ -312,11 +334,11 @@
               }
             ]
           },
-          "required": true,
           "properties": {
             "id": {
               "name": "id",
               "displayName": "id",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -325,16 +347,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "historyId": {
               "name": "historyId",
               "displayName": "historyId",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -343,16 +366,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             },
             "messages": {
               "name": "messages",
               "displayName": "messages",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -361,11 +385,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               },
               "items": "Message"
             }
@@ -374,11 +398,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"id\": \"146df5d64e5cb7dc\",\n  \"historyId\": \"535370\",\n  \"messages\": [\n    {\n      \"id\": \"146df5d64e5cb7dc\",\n      \"payload\": {\n        \"mimeType\": \"text/plain\",\n        \"filename\": \"\",\n        \"headers\": [\n          {\n            \"name\": \"Received\",\n            \"value\": \"from 833522106252-kj93b6c68h8dq0438mjuasrvm6bsfjvm.apps.googleusercontent.com named unknown by gmailapi.google.com with HTTPREST; Fri, 27 Jun 2014 15:06:18 -0700\"\n          },\n          {\n            \"name\": \"Date\",\n            \"value\": \"Fri, 27 Jun 2014 15:06:18 -0700\"\n          },\n          {\n            \"name\": \"Message-Id\",\n            \"value\": \"<CAEzS4YC_gro+vJ8aoiccD8emmF=KkBjG12mXOh53+wWsR9YQVQ@mail.gmail.com>\"\n          },\n          {\n            \"name\": \"From\",\n            \"value\": \"someaccount@gmail.com\"\n          }\n        ],\n        \"body\": {\n          \"size\": 1,\n          \"data\": \"\"\n        }\n      },\n      \"sizeEstimate\": 331\n    }\n  ]\n}",
@@ -419,12 +443,18 @@
                   "sizeEstimate": 331
                 }
               ]
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
       }
     ],
-    "usage": "Gmail types"
+    "usage": "Gmail types",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": []
 }

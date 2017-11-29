@@ -9,6 +9,7 @@
             "param1": {
               "name": "param1",
               "displayName": "param1",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "<<type1>>"
               ],
@@ -22,10 +23,16 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
-          "name": "trait1"
+          "name": "trait1",
+          "sourceMap": {
+            "path": "api.raml"
+          }
         }
       }
     ],
@@ -43,6 +50,7 @@
               "param1": {
                 "name": "param1",
                 "displayName": "param1",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "number"
                 ],
@@ -56,6 +64,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -63,13 +74,13 @@
               "application/json": {
                 "name": "application/json",
                 "displayName": "application/json",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
-                  "object"
+                  "any"
                 ],
                 "example": {
                   "prop": "value"
                 },
-                "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
                     "displayName": {
@@ -77,11 +88,11 @@
                     },
                     "type": {
                       "insertedAsDefault": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 },
                 "structuredExample": {
                   "value": "{\n  \"prop\": \"value\"\n}\n",
@@ -89,6 +100,9 @@
                   "name": null,
                   "structuredValue": {
                     "prop": "value"
+                  },
+                  "sourceMap": {
+                    "path": "api.raml"
                   }
                 }
               }
@@ -115,6 +129,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         ],
@@ -126,6 +143,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "api.raml"
         },
         "relativeUriPathSegments": [
           "resource"
@@ -139,6 +159,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "api.raml"
     }
   },
   "errors": []

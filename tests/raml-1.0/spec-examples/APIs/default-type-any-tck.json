@@ -14,10 +14,10 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
-                      "object"
+                      "any"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
@@ -25,17 +25,23 @@
                         },
                         "type": {
                           "insertedAsDefault": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "default-type-any.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "default-type-any.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "default-type-any.raml"
+            }
           }
         ],
         "relativeUri": "/customers",
@@ -47,12 +53,18 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "default-type-any.raml"
+        },
         "relativeUriPathSegments": [
           "customers"
         ],
         "absoluteUri": "/customers"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "default-type-any.raml"
+    }
   },
   "errors": []
 }

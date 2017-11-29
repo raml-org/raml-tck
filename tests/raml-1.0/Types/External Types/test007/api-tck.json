@@ -7,19 +7,19 @@
         "mySchema": {
           "name": "mySchema",
           "displayName": "mySchema",
+          "typePropertyKind": "JSON",
           "type": [
             "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Product\",\n  \"description\": \"A product from Acme's catalog\",\n  \"type\": \"object\",\n  \"properties\": {\n      \"id\": {\n          \"description\": \"The unique identifier for a product\",\n          \"type\": \"string\"\n      }\n  },\n  \"required\": [\"id\"]\n}\n"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       },
@@ -27,17 +27,18 @@
         "z2": {
           "name": "z2",
           "displayName": "z2",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
           "example": {
             "c": 4
           },
-          "required": true,
           "properties": {
             "c": {
               "name": "c",
               "displayName": "c",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "mySchema"
               ],
@@ -51,6 +52,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "api.raml"
               }
             }
           },
@@ -61,11 +65,11 @@
               },
               "type": {
                 "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "api.raml"
           },
           "structuredExample": {
             "value": "{\n  \"c\": 4\n}",
@@ -73,12 +77,18 @@
             "name": null,
             "structuredValue": {
               "c": 4
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           }
         }
       }
     ],
-    "title": "A"
+    "title": "A",
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {
@@ -99,19 +109,19 @@
       }
     },
     {
-      "code": "EXAMPLE_SCHEMA_FAILURE",
-      "message": "Example does not conform to schema: Content is not valid according to schema: Expected type object but found type integer object,integer",
+      "code": "CONTENT_DOES_NOT_MATCH_THE_SCHEMA",
+      "message": "Content is not valid according to schema: Expected type object but found type integer",
       "path": "api.raml",
       "range": {
         "start": {
           "line": 22,
-          "column": 6,
-          "position": 462
+          "column": 9,
+          "position": 465
         },
         "end": {
           "line": 22,
-          "column": 7,
-          "position": 463
+          "column": 10,
+          "position": 466
         }
       }
     }

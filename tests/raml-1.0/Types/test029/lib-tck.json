@@ -9,14 +9,15 @@
             "application/json": {
               "name": "application/json",
               "displayName": "application/json",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "<<param>>"
               ],
-              "required": true,
               "properties": {
                 "prop1": {
                   "name": "prop1",
                   "displayName": "prop1",
+                  "typePropertyKind": "TYPE_EXPRESSION",
                   "type": [
                     "string"
                   ],
@@ -33,6 +34,9 @@
                         "insertedAsDefault": true
                       }
                     }
+                  },
+                  "sourceMap": {
+                    "path": "lib.raml"
                   }
                 }
               },
@@ -40,18 +44,24 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "lib.raml"
               }
             }
           },
-          "name": "tr"
+          "name": "tr",
+          "sourceMap": {
+            "path": "lib.raml"
+          }
         }
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "lib.raml"
+    }
   },
   "errors": []
 }

@@ -7,14 +7,15 @@
         "Phone": {
           "name": "Phone",
           "displayName": "Phone",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "manufacturer": {
               "name": "manufacturer",
               "displayName": "manufacturer",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-expression.raml"
               }
             },
             "numberOfSIMCards": {
               "name": "numberOfSIMCards",
               "displayName": "numberOfSIMCards",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-expression.raml"
               }
             }
           },
@@ -53,11 +61,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "type-expression.raml"
           }
         }
       },
@@ -65,14 +73,15 @@
         "Notebook": {
           "name": "Notebook",
           "displayName": "Notebook",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "manufacturer": {
               "name": "manufacturer",
               "displayName": "manufacturer",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -86,11 +95,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-expression.raml"
               }
             },
             "numberOfUSBPorts": {
               "name": "numberOfUSBPorts",
               "displayName": "numberOfUSBPorts",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -104,6 +117,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-expression.raml"
               }
             }
           },
@@ -111,11 +127,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "type-expression.raml"
           }
         }
       },
@@ -123,14 +139,15 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "devices": {
               "name": "devices",
               "displayName": "devices",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -145,11 +162,15 @@
                   }
                 }
               },
+              "sourceMap": {
+                "path": "type-expression.raml"
+              },
               "items": "( Phone | Notebook )"
             },
             "reports": {
               "name": "reports",
               "displayName": "reports",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -163,6 +184,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "type-expression.raml"
               },
               "items": "Person"
             }
@@ -171,16 +195,19 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "type-expression.raml"
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "type-expression.raml"
+    }
   },
   "errors": []
 }

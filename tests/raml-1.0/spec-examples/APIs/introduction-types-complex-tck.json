@@ -7,14 +7,15 @@
         "Org": {
           "name": "Org",
           "displayName": "Org",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "onCall": {
               "name": "onCall",
               "displayName": "onCall",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "AlertableAdmin"
               ],
@@ -28,11 +29,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             },
             "Head": {
               "name": "Head",
               "displayName": "Head",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Manager"
               ],
@@ -46,6 +51,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             }
           },
@@ -53,11 +61,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "introduction-types-complex.raml"
           }
         }
       },
@@ -65,14 +73,15 @@
         "Person": {
           "name": "Person",
           "displayName": "Person",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
-          "required": true,
           "properties": {
             "firstname": {
               "name": "firstname",
               "displayName": "firstname",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -86,11 +95,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             },
             "lastname": {
               "name": "lastname",
               "displayName": "lastname",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -104,11 +117,15 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             },
             "title": {
               "name": "title",
               "displayName": "title",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -117,11 +134,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             }
           },
@@ -129,11 +146,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "introduction-types-complex.raml"
           }
         }
       },
@@ -141,20 +158,20 @@
         "Phone": {
           "name": "Phone",
           "displayName": "Phone",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "string"
           ],
-          "required": true,
           "pattern": "[0-9|-]+",
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "introduction-types-complex.raml"
           }
         }
       },
@@ -162,14 +179,15 @@
         "Manager": {
           "name": "Manager",
           "displayName": "Manager",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Person"
           ],
-          "required": true,
           "properties": {
             "reports": {
               "name": "reports",
               "displayName": "reports",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "array"
               ],
@@ -184,11 +202,15 @@
                   }
                 }
               },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
+              },
               "items": "Person"
             },
             "phone": {
               "name": "phone",
               "displayName": "phone",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Phone"
               ],
@@ -202,6 +224,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             }
           },
@@ -209,11 +234,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "introduction-types-complex.raml"
           }
         }
       },
@@ -221,14 +246,15 @@
         "Admin": {
           "name": "Admin",
           "displayName": "Admin",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Person"
           ],
-          "required": true,
           "properties": {
             "clearanceLevel": {
               "name": "clearanceLevel",
               "displayName": "clearanceLevel",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -249,6 +275,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             }
           },
@@ -256,11 +285,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "introduction-types-complex.raml"
           }
         }
       },
@@ -268,14 +297,15 @@
         "AlertableAdmin": {
           "name": "AlertableAdmin",
           "displayName": "AlertableAdmin",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Admin"
           ],
-          "required": true,
           "properties": {
             "phone": {
               "name": "phone",
               "displayName": "phone",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "Phone"
               ],
@@ -289,6 +319,9 @@
                     "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "introduction-types-complex.raml"
               }
             }
           },
@@ -296,11 +329,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "introduction-types-complex.raml"
           }
         }
       },
@@ -308,19 +341,19 @@
         "Alertable": {
           "name": "Alertable",
           "displayName": "Alertable",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "Manager | AlertableAdmin"
           ],
-          "required": true,
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "introduction-types-complex.raml"
           }
         }
       }
@@ -338,31 +371,38 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
                     "type": [
                       "Org"
                     ],
-                    "required": true,
                     "__METADATA__": {
                       "primitiveValuesMeta": {
                         "displayName": {
                           "calculated": true
-                        },
-                        "required": {
-                          "insertedAsDefault": true
                         }
                       }
+                    },
+                    "sourceMap": {
+                      "path": "introduction-types-complex.raml"
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "introduction-types-complex.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "introduction-types-complex.raml"
+            }
           }
         ],
         "uriParameters": {
           "orgId": {
             "name": "orgId",
             "displayName": "orgId",
+            "typePropertyKind": "TYPE_EXPRESSION",
             "type": [
               "string"
             ],
@@ -380,6 +420,9 @@
                   "insertedAsDefault": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "introduction-types-complex.raml"
             }
           }
         },
@@ -392,13 +435,19 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "introduction-types-complex.raml"
+        },
         "relativeUriPathSegments": [
           "orgs",
           "{orgId}"
         ],
         "absoluteUri": "/orgs/{orgId}"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "introduction-types-complex.raml"
+    }
   },
   "errors": []
 }

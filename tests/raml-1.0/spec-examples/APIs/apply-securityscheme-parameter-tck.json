@@ -13,6 +13,7 @@
               "access_token": {
                 "name": "access_token",
                 "displayName": "access_token",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -27,6 +28,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "securitySchemes/oauth_2_0.raml"
                 }
               }
             },
@@ -34,6 +38,7 @@
               "Authorization": {
                 "name": "Authorization",
                 "displayName": "Authorization",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -48,19 +53,31 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "securitySchemes/oauth_2_0.raml"
                 }
               }
             },
             "responses": [
               {
                 "code": "401",
-                "description": "Bad or expired token. This can happen if the user or Dropbox\nrevoked or expired an access token. To fix, re-authenticate\nthe user.\n"
+                "description": "Bad or expired token. This can happen if the user or Dropbox\nrevoked or expired an access token. To fix, re-authenticate\nthe user.\n",
+                "sourceMap": {
+                  "path": "securitySchemes/oauth_2_0.raml"
+                }
               },
               {
                 "code": "403",
-                "description": "Bad OAuth request (wrong consumer key, bad nonce, expired\ntimestamp...). Unfortunately, re-authenticating the user won't help here.\n"
+                "description": "Bad OAuth request (wrong consumer key, bad nonce, expired\ntimestamp...). Unfortunately, re-authenticating the user won't help here.\n",
+                "sourceMap": {
+                  "path": "securitySchemes/oauth_2_0.raml"
+                }
               }
-            ]
+            ],
+            "sourceMap": {
+              "path": "securitySchemes/oauth_2_0.raml"
+            }
           },
           "settings": {
             "accessTokenUri": "https://api.dropbox.com/1/oauth2/token",
@@ -69,7 +86,17 @@
               "authorization_code",
               "implicit",
               "urn:ietf:params:oauth:grant-type:saml2-bearer"
-            ]
+            ],
+            "scopes": [
+              "USER",
+              "ADMINISTRATOR"
+            ],
+            "sourceMap": {
+              "path": "securitySchemes/oauth_2_0.raml"
+            }
+          },
+          "sourceMap": {
+            "path": "securitySchemes/oauth_2_0.raml"
           }
         }
       }
@@ -104,6 +131,9 @@
                   "calculated": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "apply-securityscheme-parameter.raml"
             }
           }
         ],
@@ -111,6 +141,7 @@
           "userid": {
             "name": "userid",
             "displayName": "userid",
+            "typePropertyKind": "TYPE_EXPRESSION",
             "type": [
               "string"
             ],
@@ -128,6 +159,9 @@
                   "insertedAsDefault": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "apply-securityscheme-parameter.raml"
             }
           }
         },
@@ -139,6 +173,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "apply-securityscheme-parameter.raml"
         },
         "relativeUriPathSegments": [
           "users",
@@ -154,6 +191,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "apply-securityscheme-parameter.raml"
     }
   },
   "errors": []

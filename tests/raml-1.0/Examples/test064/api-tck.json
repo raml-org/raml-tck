@@ -1,0 +1,131 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Api",
+  "specification": {
+    "title": "test API",
+    "resources": [
+      {
+        "methods": [
+          {
+            "responses": {
+              "200": {
+                "code": "200",
+                "body": {
+                  "application/json": {
+                    "name": "application/json",
+                    "displayName": "application/json",
+                    "typePropertyKind": "TYPE_EXPRESSION",
+                    "type": [
+                      "object"
+                    ],
+                    "example": {
+                      "body": {
+                        "id": 7
+                      }
+                    },
+                    "properties": {
+                      "body": {
+                        "name": "body",
+                        "displayName": "body",
+                        "typePropertyKind": "TYPE_EXPRESSION",
+                        "type": [
+                          "object"
+                        ],
+                        "required": true,
+                        "__METADATA__": {
+                          "primitiveValuesMeta": {
+                            "displayName": {
+                              "calculated": true
+                            },
+                            "required": {
+                              "insertedAsDefault": true
+                            }
+                          }
+                        },
+                        "sourceMap": {
+                          "path": "api.raml"
+                        }
+                      }
+                    },
+                    "__METADATA__": {
+                      "primitiveValuesMeta": {
+                        "displayName": {
+                          "calculated": true
+                        },
+                        "type": {
+                          "insertedAsDefault": true
+                        }
+                      }
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
+                    },
+                    "structuredExample": {
+                      "value": "{\n  \"body\": {\n    \"id\": 7\n  }\n}",
+                      "strict": true,
+                      "name": null,
+                      "structuredValue": {
+                        "body": {
+                          "id": 7
+                        }
+                      },
+                      "sourceMap": {
+                        "path": "api.raml"
+                      }
+                    }
+                  }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
+                }
+              }
+            },
+            "method": "post",
+            "sourceMap": {
+              "path": "api.raml"
+            }
+          }
+        ],
+        "relativeUri": "/login",
+        "displayName": "/login",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "sourceMap": {
+          "path": "api.raml"
+        },
+        "relativeUriPathSegments": [
+          "login"
+        ],
+        "absoluteUri": "/login"
+      }
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
+  },
+  "errors": [
+    {
+      "code": "UNKNOWN_PROPERTY",
+      "message": "Unknown property: 'id'",
+      "path": "api.raml",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 16,
+          "position": 271
+        },
+        "end": {
+          "line": 16,
+          "column": 18,
+          "position": 273
+        }
+      },
+      "isWarning": true
+    }
+  ]
+}

@@ -13,6 +13,7 @@
               "SpecialToken": {
                 "name": "SpecialToken",
                 "displayName": "SpecialToken",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -27,18 +28,33 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "security-schemes-xother.raml"
                 }
               }
             },
             "responses": [
               {
                 "code": "401",
-                "description": "Bad token.\n"
+                "description": "Bad token.\n",
+                "sourceMap": {
+                  "path": "security-schemes-xother.raml"
+                }
               },
               {
-                "code": "403"
+                "code": "403",
+                "sourceMap": {
+                  "path": "security-schemes-xother.raml"
+                }
               }
-            ]
+            ],
+            "sourceMap": {
+              "path": "security-schemes-xother.raml"
+            }
+          },
+          "sourceMap": {
+            "path": "security-schemes-xother.raml"
           }
         }
       }
@@ -50,6 +66,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -73,6 +90,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "security-schemes-xother.raml"
         }
       }
     },
@@ -85,6 +105,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "security-schemes-xother.raml"
     }
   },
   "errors": []

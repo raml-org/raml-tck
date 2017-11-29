@@ -17,7 +17,13 @@
               "client_credentials",
               "implicit",
               "https://example.com"
-            ]
+            ],
+            "sourceMap": {
+              "path": "apiValid.raml"
+            }
+          },
+          "sourceMap": {
+            "path": "apiValid.raml"
           }
         }
       }
@@ -29,6 +35,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -52,6 +59,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "apiValid.raml"
         }
       }
     },
@@ -64,6 +74,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "apiValid.raml"
     }
   },
   "errors": []

@@ -14,12 +14,23 @@
                 "body": {
                   "application/json": {
                     "name": "application/json",
-                    "example": 10
+                    "example": {
+                      "value": 10
+                    },
+                    "sourceMap": {
+                      "path": "api.raml"
+                    }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
-            "method": "get"
+            "method": "get",
+            "sourceMap": {
+              "path": "api.raml"
+            }
           }
         ],
         "displayName": "/",
@@ -30,15 +41,21 @@
             }
           }
         },
+        "sourceMap": {
+          "path": "api.raml"
+        },
         "relativeUriPathSegments": [],
         "absoluteUri": "/"
       }
-    ]
+    ],
+    "sourceMap": {
+      "path": "api.raml"
+    }
   },
   "errors": [
     {
-      "code": "STRING_EXPECTED_2",
-      "message": "'example' value should be a string",
+      "code": "SCALAR_EXPECTED",
+      "message": "Scalar is expected here",
       "path": "api.raml",
       "range": {
         "start": {

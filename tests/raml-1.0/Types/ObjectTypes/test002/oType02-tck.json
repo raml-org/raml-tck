@@ -7,17 +7,18 @@
         "Initial_comments": {
           "name": "Initial_comments",
           "displayName": "Initial_comments",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "object"
           ],
           "example": {
             "initial_comments": "oo"
           },
-          "required": true,
           "properties": {
             "comment_id": {
               "name": "comment_id",
               "displayName": "comment_id",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "number"
               ],
@@ -26,16 +27,17 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "oType02.raml"
               }
             },
             "initial_comments": {
               "name": "initial_comments",
               "displayName": "initial_comments",
+              "typePropertyKind": "TYPE_EXPRESSION",
               "type": [
                 "string"
               ],
@@ -44,11 +46,11 @@
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
                   }
                 }
+              },
+              "sourceMap": {
+                "path": "oType02.raml"
               }
             }
           },
@@ -57,11 +59,11 @@
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
-              },
-              "required": {
-                "insertedAsDefault": true
               }
             }
+          },
+          "sourceMap": {
+            "path": "oType02.raml"
           },
           "structuredExample": {
             "value": "{\n  \"initial_comments\": \"oo\"\n}",
@@ -69,12 +71,18 @@
             "name": null,
             "structuredValue": {
               "initial_comments": "oo"
+            },
+            "sourceMap": {
+              "path": "oType02.raml"
             }
           }
         }
       }
     ],
-    "title": "My API With Types"
+    "title": "My API With Types",
+    "sourceMap": {
+      "path": "oType02.raml"
+    }
   },
   "errors": [
     {

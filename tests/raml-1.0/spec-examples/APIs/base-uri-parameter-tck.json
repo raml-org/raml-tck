@@ -9,6 +9,7 @@
       "bucketName": {
         "name": "bucketName",
         "displayName": "bucketName",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -26,6 +27,9 @@
               "insertedAsDefault": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "base-uri-parameter.raml"
         }
       }
     },
@@ -38,6 +42,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "base-uri-parameter.raml"
     }
   },
   "errors": []

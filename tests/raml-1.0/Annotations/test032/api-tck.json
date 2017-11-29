@@ -7,21 +7,22 @@
         "bindingDefinition": {
           "name": "bindingDefinition",
           "displayName": "BindingDefinition",
+          "typePropertyKind": "TYPE_EXPRESSION",
           "type": [
             "array"
           ],
-          "required": true,
           "items": {
             "name": "items",
             "displayName": "items",
+            "typePropertyKind": "TYPE_EXPRESSION",
             "type": [
               "object"
             ],
-            "required": true,
             "properties": {
               "method": {
                 "name": "method",
                 "displayName": "method",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -40,11 +41,15 @@
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               },
               "input": {
                 "name": "input",
                 "displayName": "input",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -61,11 +66,15 @@
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               },
               "output": {
                 "name": "output",
                 "displayName": "output",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -82,6 +91,9 @@
                       "calculated": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "api.raml"
                 }
               }
             },
@@ -92,19 +104,18 @@
                 },
                 "type": {
                   "insertedAsDefault": true
-                },
-                "required": {
-                  "insertedAsDefault": true
                 }
               }
+            },
+            "sourceMap": {
+              "path": "api.raml"
             }
           },
           "__METADATA__": {
-            "primitiveValuesMeta": {
-              "required": {
-                "insertedAsDefault": true
-              }
-            }
+            "primitiveValuesMeta": {}
+          },
+          "sourceMap": {
+            "path": "api.raml"
           }
         }
       }
@@ -139,6 +150,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "api.raml"
     }
   },
   "errors": []

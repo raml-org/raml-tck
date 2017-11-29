@@ -13,6 +13,7 @@
               "query": {
                 "name": "query",
                 "displayName": "query",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -26,6 +27,9 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "security-schemes-pass.raml"
                 }
               }
             },
@@ -33,6 +37,7 @@
               "api_key": {
                 "name": "api_key",
                 "displayName": "api_key",
+                "typePropertyKind": "TYPE_EXPRESSION",
                 "type": [
                   "string"
                 ],
@@ -46,9 +51,18 @@
                       "insertedAsDefault": true
                     }
                   }
+                },
+                "sourceMap": {
+                  "path": "security-schemes-pass.raml"
                 }
               }
+            },
+            "sourceMap": {
+              "path": "security-schemes-pass.raml"
             }
+          },
+          "sourceMap": {
+            "path": "security-schemes-pass.raml"
           }
         }
       }
@@ -60,6 +74,7 @@
       "version": {
         "name": "version",
         "displayName": "version",
+        "typePropertyKind": "TYPE_EXPRESSION",
         "type": [
           "string"
         ],
@@ -83,6 +98,9 @@
               "calculated": true
             }
           }
+        },
+        "sourceMap": {
+          "path": "security-schemes-pass.raml"
         }
       }
     },
@@ -95,6 +113,9 @@
           "calculated": true
         }
       }
+    },
+    "sourceMap": {
+      "path": "security-schemes-pass.raml"
     }
   },
   "errors": []
