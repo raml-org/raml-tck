@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "description": "A Library that references an inexistent type",
+      "input": "bar-lib-unknown-type",
+      "valid": false,
+      "tags": [
+        "type", "library"
+      ]
+    }
+  ]
+}
