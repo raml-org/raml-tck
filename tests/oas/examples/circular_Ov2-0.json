@@ -1,0 +1,75 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "description": "This API contains circular (recursive) JSON references",
+    "title": "Circular $Refs"
+  },
+  "paths": {
+    "/pet": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Returns a pet",
+            "schema": {
+              "$ref": "#/definitions/pet"
+            }
+          }
+        }
+      }
+    },
+    "/thing": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Returns a thing",
+            "schema": {
+              "$ref": "#/definitions/thing"
+            }
+          }
+        }
+      }
+    },
+    "/person": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Returns a person",
+            "schema": {
+              "$ref": "#/definitions/person"
+            }
+          }
+        }
+      }
+    },
+    "/parent": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Returns a parent",
+            "schema": {
+              "$ref": "#/definitions/parent"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "pet": {
+      "$ref": "definitions/pet.json"
+    },
+    "thing": {
+      "$ref": "circular_Ov2-0#/definitions/thing"
+    },
+    "person": {
+      "$ref": "definitions/person.json"
+    },
+    "parent": {
+      "$ref": "definitions/parent.json"
+    },
+    "child": {
+      "$ref": "definitions/child.json"
+    }
+  }
+}

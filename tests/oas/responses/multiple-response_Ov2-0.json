@@ -1,0 +1,41 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger",
+    "description": "A sample API"
+  },
+  "host": "swagger.io",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/pets": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "simple string response",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "object created"
+          },
+          "default": {
+            "description": "oops",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    }
+  }
+}

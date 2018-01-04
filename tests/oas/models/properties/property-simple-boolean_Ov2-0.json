@@ -1,0 +1,20 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample API",
+    "version": "1.0.0"
+  },
+  "schemes": [],
+  "paths": {},
+  "definitions": {
+    "Pet": {
+      "properties": {
+        "bark": {
+          "type": "boolean",
+          "description": "a boolean",
+          "readOnly": true
+        }
+      }
+    }
+  }
+}

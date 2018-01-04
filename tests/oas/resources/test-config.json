@@ -1,0 +1,196 @@
+{
+	"tests": [
+		{
+			"description": "cascading schemes",
+			"input": "cascading-schemes",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "common parameters",
+			"input": "common-parameters",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "multiple mime types",
+			"input": "multiple-mime-types",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource bodies",
+			"input": "resource-bodies",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource bodies",
+			"input": "resource-bodies",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource example payload",
+			"input": "resource-example-payload",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource examples",
+			"input": "resource-examples",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource headers",
+			"input": "resource-headers",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource linked definitions",
+			"input": "resource-linked-definitions",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource nested",
+			"input": "resource-nested",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource parameters",
+			"input": "resource-parameters",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource produces consumes",
+			"input": "resource-produces-consumes",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource queryParameters",
+			"input": "resource-queryParameters",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource relative host",
+			"input": "resource-relative-host",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource response headers",
+			"input": "resource-response-headers",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource simple",
+			"input": "resource-simple",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource summary",
+			"input": "resource-summary",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource traits used",
+			"input": "resource-traits-used",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resource traits",
+			"input": "resource-traits",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "resourceWithLinkedDefinitions",
+			"input": "resourceWithLinkedDefinitions",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "reusable parameters Ov2 0",
+			"input": "reusable-parameters-Ov2-0",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "root baseUriParameters2",
+			"input": "root-baseUriParameters2",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "root baseUriParameters",
+			"input": "root-baseUriParameters",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "root example2",
+			"input": "root-example2",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "root example",
+			"input": "root-example",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "string path param resource",
+			"input": "string-path-param-resource",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "tag annotation",
+			"input": "tag-annotation",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "tagged resource",
+			"input": "tagged-resource",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "vendor extension examples",
+			"input": "vendor-extension-examples",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "invalid no path params",
+			"input": "invalid-no-path-params",
+			"valid": "false",
+			"tags": []
+		},
+		{
+			"description": "multiple paths",
+			"input": "multiple-paths",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "invalid file consumes",
+			"input": "invalid-file-consumes",
+			"valid": "false",
+			"tags": []
+		}
+	]
+}

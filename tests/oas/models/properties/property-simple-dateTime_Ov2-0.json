@@ -1,0 +1,19 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample API",
+    "version": "1.0.0"
+  },
+  "schemes": [],
+  "paths": {},
+  "definitions": {
+    "Pet": {
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

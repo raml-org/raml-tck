@@ -1,0 +1,11 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample API",
+    "version": "1.0.0"
+  },
+  "schemes": [
+    "http", "https"
+  ],
+  "paths": {}
+}

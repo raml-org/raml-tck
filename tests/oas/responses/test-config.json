@@ -1,0 +1,52 @@
+{
+	"tests": [
+		{
+			"description": "complexArray response",
+			"input": "complexArray-response",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "dateTime response",
+			"input": "dateTime-response",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "int32 response",
+			"input": "int32-response",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "int64 response",
+			"input": "int64-response",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "invalid response",
+			"input": "invalid-response",
+			"valid": "false",
+			"tags": []
+		},
+		{
+			"description": "multiple response",
+			"input": "multiple-response",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "string response with header",
+			"input": "string-response-with-header",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "stringArray response",
+			"input": "stringArray-response",
+			"valid": "true",
+			"tags": []
+		}
+	]
+}

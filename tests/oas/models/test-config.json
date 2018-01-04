@@ -1,0 +1,76 @@
+{
+  "tests": [
+    {
+      "description": "multiple models",
+      "input": "multiple-models",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "model with xml attributes",
+      "input": "model-with-xml-attributes",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "model with multiple models",
+      "input": "model-with-multiple-models",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "model with examples",
+      "input": "model-with-examples",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "mode with composition",
+      "input": "model-with-composition",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "model with arrayRef",
+      "input": "model-with-arrayRef",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "basic models",
+      "input": "basic-models",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "model object type",
+      "input": "model-object",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    },
+    {
+      "description": "model with polymorphism",
+      "input": "model-with-polymorphism",
+      "valid": true,
+      "tags": [
+        "model"
+      ]
+    }
+  ]
+}

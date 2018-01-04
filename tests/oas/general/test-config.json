@@ -1,0 +1,58 @@
+{
+  "tests": [
+    {
+      "description": "annotation",
+      "input": "annotation",
+      "valid": true,
+      "tags": [
+        "annotation"
+      ]
+    },
+    {
+      "description": "basic empty",
+      "input": "basic-empty",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "basic with externalDocs",
+      "input": "basic-externalDocs",
+      "valid": true,
+      "tags": [
+        "externalDocs"
+      ]
+    },
+    {
+      "description": "basic with info",
+      "input": "basic-info",
+      "valid": true,
+      "tags": [
+        "info"
+      ]
+    },
+    {
+      "description": "basic schema",
+      "input": "basic-schema",
+      "valid": true,
+      "tags": [
+        "schema"
+      ]
+    },
+    {
+      "description": "invalid basic with externalDocs",
+      "input": "invalid-basic-externalDocs",
+      "valid": false,
+      "tags": [
+        "externalDocs"
+      ]
+    },
+    {
+      "description": "invalid basic with info",
+      "input": "invalid-basic-info",
+      "valid": false,
+      "tags": [
+        "info"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "person",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "spouse": {
+      "$ref": "person.json"
+    }
+  }
+}
