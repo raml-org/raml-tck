@@ -58,7 +58,7 @@
       ]
     },
     {
-      "description": "using predefined 'ext' for defining media types in the URL",
+      "description": "using predefined 'ext' or 'mediaTypeExtension' for defining media types in the URL",
       "input": "uri-parameters-ext",
       "valid": true,
       "tags": [
@@ -71,6 +71,38 @@
       "valid": true,
       "tags": [
         "resource", "uri template"
+      ]
+    },
+    {
+      "description": "allowed multiple implicit URI parameters",
+      "input": "uri-parameters-implicit",
+      "valid": true,
+      "tags": [
+        "resource", "uri template", "multiple", "implicit"
+      ]
+    },
+    {
+      "description": "Override base uri parameter at Resource level",
+      "input": "base-uri-parameter-override",
+      "valid": true,
+      "tags": [
+        "resource", "override", "uri template", "baseUriParameters"
+      ]
+    },
+    {
+      "description": "Nested Base Uri parameter must override a more generic one",
+      "input": "base-uri-parameter-nested",
+      "valid": true,
+      "tags": [
+        "resource", "override", "uri template", "baseUriParameters"
+      ]
+    },
+    {
+      "description": "Nested Base Uri parameter in a method must override a more generic one",
+      "input": "base-uri-parameter-nested-method",
+      "valid": true,
+      "tags": [
+        "resource", "override", "uri template", "baseUriParameters"
       ]
     }
   ]

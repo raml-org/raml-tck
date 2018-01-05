@@ -1,0 +1,14 @@
+#%RAML 0.8
+
+# Objective: This RAML illustrates an example using media type in the URL
+# Expected result: no error message
+
+# tags: media type, uri parameter
+
+title: API Using media type in the URL
+version: v1
+/users{mediaTypeExtension}:
+  uriParameters:
+    mediaTypeExtension:
+      enum: [ .json, .xml ]
+      description: Use .json to specify application/json or .xml to specify text/xml

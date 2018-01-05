@@ -1,0 +1,31 @@
+#%RAML 0.8
+
+# A resource type or trait definition MAY append a question mark ("?") suffix to the name of any non-scalar
+# property that should not be applied if it doesn't already exist in the resource or method at the
+# corresponding level. This optional structure key indicates that the value of the property should be applied if
+# the property name itself (without the question mark) is already defined (whether explicitly or implicitly) at
+# the corresponding level in that resource or method.
+# The following example shows an optional post? property that defines a body parameter called
+# createAuthority. If the inheriting resource defines a post method, it will include the createAuthority
+# property in its body. Likewise, if the inheriting resource defines a delete method, it will include the
+# deleteAuthority property in its body.
+
+#The following example shows an optional post? property that defines a body parameter called createAuthority.
+# If the inheriting resource defines a post method, it will include the createAuthority property in its body.
+# Likewise, if the inheriting resource defines a delete method, it will include the deleteAuthority property in its body.
+
+title: Example of Optional Properties
+resourceTypes:
+  - auditableResource
+      post?:
+        body:
+          createAuthority:
+            description: |
+              If the resource has a post method defined, expect a createAuthority
+              property in its body
+      delete?:
+        body:
+          deleteAuthority:
+            description: |
+              If the resource has a delete method defined, expect a deleteAuthority
+              property in its body

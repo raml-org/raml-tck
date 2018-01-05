@@ -1,0 +1,21 @@
+#%RAML 0.8
+
+# Objective: The following example illustrates the application of resource types and traits.
+# Expected result: no error message
+
+# tags: traits, resource types
+
+title: Example API
+version: v1
+resourceTypes:
+  - collection: !include ../.resources/resourceTypes/collection_Rv1-0.raml
+    member: !include ../.resources/resourceTypes/member_Rv1-0.raml
+traits:
+  - secured: !include ../.resources/traits/secured_Rv1-0.raml
+    paged: !include ../.resources/traits/paged_Rv1-0.raml
+    rateLimited: !include ../.resources/traits/rate-limited_Rv1-0.raml
+/users:
+  type: collection
+  is: [ secured ] # if collection defines a post method, that method is also secured
+  get:
+    is: [ paged, rateLimited ]
