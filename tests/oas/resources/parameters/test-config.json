@@ -1,0 +1,94 @@
+{
+	"tests": [
+		{
+			"description": "body complexArray parameter",
+			"input": "body-complexArray-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "body complexInline parameter",
+			"input": "body-complexInline-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "body stringArray parameter",
+			"input": "body-stringArray-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "body",
+			"input": "body",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "formData int64 parameter",
+			"input": "formData-int64-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "formData string parameter",
+			"input": "formData-string-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "formData stringArray parameter",
+			"input": "formData-stringArray-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "header int64 parameter",
+			"input": "header-int64-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "header string parameter",
+			"input": "header-string-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "header stringArray parameter",
+			"input": "header-stringArray-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "path int64 parameter",
+			"input": "path-int64-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "path string parameter",
+			"input": "path-string-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "path stringArray parameter",
+			"input": "path-stringArray-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "query int64 parameter",
+			"input": "query-int64-parameter",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "query int64Array parameter",
+			"input": "query-int64Array-parameter",
+			"valid": "true",
+			"tags": []
+		}
+	]
+}

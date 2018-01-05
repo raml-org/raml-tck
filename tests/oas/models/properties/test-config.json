@@ -1,0 +1,52 @@
+{
+	"tests": [
+		{
+			"description": "property byteArray",
+			"input": "property-byteArray",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "property ComplexArray",
+			"input": "property-ComplexArray",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "property int array limited",
+			"input": "property-int-array-limited",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "property int limited",
+			"input": "property-int-limited",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "property simple boolean",
+			"input": "property-simple-boolean",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "property simple dateTime",
+			"input": "property-simple-dateTime",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "property string array",
+			"input": "property-string-array",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "property string limited",
+			"input": "property-string-limited",
+			"valid": "true",
+			"tags": []
+		}
+	]
+}

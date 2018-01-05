@@ -1,0 +1,13 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample API",
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find more info here",
+    "url": "https://swagger.io"
+  },
+  "schemes": [],
+  "paths": {}
+}

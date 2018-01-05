@@ -1,0 +1,28 @@
+{
+	"tests": [
+		{
+			"description": "operation with tags",
+			"input": "operation-with-tags",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "string path and bool queryParamResource",
+			"input": "string-path-and-bool-queryParamResource",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "string path ParamResource",
+			"input": "string-path-ParamResource",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "invalid duplicate operation params",
+			"input": "invalid-duplicate-operation-params",
+			"valid": "false",
+			"tags": []
+		}
+	]
+}

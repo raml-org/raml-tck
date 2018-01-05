@@ -1,0 +1,28 @@
+{
+	"tests": [
+		{
+			"description": "multiple security definitions",
+			"input": "multiple-security-definitions",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "security def example",
+			"input": "security-def-example",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "security example",
+			"input": "security-example",
+			"valid": "true",
+			"tags": []
+		},
+		{
+			"description": "security scheme",
+			"input": "security-scheme",
+			"valid": "true",
+			"tags": []
+		}
+	]
+}

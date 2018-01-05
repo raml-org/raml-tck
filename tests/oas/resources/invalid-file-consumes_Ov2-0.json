@@ -1,0 +1,39 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Invalid API"
+  },
+  "consumes": [
+    "multipart/form-data",
+    "application/x-www-form-urlencoded"
+  ],
+  "paths": {
+    "/users/{username}/profile/image": {
+      "parameters": [
+        {
+          "name": "username",
+          "in": "path",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "image",
+          "in": "formData",
+          "type": "file"
+        }
+      ],
+      "post": {
+        "consumes": [
+          "application/octet-stream",
+          "image/png"
+        ],
+        "responses": {
+          "default": {
+            "description": "hello world"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "tests": [
+    {
+      "description": "api with examples",
+      "input": "api-with-examples",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "petstore",
+      "input": "petstore",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "petstore expanded",
+      "input": "petstore-expanded",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "petstore minimal",
+      "input": "petstore-minimal",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "petstore simple",
+      "input": "petstore-simple",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "petstore with external docs",
+      "input": "petstore-with-external-docs",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "uber",
+      "input": "uber",
+      "valid": true,
+      "tags": []
+    },
+    {
+      "description": "callbacks promises",
+      "input": "callbacks-promises",
+      "valid": "true",
+      "tags": []
+    },
+    {
+      "description": "circular",
+      "input": "circular",
+      "valid": "true",
+      "tags": []
+    }
+  ]
+}
