@@ -7,6 +7,22 @@
       "tags": [
         "response", "type", "object", "default", "facet"
       ]
+    },
+    {
+      "description": "'example' value should be a string",
+      "input": "response-invalid-example",
+      "valid": false,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "*/* MAY be used to indicate that responses that do not match other defined data types MUST be accepted.",
+      "input": "response-without-type",
+      "valid": true,
+      "tags": [
+        "response"
+      ]
     }
   ]
 }

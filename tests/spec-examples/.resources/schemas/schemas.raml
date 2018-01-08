@@ -1,0 +1,281 @@
+account: |
+  {
+    "type": "object",
+    "id": "account",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+      "accountName": {
+        "description": "The account name",
+        "type": "string",
+        "required": true
+      },
+      "federalTaxId": {
+        "description": "The merchant federal tax ID",
+        "type": "string",
+        "required": true
+      },
+      "posApplicationName": {
+        "description": "The name of the POS application",
+        "type": "string",
+        "required": true
+      },
+      "contactInfo": { "$ref": "#/contact" },
+      "address": { "$ref": "#/address" }
+    }
+  }
+
+subAccount: |
+  {
+    "type": "object",
+    "id": "subAccount",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+      "merchant": { "$ref": "merchant" },
+      "contactInfo": { "$ref": "contact" },
+      "address": { "$ref": "address" }
+    }
+  }
+
+contact: |
+  {
+    "type": "object",
+    "id": "contact",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+      "firstName": {
+        "description": "The contact's first name",
+        "type": "string",
+        "required": true
+      },
+      "lastName": {
+        "description": "The contact's last name",
+        "type": "string",
+        "required": true
+      },
+      "title": {
+        "description": "The contact's title",
+        "type": "string"
+      },
+      "emailAddress": {
+        "description": "The contact's email address",
+        "type": "string",
+        "required": true
+      },
+      "primaryPhone": {
+        "description": "The contact's primary phone number",
+        "type": "string",
+        "required": true,
+        "minLength": 10,
+        "maxLength": 10
+      },
+      "secondaryPhone": {
+        "description": "The contact's secondary phone number",
+        "type": "string",
+        "required": true,
+        "minLength": 10,
+        "maxLength": 10
+      },
+      "fax": {
+        "description": "The contact's fax number",
+        "type": "string",
+        "required": true,
+        "minLength": 10,
+        "maxLength": 10
+      }
+    }
+  }
+
+address: |
+  {
+    "type": "object",
+    "id": "address",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+      "address": {
+        "description": "The street address (first line)",
+        "type": "string",
+        "required": true
+      },
+      "address2": {
+        "description": "The street address (second line)",
+        "type": "string",
+        "required": true
+      },
+      "city": {
+        "description": "The city",
+        "type": "string",
+        "required": true
+      },
+      "state": {
+        "description": "The state",
+        "type": "string",
+        "required": true,
+        "minLength": 2,
+        "maxLength": 2,
+        "enum": [
+              "AA",
+              "AE",
+              "AK",
+              "AL",
+              "AP",
+              "AR",
+              "AS",
+              "AZ",
+              "CA",
+              "CO",
+              "CT",
+              "DC",
+              "DE",
+              "FL",
+              "FM",
+              "GA",
+              "GU",
+              "HI",
+              "IA",
+              "ID",
+              "IL",
+              "IN",
+              "KS",
+              "KY",
+              "LA",
+              "MA",
+              "MD",
+              "ME",
+              "MH",
+              "MI",
+              "MN",
+              "MO",
+              "MP",
+              "MS",
+              "MT",
+              "NC",
+              "ND",
+              "NE",
+              "NH",
+              "NJ",
+              "NM",
+              "NV",
+              "NY",
+              "OH",
+              "OK",
+              "OR",
+              "PA",
+              "PR",
+              "PW",
+              "RI",
+              "SC",
+              "SD",
+              "TN",
+              "TX",
+              "UT",
+              "VA",
+              "VI",
+              "VT",
+              "WA",
+              "WI",
+              "WV",
+              "WY"
+            ]
+      },
+      "zipCode": {
+        "type": "string",
+        "required": true,
+        "minLength": 5,
+        "maxLength": 10
+      }
+    }
+  }
+
+vantivRaftCredentials: |
+  {
+    "type": "object",
+    "id": "vantivRaftCredentials",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+vantivPwsCredentials: |
+  {
+    "type": "object",
+    "id": "vantivPwsCredentials",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+fdcNashvilleCredentials: |
+  {
+    "type": "object",
+    "id": "fdcNashvilleCredentials",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+fdcCanadaCredentials: |
+  {
+    "type": "object",
+    "id": "fdcCanadaCredentials",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+globalCredentials: |
+  {
+    "type": "object",
+    "id": "globalCredentials",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+tsysCredentials: |
+  {
+    "type": "object",
+    "id": "tsysCredentials",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+paymentechCredentials: |
+  {
+    "type": "object",
+    "id": "paymentechCredentials",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+tsysTerminal: |
+  {
+    "type": "object",
+    "id": "tsysTerminal",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }
+
+globalTerminal: |
+  {
+    "type": "object",
+    "id": "globalTerminal",
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "required": true,
+    "properties": {
+    }
+  }

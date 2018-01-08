@@ -1,0 +1,12 @@
+#%RAML 0.8
+title: title
+
+/jobs:
+  displayName: Jobs
+  post:
+    description: Create a Job
+    body:
+      text/xml:
+        schema: !include job.xsd
+      application/json:
+        schema: !include job.json
