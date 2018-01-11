@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "description": "Simple trait",
+      "input": "trait",
+      "valid": true,
+      "tags": [
+        "trait", "example"
+      ]
+    },
+    {
+      "description": "Simple invalid trait example",
+      "input": "trait-invalid",
+      "valid": false,
+      "tags": [
+        "trait", "example"
+      ]
+    }
+  ]
+}
