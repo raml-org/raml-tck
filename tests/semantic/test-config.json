@@ -1,0 +1,92 @@
+{
+  "tests": [
+    {
+      "description": "Simple method response",
+      "input": "simple-method-response",
+      "valid": true,
+      "tags": [
+        "response", "method"
+      ]
+    },
+    {
+      "description": "Query Parameter Example",
+      "input": "query-parameter-example",
+      "valid": true,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Invalid Query Parameter Example",
+      "input": "query-parameter-example-invalid",
+      "valid": false,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Query Parameter Example",
+      "input": "query-parameter-example-2",
+      "valid": true,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Invalid Query Parameter Example",
+      "input": "query-parameter-example-2-invalid",
+      "valid": false,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Query Parameter Example",
+      "input": "query-parameter-example-3",
+      "valid": true,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Invalid Query Parameter Example",
+      "input": "query-parameter-example-3-invalid",
+      "valid": false,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Query Parameter Example",
+      "input": "query-parameter-example-4",
+      "valid": true,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Invalid Query Parameter Example",
+      "input": "query-parameter-example-4-invalid",
+      "valid": false,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Query Parameter Example",
+      "input": "query-parameter-example-5",
+      "valid": true,
+      "tags": [
+        "response", "example"
+      ]
+    },
+    {
+      "description": "Invalid Query Parameter Example",
+      "input": "query-parameter-example-5-invalid",
+      "valid": false,
+      "tags": [
+        "response", "example"
+      ]
+    }
+  ]
+}

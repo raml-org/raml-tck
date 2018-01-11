@@ -55,6 +55,30 @@
       "tags": [
         "security scheme"
       ]
+    },
+    {
+      "description": "define authentication using OAuth 2.0 and OAuth 1.0 security schemes without settings",
+      "input": "security-schemes-invalid",
+      "valid": false,
+      "tags": [
+        "security scheme"
+      ]
+    },
+    {
+      "description": "define authentication using x-sls security schemes",
+      "input": "security-schemes-2",
+      "valid": true,
+      "tags": [
+        "security scheme", "x-sls"
+      ]
+    },
+    {
+      "description": "define authentication using n-sls security schemes",
+      "input": "security-schemes-2-invalid",
+      "valid": false,
+      "tags": [
+        "security scheme", "x-sls"
+      ]
     }
   ]
 }
