@@ -8,12 +8,12 @@
 title: Example API
 version: v1
 resourceTypes:
-  - collection: !include ../.resources/resourceTypes/collection.yml
-    member: !include ../.resources/resourceTypes/member.yml
+  - collection: !include ../resources/resourceTypes/collection.yml
+    member: !include ../resources/resourceTypes/member.yml
 traits:
-  - secured: !include ../.resources/traits/secured.yml
-    paged: !include ../.resources/traits/paged.yml
-    rateLimited: !include ../.resources/traits/rate-limited.yml
+  - secured: !include ../resources/traits/secured.yml
+    paged: !include ../resources/traits/paged.yml
+    rateLimited: !include ../resources/traits/rate-limited.yml
 /users:
   type: collection
   is: [ secured ] # if collection defines a post method, that method is also secured
