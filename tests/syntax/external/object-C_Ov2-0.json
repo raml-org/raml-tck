@@ -1,0 +1,10 @@
+{
+  "CObject" : {
+    "type": "object",
+    "properties":{
+      "ContractProp": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "swagger": "2.0",
+  "info" : {
+    "description" : "Main API that will reference an object that reference to another two objects",
+    "version" : "1.0.0",
+    "title" : "Main API"
+  },
+  "host": "localhost:9094",
+  "schemes": [
+    "http","https"
+  ],
+  "basePath": "",
+  "paths" : {
+    "/basepath/{ID}" : {
+      "get" : {
+        "description" : "get B object",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [
+          {
+            "name" : "ID",
+            "in" : "path",
+            "description" : "ID",
+            "required" : true,
+            "type" : "string"
+          }
+        ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful response",
+            "schema" : {
+              "$ref" : "./object-B_Ov2-0.json#/BObject"
+            }
+          }
+        }
+      }
+    }
+  }
+}
