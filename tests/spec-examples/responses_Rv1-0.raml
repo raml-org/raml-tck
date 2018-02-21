@@ -32,9 +32,9 @@ types:
             example: /invoices/45612
         body:
           application/json:
-            type: !include .resources/schemas/invoice.json
+            type: !include resources/schemas/invoice.json
           text/xml:
-            type: !include .resources/schemas/invoice.xsd
+            type: !include resources/schemas/invoice.xsd
       422:
         body:
           properties:

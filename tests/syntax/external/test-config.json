@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "description": "Chain libraries example, APIMF-434",
+      "input": "chain-library",
+      "valid": true,
+      "tags": [
+        "chain", "reference", "library"
+      ]
+    }
+  ]
+}

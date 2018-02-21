@@ -4,12 +4,12 @@ version: v3
 baseUri: https://api.github.com
 mediaType:  application/json
 securitySchemes:
-  oauth_2_0: !include .resources/securitySchemes/oauth-2-0_Rv1-0.raml
+  oauth_2_0: !include resources/securitySchemes/oauth-2-0_Rv1-0.raml
 types:
-  Gist:  !include .resources/types/gist_Rv1-0.raml
-  Gists: !include .resources/types/gists_Rv1-0.raml
+  Gist:  !include resources/types/gist_Rv1-0.raml
+  Gists: !include resources/types/gists_Rv1-0.raml
 resourceTypes:
-  collection: !include .resources/types/collection_Rv1-0.raml
+  collection: !include resources/types/collection_Rv1-0.raml
 traits:
 securedBy: [ oauth_2_0 ]
 /search:

@@ -1,0 +1,13 @@
+{
+  "BObject" : {
+    "type": "object",
+    "properties":{
+      "C":{
+        "$ref":"./object-C_Ov2-0.json#/CObject"
+      },
+      "D":{
+        "$ref":"./object-D_Ov2-0.json#/DObject"
+      }
+    }
+  }
+}

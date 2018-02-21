@@ -1,0 +1,10 @@
+{
+  "DObject" : {
+    "type": "object",
+    "properties":{
+      "ContractProp": {
+        "type": "string"
+      }
+    }
+  }
+}
