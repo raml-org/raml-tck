@@ -87,6 +87,14 @@
       "tags": [
         "response", "example"
       ]
+    },
+    {
+      "description": "APIMF-474 - empty queryParameter should be valid",
+      "input": "query-parameter-empty",
+      "valid": true,
+      "tags": [
+        "queryParameter", "empty"
+      ]
     }
   ]
 }

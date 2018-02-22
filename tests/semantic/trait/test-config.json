@@ -15,6 +15,14 @@
       "tags": [
         "trait", "example"
       ]
+    },
+    {
+      "description": "APIMF-476 - property usage must be valid in a operation node",
+      "input": "operation-trait-usage-property",
+      "valid": true,
+      "tags": [
+        "trait", "usage", "operation"
+      ]
     }
   ]
 }
