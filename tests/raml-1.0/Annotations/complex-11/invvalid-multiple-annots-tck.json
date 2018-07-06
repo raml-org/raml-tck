@@ -290,7 +290,7 @@
     {
       "code": "PATTERN_VIOLATION",
       "message": "String should match to '[a-zA-Z0-9]{8,32}'",
-      "path": "api.raml",
+      "path": "invalid-multiple-annots.raml",
       "range": {
         "start": {
           "line": 31,
