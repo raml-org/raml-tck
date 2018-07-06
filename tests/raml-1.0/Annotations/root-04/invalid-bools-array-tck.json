@@ -66,7 +66,7 @@
     {
       "code": "TYPE_EXPECTED",
       "message": "boolean is expected",
-      "path": "apiInvalid.raml",
+      "path": "invalid-bools-array.raml",
       "range": {
         "start": {
           "line": 10,

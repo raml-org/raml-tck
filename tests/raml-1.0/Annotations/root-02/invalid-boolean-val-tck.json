@@ -2,21 +2,30 @@
   "ramlVersion": "RAML10",
   "type": "Api",
   "specification": {
+    "annotations": {
+      "test": {
+        "structuredValue": {
+          "q": "true2",
+          "items": "W"
+        },
+        "name": "test"
+      }
+    },
     "annotationTypes": [
       {
-        "suborg": {
-          "name": "suborg",
-          "displayName": "suborg",
+        "test": {
+          "name": "test",
+          "displayName": "test",
           "type": [
             "object"
           ],
           "required": true,
           "properties": {
-            "prop1": {
-              "name": "prop1",
-              "displayName": "prop1",
+            "q": {
+              "name": "q",
+              "displayName": "q",
               "type": [
-                "number"
+                "boolean"
               ],
               "required": true,
               "__METADATA__": {
@@ -30,13 +39,17 @@
                 }
               }
             },
-            "/.*/": {
-              "name": "/.*/",
-              "displayName": "/.*/",
+            "items": {
+              "name": "items",
+              "displayName": "items",
               "type": [
-                "object"
+                "string"
               ],
               "required": true,
+              "enum": [
+                "W",
+                "A"
+              ],
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
@@ -54,6 +67,9 @@
               "displayName": {
                 "calculated": true
               },
+              "type": {
+                "insertedAsDefault": true
+              },
               "required": {
                 "insertedAsDefault": true
               }
@@ -62,53 +78,23 @@
         }
       }
     ],
-    "title": "Annotation with arbitrary properties",
-    "resources": [
-      {
-        "annotations": {
-          "suborg": {
-            "structuredValue": {
-              "manager": {
-                "name": "Tom"
-              },
-              "superintendent": {
-                "name": "Bob"
-              }
-            },
-            "name": "suborg"
-          }
-        },
-        "relativeUri": "/assets",
-        "displayName": "/assets",
-        "__METADATA__": {
-          "primitiveValuesMeta": {
-            "displayName": {
-              "calculated": true
-            }
-          }
-        },
-        "relativeUriPathSegments": [
-          "assets"
-        ],
-        "absoluteUri": "/assets"
-      }
-    ]
+    "title": "H"
   },
   "errors": [
     {
-      "code": "REQUIRED_PROPERTY_MISSING",
-      "message": "Required property 'prop1' is missing",
-      "path": "apiValid.raml",
+      "code": "TYPE_EXPECTED",
+      "message": "boolean is expected",
+      "path": "invalid-boolean-val.raml",
       "range": {
         "start": {
-          "line": 9,
-          "column": 2,
-          "position": 165
+          "line": 10,
+          "column": 6,
+          "position": 146
         },
         "end": {
-          "line": 9,
-          "column": 10,
-          "position": 173
+          "line": 10,
+          "column": 7,
+          "position": 147
         }
       }
     }

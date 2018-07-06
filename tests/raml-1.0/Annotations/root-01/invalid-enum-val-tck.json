@@ -84,7 +84,7 @@
     {
       "code": "ENUM_RESTRICTION",
       "message": "value should be one of: 'W', 'A'",
-      "path": "apiInvalid.raml",
+      "path": "invalid-enum-val.raml",
       "range": {
         "start": {
           "line": 11,

@@ -83,7 +83,7 @@
     {
       "code": "REQUIRED_PROPERTY_MISSING",
       "message": "Required property 'items' is missing",
-      "path": "apiInvalid.raml",
+      "path": "invalid-missing-required-prop.raml",
       "range": {
         "start": {
           "line": 9,
