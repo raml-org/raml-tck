@@ -9,7 +9,7 @@
     {
       "code": "MEDIATYPE_EXCEPTION",
       "message": "invalid media type",
-      "path": "api.raml",
+      "path": "invalid-not-supported.raml",
       "range": {
         "start": {
           "line": 2,

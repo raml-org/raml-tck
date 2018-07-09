@@ -4,8 +4,8 @@
   "specification": {
     "uses": [
       {
-        "key": "ll",
-        "value": "ll.raml"
+        "key": "lib",
+        "value": "lib.raml"
       }
     ],
     "types": [
@@ -14,7 +14,7 @@
           "name": "MyType",
           "displayName": "MyType",
           "type": [
-            "ll.Person"
+            "lib.Person"
           ],
           "required": true,
           "properties": {

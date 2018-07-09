@@ -268,7 +268,7 @@
     {
       "code": "STATUS_MUST_BE_3NUMBER",
       "message": "Status code should be 3 digits number.",
-      "path": "methResp03.raml",
+      "path": "invalid.raml",
       "range": {
         "start": {
           "line": 5,
