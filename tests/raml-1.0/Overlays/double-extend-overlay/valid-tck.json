@@ -1,0 +1,34 @@
+{
+  "ramlVersion": "RAML10",
+  "type": "Extension",
+  "specification": {
+    "title": "Extension",
+    "resources": [
+      {
+        "relativeUri": "/resource",
+        "displayName": "Test3",
+        "relativeUriPathSegments": [
+          "resource"
+        ],
+        "absoluteUri": "/resource"
+      },
+      {
+        "relativeUri": "/anotherResource",
+        "displayName": "/anotherResource",
+        "__METADATA__": {
+          "primitiveValuesMeta": {
+            "displayName": {
+              "calculated": true
+            }
+          }
+        },
+        "relativeUriPathSegments": [
+          "anotherResource"
+        ],
+        "absoluteUri": "/anotherResource"
+      }
+    ],
+    "extends": "valid.raml"
+  },
+  "errors": []
+}
