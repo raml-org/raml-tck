@@ -48,7 +48,7 @@
     {
       "code": "UNKNOWN_NODE",
       "message": "Unknown node: 'set'",
-      "path": "meth03.raml",
+      "path": "invalid.raml",
       "range": {
         "start": {
           "line": 10,

@@ -80,7 +80,7 @@
     {
       "code": "INVALID_VALUE",
       "message": "Invalid value: 'SMTP'. Allowed values are: 'HTTP', 'HTTPS'",
-      "path": "meth08.raml",
+      "path": "invalid.raml",
       "range": {
         "start": {
           "line": 4,
