@@ -246,8 +246,8 @@
         "Resource": {
           "type": {
             "ResourceTypeWithParams": {
-              "resourceTypeParam": "ResourceType2",
-              "bodyTypeParam": "Type2"
+              "resourceTypeParam": "ResourceType1",
+              "bodyTypeParam": "Type1"
             }
           },
           "name": "Resource",
@@ -260,9 +260,8 @@
                   "object"
                 ],
                 "example": {
-                  "propertyFromType2": "stringValue1",
-                  "propertyFromResourceType1": "stringValue2",
-                  "extraProperty": "stringValue3"
+                  "propertyFromType1": "stringValue1",
+                  "extraProperty": "stringValue2"
                 },
                 "required": true,
                 "__METADATA__": {
@@ -279,13 +278,12 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
+                  "value": "{\n  \"propertyFromType1\": \"stringValue1\",\n  \"extraProperty\": \"stringValue2\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
-                    "propertyFromType2": "stringValue1",
-                    "propertyFromResourceType1": "stringValue2",
-                    "extraProperty": "stringValue3"
+                    "propertyFromType1": "stringValue1",
+                    "extraProperty": "stringValue2"
                   }
                 }
               }
@@ -305,12 +303,12 @@
                 "name": "application/json",
                 "displayName": "application/json",
                 "type": [
-                  "Type2"
+                  "Type1"
                 ],
                 "example": {
-                  "propertyFromType2": "stringValue1",
-                  "propertyFromResourceType1": "stringValue2",
-                  "extraProperty": "stringValue3"
+                  "propertyFromResourceType2": "stringValue3",
+                  "propertyFromType1": "stringValue1",
+                  "extraProperty": "stringValue2"
                 },
                 "required": true,
                 "properties": {
@@ -332,9 +330,9 @@
                       }
                     }
                   },
-                  "propertyFromResourceType2": {
-                    "name": "propertyFromResourceType2",
-                    "displayName": "propertyFromResourceType2",
+                  "propertyFromResourceType1": {
+                    "name": "propertyFromResourceType1",
+                    "displayName": "propertyFromResourceType1",
                     "type": [
                       "string"
                     ],
@@ -362,13 +360,13 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
+                  "value": "{\n  \"propertyFromResourceType2\": \"stringValue3\",\n  \"propertyFromType1\": \"stringValue1\",\n  \"extraProperty\": \"stringValue2\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
-                    "propertyFromType2": "stringValue1",
-                    "propertyFromResourceType1": "stringValue2",
-                    "extraProperty": "stringValue3"
+                    "propertyFromResourceType2": "stringValue3",
+                    "propertyFromType1": "stringValue1",
+                    "extraProperty": "stringValue2"
                   }
                 }
               }
@@ -396,77 +394,38 @@
   "errors": [
     {
       "code": "REQUIRED_PROPERTY_MISSING",
-      "message": "Required property 'propertyFromResourceType2' is missing",
-      "path": "apiInvalid.raml",
+      "message": "Required property 'propertyFromResourceType1' is missing",
+      "path": "invalid-req-property-missing.raml",
       "range": {
         "start": {
-          "line": 40,
-          "column": 10,
-          "position": 789
+          "line": 49,
+          "column": 8,
+          "position": 960
         },
         "end": {
-          "line": 40,
-          "column": 17,
-          "position": 796
+          "line": 49,
+          "column": 15,
+          "position": 967
         }
-      },
-      "trace": [
-        {
-          "code": "REQUIRED_PROPERTY_MISSING",
-          "message": "Required property 'propertyFromResourceType2' is missing",
-          "path": "apiInvalid.raml",
-          "range": {
-            "start": {
-              "line": 45,
-              "column": 0,
-              "position": 935
-            },
-            "end": {
-              "line": 45,
-              "column": 9,
-              "position": 944
-            }
-          }
-        }
-      ]
+      }
     },
     {
       "code": "UNKNOWN_PROPERTY",
-      "message": "Unknown property: 'propertyFromResourceType1'",
-      "path": "apiInvalid.raml",
+      "message": "Unknown property: 'propertyFromResourceType2'",
+      "path": "invalid-req-property-missing.raml",
       "range": {
         "start": {
-          "line": 42,
-          "column": 12,
-          "position": 854
+          "line": 50,
+          "column": 10,
+          "position": 979
         },
         "end": {
-          "line": 42,
-          "column": 37,
-          "position": 879
+          "line": 50,
+          "column": 35,
+          "position": 1004
         }
       },
-      "isWarning": true,
-      "trace": [
-        {
-          "code": "UNKNOWN_PROPERTY",
-          "message": "Unknown property: 'propertyFromResourceType1'",
-          "path": "apiInvalid.raml",
-          "range": {
-            "start": {
-              "line": 45,
-              "column": 0,
-              "position": 935
-            },
-            "end": {
-              "line": 45,
-              "column": 9,
-              "position": 944
-            }
-          },
-          "isWarning": true
-        }
-      ]
+      "isWarning": true
     }
   ]
 }

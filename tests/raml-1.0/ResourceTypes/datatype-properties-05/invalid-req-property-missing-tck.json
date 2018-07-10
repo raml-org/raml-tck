@@ -260,9 +260,8 @@
                   "object"
                 ],
                 "example": {
-                  "propertyFromType2": "stringValue1",
-                  "propertyFromResourceType1": "stringValue2",
-                  "extraProperty": "stringValue3"
+                  "propertyFromType1": "stringValue1",
+                  "propertyFromResourceType1": "stringValue2"
                 },
                 "required": true,
                 "__METADATA__": {
@@ -279,13 +278,12 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
+                  "value": "{\n  \"propertyFromType1\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
-                    "propertyFromType2": "stringValue1",
-                    "propertyFromResourceType1": "stringValue2",
-                    "extraProperty": "stringValue3"
+                    "propertyFromType1": "stringValue1",
+                    "propertyFromResourceType1": "stringValue2"
                   }
                 }
               }
@@ -308,9 +306,9 @@
                   "Type1"
                 ],
                 "example": {
-                  "propertyFromType2": "stringValue1",
-                  "propertyFromResourceType1": "stringValue2",
-                  "extraProperty": "stringValue3"
+                  "extraProperty1": "stringValue3",
+                  "propertyFromType1": "stringValue1",
+                  "propertyFromResourceType1": "stringValue2"
                 },
                 "required": true,
                 "properties": {
@@ -362,13 +360,13 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
+                  "value": "{\n  \"extraProperty1\": \"stringValue3\",\n  \"propertyFromType1\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
-                    "propertyFromType2": "stringValue1",
-                    "propertyFromResourceType1": "stringValue2",
-                    "extraProperty": "stringValue3"
+                    "extraProperty1": "stringValue3",
+                    "propertyFromType1": "stringValue1",
+                    "propertyFromResourceType1": "stringValue2"
                   }
                 }
               }
@@ -396,77 +394,38 @@
   "errors": [
     {
       "code": "REQUIRED_PROPERTY_MISSING",
-      "message": "Required property 'propertyFromType1' is missing",
-      "path": "apiInvalid.raml",
+      "message": "Required property 'extraProperty' is missing",
+      "path": "invalid-req-property-missing.raml",
       "range": {
         "start": {
-          "line": 40,
-          "column": 10,
-          "position": 789
+          "line": 50,
+          "column": 8,
+          "position": 973
         },
         "end": {
-          "line": 40,
-          "column": 17,
-          "position": 796
+          "line": 50,
+          "column": 15,
+          "position": 980
         }
-      },
-      "trace": [
-        {
-          "code": "REQUIRED_PROPERTY_MISSING",
-          "message": "Required property 'propertyFromType1' is missing",
-          "path": "apiInvalid.raml",
-          "range": {
-            "start": {
-              "line": 45,
-              "column": 0,
-              "position": 935
-            },
-            "end": {
-              "line": 45,
-              "column": 9,
-              "position": 944
-            }
-          }
-        }
-      ]
+      }
     },
     {
       "code": "UNKNOWN_PROPERTY",
-      "message": "Unknown property: 'propertyFromType2'",
-      "path": "apiInvalid.raml",
+      "message": "Unknown property: 'extraProperty1'",
+      "path": "invalid-req-property-missing.raml",
       "range": {
         "start": {
-          "line": 41,
-          "column": 12,
-          "position": 810
+          "line": 51,
+          "column": 10,
+          "position": 992
         },
         "end": {
-          "line": 41,
-          "column": 29,
-          "position": 827
+          "line": 51,
+          "column": 24,
+          "position": 1006
         }
       },
-      "isWarning": true,
-      "trace": [
-        {
-          "code": "UNKNOWN_PROPERTY",
-          "message": "Unknown property: 'propertyFromType2'",
-          "path": "apiInvalid.raml",
-          "range": {
-            "start": {
-              "line": 45,
-              "column": 0,
-              "position": 935
-            },
-            "end": {
-              "line": 45,
-              "column": 9,
-              "position": 944
-            }
-          },
-          "isWarning": true
-        }
-      ]
+      "isWarning": true
     }
   ]
 }

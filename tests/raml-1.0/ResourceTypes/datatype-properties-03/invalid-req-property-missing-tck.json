@@ -247,7 +247,7 @@
           "type": {
             "ResourceTypeWithParams": {
               "resourceTypeParam": "ResourceType1",
-              "bodyTypeParam": "Type1"
+              "bodyTypeParam": "Type2"
             }
           },
           "name": "Resource",
@@ -260,7 +260,9 @@
                   "object"
                 ],
                 "example": {
-                  "extraProperty": "stringValue1"
+                  "propertyFromType1": "stringValue1",
+                  "propertyFromResourceType1": "stringValue2",
+                  "extraProperty": "stringValue3"
                 },
                 "required": true,
                 "__METADATA__": {
@@ -277,11 +279,13 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"extraProperty\": \"stringValue1\"\n}",
+                  "value": "{\n  \"propertyFromType1\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
-                    "extraProperty": "stringValue1"
+                    "propertyFromType1": "stringValue1",
+                    "propertyFromResourceType1": "stringValue2",
+                    "extraProperty": "stringValue3"
                   }
                 }
               }
@@ -301,12 +305,12 @@
                 "name": "application/json",
                 "displayName": "application/json",
                 "type": [
-                  "Type1"
+                  "Type2"
                 ],
                 "example": {
+                  "propertyFromType1": "stringValue1",
                   "propertyFromResourceType1": "stringValue2",
-                  "propertyFromType2": "stringValue3",
-                  "extraProperty": "stringValue1"
+                  "extraProperty": "stringValue3"
                 },
                 "required": true,
                 "properties": {
@@ -358,13 +362,13 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"propertyFromType2\": \"stringValue3\",\n  \"extraProperty\": \"stringValue1\"\n}",
+                  "value": "{\n  \"propertyFromType1\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
+                    "propertyFromType1": "stringValue1",
                     "propertyFromResourceType1": "stringValue2",
-                    "propertyFromType2": "stringValue3",
-                    "extraProperty": "stringValue1"
+                    "extraProperty": "stringValue3"
                   }
                 }
               }
@@ -392,38 +396,77 @@
   "errors": [
     {
       "code": "REQUIRED_PROPERTY_MISSING",
-      "message": "Required property 'propertyFromType1' is missing",
-      "path": "apiInvalid.raml",
+      "message": "Required property 'propertyFromType2' is missing",
+      "path": "invalid-req-property-missing.raml",
       "range": {
         "start": {
-          "line": 48,
-          "column": 8,
-          "position": 916
+          "line": 40,
+          "column": 10,
+          "position": 789
         },
         "end": {
-          "line": 48,
-          "column": 15,
-          "position": 923
+          "line": 40,
+          "column": 17,
+          "position": 796
         }
-      }
+      },
+      "trace": [
+        {
+          "code": "REQUIRED_PROPERTY_MISSING",
+          "message": "Required property 'propertyFromType2' is missing",
+          "path": "invalid-req-property-missing.raml",
+          "range": {
+            "start": {
+              "line": 45,
+              "column": 0,
+              "position": 935
+            },
+            "end": {
+              "line": 45,
+              "column": 9,
+              "position": 944
+            }
+          }
+        }
+      ]
     },
     {
       "code": "UNKNOWN_PROPERTY",
-      "message": "Unknown property: 'propertyFromType2'",
-      "path": "apiInvalid.raml",
+      "message": "Unknown property: 'propertyFromType1'",
+      "path": "invalid-req-property-missing.raml",
       "range": {
         "start": {
-          "line": 50,
-          "column": 10,
-          "position": 985
+          "line": 41,
+          "column": 12,
+          "position": 810
         },
         "end": {
-          "line": 50,
-          "column": 27,
-          "position": 1002
+          "line": 41,
+          "column": 29,
+          "position": 827
         }
       },
-      "isWarning": true
+      "isWarning": true,
+      "trace": [
+        {
+          "code": "UNKNOWN_PROPERTY",
+          "message": "Unknown property: 'propertyFromType1'",
+          "path": "invalid-req-property-missing.raml",
+          "range": {
+            "start": {
+              "line": 45,
+              "column": 0,
+              "position": 935
+            },
+            "end": {
+              "line": 45,
+              "column": 9,
+              "position": 944
+            }
+          },
+          "isWarning": true
+        }
+      ]
     }
   ]
 }

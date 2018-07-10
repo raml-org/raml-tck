@@ -247,7 +247,7 @@
           "type": {
             "ResourceTypeWithParams": {
               "resourceTypeParam": "ResourceType2",
-              "bodyTypeParam": "Type1"
+              "bodyTypeParam": "Type2"
             }
           },
           "name": "Resource",
@@ -260,7 +260,7 @@
                   "object"
                 ],
                 "example": {
-                  "propertyFromType1": "stringValue1",
+                  "propertyFromType2": "stringValue1",
                   "propertyFromResourceType1": "stringValue2",
                   "extraProperty": "stringValue3"
                 },
@@ -279,11 +279,11 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"propertyFromType1\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
+                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
-                    "propertyFromType1": "stringValue1",
+                    "propertyFromType2": "stringValue1",
                     "propertyFromResourceType1": "stringValue2",
                     "extraProperty": "stringValue3"
                   }
@@ -305,10 +305,10 @@
                 "name": "application/json",
                 "displayName": "application/json",
                 "type": [
-                  "Type1"
+                  "Type2"
                 ],
                 "example": {
-                  "propertyFromType1": "stringValue1",
+                  "propertyFromType2": "stringValue1",
                   "propertyFromResourceType1": "stringValue2",
                   "extraProperty": "stringValue3"
                 },
@@ -362,11 +362,11 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "{\n  \"propertyFromType1\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
+                  "value": "{\n  \"propertyFromType2\": \"stringValue1\",\n  \"propertyFromResourceType1\": \"stringValue2\",\n  \"extraProperty\": \"stringValue3\"\n}",
                   "strict": true,
                   "name": null,
                   "structuredValue": {
-                    "propertyFromType1": "stringValue1",
+                    "propertyFromType2": "stringValue1",
                     "propertyFromResourceType1": "stringValue2",
                     "extraProperty": "stringValue3"
                   }
@@ -397,7 +397,7 @@
     {
       "code": "REQUIRED_PROPERTY_MISSING",
       "message": "Required property 'propertyFromResourceType2' is missing",
-      "path": "apiInvalid.raml",
+      "path": "invalid-unknown-property.raml",
       "range": {
         "start": {
           "line": 40,
@@ -414,7 +414,7 @@
         {
           "code": "REQUIRED_PROPERTY_MISSING",
           "message": "Required property 'propertyFromResourceType2' is missing",
-          "path": "apiInvalid.raml",
+          "path": "invalid-unknown-property.raml",
           "range": {
             "start": {
               "line": 45,
@@ -433,7 +433,7 @@
     {
       "code": "UNKNOWN_PROPERTY",
       "message": "Unknown property: 'propertyFromResourceType1'",
-      "path": "apiInvalid.raml",
+      "path": "invalid-unknown-property.raml",
       "range": {
         "start": {
           "line": 42,
@@ -451,7 +451,7 @@
         {
           "code": "UNKNOWN_PROPERTY",
           "message": "Unknown property: 'propertyFromResourceType1'",
-          "path": "apiInvalid.raml",
+          "path": "invalid-unknown-property.raml",
           "range": {
             "start": {
               "line": 45,
