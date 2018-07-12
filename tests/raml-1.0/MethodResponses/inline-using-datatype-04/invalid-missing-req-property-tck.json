@@ -47,7 +47,29 @@
                   }
                 }
               }
-            },
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "VV": {
+          "name": "VV",
+          "displayName": "VV",
+          "type": [
+            "MM"
+          ],
+          "required": true,
+          "properties": {
             "c": {
               "name": "c",
               "displayName": "c",
@@ -139,7 +161,7 @@
                     "name": "application/json",
                     "displayName": "application/json",
                     "schema": [
-                      "MM"
+                      "VV"
                     ],
                     "example": {
                       "a": 3
@@ -193,17 +215,17 @@
     {
       "code": "REQUIRED_PROPERTY_MISSING",
       "message": "Required property 'c' is missing",
-      "path": "api.raml",
+      "path": "invalid-missing-req-property.raml",
       "range": {
         "start": {
-          "line": 20,
+          "line": 23,
           "column": 10,
-          "position": 285
+          "position": 320
         },
         "end": {
-          "line": 20,
+          "line": 23,
           "column": 17,
-          "position": 292
+          "position": 327
         }
       }
     }

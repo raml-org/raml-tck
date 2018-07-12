@@ -10,9 +10,6 @@
           "type": [
             "object"
           ],
-          "example": {
-            "a": 5
-          },
           "required": true,
           "properties": {
             "a": {
@@ -46,14 +43,6 @@
                 "insertedAsDefault": true
               }
             }
-          },
-          "structuredExample": {
-            "value": "{\n  \"a\": 5\n}",
-            "strict": true,
-            "name": null,
-            "structuredValue": {
-              "a": 5
-            }
           }
         }
       }
@@ -72,11 +61,11 @@
                     "name": "application/json",
                     "displayName": "application/json",
                     "schema": [
-                      "{\n  \"required\": [\"message\"],\n  \"$schema\": \"http://json-schema.org/draft-04/schema\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"message\": {\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false\n}\n"
+                      "{\n  \"required\": \"message\",\n  \"$schema\": \"http://json-schema.org/draft-04/schema\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"message\": {\n      \"required\": true,\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false\n}\n"
                     ],
                     "example": {
-                      "message": 4,
-                      "vlue": 3
+                      "message": "s",
+                      "r": 2
                     },
                     "required": true,
                     "__METADATA__": {
@@ -93,12 +82,12 @@
                       }
                     },
                     "structuredExample": {
-                      "value": "{\n  \"message\": 4,\n  \"vlue\": 3\n}",
+                      "value": "{ \"message\":\"s\" ,\"r\":2 }\n",
                       "strict": true,
                       "name": null,
                       "structuredValue": {
-                        "message": 4,
-                        "vlue": 3
+                        "message": "s",
+                        "r": 2
                       }
                     }
                   }
@@ -127,18 +116,18 @@
   "errors": [
     {
       "code": "EXAMPLE_SCHEMA_FAILURE",
-      "message": "Example does not conform to schema: Content is not valid according to schema: Additional properties not allowed: vlue vlue",
-      "path": "api.raml",
+      "message": "Example does not conform to schema: Content is not valid according to schema: Keyword 'required' is expected to be of type 'array' required,array, Keyword 'required' is expected to be of type 'array' required,array",
+      "path": "invalid-conform-schema.raml",
       "range": {
         "start": {
-          "line": 26,
+          "line": 25,
           "column": 12,
-          "position": 573
+          "position": 585
         },
         "end": {
-          "line": 26,
+          "line": 25,
           "column": 19,
-          "position": 580
+          "position": 592
         }
       }
     }

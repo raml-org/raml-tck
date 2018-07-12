@@ -4,19 +4,39 @@
   "specification": {
     "types": [
       {
-        "MM": {
-          "name": "MM",
-          "displayName": "MM",
+        "CatOrDog": {
+          "name": "CatOrDog",
+          "displayName": "CatOrDog",
+          "type": [
+            "Cat | Dog"
+          ],
+          "required": true,
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "Cat": {
+          "name": "Cat",
+          "displayName": "Cat",
           "type": [
             "object"
           ],
           "required": true,
           "properties": {
-            "a": {
-              "name": "a",
-              "displayName": "a",
+            "name": {
+              "name": "name",
+              "displayName": "name",
               "type": [
-                "number"
+                "string"
               ],
               "required": true,
               "__METADATA__": {
@@ -30,11 +50,11 @@
                 }
               }
             },
-            "items": {
-              "name": "items",
-              "displayName": "items",
+            "color": {
+              "name": "color",
+              "displayName": "color",
               "type": [
-                "array"
+                "string"
               ],
               "required": true,
               "__METADATA__": {
@@ -46,8 +66,7 @@
                     "insertedAsDefault": true
                   }
                 }
-              },
-              "items": "VV"
+              }
             }
           },
           "__METADATA__": {
@@ -63,19 +82,19 @@
         }
       },
       {
-        "VV": {
-          "name": "VV",
-          "displayName": "VV",
+        "Dog": {
+          "name": "Dog",
+          "displayName": "Dog",
           "type": [
             "object"
           ],
           "required": true,
           "properties": {
-            "c": {
-              "name": "c",
-              "displayName": "c",
+            "name": {
+              "name": "name",
+              "displayName": "name",
               "type": [
-                "number"
+                "string"
               ],
               "required": true,
               "__METADATA__": {
@@ -89,41 +108,17 @@
                 }
               }
             },
-            "b": {
-              "name": "b",
-              "displayName": "b",
+            "fangs": {
+              "name": "fangs",
+              "displayName": "fangs",
               "type": [
                 "string"
               ],
-              "required": false,
+              "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
-                }
-              }
-            },
-            "c1": {
-              "name": "c1",
-              "displayName": "c1",
-              "type": [
-                "string"
-              ],
-              "required": false,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -145,52 +140,7 @@
         }
       }
     ],
-    "annotationTypes": [
-      {
-        "qq": {
-          "name": "qq",
-          "displayName": "qq",
-          "type": [
-            "object"
-          ],
-          "required": true,
-          "properties": {
-            "z": {
-              "name": "z",
-              "displayName": "z",
-              "type": [
-                "MM"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
-                }
-              }
-            }
-          },
-          "__METADATA__": {
-            "primitiveValuesMeta": {
-              "displayName": {
-                "calculated": true
-              },
-              "type": {
-                "insertedAsDefault": true
-              },
-              "required": {
-                "insertedAsDefault": true
-              }
-            }
-          }
-        }
-      }
-    ],
-    "title": "WebOfMe",
+    "title": "Animals test",
     "mediaType": "application/json",
     "resources": [
       {
@@ -203,20 +153,12 @@
                   "application/json": {
                     "name": "application/json",
                     "displayName": "application/json",
-                    "schema": [
-                      "MM"
+                    "type": [
+                      "CatOrDog"
                     ],
                     "example": {
-                      "a": 3,
-                      "items": [
-                        {
-                          "c": 3
-                        },
-                        {
-                          "b": "4",
-                          "c1": "3"
-                        }
-                      ]
+                      "name": "Rex",
+                      "fangs-INCORRECT": "big ones"
                     },
                     "required": true,
                     "__METADATA__": {
@@ -224,29 +166,18 @@
                         "displayName": {
                           "calculated": true
                         },
-                        "type": {
-                          "insertedAsDefault": true
-                        },
                         "required": {
                           "insertedAsDefault": true
                         }
                       }
                     },
                     "structuredExample": {
-                      "value": "{\n  \"a\": 3,\n  \"items\": [\n    {\n      \"c\": 3\n    },\n    {\n      \"b\": \"4\",\n      \"c1\": \"3\"\n    }\n  ]\n}",
+                      "value": "{\n  \"name\": \"Rex\",\n  \"fangs-INCORRECT\": \"big ones\"\n}\n",
                       "strict": true,
                       "name": null,
                       "structuredValue": {
-                        "a": 3,
-                        "items": [
-                          {
-                            "c": 3
-                          },
-                          {
-                            "b": "4",
-                            "c1": "3"
-                          }
-                        ]
+                        "name": "Rex",
+                        "fangs-INCORRECT": "big ones"
                       }
                     }
                   }
@@ -256,8 +187,32 @@
             "method": "get"
           }
         ],
-        "relativeUri": "/test",
-        "displayName": "/test",
+        "uriParameters": {
+          "animalId": {
+            "name": "animalId",
+            "displayName": "animalId",
+            "type": [
+              "string"
+            ],
+            "required": true,
+            "__METADATA__": {
+              "calculated": true,
+              "primitiveValuesMeta": {
+                "displayName": {
+                  "calculated": true
+                },
+                "type": {
+                  "insertedAsDefault": true
+                },
+                "required": {
+                  "insertedAsDefault": true
+                }
+              }
+            }
+          }
+        },
+        "relativeUri": "/animals/{animalId}",
+        "displayName": "/animals/{animalId}",
         "__METADATA__": {
           "primitiveValuesMeta": {
             "displayName": {
@@ -266,27 +221,62 @@
           }
         },
         "relativeUriPathSegments": [
-          "test"
+          "animals",
+          "{animalId}"
         ],
-        "absoluteUri": "/test"
+        "absoluteUri": "/animals/{animalId}"
       }
     ]
   },
   "errors": [
     {
-      "code": "REQUIRED_PROPERTY_MISSING",
-      "message": "Required property 'c' is missing",
-      "path": "api.raml",
+      "code": "UNION_TYPE_FAILURE_DETAILS",
+      "message": "Union type option does not pass validation (Cat: Required property 'color' is missing)",
+      "path": "invalid-wrong-union.raml",
       "range": {
         "start": {
-          "line": 31,
-          "column": 16,
-          "position": 460
+          "line": 25,
+          "column": 10,
+          "position": 385
         },
         "end": {
-          "line": 32,
-          "column": 23,
-          "position": 490
+          "line": 25,
+          "column": 17,
+          "position": 392
+        }
+      }
+    },
+    {
+      "code": "UNION_TYPE_FAILURE_DETAILS",
+      "message": "Union type option does not pass validation (Dog: Required property 'fangs' is missing)",
+      "path": "invalid-wrong-union.raml",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 10,
+          "position": 385
+        },
+        "end": {
+          "line": 25,
+          "column": 17,
+          "position": 392
+        }
+      }
+    },
+    {
+      "code": "UNION_TYPE_FAILURE",
+      "message": "Union type options do not pass validation",
+      "path": "invalid-wrong-union.raml",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 10,
+          "position": 385
+        },
+        "end": {
+          "line": 25,
+          "column": 17,
+          "position": 392
         }
       }
     }

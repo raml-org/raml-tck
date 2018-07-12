@@ -422,7 +422,7 @@
     {
       "code": "CAN_NOT_PARSE_JSON",
       "message": "Can not parse JSON example: Unexpected token p",
-      "path": "api.raml",
+      "path": "invalid-schema-json.raml",
       "range": {
         "start": {
           "line": 56,

@@ -212,7 +212,7 @@
     {
       "code": "REQUIRED_PROPERTY_MISSING",
       "message": "Required property 'x' is missing",
-      "path": "api.raml",
+      "path": "invalid-missing-req-params.raml",
       "range": {
         "start": {
           "line": 26,
@@ -229,7 +229,7 @@
     {
       "code": "UNKNOWN_PROPERTY",
       "message": "Unknown property: 'x2'",
-      "path": "api.raml",
+      "path": "invalid-missing-req-params.raml",
       "range": {
         "start": {
           "line": 27,

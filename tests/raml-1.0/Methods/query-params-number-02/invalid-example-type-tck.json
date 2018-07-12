@@ -12,9 +12,11 @@
                 "name": "param1",
                 "displayName": "param1",
                 "type": [
-                  "boolean"
+                  "number"
                 ],
-                "example": true,
+                "example": [
+                  2
+                ],
                 "required": true,
                 "__METADATA__": {
                   "primitiveValuesMeta": {
@@ -27,35 +29,12 @@
                   }
                 },
                 "structuredExample": {
-                  "value": "true",
+                  "value": "[\n  2\n]",
                   "strict": true,
                   "name": null,
-                  "structuredValue": true
-                }
-              },
-              "param2": {
-                "name": "param2",
-                "displayName": "param2",
-                "type": [
-                  "boolean"
-                ],
-                "example": "stringValue",
-                "required": true,
-                "__METADATA__": {
-                  "primitiveValuesMeta": {
-                    "displayName": {
-                      "calculated": true
-                    },
-                    "required": {
-                      "insertedAsDefault": true
-                    }
-                  }
-                },
-                "structuredExample": {
-                  "value": "stringValue",
-                  "strict": true,
-                  "name": null,
-                  "structuredValue": "stringValue"
+                  "structuredValue": [
+                    2
+                  ]
                 }
               }
             },
@@ -81,18 +60,18 @@
   "errors": [
     {
       "code": "TYPE_EXPECTED",
-      "message": "boolean is expected",
-      "path": "api.raml",
+      "message": "number is expected",
+      "path": "invalid-example-type.raml",
       "range": {
         "start": {
-          "line": 10,
+          "line": 8,
           "column": 8,
-          "position": 168
+          "position": 110
         },
         "end": {
-          "line": 10,
+          "line": 8,
           "column": 15,
-          "position": 175
+          "position": 117
         }
       }
     }
