@@ -1,6 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-const utils = require('./utils')
+const walk = require('walk')
 
 // Features listed in order they appear in RAML 1.0 spec.
 // Features names correspond to lowercase names of tests/raml-1.0
@@ -24,21 +24,26 @@ const FEATURES_PRIORITY = [
 
 function main () {
   const fpath = getInputFolderPath()
-  const dirs = utils.iterateFolders(fpath)
-  let ramlPaths = extractRAMLPaths(dirs)
+  let ramlPaths = listRamls(fpath)
   ramlPaths = sortRAMLPaths(fpath, ramlPaths)
   generateManifest(fpath, ramlPaths)
 }
 
-// Extract string paths from utils.DirectoryContent objects
-function extractRAMLPaths (dirObjs) {
-  let ramlPaths = []
-  dirObjs.forEach((obj) => {
-    obj.allRamlFiles().forEach((ramlFileObj) => {
-      ramlPaths.push(ramlFileObj.absolutePath())
-    })
-  })
-  return ramlPaths
+// List RAML files under fpath
+function listRamls (fpath) {
+  let files = []
+  const options = {
+    listeners: {
+      file: (root, fileStats, next) => {
+        if (fileStats.name.indexOf('.raml') >= 0) {
+          files.push(path.join(root, fileStats.name))
+        }
+        next()
+      }
+    }
+  }
+  walk.walkSync(fpath, options)
+  return files
 }
 
 // Sort string ramlPaths according to features definition order

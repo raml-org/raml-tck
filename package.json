@@ -14,7 +14,8 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "raml-1-parser": "^1.1.8"
+    "raml-1-parser": "^1.1.8",
+    "walk": "^2.3.14"
   },
   "scripts": {
     "generate": "node src/index.js",
