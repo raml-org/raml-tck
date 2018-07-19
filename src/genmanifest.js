@@ -54,7 +54,7 @@ function extendWithPriority (ramlsRoot, ramlPaths) {
   return ramlPaths.map((pth) => {
     const piece = getFirstPathPiece(ramlsRoot, pth)
     return {
-      path: pth,
+      path: path.relative(ramlsRoot, pth),
       priority: FEATURES_PRIORITY[piece] || 99
     }
   })
@@ -73,9 +73,14 @@ function getFirstPathPiece (ramlsRoot, ramlPath) {
 
 // Generate and write manifest file
 function generateManifest (ramlsRoot, ramlPaths) {
-  // Generate and write manifest file
-
-  console.log(ramlPaths)
+  const data = {
+    description: 'RAML files listed in order corresponding RAML ' +
+                 'feature appears in RAML 1.0 spec',
+    filePaths: ramlPaths
+  }
+  const manifestPath = path.join(ramlsRoot, 'manifest.json')
+  console.log(`Writing manifest file to ${manifestPath}`)
+  fs.writeFileSync(manifestPath, JSON.stringify(data, null, 4));
 }
 
 // Get absolute path of input folder
