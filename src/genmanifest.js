@@ -1,14 +1,26 @@
 const path = require('path')
-const fs = require("fs")
-const walk = require('walk')
-const utils = require("./utils")
+const fs = require('fs')
+const utils = require('./utils')
 
-// TODO: Fill these
-const FEATURES_PRIORITY = {
-  methodresponses: 1,
-  fragments: 2,
-  libraries: 4
-}
+// Features listed in order they appear in RAML 1.0 spec.
+// Features names correspond to lowercase names of tests/raml-1.0
+// sub-folders.
+const FEATURES_PRIORITY = [
+  'root',
+  'types',
+  'resources',
+  'methods',
+  'responses',
+  'methodresponses',
+  'resourcetypes',
+  'traits',
+  'templatefunctions',
+  'securityschemes',
+  'annotations',
+  'fragments',
+  'libraries',
+  'overlays'
+]
 
 function main () {
   const fpath = getInputFolderPath()
@@ -43,9 +55,9 @@ function sortRAMLPaths (ramlsRoot, ramlPaths) {
 
 // Turn plain RAML paths into objects of type {priority: INT, path: STRING}
 // E.g.:
-// > const FEATURES_PRIORITY = {methodresponses: 4}
-// > extendWithPriority('/foo/bar', '/foo/bar/MethodResponses/some/file.raml')
-// > {priority: 4, path: '/foo/bar/MethodResponses/some/file.raml'}
+// > const FEATURES_PRIORITY = ['methodresponses', 'overlays']
+// > extendWithPriority('/foo/bar', '/foo/bar/Overlays/some/file.raml')
+// > {priority: 2, path: '/foo/bar/Overlays/some/file.raml'}
 // > extendWithPriority('/foo/bar', '/foo/bar/qweqwe/some/file.raml')
 // > {priority: 99, path: '/foo/bar/qweqwe/some/file.raml'}
 //
@@ -53,9 +65,11 @@ function sortRAMLPaths (ramlsRoot, ramlPaths) {
 function extendWithPriority (ramlsRoot, ramlPaths) {
   return ramlPaths.map((pth) => {
     const piece = getFirstPathPiece(ramlsRoot, pth)
+    let priority = FEATURES_PRIORITY.findIndex((el) => { return el === piece })
+    priority += 1 // Make 1-based
     return {
       path: path.relative(ramlsRoot, pth),
-      priority: FEATURES_PRIORITY[piece] || 99
+      priority: priority || 99
     }
   })
 }
@@ -80,20 +94,20 @@ function generateManifest (ramlsRoot, ramlPaths) {
   }
   const manifestPath = path.join(ramlsRoot, 'manifest.json')
   console.log(`Writing manifest file to ${manifestPath}`)
-  fs.writeFileSync(manifestPath, JSON.stringify(data, null, 4));
+  fs.writeFileSync(manifestPath, JSON.stringify(data, null, 4))
 }
 
 // Get absolute path of input folder
 function getInputFolderPath () {
   let fpath
-  if (process.argv.length > 2 ) {
+  if (process.argv.length > 2) {
     fpath = process.argv[2]
   } else {
     fpath = path.join('tests', 'raml-1.0')
   }
   fpath = path.resolve(fpath)
 
-  if(!fs.existsSync(fpath)) {
+  if (!fs.existsSync(fpath)) {
     console.error(`'${fpath}' not found`)
     return
   }
