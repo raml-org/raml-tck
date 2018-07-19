@@ -16,7 +16,11 @@
   "dependencies": {
     "raml-1-parser": "^1.1.8"
   },
+  "devDependencies": {
+    "walk": "^2.3.14"
+  },
   "scripts": {
-    "generate": "node src/index.js"
+    "generate": "node src/index.js",
+    "gen-manifest": "node src/genmanifest.js"
   }
 }
