@@ -1,6 +1,6 @@
 {
     "description": "RAML files listed in order corresponding RAML feature appears in RAML 1.0 spec",
-    "files": [
+    "filePaths": [
         "MethodResponses/body-schema-json-02/invalid-conform-schema.raml",
         "MethodResponses/root-schemas/valid.raml",
         "MethodResponses/response-body-type/valid.raml",
