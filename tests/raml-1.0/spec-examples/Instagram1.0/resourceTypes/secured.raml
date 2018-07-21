@@ -7,9 +7,7 @@ delete?:
         application/json:
           schema: types.OkStatus | string
           example: !include ../examples/ok-status-example.json
-  securedBy:
-    - oauth_2_0:
-        scopes: [<<scope>>]
+  securedBy: [ oauth_2_0: { scopes: [ <<scope>> ] } ]
 post?:
   responses:
     200:
@@ -17,10 +15,6 @@ post?:
         application/json:
           type: types.OkStatus | string
           example: !include ../examples/ok-status-example.json
-  securedBy:
-    - oauth_2_0:
-        scopes: [<<scope>>]
-securedBy:
-  - oauth_2_0:
-      scopes: [<<scope>>]
+  securedBy: [ oauth_2_0: { scopes: [ <<scope>> ] } ]
+securedBy: [ oauth_2_0: { scopes: [ <<scope>> ] } ]
 type: base
