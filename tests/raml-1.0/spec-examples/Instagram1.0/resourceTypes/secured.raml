@@ -1,3 +1,5 @@
+#%RAML 1.0 ResourceType
+
 delete?:
   responses:
     200:
@@ -21,5 +23,4 @@ post?:
 securedBy:
   - oauth_2_0:
       scopes: [<<scope>>]
-      #clientId: []
 type: base
