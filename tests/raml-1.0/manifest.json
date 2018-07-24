@@ -359,7 +359,7 @@
         "Fragments/datatype-02/valid.raml",
         "Fragments/extension/lib/decls.raml",
         "Fragments/extension/valid.raml",
-        "Fragments/extension/extension.raml",
+        "Fragments/extension/master.raml",
         "Fragments/namedexample-01/libs/lib.raml",
         "Fragments/namedexample-01/valid-use-lib.raml",
         "Fragments/namedexample-02/valid-root-props.raml",

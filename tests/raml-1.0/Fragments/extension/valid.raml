@@ -1,6 +1,12 @@
-#%RAML 1.0
-title: Master RAML
-/elements:
+#%RAML 1.0 Extension
+title: ApiExtension
+baseUri: http://myItems.com
+extends: master.raml
+uses:
+  decls:  lib/decls.raml
+/items:
   get:
-    responses:
-      200:
+    description: |
+      describing your method here
+    #lets add some annotation
+    (decls.important):
