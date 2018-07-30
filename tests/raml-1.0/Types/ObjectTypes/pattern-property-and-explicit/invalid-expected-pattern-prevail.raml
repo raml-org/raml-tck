@@ -1,0 +1,20 @@
+# If a pattern property regular expression also matches an explicitly
+# declared property, the explicitly declared property definition prevails.
+
+#%RAML 1.0
+title: My API With Types
+types:
+  Method:
+    type: object
+    properties:
+      name:
+        type: string
+  Resource:
+    type: object
+    properties:
+      /post|get|put/:
+        type: number
+      post: Method
+    example:
+      post: 2
+      put: 1

@@ -6,7 +6,8 @@
       {
         "SomeType": {
           "name": "SomeType",
-          "displayName": "SomeType",
+          "displayName": "Some cool type",
+          "description": "Some cool type description",
           "type": [
             "object"
           ],
