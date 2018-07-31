@@ -1,0 +1,12 @@
+#%RAML 1.0
+title: test
+baseUri: foo.com/{userIds}
+
+baseUriParameters:
+  userIds:
+    description: A list of userIds
+    type: array
+    items:
+      type: string
+      minLength: 1
+    uniqueItems: true

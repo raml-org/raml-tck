@@ -1,0 +1,18 @@
+# If a facet of a type is declared as required, then any subtype of
+# that type MUST define a value for that facet.
+
+#%RAML 1.0
+title: A
+
+types:
+  CustomDate:
+    type: string
+    facets:
+      format: string
+  Year:
+    type: CustomDate
+
+/search:
+  get:
+    queryParameters:
+      y: Year

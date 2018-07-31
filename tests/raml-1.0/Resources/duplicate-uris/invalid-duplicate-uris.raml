@@ -1,0 +1,12 @@
+# A RAML processor MUST NOT allow one of the computed absolute URIs to
+# be identical to another one.
+
+#%RAML 1.0
+title: API
+
+baseUri: /some/base/uri
+
+/users:
+  /foo:
+
+/users/foo:

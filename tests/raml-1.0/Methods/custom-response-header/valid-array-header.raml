@@ -1,0 +1,31 @@
+# If a header declaration specifies an array type for the value of the
+# header, processors MUST allow multiple instances of that header in
+# the request or response.
+
+#%RAML 1.0
+title: test
+schemas:
+   TestSchema: |
+      {
+        "$schema": "http://json-schema.org/draft-03/schema",
+        "type": "object" ,
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+/test:
+  post:
+    body:
+      application/json:
+        schema: TestSchema
+    responses:
+      203:
+        headers:
+          Retry-After:
+            description: |
+              Number of seconds to wait.
+            type: array
+            items: integer
+            required: true

@@ -1,0 +1,19 @@
+# Facet names MUST NOT begin with open parenthesis, to disambiguate
+# the names from annotations.
+
+#%RAML 1.0
+title: A
+
+types:
+  CustomDate:
+    type: string
+    facets:
+      (format: string
+  Year:
+    type: CustomDate
+    (format: YYYY
+
+/search:
+  get:
+    queryParameters:
+      y: Year

@@ -1,0 +1,22 @@
+# User-defined facet names on a type MUST NOT match built-in facets on
+# that type, nor facet names of any ancestor type in the inheritance
+# chain of the type.
+
+#%RAML 1.0
+title: A
+
+types:
+  DateString:
+    type: string
+  Year:
+    type: DateString
+    facets:
+      maxLength: number
+  AnotherYear:
+    type: Year
+    maxLength: 5
+
+/search:
+  get:
+    queryParameters:
+      y: AnotherYear
