@@ -1,0 +1,10 @@
+#%RAML 1.0
+title: Illustrate query parameters
+
+/locations:
+  get:
+    queryString:
+      type:
+        properties:
+          start?: number
+          page-size?: number

@@ -1,10 +1,13 @@
 #%RAML 1.0
-title: Illustrate query parameters
-
-/locations:
-  get:
-    queryString:
-      type:
-        properties:
-          start?: number
-          page-size?: number
+title: GitHub API
+version: v3
+baseUri: https://api.github.com
+/user:
+/users:
+  /{user}:
+    uriParameters:
+      user:
+        type:
+          properties:
+            id: number
+            age?: number

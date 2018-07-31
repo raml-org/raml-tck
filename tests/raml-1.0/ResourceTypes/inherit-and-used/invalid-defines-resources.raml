@@ -1,0 +1,30 @@
+# A resource type definition MUST NOT incorporate nested resources.
+
+#%RAML 1.0
+title: API
+
+types:
+  User:
+    properties:
+      name: string
+      age: number
+
+resourceTypes:
+  SomeType:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: User
+
+  AnotherType:
+    type: SomeType
+    /foobar:
+      put:
+        body:
+          application/json:
+            type: User
+
+/resource:
+  type: AnotherType

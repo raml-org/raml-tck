@@ -5,3 +5,7 @@ version: v1
 securitySchemes:
   auth:
     type: x-sls
+
+/users:
+  get:
+    securedBy: [auth]

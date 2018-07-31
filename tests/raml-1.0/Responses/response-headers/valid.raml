@@ -1,0 +1,10 @@
+#%RAML 1.0
+title: Example with responses
+mediaType: application/json
+/invoices:
+  post:
+    responses:
+      201:
+        headers:
+          Location:
+            example: /invoices/45612
