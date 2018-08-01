@@ -1,0 +1,21 @@
+# https://github.com/raml-org/raml-js-parser-2/issues/786
+
+#%RAML 1.0 Library
+
+types:
+  Email:
+    type: object
+    properties:
+      subject: string
+      body: string
+  Emails:
+    type: Email[]
+    minItems: 1
+    uniqueItems: true
+    example: # example that contains array
+      - # start item 1
+        subject: My Email 1
+        body: This is the text for email 1.
+      - # start item 2
+        subject: My Email 2
+        body: This is the text for email 2.

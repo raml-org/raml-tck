@@ -1,0 +1,12 @@
+# https://github.com/raml-org/raml-js-parser-2/issues/790
+
+#%RAML 1.0
+title: Data type demo. Nothing really useful
+baseUri: http://localhost:8080/api/
+
+/json-schema:
+  /partners:
+      post:
+        body:
+          application/json:
+            type: !include ref/company-schema.json

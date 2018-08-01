@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "company-schema.json",
+    "type": "object",
+    "title": "A legal company (legal person)",
+    "allOf":
+    [
+        {
+            "$ref": "partner-schema.json"
+        },
+        {
+            "properties":
+            {
+                "type":
+                {
+                    "type": "string",
+                    "enum":
+                    [
+                        "AG",
+                        "GmbH"
+                    ],
+                    "description": "Legal status"
+                }
+            },
+            "required":
+            [
+                "type"
+            ]
+        }
+    ]
+}
