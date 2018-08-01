@@ -1,0 +1,24 @@
+# https://github.com/raml-org/raml-js-parser-2/issues/776
+
+#%RAML 1.0
+title: type example
+version: 1
+
+types:
+  ResourceLink:
+    description: a description
+    facets:
+      a: string
+      b: number
+    properties:
+      href: string
+      rel:
+        enum: [self, next, prev]
+      method:
+        default: get
+        required: false
+  ImageLink:
+    properties:
+      href: string
+      rel:
+        enum: [SmallImage, MediumImage, LargeImage]
