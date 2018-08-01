@@ -1,0 +1,12 @@
+# https://github.com/raml-org/raml-js-parser-2/issues/718
+
+#%RAML 1.0
+title: test API
+
+/resource:
+  get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: !includesome/arbitrary/path/to/nowhere/example.json

@@ -1,0 +1,12 @@
+# https://github.com/raml-org/raml-js-parser-2/issues/753
+
+#%RAML 1.0
+title: A title
+
+resourceTypes:
+  collection: !include resourceTypes/collection.raml
+
+/testURI:
+  type:
+    collection:
+      postRequestBodyExample: !include examples/example.raml
