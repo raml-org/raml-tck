@@ -1,0 +1,14 @@
+#%RAML 1.0
+title: Illustrating allowed targets
+mediaType: application/json
+
+annotationTypes:
+  test:
+    allowedTargets: Method
+
+(test): hi
+
+/users:
+  get:
+    responses:
+      200:

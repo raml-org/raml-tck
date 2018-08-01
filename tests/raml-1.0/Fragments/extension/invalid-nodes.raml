@@ -1,0 +1,17 @@
+# The contents of the file after removal of the RAML fragment identifier
+# line MUST be valid structurally according to the relevant RAML
+# specification.
+
+#%RAML 1.0 Extension
+title: ApiExtension
+baseUri: http://myItems.com
+extends: master.raml
+uses:
+  decls:  lib/decls.raml
+/items:
+  get:
+    description: |
+      describing your method here
+    #lets add some annotation
+    (decls.important):
+hi: 1

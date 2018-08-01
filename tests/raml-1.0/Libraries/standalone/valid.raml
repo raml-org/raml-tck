@@ -1,9 +1,6 @@
-#%RAML 1.0 Extension
-title: ApiExtension
-baseUri: http://myItems.com
-extends: master.raml
-uses:
-  decls:  lib/decls.raml
+#%RAML 1.0 Library
+usage: |
+  Use to define some basic file-related constructs.
 types:
   File:
     properties:
@@ -31,10 +28,3 @@ annotationTypes:
     properties:
       prop1?: number
       /.*/: object
-securedBy: [ basic ]
-/items:
-  get:
-    description: |
-      describing your method here
-    #lets add some annotation
-    (decls.important):
