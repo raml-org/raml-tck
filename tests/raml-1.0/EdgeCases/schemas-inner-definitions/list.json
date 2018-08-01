@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "list.json",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/a"
+    }
+  ]  ,
+  "definitions": {
+    "BusinessModelObject": {
+      "id": "#BusinessModelObject",
+      "description": "Version: 0.1",
+      "type": "object",
+      "properties": {
+        "apgId": {
+          "description": "Unique identifier of the Object",
+          "type": "integer"
+        },
+        "RegistratieDatum": {
+          "type": "string"
+        },
+        "vervallenDatum": {
+          "type": "string"
+        },
+        "mogId": {
+          "description": "Unique identifier of the different funds registered within APG",
+          "type": "string"
+        },
+        "rootObjectType": {
+          "description": "Indication of the BOT type of the object. Example: Overeenkomst, Opdrachtgever, etc",
+          "type": "string"
+        }
+      }
+    },
+	"a":{
+	  "id": "#a",
+	  "type": "object",
+	  "allOf": [
+	    {
+	      "$ref": "#/definitions/BusinessModelObject"
+	    }
+	  ],
+	  "properties": {
+	  	  "a": {
+	      "$ref": "#/definitions/b"
+	    }
+	  },
+	  "required": ["a"]
+	},
+	"b": {
+      "id": "#b",
+      "type": "object",
+      "properties": {
+        "automatischeIncasso": {
+          "enum": [
+            "JA",
+            "NEE"
+          ]
+        },
+        "bankrekeningNummer": {
+          "type": "string",
+          "maxLength": 22
+        },
+        "beginDatumPremie": {
+          "type": "string"
+        },
+        "bicCodeBank": {
+          "type": "string",
+          "maxLength": 11		  
+        },
+        "eindDatumPremie": {
+          "type": "string"
+        },
+        "ibanNummer": {
+          "type": "string",
+          "maxLength": 34		  
+        },
+        "naamBank": {
+          "type": "string"
+        },
+        "premieType": {
+          "type": "string"
+        },
+        "rekeningId": {
+          "type": "string"
+        }
+      },
+	  "required" : [
+	    "bankrekeningNummer",
+		"bicCodeBank"
+	  ]
+    }
+  }
+}
