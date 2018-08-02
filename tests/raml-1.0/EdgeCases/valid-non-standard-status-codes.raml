@@ -1,0 +1,18 @@
+# Inspired by https://github.com/raml-org/raml-java-parser/issues/264
+
+#%RAML 1.0
+---
+version: v2
+mediaType: [ "plain/text" ]
+resourceTypes:
+  collection:
+    description: Collection of available <<resourcePathName>>
+    get:
+      responses:
+        612:
+          body: "hello"
+        900:
+          body: "hello"
+
+/apps:
+  type: collection

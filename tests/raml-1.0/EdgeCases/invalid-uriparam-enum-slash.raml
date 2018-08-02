@@ -1,0 +1,8 @@
+# https://github.com/raml-org/raml-java-parser/issues/240
+
+#%RAML 1.0
+title: Resources with query parameters
+/invalid/{first}:
+  uriParameters:
+    first:
+      enum: [ "invalid/value" ]

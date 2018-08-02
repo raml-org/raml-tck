@@ -1,0 +1,14 @@
+# https://github.com/raml-org/raml-java-parser/issues/233
+
+#%RAML 1.0
+
+title: My API title
+types:
+  Pet:
+    properties:
+      name: string
+      cost: number
+  Dog:
+    type: Pet
+    properties:
+      cost: integer
