@@ -1,0 +1,32 @@
+# https://github.com/raml-org/raml-java-parser/issues/209
+# User-defined facet names on a type MUST NOT match built-in facets on that
+# type, nor facet names of any ancestor type in the inheritance chain of
+# the type.
+
+#%RAML 1.0
+title: type example
+version: 1
+
+types:
+  TestType:
+    type: object
+    facets:
+      content: string
+      strict: string
+      minLength: string
+      maxLength: string
+      uniqueItems: string
+      minItems: string
+      maxItems: string
+      minimum: string
+      maximum: string
+      multipleOf: string
+      requestTokenUri: string
+      authorizationUri: string
+      tokenCredentialsUri: string
+      accessTokenUri: string
+      title: string
+      version: string
+      baseUri: string
+      mediaType: string
+      extends: string

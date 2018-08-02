@@ -1,0 +1,12 @@
+# https://github.com/raml-org/raml-java-parser/issues/177
+# The format of the value. The value MUST be one of the following:
+# int32, int64, int, long, float, double, int16, int8,
+# The integer type inherits its facets from the number type.
+
+#%RAML 1.0
+title: test
+
+types:
+  MyNum:
+    type: number
+    format: float
