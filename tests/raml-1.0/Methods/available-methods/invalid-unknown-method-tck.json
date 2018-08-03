@@ -48,7 +48,7 @@
     {
       "code": "UNKNOWN_NODE",
       "message": "Unknown node: 'set'",
-      "path": "invalid.raml",
+      "path": "invalid-unknown-method.raml",
       "range": {
         "start": {
           "line": 10,

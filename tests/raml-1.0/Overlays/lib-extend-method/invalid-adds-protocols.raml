@@ -1,0 +1,14 @@
+#%RAML 1.0 Overlay
+title: Slave RAML
+extends: base.raml
+uses:
+  decls: lib/decls.raml
+
+/elements:
+  get:
+    description: |
+      describing your method here
+    #lets add some annotation
+    (decls.important):
+
+protocols: [HTTPS]

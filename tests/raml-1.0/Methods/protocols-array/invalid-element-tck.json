@@ -63,7 +63,7 @@
     {
       "code": "INVALID_VALUE",
       "message": "Invalid value: 'FTP'. Allowed values are: 'HTTP', 'HTTPS'",
-      "path": "meth08.raml",
+      "path": "invalid-element.raml",
       "range": {
         "start": {
           "line": 4,
@@ -80,7 +80,7 @@
     {
       "code": "INVALID_VALUE",
       "message": "Invalid value: 'SMTP'. Allowed values are: 'HTTP', 'HTTPS'",
-      "path": "invalid.raml",
+      "path": "invalid-element.raml",
       "range": {
         "start": {
           "line": 4,
