@@ -1,0 +1,15 @@
+#%RAML 1.0
+title: Example API
+version: v1
+resourceTypes:
+  apiResource:
+    get:
+      is: [ { secured : { tokenName: access_token } } ]
+traits:
+  secured:
+    queryParameters:
+      <<tokenAge>>:
+        description: A valid <<tokenAge>> is required
+/servers:
+  get:
+    is: [ { secured : { tokenName: token } } ]

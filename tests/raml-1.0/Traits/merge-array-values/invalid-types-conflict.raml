@@ -1,7 +1,3 @@
-# All collections or sequences that are affected by applied traits and
-# resource types are merged. This example defines the enum values of a
-# query parameter in both the trait and resource.
-
 #%RAML 1.0
 title: Example API
 version: v1
@@ -17,7 +13,10 @@ traits:
   get:
     is: [ withQueryParameters ]
     queryParameters:
-      platform: #the actual enum is [ mac, unix, win ]
+      platform:
+        type: number
         enum:
           - mac
           - unix
+          - 4
+          - 19
