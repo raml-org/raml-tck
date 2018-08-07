@@ -4,58 +4,14 @@
   "specification": {
     "types": [
       {
-        "NullValue": {
-          "name": "NullValue",
-          "displayName": "NullValue",
+        "MyBooleanType": {
+          "name": "MyBooleanType",
+          "displayName": "MyBooleanType",
           "type": [
-            "object"
+            "boolean"
           ],
-          "example": {
-            "name": "Fred",
-            "size": 0
-          },
+          "example": false,
           "required": true,
-          "properties": {
-            "name": {
-              "name": "name",
-              "displayName": "name",
-              "type": [
-                "string"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "type": {
-                    "insertedAsDefault": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
-                }
-              }
-            },
-            "size": {
-              "name": "size",
-              "displayName": "size",
-              "type": [
-                "number"
-              ],
-              "required": true,
-              "__METADATA__": {
-                "primitiveValuesMeta": {
-                  "displayName": {
-                    "calculated": true
-                  },
-                  "required": {
-                    "insertedAsDefault": true
-                  }
-                }
-              }
-            }
-          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
@@ -67,13 +23,10 @@
             }
           },
           "structuredExample": {
-            "value": "{\n  \"name\": \"Fred\",\n  \"size\": 0\n}",
+            "value": "false",
             "strict": true,
             "name": null,
-            "structuredValue": {
-              "name": "Fred",
-              "size": 0
-            }
+            "structuredValue": false
           }
         }
       }

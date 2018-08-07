@@ -12,7 +12,7 @@
           ],
           "example": {
             "name": "Fred",
-            "size": 0
+            "comment": ""
           },
           "required": true,
           "properties": {
@@ -37,17 +37,20 @@
                 }
               }
             },
-            "size": {
-              "name": "size",
-              "displayName": "size",
+            "comment": {
+              "name": "comment",
+              "displayName": "comment",
               "type": [
-                "number"
+                "string"
               ],
               "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
                     "calculated": true
+                  },
+                  "type": {
+                    "insertedAsDefault": true
                   },
                   "required": {
                     "insertedAsDefault": true
@@ -67,12 +70,12 @@
             }
           },
           "structuredExample": {
-            "value": "{\n  \"name\": \"Fred\",\n  \"size\": 0\n}",
+            "value": "{\n  \"name\": \"Fred\",\n  \"comment\": \"\"\n}",
             "strict": true,
             "name": null,
             "structuredValue": {
               "name": "Fred",
-              "size": 0
+              "comment": ""
             }
           }
         }

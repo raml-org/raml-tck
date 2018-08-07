@@ -11,8 +11,10 @@ types:
     facets:
       format: string
 
+  year:
+    type: myDate
+    formatDate: YYYY
 /q:
-  post:
-    body:
-      type: myDate
-      format: YYYY
+  get:
+    queryParameters:
+      y: year

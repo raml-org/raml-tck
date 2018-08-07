@@ -1,5 +1,5 @@
 #%RAML 1.0
-title: Example API test 06
+title: Example API test 05
 annotationTypes:
   NumberAnnotation:
     type: number
@@ -18,14 +18,15 @@ types:
         strict: false
         displayName: myExample1
         description: example 1 of ObjectType3
-        (NumberAnnotation): 5
+        (UndefinedAnnotation): 5
         (ObjectAnnotation): { prop1: value1 }
-
       example2:
         value:
           prop1: value2
         strict: false
         displayName: myExample2
         description: example 2 of ObjectType3
-        (NumberAnnotation): 15
+        (UndefinedAnnotation): 15
         (ObjectAnnotation): { prop1: value2 }
+
+
