@@ -4,14 +4,14 @@ title: test
 
 types:
   PropertyType1:
-    type: string
-    minLength: 0
+    type: number
+    minimum: 0
   PropertyType2:
     type: PropertyType1
-    maxLength: 5
+    maximum: 5
   Type1:
     properties:
-      testProperty: PropertyType1
+      testProperty: number
   Type2:
     type: Type1
     properties:

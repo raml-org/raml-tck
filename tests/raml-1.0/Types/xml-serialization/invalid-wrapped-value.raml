@@ -1,0 +1,18 @@
+#%RAML 1.0 Library
+
+types:
+  Person:
+    properties:
+      name:
+        type: string
+        xml:
+          attribute: fsdf # serialize it as an XML attribute
+          name: "fullname" # attribute should be called fullname
+      addresses:
+        type: Address[]
+        xml:
+          wrapped: 123
+  Address:
+    properties:
+      street: string
+      city: string

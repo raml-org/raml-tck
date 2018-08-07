@@ -8,14 +8,36 @@
           "name": "PropertyType1",
           "displayName": "PropertyType1",
           "type": [
-            "string"
+            "object"
           ],
           "required": true,
-          "minLength": 0,
+          "properties": {
+            "name": {
+              "name": "name",
+              "displayName": "name",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
               },
               "required": {
                 "insertedAsDefault": true
@@ -32,11 +54,73 @@
             "PropertyType1"
           ],
           "required": true,
-          "maxLength": 5,
+          "properties": {
+            "name2": {
+              "name": "name2",
+              "displayName": "name2",
+              "type": [
+                "string"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
           "__METADATA__": {
             "primitiveValuesMeta": {
               "displayName": {
                 "calculated": true
+              },
+              "required": {
+                "insertedAsDefault": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "PropertyType3": {
+          "name": "PropertyType3",
+          "displayName": "PropertyType3",
+          "type": [
+            "object"
+          ],
+          "required": true,
+          "properties": {
+            "name": {
+              "name": "name",
+              "displayName": "name",
+              "type": [
+                "boolean"
+              ],
+              "required": true,
+              "__METADATA__": {
+                "primitiveValuesMeta": {
+                  "displayName": {
+                    "calculated": true
+                  },
+                  "required": {
+                    "insertedAsDefault": true
+                  }
+                }
+              }
+            }
+          },
+          "__METADATA__": {
+            "primitiveValuesMeta": {
+              "displayName": {
+                "calculated": true
+              },
+              "type": {
+                "insertedAsDefault": true
               },
               "required": {
                 "insertedAsDefault": true
@@ -101,9 +185,9 @@
               "name": "testProperty",
               "displayName": "testProperty",
               "type": [
-                "PropertyType2"
+                "PropertyType3"
               ],
-              "required": false,
+              "required": true,
               "__METADATA__": {
                 "primitiveValuesMeta": {
                   "displayName": {
@@ -133,19 +217,19 @@
   },
   "errors": [
     {
-      "code": "REQUIRED_OVERRIDE_OPTIONAL",
-      "message": "Can not override required property 'testProperty' to be optional",
-      "path": "invalid-make-required-optional.raml",
+      "code": "RESTRICTIONS_CONFLICT",
+      "message": "Restrictions conflict between types 'Type2' and 'Type1': should be of type string and should be of type boolean",
+      "path": "invalid-restrictions-conflict.raml",
       "range": {
         "start": {
-          "line": 14,
-          "column": 2,
-          "position": 202
+          "line": 21,
+          "column": 6,
+          "position": 320
         },
         "end": {
-          "line": 14,
-          "column": 7,
-          "position": 207
+          "line": 21,
+          "column": 18,
+          "position": 332
         }
       }
     }
