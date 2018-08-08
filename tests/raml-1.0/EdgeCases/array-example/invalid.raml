@@ -1,0 +1,13 @@
+#%RAML 1.0 Library
+
+types:
+  Email:
+    type: object
+    properties:
+      subject: string
+      body: string
+  Emails:
+    type: Email[]
+    minItems: 1
+    uniqueItems: true
+    example: hello

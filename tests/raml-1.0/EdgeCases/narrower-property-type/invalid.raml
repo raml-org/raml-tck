@@ -1,0 +1,12 @@
+#%RAML 1.0
+
+title: My API title
+types:
+  Pet:
+    properties:
+      name: string
+      cost: integer
+  Dog:
+    type: Pet
+    properties:
+      cost: number
