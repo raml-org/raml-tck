@@ -1,0 +1,8 @@
+#%RAML 1.0
+title: Some API
+version: v1
+mediaType:  application/json
+baseUri: https://example.com/api/v1/
+
+securitySchemes:
+  hmac: !include securitySchemes/invalid-scheme.raml
