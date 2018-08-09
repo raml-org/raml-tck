@@ -1,12 +1,12 @@
 {
   "name": "raml-tck",
-  "description": "Generate files a TCK test file for given RAML(s).",
-  "version": "1.0.0",
-  "main": "src/index.js",
+  "description": "RAML files to test RAML features",
+  "version": "1.1.0",
+  "main": "src/genmanifest.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:raml-org/raml-parser-tck.git"
+    "url": "git@github.com:raml-org/raml-tck.git"
   },
   "keywords": [
     "raml",
@@ -14,11 +14,9 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "raml-1-parser": "^1.1.8",
     "walk": "^2.3.14"
   },
   "scripts": {
-    "generate": "node src/index.js",
     "gen-manifest": "node src/genmanifest.js"
   }
 }
