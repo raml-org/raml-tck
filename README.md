@@ -1,31 +1,46 @@
 # TCK - Test Compatibility Kit for RAML Parser
 
-The Test Compatibility Kit (TCK) for the RAML Parser provides a way to separate the test resources from any parser implementation. TCK compares a RAML input against an expected JSON output representation of that RAML.  Each parser needs to provide a way to generate the JSON output from the RAML definition, including valid and invalid outcomes.
+The Test Compatibility Kit (TCK) for the RAML Parser provides a way to separate the test resources from any parser implementation. TCK contains a set of RAML documents meant to be used to test correct/incorrect usage of each RAML feature. Currently only parser fail/success is tested without testing parsing results.
 
-The expected output representation is defined by the following [schema](schema/tckJsonSchema.json).
+# Naming convention
+
+*valid-\*.raml*: Valid RAML file parsing of which is expected to succeed.
+
+*invalid-\*.raml*: Invalid RAML file that has syntax/semantic/spec errors. Parsing of it is expected to fail (parser errors/returns error/crashes).
+
+Repository also contains a [manifest file](tests/raml-1.0/manifest.json) that lists RAML files in the order features used in them are defined in RAML 1.0 spec.
 
 # Run tests
 
-The [JS parser repository](https://github.com/raml-org/raml-js-parser-2/blob/develop/README.md#launching-tck-tests) contains a sample implementation for running the TCK tests against a parser implementation.
+There are already few parsing tools that use the repo and test some parsers:
+
+* [raml-parsers-test-js](https://github.com/postatum/raml-parsers-test-js) tests parsers: [raml1parser](https://github.com/raml-org/raml-js-parser-2), [amf-client-js](https://github.com/aml-org/amf)
+* [raml-parsers-test-py](https://github.com/postatum/raml-parsers-test-py) tests parsers: [ramlfications](https://github.com/spotify/ramlfications), [pyraml-parser](https://github.com/an2deg/pyraml-parser)
+* [raml-parsers-test-rb](https://github.com/postatum/raml-parsers-test-rb) tests parsers: [brujula](https://github.com/nogates/brujula), [raml-rb](https://github.com/jpb/raml-rb)
+* [raml-parsers-test-go](https://github.com/postatum/raml-parsers-test-go) tests parsers: [Jumpscale/go-raml](https://github.com/Jumpscale/go-raml), [go-raml/raml](https://github.com/go-raml/raml), [go-raml-parser](https://github.com/tsaikd/go-raml-parser)
+
+Feel free to build more tools to fit your needs.
 
 # Contributing Tests
 
-We welcome any contributions from the community! You can contribute by sending us a pull request with your test cases. A test case, for example, might contain the following files:
+We welcome any contributions from the community! You can contribute by sending us a pull request with your test cases. A test case, for example, should contain the following files:
 
-* A single API `.raml` file in its root
-* Optionally, any number of Library and Fragment `.raml` files as well as `.json`, `.xml`, `.md`, and other files in either the root folder or its subtree
+* Valid `.raml` file showcasing valid use of the feature under test
+* Invalid `.raml` files showcasing invalid use of the feature under test
+* Optionally, any number of Library and Fragment `.raml` files as well as `.json`, `.xml`, `.md`, and other files in either the root folder or its subtree. These files must be used by the main valid/invalid `.raml` files.
 
 Test cases must be put under the `tests` directory by either putting your tests into an existing folder or creating a new one. Hereby, it is important that the folder name does reflect the main purpose and each file name should also be meaningful. For example, if you want to contribute a new test case that covers traits in RAML 1.0, you only need to create a new folder for your test case under `tests/raml-1.0/Traits` and copy your RAML files into that. Please also make sure that you place additional metadata as comments into your RAML file to give more context about your test case. The following is a template:
 
 ```
 <RAML_VERSION> <RAML_FRAGMENT>
-<NEWLINE>
+
 # Objective: <COMMENT>
 # Expected result: <COMMENT>
 
 # <COMMENT>
-<NEWLINE>
+
 # tags: <tag_1>, <tag_2>, ...,<tag_n>
+
 <RAML_CONTENT>
 ```
 
@@ -33,56 +48,16 @@ For more information, please have a look at [this example](tests/raml-1.0/spec-e
 
 For more information what tags to use, please see a list of commonly used inside [common-tags.md](common-tags.md). You can suggest new by raising an issue within this repository.
 
-Each test needs to have a TCK specific file that will be actually used as a comparison for the output of your parsing. You can create a TCK JSON file manually from scratch, and  name it `<my API RAML file name>-tck.json`), or use the generate script provided inside the `src` directory. For example, you create a  folder inside the `tests/raml-1.0/Traits` directory called `myTests` where you put all your tests files. Now, you only need to go to your terminal and execute the following:
+After adding new files make sure to regenerate the manifest file:
 
-Install dependencies
+Install dependencies:
 
-```
-npm install
-```
-
-Run
-
-```
-node src/index.js tests/raml-1.0/Traits/myTests
+```sh
+$ npm install
 ```
 
-This file will navigates through your directory and generate the necessary TCK file.
+Generate the manifest:
 
-The next section will explain the structure each new TCK test directory must follow.
-
-## Standard directory structure for TCK test folders
-
-The test cases are distinguished by `.raml` file sets located in project roots.
-
-#### APIs only project
-
-* RAML files in the root: one or more API files, no Extension and Overlay files, and any number of other files
-* TCK JSON filenames: `<API file name>-tck.json`
-* Example: [`tests/raml-1.0/Annotations/test001`](tests/raml-1.0/Annotations/test001)
-
-#### Single Extension or Overlay project
-
-* RAML files in the root: single file describing Extension or Overlay which extends API, any number of other files.
-* TCK JSON filename: `<Master API file name>-tck.json`
-* Example: [`tests/raml-1.0//Overlays/test001`](tests/raml-1.0/Overlays/test001)
-
-#### Libraries only project
-
-* RAML files in the root: one or more Library file, no API files, any number of other files.
-* TCK JSON filenames: `<Library file name>-tck.json`
-
-#### Fragments only project
-
-* RAML files in the root: one or more Fragment file, no other files.
-* TCK JSON filenames: `<Fragment file name>-tck.json`
-* Example: [`tests/raml-1.0/Fragments/test001`](tests/raml-1.0/RAML10/Fragments/test001)
-
-#### Multiple Extensions and Overlays project
-
-* RAML files in the root:
-  * Master API file
-  * One or more Extension and Overlay files which form a chain orderd by extension relation (with one end in the master API)
-  * Any number of other files
-* TCK JSON filename: `<Master API file name>-tck.json`
-* Example: [`tests/raml-1.0/Overlays/test023`](tests/raml-1.0/Overlays/test023)
+```sh
+$ npm run-script gen-manifest
+```
