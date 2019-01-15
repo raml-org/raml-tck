@@ -2,35 +2,34 @@ const path = require('path')
 const fs = require('fs')
 const walk = require('walk')
 
-// Features listed in order they appear in RAML 1.0 spec.
-// Features names correspond to lowercase names of tests/raml-1.0
-// sub-folders.
-const FEATURES_PRIORITY = [
-  'root',
-  'types',
-  'resources',
-  'methods',
-  'responses',
-  'methodresponses',
-  'resourcetypes',
-  'traits',
-  'templatefunctions',
-  'securityschemes',
-  'annotations',
-  'fragments',
-  'libraries',
-  'overlays'
-]
-
 function main () {
-  const fpath = getInputFolderPath()
-  let ramlPaths = listRamls(fpath)
-  ramlPaths = sortRAMLPaths(fpath, ramlPaths)
-  generateManifest(fpath, ramlPaths)
+  const projRoot = path.resolve(path.join(__dirname, '..'))
+  const inputRoot = getInputDirPath()
+  let ramlPaths = listRamls(inputRoot)
+  ramlPaths = sortRAMLPaths(inputRoot, ramlPaths)
+  ramlPaths = makePathsRelative(projRoot, ramlPaths)
+  generateManifest(projRoot, ramlPaths)
 }
 
-// List RAML files under fpath
-function listRamls (fpath) {
+// Gets absolute path of input folder
+function getInputDirPath () {
+  let dirPath = process.argv[2]
+
+  if (!fs.existsSync(dirPath)) {
+    console.error(`'${dirPath}' not found`)
+    return
+  }
+
+  dirPath = path.resolve(dirPath)
+  if (!fs.lstatSync(dirPath).isDirectory()) {
+    console.error(`'${dirPath}' is not a directory`)
+    return
+  }
+  return dirPath
+}
+
+// Lists RAML files under directory path
+function listRamls (dirPath) {
   let files = []
   const options = {
     listeners: {
@@ -42,11 +41,11 @@ function listRamls (fpath) {
       }
     }
   }
-  walk.walkSync(fpath, options)
+  walk.walkSync(dirPath, options)
   return files
 }
 
-// Sort string ramlPaths according to features definition order
+// Sorts string ramlPaths according to features definition order
 // in RAML 1.0 spec
 function sortRAMLPaths (ramlsRoot, ramlPaths) {
   const pathObjs = extendWithPriority(ramlsRoot, ramlPaths)
@@ -58,28 +57,57 @@ function sortRAMLPaths (ramlsRoot, ramlPaths) {
   })
 }
 
-// Turn plain RAML paths into objects of type {priority: INT, path: STRING}
-// E.g.:
-// > const FEATURES_PRIORITY = ['methodresponses', 'overlays']
-// > extendWithPriority('/foo/bar', '/foo/bar/Overlays/some/file.raml')
-// > {priority: 2, path: '/foo/bar/Overlays/some/file.raml'}
-// > extendWithPriority('/foo/bar', '/foo/bar/qweqwe/some/file.raml')
-// > {priority: 99, path: '/foo/bar/qweqwe/some/file.raml'}
-//
-// Override this to change logic of picking priority.
-function extendWithPriority (ramlsRoot, ramlPaths) {
+// Makes RAML fiels paths relative to a directory
+function makePathsRelative (dirPath, ramlPaths) {
   return ramlPaths.map((pth) => {
-    const piece = getFirstPathPiece(ramlsRoot, pth)
-    let priority = FEATURES_PRIORITY.findIndex((el) => { return el === piece })
-    priority += 1 // Make 1-based
-    return {
-      path: path.relative(ramlsRoot, pth),
-      priority: priority || 99
-    }
+    return path.relative(dirPath, pth)
   })
 }
 
-// Get relative folder 'root' name of RAML file path.
+// Turns plain RAML paths into objects of type {priority: INT, path: STRING}
+// E.g.:
+// > let featuresPriority = ['methodresponses', 'overlays']
+// > extendWithPriority('/foo/bar', '/foo/bar/Overlays/some/file.raml')
+// > {priority: 2, path: '/foo/bar/Overlays/some/file.raml'}
+// > extendWithPriority('/foo/bar', '/foo/bar/qweqwe/some/file.raml')
+// > {priority: 3, path: '/foo/bar/qweqwe/some/file.raml'}
+//
+// Override this to change logic of picking priority.
+function extendWithPriority (ramlsRoot, ramlPaths) {
+  // Features listed in order they appear in RAML 1.0 spec.
+  let featuresPriority = [
+    'root',
+    'types',
+    'resources',
+    'methods',
+    'responses',
+    'methodresponses',
+    'resourcetypes',
+    'traits',
+    'templatefunctions',
+    'securityschemes',
+    'annotations',
+    'fragments',
+    'libraries',
+    'overlays'
+  ]
+  return ramlPaths.map((pth) => {
+    const piece = getFirstPathPiece(ramlsRoot, pth)
+    let priority = featuresPriority.findIndex((el) => {
+      return el === piece
+    })
+    // Feature name not found. Adding it to the list allows sorting not
+    // found features.
+    if (priority === -1) {
+      featuresPriority.push(piece)
+      priority = featuresPriority.length - 1
+    }
+    priority += 1 // Make 1-based
+    return {path: pth, priority: priority}
+  })
+}
+
+// Gets relative folder 'root' name of RAML file path.
 // E.g.:
 //  > const ramlsRoot = '/foo/bar'
 //  > const ramlPath = '/foo/bar/MethodResponses/some/file.raml'
@@ -90,38 +118,16 @@ function getFirstPathPiece (ramlsRoot, ramlPath) {
   return relPath.split(path.sep)[0].toLowerCase()
 }
 
-// Generate and write manifest file
-function generateManifest (ramlsRoot, ramlPaths) {
+// Generates and writes manifest file
+function generateManifest (dirPath, ramlPaths) {
   const data = {
     description: 'RAML files listed in order corresponding RAML ' +
                  'feature appears in RAML 1.0 spec',
     filePaths: ramlPaths
   }
-  const manifestPath = path.join(ramlsRoot, 'manifest.json')
+  const manifestPath = path.join(dirPath, 'manifest.json')
   console.log(`Writing manifest file to ${manifestPath}`)
   fs.writeFileSync(manifestPath, JSON.stringify(data, null, 4))
-}
-
-// Get absolute path of input folder
-function getInputFolderPath () {
-  let fpath
-  if (process.argv.length > 2) {
-    fpath = process.argv[2]
-  } else {
-    fpath = path.join('tests', 'raml-1.0')
-  }
-  fpath = path.resolve(fpath)
-
-  if (!fs.existsSync(fpath)) {
-    console.error(`'${fpath}' not found`)
-    return
-  }
-
-  if (!fs.lstatSync(fpath).isDirectory()) {
-    console.error(`'${fpath}' is not a directory`)
-    return
-  }
-  return fpath
 }
 
 main()
