@@ -17,6 +17,6 @@
     "walk": "^2.3.14"
   },
   "scripts": {
-    "gen-manifest": "node src/genmanifest.js"
+    "gen-manifest": "node src/genmanifest.js tests"
   }
 }
