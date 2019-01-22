@@ -2,7 +2,7 @@
   "tests": [
     {
       "description": "'minLength' must be equal or greater than zero",
-      "input": "minlength-with-negative-value",
+      "input": "minlength-with-negative-value-invalid",
       "valid": false,
       "tags": [
         "type", "string", "scalar"
@@ -10,7 +10,7 @@
     },
     {
       "description": "'maxLength' must be equal or greater than zero",
-      "input": "maxlength-with-negative-value",
+      "input": "maxlength-with-negative-value-invalid",
       "valid": false,
       "tags": [
         "type", "string", "scalar"

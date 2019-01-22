@@ -2,7 +2,7 @@
   "tests": [
     {
       "description": "A Library that references an inexistent type",
-      "input": "bar-lib-unknown-type",
+      "input": "bar-lib-unknown-type-invalid",
       "valid": false,
       "tags": [
         "type", "library"
