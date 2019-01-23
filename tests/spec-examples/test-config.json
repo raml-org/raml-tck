@@ -169,75 +169,11 @@
       ]
     },
     {
-      "description": "'get' method using HTTP a number query parameter with repeat attribute",
-      "input": "query-parameter-repeat",
-      "valid": true,
-      "tags": [
-        "query parameter", "repeat"
-      ]
-    },
-    {
-      "description": "To denote that a named parameter can have multiple types, the value of a named parameter property MAY be an array of mappings",
-      "input": "named-parameter-multiple-types",
-      "valid": true,
-      "tags": [
-        "parameter", "multiple type", "named parameter"
-      ]
-    },
-    {
-      "description": "The schema definitions MAY be included inline or by using the RAML !include user-defined data type",
-      "input": "schemas",
-      "valid": true,
-      "tags": [
-        "parameter", "multiple type", "named parameter"
-      ]
-    },
-    {
       "description": "There is no limit to the number of documentation pages that can be included in a RAML API definition",
       "input": "documentation-multiple",
       "valid": true,
       "tags": [
         "documentation"
-      ]
-    },
-    {
-      "description": "If the header name contains the placeholder token {*}, processing applications MUST allow requests to send any number of headers that conform to the format specified",
-      "input": "header-custom-data",
-      "valid": true,
-      "tags": [
-        "header"
-      ]
-    },
-    {
-      "description": "A method can override an API's protocols value for that single method by setting a different value for the fields.",
-      "input": "protocols-method",
-      "valid": true,
-      "tags": [
-        "protocol", "method"
-      ]
-    },
-    {
-      "description": "Web forms REQUIRE special encoding and custom declaration",
-      "input": "web-form",
-      "valid": true,
-      "tags": [
-        "web form"
-      ]
-    },
-    {
-      "description": "An API's methods may support custom header values in responses",
-      "input": "custom-header-error-response",
-      "valid": true,
-      "tags": [
-        "response", "error", "header", "custom header"
-      ]
-    },
-    {
-      "description": "API's may include the the placeholder token {?} in a header name to indicate that any number of headers that conform to the specified format can be sent in responses.",
-      "input": "response-header-custom-data",
-      "valid": true,
-      "tags": [
-        "response", "header", "custom header"
       ]
     }
   ]

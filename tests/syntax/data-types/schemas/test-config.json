@@ -15,22 +15,6 @@
       "tags": [
         "type", "json schema"
       ]
-    },
-    {
-      "description": "All parsers of RAML MUST be able to interpret JSON Schema [JSON_SCHEMA] and XML Schema [XML_SCHEMA].",
-      "input": "schema-declaration-inline",
-      "valid": true,
-      "tags": [
-        "schema", "json schema", "xml schema", "inline"
-      ]
-    },
-    {
-      "description": "The value of the schema field MAY be declared in an external file",
-      "input": "schema-declaration-external",
-      "valid": true,
-      "tags": [
-        "schema", "json schema", "xml schema", "external"
-      ]
     }
   ]
 }

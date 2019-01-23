@@ -1,9 +1,0 @@
-#%RAML 0.8
-title: ZEncoder API
-version: v2
-baseUri: https://app.zencoder.com/api/{version}
-/jobs: # its fully-resolved URI is https://app.zencoder.com/api/{version}/jobs
-  displayName: Jobs
-  description: A collection of jobs
-  /{jobId}: # its fully-resolved URI is https://app.zencoder.com/api/{version}/jobs/{jobId}
-    description: A specific job, a member of the jobs collection
