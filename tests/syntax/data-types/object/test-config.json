@@ -2,7 +2,7 @@
   "tests": [
     {
       "description": "value of 'additionProperties' must be a boolean but is object",
-      "input": "additionalProperties-wrong-value",
+      "input": "additionalProperties-invalid-value",
       "valid": false,
       "tags": [
         "type", "object", "additional property"

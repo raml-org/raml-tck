@@ -23,14 +23,6 @@
       "tags": [
         "resource type", "function"
       ]
-    },
-    {
-      "description": "Inline resource type definition from https url",
-      "input": "resourcetypes-include-https",
-      "valid": true,
-      "tags": [
-        "resource type", "include", "https"
-      ]
     }
   ]
 }

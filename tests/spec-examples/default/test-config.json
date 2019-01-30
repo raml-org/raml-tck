@@ -63,14 +63,6 @@
       "tags": [
         "type", "object"
       ]
-    },
-    {
-      "description": "invalid media type",
-      "input": "invalid-media-type",
-      "valid": false,
-      "tags": [
-        "type", "media", "invalid"
-      ]
     }
   ]
 }

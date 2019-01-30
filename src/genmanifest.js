@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const walk = require('walk')
 
+// Run with: node src/genmanifest.js ./tests/
 function main () {
   const projRoot = path.resolve(path.join(__dirname, '..'))
   const inputRoot = getInputDirPath()

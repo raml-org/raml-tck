@@ -47,14 +47,6 @@
       "tags": [
         "resource type", "trait"
       ]
-    },
-    {
-      "description": "a resource type or trait definition MAY append a question mark (?) suffix to the name of any non-scalar property that should not be applied if it doesn't already exist in the resource or method at the corresponding level",
-      "input": "resourcetypes-optional-properties",
-      "valid": true,
-      "tags": [
-        "resource type", "properties"
-      ]
     }
   ]
 }

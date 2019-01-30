@@ -2,7 +2,7 @@
   "tests": [
     {
       "description": "it should not be allowed to define a node under body AND override the default media type at the same time",
-      "input": "basic-bad",
+      "input": "basic-invalid",
       "valid": false,
       "tags": [
         "default media type"
