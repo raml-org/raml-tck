@@ -1,0 +1,23 @@
+#%RAML 1.0
+uses:
+  bobject: object-B.raml
+title: Main API
+description: Main API that will reference an object that reference to another two objects
+version: 1.0.0
+protocols:
+  - HTTP
+  - HTTPS
+baseUri: 'http://localhost:9094'
+'/basepath/{ID}':
+  get:
+    description: get B object
+    responses:
+      '200':
+        description: Successful response
+        body:
+          application/json:
+            type: bobject.BObject
+  uriParameters:
+    ID:
+      description: ID
+      type: string
