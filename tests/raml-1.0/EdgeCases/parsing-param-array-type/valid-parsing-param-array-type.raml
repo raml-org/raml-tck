@@ -1,7 +1,3 @@
-# https://github.com/raml-org/raml-js-parser-2/issues/792
-#
-# No invalid test case because issue is related to parsing content.
-
 #%RAML 1.0
 ---
 version: v2
@@ -33,3 +29,8 @@ resourceTypes:
           body: "<<resourcePathName|!singularize>>.<<resourcePathName|!singularize|!uppercamelcase>>"
 /apps:
   type: collection
+
+
+# https://github.com/raml-org/raml-js-parser-2/issues/792
+#
+# No invalid test case because issue is related to parsing content.
