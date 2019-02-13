@@ -1,6 +1,6 @@
 # TCK - Test Compatibility Kit for RAML Parser
 
-The Test Compatibility Kit (TCK) for the RAML Parser provides a way to separate the test resources from any parser implementation. TCK contains a set of RAML documents meant to be used to test correct/incorrect usage of each RAML feature. Currently only parser fail/success is tested without testing parsing results.
+The Test Compatibility Kit (TCK) for the RAML Parser provides a way to separate the test resources from any parser implementation. TCK contains a set of RAML documents meant to be used to test correct/incorrect usage of each RAML feature. Note that only the failure or success to parse is tested, not the parsing outcome per sé.
 
 # Naming convention
 
@@ -14,10 +14,12 @@ Repository also contains a [manifest file](tests/raml-1.0/manifest.json) that li
 
 There are already few parsing tools that use the repo and test some parsers:
 
-* [raml-parsers-test-js](https://github.com/postatum/raml-parsers-test-js) tests parsers: [raml1parser](https://github.com/raml-org/raml-js-parser-2), [amf-client-js](https://github.com/aml-org/amf)
-* [raml-parsers-test-py](https://github.com/postatum/raml-parsers-test-py) tests parsers: [ramlfications](https://github.com/spotify/ramlfications), [pyraml-parser](https://github.com/an2deg/pyraml-parser)
-* [raml-parsers-test-rb](https://github.com/postatum/raml-parsers-test-rb) tests parsers: [brujula](https://github.com/nogates/brujula), [raml-rb](https://github.com/jpb/raml-rb)
-* [raml-parsers-test-go](https://github.com/postatum/raml-parsers-test-go) tests parsers: [Jumpscale/go-raml](https://github.com/Jumpscale/go-raml), [go-raml/raml](https://github.com/go-raml/raml), [go-raml-parser](https://github.com/tsaikd/go-raml-parser)
+**[raml-tck-runner](https://github.com/raml-org/raml-tck-runner)** tests parsers:
+* Go: [Jumpscale/go-raml](https://github.com/Jumpscale/go-raml), [go-raml/raml](https://github.com/go-raml/raml)
+* JavaScript: [raml-1-parser](https://github.com/raml-org/raml-js-parser-2), [amf-client-js](https://github.com/aml-org/amf), [webapi-parser](https://github.com/raml-org/webapi-parser)
+* Python: [ramlfications](https://github.com/spotify/ramlfications), [pyraml-parser](https://github.com/an2deg/pyraml-parser)
+* Ruby: [brujula](https://github.com/nogates/brujula), [raml-rb](https://github.com/jpb/raml-rb)
+* Java: [webapi-parser](https://github.com/raml-org/webapi-parser), [raml-java-parser](https://github.com/raml-org/raml-java-parser)
 
 Feel free to build more tools to fit your needs.
 
