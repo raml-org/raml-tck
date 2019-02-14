@@ -1,7 +1,9 @@
-#%RAML 1.0 ResourceType
-# This file is located at files-resource.raml
+#%RAML 1.0
+title: Test API
 
 uses:
   files: libraries/files.raml
-get:
-  is: [ files.drm ]
+
+/files-list:
+  get:
+    is: [ files.drm ]
