@@ -1,5 +1,3 @@
-#%RAML 1.0 NamedExample
-
 subscriptionID: 8f19cb50-3f57-4d38
 name: NewSub
 description: This is the new subscription.
