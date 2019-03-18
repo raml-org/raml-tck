@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: Example API
+
+# To resolve a collision arising from this inequality, priority is given to
+# the trait in closest proximity to the target method or resource. In the
+# previous example, the tokenName parameter value for the GET:/servers
+# method is token, and the trait list consists of single trait occurrence:
+# [ {secured:{ tokenName:token}} ].
+
+version: v1
+resourceTypes:
+  apiResource:
+    get:
+      is: [ { secured : { tokenName: access_token } } ]
+traits:
+  secured:
+    queryParameters:
+      <<tokenName>>:
+        description: A valid <<tokenName>> is required
+/servers:
+  get:
+    is: [ { secured : { tokenName: token } } ]

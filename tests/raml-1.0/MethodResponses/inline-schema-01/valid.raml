@@ -1,0 +1,27 @@
+#%RAML 1.0
+title: hello
+mediaType: application/json
+
+/hello:
+  get:
+  post:
+    responses:
+      202:
+        body:
+          application/json:
+            type: object
+            properties:
+              hello:
+                type: number
+                minimum: 0
+                maximum: 10
+                format: int
+              key:
+                type: object
+                properties:
+                  x: string
+                example:
+                  x: asd
+          application/xml:
+            type: string
+/world:

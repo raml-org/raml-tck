@@ -1,0 +1,36 @@
+#%RAML 1.0
+title: Pet Shop
+
+# None of the 'Pet' type known subtypes declare 'Mammal' as value of
+# discriminating property 'kind'.
+
+uses:
+  NewLibrary: NewLibrary.raml
+version: v1
+baseUri: /shop
+
+resourceTypes:
+/pets:
+  type:  { NewLibrary.Collection: {item : NewLibrary.Pet} }
+  get:
+    is: [NewLibrary.FilterableByPrice]
+    queryParameters:
+      petKind:
+        enum: [bird, mammal]
+  /{id}:
+    type:  { NewLibrary.Member: {item : NewLibrary.Pet} }
+
+/birds:
+  type:  { NewLibrary.Collection: {item : NewLibrary.Pet} }
+  get:
+    is: [NewLibrary.FilterableByPrice]
+  /{id}:
+    type:  { NewLibrary.Member: {item : NewLibrary.Pet} }
+
+
+/mammals:
+  type:  { NewLibrary.Collection: {item : NewLibrary.Pet} }
+  get:
+    is: [NewLibrary.FilterableByPrice]
+  /{id}:
+    type:  { NewLibrary.Member: {item : NewLibrary.Pet} }

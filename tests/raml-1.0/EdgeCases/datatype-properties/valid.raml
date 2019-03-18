@@ -1,0 +1,14 @@
+#%RAML 1.0 DataType
+
+# https://github.com/raml-org/raml-js-parser-2/issues/777
+#
+# No invalid test case because issue is related parsing results.
+
+displayName: File
+description: The File resource type.
+type: !include resource.raml
+
+properties:
+  thumbnail:
+    type: !include thumbnail.raml
+    required: false

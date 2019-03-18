@@ -1,0 +1,9 @@
+#%RAML 1.0
+title: Test API
+
+uses:
+  files: libraries/files.raml
+
+/files-list:
+  get:
+    is: [ files.drm ]

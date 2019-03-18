@@ -1,0 +1,12 @@
+#%RAML 1.0
+title: Some API
+
+types:
+  userPicture:
+    type: file
+    fileTypes: ['image/jpeg', 'image/png']
+    maxLength: -1
+  customFile:
+    type: file
+    fileTypes: ['*/*']
+    maxLength: -2

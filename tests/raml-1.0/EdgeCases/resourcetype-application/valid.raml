@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: test
+version: 1.0
+baseUri: http://localhost:4567
+
+resourceTypes:
+  collection:
+    usage: This resourceType should be used for any collection of items
+    description: The collection of <<resourcePathName>>
+    post:
+      description: Create a new <<response | !singularize>>
+/customers/{id}/accounts:
+  type: { collection: {response: "hey"}}
+  uriParameters:
+    id:
+      type: integer
+  get:
+    description: Returns a collection Accounts for a Customer
+    queryParameters:
+      skip:
+        required: false
+        type: integer
+      count:
+        required: false
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            type: any[]

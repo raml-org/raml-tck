@@ -1,0 +1,9 @@
+#%RAML 1.0
+title: Illustrate query parameter variations
+
+/locations:
+  get:
+    queryParameters:
+      page:
+        type: integer
+        examples: !include examples/valid-multiple-examples.raml

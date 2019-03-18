@@ -1,0 +1,37 @@
+#%RAML 1.0
+title: test
+
+# https://github.com/raml-org/raml-js-parser-2/issues/795
+
+version: 1.0
+baseUri: http://localhost:4567
+
+resourceTypes:
+  collection:
+    usage: This resourceType should be used for any collection of items
+    description: The collection of <<resourcePathName>>
+    delete:
+      <<response>>:
+        foo: a.Foo
+      description: Get all <<resourcePathName>>, optionally filtered
+    post:
+      description: Create a new <<resourcePathName | !singularize>>
+/customers/{id}/accounts:
+  type: { collection: {response: "hey"}}
+  uriParameters:
+    id:
+      type: integer
+  get:
+    description: Returns a collection Accounts for a Customer
+    queryParameters:
+      skip:
+        required: false
+        type: integer
+      count:
+        required: false
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            type: any[]

@@ -1,0 +1,20 @@
+#%RAML 1.0
+title: test
+
+# Inspired by https://github.com/raml-org/raml-java-parser/issues/164
+# Each key name MUST be a media type string conforming to the media
+# type specification in RFC6838.
+
+types:
+   TestType:
+      type: object
+      properties:
+        field: string
+      example:
+        field: value
+/test:
+  get:
+    responses:
+      200:
+        body:
+          hello/json: TestType

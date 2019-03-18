@@ -1,0 +1,15 @@
+#%RAML 1.0
+
+title: properties with trailing question marks
+types:
+  Person:
+    type: object
+    properties:
+      firstname: string
+      lastname:  string
+      title??:
+        type: string
+        required: true
+    example:
+      firstname: eleo
+      lastname:  ortega

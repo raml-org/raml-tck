@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+usage: |
+  Use to define some basic file-related constructs.
+types:
+  File:
+    properties:
+      name:
+      length:
+        type: integer
+traits:
+  drm:
+    headers:
+      drm-key:
+resourceTypes:
+  file:
+    get:
+      is: [ drm ]
+    put:
+      is: [ drm ]
+securitySchemes:
+  basic:
+    description: |
+      This API supports Basic Authentication.
+    type: Basic Authentication
+annotationTypes:
+  suborg:
+    type: object
+    properties:
+      prop1?: number
+      /.*/: object

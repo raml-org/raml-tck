@@ -1,0 +1,37 @@
+#%RAML 1.0
+title: API
+
+# A resource and resource type can also use, and thus inherit from,
+# one or more traits, which then apply to all methods of the resource
+# and resource type
+
+traits:
+  trait1:
+    queryParameters:
+      param1: string
+
+types:
+  User:
+    properties:
+      name: string
+      age: number
+
+resourceTypes:
+  SomeType:
+    get:
+      is: [trait989898]
+      responses:
+        200:
+          body:
+            application/json:
+              type: User
+
+  AnotherType:
+    type: SomeType
+    put:
+      body:
+        application/json:
+          type: User
+
+/resource:
+  type: AnotherType

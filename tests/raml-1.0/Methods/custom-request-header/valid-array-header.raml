@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: ZEncoder API
+
+# If a header declaration specifies an array type for the value of the
+# header, processors MUST allow multiple instances of that header in
+# the request or response.
+
+version: v2
+baseUri: https://app.zencoder.com/api/{version}
+/jobs:
+  post:
+    description: Create a job
+    headers:
+      Zencoder-Api-Key:
+        description: The API key needed to create a new job
+        type: array
+        items: string

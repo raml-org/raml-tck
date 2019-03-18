@@ -1,0 +1,15 @@
+#%RAML 1.0
+title: Illustrating allowed targets
+mediaType: application/json
+
+annotationTypes:
+  test:
+    allowedTargets: SecurityScheme
+
+(test): hi
+
+securitySchemes:
+  basic:
+    description: |
+      This API supports Basic Authentication.
+    type: Basic Authentication

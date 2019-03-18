@@ -1,0 +1,36 @@
+#%RAML 1.0
+---
+version: v2
+mediaType: [ "application/json" ]
+resourceTypes:
+  collection:
+    description: Collection of available <<resourcePathName>>
+    get:
+      description: Get a list of <<resourcePathName>>
+      queryParameters:
+        page:
+          description: "Page number"
+          example: 1
+          required: false
+          type: integer
+        per_page:
+          description: "Number of elements per page"
+          example: 25
+          required: false
+          type: integer
+      responses:
+        200:
+          body: "<<resourcePathName|!singularize>>.<<resourcePathName|!singularize|!uppercamelcase>>[]"
+    post:
+      description: Add a new <<resourcePathName|!singularize>>
+      body: "<<resourcePathName|!singularize>>.<<resourcePathName|!singularize|!uppercamelcase>>Create"
+      responses:
+        200:
+          body: "<<resourcePathName|!singularize>>.<<resourcePathName|!singularize|!uppercamelcase>>"
+/apps:
+  type: collection
+
+
+# https://github.com/raml-org/raml-js-parser-2/issues/792
+#
+# No invalid test case because issue is related to parsing content.

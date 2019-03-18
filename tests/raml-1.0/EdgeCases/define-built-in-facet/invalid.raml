@@ -1,0 +1,14 @@
+#%RAML 1.0
+title: type example
+
+# User-defined facet names on a type MUST NOT match built-in facets on that
+# type, nor facet names of any ancestor type in the inheritance chain of
+# the type.
+
+version: 1
+
+types:
+  TestType:
+    type: string
+    facets:
+      maxLength: integer

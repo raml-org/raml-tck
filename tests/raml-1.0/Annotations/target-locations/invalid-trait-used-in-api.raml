@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: Illustrating allowed targets
+mediaType: application/json
+
+annotationTypes:
+  test:
+    allowedTargets: Trait
+
+(test): hi
+
+traits:
+  chargeable:
+    headers:
+      X-Dept:
+        type: string[]
+        examples:
+          one_dept:
+            - 230-OCTO
+            - 231-OCTO

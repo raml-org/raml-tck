@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "partner-schema.json",
+    "type": "object",
+    "title": "Base for company and person",
+    "properties":
+    {
+        "name":
+        {
+            "type": "string",
+            "description": "Second name or company name"
+        },
+        "active":
+        {
+            "type": "boolean",
+            "description": "Still doing business with him/it?"
+        }
+    },
+    "required":
+    [
+        "name",
+        "active"
+    ]
+}

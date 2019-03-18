@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: API
+mediaType: application/xml
+
+# https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/#determine-default-types
+
+types:
+  Person:  # object
+    properties:
+      name:  # string
+
+/items:
+  get:
+    responses:
+      200:
+        body:
+          application/json:  # any
+      204:
+        body:  # application/xml
