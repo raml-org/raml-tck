@@ -6,9 +6,9 @@ The Test Compatibility Kit (TCK) for the RAML Parser provides a way to separate 
 
 *valid-\*.raml*: Valid RAML file parsing of which is expected to succeed.
 
-*invalid-\*.raml*: Invalid RAML file that has syntax/semantic/spec errors. Parsing of it is expected to fail (parser errors/returns error/crashes).
+*\*invalid\*.raml*: Invalid RAML file that has syntax/semantic/spec errors. Parsing of it is expected to fail (parser errors/returns error/crashes).
 
-Repository also contains a [manifest file](tests/raml-1.0/manifest.json) that lists RAML files in the order features used in them are defined in RAML 1.0 spec.
+Repository also contains a [manifest file](./manifest.json) that lists RAML files in the order features used in them are defined in RAML 1.0 spec.
 
 # Run tests
 
