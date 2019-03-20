@@ -29,10 +29,8 @@ resourceTypes:
           type: <<item>>
 types:
   Pet:
-    discriminator: kind
     properties:
       name: string
-      kind: string
       price: number
       color:
         enum:
@@ -41,6 +39,5 @@ types:
           - Colored
     example:
       name: Snoopy
-      kind: Mammal
       price: 100
       color: White
