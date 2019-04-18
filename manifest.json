@@ -473,8 +473,6 @@
         "tests/raml-1.0/ResourceTypes/include-parameter/valid.raml",
         "tests/raml-1.0/ResourceTypes/datatype-properties-11/invalid-status-code.raml",
         "tests/raml-1.0/ResourceTypes/datatype-properties-11/valid.raml",
-        "tests/raml-1.0/ResourceTypes/datatype-properties-10/invalid-content-type.raml",
-        "tests/raml-1.0/ResourceTypes/datatype-properties-10/valid.raml",
         "tests/raml-1.0/ResourceTypes/datatype-properties-09/invalid-req-property-missing.raml",
         "tests/raml-1.0/ResourceTypes/datatype-properties-09/valid.raml",
         "tests/raml-1.0/ResourceTypes/datatype-properties-08/invalid-req-property-missing.raml",

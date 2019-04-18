@@ -10,11 +10,9 @@ resourceTypes:
 /servers:
   type:
     corpResource:
-      TextAboutPost: post method # post defined which will force to define the TextAboutPost parameter
+      TextAboutPost: post method
   get:
-  post: # will require the X-Chargeback header
+  post:
 /queues:
   type: corpResource
   get:
-  # will not have a post method defined which means the TextAboutPost parameter is
-  # not required; same for the X-Chargeback header
