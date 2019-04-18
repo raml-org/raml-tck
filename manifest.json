@@ -457,8 +457,6 @@
         "tests/raml-1.0/MethodResponses/body-schema-json-02/valid.raml",
         "tests/raml-1.0/MethodResponses/body-schema-json-01/invalid-conform-schema.raml",
         "tests/raml-1.0/MethodResponses/body-schema-json-01/valid.raml",
-        "tests/raml-1.0/MethodResponses/application-json/invalid-content-type.raml",
-        "tests/raml-1.0/MethodResponses/application-json/valid.raml",
         "tests/raml-1.0/ResourceTypes/with-params/invalid-missing-param.raml",
         "tests/raml-1.0/ResourceTypes/with-params/valid.raml",
         "tests/raml-1.0/ResourceTypes/used-with-traits/invalid-not-defined-trait.raml",
