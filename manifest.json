@@ -518,8 +518,6 @@
         "tests/raml-1.0/TemplateFunctions/uppercase/valid.raml",
         "tests/raml-1.0/TemplateFunctions/uppercamelcase/invalid-used-without-pipe.raml",
         "tests/raml-1.0/TemplateFunctions/uppercamelcase/valid.raml",
-        "tests/raml-1.0/TemplateFunctions/unknown/invalid.raml",
-        "tests/raml-1.0/TemplateFunctions/unknown/valid.raml",
         "tests/raml-1.0/TemplateFunctions/singularize/invalid-used-without-pipe.raml",
         "tests/raml-1.0/TemplateFunctions/singularize/valid.raml",
         "tests/raml-1.0/TemplateFunctions/pluralize/invalid-used-without-pipe.raml",
