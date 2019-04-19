@@ -1,10 +1,12 @@
 #%RAML 1.0
 title: asd
-types:
-  amazon-apigateway-integration:
-    type: number
-annotationTypes:
-  amazon-apigateway-integration:
-    type:  amazon-apigateway-integration
 
-(amazon-apigateway-integration): 1
+types:
+  apigateway-integration-key:
+    type: number
+
+annotationTypes:
+  apigateway-integration:
+    type:  apigateway-integration-key
+
+(apigateway-integration): 1
