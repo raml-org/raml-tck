@@ -2,11 +2,7 @@
 title: Pet Shop Overlay
 extends: base.raml
 
-schemas:
-  testSchema: |
-    {
-
-    }
-
 traits:
-  foo:
+  chargeable:
+    headers:
+      dept_code: string

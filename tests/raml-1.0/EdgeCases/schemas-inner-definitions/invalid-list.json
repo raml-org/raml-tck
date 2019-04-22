@@ -22,49 +22,6 @@
   	    }
   	  },
   	  "required": ["a"]
-  	},
-	  "b": {
-      "id": "#b",
-      "type": "object",
-      "properties": {
-        "automatischeIncasso": {
-          "enum": [
-            "JA",
-            "NEE"
-          ]
-        },
-        "bankrekeningNummer": {
-          "type": "string",
-          "maxLength": 22
-        },
-        "beginDatumPremie": {
-          "type": "string"
-        },
-        "bicCodeBank": {
-          "type": "string",
-          "maxLength": 11
-        },
-        "eindDatumPremie": {
-          "type": "string"
-        },
-        "ibanNummer": {
-          "type": "string",
-          "maxLength": 34
-        },
-        "naamBank": {
-          "type": "string"
-        },
-        "premieType": {
-          "type": "string"
-        },
-        "rekeningId": {
-          "type": "string"
-        }
-      },
-  	  "required" : [
-  	    "bankrekeningNummer",
-  		  "bicCodeBank"
-  	  ]
-    }
+  	}
   }
 }

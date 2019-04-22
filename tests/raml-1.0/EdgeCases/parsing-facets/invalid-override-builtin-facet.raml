@@ -8,7 +8,8 @@ types:
     facets:
       a: string
       b: number
-      properties: object
+      properties: integer
+      description: string
     properties:
       href: string
       rel:
@@ -16,8 +17,3 @@ types:
       method:
         default: get
         required: false
-  ImageLink:
-    properties:
-      href: string
-      rel:
-        enum: [SmallImage, MediumImage, LargeImage]
