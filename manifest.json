@@ -1067,6 +1067,7 @@
         "tests/raml-1.0/EdgeCases/discriminator-union/valid.raml",
         "tests/raml-1.0/EdgeCases/discriminator-inline/invalid-discriminator-inline.raml",
         "tests/raml-1.0/EdgeCases/discriminator-inline/valid.raml",
+        "tests/raml-1.0/EdgeCases/determine-default-types/invalid-determine-array-type.raml",
         "tests/raml-1.0/EdgeCases/define-built-in-facet/valid-define-built-in-facet.raml",
         "tests/raml-1.0/EdgeCases/datetime-type/invalid-datetime-type.raml",
         "tests/raml-1.0/EdgeCases/datetime-type/valid.raml",

@@ -1,0 +1,27 @@
+#%RAML 1.0
+title: Albums API
+version: v1
+
+# https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/#determine-default-types
+
+/released-albums:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            items:
+              type: object
+              additionalProperties: true
+              properties:
+                title:
+                  type: string
+                  required: true
+                songs:
+                  items:
+                    additionalProperties: true
+                    properties:
+                      title:
+                        type: string
+                        required: true
+                  required: true
