@@ -31,6 +31,14 @@
       "tags": [
         "resource type", "include", "https"
       ]
+    },
+    {
+      "description": "APIMF-478 - empty resource type should be valid",
+      "input": "empty-resource-type",
+      "valid": true,
+      "tags": [
+        "resource type", "empty"
+      ]
     }
   ]
 }

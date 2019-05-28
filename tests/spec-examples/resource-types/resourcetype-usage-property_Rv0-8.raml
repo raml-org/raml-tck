@@ -1,0 +1,39 @@
+#%RAML 0.8
+title: ONS API
+version: v2.development
+baseUri: http://data.ons.org/{version}
+mediaType: application/json
+resourceTypes:
+  - base:
+      usage: |
+        This is base resource type used to described common request and response
+        headers and error response codes.
+      get?: &common
+        headers:
+          ONS-Client-ID:
+            description: |
+              The key provided by ONS, used to grant access to the API and its resources.
+            type: string
+            required: true
+        responses:
+          400:
+            description: |
+              Bad Request - The request was invalid, improperly formatted,
+              or cannot be otherwise served.
+      post?: *common
+/chapters:
+  type: base
+  get:
+    description: Returns a list of all chapters matching the filter criteria, if any.
+    queryParameters:
+      active:
+        description: |
+          Filters the result set by the status of active or inactive.
+        type: boolean
+        default: true
+        example: false
+    responses:
+      200:
+        description: Chapters successfully retreived.
+        body:
+          application/json:

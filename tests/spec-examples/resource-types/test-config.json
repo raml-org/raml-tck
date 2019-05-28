@@ -55,6 +55,14 @@
       "tags": [
         "resource type", "properties"
       ]
+    },
+    {
+      "description": "APIMF-476 - usage node should be valid in a endPoint node",
+      "input": "resourcetype-usage-property",
+      "valid": true,
+      "tags": [
+        "resource type", "usage", "endpoint"
+      ]
     }
   ]
 }
