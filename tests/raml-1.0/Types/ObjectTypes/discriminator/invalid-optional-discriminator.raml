@@ -1,0 +1,11 @@
+#%RAML 1.0
+title: API
+
+types:
+  Person:
+    type: object
+    discriminator: optionalProperty
+    properties:
+      name: string
+      surname: string
+      optionalProperty?: string
