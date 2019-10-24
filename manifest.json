@@ -212,7 +212,7 @@
         "tests/raml-1.0/Types/datatypes-union-01/valid.raml",
         "tests/raml-1.0/Types/datatypes-array-02/invalid-wrong-example-types.raml",
         "tests/raml-1.0/Types/datatypes-array-02/valid.raml",
-        "tests/raml-1.0/Types/datatypes-array-01/invalid.raml",uery-parameter-example-4/valid-query-parameter-example.raml,
+        "tests/raml-1.0/Types/datatypes-array-01/invalid.raml",
         "tests/raml-1.0/Types/datatypes-array-01/valid.raml",
         "tests/raml-1.0/Types/complex-used-in-annotations-01/invalid-multiple-errors.raml",
         "tests/raml-1.0/Types/complex-used-in-annotations-01/valid.raml",
