@@ -1,0 +1,24 @@
+#%RAML 0.8
+
+# In the following example, the PUT method overrides the definition made in /users/{userId}/image.
+
+title: Users API
+version: 1
+baseUri: https://{apiDomain}.someapi.com
+/users:
+  displayName: retrieve all users
+  baseUriParameters:
+    apiDomain:
+      enum: [ "api" ]
+  /{userId}/image:
+    displayName: access users pictures
+    baseUriParameters:
+      apiDomain:
+        enum: [ "static" ]
+    get:
+      description: retrieve a user's picture
+    put:
+      description: update a user's picture
+      baseUriParameters:
+        apiDomain:
+          enum: [ "content-update" ]
