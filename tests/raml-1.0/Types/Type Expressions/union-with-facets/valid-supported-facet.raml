@@ -1,0 +1,9 @@
+#%RAML 1.0
+title: Some API
+
+types:
+  Foo: number
+  Bar: integer
+  FooBar:
+    type: Foo | Bar
+    minimum: 1

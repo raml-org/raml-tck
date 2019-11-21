@@ -1,0 +1,13 @@
+#%RAML 1.0
+title: Some API
+
+types:
+  Foo: number
+  Bar: integer
+  Qux:
+    type: string
+    facets:
+      minimum: number
+  FooBarQux:
+    type: Foo | Bar | Qux
+    minimum: 1
