@@ -1,0 +1,19 @@
+#%RAML 1.0 Extension
+
+usage: Add administrative functionality
+extends: ../base.raml
+
+uses:
+  lib: lib/user.raml
+
+/users:
+  post:
+    description: Add a new user
+    body:
+      application/json:
+        type: lib.User
+    responses:
+      201:
+        body:
+          application/json:
+            type: !include schemas/user.json

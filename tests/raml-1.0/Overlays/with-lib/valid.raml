@@ -1,7 +1,0 @@
-#%RAML 1.0 Overlay
-extends: base.raml
-uses:
-  AWS: aws-lib.raml
-/products:
-  get:
-    (AWS.amazon-apigateway-auth): aws_iam
