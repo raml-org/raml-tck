@@ -1,0 +1,10 @@
+#%RAML 1.0 Overlay
+title: Secondary RAML
+extends: valid-spec.raml
+uses:
+  lib: lib.raml
+
+/elements:
+  get:
+    description: describing your method here
+    (lib.important): true

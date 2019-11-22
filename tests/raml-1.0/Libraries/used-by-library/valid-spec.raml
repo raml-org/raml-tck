@@ -1,0 +1,9 @@
+#%RAML 1.0
+title: Book Library API
+
+uses:
+  alsoLib: valid-fragment.raml
+
+/books:
+  description: The collection of library books
+  (alsoLib.bindingDefinition): hello

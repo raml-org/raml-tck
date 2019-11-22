@@ -1,0 +1,12 @@
+#%RAML 1.0 Extension
+
+usage: Add administrative functionality
+extends: valid-spec.raml
+
+uses:
+  lib: lib.raml
+
+/users:
+  post:
+    (lib.important): true
+    description: Add a new user
