@@ -1,0 +1,20 @@
+#%RAML 1.0
+title: test
+
+types:
+  TestType:
+    type: |
+      {
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "required": ["country_name", "population"],
+        "properties": {
+          "country_name": { "type": "string" },
+          "population": { "type": "number" }
+        }
+      }
+    example: |
+      {
+        "country_name" : "Somewhere",
+        "population": 11.2
+      }
