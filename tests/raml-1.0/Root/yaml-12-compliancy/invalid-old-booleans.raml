@@ -1,0 +1,12 @@
+#%RAML 1.0
+
+title: Hello
+version: v1
+
+types:
+  User:
+    type: object
+    properties:
+      active:
+        type: boolean
+        enum: [y, n, yes, no]
