@@ -1,7 +1,7 @@
 {
     "description": "RAML files listed in order corresponding RAML feature appears in RAML 1.0 spec",
     "filePaths": [
-        "tests/raml-1.0/Root/yaml-12-compliancy/invalid-old-booleans.raml",
+        "tests/raml-1.0/Root/yaml-12-compliancy/invalid-yaml11-booleans.raml",
         "tests/raml-1.0/Root/yaml-12-compliancy/valid.raml",
         "tests/raml-1.0/Root/version/invalid-version-structure.raml",
         "tests/raml-1.0/Root/version/valid.raml",
