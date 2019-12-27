@@ -525,6 +525,8 @@
         "tests/raml-1.0/Traits/parameter-as-key/valid.raml",
         "tests/raml-1.0/Traits/merge-array-values/invalid-types-conflict.raml",
         "tests/raml-1.0/Traits/merge-array-values/valid.raml",
+        "tests/raml-1.0/Traits/is-node-format/invalid-is-single-value.raml",
+        "tests/raml-1.0/Traits/is-node-format/valid-is-array.raml",
         "tests/raml-1.0/Traits/datatype-properties-04/invalid-wrong-value-type.raml",
         "tests/raml-1.0/Traits/datatype-properties-04/valid.raml",
         "tests/raml-1.0/Traits/datatype-properties-03/invalid-wrong-value-type.raml",
