@@ -432,7 +432,7 @@ InvalidRAMLError:
     return parse_raml(loader, config)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 59, in parse_raml
     attr.validate(root)  # need to validate again for root node
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1381, in validate
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1447, in validate
     v(inst, a, getattr(inst, a.name))
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;_decorators.py&quot;, line 7, in func_wrapper
     func(inst, attr, value)
@@ -481,7 +481,7 @@ TypeError: expected string or buffer
     return parse_raml(loader, config)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 59, in parse_raml
     attr.validate(root)  # need to validate again for root node
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1381, in validate
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1447, in validate
     v(inst, a, getattr(inst, a.name))
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;_decorators.py&quot;, line 7, in func_wrapper
     func(inst, attr, value)
@@ -2937,7 +2937,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -2967,7 +2967,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -3010,7 +3010,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -4341,7 +4341,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -6743,7 +6743,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -6815,7 +6815,7 @@ AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -6858,7 +6858,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -6901,7 +6901,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -6944,7 +6944,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -6987,7 +6987,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -7030,7 +7030,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -7073,7 +7073,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -7116,7 +7116,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -7217,7 +7217,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -7410,7 +7410,7 @@ InvalidRAMLError:
     schemas&#x3D;schemas(),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 122, in schemas
     value &#x3D; load_schema(list(itervalues(schema))[0])
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 602, in itervalues
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 604, in itervalues
     return d.itervalues(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;itervalues&#39;
 </pre></td>
@@ -7495,7 +7495,7 @@ InvalidRAMLError:
     schemas&#x3D;schemas(),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 122, in schemas
     value &#x3D; load_schema(list(itervalues(schema))[0])
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 602, in itervalues
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 604, in itervalues
     return d.itervalues(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;itervalues&#39;
 </pre></td>
@@ -8012,7 +8012,7 @@ InvalidRAMLError:
     schemas&#x3D;schemas(),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 122, in schemas
     value &#x3D; load_schema(list(itervalues(schema))[0])
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 602, in itervalues
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 604, in itervalues
     return d.itervalues(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;itervalues&#39;
 </pre></td>
@@ -8044,7 +8044,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;itervalues&#39;
     schemas&#x3D;schemas(),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 122, in schemas
     value &#x3D; load_schema(list(itervalues(schema))[0])
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 602, in itervalues
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 604, in itervalues
     return d.itervalues(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;itervalues&#39;
 </pre></td>
@@ -8333,11 +8333,11 @@ InvalidRAMLError:
     body&#x3D;resp_body(_body),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 862, in resp_body
     errors&#x3D;root.errors
-  File &quot;&lt;attrs generated init e9bbb496c68dc27295f9ef870af693c904ae5de7&gt;&quot;, line 11, in __init__
+  File &quot;&lt;attrs generated init ramlfications.parameters.Body&gt;&quot;, line 11, in __init__
     __attr_validator_raw(self, __attr_raw, self.raw)
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 32, in __call__
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 45, in __call__
     value,
-TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;TestType&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, cmp&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;TestType&#39;)
+TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;TestType&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, eq&#x3D;True, order&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;TestType&#39;)
 </pre></td>
               </tr>
             <tr
@@ -8380,7 +8380,7 @@ TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;Te
     schemas&#x3D;schemas(),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 122, in schemas
     value &#x3D; load_schema(list(itervalues(schema))[0])
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 602, in itervalues
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 604, in itervalues
     return d.itervalues(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;itervalues&#39;
 </pre></td>
@@ -8545,7 +8545,7 @@ InvalidRAMLError:
     schemas&#x3D;schemas(),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 122, in schemas
     value &#x3D; load_schema(list(itervalues(schema))[0])
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 602, in itervalues
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 604, in itervalues
     return d.itervalues(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;itervalues&#39;
 </pre></td>
@@ -8634,11 +8634,11 @@ InvalidRAMLError:
     body&#x3D;resp_body(_body),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 862, in resp_body
     errors&#x3D;root.errors
-  File &quot;&lt;attrs generated init e9bbb496c68dc27295f9ef870af693c904ae5de7&gt;&quot;, line 11, in __init__
+  File &quot;&lt;attrs generated init ramlfications.parameters.Body&gt;&quot;, line 11, in __init__
     __attr_validator_raw(self, __attr_raw, self.raw)
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 32, in __call__
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 45, in __call__
     value,
-TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;TestType&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, cmp&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;TestType&#39;)
+TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;TestType&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, eq&#x3D;True, order&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;TestType&#39;)
 </pre></td>
               </tr>
             <tr
@@ -9054,7 +9054,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -9246,7 +9246,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9289,7 +9289,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -9332,7 +9332,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9362,7 +9362,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9392,7 +9392,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9435,7 +9435,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9491,7 +9491,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9521,7 +9521,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9564,7 +9564,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9607,7 +9607,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9650,7 +9650,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9693,7 +9693,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9736,7 +9736,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9779,7 +9779,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9822,7 +9822,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9865,7 +9865,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9908,7 +9908,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9951,7 +9951,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -9994,7 +9994,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -10037,7 +10037,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10080,7 +10080,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10110,7 +10110,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10153,7 +10153,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10196,7 +10196,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10239,7 +10239,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10282,7 +10282,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10325,7 +10325,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10368,7 +10368,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10411,7 +10411,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10454,7 +10454,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10497,7 +10497,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10540,7 +10540,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10583,7 +10583,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10626,7 +10626,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10669,7 +10669,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10712,7 +10712,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10755,7 +10755,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10798,7 +10798,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10841,7 +10841,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10884,7 +10884,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10927,7 +10927,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -10970,7 +10970,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11013,7 +11013,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11056,7 +11056,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11099,7 +11099,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11155,7 +11155,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11198,7 +11198,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11241,7 +11241,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11284,7 +11284,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11661,7 +11661,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -11772,7 +11772,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11802,7 +11802,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -11832,7 +11832,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -12030,7 +12030,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -12154,7 +12154,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -13037,7 +13037,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -13109,7 +13109,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -13152,7 +13152,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -13292,7 +13292,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -13335,7 +13335,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -13378,7 +13378,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -13463,7 +13463,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -13742,7 +13742,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14128,7 +14128,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14158,7 +14158,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14271,7 +14271,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14343,7 +14343,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -14373,7 +14373,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14429,7 +14429,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14488,7 +14488,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -14661,7 +14661,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14786,7 +14786,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -14816,7 +14816,7 @@ AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -15022,7 +15022,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -15052,7 +15052,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -15556,7 +15556,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -15776,7 +15776,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -15806,7 +15806,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -15849,7 +15849,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -16168,7 +16168,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -16805,7 +16805,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;items&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -16835,7 +16835,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -16865,7 +16865,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -16895,7 +16895,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -17145,7 +17145,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -17201,7 +17201,7 @@ InvalidRAMLError:
     return parse_raml(loader, config)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 59, in parse_raml
     attr.validate(root)  # need to validate again for root node
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1381, in validate
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1447, in validate
     v(inst, a, getattr(inst, a.name))
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;_decorators.py&quot;, line 7, in func_wrapper
     func(inst, attr, value)
@@ -17237,7 +17237,7 @@ TypeError: expected string or buffer
     return parse_raml(loader, config)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 59, in parse_raml
     attr.validate(root)  # need to validate again for root node
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1381, in validate
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;_make.py&quot;, line 1447, in validate
     v(inst, a, getattr(inst, a.name))
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;_decorators.py&quot;, line 7, in func_wrapper
     func(inst, attr, value)
@@ -17303,7 +17303,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -17730,7 +17730,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -18323,7 +18323,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -18366,7 +18366,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18396,7 +18396,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18426,7 +18426,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18485,7 +18485,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18515,7 +18515,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18545,7 +18545,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18575,7 +18575,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18605,7 +18605,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18635,7 +18635,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18665,7 +18665,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18695,7 +18695,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18725,7 +18725,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18841,7 +18841,7 @@ InvalidRAMLError:
     resources &#x3D; create_resources(child.raw, resources, root, child)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -18871,7 +18871,7 @@ AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -19082,7 +19082,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -19139,7 +19139,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -19310,7 +19310,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 661, in create_resources
     for k, v in list(iteritems(node)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -19340,7 +19340,7 @@ AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 661, in create_resources
     for k, v in list(iteritems(node)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -19370,7 +19370,7 @@ AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 661, in create_resources
     for k, v in list(iteritems(node)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -19400,7 +19400,7 @@ AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 661, in create_resources
     for k, v in list(iteritems(node)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -19633,7 +19633,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -19663,7 +19663,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -19722,7 +19722,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -19912,7 +19912,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 664, in create_resources
     methods &#x3D; [m for m in avail if m in list(iterkeys(v))]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -19955,7 +19955,7 @@ AttributeError: &#39;NoneType&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -20080,7 +20080,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -20165,7 +20165,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -20248,7 +20248,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -20865,7 +20865,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -20936,7 +20936,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -21007,7 +21007,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -21187,7 +21187,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -22063,7 +22063,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -22134,7 +22134,7 @@ TypeError: &#39;NoneType&#39; object is not iterable
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -22177,7 +22177,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -22289,7 +22289,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -22622,7 +22622,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -22694,7 +22694,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -22819,7 +22819,7 @@ InvalidRAMLError:
     parent&#x3D;None)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 661, in create_resources
     for k, v in list(iteritems(node)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
@@ -23164,7 +23164,7 @@ InvalidRAMLError:
     root.traits &#x3D; create_traits(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 372, in create_traits
     name &#x3D; list(iterkeys(trait))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -23248,7 +23248,7 @@ InvalidRAMLError:
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -23338,13 +23338,26 @@ InvalidRAMLError:
     body&#x3D;resp_body(_body),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 862, in resp_body
     errors&#x3D;root.errors
-  File &quot;&lt;attrs generated init e9bbb496c68dc27295f9ef870af693c904ae5de7&gt;&quot;, line 11, in __init__
+  File &quot;&lt;attrs generated init ramlfications.parameters.Body&gt;&quot;, line 11, in __init__
     __attr_validator_raw(self, __attr_raw, self.raw)
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 32, in __call__
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 45, in __call__
     value,
-TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;User&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, cmp&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;User&#39;)
+TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;User&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, eq&#x3D;True, order&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;User&#39;)
 </pre></td>
               </tr>
+            <tr
+              class="success main-row"
+              
+              
+              >
+              <td>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;determine-default-types&#x2F;invalid-determine-array-type.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;determine-default-types&#x2F;invalid-determine-array-type.raml</a>
+              </td>
+              <td>
+                Yes
+                
+              </td>
+            </tr>
             <tr
               class="danger main-row"
               onclick="toggleErrorLog(this)" 
@@ -23586,11 +23599,11 @@ InvalidRAMLError:
     body&#x3D;resp_body(_body),
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 862, in resp_body
     errors&#x3D;root.errors
-  File &quot;&lt;attrs generated init e9bbb496c68dc27295f9ef870af693c904ae5de7&gt;&quot;, line 11, in __init__
+  File &quot;&lt;attrs generated init ramlfications.parameters.Body&gt;&quot;, line 11, in __init__
     __attr_validator_raw(self, __attr_raw, self.raw)
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 32, in __call__
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;attr&#x2F;validators.py&quot;, line 45, in __call__
     value,
-TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;TestType&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, cmp&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;TestType&#39;)
+TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;TestType&#39; that is a &lt;type &#39;str&#39;&gt;).&quot;, Attribute(name&#x3D;&#39;raw&#39;, default&#x3D;NOTHING, validator&#x3D;&lt;instance_of validator for type &lt;type &#39;dict&#39;&gt;&gt;, repr&#x3D;False, eq&#x3D;True, order&#x3D;True, hash&#x3D;None, init&#x3D;True, metadata&#x3D;mappingproxy({}), type&#x3D;None, converter&#x3D;None, kw_only&#x3D;False), &lt;type &#39;dict&#39;&gt;, &#39;TestType&#39;)
 </pre></td>
               </tr>
             <tr
@@ -23631,7 +23644,7 @@ TypeError: (&quot;&#39;raw&#39; must be &lt;type &#39;dict&#39;&gt; (got &#39;Te
     root.security_schemes &#x3D; create_sec_schemes(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 282, in create_sec_schemes
     name &#x3D; list(iterkeys(s))[0]
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 599, in iterkeys
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 601, in iterkeys
     return d.iterkeys(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iterkeys&#39;
 </pre></td>
@@ -23716,7 +23729,7 @@ InvalidRAMLError:
     root.resource_types &#x3D; create_resource_types(root.raml_obj, root)
   File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;ramlfications&#x2F;parser.py&quot;, line 587, in create_resource_types
     for k, v in list(iteritems(res)):
-  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 605, in iteritems
+  File &quot;&#x2F;home&#x2F;post&#x2F;projects&#x2F;raml-tck-runner&#x2F;py&#x2F;venv&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages&#x2F;six.py&quot;, line 607, in iteritems
     return d.iteritems(**kw)
 AttributeError: &#39;str&#39; object has no attribute &#39;iteritems&#39;
 </pre></td>
