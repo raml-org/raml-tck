@@ -1,0 +1,9 @@
+#%RAML 1.0
+title: Book Library API
+
+traits:
+  callbackable: !include invalid-fragment-param-in-uses.raml
+
+/testURI:
+  post:
+    is: [ { callbackable: { libName: lib } } ]
