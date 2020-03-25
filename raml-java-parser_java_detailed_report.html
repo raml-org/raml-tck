@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Detailed report: raml-1-parser(js)</title>
+  <title>Detailed report: raml-java-parser (java, 1.0.48)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./bootstrap.min.css">
@@ -43,7 +43,7 @@
 </head>
   <body>
     <div class="container-fluid">
-      <h3><a href="index.html">Overview</a> > Detailed report: raml-1-parser(js)</h3>
+      <h3><a href="index.html">Overview</a> > Detailed report: raml-java-parser (java, 1.0.48)</h3>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -206,31 +206,37 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Root&#x2F;protocols&#x2F;invalid-empty-array.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Root&#x2F;protocols&#x2F;invalid-empty-array.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Root&#x2F;protocols&#x2F;invalid-not-array.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Root&#x2F;protocols&#x2F;invalid-not-array.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -245,21 +251,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Root&#x2F;protocols&#x2F;valid-case-insensitive.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Root&#x2F;protocols&#x2F;valid-case-insensitive.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Invalid value: &#39;hTTpS&#39;. Allowed values are: &#39;HTTP&#39;, &#39;HTTPS&#39;</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -816,18 +819,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;xsdscheme&#x2F;req-body-type-02&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;xsdscheme&#x2F;req-body-type-02&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Error validating XML. Error: Provided object is not of type City</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -894,18 +900,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;xsdscheme&#x2F;inherit-xsd-type-02&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;xsdscheme&#x2F;inherit-xsd-type-02&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Error validating XML. Error: Provided object is not of type City</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -933,21 +942,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;xml-serialization&#x2F;invalid-wrapped-value.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;xml-serialization&#x2F;invalid-wrapped-value.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -1969,7 +1975,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Missing required property &#39;title&#39;</pre></td>
+                <td colspan="2"><pre>Missing required field &quot;title&quot;</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -2557,18 +2563,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;inherit-boolean&#x2F;invalid-default-value.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;inherit-boolean&#x2F;invalid-default-value.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -2807,18 +2816,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;datatypes-array-01&#x2F;invalid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;datatypes-array-01&#x2F;invalid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -2846,21 +2858,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;complex-used-in-annotations-01&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;complex-used-in-annotations-01&#x2F;valid.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: &#39;value&#39; has cyclic dependency</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -3395,21 +3404,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;PropertyOverride&#x2F;override-facet&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;PropertyOverride&#x2F;override-facet&#x2F;valid.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Missing required facets: &#39;test&#39;</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -3606,37 +3612,31 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;ObjectTypes&#x2F;pattern-property-two&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;ObjectTypes&#x2F;pattern-property-two&#x2F;valid.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Expected type &#39;number&#39; but got &#39;object&#39;</pre></td>
-              </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;ObjectTypes&#x2F;pattern-property-or&#x2F;invalid-no-additionalProperties.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;ObjectTypes&#x2F;pattern-property-or&#x2F;invalid-no-additionalProperties.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -3729,18 +3729,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;ObjectTypes&#x2F;optional-with-default&#x2F;invalid-wrong-default-type.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;ObjectTypes&#x2F;optional-with-default&#x2F;invalid-wrong-default-type.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4041,7 +4044,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Facet &#39;format&#39; can not be overriden</pre></td>
+                <td colspan="2"><pre>Custom facet &#39;format&#39; cannot be defined as is already defined by this type.</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -4070,18 +4073,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Types&#x2F;Facets&#x2F;naming-constraints&#x2F;invalid-missing-required-facet.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Types&#x2F;Facets&#x2F;naming-constraints&#x2F;invalid-missing-required-facet.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4427,18 +4433,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;uri-parameters-01&#x2F;invalid-param-not-used.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;uri-parameters-01&#x2F;invalid-param-not-used.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4466,18 +4475,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-08&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-08&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4492,18 +4504,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-07&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-07&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4518,18 +4533,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-06&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-06&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4544,18 +4562,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-05&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-05&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4570,18 +4591,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-04&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-04&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4596,18 +4620,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-03&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-03&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4622,18 +4649,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-02&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-02&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4648,18 +4678,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-01&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;restype-datatype-property-01&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -4726,18 +4759,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Resources&#x2F;request-datatype-property&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Resources&#x2F;request-datatype-property&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -5155,21 +5191,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Methods&#x2F;protocols-string&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Methods&#x2F;protocols-string&#x2F;valid.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: &#39;protocols&#39; value should be a non empty array</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -5931,21 +5964,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;MethodResponses&#x2F;example-json&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;MethodResponses&#x2F;example-json&#x2F;valid.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unknown property: &#39;r&#39;</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -6116,18 +6146,25 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;parameter-mediatype&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;parameter-mediatype&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid element {
+&lt;&lt;mediaType&gt;&gt;: {
+type: file
+}
+} for body.</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6246,18 +6283,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-09&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-09&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6272,18 +6312,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-08&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-08&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6298,18 +6341,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-07&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-07&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6324,18 +6370,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-06&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-06&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6350,18 +6399,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-05&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-05&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6376,18 +6428,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-04&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-04&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6402,18 +6457,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-03&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-03&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6428,18 +6486,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-02&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-02&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6454,18 +6515,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-01&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;datatype-properties-01&#x2F;valid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;&lt;&lt;resourceTypeParam&gt;&gt;&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -6480,21 +6544,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;chaining-functions&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;ResourceTypes&#x2F;chaining-functions&#x2F;valid.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Inheriting from unknown type</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -7003,18 +7064,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;SecuritySchemes&#x2F;scopes&#x2F;invalid-scope.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;SecuritySchemes&#x2F;scopes&#x2F;invalid-scope.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -7474,7 +7538,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Annotation &#39;test&#39; can not be placed at this location, allowed targets are: &#39;AnnotationType&#39;</pre></td>
+                <td colspan="2"><pre>Annotation not allowed at target: TypeDeclaration. Allowed targets are: [AnnotationType]</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -7542,21 +7606,24 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Annotation &#39;test&#39; can not be placed at this location, allowed targets are: &#39;RequestBody&#39;</pre></td>
+                <td colspan="2"><pre>Annotation not allowed at target: TypeDeclaration. Allowed targets are: [RequestBody]</pre></td>
               </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Annotations&#x2F;target-locations&#x2F;valid-resource-type.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Annotations&#x2F;target-locations&#x2F;valid-resource-type.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Unexpected key &#39;(test)&#39;. Options are : &quot;description&quot; or &quot;displayName&quot; or &quot;is&quot; or &quot;securedBy&quot; or &quot;type&quot; or &quot;uriParameters&quot; or &quot;usage&quot; or &#x2F;&lt;&lt;(.+?)&gt;&gt;&#x2F; or Any of :Any of :&quot;get&quot;,&quot;patch&quot;,&quot;put&quot;,&quot;post&quot;,&quot;delete&quot;,&quot;options&quot;,&quot;head&quot;,Any of :&quot;get?&quot;,&quot;patch?&quot;,&quot;put?&quot;,&quot;post?&quot;,&quot;delete?&quot;,&quot;options?&quot;,&quot;head?&quot;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -7584,7 +7651,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Annotation &#39;test&#39; can not be placed at this location, allowed targets are: &#39;ResponseBody&#39;</pre></td>
+                <td colspan="2"><pre>Annotation not allowed at target: TypeDeclaration. Allowed targets are: [ResponseBody]</pre></td>
               </tr>
             <tr
               class="danger main-row"
@@ -7600,7 +7667,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Annotation &#39;test&#39; can not be placed at this location, allowed targets are: &#39;Method&#39;</pre></td>
+                <td colspan="2"><pre>Annotation not allowed at target: Response. Allowed targets are: [Method]</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -7655,21 +7722,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Annotations&#x2F;scalar-values-annotated&#x2F;invalid-missing-value.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Annotations&#x2F;scalar-values-annotated&#x2F;invalid-missing-value.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -8360,18 +8424,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Annotations&#x2F;complex-08&#x2F;invalid-undefined-property.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Annotations&#x2F;complex-08&#x2F;invalid-undefined-property.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -8886,21 +8953,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Fragments&#x2F;extend-with-new-method&#x2F;invalid-inexisting-base.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Fragments&#x2F;extend-with-new-method&#x2F;invalid-inexisting-base.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -9071,21 +9135,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Libraries&#x2F;uses-02&#x2F;invalid-uses-non-lib.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Libraries&#x2F;uses-02&#x2F;invalid-uses-non-lib.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -9555,21 +9616,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Overlays&#x2F;override-displayname&#x2F;base.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Overlays&#x2F;override-displayname&#x2F;base.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: &#39;protocols&#39; value should be a non empty array</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -9792,18 +9850,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Overlays&#x2F;ext-override-deep-param&#x2F;invalid-overide-body-content-type.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Overlays&#x2F;ext-override-deep-param&#x2F;invalid-overide-body-content-type.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -9987,7 +10048,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized security scheme: &#39;x-ttt&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;x-ttt&#39;</pre></td>
               </tr>
             <tr
               class="danger main-row"
@@ -10003,7 +10064,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized security scheme: &#39;x-ttt&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;x-ttt&#39;</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -10032,7 +10093,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized security scheme: &#39;x-ttt&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;x-ttt&#39;</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -10165,21 +10226,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;Overlays&#x2F;define-new-annotations&#x2F;invalid-extends-inexisting-file.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;Overlays&#x2F;define-new-annotations&#x2F;invalid-extends-inexisting-file.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -10220,7 +10278,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Null or undefined value is not allowed</pre></td>
+                <td colspan="2"><pre>Error validating JSON. Error: - Invalid type Null, expected Object for data</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -10340,7 +10398,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized trait: &#39;limitable&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;limitable&#39;</pre></td>
               </tr>
             <tr
               class="danger main-row"
@@ -10356,7 +10414,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized resource type: &#39;base&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;base&#39;</pre></td>
               </tr>
             <tr
               class="danger main-row"
@@ -10372,7 +10430,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized resource type: &#39;base&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;base&#39;</pre></td>
               </tr>
             <tr
               class="danger main-row"
@@ -10388,7 +10446,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unknown type as an option of union type</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;OkStatus&#39;</pre></td>
               </tr>
             <tr
               class="danger main-row"
@@ -10404,7 +10462,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized security scheme: &#39;oauth_2_0&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;oauth_2_0&#39;</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -10706,21 +10764,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;default-media-types-multiple.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;default-media-types-multiple.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Can not parse JSON example: Cannot tokenize symbol &#39;b&#39;</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -10930,21 +10985,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;external-types.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;external-types.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Draft 3 schema must have boolean as &#39;required&#39; property value</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -11258,18 +11310,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;resolve-includes.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;resolve-includes.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid reference &#39;paged&#39;</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -11336,21 +11391,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;responses.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;responses.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Draft 3 schema must have boolean as &#39;required&#39; property value</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -11742,57 +11794,69 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;gist.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;gist.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Empty document.</pre></td>
+              </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;gists.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;gists.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Empty document.</pre></td>
+              </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;user.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;user.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Empty document.</pre></td>
+              </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;users.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;spec-examples&#x2F;APIs&#x2F;types&#x2F;users.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Empty document.</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -11898,7 +11962,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Unrecognized trait: &#39;paged&#39;.</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;paged&#39;</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -12121,18 +12185,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;string-in-angle-brackets&#x2F;invalid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;string-in-angle-brackets&#x2F;invalid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -12186,18 +12253,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;schemas-inner-definitions&#x2F;invalid-references-invalid-json-schema.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;schemas-inner-definitions&#x2F;invalid-references-invalid-json-schema.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -12225,21 +12295,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;restrict-number-value&#x2F;invalid-restrict-number-value.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;restrict-number-value&#x2F;invalid-restrict-number-value.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -12657,7 +12724,7 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Referring to unknown type &#39;app.App&#39; as an array component type</pre></td>
+                <td colspan="2"><pre>Invalid reference &#39;App&#39;</pre></td>
               </tr>
             <tr
               class="success main-row"
@@ -12751,21 +12818,18 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;override-parent-facet&#x2F;valid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;override-parent-facet&#x2F;valid.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Missing required facets: &#39;test&#39;</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -12871,37 +12935,31 @@
               </td>
             </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;numeric-formats&#x2F;valid-integer-double.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;numeric-formats&#x2F;valid-integer-double.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Following format values are allowed: &#39;int32&#39;, &#39;int64&#39;, &#39;int&#39;, &#39;long&#39;, &#39;int16&#39;, &#39;int8&#39;</pre></td>
-              </tr>
             <tr
-              class="danger main-row"
-              onclick="toggleErrorLog(this)" 
-              title="Click to show/hide error log"
+              class="success main-row"
+              
+              
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;numeric-formats&#x2F;valid-integer-float.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;numeric-formats&#x2F;valid-integer-float.raml</a>
               </td>
               <td>
+                Yes
                 
-                No
               </td>
             </tr>
-              <tr class="danger parser-error">
-                <td colspan="2"><pre>Error: Following format values are allowed: &#39;int32&#39;, &#39;int64&#39;, &#39;int&#39;, &#39;long&#39;, &#39;int16&#39;, &#39;int8&#39;</pre></td>
-              </tr>
             <tr
               class="success main-row"
               
@@ -13176,18 +13234,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;nested-json-schema&#x2F;invalid-refer-inexisting-nested-schema.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;nested-json-schema&#x2F;invalid-refer-inexisting-nested-schema.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -13452,18 +13513,25 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;mediaType-param&#x2F;valid-mediaType-param.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;mediaType-param&#x2F;valid-mediaType-param.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Invalid element {
+&lt;&lt;mediaType&gt;&gt;: {
+type: file
+}
+} for body.</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -13517,18 +13585,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;invalid-usage-node&#x2F;invalid.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;invalid-usage-node&#x2F;invalid.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -13712,18 +13783,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-no-whitespace&#x2F;invalid-include-no-whitespace.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-no-whitespace&#x2F;invalid-include-no-whitespace.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -13751,12 +13825,25 @@
               </td>
             </tr>
             <tr
+              class="success main-row"
+              
+              
+              >
+              <td>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;invalid-user.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;invalid-user.raml</a>
+              </td>
+              <td>
+                Yes
+                
+              </td>
+            </tr>
+            <tr
               class="danger main-row"
               onclick="toggleErrorLog(this)" 
               title="Click to show/hide error log"
               >
               <td>
-                <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;invalid-user.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;invalid-user.raml</a>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;user.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;user.raml</a>
               </td>
               <td>
                 
@@ -13764,21 +13851,8 @@
               </td>
             </tr>
               <tr class="danger parser-error">
-                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+                <td colspan="2"><pre>Empty document.</pre></td>
               </tr>
-            <tr
-              class="success main-row"
-              
-              
-              >
-              <td>
-                <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;user.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;include-empty-file&#x2F;user.raml</a>
-              </td>
-              <td>
-                Yes
-                
-              </td>
-            </tr>
             <tr
               class="success main-row"
               
@@ -13835,18 +13909,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;enum-strings&#x2F;invalid-wrong-enum-item-type.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;enum-strings&#x2F;invalid-wrong-enum-item-type.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -13926,31 +14003,37 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;enum-dates&#x2F;valid-enum-dates.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;enum-dates&#x2F;valid-enum-dates.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Unexpected key &#39;enum&#39;. Options are : &quot;allowedTargets&quot; or &quot;default&quot; or &quot;description&quot; or &quot;displayName&quot; or &quot;example&quot; or &quot;examples&quot; or &quot;facets&quot; or &quot;required&quot; or &quot;usage&quot; or &quot;xml&quot; or &#x2F;\((.+)\)&#x2F; or Any of :&quot;type&quot;,&quot;schema&quot;</pre></td>
+              </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;enum-booleans&#x2F;invalid-wrong-enum-item-type.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;enum-booleans&#x2F;invalid-wrong-enum-item-type.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
@@ -14095,18 +14178,21 @@
               </td>
             </tr>
             <tr
-              class="success main-row"
-              
-              
+              class="danger main-row"
+              onclick="toggleErrorLog(this)" 
+              title="Click to show/hide error log"
               >
               <td>
                 <a href="https:&#x2F;&#x2F;github.com&#x2F;raml-org&#x2F;raml-tck&#x2F;tree&#x2F;develop&#x2F;tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;determine-default-types&#x2F;invalid-determine-array-type.raml" title="View file on Github" target="blank">tests&#x2F;raml-1.0&#x2F;EdgeCases&#x2F;determine-default-types&#x2F;invalid-determine-array-type.raml</a>
               </td>
               <td>
-                Yes
                 
+                No
               </td>
             </tr>
+              <tr class="danger parser-error">
+                <td colspan="2"><pre>Parsing expected to fail but succeeded</pre></td>
+              </tr>
             <tr
               class="success main-row"
               
