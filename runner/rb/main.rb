@@ -35,8 +35,7 @@ def main
 
   report = {
     'parser' => parsers_meta[options.parser],
-    'results' => [],
-    'branch' => options.branch
+    'results' => []
    }
 
   error = nil

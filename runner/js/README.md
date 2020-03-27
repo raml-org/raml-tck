@@ -13,15 +13,15 @@ NOTE: If file name contains "invalid" parsing of it is expected to fail.
 ## Install
 
 ```sh
-$ git clone git@github.com:raml-org/raml-tck-runner.git
-$ cd raml-tck-runner/js
+$ git clone git@github.com:raml-org/raml-tck.git
+$ cd raml-tck-runner/runner/js
 $ npm install .
 ```
 
 ## Run
 
 ```sh
-$ node src/index.js --parser PARSER_NAME --outdir ./reports/json --branch develop
+$ node src/index.js --parser PARSER_NAME --outdir ./reports/json
 ```
 
 ## Options
@@ -33,10 +33,5 @@ $ node src/index.js --parser raml-1-parser/amf-client-js/webapi-parser
 
 Output JSON report directory (defaults to `./`):
 ```sh
-$ node src/index.js --parser raml-1-parser --outdir ./reports/json --branch develop
-```
-
-raml-tck branch to load RAML files from:
-```sh
-$ node src/index.js --parser raml-1-parser --branch develop
+$ node src/index.js --parser raml-1-parser --outdir ./reports/json
 ```

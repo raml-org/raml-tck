@@ -26,9 +26,6 @@ public class RamlTckRunner implements Runnable {
   @Option(names = "--outdir", description = "output JSON report directory")
   String outdir = "./";
 
-  @Option(names = "--branch", description = "raml-tck branch to load RAML files from")
-  String branch;
-
   public IParser pickParser() {
     IParser parser;
     switch (parserName) {
@@ -86,7 +83,6 @@ public class RamlTckRunner implements Runnable {
 
     JSONObject report = new JSONObject();
     report.put("parser", parserMeta);
-    report.put("branch", branch);
     JSONArray results = new JSONArray();
 
     Boolean success;

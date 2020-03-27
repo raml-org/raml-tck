@@ -13,8 +13,8 @@ NOTE: If file name contains "invalid" parsing of it is expected to fail.
 ## Install
 
 ```sh
-$ git clone git@github.com:raml-org/raml-tck-runner.git
-$ cd raml-tck-runner/rb
+$ git clone git@github.com:raml-org/raml-tck.git
+$ cd raml-tck-runner/runner/rb
 $ bundle install
 ```
 
@@ -33,15 +33,10 @@ $ ruby main.rb -h
 
 Parser:
 ```sh
-$ ruby main.rb --parser brujula/raml-rb --branch develop
+$ ruby main.rb --parser brujula/raml-rb
 ```
 
 Output JSON report directory (defaults to `./`):
 ```sh
-$ ruby main.rb --parser brujula --outdir ./reports/json --branch develop
-```
-
-raml-tck branch to load RAML files from:
-```sh
-$ ruby main.rb --parser brujula --branch develop
+$ ruby main.rb --parser brujula --outdir ./reports/json
 ```

@@ -13,30 +13,25 @@ NOTE: If file name contains "invalid" parsing of it is expected to fail.
 ## Install
 
 ```sh
-$ git clone git@github.com:raml-org/raml-tck-runner.git
-$ cd raml-tck-runner/java
+$ git clone git@github.com:raml-org/raml-tck.git
+$ cd raml-tck-runner/runner/java
 $ ./gradlew build
 ```
 
 ## Run
 
 ```sh
-$ ./gradlew run --args='--parser PARSER_NAME --outdir ./reports/json --branch develop'
+$ ./gradlew run --args='--parser PARSER_NAME --outdir ./reports/json'
 ```
 
 ## Options
 
 Parser:
 ```sh
-$ ./gradlew run --args='--parser webapi-parser/raml-java-parser --branch develop'
+$ ./gradlew run --args='--parser webapi-parser/raml-java-parser'
 ```
 
 Output JSON report directory (defaults to `./`):
 ```sh
-$ ./gradlew run --args='--parser webapi-parser --outdir ../reports/json --branch develop'
-```
-
-raml-tck branch to load RAML files from:
-```sh
-$ ./gradlew run --args='--branch develop --parser webapi-parser'
+$ ./gradlew run --args='--parser webapi-parser --outdir ../reports/json'
 ```

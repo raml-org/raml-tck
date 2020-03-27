@@ -13,9 +13,9 @@ NOTE: If file name contains "invalid" parsing of it is expected to fail.
 ## Install
 
 ```sh
-$ git clone git@github.com:raml-org/raml-tck-runner.git
+$ git clone git@github.com:raml-org/raml-tck.git
 $ mkdir -p $GOPATH/src/github.com/raml-org/raml-tck-runner-go
-$ cp raml-tck-runner/go/* $GOPATH/src/github.com/raml-org/raml-tck-runner-go
+$ cp raml-tck/runner/go/* $GOPATH/src/github.com/raml-org/raml-tck-runner-go
 $ cd $GOPATH/src/github.com/raml-org/raml-tck-runner-go
 $ go get
 $ go install
@@ -37,15 +37,10 @@ $ raml-tck-runner-go -h
 
 Parser (defaults to `jumpscale`):
 ```sh
-$ raml-tck-runner-go -parser jumpscale/go-raml -branch develop
+$ raml-tck-runner-go -parser jumpscale/go-raml
 ```
 
 Output JSON report directory (defaults to `./`):
 ```sh
-$ raml-tck-runner-go -parser jumpscale -outdir ./reports/json -branch develop
-```
-
-raml-tck branch to load RAML files from:
-```sh
-$ raml-tck-runner-go -parser jumpscale -branch develop
+$ raml-tck-runner-go -parser jumpscale -outdir ./reports/json
 ```

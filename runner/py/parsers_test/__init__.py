@@ -45,7 +45,6 @@ def main():
     report = {
         'parser': parser_meta,
         'results': [],
-        'branch': args.branch,
     }
 
     for fpath in file_list:

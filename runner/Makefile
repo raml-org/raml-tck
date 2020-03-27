@@ -13,10 +13,6 @@ GO_PROJECT_DIR:=$(GOPATH)/src/github.com/raml-org/$(GO_PROJECT_NAME)
 PY_ENV:=venv
 VENV_VERSION:=16.2.0
 
-# raml-tck branch with manifest.json in its root
-TCK_BRANCH:=master
-
-
 .ONESHELL:
 all: clean install report generate-html
 
@@ -97,33 +93,37 @@ report: report-js \
 
 report-js:
 	cd $(JS_RUNNER_DIR)
-	node src/index.js --parser raml-1-parser --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)
-	node src/index.js --parser amf-client-js --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)
-	node src/index.js --parser webapi-parser --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)
+	node src/index.js --parser raml-1-parser --outdir $(REPORTS_JSON)
+	node src/index.js --parser amf-client-js --outdir $(REPORTS_JSON)
+	node src/index.js --parser webapi-parser --outdir $(REPORTS_JSON)
 
 report-py:
 	cd $(PY_RUNNER_DIR)
 	. $(PY_ENV)/bin/activate
-	raml-test-py --parser ramlfications --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)
-	raml-test-py --parser pyraml-parser --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)
+	raml-test-py --parser ramlfications --outdir $(REPORTS_JSON)
+	raml-test-py --parser pyraml-parser --outdir $(REPORTS_JSON)
 
 report-rb:
 	cd $(RB_RUNNER_DIR)
-	ruby main.rb --parser brujula --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)
-	ruby main.rb --parser raml-rb --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)
+	ruby main.rb --parser brujula --outdir $(REPORTS_JSON)
+	ruby main.rb --parser raml-rb --outdir $(REPORTS_JSON)
 
 report-go:
-	$(GO_PROJECT_NAME) -parser jumpscale -outdir $(REPORTS_JSON) -branch $(TCK_BRANCH)
-	$(GO_PROJECT_NAME) -parser go-raml -outdir $(REPORTS_JSON) -branch $(TCK_BRANCH)
+	$(GO_PROJECT_NAME) -parser jumpscale -outdir $(REPORTS_JSON)
+	$(GO_PROJECT_NAME) -parser go-raml -outdir $(REPORTS_JSON)
 
 report-java:
 	cd $(JAVA_RUNNER_DIR)
-	./gradlew run --args='--parser webapi-parser --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)'
-	./gradlew run --args='--parser raml-java-parser --outdir $(REPORTS_JSON) --branch $(TCK_BRANCH)'
+	./gradlew run --args='--parser webapi-parser --outdir $(REPORTS_JSON)'
+	./gradlew run --args='--parser raml-java-parser --outdir $(REPORTS_JSON)'
 
 generate-html:
 	cd $(REPORTER_DIR)
-	node src/index.js
+ifdef tck_branch
+	node src/index.js $(tck_branch)
+else
+	node src/index.js master
+endif
 
 clean: clean-js clean-py
 	rm -f $(REPORTS_JSON)/*

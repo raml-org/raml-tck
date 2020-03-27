@@ -27,7 +27,6 @@ type ParserMeta struct {
 type Report struct {
 	Parser  ParserMeta    `json:"parser"`
 	Results []*FileResult `json:"results"`
-	Branch  string        `json:"branch"`
 }
 
 func main() {
@@ -36,8 +35,6 @@ func main() {
 		"Parser to test. Supported: jumpscale, go-raml.")
 	outdirFl := flag.String(
 		"outdir", "./", "Output report directory path.")
-	branchFl := flag.String(
-		"branch", "", "raml-tck directory to load RAML files from.")
 	flag.Parse()
 
 	parsersRunners := map[string]Parser{
@@ -85,7 +82,6 @@ func main() {
 	report := &Report{
 		Parser:  parsersMeta[*parserFl],
 		Results: []*FileResult{},
-		Branch:  *branchFl,
 	}
 
 	for _, fpath := range fileList {
