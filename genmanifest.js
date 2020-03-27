@@ -3,7 +3,7 @@ const fs = require('fs')
 const walk = require('walk')
 
 function main () {
-  const projRoot = path.resolve(path.join(__dirname, '..'))
+  const projRoot = path.resolve(__dirname)
   const inputRoot = getInputDirPath()
   let ramlPaths = listRamls(inputRoot)
   ramlPaths = sortRAMLPaths(inputRoot, ramlPaths)

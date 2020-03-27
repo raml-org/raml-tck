@@ -1,0 +1,27 @@
+version '1.0.0'
+
+apply plugin: 'java'
+apply plugin: "application"
+
+
+mainClassName = "org.raml.runner.RamlTckRunner"
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url "https://repository-master.mulesoft.org/nexus/content/repositories/releases"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    compile 'info.picocli:picocli:3.9.2'
+    compile 'org.raml:webapi-parser:0.5.0'
+    compile 'org.raml:raml-parser-2:1.0.48'
+}
