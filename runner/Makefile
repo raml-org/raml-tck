@@ -8,8 +8,8 @@ GO_RUNNER_DIR:=$(ROOT_DIR)/go
 JAVA_RUNNER_DIR:=$(ROOT_DIR)/java
 
 GO_PROJECT_NAME:=raml-tck-runner-go
-export GOPATH=$(HOME)/raml-tck-go-projects
-export GOBIN=$(HOME)/raml-tck-go-projects/bin
+export GOPATH=/tmp/raml-tck-go-projects
+export GOBIN=/tmp/raml-tck-go-projects/bin
 GO_PROJECT_DIR:=$(GOPATH)/src/github.com/raml-org/$(GO_PROJECT_NAME)
 
 PY_ENV:=venv
