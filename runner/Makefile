@@ -72,7 +72,7 @@ install-py: clean-py create-virtualenv
 
 install-rb:
 	cd $(RB_RUNNER_DIR)
-	gem install bundler
+	sudo gem install bundler
 	bundle install
 
 install-go:
