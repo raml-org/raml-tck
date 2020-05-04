@@ -8,6 +8,7 @@ GO_RUNNER_DIR:=$(ROOT_DIR)/go
 JAVA_RUNNER_DIR:=$(ROOT_DIR)/java
 
 GO_PROJECT_NAME:=raml-tck-runner-go
+export GOPATH=$(HOME)/raml-tck-go-projects
 GO_PROJECT_DIR:=$(GOPATH)/src/github.com/raml-org/$(GO_PROJECT_NAME)
 
 PY_ENV:=venv
@@ -37,16 +38,16 @@ all-go:	install-html-reporter \
 		generate-html
 
 all-java: install-html-reporter \
-		  install-java \
-		  report-java \
-		  generate-html
+		install-java \
+		report-java \
+		generate-html
 
 install: install-html-reporter \
-		 install-js \
-		 install-py \
-		 install-rb \
-		 install-go \
-		 install-java
+		install-js \
+		install-py \
+		install-rb \
+		install-go \
+		install-java
 
 install-html-reporter:
 	cd $(REPORTER_DIR)
@@ -126,7 +127,7 @@ else
 	node src/index.js master
 endif
 
-clean: clean-js clean-py
+clean: clean-js clean-py clean-go
 	rm -f $(REPORTS_JSON)/*
 	rm -f $(ROOT_DIR)/reports/html/*.html
 
@@ -135,3 +136,6 @@ clean-js:
 
 clean-py:
 	rm -rf $(PY_RUNNER_DIR)/$(PY_ENV)
+
+clean-go:
+	rm -rf $(GOPATH)
