@@ -8,6 +8,8 @@ GO_RUNNER_DIR:=$(ROOT_DIR)/go
 JAVA_RUNNER_DIR:=$(ROOT_DIR)/java
 
 GO_PROJECT_NAME:=raml-tck-runner-go
+export GOPATH=/tmp/raml-tck-go-projects
+export GOBIN=/tmp/raml-tck-go-projects/bin
 GO_PROJECT_DIR:=$(GOPATH)/src/github.com/raml-org/$(GO_PROJECT_NAME)
 
 PY_ENV:=venv
@@ -37,16 +39,16 @@ all-go:	install-html-reporter \
 		generate-html
 
 all-java: install-html-reporter \
-		  install-java \
-		  report-java \
-		  generate-html
+		install-java \
+		report-java \
+		generate-html
 
 install: install-html-reporter \
-		 install-js \
-		 install-py \
-		 install-rb \
-		 install-go \
-		 install-java
+		install-js \
+		install-py \
+		install-rb \
+		install-go \
+		install-java
 
 install-html-reporter:
 	cd $(REPORTER_DIR)
@@ -72,9 +74,13 @@ install-py: clean-py create-virtualenv
 
 install-rb:
 	cd $(RB_RUNNER_DIR)
+	sudo gem install bundler
 	bundle install
 
 install-go:
+	mkdir -p ${GOPATH}/src
+	mkdir -p ${GOPATH}/bin
+	mkdir -p ${GOPATH}/pkg
 	mkdir -p $(GO_PROJECT_DIR)
 	cp $(GO_RUNNER_DIR)/* $(GO_PROJECT_DIR)
 	cd $(GO_PROJECT_DIR)
@@ -109,8 +115,8 @@ report-rb:
 	ruby main.rb --parser raml-rb --outdir $(REPORTS_JSON)
 
 report-go:
-	$(GO_PROJECT_NAME) -parser jumpscale -outdir $(REPORTS_JSON)
-	$(GO_PROJECT_NAME) -parser go-raml -outdir $(REPORTS_JSON)
+	$(GOBIN)/$(GO_PROJECT_NAME) -parser jumpscale -outdir $(REPORTS_JSON)
+	$(GOBIN)/$(GO_PROJECT_NAME) -parser go-raml -outdir $(REPORTS_JSON)
 
 report-java:
 	cd $(JAVA_RUNNER_DIR)
@@ -125,7 +131,7 @@ else
 	node src/index.js master
 endif
 
-clean: clean-js clean-py
+clean: clean-js clean-py clean-go
 	rm -f $(REPORTS_JSON)/*
 	rm -f $(ROOT_DIR)/reports/html/*.html
 
@@ -134,3 +140,6 @@ clean-js:
 
 clean-py:
 	rm -rf $(PY_RUNNER_DIR)/$(PY_ENV)
+
+clean-go:
+	rm -rf $(GOPATH)
