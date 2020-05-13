@@ -51,7 +51,7 @@ install: install-tck-reporter \
 		install-java
 
 install-tck-reporter:
-	npm install -g postatum/tck-reporter#v1.0.0
+	npm install -g jstoiko/tck-reporter#v1.0.0
 
 install-js: clean-js
 	cd $(JS_RUNNER_DIR)
