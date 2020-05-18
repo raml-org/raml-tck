@@ -51,7 +51,7 @@ install: install-tck-reporter \
 		install-java
 
 install-tck-reporter:
-	npm install -g jstoiko/tck-reporter#v1.1.0
+	cd $(ROOT_DIR) && npm install
 
 install-js: clean-js
 	cd $(JS_RUNNER_DIR)
@@ -124,9 +124,9 @@ report-java:
 
 generate-html:
 ifdef tck_branch
-	tck-reporter $(REPORTS_JSON) $(REPORTS_HTML) --repoBranchUrl https://github.com/raml-org/raml-tck/blob/$(tck_branch)
+	./node_modules/tck-reporter/bin/tck-reporter.js $(REPORTS_JSON) $(REPORTS_HTML) --repoBranchUrl https://github.com/raml-org/raml-tck/blob/$(tck_branch)
 else
-	tck-reporter $(REPORTS_JSON) $(REPORTS_HTML) --repoBranchUrl https://github.com/raml-org/raml-tck/blob/master
+	./node_modules/tck-reporter/bin/tck-reporter.js $(REPORTS_JSON) $(REPORTS_HTML) --repoBranchUrl https://github.com/raml-org/raml-tck/blob/master
 endif
 
 clean: clean-js clean-py clean-go
