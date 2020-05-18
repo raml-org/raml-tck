@@ -1,6 +1,6 @@
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-REPORTER_DIR:=$(ROOT_DIR)/html-reporter
 REPORTS_JSON:=$(ROOT_DIR)/reports/json
+REPORTS_HTML:=$(ROOT_DIR)/reports/html
 JS_RUNNER_DIR:=$(ROOT_DIR)/js
 PY_RUNNER_DIR:=$(ROOT_DIR)/py
 RB_RUNNER_DIR:=$(ROOT_DIR)/rb
@@ -18,41 +18,40 @@ VENV_VERSION:=16.2.0
 .ONESHELL:
 all: clean install report generate-html
 
-all-js:	install-html-reporter \
+all-js:	install-tck-reporter \
 		install-js \
 		report-js \
 		generate-html
 
-all-py:	install-html-reporter \
+all-py:	install-tck-reporter \
 		install-py \
 		report-py \
 		generate-html
 
-all-rb:	install-html-reporter \
+all-rb:	install-tck-reporter \
 		install-rb \
 		report-rb \
 		generate-html
 
-all-go:	install-html-reporter \
+all-go:	install-tck-reporter \
 		install-go \
 		report-go \
 		generate-html
 
-all-java: install-html-reporter \
+all-java: install-tck-reporter \
 		install-java \
 		report-java \
 		generate-html
 
-install: install-html-reporter \
+install: install-tck-reporter \
 		install-js \
 		install-py \
 		install-rb \
 		install-go \
 		install-java
 
-install-html-reporter:
-	cd $(REPORTER_DIR)
-	npm install .
+install-tck-reporter:
+	npm install -g jstoiko/tck-reporter#v1.1.0
 
 install-js: clean-js
 	cd $(JS_RUNNER_DIR)
@@ -124,11 +123,10 @@ report-java:
 	./gradlew run --args='--parser raml-java-parser --outdir $(REPORTS_JSON)'
 
 generate-html:
-	cd $(REPORTER_DIR)
 ifdef tck_branch
-	node src/index.js $(tck_branch)
+	tck-reporter $(REPORTS_JSON) $(REPORTS_HTML) --repoBranchUrl https://github.com/raml-org/raml-tck/blob/$(tck_branch)
 else
-	node src/index.js master
+	tck-reporter $(REPORTS_JSON) $(REPORTS_HTML) --repoBranchUrl https://github.com/raml-org/raml-tck/blob/master
 endif
 
 clean: clean-js clean-py clean-go
