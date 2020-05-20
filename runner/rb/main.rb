@@ -53,9 +53,11 @@ def main
     relative_fpath = fpath.sub! ex_dir, ''
     result = {
       'file' => relative_fpath,
-      'success' => success,
-      'error' => error
+      'success' => success
     }
+    unless error == nil
+      result['error'] = error
+    end
     report['results'] << result
   end
 
