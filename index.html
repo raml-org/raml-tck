@@ -4,8 +4,9 @@
   <title>RAML Parsers Overview</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./bootstrap.min.css">
-  <link rel="stylesheet" href="./custom.css">
+  <link rel="stylesheet" href="./static/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/custom.css">
+  <link rel="stylesheet" href="./static/user-styles.css">
 </head>
   <body>
     <div class="container-fluid">
@@ -14,32 +15,22 @@
         <thead>
           <tr>
             <th>Parser</th>
-            <th>Valid Files <span class="stat-nums">(passed/all)</span></th>
-            <th>Invalid Files <span class="stat-nums">(passed/all)</span></th>
-            <th>Total <span class="stat-nums">(passed/all)</span></th>
+            <th title="Valid tests success percentage and numbers.">
+              Valid Files <span class="stat-nums">(passed/all)</span>
+            </th>
+            <th title="Invalid tests success percentage and numbers.">
+              Invalid Files <span class="stat-nums">(passed/all)</span>
+            </th>
+            <th title="Total success percentage and numbers. Does not include optional tests.">
+              Total <span class="stat-nums">(passed/all)</span>
+            </th>
+            <th title="Optional tests success percentage and numbers.">
+              Optional Files<span class="stat-nums">(passed/all)</span>
+            </th>
             <th colspan="2"></th>
           </tr>
         </thead>
         <tbody>
-            <tr>
-              <td>
-                <a href="https://github.com/aml-org/amf" target="blank" title="Visit parser's web-page">
-                  amf-client-js (js, ^4.0.6)
-                </a>
-              </td>
-              <td>
-                98%
-                <span class="stat-nums">(618/633)</span>
-              </td>
-              <td>
-                87%
-                <span class="stat-nums">(391/450)</span></td>
-              <td>
-                93%
-                <span class="stat-nums">(1009/1083)</span></td>
-              <td><a href="amf-client-js_js_detailed_report.html" title="View amf-client-js detailed report">Detailed report</a></td>
-              <td><a href="amf-client-js_js_features_stats.html" title="View amf-client-js features stats">Features stats</a></td>
-            </tr>
             <tr>
               <td>
                 <a href="https://github.com/nogates/brujula" target="blank" title="Visit parser's web-page">
@@ -52,10 +43,16 @@
               </td>
               <td>
                 38%
-                <span class="stat-nums">(169/450)</span></td>
+                <span class="stat-nums">(169/450)</span>
+              </td>
               <td>
                 57%
-                <span class="stat-nums">(615/1083)</span></td>
+                <span class="stat-nums">(615/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="brujula_rb_detailed_report.html" title="View brujula detailed report">Detailed report</a></td>
               <td><a href="brujula_rb_features_stats.html" title="View brujula features stats">Features stats</a></td>
             </tr>
@@ -71,10 +68,16 @@
               </td>
               <td>
                 100%
-                <span class="stat-nums">(450/450)</span></td>
+                <span class="stat-nums">(450/450)</span>
+              </td>
               <td>
                 42%
-                <span class="stat-nums">(450/1083)</span></td>
+                <span class="stat-nums">(450/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="go-raml_go_detailed_report.html" title="View go-raml detailed report">Detailed report</a></td>
               <td><a href="go-raml_go_features_stats.html" title="View go-raml features stats">Features stats</a></td>
             </tr>
@@ -90,10 +93,16 @@
               </td>
               <td>
                 25%
-                <span class="stat-nums">(111/450)</span></td>
+                <span class="stat-nums">(111/450)</span>
+              </td>
               <td>
                 61%
-                <span class="stat-nums">(659/1083)</span></td>
+                <span class="stat-nums">(659/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="jumpscale_go_detailed_report.html" title="View jumpscale detailed report">Detailed report</a></td>
               <td><a href="jumpscale_go_features_stats.html" title="View jumpscale features stats">Features stats</a></td>
             </tr>
@@ -109,31 +118,18 @@
               </td>
               <td>
                 100%
-                <span class="stat-nums">(450/450)</span></td>
+                <span class="stat-nums">(450/450)</span>
+              </td>
               <td>
                 42%
-                <span class="stat-nums">(450/1083)</span></td>
+                <span class="stat-nums">(450/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="pyraml-parser_py_detailed_report.html" title="View pyraml-parser detailed report">Detailed report</a></td>
               <td><a href="pyraml-parser_py_features_stats.html" title="View pyraml-parser features stats">Features stats</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a href="https://github.com/raml-org/raml-js-parser-2" target="blank" title="Visit parser's web-page">
-                  raml-1-parser (js, ^1.1.63)
-                </a>
-              </td>
-              <td>
-                95%
-                <span class="stat-nums">(602/633)</span>
-              </td>
-              <td>
-                94%
-                <span class="stat-nums">(422/450)</span></td>
-              <td>
-                95%
-                <span class="stat-nums">(1024/1083)</span></td>
-              <td><a href="raml-1-parser_js_detailed_report.html" title="View raml-1-parser detailed report">Detailed report</a></td>
-              <td><a href="raml-1-parser_js_features_stats.html" title="View raml-1-parser features stats">Features stats</a></td>
             </tr>
             <tr>
               <td>
@@ -147,10 +143,16 @@
               </td>
               <td>
                 92%
-                <span class="stat-nums">(412/450)</span></td>
+                <span class="stat-nums">(412/450)</span>
+              </td>
               <td>
                 92%
-                <span class="stat-nums">(998/1083)</span></td>
+                <span class="stat-nums">(998/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="raml-java-parser_java_detailed_report.html" title="View raml-java-parser detailed report">Detailed report</a></td>
               <td><a href="raml-java-parser_java_features_stats.html" title="View raml-java-parser features stats">Features stats</a></td>
             </tr>
@@ -166,10 +168,16 @@
               </td>
               <td>
                 46%
-                <span class="stat-nums">(209/450)</span></td>
+                <span class="stat-nums">(209/450)</span>
+              </td>
               <td>
                 51%
-                <span class="stat-nums">(551/1083)</span></td>
+                <span class="stat-nums">(551/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="raml-rb_rb_detailed_report.html" title="View raml-rb detailed report">Detailed report</a></td>
               <td><a href="raml-rb_rb_features_stats.html" title="View raml-rb features stats">Features stats</a></td>
             </tr>
@@ -185,10 +193,16 @@
               </td>
               <td>
                 97%
-                <span class="stat-nums">(436/450)</span></td>
+                <span class="stat-nums">(436/450)</span>
+              </td>
               <td>
                 42%
-                <span class="stat-nums">(458/1083)</span></td>
+                <span class="stat-nums">(458/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="ramlfications_py_detailed_report.html" title="View ramlfications detailed report">Detailed report</a></td>
               <td><a href="ramlfications_py_features_stats.html" title="View ramlfications features stats">Features stats</a></td>
             </tr>
@@ -204,31 +218,18 @@
               </td>
               <td>
                 87%
-                <span class="stat-nums">(391/450)</span></td>
+                <span class="stat-nums">(391/450)</span>
+              </td>
               <td>
                 93%
-                <span class="stat-nums">(1009/1083)</span></td>
+                <span class="stat-nums">(1009/1083)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
               <td><a href="webapi-parser_java_detailed_report.html" title="View webapi-parser detailed report">Detailed report</a></td>
               <td><a href="webapi-parser_java_features_stats.html" title="View webapi-parser features stats">Features stats</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a href="https://github.com/raml-org/webapi-parser" target="blank" title="Visit parser's web-page">
-                  webapi-parser (js, ^0.5.0)
-                </a>
-              </td>
-              <td>
-                98%
-                <span class="stat-nums">(618/633)</span>
-              </td>
-              <td>
-                87%
-                <span class="stat-nums">(391/450)</span></td>
-              <td>
-                93%
-                <span class="stat-nums">(1009/1083)</span></td>
-              <td><a href="webapi-parser_js_detailed_report.html" title="View webapi-parser detailed report">Detailed report</a></td>
-              <td><a href="webapi-parser_js_features_stats.html" title="View webapi-parser features stats">Features stats</a></td>
             </tr>
         </tbody>
       </table>

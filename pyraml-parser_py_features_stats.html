@@ -4,8 +4,9 @@
   <title>Features stats: pyraml-parser (py, 0.1.9)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./bootstrap.min.css">
-  <link rel="stylesheet" href="./custom.css">
+  <link rel="stylesheet" href="./static/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/custom.css">
+  <link rel="stylesheet" href="./static/user-styles.css">
 </head>
   <body>
     <div class="container-fluid">
@@ -14,9 +15,18 @@
         <thead>
           <tr>
             <th>Feature</th>
-            <th>Valid Files <span class="stat-nums">(passed/all)</span></th>
-            <th>Invalid Files <span class="stat-nums">(passed/all)</span></th>
-            <th>Total <span class="stat-nums">(passed/all)</span></th>
+            <th title="Valid tests success percentage and numbers.">
+              Valid Files <span class="stat-nums">(passed/all)</span>
+            </th>
+            <th title="Invalid tests success percentage and numbers.">
+              Invalid Files <span class="stat-nums">(passed/all)</span>
+            </th>
+            <th title="Total success percentage and numbers.">
+              Total <span class="stat-nums">(passed/all)</span>
+            </th>
+            <th title="Optional tests success percentage and numbers.">
+              Optional Files <span class="stat-nums">(passed/all)</span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +44,10 @@
                 63%
                 <span class="stat-nums">(35/56)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;Types</td>
@@ -48,6 +62,10 @@
               <td>
                 51%
                 <span class="stat-nums">(139/273)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
             <tr>
@@ -64,6 +82,10 @@
                 50%
                 <span class="stat-nums">(18/36)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;Methods</td>
@@ -78,6 +100,10 @@
               <td>
                 46%
                 <span class="stat-nums">(18/39)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
             <tr>
@@ -94,6 +120,10 @@
                 47%
                 <span class="stat-nums">(7/15)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;MethodResponses</td>
@@ -108,6 +138,10 @@
               <td>
                 49%
                 <span class="stat-nums">(17/35)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
             <tr>
@@ -124,6 +158,10 @@
                 47%
                 <span class="stat-nums">(17/36)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;Traits</td>
@@ -138,6 +176,10 @@
               <td>
                 47%
                 <span class="stat-nums">(8/17)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
             <tr>
@@ -154,6 +196,10 @@
                 50%
                 <span class="stat-nums">(11/22)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;SecuritySchemes</td>
@@ -168,6 +214,10 @@
               <td>
                 52%
                 <span class="stat-nums">(11/21)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
             <tr>
@@ -184,6 +234,10 @@
                 48%
                 <span class="stat-nums">(46/95)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;Fragments</td>
@@ -198,6 +252,10 @@
               <td>
                 44%
                 <span class="stat-nums">(18/41)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
             <tr>
@@ -214,6 +272,10 @@
                 29%
                 <span class="stat-nums">(6/21)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;Overlays</td>
@@ -228,6 +290,10 @@
               <td>
                 28%
                 <span class="stat-nums">(18/64)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
             <tr>
@@ -244,6 +310,10 @@
                 6%
                 <span class="stat-nums">(8/132)</span>
               </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
+              </td>
             </tr>
             <tr>
               <td>tests&#x2F;raml-1.0&#x2F;EdgeCases</td>
@@ -258,6 +328,10 @@
               <td>
                 41%
                 <span class="stat-nums">(73/180)</span>
+              </td>
+              <td>
+                100%
+                <span class="stat-nums">(0/0)</span>
               </td>
             </tr>
         </tbody>
