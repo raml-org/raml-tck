@@ -56,10 +56,13 @@ def main():
             success = False
             err = traceback.format_exc()
 
-        report['results'].append({
+        result = {
             'file': fpath.replace(ex_dir, ''),
-            'success': success,
-            'error': err
-        })
+            'success': success
+        }
+
+        if err:
+            result['error'] = err
+        report['results'].append(result)
 
     utils.save_report(report, args.outdir)
