@@ -419,6 +419,7 @@
         "tests/raml-1.0/Methods/protocols-string/valid.raml",
         "tests/raml-1.0/Methods/protocols-array/invalid-element.raml",
         "tests/raml-1.0/Methods/protocols-array/valid.raml",
+        "tests/raml-1.0/Methods/method-question-mark/valid.raml",
         "tests/raml-1.0/Methods/include-example-raml/example.raml",
         "tests/raml-1.0/Methods/include-example-raml/invalid-inexisting-file.raml",
         "tests/raml-1.0/Methods/include-example-raml/valid.raml",
