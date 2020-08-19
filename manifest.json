@@ -214,8 +214,6 @@
         "tests/raml-1.0/Types/implicitly-defined-type/valid.raml",
         "tests/raml-1.0/Types/determine-default-types/valid-array.raml",
         "tests/raml-1.0/Types/determine-default-types/valid-file.raml",
-        "tests/raml-1.0/Types/determine-default-types/valid-integer.raml",
-        "tests/raml-1.0/Types/determine-default-types/valid-number.raml",
         "tests/raml-1.0/Types/determine-default-types/valid-object.raml",
         "tests/raml-1.0/Types/determine-default-types/valid-request-body-media-type.raml",
         "tests/raml-1.0/Types/determine-default-types/valid-request-body.raml",
