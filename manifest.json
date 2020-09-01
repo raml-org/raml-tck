@@ -413,6 +413,7 @@
         "tests/raml-1.0/Methods/query-params-enum/valid.raml",
         "tests/raml-1.0/Methods/query-params-boolean/invalid-example-type.raml",
         "tests/raml-1.0/Methods/query-params-boolean/valid.raml",
+        "tests/raml-1.0/Methods/query-param-non-required/valid.raml",
         "tests/raml-1.0/Methods/protocols-string/invalid-unknown-protocol.raml",
         "tests/raml-1.0/Methods/protocols-string/valid.raml",
         "tests/raml-1.0/Methods/protocols-array/invalid-element.raml",
