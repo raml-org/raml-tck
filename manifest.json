@@ -208,6 +208,8 @@
         "tests/raml-1.0/Types/inherit-and-extend-constraints-02/valid-make-narrower.raml",
         "tests/raml-1.0/Types/inherit-and-extend-constraints-01/invalid-minmaxlength-violated.raml",
         "tests/raml-1.0/Types/inherit-and-extend-constraints-01/valid.raml",
+        "tests/raml-1.0/Types/inclusion-restrictions/invalid-used-in-multiple-inheritance.raml",
+        "tests/raml-1.0/Types/inclusion-restrictions/invalid-used-in-union.raml",
         "tests/raml-1.0/Types/include-json-schema-element/invalid-pointer-nowhere.raml",
         "tests/raml-1.0/Types/include-json-schema-element/valid.raml",
         "tests/raml-1.0/Types/implicitly-defined-type/invalid-inexisting-base-type.raml",
