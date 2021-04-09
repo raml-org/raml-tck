@@ -1,0 +1,13 @@
+#%RAML 1.0
+title: Book Library API
+
+types:
+  paging:
+    properties:
+      start: number
+
+/locations:
+  get:
+    queryString:
+      type: paging
+      examples: !include valid-fragment.raml

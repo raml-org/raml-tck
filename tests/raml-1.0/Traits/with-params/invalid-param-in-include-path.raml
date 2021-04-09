@@ -1,0 +1,13 @@
+#%RAML 1.0
+title: TCK test. Trait 002
+version: v1
+baseUri: http://api.samplehost.com
+traits:
+  trait1:
+    body:
+      application/json:
+        example: !include <<exampleName>>.json
+
+/resource:
+  get:
+    is: [ { trait1: { exampleName: example } ]

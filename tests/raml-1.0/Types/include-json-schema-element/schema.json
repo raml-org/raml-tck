@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "User": {
+      "type": "object",
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "required": ["first_name", "last_name", "id"],
+      "properties": {
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+#%RAML 1.0
+title: test
+
+types:
+  XmlJson:
+    type: |
+      <?xml version="1.0" encoding="utf-8"?>
+      <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="country">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="country_name" type="xs:string"/>
+              <xs:element name="population" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:schema>
+    example: |
+      {
+        "country_name": "Somewhere",
+        "population": 11.2
+      }
+  JsonXml:
+    type: |
+      {
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "required": ["country_name", "population"],
+        "properties": {
+          "country_name": { "type": "string" },
+          "population": { "type": "number" }
+        }
+      }
+    example: |
+      <country>
+        <country_name>France</country_name>
+        <population>59.7</population>
+      </country>

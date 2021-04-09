@@ -1,0 +1,10 @@
+#%RAML 1.0
+title: Some API
+
+types:
+  APIUser:
+    type: object
+    properties:
+      groupId:
+        type: integer | string
+        enum: [true, false, nil]

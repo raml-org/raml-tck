@@ -1,0 +1,11 @@
+#%RAML 1.0
+title: Demo
+version: v1
+baseUri: http://api.samplehost.com
+
+securitySchemes:
+  oauth2: !include valid-fragment.raml
+
+/resource:
+  get:
+    securedBy: [ null, oauth2 ]

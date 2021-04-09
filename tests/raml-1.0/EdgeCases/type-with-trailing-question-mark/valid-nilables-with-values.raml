@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: Api
+
+types:
+  TypeWithTrailing?:
+    type: string
+  TestObject:
+    type: object
+    properties:
+      notnilable: TypeWithTrailing?
+      nilable1: nil | TypeWithTrailing?
+      nilable2: TypeWithTrailing??
+    example:
+      notnilable: a
+      nilable1: b
+      nilable2: c

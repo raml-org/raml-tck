@@ -1,0 +1,16 @@
+#%RAML 1.0 Overlay
+
+title: Secondary RAML
+extends: ../base.raml
+
+documentation:
+  - title: Introduction
+    content: !include ../docs/content.txt
+
+uses:
+  decls: ../lib/decls.raml
+
+/elements:
+  get:
+    description: describe your method here
+    (decls.important): true

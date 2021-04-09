@@ -1,0 +1,15 @@
+#%RAML 1.0
+title: Api
+
+types:
+  Person:
+    properties:
+      name: string
+      middleName: nil | string
+    examples:
+      withName:
+        name: John
+        middleName: Dowson
+      withoutName:
+        name: John
+        middleName:

@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: test
+
+types:
+  XmlRaml:
+    type: |
+      <?xml version="1.0" encoding="utf-8"?>
+      <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="country">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="country_name" type="xs:string"/>
+              <xs:element name="population" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:schema>
+    example:
+      country_name: 11.1
+      population: Somewhere
+  RamlXml:
+    type: object
+    properties:
+      country_name: string
+      population: number
+    example: |
+      <country>
+        <country_name>59.7</country_name>
+        <population>France</population>
+      </country>

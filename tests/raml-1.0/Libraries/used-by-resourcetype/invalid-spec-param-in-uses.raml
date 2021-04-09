@@ -1,0 +1,10 @@
+#%RAML 1.0
+title: Book Library API
+
+resourceTypes:
+  collection: !include invalid-fragment-param-in-uses.raml
+
+/testURI:
+  type:
+    collection:
+      libName: lib

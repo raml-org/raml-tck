@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: A
+
+resourceTypes:
+  b:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include <<libName>>.yaml
+
+/a:
+  type:
+    b:
+      c: example

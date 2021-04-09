@@ -1,0 +1,32 @@
+#%RAML 1.0
+
+title: Hello
+version: v1
+
+types:
+  User:
+    type: object
+    properties:
+      anchorAlias:
+        type: array
+        items: string
+        examples:
+          first:
+            - John
+            - &LN Doe
+          second:
+            - Jane
+            - *LN
+      flowMapping:
+        type: object
+        properties:
+          name: string
+        enum:
+          - {"name":"nowhitespace"}
+          - {"name":nowhitespaceAgain}
+      anotherFlowMapping:
+        type: object
+        properties:
+          suchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkey: string
+        enum:
+          - {"suchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkeysuchalongkey": "very long"}

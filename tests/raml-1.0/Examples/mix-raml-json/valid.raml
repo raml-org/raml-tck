@@ -1,0 +1,29 @@
+#%RAML 1.0
+title: test
+
+types:
+  JsonRaml:
+    type: |
+      {
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "required": ["country_name", "population"],
+        "properties": {
+          "country_name": { "type": "string" },
+          "population": { "type": "number" }
+        }
+      }
+    example:
+      country_name: Somewhere
+      population: 11.1
+  RamlJson:
+    type: object
+    properties:
+      country_name: string
+      population: number
+    example: |
+      {
+        "country_name": "Somewhere",
+        "population": 11.2
+      }
+
