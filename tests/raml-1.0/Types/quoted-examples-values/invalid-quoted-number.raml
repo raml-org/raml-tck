@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: API with Types
+types:
+  Thing:
+    type: object
+    properties:
+      test: number
+    example:
+      test: "18.2"
+
+/things/{id}:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: Thing
