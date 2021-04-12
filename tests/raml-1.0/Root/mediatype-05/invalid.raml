@@ -1,0 +1,12 @@
+#%RAML 1.0
+
+# it should not be allowed to define a node under body AND override the default media type at the same time
+
+title: Tato Bores
+mediaType: [application/json,text/xml]
+/bad:
+  post:
+    body:
+      example: bores
+      application/csv:
+        example: pepe

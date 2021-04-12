@@ -1,0 +1,15 @@
+#%RAML 0.8
+
+# Objective: The following example builds on the previous one, but the resource types and traits are defined in external files that are included by using an !include tag.
+# Expected result: no error message
+
+# tags: traits, resource types, external
+
+title: Example API
+version: v1
+resourceTypes:
+   - collection: !include ../../resources/resourceTypes/collection.yml
+   - member: !include ../../resources/resourceTypes/member.yml
+traits:
+   - secured: !include ../../resources/traits/secured.yml
+   - rateLimited: !include ../../resources/traits/rate-limited.yml

@@ -1,0 +1,17 @@
+#%RAML 0.8
+
+# Objective: The following example shows how use 'null' to indicate that a methid can be called without applying any security scheme.
+# Expected result: no error message and the content from external files are applied respectively
+
+# tags: security schemes, securedBy, null
+
+title: GitHub API
+version: v3
+baseUri: https://api.github.com
+securitySchemes:
+    - oauth_2_0: !include ../../resources/securitySchemes/oauth-2-0.yml
+/users/{userid}/gists:
+    get:
+        securedBy: [null, oauth_2_0]
+        description: |
+            List the authenticated user’s gists or if called anonymously, this will return all public gists.
