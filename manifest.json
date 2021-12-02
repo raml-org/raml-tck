@@ -669,7 +669,7 @@
         "tests/raml-1.0/Fragments/namedexample-01/examples/invalid-one-example.raml",
         "tests/raml-1.0/Fragments/namedexample-01/examples/valid-multiple-examples.raml",
         "tests/raml-1.0/Fragments/extension/invalid-nodes.raml",
-        "tests/raml-1.0/Fragments/extension/master.raml",
+        "tests/raml-1.0/Fragments/extension/main.raml",
         "tests/raml-1.0/Fragments/extension/valid.raml",
         "tests/raml-1.0/Fragments/extension/lib/decls.raml",
         "tests/raml-1.0/Fragments/extend-with-new-method/base.raml",
