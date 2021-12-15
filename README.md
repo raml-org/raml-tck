@@ -13,10 +13,10 @@ Note that this repository contains a [manifest file](./manifest.json) that lists
 
 Here are a few projects that have been tested against RAML TCK:
 * Go: [Jumpscale/go-raml](https://github.com/Jumpscale/go-raml), [go-raml/raml](https://github.com/go-raml/raml)
-* JavaScript: [raml-1-parser](https://github.com/raml-org/raml-js-parser-2), [amf-client-js](https://github.com/aml-org/amf), [webapi-parser](https://github.com/raml-org/webapi-parser)
+* JavaScript: [amf-client-js](https://github.com/aml-org/amf), [raml-1-parser](https://github.com/raml-org/raml-js-parser-2), [webapi-parser](https://github.com/raml-org/webapi-parser)
 * Python: [ramlfications](https://github.com/spotify/ramlfications), [pyraml-parser](https://github.com/an2deg/pyraml-parser)
 * Ruby: [brujula](https://github.com/nogates/brujula), [raml-rb](https://github.com/jpb/raml-rb)
-* Java: [webapi-parser](https://github.com/raml-org/webapi-parser), [raml-java-parser](https://github.com/raml-org/raml-java-parser)
+* Java: [amf](https://github.com/aml-org/amf), [webapi-parser](https://github.com/raml-org/webapi-parser), [raml-java-parser](https://github.com/raml-org/raml-java-parser)
 
 (Feel free to submit a PR to list any other tool that may be using the RAML TCK)
 
